@@ -103,7 +103,7 @@ ob_start();
       <div class="col-md-12">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-400 position-relative " style="margin-bottom: 50px; min-height: 100px; padding-top: 20px;">
           <div class="col p-4 d-flex flex-column position-static">
-            <h3 class="mb-0">Crieeeeeeeeeeeeee seu Ponto Turístico</h3>
+            <h3 class="mb-0">Crie seu Ponto Turístico</h3>
             <a href="solicitacaoNovoPontoTuristico.php"> <strong class="d-inline-block mb-2 text-primary">Envie seus dados</strong></a>
 
             <h6><div class="text-muted">Serão aceitos dados fieis ao real e verdadeiro somente. </div></h6>
