@@ -50,6 +50,7 @@
           $result_products = $conn->prepare($query);
           $result_products->execute();
         }else{
+          //Aqui busca os eventos com Boa Pontuação.
           $query_products = "SELECT *,
         eventos.id AS idE,
         eventos.nome AS nome,
@@ -63,8 +64,8 @@
         pontosturisticos.id,
         pontosturisticos.image AS img
 
-        FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
-        WHERE eventos.pontos != 0";
+        FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt ORDER BY pontosturisticos.name ASC";
+        //WHERE eventos.pontos != 0
 
         $result_products = $conn->prepare($query_products);
         $result_products->execute();
