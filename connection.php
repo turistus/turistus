@@ -4,21 +4,21 @@ if(!defined('ACCESS')){
     header("Location: /");
     die("Erro: Pagina nao encontrada!<br>");
 }
-
+/*
 $host = "localhost";
 $user = "root";
 $pass = "";
 $dbname = "empresa";
 $port = 3306;
-
-/*
-
-$host = "mysql743.umbler.com";
-$user = "turismo2021";
-$pass = "turismo123";
-$dbname = "bdtur";
-
 */
+
+
+$host = "mysql";
+$user = "u494298311_36232219880";
+$pass = "Senha@123";
+$dbname = "u494298311_tur";
+
+
 
 try {
 
