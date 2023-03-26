@@ -57,7 +57,7 @@ ob_start();
 
   <main class="content" style="padding-top:20px; padding-left: 20px; padding-right: 20px; background-image: linear-gradient(#F0FFFF,#FFF5EE,#B0E2FF,#F0FFFF); opacity: .9;">
 
-    <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
+    <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(../images/praiaagua.jpg); margin-bottom: 10px;">
       <div class="col-md-6 px-0">
         <h1 class="display-4" >Marketplace Turístico</h1>
         <p class="lead my-2">Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
