@@ -113,13 +113,14 @@ include_once '../connection.php';
 
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-5">
             <label >Data nascimento</label>
-                <input type="text" class="form-control" id="dtnascimento" placeholder="##/##/####" name="dtnascimento"
+                <input type="date" class="form-control" id="dtnascimento" name="dtnascimento"
                         value="<?php
                             if (isset($dados['dtnascimento'])) {
                                 echo $dados['dtnascimento'];
                             }?>"required>
 
         </div>
+
 
         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12" style="padding: 10px;">
 
@@ -185,7 +186,7 @@ include_once '../connection.php';
     	</form>
     </div>
     <div class="col-10" style=" margin: auto; padding-top: 20px; border: solid 1px black;">
-        <h5>Todos os guias devem respeitar as normas e orientações descritas no termo de uso.</h5>
+        <h6>Todos os guias devem respeitar as normas e orientações descritas no termo de uso.</h6>
     </div>
 
 <!-- Busca PT   -->
