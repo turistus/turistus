@@ -106,11 +106,7 @@ include_once '../connection.php';
                                 echo $dados['celular'];
                             }?>
                 ">
-                        <small class="text-muted">*</small>
-
         </div>
-
-
         <div class="col-xl-5 col-lg-5 col-md-6 col-sm-5">
             <label >Data nascimento</label>
                 <input type="date" class="form-control" id="dtnascimento" name="dtnascimento"
@@ -118,13 +114,10 @@ include_once '../connection.php';
                             if (isset($dados['dtnascimento'])) {
                                 echo $dados['dtnascimento'];
                             }?>"required>
-
         </div>
-
-
-        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12" style="padding: 10px;">
-
-            <label class="uf">Estado UF</label>
+        <hr>
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12" >
+            <label class="uf"> UF</label>
             <select name="uf" class="custom-select d-block w-100 uf" id="uf">
                 <option value="">Selecione</option>
                 <option value="AC">AC</option>
@@ -155,24 +148,23 @@ include_once '../connection.php';
                 <option value="SE">SE</option>
                 <option value="TO">TO</option>
             </select>
-</div>
+        </div>
 
 
 
         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
             <label >Valor Guia </label>
-                <input type="text" class="form-control" id="valor" placeholder="R$.." name="valor" value="<?php
+                <input type="text" class="form-control" id="valor" placeholder="R$.. " name="valor" value="<?php
                             if (isset($dados['valor'])) {
                                   echo $dados['valor'];
                             }?>">
-                        <small class="text-muted">*</small>
         </div>
 
         <div class="col-auto my-1">
             <div class="custom-control custom-checkbox mr-sm-2">
                 <input type="checkbox" class="custom-control-input" id="aceite" name="aceite" value="1">
                 <label class="custom-control-label" for="aceite">Aceito e concordo com os termos de uso</label>
-                <a href="../TERMOS DE USO.pdf" class="btn btn-primary">Detalhes</a>
+                <p><a href="../TERMOS DE USO.pdf">Detalhes</a></p>
             </div>
         </div>
 
