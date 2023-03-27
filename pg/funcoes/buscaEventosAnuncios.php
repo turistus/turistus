@@ -16,12 +16,12 @@
         <!-- Aqui Busca os eventos criado pelo Guia -->
         <?php
         $query_products = "SELECT *,
-        eventos.id AS idE, 
-        eventos.nome AS nome, 
-        eventos.valor AS valor, 
+        eventos.id AS idE,
+        eventos.nome AS nome,
+        eventos.valor AS valor,
         eventos.idGuia AS idGuia,
 
-        idPt, 
+        idPt,
         datah,
 
         pontosturisticos.id,
@@ -30,8 +30,8 @@
         servicos.id,
         servicos.nome AS nomeGuia
 
-        
-        FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt 
+
+        FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
         INNER JOIN servicos ON servicos.id = eventos.idGuia WHERE pontosturisticos.id = $id ORDER BY $id DESC";
 
         $result_products = $conn->prepare($query_products);
@@ -43,15 +43,15 @@
             extract($row_product);
           ?>
             <div class="text-center" >
-              <div class="card " >
-              
+              <div class="card " style="border: 10px solid black;  ">
+
               <a href="view-evento.php?id=<?php echo $idE;?>" class="btn ">
                 <div class="card-body " style="padding: 10px;  ">
                   <img style="height: 80px; width: 100px; " src= <?php echo "'../images/pontosturisticos/$idPt/$img";?>'><br>
                     <h6 class="card-title"><?php echo $nome; ?></h6>
                     <p class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></p>
                     <p class="card-title"><?php echo $nomeGuia; ?></p>
-                    
+
 
                 </div>
               </a>
