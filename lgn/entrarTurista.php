@@ -63,7 +63,7 @@
 
         <form method="POST" action="" class="form-signin">
             <div class="text-center mb-4">
-                <img class="mb-4" src="LG2.png" alt="" width="72" height="72">
+                <img class="mb-4" src="../images/logooriginal.png" alt="" width="72" height="72">
                 <h1 class="h3 mb-3 font-weight-normal">Acesse o Turismo</h1>
             </div>
             <?php
