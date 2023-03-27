@@ -17,14 +17,14 @@ include_once '../connection.php';
   <?php
   include_once 'menuFora.php';
   ?>
-	
+
 		<?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg'];
 			unset($_SESSION['msg']);
 		}
 		?>
-       
+
 <br>
 
 
@@ -42,17 +42,15 @@ include_once '../connection.php';
         </div>
 
 
-        <div class="col-10" style=" margin: auto; padding-top: 20px; border: solid 1px black;">
-               <h5>Todos os guias devem respeitar as normas e orientações descritas no termo de uso.</h5>             
-        </div>
+
 
 <!-- Div inicial abaixo do Titulo -->
 <div class="col-10" style=" margin: auto; padding-top: 20px; border: solid 1px black;">
     <div class="col-md-8 order-md-1">
 
         <form method="POST" action="processa-cad.php">
-              
-                
+
+
                     <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12">
                         <label >Nome </label>
                         <input type="text" class="form-control" id="nome" placeholder="" name="nome" value="<?php
@@ -70,7 +68,7 @@ include_once '../connection.php';
                                 echo $dados['cpf'];
                             }?>">
                         <small class="text-muted">*</small>
-                        
+
                     </div>
 
                     <hr>
@@ -81,35 +79,24 @@ include_once '../connection.php';
                             if (isset($dados['email'])) {
                                 echo $dados['email'];
                             }?>" required>
-                        
+
                       </div>
 
                     <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
                         <label >Senha</label>
-                        <input type="password" class="form-control" id="senha" placeholder="****" name="senha" 
+                        <input type="password" class="form-control" id="senha" placeholder="****" name="senha"
                         value="<?php
                             if (isset($dados['senha'])) {
                                 echo $dados['senha'];
                             }?>" required>
-                        
+
                     </div>
 
                     <hr>
 
 
-                    
-              
-            
-
-
-                  	
-
-
 
 <!-- SEGUNDA PARTE DO FORMULARIO DE CADASTRO DE GUIA NATIVO -->
-
-
-
 
 
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
@@ -120,37 +107,57 @@ include_once '../connection.php';
                             }?>
                 ">
                         <small class="text-muted">*</small>
-                        
+
         </div>
-                    
+
 
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-5">
             <label >Data nascimento</label>
-                <input type="text" class="form-control" id="dtnascimento" placeholder="##/##/####" name="dtnascimento" 
+                <input type="text" class="form-control" id="dtnascimento" placeholder="##/##/####" name="dtnascimento"
                         value="<?php
                             if (isset($dados['dtnascimento'])) {
                                 echo $dados['dtnascimento'];
                             }?>"required>
-                        
+
         </div>
 
-        <div class="col-xl-3 col-lg-3 col-md-5 col-sm-5">
-            <label>UF</label>
-                <input type="text" class="form-control" id="uf" placeholder="SP" name="uf" value="<?php
-                            if (isset($dados['uf'])) {
-                                echo $dados['uf'];
-                            }?>" required>
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12" style="padding: 10px;">
 
-                    <!-- <select class="form-control">
-                        <option value="one">SP</option>
-                        <option value="two">PR</option>
-                        <option value="three">SC</option>
-                        <option value="four">CE</option>
-                        <option value="five">MT</option>
-                    </select>
-                         -->               
-        </div>
-                
+            <label class="uf">Estado UF</label>
+            <select name="uf" class="custom-select d-block w-100 uf" id="uf">
+                <option value="">Selecione</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+            </select>
+</div>
+
+
+
         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
             <label >Valor Guia </label>
                 <input type="text" class="form-control" id="valor" placeholder="R$.." name="valor" value="<?php
@@ -158,16 +165,14 @@ include_once '../connection.php';
                                   echo $dados['valor'];
                             }?>">
                         <small class="text-muted">*</small>
-                        
         </div>
 
         <div class="col-auto my-1">
             <div class="custom-control custom-checkbox mr-sm-2">
                 <input type="checkbox" class="custom-control-input" id="aceite" name="aceite" value="1">
-                <label class="custom-control-label" for="aceite">ACEITO E CONCORDO COM OS TERMOS</label>
+                <label class="custom-control-label" for="aceite">Aceito e concordo com os termos de uso</label>
                 <a href="../TERMOS DE USO.pdf" class="btn btn-primary">Detalhes</a>
             </div>
-            
         </div>
 
 <!-- BOTAO CADASTRAR  -->
@@ -177,15 +182,17 @@ include_once '../connection.php';
                            <input class="btn btn-primary" type="submit" value="Cadastrar"><br><br>
                           </div>
                       </div>
-    	</form> 
+    	</form>
     </div>
-
+    <div class="col-10" style=" margin: auto; padding-top: 20px; border: solid 1px black;">
+        <h5>Todos os guias devem respeitar as normas e orientações descritas no termo de uso.</h5>
+    </div>
 
 <!-- Busca PT   -->
-        
+
     </div>
 <!-- FIM DA DIV do CADASTRO do GUIA -->
-    
+
 
 
     </div><!-- fim Div ROW  -->
