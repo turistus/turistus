@@ -94,7 +94,7 @@ $idT = isset($row_turista['idT']);
           if($emailT != $emailSessaoAberta){
             echo  "<div class='dropdown text-end'>";
             echo  "<a href='#' class='d-block link-dark text-decoration-none dropdown-toggle' id='dropdownUser1' data-bs-toggle='dropdown' aria-expanded='false'> ";
-            echo  "<img src='https://github.com/mdo.png' alt='mdo' width='32' height='32' class='rounded-circle'> </a>";
+            echo  "<img src='./images/user.png' alt='mdo' width='32' height='32' class='rounded-circle'> </a>";
 
                 echo "<ul class='dropdown-menu text-small' aria-labelledby='dropdownUser1'>";
                   echo "<li><a class='dropdown-item' href='../guias/painelGuia.php'>Perfil</a></li>";
