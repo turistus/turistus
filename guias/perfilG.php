@@ -1,6 +1,7 @@
 
 <?php
-
+define('ACCESS', true);
+include_once '../connection.php';
 $Uid = filter_input(INPUT_GET, "idguia", FILTER_SANITIZE_NUMBER_INT);
 //echo $Uid;
 
