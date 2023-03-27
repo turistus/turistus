@@ -7,8 +7,8 @@ ob_start();
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 $emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
-echo $id ." ";
-echo $idGuia;
+//echo $id ." ";
+//echo $idGuia;
 
 if (empty($id)) {
     header("Location: index.php");
