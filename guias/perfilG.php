@@ -3,7 +3,6 @@
 define('ACCESS', true);
 include_once '../connection.php';
 $Uid = filter_input(INPUT_GET, "idguia", FILTER_SANITIZE_NUMBER_INT);
-//echo $Uid;
 
 $query_busca_guia = "SELECT * FROM servicos WHERE servicos.id = $Uid";
 $guia_selecionado = $conn->prepare($query_busca_guia);
@@ -11,12 +10,10 @@ $guia_selecionado->execute();
 
 if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
     $row_guia = $guia_selecionado->fetch(PDO::FETCH_ASSOC);
-
 }else {
     header("Location: index.php");
     exit();
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -57,24 +54,21 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                 z-index: 0;
             }
 
-</style>
+        </style>
     </head>
 
     <body>
             <main class="content">
-
-
-
                 <!-- Linha ROW de tudo -->
                 <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="min-height: 400px; padding: 20px; ">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="min-height: 400px; padding: 20px; border: 1px solid black; ">
 
                         <!-- Deve ser possivel alterar alguns dados do Perfil do Usuario GUIA -->
                         <div class="col-xl-4 col-lg-2 col-md-12 col-sm-12 ">
 
                         </div>
 
-                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 ">
+                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 form-control">
                             <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
                                 src='<?php echo "../images/guias/$Uid/$image"; ?>'
                                 value="<?php
@@ -91,14 +85,14 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                 <span>★★★★★</span>
                             </div>
                         </div>
-                        <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
+                        <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 form-control">
                             <label>Apelido</label>
                             <h4><?php if(isset($dados['apelido']))
                             { echo $dados['apelido'];}elseif(isset($row_guia['apelido']))
                             { echo $row_guia['apelido']; }?>
                             </h4>
                         </div>
-                        <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
+                        <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 form-control">
                             <label>Nome</label>
                             <h4><?php if(isset($dados['nome']))
                             { echo $dados['nome'];}elseif(isset($row_guia['nome']))
@@ -106,14 +100,14 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                             </h4>
                         </div>
 
-                        <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
+                        <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 form-control">
                             <label>Celular</label>
                             <h4><?php if(isset($dados['celular']))
                             { echo $dados['celular'];}elseif(isset($row_guia['celular']))
                             { echo $row_guia['celular']; }?>
                             </h4>
                         </div>
-                        <div class="col-xl-12 col-lg-6 col-md-12 col-sm-12">
+                        <div class="col-xl-12 col-lg-6 col-md-12 col-sm-12 form-control">
                             <label>uf</label>
                             <h4><?php if(isset($dados['uf']))
                             { echo $dados['uf'];}elseif(isset($row_guia['uf']))
