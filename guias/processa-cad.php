@@ -14,7 +14,7 @@ $dados['senha'] = password_hash($dados['senha'], PASSWORD_DEFAULT);
         $msg = "";
 
 //Salvar os dados no bd
-$result_markers = "INSERT INTO servicos ( nome, cpf, email, senha, celular, dtnascimento, uf, valor, aceite) VALUES (:nome, :cpf, :email, :senha, :celular, :dtnascimento, :uf, :valor, :aceite)";
+$result_markers = "INSERT INTO servicos ( nome, cpf, email, senha, celular, dtnascimento, uf, valor, aceite) VALUES (:nome, :cpf, :email, :senha, :celular, :dtnascimento, :uf, 0, :aceite)";
 
 	 $add_pay = $conn->prepare($result_markers);
                 $add_pay->bindParam(':nome', $dados['nome'], PDO::PARAM_STR);
@@ -24,7 +24,6 @@ $result_markers = "INSERT INTO servicos ( nome, cpf, email, senha, celular, dtna
                 $add_pay->bindParam(':celular', $dados['celular'], PDO::PARAM_STR);
                 $add_pay->bindParam(':dtnascimento', $dados['dtnascimento'], PDO::PARAM_STR);
                 $add_pay->bindParam(':uf', $dados['uf'], PDO::PARAM_STR);
-                $add_pay->bindParam(':valor', $dados['valor'], PDO::PARAM_STR);
                 $add_pay->bindParam(':aceite', $dados['aceite'], PDO::PARAM_STR);
 
                 $add_pay->execute();
@@ -41,5 +40,5 @@ if($conn->affected_rows){
 	header("Location: painelGuia.php");
 }else{
 	$_SESSION['msg'] = "<span style='color: red';>Erro: Guia não foi cadastrado com sucesso!</span>";
-	header("Location: painelGuia.php");	
+	header("Location: painelGuia.php");
 }

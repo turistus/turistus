@@ -151,15 +151,6 @@ include_once '../connection.php';
         </div>
 
 
-
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-            <label >Valor Guia </label>
-                <input type="text" class="form-control" id="valor" placeholder="R$.. " name="valor" value="<?php
-                            if (isset($dados['valor'])) {
-                                  echo $dados['valor'];
-                            }?>">
-        </div>
-
         <div class="col-auto my-1">
             <div class="custom-control custom-checkbox mr-sm-2">
                 <input type="checkbox" class="custom-control-input" id="aceite" name="aceite" value="1">
