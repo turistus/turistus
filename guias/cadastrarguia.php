@@ -111,7 +111,7 @@ include_once '../connection.php';
         </div>
 
 
-        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-5">
+        <div class="col-xl-5 col-lg-5 col-md-6 col-sm-5">
             <label >Data nascimento</label>
                 <input type="date" class="form-control" id="dtnascimento" name="dtnascimento"
                         value="<?php
@@ -185,15 +185,17 @@ include_once '../connection.php';
                       </div>
     	</form>
     </div>
-    <div class="col-10" style=" margin: auto; padding-top: 20px; border: solid 1px black;">
+    <div class="col-10" style=" margin: auto; padding-top: 15px;">
         <h6>Todos os guias devem respeitar as normas e orientações descritas no termo de uso.</h6>
     </div>
+    <br>
 
 <!-- Busca PT   -->
 
     </div>
 <!-- FIM DA DIV do CADASTRO do GUIA -->
-
+<br>
+<br>
 
 
     </div><!-- fim Div ROW  -->
