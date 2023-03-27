@@ -119,7 +119,7 @@ session_start();
                                 <h5>Classificação:</h5>
                             </div>
                             <div class="col-4 " >
-                                <div class="star-ratings">
+                                <div class="star-ratings" style="margin-left:5px;">
                                     <div class="fill-ratings" style="width: <?php echo $pontos . '%'?>;">
                                         <span>★★★★★</span>
                                     </div>
