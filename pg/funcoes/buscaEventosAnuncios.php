@@ -37,13 +37,13 @@
         $result_products = $conn->prepare($query_products);
         $result_products->execute();
         ?>
-        <div class="row row-cols-1 row-cols-md-3">
+        <div class="row col	col-sm-6 col-md-12 col-lg-12 col-xl-12">
           <?php
           while ($row_product = $result_products->fetch(PDO::FETCH_ASSOC)) {
             extract($row_product);
           ?>
             <div class="text-center" >
-              <div class="card " style="border: 10px solid black;  ">
+              <div class="card " >
 
               <a href="view-evento.php?id=<?php echo $idE;?>" class="btn ">
                 <div class="card-body " style="padding: 10px;  ">
