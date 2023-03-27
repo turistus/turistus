@@ -110,7 +110,7 @@ session_start();
                         <div class="col-md-6" style="border: 0,5px solid black;">
 
                             <div class="col-md-12 ">
-                                <h4>Profissional organizador:  <a href="../guias/perfilG.php?id=<?php echo $idGuia;?>"><?php echo $nomeGuia;?></h4></a>
+                                <h4>Profissional organizador:  <a href="../guias/perfilG.php?idguia=<?php echo $idGuia;?>"><?php echo $nomeGuia;?></h4></a>
                                 <h3 style="text-align: center;"><?php echo $cidade?> - <?php echo $uf?></h3>
                             </div>
                             <hr>

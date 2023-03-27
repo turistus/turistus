@@ -1,7 +1,7 @@
 
 <?php
 
-$Uid = $_SESSION['user_id'];
+$Uid = filter_input(INPUT_GET, "idguia", FILTER_SANITIZE_NUMBER_INT);
 //echo $Uid;
 
 $query_busca_guia = "SELECT * FROM servicos WHERE servicos.id = $Uid";
