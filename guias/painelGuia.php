@@ -354,7 +354,7 @@ $emailusuario = $_SESSION['user_email'];
                                 <div class="modal-content" id=formPerfil style="padding-bottom: 20px;">
                                                   <!-- Pag. para editar perfil guia -->
                                   <?php
-                                      include_once 'funcoes/PerfilPrivadoGuia.php';
+                                      include_once 'funcoes/perfilPrivadoGuia.php';
                                   ?>
 
                                 </div>
