@@ -5,6 +5,16 @@ include '../connection.php ';
 
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
+$emailSessaoAberta;
+
+session_start();
+
+    if(!isset ($_SESSION['user'])){
+        $emailSessaoAberta = $_SESSION['user_email'];
+        echo " " . $emailSessaoAberta;
+     }else{
+        $_SESSION['user_email'] = ['TEste@t.com'];
+     }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -82,7 +92,7 @@ $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 
                         <div class="mb-3">
                             <label>E-mail</label>
-                            <input type="email" name="senderEmail" id="senderEmail" placeholder="E-mail do comprador" value="c66860546910556664625@sandbox.pagseguro.com.br" class="form-control" required>
+                            <input type="email" name="senderEmail" id="senderEmail" placeholder="E-mail do comprador" value="<?php echo $emailSessaoAberta;?>" class="form-control" required>
                         </div>
 
                         <div class="row">
