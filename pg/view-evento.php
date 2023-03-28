@@ -7,6 +7,7 @@ session_start();
     if(!isset ($_SESSION['user'])){
         $emailSessaoAberta = $_SESSION['user_email'];
         echo " " . $emailSessaoAberta;
+        echo " " . $emailSessaoAberta;
      }else{
         $_SESSION['user_email'] = ['TEste@t.com'];
      }
@@ -157,7 +158,7 @@ session_start();
                                         </div>
 
                                         <div class="col-8 mt-2"  >
-                                                <a href="../p/p2.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn "  >
+                                                <a href="../p/p2.php?id=<?php echo $id;?>&idGuia=<?php echo $idDoGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn "  >
                                                 <input id="BotaoPagamento" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                                 </a>
                                         </div>
