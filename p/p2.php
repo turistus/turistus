@@ -1,19 +1,12 @@
 <?php
 define('ACCESS', true);
 include '../connection.php ';
-include './configuracao.php';
+include 'configuracao.php';
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 //$emailSessaoAberta;
 
-session_start();
 
-    if(!isset ($_SESSION['user'])){
-        $emailSessaoAberta = $_SESSION['user_email'];
-        echo " p p2 " . $emailSessaoAberta;
-     }else{
-        $_SESSION['user_email'] = ['TEste@t.com'];
-     }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -63,14 +56,14 @@ session_start();
                         $resultado_car->execute();
 
                         $linha_guia = $resultado_car->fetch(PDO::FETCH_ASSOC);
-                        $linha_guia['valor'];
+                        $linha_guia['nDoGuia'];
 
 
                         ?>
 
                     <div class="mb-3">
                         <label>Nome Evento</label>
-                        <input type="text" name="amount" id="amount" class="form-control" value="<?php echo $row_car['nome']; ?>">
+                        <input type="text" name="nome" id="nome" class="form-control" value="<?php echo $row_car['nome']; ?>">
                     </div>
                     <div class="mb-3">
                         <label>Nome do Guia</label>
@@ -316,6 +309,6 @@ session_start();
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
 
         <script type="text/javascript" src="<?php echo SCRIPT_PAGSEGURO; ?>"></script>
-        <!--<script src="./js/personalizado.js"></script>-->
+        <script src="./js/personalizado.js"></script>
     </body>
 </html>
