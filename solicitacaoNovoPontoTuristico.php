@@ -47,7 +47,7 @@ include_once 'connection.php';
                 		            $attachment = $_FILES['attachment'];
                 		            //var_dump($data);
                 		            //var_dump($attachment);
-                		            $query_msg = "INSERT INTO pontosturisticos (name, descricao, price, image, created, idGuia, cidade, uf, liberado) VALUES (:name, :descricao, 13, :image, NOW(), 0, :cidade, :uf, 0)";
+                		            $query_msg = "INSERT INTO pontosturisticos (name, descricao, price, image, created, idGuia, cidade, uf, liberado) VALUES (:name, :descricao, 13, :image, NOW(), 1, :cidade, :uf, 0)";
                 		            $add_msg = $conn->prepare($query_msg);
 
                 		            $add_msg->bindParam(':name', $data['name'], PDO::PARAM_STR);
