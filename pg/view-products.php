@@ -81,6 +81,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                     <!-- Lado Direito -->
                 <div class="col-md-4" >
+                        <label>Classificação: </label>
                             <div class="col-4 " >
                                 <div class="star-ratings" style="margin-left:5px;">
                                     <div class="fill-ratings" style="width: <?php echo $pontos . '%'?>;">
