@@ -1,7 +1,7 @@
 <?php
 
 // Endereço do projeto
-define('URL', 'http://localhost/empresa/');
+//define('URL', 'http://localhost/empresa/');
 define('URLADM', 'http://localhost/empresa/adm/');
 
 // Credenciais do banco de dados
