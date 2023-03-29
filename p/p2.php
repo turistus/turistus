@@ -2,7 +2,7 @@
 define('ACCESS', true);
 include '../connection.php ';
 include 'configuracao.php ';
-include 'proc_pag.php';
+//include 'proc_pag.php';
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 //$emailSessaoAberta;
