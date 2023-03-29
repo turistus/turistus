@@ -115,7 +115,7 @@ session_start();
                                 <h3 style="text-align: center;"><?php echo $cidade?> - <?php echo $uf?></h3>
                             </div>
                             <hr>
-                            <div class="row">
+                            <d iv class="row">
                             <div class="col-3 " >
                                 <br>
                                 <h5>Classificação:</h5>
@@ -216,7 +216,7 @@ session_start();
 
                                         <div class="col-4 mt-2"  >
                                             <p>
-                                                <button type='button' class='btn btn-outline-success'>
+                                                <button type='button' class='btn btn-outline-success' data-bs-toggle='modal' data-bs-target='#loginModal'>
 
                                                 <input id="BotaoPagamento" type="image" src="../icones/picpaylogo.png" name="submit" alt="picpaay" style="width: 80px; height: 40px;" />
 
@@ -224,7 +224,7 @@ session_start();
                                             </p>
                                         </div>
                                         <div class="col-8 mt-2"  >
-                                            <button type='button' class='btn btn-outline'>
+                                            <button type='button' class='btn btn-outline' data-bs-toggle='modal' data-bs-target='#loginModal'>
                                                 <input id="BotaoPagamento" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             </button>
                                         </div>
