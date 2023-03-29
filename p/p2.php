@@ -1,8 +1,7 @@
 <?php
 define('ACCESS', true);
-include './configuracao.php';
 include '../connection.php ';
-
+include './configuracao.php';
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 //$emailSessaoAberta;
@@ -11,7 +10,7 @@ session_start();
 
     if(!isset ($_SESSION['user'])){
         $emailSessaoAberta = $_SESSION['user_email'];
-        echo " " . $emailSessaoAberta;
+        echo " p p2 " . $emailSessaoAberta;
      }else{
         $_SESSION['user_email'] = ['TEste@t.com'];
      }
@@ -26,14 +25,23 @@ session_start();
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
         <title>Turist Us - PagSeguro</title>
-        <link href="./css/personalizado.css" rel="stylesheet">
+    <style>
+        .img-band{
+    padding-right: 2px;
+        }
+        .select-qnt-parcelas{
+    display: none;
+        }
+
+    </style>
+
     </head>
     <body>
         <div class="container">
 
-        <?php
-            include_once '../menuprincipal.php';
-        ?>
+            <?php
+                include_once '../menuprincipal.php';
+            ?>
             <div class="row">
                 <h1 class="display-4">Finalizar a Compra</h1>
                 <div class="col-md-4 order-md-2 mb-4">
@@ -300,14 +308,14 @@ session_start();
 
 
         <?php
-  include_once '../rodape.php';
-  ?>
+        include_once '../rodape.php';
+        ?>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
 
         <script type="text/javascript" src="<?php echo SCRIPT_PAGSEGURO; ?>"></script>
-        <script src="./js/personalizado.js"></script>
+        <!--<script src="./js/personalizado.js"></script>-->
     </body>
 </html>
