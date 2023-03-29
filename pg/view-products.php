@@ -59,7 +59,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
             pontosturisticos.cidade AS cidade,
              pontosturisticos.uf AS uf,
                pontosturisticos.image AS image,
-               pontos = ( SELECT SUM(valorVoto) / Count(idEvento) FROM classificacao WHERE idEvento = classificacao.idEvento)
+               pontos = ( SELECT SUM(valorVoto) / Count(idEvento) FROM classificacao)
 
             FROM pontosturisticos WHERE pontosturisticos.id =:id ";
             $result_products = $conn->prepare($query_products);
