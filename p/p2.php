@@ -7,6 +7,23 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 //$emailSessaoAberta;
 
+    $queroEvento = "SELECT *, valor, idGuia AS gId FROM eventos WHERE id = $id";
+
+    $resultado_car = $conn->prepare($queroEvento);
+    $resultado_car->execute();
+
+    $row_car = $resultado_car->fetch(PDO::FETCH_ASSOC);
+    $total_venda = number_format($row_car['valor'], 2, '.', '');
+    $row_car['valor'];
+
+    $queroGuiadoEvento = "SELECT *, nome AS nDoGuia FROM servicos WHERE id = $idGuia";
+    $resultado_car = $conn->prepare($queroGuiadoEvento);
+    $resultado_car->execute();
+
+    $linha_guia = $resultado_car->fetch(PDO::FETCH_ASSOC);
+    $linha_guia['nDoGuia'];
+
+
 
 ?>
 <!DOCTYPE html>
@@ -33,6 +50,7 @@ $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
             <?php
                 include_once './menuprincipal.php';
             ?>
+
         <div class="container">
 
 
@@ -41,26 +59,7 @@ $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
                 <div class="col-md-4 order-md-2 mb-4">
                     <h3>Evento</h3>
 
-                    <?php
-                        $queroEvento = "SELECT *, valor, idGuia AS gId FROM eventos WHERE id = $id";
 
-                        $resultado_car = $conn->prepare($queroEvento);
-                        $resultado_car->execute();
-
-                        $row_car = $resultado_car->fetch(PDO::FETCH_ASSOC);
-                        $total_venda = number_format($row_car['valor'], 2, '.', '');
-                        $row_car['valor'];
-
-                        $queroGuiadoEvento = "SELECT *, nome AS nDoGuia FROM servicos WHERE id = $idGuia";
-
-                        $resultado_car = $conn->prepare($queroGuiadoEvento);
-                        $resultado_car->execute();
-
-                        $linha_guia = $resultado_car->fetch(PDO::FETCH_ASSOC);
-                        $linha_guia['nDoGuia'];
-
-
-                        ?>
 
                     <div class="mb-3">
                         <label>Nome Evento</label>
