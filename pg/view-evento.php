@@ -265,11 +265,10 @@ session_start();
     $("#acessaTurista").show(1000);
     $("#acessaGuia").hide();
     $("#formPrimeiro").hide();
-
 	});
 
   $("#guia").click(function () {
-		$("#acessaGuia").show(1000);
+	$("#acessaGuia").show(1000);
     $("#acessaTurista").hide();
     $("#formPrimeiro").hide();
 	});
