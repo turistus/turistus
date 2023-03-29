@@ -152,7 +152,7 @@ session_start();
                                         <div class="col-4 mt-2"  >
                                             <p>
 
-                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn btn-outline-success" style="  width: 150px;" ><input id="BotaoPagamento" type="image" src="../icones/picpaylogo.png" name="submit" alt="" style="width: 80px; height: 40px;"/> </a>
+                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn btn-outline-success" ><input id="BotaoPagamento" type="image" src="../icones/picpaylogo.png" name="submit" alt="" style="width: 80px; height: 40px;"/> </a>
                                             </p>
 
                                         </div>
@@ -216,7 +216,7 @@ session_start();
 
                                         <div class="col-4 mt-2"  >
                                             <p>
-                                                <button type='button' class='btn btn-outline-success' data-bs-toggle='modal' data-bs-target='#loginModal'>
+                                                <button type='button' class='btn btn-outline-success'>
 
                                                 <input id="BotaoPagamento" type="image" src="../icones/picpaylogo.png" name="submit" alt="picpaay" style="width: 80px; height: 40px;" />
 
@@ -224,7 +224,7 @@ session_start();
                                             </p>
                                         </div>
                                         <div class="col-8 mt-2"  >
-                                            <button type='button' class='btn btn-outline' data-bs-toggle='modal' data-bs-target='#loginModal'>
+                                            <button type='button' class='btn btn-outline'>
                                                 <input id="BotaoPagamento" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             </button>
                                         </div>
