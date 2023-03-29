@@ -80,7 +80,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                 </div>
 
                     <!-- Lado Direito -->
-                <div class="col-md-4" >
+                <div class="col-md-6" >
                         <div class="row">
                             <div class="col-3 " >
                                 <br>
