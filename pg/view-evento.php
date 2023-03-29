@@ -115,7 +115,7 @@ session_start();
                                 <h3 style="text-align: center;"><?php echo $cidade?> - <?php echo $uf?></h3>
                             </div>
                             <hr>
-                            <d iv class="row">
+                            <div class="row">
                             <div class="col-3 " >
                                 <br>
                                 <h5>Classificação:</h5>
