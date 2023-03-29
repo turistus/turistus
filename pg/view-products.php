@@ -72,18 +72,22 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
             <h1 class="display-3 mt-5 mb-3"><?php echo $name; ?></h1>
             <!-- LINHA PRINCIPAL -->
-            <div class="row" style=" background-image: src='../images/bg22.jpg';">
+            <div class="row">
 
                     <!-- Lado Esquerdo -->
-                <div class="col-md-6" style="padding-top:20px;" >
+                <div class="col-md-6" >
                     <img style="height: 300px;" src='<?php echo "../images/pontosturisticos/$id/$image"; ?>' class="card-img-top">
                 </div>
 
                     <!-- Lado Direito -->
                 <div class="col-md-4" >
-
+                        <div class="row">
+                            <div class="col-3 " >
+                                <br>
+                                <h5>Classificação:</h5>
+                            </div>
                             <div class="col-4 " >
-                            <label>Classificação: </label>
+
                                 <div class="star-ratings" style="margin-left:5px;">
                                     <div class="fill-ratings" style="width: <?php echo $pontos . '%'?>;">
                                         <span>★★★★★</span>
@@ -93,7 +97,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                     </div>
                                 </div>
                             </div>
-
+                        </div>
                         </br>
 
                             <h5>Cidade: <?php echo $cidade?> - <?php echo $uf?></h5>
