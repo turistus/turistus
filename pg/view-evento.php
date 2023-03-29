@@ -115,7 +115,7 @@ session_start();
                                 <h3 style="text-align: center;"><?php echo $cidade?> - <?php echo $uf?></h3>
                             </div>
                             <hr>
-                            <div class="row">
+                            <d iv class="row">
                             <div class="col-3 " >
                                 <br>
                                 <h5>Classificação:</h5>
@@ -152,7 +152,7 @@ session_start();
                                         <div class="col-4 mt-2"  >
                                             <p>
 
-                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn btn-success" style="  width: 150px;" ><input id="BotaoPagamento" type="image" src="../icones/picpaylogo.png" name="submit" alt="" style="width: 80px; height: 40px;"/> </a>
+                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn btn-outline-success" style="  width: 150px;" ><input id="BotaoPagamento" type="image" src="../icones/picpaylogo.png" name="submit" alt="" style="width: 80px; height: 40px;"/> </a>
                                             </p>
 
                                         </div>
