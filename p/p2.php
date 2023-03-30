@@ -59,6 +59,7 @@ $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
                         $linha_guia = $resultado_car->fetch(PDO::FETCH_ASSOC);
                         $linha_guia['nDoGuia'];
 
+                        echo $row_car['nome'];
 
                         ?>
 
