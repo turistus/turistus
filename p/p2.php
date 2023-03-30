@@ -31,21 +31,13 @@ include './p/configuracao.php';
     <body>
 
         <div class="container">
-
-
             <div class="row">
-
-
-
-
                 <div class="col-md-8 order-md-1">
                     <span class="endereco" data-endereco="<?php echo URL; ?>"></span>
                     <span id="msg"></span>
                     <form name="formPagamento" action="" id="formPagamento">
                         <span id="msg"></span>
-
                         <h4 class="mb-3">Dados do Comprador</h4>
-
                         <div class="mb-3">
                             <label>Nome</label>
                             <input type="text" name="senderName" id="senderName" placeholder="Nome completo" value="Jose Comprador" class="form-control" required>
