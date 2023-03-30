@@ -158,7 +158,7 @@ session_start();
                                         </div>
 
                                         <div class="col-8 mt-2"  >
-                                                <a href="../p/p2.php?id=<?php echo $id;?>&idGuia=<?php echo $idDoGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn "  >
+                                                <a href="../pagar.php?id=<?php echo $id;?>&idGuia=<?php echo $idDoGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn "  >
                                                 <input id="BotaoPagamento" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                                 </a>
                                         </div>
