@@ -15,7 +15,7 @@ function pagamento() {
 
             //ID da sessão retornada pelo PagSeguro
             PagSeguroDirectPayment.setSessionId(retorno.id);
-            //console.log(retorno.PHPSESSID);
+            console.log(retorno.id);
         },
         complete: function (retorno) {
             //listarMeiosPag();
