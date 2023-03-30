@@ -1,6 +1,6 @@
 <?php
 
-include './configuracao.php';
+include './configurac.php';
 
 ?>
 <!DOCTYPE html>
