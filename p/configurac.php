@@ -1,7 +1,7 @@
 <?php
 
 //Necessário testar em dominio com SSL
-define("URL", "https://turistus.com.br/");
+define("URL", "https://www.turistus.com.br/");
 
 $sandbox = true;
 if ($sandbox) {
@@ -12,7 +12,7 @@ if ($sandbox) {
     define("SCRIPT_PAGSEGURO", "https://stc.sandbox.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js");
     define("EMAIL_LOJA", "turmonkey2023@hotmail.com");
     define("MOEDA_PAGAMENTO", "BRL");
-    define("URL_NOTIFICACAO", "https://turistus.com.br/notificacaoPagSeguro.php");
+    define("URL_NOTIFICACAO", "https://www.turistus.com.br/notificacaoPagSeguro.php");
 } else {
     //Credenciais do PagSeguro
     define("EMAIL_PAGSEGURO", "desconectaprincipal@hotmail.com");
@@ -21,5 +21,5 @@ if ($sandbox) {
     define("SCRIPT_PAGSEGURO", "https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js");
     define("EMAIL_LOJA", "turmonkey2023@hotmail.com");
     define("MOEDA_PAGAMENTO", "BRL");
-    define("URL_NOTIFICACAO", "https://turistus.com.br/notificacaoPagSeguro.php");
+    define("URL_NOTIFICACAO", "https://www.turistus.com.br/notificacaoPagSeguro.php");
 }
