@@ -1,6 +1,6 @@
 <?php
 
-include './p/configuracao.php';
+include './configurac.php';
 
 $url = URL_PAGSEGURO . "sessions?email=" . EMAIL_PAGSEGURO . "&token=" . TOKEN_PAGSEGURO;
 
