@@ -30,52 +30,11 @@ include './p/configuracao.php';
     </head>
     <body>
 
-            <?php
-                include_once './menuprincipal.php';
-            ?>
         <div class="container">
 
 
             <div class="row">
-                <h1 class="display-4">Finalizar a Compra</h1>
-                <div class="col-md-4 order-md-2 mb-4">
-                    <h3>Evento</h3>
 
-                    <?php
-                        $queroEvento = "SELECT *, valor, idGuia AS gId FROM eventos WHERE id = $id";
-
-                        $resultado_car = $conn->prepare($queroEvento);
-                        $resultado_car->execute();
-
-                        $row_car = $resultado_car->fetch(PDO::FETCH_ASSOC);
-                        $total_venda = number_format($row_car['valor'], 2, '.', '');
-                        $row_car['valor'];
-
-                        $queroGuiadoEvento = "SELECT *, nome AS nDoGuia FROM servicos WHERE id = $idGuia";
-
-                        $resultado_car = $conn->prepare($queroGuiadoEvento);
-                        $resultado_car->execute();
-
-                        $linha_guia = $resultado_car->fetch(PDO::FETCH_ASSOC);
-                        $linha_guia['nDoGuia'];
-
-                        echo $row_car['nome'];
-
-                        ?>
-
-                    <div class="mb-3">
-                        <label>Nome Evento</label>
-                        <input type="text" name="nome" id="nome" class="form-control" value="<?php echo $row_car['nome']; ?>">
-                    </div>
-                    <div class="mb-3">
-                        <label>Nome do Guia</label>
-                        <div class="mb-1 text-muted"><?php echo $linha_guia['nDoGuia']; ?></div>
-                    </div>
-                    <div class="mb-3">
-                        <label>Valor</label>
-                        <div class="mb-1 text-muted"><?php echo number_format($row_car['valor'], 2, ",", "."); ?></div>
-                    </div>
-                </div>
 
 
 
