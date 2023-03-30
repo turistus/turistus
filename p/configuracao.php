@@ -1,7 +1,7 @@
 <?php
 
 //Necessário testar em dominio com SSL
-define("URL", "https://.turistus.com.br/");
+define("URL", "https://turistus.com.br/");
 
 $sandbox = true;
 if ($sandbox) {
@@ -16,10 +16,10 @@ if ($sandbox) {
 } else {
     //Credenciais do PagSeguro
     define("EMAIL_PAGSEGURO", "desconectaprincipal@hotmail.com");
-    define("TOKEN_PAGSEGURO", "Seu token no PagSeguro");
+    define("TOKEN_PAGSEGURO", "05565737-2405-45a7-aeb0-dac6b621d4db665758264eccb1df2cd7cca70bea714d6121-d57c-4d90-90bd-ceb9cf463be5");
     define("URL_PAGSEGURO", "https://ws.pagseguro.uol.com.br/v2/");
     define("SCRIPT_PAGSEGURO", "https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js");
-    define("EMAIL_LOJA", "E-mail de suporte pós venda");
+    define("EMAIL_LOJA", "turmonkey2023@hotmail.com");
     define("MOEDA_PAGAMENTO", "BRL");
-    define("URL_NOTIFICACAO", "https://turistus.com.br/adm/NotificacaoPagSeguro.php");
+    define("URL_NOTIFICACAO", "https://turistus.com.br/notificacaoPagSeguro.php");
 }

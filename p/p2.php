@@ -1,7 +1,7 @@
 <?php
 define('ACCESS', true);
 include '../connection.php ';
-include 'configuracao.php ';
+include './p/configuracao.php';
 //include 'proc_pag.php';
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
@@ -306,12 +306,12 @@ $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
         include_once '../rodape.php';
         ?>
 
-
+        <script type="text/javascript" src="<?php echo SCRIPT_PAGSEGURO; ?>"></script>
+        <script src="js/personalizado.js"></script>
     </body>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
 
-        <script type="text/javascript" src="<?php echo SCRIPT_PAGSEGURO; ?>"></script>
-        <script src="./js/personalizado.js"></script>
+
 </html>
