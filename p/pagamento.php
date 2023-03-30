@@ -14,3 +14,5 @@ curl_close($curl);
 
 $xml = simplexml_load_string($retorno);
 echo json_encode($xml);
+
+?>
