@@ -11,7 +11,7 @@ function pagamento() {
     $.ajax({
 
         //URL completa do local do arquivo responsável em buscar o ID da sessão
-        url: endereco + "pagamento.php",
+        url: endereco + "p/pagamento.php",
         type: 'POST',
         dataType: 'json',
         success: function (retorno) {
