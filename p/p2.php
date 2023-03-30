@@ -32,6 +32,8 @@ include './p/configuracao.php';
 
         <div class="container">
             <div class="row">
+
+
                 <div class="col-md-8 order-md-1">
                     <span class="endereco" data-endereco="<?php echo URL; ?>"></span>
                     <span id="msg"></span>
