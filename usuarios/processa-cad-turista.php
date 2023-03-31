@@ -23,18 +23,18 @@ $result_markers = "INSERT INTO turistas ( name, email, password, celular, dtnasc
                 $add_pay->bindParam(':password', $dados['password'], PDO::PARAM_STR);
                 $add_pay->bindParam(':celular', $dados['celular'], PDO::PARAM_STR);
                 $add_pay->bindParam(':dtnascimento', $dados['dtnascimento'], PDO::PARAM_STR);
-               
+
                 $add_pay->execute();
-                      //PArte para mandar para o painel turista as Sessions do logado  
+                      //PArte para mandar para o painel turista as Sessions do logado
                 $_SESSION['user_id'] = $dados['id'];
                 $_SESSION['user_name'] = $dados['name'];
                 $_SESSION['user_email'] = $dados['email'];
                 $_SESSION['user_key'] = $dados['password'];
                 unset($dados);
 
-header("Location: ../usuarios/painelUsuario.php");
+header("Location: ../usuarios/PainelTurista.php");
 //var_dump($result_markers);
-                        
+
 
 //$resultado_markers = mysqli_query($conn, $result_markers
 
@@ -43,5 +43,5 @@ if(mysqli_insert_id($conn)){
 	//header("Location: usuarios/painelUsuario.php");
 }else{
 	$_SESSION['msg'] = "<span style='color: red';>Erro: Usuario não foi cadastrado com sucesso!</span>";
-	header("Location: usuarios/painelUsuario.php");	
+	header("Location: usuarios/painelUsuario.php");
 }
