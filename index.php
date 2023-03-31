@@ -281,7 +281,7 @@ ob_start();
           ?>
             <div class="col mb-4 text-center">
 
-              <div class="card" style="padding: 20px; text-align: center; ">
+              <div class="card" style="padding: 20px; text-align: center; background-color: #f1f1f3;">
                 <div class="row text-center">
                   <h5 class="card-title" style=" margin:auto; "><?php echo $name; ?></h5>
                 </div>
