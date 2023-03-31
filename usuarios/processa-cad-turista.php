@@ -15,7 +15,7 @@ $dados['password'] = password_hash($dados['password'], PASSWORD_DEFAULT);
         $msg = "";
 
 //Salvar os dados no bd
-$result_markers = "INSERT INTO turistas ( name, email, password, celular, dtnascimento, aceite) VALUES (:name, :email, :password, :celular, :dtnascimento, :aceite = 1)";
+$result_markers = "INSERT INTO turistas ( name, email, password, celular, dtnascimento, aceite) VALUES (:name, :email, :password, :celular, :dtnascimento, 1)";
 
 	 $add_pay = $conn->prepare($result_markers);
                 $add_pay->bindParam(':name', $dados['name'], PDO::PARAM_STR);
