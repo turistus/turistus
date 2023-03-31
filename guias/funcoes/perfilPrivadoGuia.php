@@ -125,13 +125,6 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                             { echo $row_guia['uf']; }?>
                             </h4>
                         </div>
-                        <div class="col-xl-12 col-lg-5 col-md-12 col-sm-12">
-                            <label>Valor</label>
-                            <h4><?php if(isset($dados['valor']))
-                            { echo $dados['valor'];}elseif(isset($row_guia['valor']))
-                            { echo $row_guia['valor']; }?>
-                            </h4>
-                        </div>
                         <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
                             <label>Email</label>
                             <h4><?php if(isset($dados['email']))
