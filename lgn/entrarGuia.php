@@ -1,7 +1,5 @@
 <?php
         //Criptografar a senha
-        //$password_encrypted = password_hash("123456a", PASSWORD_DEFAULT);
-        //echo $password_encrypted;
 
         //Receber os dados do formulário
         $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);

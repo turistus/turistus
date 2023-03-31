@@ -1,7 +1,5 @@
 <?php
         //Criptografar a senha
-        //$password_encrypted = password_hash("123456a", PASSWORD_DEFAULT);
-        //echo $password_encrypted;
 
         //Receber os dados do formulário
         $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -46,7 +44,7 @@
                         $_SESSION['user_email'] = $row_user['email'];
                         $_SESSION['user_key'] = password_hash($row_user['id'], PASSWORD_DEFAULT);
                         $msg = "<div class='alert alert-success' role='alert'>Entrou!</div>";
-                        header("Location: ./usuarios/PainelTurista.php?id=$id");
+                        header("Location: ./usuarios/painelTurista.php?id=$id");
                         exit();
                     }else{
                         $msg = "<div class='alert alert-danger' role='alert'>Erro: Usuário001 ou a senha incorreta!</div>";

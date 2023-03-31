@@ -15,7 +15,7 @@ $dados['password'] = password_hash($dados['password'], PASSWORD_DEFAULT);
         $msg = "";
 
 //Salvar os dados no bd
-$result_markers = "INSERT INTO turistas ( name, email, password, celular, dtnascimento) VALUES (:name, :email, :password, :celular, :dtnascimento)";
+$result_markers = "INSERT INTO turistas ( name, email, password, celular, dtnascimento, aceite) VALUES (:name, :email, :password, :celular, :dtnascimento, :aceite = 1)";
 
 	 $add_pay = $conn->prepare($result_markers);
                 $add_pay->bindParam(':name', $dados['name'], PDO::PARAM_STR);
@@ -32,7 +32,7 @@ $result_markers = "INSERT INTO turistas ( name, email, password, celular, dtnasc
                 $_SESSION['user_key'] = $dados['password'];
                 unset($dados);
 
-header("Location: ../usuarios/painelUsuario.php");
+header("Location: ../usuarios/painelTurista.php");
 //var_dump($result_markers);
 
 
@@ -40,7 +40,7 @@ header("Location: ../usuarios/painelUsuario.php");
 
 if(mysqli_insert_id($conn)){
 	$_SESSION['msg'] = "<span style='color: green';>Usuario cadastrado com sucesso!</span>";
-	header("Location: ../usuarios/painelUsuario.php");
+	header("Location: ../usuarios/painelTurista.php");
 }else{
 	$_SESSION['msg'] = "<span style='color: red';>Erro: Usuario não foi cadastrado com sucesso!</span>";
 	header("Location: ../index.php");
