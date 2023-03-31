@@ -20,10 +20,6 @@ ob_start();
   <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
   <title>Turist Us</title>
 
-
-  <!-- Bootstrap core CSS
-  <link href="css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
-  -->
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -55,7 +51,7 @@ ob_start();
   ?>
 
 
-  <main class="content" style="padding-top:20px; padding-left: 20px; padding-right: 20px; background-image: linear-gradient(#F0FFFF,#FFF5EE,#B0E2FF,#F0FFFF); opacity: .9;">
+  <main class="content" style="padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
 
     <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
       <div class="col-md-6 px-0">
