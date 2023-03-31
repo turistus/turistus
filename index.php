@@ -102,7 +102,7 @@ ob_start();
             <h3 class="mb-0">Crie seu Ponto Turístico</h3>
             <a href="solicitacaoNovoPontoTuristico.php"> <strong class="d-inline-block mb-2 text-primary">Envie seus dados</strong></a>
 
-            <h6><div class="text-muted">Serão aceitos dados fieis ao real e verdadeiro somente. </div></h6>
+            <h6><div class="text-muted">Serão aceitos somente informações fieis ao real e verdadeiro. </div></h6>
 
           </div>
           <div class="col-auto d-none d-lg-block">

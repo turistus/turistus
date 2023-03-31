@@ -71,7 +71,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
 
                         $result_markers = "UPDATE servicos SET
                         image = :image, apelido = :apelido, nome = :nome, cpf = :cpf, email = :email, senha = :senha,
-                        celular = :celular, dtnascimento = :dtnascimento, uf = :uf, valor = :valor, aceite = 1,
+                        celular = :celular, dtnascimento = :dtnascimento, uf = :uf, aceite = 1,
                         banco = :banco, agencia = :agencia, conta = :conta, pix = :pix
                         WHERE servicos.id = :id ";
                         $add_pay = $conn->prepare($result_markers);
@@ -85,7 +85,6 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                         $add_pay->bindParam(':celular', $dados['celular'], PDO::PARAM_STR);
                         $add_pay->bindParam(':dtnascimento', $dados['dtnascimento'], PDO::PARAM_STR);
                         $add_pay->bindParam(':uf', $dados['uf'], PDO::PARAM_STR);
-                        $add_pay->bindParam(':valor', $dados['valor'], PDO::PARAM_STR);
                         $add_pay->bindParam(':banco', $dados['banco'], PDO::PARAM_STR);
                         $add_pay->bindParam(':agencia', $dados['agencia'], PDO::PARAM_STR);
                         $add_pay->bindParam(':conta', $dados['conta'], PDO::PARAM_STR);
@@ -199,14 +198,6 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                     value="<?php if(isset($dados['uf']))
                                     { echo $dados['uf'];}elseif(isset($row_guia['uf']))
                                     { echo $row_guia['uf']; }?>"required> <br>
-                                                        </div>
-
-                                                        <div class="col-xl-9 col-lg-2 col-md-12 col-sm-4">
-                                                            <label style="font-size: larger; color: black;">Valor</label>
-                                                            <input class="form-control" type="text" name="valor" id="valor"
-                                    value="<?php if(isset($dados['valor']))
-                                    { echo $dados['valor'];}elseif(isset($row_guia['valor']))
-                                    { echo $row_guia['valor']; }?>"required> <br>
                                                         </div>
 
                                                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
