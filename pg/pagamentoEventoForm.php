@@ -135,7 +135,7 @@ include_once './configPicPay.php';
                     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
                     // Enviar o parâmetro referente ao SSL
-                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+                    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
 
                     // Enviar dados da compra
                     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data_buy));
@@ -309,7 +309,7 @@ include_once './configPicPay.php';
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-        <script src="js/custom.js"></script>
+
 
         <?php
         if (isset($data_result->paymentUrl)) {
