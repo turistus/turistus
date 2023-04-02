@@ -1,8 +1,8 @@
 <?php
 
-define('PICPAYTOKEN', "3d14c4a4-932e-4348-9221-f714aecfcce2");
+define('PICPAYTOKEN', "0ca8dcdc-e905-49e5-a21c-c13bbb0f4aac");
 
-define('XSELLERTOKEN', "eeda8a78-eb85-435e-952e-0795e4e6930a");
+define('XSELLERTOKEN', "dd0f6a66-5dc0-40aa-82d1-e5195bd54c1e");
 
 define('CALLBACKURL', "https://turistus.com.br/pagamentoEventoForm.php");
 define('RETURNURL', "https://turistus.com.br/pagamentoEventoForm.php");
