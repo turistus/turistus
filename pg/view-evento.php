@@ -6,7 +6,7 @@ session_start();
 
     if(!isset ($_SESSION['user'])){
         $emailSessaoAberta = $_SESSION['user_email'];
-        echo " VIEWe" . $emailSessaoAberta;
+        //echo " VIEWe" . $emailSessaoAberta;
 
      }else{
         $_SESSION['user_email'] = ['TEste@t.com'];
