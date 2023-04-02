@@ -16,7 +16,7 @@ if (empty($id)) {
 }
 
 include_once '../connection.php';
-include_once 'config.php';
+include_once './configPicPay.php';
 
 ?>
                 <?php
