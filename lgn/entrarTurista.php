@@ -47,7 +47,7 @@
                         header("Location: ./usuarios/painelTurista.php");
                         exit();
                     }else{
-                        $msg = "<div class='alert alert-danger' role='alert'>Erro: Usuário001 ou a senha incorreta!</div>";
+                        $msg = "<div class='alert alert-danger' role='alert'>Erro: Usuário ou a senha incorreta!</div>";
                     }
                 }else{
                     $msg = "<div class='alert alert-danger' role='alert'>Erro: Usuário ou a senha incorreta!</div>";
