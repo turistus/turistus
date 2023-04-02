@@ -79,7 +79,7 @@ $idT = isset($row_turista['idT']);
             echo  "<img src='./images/user.png' alt='mdo' width='32' height='32' class='rounded-circle'> </a>";
 
                 echo "<ul class='dropdown-menu text-small' aria-labelledby='dropdownUser1'>";
-                  echo "<li><a class='dropdown-item' href='./usuarios/painelUsuario.php'>Perfil</a></li>";
+                  echo "<li><a class='dropdown-item' href='../usuarios/painelTurista.php'>Perfil</a></li>";
                   echo "<li><a class='dropdown-item' href='./lgn/logout.php'>Sair</a></li>";
                 echo "</ul>";
             echo "</div>";
