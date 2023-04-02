@@ -31,8 +31,8 @@ $result_markers = "INSERT INTO turistas ( name, email, password, celular, dtnasc
                 $_SESSION['user_email'] = $dados['email'];
                 $_SESSION['user_key'] = $dados['password'];
                 unset($dados);
-
-header("Location: ../usuarios/painelTurista.php");
+//Aqui o P é P maiusculo.
+header("Location: ../usuarios/PainelTurista.php");
 //var_dump($result_markers);
 
 
@@ -40,7 +40,7 @@ header("Location: ../usuarios/painelTurista.php");
 
 if(mysqli_insert_id($connex)){
 	$_SESSION['msg'] = "<span style='color: green';>Usuario cadastrado com sucesso!</span>";
-	header("Location: ../usuarios/painelTurista.php");
+	header("Location: ../usuarios/PainelTurista.php");
 }else{
 	$_SESSION['msg'] = "<span style='color: red';>Erro: Usuario não foi cadastrado com sucesso!</span>";
 	header("Location: ../index.php");
