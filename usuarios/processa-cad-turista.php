@@ -32,7 +32,7 @@ $result_markers = "INSERT INTO turistas ( name, email, password, celular, dtnasc
                 $_SESSION['user_key'] = $dados['password'];
                 unset($dados);
 //Aqui o P é P maiusculo.
-header("Location: ../usuarios/PainelTurista.php");
+header("Location: ../pg/eventos.php");
 //var_dump($result_markers);
 
 
