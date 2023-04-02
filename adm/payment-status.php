@@ -4,7 +4,7 @@ session_start();
 ob_start();//limpa buffer de saida redirecionamento...
 define('ACCESS', true);
 include_once 'validate.php';
-include_once '../pg/config.php';
+include_once '../pg/configPicPay.php';
 include_once '../adm/connection.php';
 
 $reference_id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
@@ -20,7 +20,7 @@ if (!empty($reference_id)) {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
     // Enviar o parâmetro referente ao SSL
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
 
     // Enviar os headers
     $headers = [];
