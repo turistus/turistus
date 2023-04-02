@@ -1,6 +1,6 @@
 <?php
 
-include './configuracao.php';
+include './configurac.php';
 include './connection.php';
 
 $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
