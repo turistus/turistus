@@ -20,6 +20,9 @@ function pagamento() {
             PagSeguroDirectPayment.setSessionId(retorno.id);
             console.log(retorno.id);
         },
+        error: function (retorno) {
+            console.log(retorno.id);
+        },
         complete: function (retorno) {
             listarMeiosPag();
         }
