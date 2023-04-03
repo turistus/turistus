@@ -204,8 +204,8 @@ function tipoPagamento(paymentMethod){
 
     //var paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
     if(paymentMethod == "creditCard"){
-        $('.creditCard').hide();
-        $('.bankName').hide();
+        $('.creditCard').show();
+        $('.bankName').show();
     }
     if (paymentMethod == "boleto") {
         $('.creditCard').hide();

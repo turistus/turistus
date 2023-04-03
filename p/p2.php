@@ -78,7 +78,7 @@ include './p/configurac.php';
 
                         <div class="custom-control custom-radio">
                             <input type="radio" name="paymentMethod" class="custom-control-input" id="creditCard" value="creditCard" onclick="tipoPagamento('creditCard')">
-                            <label class="custom-control-label" for="creditCard">Cartão de Crédito</label>
+                            <label class="custom-control-label" for="creditCard" checked >Cartão de Crédito</label>
 
                             <input type="radio" name="paymentMethod" id="paymentMethod" value="boleto" onclick="tipoPagamento('boleto')">
                             Boleto
