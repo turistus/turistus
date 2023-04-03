@@ -27,8 +27,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
           <!-- Fonts and icons -->
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-        <link rel="shortcut icon" href="../images/icon/favicon.ico" >
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
         <title>Editar Perfil</title>
         <link rel="shortcut icon" type="imagex/png" href="../../images/icon/LG.jpg">
     </head>
@@ -38,6 +37,10 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
         <!-- Linha ROW de tudo -->
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="min-height: 350px; padding: 20px; ">
+                <!-- Deve ser possivel alterar alguns dados do Perfil do Usuario Turistaa -->
+                <div class="col-xl-4 col-lg-2 col-md-12 col-sm-12 ">
+
+                </div>
             <h4> Perfil </h4>
                 <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
                     <label>Foto</label>
