@@ -183,7 +183,7 @@ function recupHashCartao() {
             console.log(endereco);
             $.ajax({
                 method: "POST",
-                url: endereco + "proc_pag.php",
+                url: endereco + "./p/proc_pag.php",
                 data: dados,
                 dataType: 'json',
                 success: function (retorna) {
