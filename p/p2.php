@@ -15,7 +15,7 @@ include './p/configurac.php';
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           <!-- Fonts and icons -->
-        <link rel="shortcut icon" href="../images/icon/logo.ico" >
+        <link rel="shortcut icon" href="../images/icon/logo.ico">
         <title>Turist Us - PagSeguro</title>
     <style>
         .img-band{
@@ -32,8 +32,6 @@ include './p/configurac.php';
 
         <div class="container">
             <div class="row">
-
-
                 <div class="col-md-8 order-md-1">
                     <span class="endereco" data-endereco="<?php echo URL; ?>"></span>
                     <span id="msg"></span>
