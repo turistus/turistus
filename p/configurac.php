@@ -1,7 +1,7 @@
 <?php
 
 //Necessário testar em dominio com SSL
-define("URL", "https://turistus.com.br");
+define("URL", "https://turistus.com.br/");
 
 $sandbox = true;
 if ($sandbox) {

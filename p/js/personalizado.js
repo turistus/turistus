@@ -202,10 +202,10 @@ function recupHashCartao() {
 
 function tipoPagamento(paymentMethod){
 
-    //var paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+    //var paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value; ja alterei os HIDE uma vez
     if(paymentMethod == "creditCard"){
-        $('.creditCard').show();
-        $('.bankName').show();
+        $('.creditCard').hide();
+        $('.bankName').hide();
     }
     if (paymentMethod == "boleto") {
         $('.creditCard').hide();
