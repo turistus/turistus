@@ -18,7 +18,7 @@ $usuarioId = isset($_SESSION['user_id']);
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="icon" href="../images/icon/logo.png">
   <title>MAPA</title>
-  
+
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
@@ -44,7 +44,7 @@ $usuarioId = isset($_SESSION['user_id']);
   <link href="https://fonts.googleapis.com/css?family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="css/blog.rtl.css" rel="stylesheet">
-  
+
 </head>
 
 <body>
@@ -55,7 +55,7 @@ $usuarioId = isset($_SESSION['user_id']);
 
 <div id="map-box">
 <style>
-#svg-map-container{width:75%;margin-left:auto;margin-right:auto}
+#svg-map-container{width:50%;margin-left:auto;margin-right:auto}
 #svg-map text{fill:#fff; font:12px Arial-BoldMT, sans-serif}
 #svg-map a{text-decoration:none}
 #svg-map a:hover{cursor:pointer; text-decoration:none}
@@ -72,7 +72,7 @@ $usuarioId = isset($_SESSION['user_id']);
 
 
 <?php
-    
+
 ?>
 
 

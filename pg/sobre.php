@@ -13,7 +13,7 @@ $usuarioId = isset($_SESSION['user_id']);
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="icon" href="../images/icon/logo.png">
   <title>SOBRE</title>
-  
+
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
@@ -39,7 +39,7 @@ $usuarioId = isset($_SESSION['user_id']);
   <link href="https://fonts.googleapis.com/css?family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="css/blog.rtl.css" rel="stylesheet">
-  
+
 </head>
 
 <body>
@@ -50,7 +50,8 @@ $usuarioId = isset($_SESSION['user_id']);
 
     <main>
     <div class="conteiner" style="border: 1px solid black; margin: 20px; padding: 20px;">
-        <h2>Um novo modelo em contratação de serviços turisticos</h2>
+    <p> Em breve.. </p>
+       <!-- <h2>Um novo modelo em contratação de serviços turisticos</h2>
         <p>
         Voltada a distribuir renda e fomentar turismo em cada local
         TuristUs traz uma conexão natural para o mundo
@@ -65,17 +66,18 @@ $usuarioId = isset($_SESSION['user_id']);
         um morro, uma cascata, uma igreja, lagos, lugares historicos do municipio...
         dentro destes locais existem varios serviços, ou ainda poderão existir
         os quais necessitam de vizibilidade, de valorização
-        com nosso marketplace de serviços turistico e divulcação de locais 
+        com nosso marketplace de serviços turistico e divulcação de locais
         de forma facil para o turista encontrar serviços e as belezas a serem vizitadas por todo Brasil
         trazendo a conexão que faltava para a recuperação do turismo no cenario mundial.
         </p>
         <h4>A turistus organiza o roteiro do turista e facilita na escolha
         tambem ajuda empresas  e pessoas do ramo a divulgarem e venderem serviços sendo um market place aberto
         voce esta pronto para poder enchergar o que esta a sua volta?</h4>
-        
-        
+
+
         <p style="color: green;">Turist Us a natural connection</p>
-        <a href="TERMOS DE USO.pdf">TERMOS</a>
+        <a href="TERMOS DE USO.pdf">TERMOS</a>-->
+
     </div>
    </main><!-- /.container -->
   <?php
