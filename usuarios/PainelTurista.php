@@ -11,7 +11,7 @@ $Trid = $_SESSION['user_id'];
 $nome = $_SESSION['user_name'];
 $emailUsuario = $_SESSION['user_email'];
 
-echo $emailUsuario;
+//echo $emailUsuario;
 
 ?>
 
@@ -49,11 +49,11 @@ echo $emailUsuario;
           <div class="modal-body">
 
             <div class="row">
-              <button id="Painel" type="button" class="btn btn text-white " style="background-color: #4682B4;">Perfil </button>
-              <button id="terceiroForm" type="button" class="btn btn text-white " style="background-color: #4682B4;"> Pedidos Pagos </button>
-              <button id="CriarEvento" type="button" class="btn btn text-white " style="background-color: #4682B4;"> FOTOS </button>
-              <button id="quartoForm" type="button" class="btn btn text-white " style="background-color: #4682B4;"> Favoritos </button>
-              <button id="perfilForm" type="button" class="btn btn text-white " style="background-color: #4682B4;"> Pontos Classificação</button>
+              <button id="Painel" type="button" class="btn btn text-white "> Perfil </button>
+              <button id="terceiroForm" type="button" class="btn btn text-white "> Eventos Pagos </button>
+              <button id="CriarEvento" type="button" class="btn btn text-white "> Fotos </button>
+              <button id="quartoForm" type="button" class="btn btn text-white "> Favoritos </button>
+              <button id="perfilForm" type="button" class="btn btn text-white "> Pontos Classificação</button>
 
             </div>
 

@@ -2,7 +2,7 @@
 
 <?php
 $codigoUsuario = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-echo "email no menu TURISTA " .$emailUsuario;
+//echo "email no menu TURISTA " .$emailUsuario;
 
     $query_products = "SELECT id, name, email AS emailTurista FROM turistas WHERE id = $Trid limit 1";
     $resultado = $conn->prepare($query_products);
@@ -18,7 +18,7 @@ echo "email no menu TURISTA " .$emailUsuario;
 
 
       <a href="../index.php?id=<?php echo $Trid?>" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-        <img class="bi me-2" width="40" height="40" src="../images/lgteste.png">
+        <img class="bi me-2" width="40" height="40" src="../images/logooriginal.png">
       </a>
       <h2 style="
       text-align: center;
