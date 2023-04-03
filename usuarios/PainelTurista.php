@@ -49,11 +49,11 @@ $emailUsuario = $_SESSION['user_email'];
           <div class="modal-body">
 
             <div class="row">
-              <button id="Painel" type="button" class="btn btn text-white "> Perfil </button>
-              <button id="terceiroForm" type="button" class="btn btn text-white "> Eventos Pagos </button>
-              <button id="CriarEvento" type="button" class="btn btn text-white "> Fotos </button>
-              <button id="quartoForm" type="button" class="btn btn text-white "> Favoritos </button>
-              <button id="perfilForm" type="button" class="btn btn text-white "> Pontos Classificação</button>
+              <button id="Painel" type="button" class="btn btn text-dark"> Perfil </button>
+              <button id="terceiroForm" type="button" class="btn btn text-dark "> Eventos Pagos </button>
+              <button id="CriarEvento" type="button" class="btn btn text-dark "> Fotos </button>
+              <button id="quartoForm" type="button" class="btn btn text-dark "> Favoritos </button>
+              <button id="perfilForm" type="button" class="btn btn text-dark "> Pontos Classificação</button>
 
             </div>
 
