@@ -33,7 +33,7 @@ ob_start();
             <div class="row">
                 <div class="col-md-8 order-md-1">
                     <span class="endereco" data-endereco="<?php echo URL; ?>"></span>
-                    <div class="meio-pag">A</div>
+                    <!-- <div class="meio-pag">A</div> -->
                     <span id="msg"></span>
                     <form name="formPagamento" action="" id="formPagamento">
                         <span id="msg"></span>
@@ -76,7 +76,7 @@ ob_start();
 
                         <div class="custom-control custom-radio">
                             <input type="radio" name="paymentMethod" class="custom-control-input" id="creditCard" value="creditCard" onclick="tipoPagamento('creditCard')">
-                            <label class="custom-control-label" for="creditCard" checked >Cartão de Crédito</label>
+                            <label class="custom-control-label" for="creditCard">Cartão de Crédito</label>
 
                             <input type="radio" name="paymentMethod" id="paymentMethod" value="boleto" onclick="tipoPagamento('boleto')">
                             Boleto
