@@ -74,7 +74,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                 src='<?php echo "../images/guias/$Uid/$fotoGuia"; ?>'>
 
                             <div class="star-ratings" style="margin-left: 15px;" >
-                                <div class="fill-ratings" style="width: <?php echo $pontos . '%'?>;">
+                                <div class="fill-ratings" style="width: <?php echo $row_guia['pontos'] . '%'?>;">
                                     <span>★★★★★</span>
                                 </div>
                                 <div class="empty-ratings">
