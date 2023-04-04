@@ -3,8 +3,9 @@ session_start();
 define('ACCESS', true);
 include_once '../../connection.php';
 
-$idGuia = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-
+$idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
+echo $idGuia . "id Guia";
+echo $id . "So id";
 ?>
 
 <!DOCTYPE html>
@@ -85,9 +86,9 @@ $idGuia = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                     $queryAltPontoGuia = "UPDATE servicos
                             SET pontos = (
-                                SELECT SUM(valorVoto) / Count($idGuia)
-                                     FROM classificacao WHERE classificacao.idGuia = $idGuia)
-                                WHERE servicos.id = $idGuia ";
+                                SELECT SUM(valorVoto) / Count($id)
+                                     FROM classificacao WHERE classificacao.idGuia = $id)
+                                WHERE servicos.id = $id ";
                 $addVoto = $conn->prepare($queryAltPontoGuia);
                 $addVoto->execute();
 
