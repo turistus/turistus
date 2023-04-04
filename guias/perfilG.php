@@ -4,13 +4,14 @@ define('ACCESS', true);
 include_once '../connection.php';
 $Uid = filter_input(INPUT_GET, "idguia", FILTER_SANITIZE_NUMBER_INT);
 
-$query_busca_guia = "SELECT * FROM servicos WHERE servicos.id = $Uid";
+$query_busca_guia = "SELECT *, image AS fotoGuia FROM servicos WHERE servicos.id = $Uid";
 $guia_selecionado = $conn->prepare($query_busca_guia);
 $guia_selecionado->execute();
 
 if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
     $row_guia = $guia_selecionado->fetch(PDO::FETCH_ASSOC);
     $apelido = $row_guia['apelido'];
+    $fotoGuia = $row_guia['fotoGuia'];
 }else {
     header("Location: index.php");
     exit();
@@ -25,9 +26,9 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
           <!-- Fonts and icons -->
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <title>Editar Perfil</title>
-        <link rel="shortcut icon" type="imagex/png" href="../../images/icon/LG.jpg">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+        <title>Avaliar Guia</title>
+        <link rel="shortcut icon" type="imagex/png" href="../images/logooriginal.jpg">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
@@ -71,12 +72,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
 
                         <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 form-control">
                             <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
-                                src='<?php echo "../images/guias/$Uid/$image"; ?>'
-                                value="<?php
-                                        if(isset($dados['image']))
-                                            { echo $dados['image']; }
-                                        elseif(isset($row_guia['image']))
-                                            { echo $row_guia['image'];  }?>;" class="card-img-top" alt="Carregar Foto...">
+                                src='<?php echo "../images/guias/$Uid/$fotoGuia"; ?>'>
                         </div>
                         <div class="star-ratings" style="margin-left: 15px;" >
                             <div class="fill-ratings" style="width: <?php echo $pontos . '%'?>;">
@@ -88,7 +84,8 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                         </div>
                         <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 form-control">
                             <label>Apelido</label>
-                            <h4><?php if(isset($dados['apelido']))
+
+                            <h4><? echo $apelido . " " ?> <?php if(isset($dados['apelido']))
                             { echo $dados['apelido'];}elseif(isset($row_guia['apelido']))
                             { echo $row_guia['apelido']; }?>
                             </h4>
