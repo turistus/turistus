@@ -63,7 +63,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     </form>
                     <br>
             </div>
-            </div>
+
 
 
 <!-- Agora devo fazer o PHP com Query de INSERT na CLASSIFICAÇÃO para calcular a media, para atualizar na Eventos -->
@@ -99,6 +99,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
             }
 
         ?>
+        </div>
 </div>
     </body>
 </html>
