@@ -20,6 +20,10 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
     </head>
 
     <body>
+
+        <?php
+            include_once '../pg/menu.php';
+        ?>
         <h1>Comente como foi</h1>
 
         <div class="content" style="margin:auto; padding: 20px;">
@@ -84,7 +88,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                 $addVoto->execute();
 
                 echo " Obrigado por Avaliar !!";
-                header("Location: ../index.php");
+
 
             }else{
                 echo " Precisamos que você avalie o evento !";
