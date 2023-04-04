@@ -11,7 +11,7 @@ $turista_selecionado->execute();
 
 if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
     $row_turista = $turista_selecionado->fetch(PDO::FETCH_ASSOC);
-
+    echo $foto;
 }else {
     header("Location: ../index.php");
     exit();
@@ -45,7 +45,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                 <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
                     <label>Foto</label>
                             <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
-                            src='<?php echo "../images/turistas/$Tid/$row_turista.[1]"; ?>'
+                            src='<?php echo "../images/turistas/$Tid/$foto"; ?>'
                             value="<?php if(isset($dados['foto']))
                                         { echo $dados['foto']; }
                                     elseif(isset($row_turista['foto']))
