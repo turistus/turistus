@@ -86,7 +86,7 @@ $idGuia = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     $queryAltPontoGuia = "UPDATE servicos
                             SET pontos = (
                                 SELECT SUM(valorVoto) / Count($idGuia)
-                                     FROM classificacao WHERE idGuia = $idGuia)
+                                     FROM classificacao WHERE classificacao.idGuia = $idGuia)
                                 WHERE servicos.id = $idGuia ";
                 $addVoto = $conn->prepare($queryAltPontoGuia);
                 $addVoto->execute();
