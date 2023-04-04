@@ -69,16 +69,15 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
         <?php
         $logadoUser = $_SESSION['user_email'];
-        var_dump($logadoUser);
         $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-        echo $id . " Id do GUIA";
+
         if (isset($data['BtnAvaliar'])) {
                 $query_votar_classi = "INSERT INTO classificacao (idEvento, idGuia, valorVoto, comentario, idUsuario)
                                             VALUES (00, :idGuia, :valorVoto, :comentario, :idUsuario) ";
                 $add_Classi = $conn->prepare($query_votar_classi);
                 //$add_Classi->bindParam(":idEvento", $id);
                 $add_Classi->bindParam(":idUsuario", $logadoUser);
-                $add_Classi->bindParam(":idGuia", $idGuia);
+                $add_Classi->bindParam(":idGuia", $id);
                 $add_Classi->bindParam(":valorVoto", $data['valorVoto']);
                 $add_Classi->bindParam(":comentario", $data['comentario']);
                 $add_Classi->execute();
