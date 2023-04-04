@@ -10,6 +10,7 @@ $guia_selecionado->execute();
 
 if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
     $row_guia = $guia_selecionado->fetch(PDO::FETCH_ASSOC);
+    $apelido = $row_guia['apelido'];
 }else {
     header("Location: index.php");
     exit();
