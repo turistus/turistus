@@ -60,6 +60,9 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
     </head>
 
     <body>
+        <?php
+            include_once './menuFora.php';
+        ?>
             <main class="content">
                 <!-- Linha ROW de tudo -->
                 <div class="row">
