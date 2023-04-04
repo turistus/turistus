@@ -118,10 +118,12 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
 
                             <div class="row" style="padding-left: 10px; margin-top:30px;">
                                 <div class="col-12">
-                                    <h5><a href="../guias/classificaGuia.php?id=<?php echo $LOGADO['id']?>" class="btn btn text-dark" style="border: 1px solid black;"> Vote </a></h5>
+                                    <h5><a href="../guias/classificaGuia.php?id=<?php echo $LOGADO['id']?>" class="btn btn text-dark" style="border: 1px solid black;"> Avaliar </a></h5>
                                 </div>
                             </div>
-
+                            <? echo $row_guia['apelido'] . "Row Guia Apelido";
+                                echo $apelido." Apelido";
+                            ?>
 
                     </div>
                 </div><!-- Fim da DIV Conteiner -->
