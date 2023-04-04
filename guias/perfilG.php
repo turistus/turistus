@@ -66,16 +66,17 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="min-height: 400px; padding: 20px; border: 1px solid black; ">
 
 
-                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 form-control">
+                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 text-center">
                             <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
                                 src='<?php echo "../images/guias/$Uid/$fotoGuia"; ?>'>
-                        </div>
-                        <div class="star-ratings" style="margin-left: 15px;" >
-                            <div class="fill-ratings" style="width: <?php echo $pontos . '%'?>;">
-                                <span>★★★★★</span>
-                            </div>
-                            <div class="empty-ratings">
-                                <span>★★★★★</span>
+
+                            <div class="star-ratings" style="margin-left: 15px;" >
+                                <div class="fill-ratings" style="width: <?php echo $pontos . '%'?>;">
+                                    <span>★★★★★</span>
+                                </div>
+                                <div class="empty-ratings">
+                                    <span>★★★★★</span>
+                                </div>
                             </div>
                         </div>
 
