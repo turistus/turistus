@@ -118,7 +118,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
 
                             <div class="row" style="padding-left: 10px; margin-top:30px;">
                                 <div class="col-12">
-                                    <h5><a href="./usuarios/avaliarGuia.php?id=<?php echo $Uid?>" class="btn btn text-dark" style="border: 1px solid black;"> Avaliar </a></h5>
+                                    <h5><a href="../usuarios/avaliarGuia.php?id=<?php echo $Uid?>" class="btn btn text-dark" style="border: 1px solid black;"> Avaliar </a></h5>
                                 </div>
                             </div>
 
