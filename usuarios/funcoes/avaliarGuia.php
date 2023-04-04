@@ -12,7 +12,7 @@ $idGuia = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="../../images/logooriginal.ico" >
+        <link rel="shortcut icon" href="../../images/logooriginal.png" >
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" ></script>
@@ -23,7 +23,7 @@ $idGuia = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
     <body>
 
         <?php
-            include_once '../../pg/menu.php';
+            include_once '../menuPainelTurista.php';
         ?>
         <h1>Comente como foi</h1>
 
@@ -85,9 +85,9 @@ $idGuia = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                     $queryAltPontoGuia = "UPDATE servicos
                             SET pontos = (
-                                SELECT SUM(valorVoto) / Count($id)
-                                     FROM classificacao WHERE idGuia = $id)
-                                WHERE servicos.id = $id ";
+                                SELECT SUM(valorVoto) / Count($idGuia)
+                                     FROM classificacao WHERE idGuia = $idGuia)
+                                WHERE servicos.id = $idGuia ";
                 $addVoto = $conn->prepare($queryAltPontoGuia);
                 $addVoto->execute();
 
