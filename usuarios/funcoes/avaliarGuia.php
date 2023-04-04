@@ -62,7 +62,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                     </form>
                     <br>
-            </div>
+
 
 
 
@@ -99,6 +99,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
             }
 
         ?>
+             </div>
         </div>
 </div>
     </body>
