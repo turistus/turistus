@@ -4,7 +4,7 @@
 $codigoUsuario = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 //echo "email no menu TURISTA " .$emailUsuario;
 
-    $query_products = "SELECT id, name, email AS emailTurista FROM turistas WHERE id = $Trid limit 1";
+    $query_products = "SELECT id, image AS image, name, email AS emailTurista FROM turistas WHERE id = $Trid limit 1";
     $resultado = $conn->prepare($query_products);
     $resultado->execute();
 
@@ -45,6 +45,6 @@ $codigoUsuario = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
 <!-- Icones do menu -->
 <script  type = "module"  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"> </script>
-<script  nomodule  src="https://unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js"> </script>
+<script  nomodule  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"> </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
