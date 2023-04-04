@@ -12,7 +12,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="../../images/logooriginal.ico" >
+        <link rel="shortcut icon" href="../../images/logooriginal.png" >
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" ></script>
@@ -25,14 +25,14 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
         <?php
             include_once '../../pg/menu.php';
         ?>
-        <h1>Comente como foi</h1>
+        <h1>Comente sobre</h1>
 
         <div class="content" style="margin:auto; padding: 20px;">
             <div class="row" style="border:1px solid black;">
 
                 <br>
                 <div class="col-xl-6 col-lg-8 col-md-8 col-sm-12" style="margin:auto; padding: 20px;">
-                <h4> Avaliar Evento  </h4>
+                <h4> Avaliar Guia  </h4>
                     <form method="POST" action="avaliarGuia.php?id=<?php echo $id; ?>">
                         <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12" >
                             <br>
@@ -63,7 +63,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     <br>
             </div>
             </div>
-        </div>
+
 
 <!-- Agora devo fazer o PHP com Query de INSERT na CLASSIFICAÇÃO para calcular a media, para atualizar na Eventos -->
 
@@ -98,6 +98,6 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
             }
 
         ?>
-
+</div>
     </body>
 </html>
