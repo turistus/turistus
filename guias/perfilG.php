@@ -108,7 +108,8 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                         <div class="col-xl-12 col-lg-6 col-md-12 col-sm-12 form-control">
                             <label>uf</label>
                             <h4><?php if(isset($dados['uf']))
-                            { echo $dados['uf'];}?>
+                            { echo $dados['uf'];}elseif(isset($row_guia['uf']))
+                            { echo $row_guia['uf']; }?>
                             </h4>
                         </div>
 
@@ -117,13 +118,17 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                     <h5><a href="../guias/classificaGuia.php?id=<?php echo $LOGADO['id']?>" class="btn btn text-dark" style="border: 1px solid black;"> Avaliar </a></h5>
                                 </div>
                             </div>
-
-
-                    </div>
-                    <? echo $row_guia['apelido'] . "Row Guia Apelido";
+                            <? echo $row_guia['apelido'] . "Row Guia Apelido";
                                 echo $apelido." Apelido";
                                 echo $nome;
                                 echo $celular;
+
+                            ?>
+
+                    </div>
+                    <? echo $row_guia['apelido'] . "Row Guia Apelido";
+                               echo $row_guia['nome'];
+                               echo $row_guia['celular'];
 
                             ?>
                 </div><!-- Fim da DIV Conteiner -->
