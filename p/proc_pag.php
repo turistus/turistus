@@ -1,7 +1,7 @@
 <?php
 
 include '../p/configurac.php';
-include './connection.php';
+include '../connection.php';
 
 $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -40,11 +40,10 @@ $DadosArray['receiverEmail'] = EMAIL_LOJA;
 $DadosArray['currency'] = $Dados['currency'];
 $DadosArray['extraAmount'] = $Dados['extraAmount'];
 
-$query_car = "SELECT car_prod.valor_venda, car_prod.qnt_produto, car_prod.produto_id, car_prod.carrinho_id,
-        prod.nome_produto
-        FROM carrinhos_produtos car_prod
-        INNER JOIN produtos prod on prod.id=car_prod.produto_id
-        WHERE carrinho_id = '" . $Dados['reference'] . "'";
+$query_car = "SELECT car_prod.valor, car_prod.id,
+        car_prod.nome, car_prod.descricao
+        FROM eventos car_prod
+        ";
 
 $resultado_car = $conn->prepare($query_car);
 $resultado_car->execute();
