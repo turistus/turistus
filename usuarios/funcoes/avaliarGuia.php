@@ -3,9 +3,8 @@ session_start();
 define('ACCESS', true);
 include_once '../../connection.php';
 
-$idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
-echo $idGuia . "id Guia";
-echo $id . "So id";
+$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +12,7 @@ echo $id . "So id";
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="../../images/logooriginal.png" >
+        <link rel="shortcut icon" href="../../images/logooriginal.ico" >
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" ></script>
@@ -24,7 +23,7 @@ echo $id . "So id";
     <body>
 
         <?php
-            include_once '../menuPainelTurista.php';
+            include_once '../../pg/menu.php';
         ?>
         <h1>Comente como foi</h1>
 
@@ -72,7 +71,6 @@ echo $id . "So id";
         $logadoUser = $_SESSION['user_email'];
         var_dump($logadoUser);
         $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-        var_dump($data);
         if (isset($data['BtnAvaliar'])) {
                 $query_votar_classi = "INSERT INTO classificacao (idEvento, idGuia, valorVoto, comentario, idUsuario)
                                             VALUES (00, :idGuia, :valorVoto, :comentario, :idUsuario) ";
@@ -87,7 +85,7 @@ echo $id . "So id";
                     $queryAltPontoGuia = "UPDATE servicos
                             SET pontos = (
                                 SELECT SUM(valorVoto) / Count($id)
-                                     FROM classificacao WHERE classificacao.idGuia = $id)
+                                     FROM classificacao WHERE idGuia = $id)
                                 WHERE servicos.id = $id ";
                 $addVoto = $conn->prepare($queryAltPontoGuia);
                 $addVoto->execute();
