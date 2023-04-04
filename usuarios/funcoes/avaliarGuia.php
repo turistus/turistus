@@ -44,13 +44,13 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                         </div>
                         <br>
                         <div class="col-xl-6 col-lg-6 col-md-4 col-sm-4">
-                            <label> De 1 a 5 <span>★★★★★</span> </label>
+                            <label> De 1 a 5 <span> ★★★★★ </span> </label>
                                     <select name="valorVoto" class="custom-select d-block w-100 " id="valorVoto">
                                         <option value="">Selecione</option>
                                         <option value="20"> 1 ★ - Não gostei</option>
-                                        <option value="40"> 2 ★- Ruim</option>
-                                        <option value="60"> 3 ★- Razoavel</option>
-                                        <option value="80"> 4 ★- Bom</option>
+                                        <option value="40"> 2 ★ - Ruim</option>
+                                        <option value="60"> 3 ★ - Razoavel</option>
+                                        <option value="80"> 4 ★ - Bom</option>
                                         <option value="100"> 5 ★ - Muito bom ( Recomendo )</option>
                                     </select>
                         </div>
