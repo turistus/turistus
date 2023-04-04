@@ -12,9 +12,10 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="../images/icon/logo.ico" >
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="../../images/logooriginal.ico" >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" ></script>
 
         <title>Avaliação de Guia</title>
     </head>
@@ -67,24 +68,26 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 <!-- Agora devo fazer o PHP com Query de INSERT na CLASSIFICAÇÃO para calcular a media, para atualizar na Eventos -->
 
         <?php
+        $logadoUser = $_SESSION['user_email'];
+
         $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
         if (isset($data['BtnAvaliar'])) {
                 $query_votar_classi = "INSERT INTO classificacao (idEvento, idGuia, valorVoto, comentario, idUsuario)
                                             VALUES (00, :idGuia, :valorVoto, :comentario, :idUsuario) ";
                 $add_Classi = $conn->prepare($query_votar_classi);
                 //$add_Classi->bindParam(":idEvento", $id);
-                $add_Classi->bindParam(":idUsuario", $_SESSION['user_email']);
+                $add_Classi->bindParam(":idUsuario", $logadoUser);
                 $add_Classi->bindParam(":idGuia", $idGuia);
                 $add_Classi->bindParam(":valorVoto", $data['valorVoto']);
                 $add_Classi->bindParam(":comentario", $data['comentario']);
                 $add_Classi->execute();
 
-                    $queryAltEvent = "UPDATE servicos
+                    $queryAltPontoGuia = "UPDATE servicos
                             SET pontos = (
                                 SELECT SUM(valorVoto) / Count($id)
                                      FROM classificacao WHERE idGuia = $id)
                                 WHERE servicos.id = $id ";
-                $addVoto = $conn->prepare($queryAltEvent);
+                $addVoto = $conn->prepare($queryAltPontoGuia);
                 $addVoto->execute();
 
                 echo " Obrigado por Avaliar !!";
