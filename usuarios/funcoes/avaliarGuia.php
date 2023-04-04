@@ -23,16 +23,17 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
     <body>
 
         <?php
-            include_once '../../pg/menu.php';
+            include_once '../menuPainelTurista.php';
         ?>
-        <h1>Comente sobre</h1>
+
 
         <div class="content" style="margin:auto; padding: 20px;">
+        <h1>Comente sobre</h1>
             <div class="row" style="border:1px solid black;">
 
                 <br>
                 <div class="col-xl-6 col-lg-8 col-md-8 col-sm-12" style="margin:auto; padding: 20px;">
-                <h4> Avaliar Guia  </h4>
+
                     <form method="POST" action="avaliarGuia.php?id=<?php echo $id; ?>">
                         <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12" >
                             <br>
@@ -62,7 +63,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     </form>
                     <br>
             </div>
-            </div>
+
 
 
 <!-- Agora devo fazer o PHP com Query de INSERT na CLASSIFICAÇÃO para calcular a media, para atualizar na Eventos -->
@@ -98,6 +99,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
             }
 
         ?>
+        </div>
 </div>
     </body>
 </html>
