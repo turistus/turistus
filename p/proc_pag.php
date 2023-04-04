@@ -50,11 +50,12 @@ $resultado_car->execute();
 
 $cont_item = 1;
 while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
-    $DadosArray["itemId{$cont_item}"] = $row_car['produto_id'];
-    $DadosArray["itemDescription{$cont_item}"] = $row_car['nome_produto'];
-    $total_venda = number_format($row_car['valor_venda'], 2, '.', '');
+    $DadosArray["itemId{$cont_item}"] = $row_car['id'];
+    $DadosArray["itemDescription{$cont_item}"] = $row_car['nome'];
+
+    $total_venda = number_format($row_car['valor'], 2, '.', '');
     $DadosArray["itemAmount{$cont_item}"] = $total_venda;
-    $DadosArray["itemQuantity{$cont_item}"] = $row_car['qnt_produto'];
+    $DadosArray["itemQuantity{$cont_item}"] = 1;
     $cont_item++;
 }
 
