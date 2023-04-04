@@ -3,7 +3,7 @@ session_start();
 define('ACCESS', true);
 include_once '../../connection.php';
 
-$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+$idGuia = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
 ?>
 
