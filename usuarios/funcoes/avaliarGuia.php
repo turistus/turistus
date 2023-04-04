@@ -69,7 +69,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
         <?php
         $logadoUser = $_SESSION['user_email'];
-
+        var_dump($logadoUser);
         $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
         if (isset($data['BtnAvaliar'])) {
                 $query_votar_classi = "INSERT INTO classificacao (idEvento, idGuia, valorVoto, comentario, idUsuario)
