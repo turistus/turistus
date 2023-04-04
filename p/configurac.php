@@ -16,7 +16,7 @@ if ($sandbox) {
 } else {
     //Credenciais do PagSeguro
     define("EMAIL_PAGSEGURO", "desconectaprincipal@hotmail.com");
-    define("TOKEN_PAGSEGURO", "05565737-2405-45a7-aeb0-dac6b621d4db665758264eccb1df2cd7cca70bea714d6121-d57c-4d90-90bd-ceb9cf463be5");
+    define("TOKEN_PAGSEGURO", "2ec1526c-6da7-467f-b950-73129b6b5fc4e192b72c44e081c68c58638efbbbd16f318d-49a8-4a82-be6d-77f0366b88d2");
     define("URL_PAGSEGURO", "https://ws.pagseguro.uol.com.br/v2/");
     define("SCRIPT_PAGSEGURO", "https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.directpayment.js");
     define("EMAIL_LOJA", "turmonkey2023@hotmail.com");

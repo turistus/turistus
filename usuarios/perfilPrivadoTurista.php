@@ -5,7 +5,7 @@
 $Tid = $_SESSION['user_id'];
 //echo $Tid;
 
-$query_busca_turista = "SELECT * FROM turistas WHERE turistas.id = $Tid";
+$query_busca_turista = "SELECT *, image AS foto FROM turistas WHERE turistas.id = $Tid";
 $turista_selecionado = $conn->prepare($query_busca_turista);
 $turista_selecionado->execute();
 
@@ -45,11 +45,11 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                 <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
                     <label>Foto</label>
                             <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
-                            src='<?php echo "../images/turistas/$Tid/$image"; ?>'
+                            src='<?php echo "../images/turistas/$Tid/$foto"; ?>'
                             value="<?php if(isset($dados['image']))
                                         { echo $dados['image']; }
-                                    elseif(isset($row_turista['image']))
-                                        { echo $row_turista['image']; }?>;" >
+                                    elseif(isset($row_turista['foto']))
+                                        { echo $row_turista['foto']; }?>;" >
 
                 </div>
 
