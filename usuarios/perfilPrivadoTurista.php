@@ -11,7 +11,7 @@ $turista_selecionado->execute();
 
 if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
     $row_turista = $turista_selecionado->fetch(PDO::FETCH_ASSOC);
-    echo $foto;
+    echo "TESTE ".$foto;
 }else {
     header("Location: ../index.php");
     exit();
