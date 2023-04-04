@@ -4,13 +4,13 @@ define('ACCESS', true);
 include_once '../connection.php';
 $Uid = filter_input(INPUT_GET, "idguia", FILTER_SANITIZE_NUMBER_INT);
 
-$query_busca_guia = "SELECT *, image AS fotoGuia FROM servicos WHERE servicos.id = $Uid";
+$query_busca_guia = "SELECT *, image AS fotoGuia, apelido, nome, celular FROM servicos WHERE servicos.id = $Uid";
 $guia_selecionado = $conn->prepare($query_busca_guia);
 $guia_selecionado->execute();
 
 if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
     $row_guia = $guia_selecionado->fetch(PDO::FETCH_ASSOC);
-
+    $apelido = $row_guia['apelido'];
     $fotoGuia = $row_guia['fotoGuia'];
 }else {
     header("Location: index.php");
