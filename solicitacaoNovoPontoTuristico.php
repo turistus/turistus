@@ -14,7 +14,9 @@ include_once 'connection.php';
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="shortcut icon" href="../images/icon/favicon.ico" >
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/estilobtnenviar.css">
+
         <title>Solicitação Novo Ponto Turistico</title>
     </head>
 <body>
@@ -47,7 +49,7 @@ include_once 'connection.php';
                 		            $attachment = $_FILES['attachment'];
                 		            //var_dump($data);
                 		            //var_dump($attachment);
-                		            $query_msg = "INSERT INTO pontosturisticos (name, descricao, price, image, created, idGuia, cidade, uf, liberado) VALUES (:name, :descricao, 13, :image, NOW(), 1, :cidade, :uf, 0)";
+                		            $query_msg = "INSERT INTO pontosturisticos (name, descricao, price, image, created, idGuia, cidade, uf, autor, cpf, nascimentoAut, lanchonete, liberado) VALUES (:name, :descricao, 13, :image, NOW(), 1, :cidade, :uf, :autor, :cpf, :nascimentoAut, :lanchonete, 0)";
                 		            $add_msg = $conn->prepare($query_msg);
 
                 		            $add_msg->bindParam(':name', $data['name'], PDO::PARAM_STR);
@@ -55,6 +57,10 @@ include_once 'connection.php';
                 		            $add_msg->bindParam(':image', $attachment['name'], PDO::PARAM_STR);
                                     $add_msg->bindParam(':cidade', $data['cidade'], PDO::PARAM_STR);
                                     $add_msg->bindParam(':uf', $data['uf'], PDO::PARAM_STR);
+                                    $add_msg->bindParam(':autor', $data['autor'], PDO::PARAM_STR);
+                                    $add_msg->bindParam(':cpf', $data['cpf'], PDO::PARAM_STR);
+                                    $add_msg->bindParam(':nascimentoAut', $data['nascimentoAut'], PDO::PARAM_STR);
+                                    $add_msg->bindParam(':lanchonete', $data['lanchonete'], PDO::PARAM_STR);
 
 
 
@@ -76,21 +82,21 @@ include_once 'connection.php';
                                         $file = $attachment['name'];
                                         move_uploaded_file($attachment['tmp_name'], $directory . $file);
                                     }
-                                    echo "Mensagem de FOTO enviada com sucesso!<br>";
+                                    //echo "Mensagem de foto enviada com sucesso!<br>";
                                 echo "Solicitação Enviada !";
                           }
                          } catch (Exception $e) {
-                                    echo "Erro: Mensagem de contato não enviada com sucesso 1 !<br>" . $e;
+                                    echo "Erro: Mensagem de contato não enviada com sucesso !<br>" . $e;
                                 }
                         //}
                 //aqui e onde vai SALVAR no BANCOOOOOOO  ATE AQUII
                         ?>
             <!-- SEGUNDA (ROW) LINHA -->
             <div class="row" style=" padding: 10px; margin: 20px;">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px;">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-10" style="padding: 10px;">
                     <form name="add_msg" action="" method="POST" enctype="multipart/form-data">
                         <label>Nome </label>
-                        <input type="text" name="name" id="name" placeholder=" Nome completo" value="<?php
+                        <input type="text" name="name" id="name" placeholder=" Nome turistico " value="<?php
                         if (isset($data['name'])) {
                             echo $data['name'];
                         }
@@ -104,14 +110,14 @@ include_once 'connection.php';
                         if (isset($data['descricao'])) {
                             echo $data['descricao'];
                         }
-                        ?>"> </textarea>
+                        ?>" required> </textarea>
                         <small class="text-muted"> Descreva toda a história do ponto turistico.</small>
                 </div>
 
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12" style="padding: 10px;">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-4" style="padding: 10px;">
 
                     <label class="uf">Estado UF</label>
-                                <select name="uf" class="custom-select d-block w-100 uf" id="uf">
+                                <select name="uf" class="custom-select d-block w-100 uf" id="uf" required>
                                     <option value="">Selecione</option>
                                     <option value="AC">AC</option>
                                     <option value="AL">AL</option>
@@ -144,7 +150,7 @@ include_once 'connection.php';
                 </div>
 
 
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12" style="padding: 10px;">
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" style="padding: 10px;">
                         <label >Cidade </label>
                         <input type="text" name="cidade" id="cidade" placeholder=" Nome do municipio"  value="<?php
                         if (isset($data['cidade'])) {
@@ -153,15 +159,49 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px;">
-                        <label>Foto Ponto Turistico</label>
-                        <input type="file" name="attachment" id="attachment" onchange="previewImagem()"><br><br>
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" style="padding: 10px;">
+                        <label >Autor </label>
+                        <input type="text" name="autor" id="autor" placeholder=" Nome do autor"  value="<?php
+                        if (isset($data['autor'])) {
+                            echo $data['autor'];
+                        }
+                        ?>" required>
+                </div>
 
-                        <div class="card">
-                             <img style="max-height: 200px" src='<?php echo "./images/pontosturisticos/$id/$image"; ?>' class="card-img-top" alt="...">
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-8" style="padding: 10px;">
+                        <label > CPF </label>
+                        <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00"  value="<?php
+                        if (isset($data['cpf'])) {
+                            echo $data['cpf'];
+                        }
+                        ?>" required>
+                </div>
+
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                        <label >Data nascimento </label>
+                        <input type="date" name="nascimentoAut" id="nascimentoAut" value="<?php
+                        if (isset($data['nascimentoAut'])) {
+                            echo $data['nascimentoAut'];
+                        }
+                        ?>" required>
+                </div>
+
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                        <label > Possui Aliens </label>
+                        <div class="custom-control custom-checkbox mr-sm-2">
+                            <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete" value="1" required>
                         </div>
 
-             			<input type="submit" value="Enviar" name="SendAddMsg">
+                </div>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px;">
+                        <label>Foto Ponto Turistico</label>
+                        <input type="file" name="attachment" id="attachment" onchange="previewImagem()" required><br><br>
+
+                        <div class="card">
+                             <img style="max-height: 200px; " src='<?php echo "./images/pontosturisticos/$id/$image"; ?>' class="card-img-top" alt="...">
+                        </div>
+
+             			<input type="submit" value="Enviar" name="SendAddMsg" >
                 </div>
 
                     </form>

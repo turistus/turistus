@@ -101,12 +101,22 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                         </br>
 
                             <h5>Cidade: <?php echo $cidade?> - <?php echo $uf?></h5>
+
+                            <div class="col-6 " >
+                            <i class="fa-regular fa-user-alien"> Aliens</i>
+
+                            </div>
+
+
                 </div>
 
                 <div class="col-md-10 mt-5 mb-5" style=" padding-bottom:5px; margin-left:10px; margin-right: 10px; border: solid 1px black; border-radius: 10px; ">
                     <h3>Descrição</h3>
                     <p style=" padding:10px;"> <?php echo $descricao; ?></p>
                 </div>
+
+
+
 
                 <div class="col-md-10  mb-5" style=" padding-bottom:5px; margin-left:10px; margin-right: 10px; border: solid 1px black; border-radius: 10px; ">
                     <!-- Aqui Inclui a busca de todos os EVENTOS-->
