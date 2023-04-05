@@ -23,7 +23,7 @@ echo $id;
     <body>
 
         <?php
-            include_once '../../pg/menu.php';
+            include_once '../../menuprincipal.php.php';
         ?>
 
 
