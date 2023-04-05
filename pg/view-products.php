@@ -9,7 +9,8 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="../images/icon/logo.ico" >
+        <link rel="shortcut icon" href="../images/logooriginal.png" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <title>Desconecta - Visualizar Pontos Turisticos</title>
         <style>
@@ -103,7 +104,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <h5>Cidade: <?php echo $cidade?> - <?php echo $uf?></h5>
 
                             <div class="col-6 " >
-                            <i class="fa-regular fa-user-alien"> Aliens</i>
+                            <i class="fa-regular fa-user-alien" aria-hidden="true"> Aliens</i>
 
                             </div>
 

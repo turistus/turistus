@@ -15,6 +15,7 @@ include_once 'connection.php';
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="shortcut icon" href="../images/icon/favicon.ico" >
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./css/estilobtnenviar.css">
 
         <title>Solicitação Novo Ponto Turistico</title>
@@ -187,9 +188,10 @@ include_once 'connection.php';
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-                        <label > Possui Aliens </label>
+                        <label > Possui </label>
                         <div class="custom-control custom-checkbox mr-sm-2">
-                            <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete" value="1" required>
+                        <i class="fa-regular fa-user-alien"> Aliens</i>
+                        <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete" value="1" required>
                         </div>
 
                 </div>
