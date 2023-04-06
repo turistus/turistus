@@ -191,7 +191,7 @@ include_once 'connection.php';
                             <label> Possui </label>
                             <div class="custom-control custom-checkbox mr-sm-2">
                             <label class="custom-control-label" for="lanchonete">Lanchonete</label>
-                                <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete" required>
+                                <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete">
                             </div>
                         </div>
 
