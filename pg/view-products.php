@@ -109,7 +109,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                             <h5>Cidade: <?php echo $cidade?> - <?php echo $uf?></h5>
 
-                            <div class="col-10 " style="border: solid 1px black; height: 60px;">
+                            <div class="col-10">
 
                             <p>
                                 <ul>
@@ -189,7 +189,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             </p>
 
                             </div>
-
+                            <br>
 
                 </div>
 
