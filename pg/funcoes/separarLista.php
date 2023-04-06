@@ -3,6 +3,7 @@
 // verifica cada campo booleano individualmente e exibe apenas os que são verdadeiros
 if ($lanchonete == 1) {
     echo " Praça de Alimentação: true <br>";
+    echo "<i class='fas fa-arrow-down'></i>";
   }
   if ($camping == 1) {
     echo " Camping: true <br>";
