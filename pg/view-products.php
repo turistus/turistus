@@ -113,50 +113,70 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                             <p>
                                 <ul>
-                                    <li>Praça de alimentação</li>
-                                    <li>Camping</li>
-                                    <li>Hotelaria a 5KM</li>
-                                    <li>Sanitarios</li>
-                                </ul>
-                            </p>
-                            <?php
+
+                                <?php
                                 if($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1){
 
-                                    echo " SIM / SIM / SIM / SIM";
+                                    echo " <li> Praça de Alimentação </li> ";
+                                    echo " <li> Camping </li> ";
+                                    echo " <li> Hotelaria a 5KM </li> ";
+                                    echo " <li> Sanitarios </li> ";
 
                                 }elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 0){
 
-                                    echo " SIM / SIM / SIM / NAO";
+                                    echo " <li> Praça de Alimentação </li> ";
+                                    echo " <li> Camping </li> ";
+                                    echo " <li> Hotelaria a 5KM </li> ";
+
                                 }elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 0 && $sanitarios == 1){
 
-                                    echo " SIM / SIM / NAO / SIM";
+                                    echo " <li> Praça de Alimentação </li> ";
+                                    echo " <li> Camping </li> ";
+
+                                    echo " <li> Sanitarios </li> ";
                                 }
                                 elseif($lanchonete == 1 && $camping == 0 && $hotelaria == 1 && $sanitarios == 0){
 
-                                    echo " SIM / NAO / SIM / NAO";
+                                    echo " <li> Praça de Alimentação </li> ";
+
+                                    echo " <li> Hotelaria a 5KM </li> ";
+
                                 }
                                 elseif($lanchonete == 0 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1){
 
-                                    echo " NAO / SIM / SIM / SIM";
+
+                                    echo " <li> Camping </li> ";
+                                    echo " <li> Hotelaria a 5KM </li> ";
+                                    echo " <li> Sanitarios </li> ";
                                 }
                                 elseif($lanchonete == 1 && $camping == 0 && $hotelaria == 1 && $sanitarios == 0){
 
-                                    echo " SIM / NAO / SIM / NAO";
+                                    echo " <li> Praça de Alimentação </li> ";
+
+                                    echo " <li> Hotelaria a 5KM </li> ";
+
                                 }
                                 elseif($lanchonete == 0 && $camping == 1 && $hotelaria == 0 && $sanitarios == 1){
 
-                                    echo " NAO / SIM / NAO / SIM";
+
+                                    echo " <li> Camping </li> ";
+
+                                    echo " <li> Sanitarios </li> ";
                                 }
                                 elseif($lanchonete == 0 && $camping == 0 && $hotelaria == 0 && $sanitarios == 1){
 
-                                    echo " NAO / NAO / NAO / SIM";
+
+
+
+                                    echo " <li> Sanitarios </li> ";
                                 }elseif($lanchonete == 0 && $camping == 0 && $hotelaria == 0 && $sanitarios == 0){
 
-                                    echo " NAO / NAO / NAO / NAO";
+                                    echo "";
                                 }
 
-
-                            ?>
+                                ?>
+                                </ul>
+                            </p>
 
                             </div>
 
