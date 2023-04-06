@@ -107,12 +107,14 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <h5>Cidade: <?php echo $cidade?> - <?php echo $uf?></h5>
 
                             <div class="col-6 " style="border: solid 1px black; height: 60px;">
-                                <h5>Praça de Alimentação</h5>
+
                             <?php
                                 if($lanchonete == 1){
+                                    echo "Praça de alimentação";
                                     echo "SIM";
 
                                 }else{
+                                    echo "Praça de alimentação";
                                     echo " ";
                                 }
                             ?>
