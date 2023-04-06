@@ -106,12 +106,12 @@ include_once 'connection.php';
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px;">
                         <label>Descrição </label>
 
-                        <textarea class="form-control" rows="3" cols="28" name="descricao" id="descricao" placeholder="Descreva BREVEMENTE" value="<?php
+                        <textarea class="form-control" rows="3" cols="28" name="descricao" id="descricao" placeholder=" Descreva toda a história do ponto turistico." value="<?php
                         if (isset($data['descricao'])) {
                             echo $data['descricao'];
                         }
                         ?>" required> </textarea>
-                        <small class="text-muted"> Descreva toda a história do ponto turistico.</small>
+
                 </div>
 
                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-4" style="padding: 10px;">
@@ -190,8 +190,8 @@ include_once 'connection.php';
                         <div class="col-auto my-1">
                             <label> Possui </label>
                             <div class="custom-control custom-checkbox mr-sm-2">
-                                <i class="fa-regular fa-user-alien" aria-hidden="true"> Aliens</i>
-                                <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete" value="1" required>
+                            <label class="custom-control-label" for="lanchonete">Lanchonete</label>
+                                <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete" required>
                             </div>
                         </div>
 
