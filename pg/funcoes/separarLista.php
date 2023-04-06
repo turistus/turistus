@@ -1,5 +1,11 @@
 <?php
-// Criar uma matriz contendo suas variáveis
+
+
+// Definir um método de provedor de dados para gerar todas as combinações possíveis
+class LacoVariaveis{
+    function combDataProvider(){
+
+        // Criar uma matriz contendo suas variáveis
 $variaveis = array(
     $lanchonete,
     $camping,
@@ -9,12 +15,10 @@ $variaveis = array(
     $acessib
 );
 
-// Definir um método de provedor de dados para gerar todas as combinações possíveis
-function combDataProvider(){
     $comb = array();
-    for ($i = 0; $i < pow(2, count($this->variaveis)); $i++) {
+    for ($i = 0; $i < pow(2, count($this->$variaveis)); $i++) {
         $row = array();
-        for ($j = 0; $j < count($this->variaveis); $j++) {
+        for ($j = 0; $j < count($this->$variaveis); $j++) {
             if (pow(2, $j) & $i) {
                 $row[] = 1;
             } else {
@@ -25,7 +29,7 @@ function combDataProvider(){
     }
     return $comb;
 }
-
+}
 // Usar o método de provedor de dados para gerar as combinações possíveis
 foreach ($this->combDataProvider() as $comb) {
     // Aqui você pode usar as variáveis de cada combinação para criar o seu código
