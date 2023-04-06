@@ -61,6 +61,9 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
              pontosturisticos.uf AS uf,
                pontosturisticos.image AS image,
                lanchonete,
+               camping,
+               hotelaria,
+               sanitarios,
                autor,
                pontos = ( SELECT SUM(valorVoto) / Count(idEvento) FROM classificacao)
 
@@ -106,9 +109,16 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                             <h5>Cidade: <?php echo $cidade?> - <?php echo $uf?></h5>
 
-                            <div class="col-6 " style="border: solid 1px black; height: 60px;">
+                            <div class="col-10 " style="border: solid 1px black; height: 60px;">
 
-                            <p>Praça de alimentação / Camping / Hotelaria a 5KM / Sanitarios </p>
+                            <p>
+                                <ul>
+                                    <li>Praça de alimentação</li>
+                                    <li>Camping</li>
+                                    <li>Hotelaria a 5KM</li>
+                                    <li>Sanitarios</li>
+                                </ul>
+                            </p>
                             <?php
                                 if($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1){
 
@@ -155,7 +165,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                 <div class="col-md-10 mt-5 mb-5" style=" padding-bottom:5px; margin-left:10px; margin-right: 10px; border: solid 1px black; border-radius: 10px; ">
                     <h3>Descrição</h3>
-                    <p style=" padding:10px;"> <?php echo $descricao ."<p style='color:blck;'>Autor". $autor . "</p>."; ?></p>
+                    <p style=" padding:10px;"> <?php echo $descricao ."<p style='color:blck;'> Autor". $autor . "</p>."; ?></p>
                 </div>
 
 
