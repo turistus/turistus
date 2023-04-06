@@ -1,494 +1,56 @@
 <?php
-
-if($lanchonete == 0 && $camping == 0 && $hotelaria == 0 && $sanitarios == 0 && $risco == 0 && $acessib == 0){
-
-
-
-}elseif($lanchonete == 1 && $camping == 0 && $hotelaria == 0 && $sanitarios == 0 && $risco == 0 && $acessib == 0){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
-
-}elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1 && $risco == 1 && $acessib == 1){
-
-    echo " <li> Praça de Alimentação </li> ";
-    echo " <li> Camping </li> ";
-    echo " <li> Hotelaria a 5KM </li> ";
-    echo " <li> Sanitarios </li> ";
-    echo " <li> Risco de vida </li> ";
-    echo " <li> Acesso Rampas </li> ";
+// Criar uma matriz contendo suas variáveis
+$variaveis = array(
+    $lanchonete,
+    $camping,
+    $hotelaria,
+    $sanitarios,
+    $risco,
+    $acessib
+);
+
+// Definir um método de provedor de dados para gerar todas as combinações possíveis
+function combDataProvider(){
+    $comb = array();
+    for ($i = 0; $i < pow(2, count($this->variaveis)); $i++) {
+        $row = array();
+        for ($j = 0; $j < count($this->variaveis); $j++) {
+            if (pow(2, $j) & $i) {
+                $row[] = 1;
+            } else {
+                $row[] = 0;
+            }
+        }
+        $comb[] = $row;
+    }
+    return $comb;
+}
+
+// Usar o método de provedor de dados para gerar as combinações possíveis
+foreach ($this->combDataProvider() as $comb) {
+    // Aqui você pode usar as variáveis de cada combinação para criar o seu código
+
+
+    $itens = array(
+    'lanchonete' => 'Praça de Alimentação',
+    'camping' => 'Camping',
+    'hotelaria' => 'Hotelaria a 5KM',
+    'sanitarios' => 'Sanitarios',
+    'risco' => 'Risco de vida',
+    'acessib' => 'Acesso Rampas'
+    );
+
+    for ($i = 0; $i < count($comb); $i++) {
+        $combStr = '';
+        for ($j = 0; $j < count($this->variaveis); $j++) {
+            $var = $this->variaveis[$j];
+            $val = $comb[$i][$j];
+            if ($val == 1) {
+                $combStr .= "<li>{$itens[$var]}</li>";
+            }
+        }
+        echo "<ul>{$combStr}</ul>";
+    }
 
 }
 ?>
