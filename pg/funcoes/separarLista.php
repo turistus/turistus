@@ -30,7 +30,7 @@ if ($lanchonete == 1) {
   }
   if ($acessib == 1) {
     echo "<li>";
-    echo " Acessib: <i class='fa-brands fa-accessible-icon fa-shake'></i>";
+    echo " Acessib: <i class='fas fa-wheelchair'></i>";
     echo "</li>";
   }
 
