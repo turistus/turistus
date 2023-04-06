@@ -49,7 +49,7 @@ include_once 'connection.php';
                 		            $attachment = $_FILES['attachment'];
                 		            //var_dump($data);
                 		            //var_dump($attachment);
-                		            $query_msg = "INSERT INTO pontosturisticos (name, descricao, price, image, created, idGuia, cidade, uf, autor, cpf, nascimentoAut, lanchonete, liberado) VALUES (:name, :descricao, 13, :image, NOW(), 1, :cidade, :uf, :autor, :cpf, :nascimentoAut, :lanchonete, 0)";
+                		            $query_msg = "INSERT INTO pontosturisticos (name, descricao, price, image, created, idGuia, cidade, uf, autor, cpf, nascimentoAut, lanchonete, camping, hotelaria, sanitarios, risco, acessib, liberado) VALUES (:name, :descricao, 13, :image, NOW(), 1, :cidade, :uf, :autor, :cpf, :nascimentoAut, :lanchonete, :camping, :hotelaria, :sanitarios, :risco, :acessib, 0)";
                 		            $add_msg = $conn->prepare($query_msg);
 
                 		            $add_msg->bindParam(':name', $data['name'], PDO::PARAM_STR);
@@ -60,7 +60,13 @@ include_once 'connection.php';
                                     $add_msg->bindParam(':autor', $data['autor'], PDO::PARAM_STR);
                                     $add_msg->bindParam(':cpf', $data['cpf'], PDO::PARAM_STR);
                                     $add_msg->bindParam(':nascimentoAut', $data['nascimentoAut'], PDO::PARAM_STR);
-                                    $add_msg->bindParam(':lanchonete', $data['lanchonete'], PDO::PARAM_STR);
+                                    $add_msg->bindParam(':lanchonete', $data['lanchonete']);
+                                    $add_msg->bindParam(':camping', $data['camping']);
+                                    $add_msg->bindParam(':hotelaria', $data['hotelaria']);
+                                    $add_msg->bindParam(':sanitarios', $data['sanitarios']);
+                                    $add_msg->bindParam(':risco', $data['risco']);
+                                    $add_msg->bindParam(':acessib', $data['acessib']);
+
 
 
 
@@ -193,6 +199,66 @@ include_once 'connection.php';
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete" value="1">
                                 <label class="custom-control-label" for="lanchonete">Lanchonete</label>
+                            </div>
+                        </div>
+
+                </div>
+
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                    <label> Possui </label>
+                        <div class="col-auto my-1">
+
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="camping" name="camping" value="1">
+                                <label class="custom-control-label" for="camping">Camping</label>
+                            </div>
+                        </div>
+
+                </div>
+
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                    <label> Possui </label>
+                        <div class="col-auto my-1">
+
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="hotelaria" name="hotelaria" value="1">
+                                <label class="custom-control-label" for="hotelaria"> Hotelaria</label>
+                            </div>
+                        </div>
+
+                </div>
+
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                    <label> Possui </label>
+                        <div class="col-auto my-1">
+
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="sanitarios" name="sanitarios" value="1">
+                                <label class="custom-control-label" for="sanitarios"> Banheiros</label>
+                            </div>
+                        </div>
+
+                </div>
+
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                    <label> Possui </label>
+                        <div class="col-auto my-1">
+
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="risco" name="risco" value="1">
+                                <label class="custom-control-label" for="risco"> Risco</label>
+                            </div>
+                        </div>
+
+                </div>
+
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                    <label> Possui </label>
+                        <div class="col-auto my-1">
+
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="acessib" name="acessib" value="1">
+                                <label class="custom-control-label" for="acessib"> Acessibilidade </label>
                             </div>
                         </div>
 

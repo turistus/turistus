@@ -64,6 +64,11 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                camping,
                hotelaria,
                sanitarios,
+               camping,
+               hotelaria,
+               sanitarios,
+               risco,
+               acessib,
                autor,
                pontos = ( SELECT SUM(valorVoto) / Count(idEvento) FROM classificacao)
 
@@ -115,74 +120,8 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 <ul>
 
                                 <?php
-                                if($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1){
 
-                                    echo " <li> Praça de Alimentação </li> ";
-                                    echo " <li> Camping </li> ";
-                                    echo " <li> Hotelaria a 5KM </li> ";
-                                    echo " <li> Sanitarios </li> ";
-
-                                }elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 0){
-
-                                    echo " <li> Praça de Alimentação </li> ";
-                                    echo " <li> Camping </li> ";
-                                    echo " <li> Hotelaria a 5KM </li> ";
-
-                                }elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 0 && $sanitarios == 1){
-
-                                    echo " <li> Praça de Alimentação </li> ";
-                                    echo " <li> Camping </li> ";
-
-                                    echo " <li> Sanitarios </li> ";
-                                }
-                                elseif($lanchonete == 1 && $camping == 0 && $hotelaria == 1 && $sanitarios == 0){
-
-                                    echo " <li> Praça de Alimentação </li> ";
-
-                                    echo " <li> Hotelaria a 5KM </li> ";
-
-                                }
-                                elseif($lanchonete == 0 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1){
-
-
-                                    echo " <li> Camping </li> ";
-                                    echo " <li> Hotelaria a 5KM </li> ";
-                                    echo " <li> Sanitarios </li> ";
-                                }
-                                elseif($lanchonete == 1 && $camping == 0 && $hotelaria == 1 && $sanitarios == 0){
-
-                                    echo " <li> Praça de Alimentação </li> ";
-
-                                    echo " <li> Hotelaria a 5KM </li> ";
-
-                                }
-                                elseif($lanchonete == 0 && $camping == 1 && $hotelaria == 0 && $sanitarios == 1){
-
-
-                                    echo " <li> Camping </li> ";
-
-                                    echo " <li> Sanitarios </li> ";
-                                }
-                                elseif($lanchonete == 0 && $camping == 0 && $hotelaria == 0 && $sanitarios == 1){
-
-
-
-
-                                    echo " <li> Sanitarios </li> ";
-                                }elseif($lanchonete == 1 && $camping == 0 && $hotelaria == 0 && $sanitarios == 1){
-
-                                    echo " <li> Praça de Alimentação </li> ";
-
-
-                                    echo " <li> Sanitarios </li> ";
-                                }elseif($lanchonete == 0 && $camping == 1 && $hotelaria == 1 && $sanitarios == 0){
-
-
-                                    echo " <li> Camping </li> ";
-                                    echo " <li> Hotelaria a 5KM </li> ";
-
-                                }
-
+                                include_once './funcoes/separarLista.php';
 
                                 ?>
                                 </ul>
