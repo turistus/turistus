@@ -16,6 +16,7 @@ include_once 'connection.php';
         <link rel="shortcut icon" href="../images/icon/favicon.ico" >
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 
         <title>Solicitação Novo Ponto Turistico</title>
     </head>
@@ -271,7 +272,7 @@ include_once 'connection.php';
                         <div class="card">
                              <img style="max-height: 200px; " src='<?php echo "./images/pontosturisticos/$id/$image"; ?>' class="card-img-top" alt="...">
                         </div>
-
+                        <i class="fa-regular fa-images"></i>
              			<input type="submit" value="Enviar" name="SendAddMsg" >
                 </div>
 

@@ -8,19 +8,30 @@ if ($lanchonete == 1) {
 
   }
   if ($camping == 1) {
-    echo " Camping: true <br>";
+    echo "<li>";
+    echo " Camping: <i class='fa-solid fa-campground'></i>";
+    echo "</li>";
+
   }
   if ($hotelaria == 1) {
-    echo " Hotelaria: true <br>";
+    echo "<li>";
+    echo " Hotelaria: <i class='fa-solid fa-hotel'></i>";
+    echo "</li>";
   }
   if ($sanitarios == 1) {
-    echo " Sanitarios: true <br>";
+    echo "<li>";
+    echo " Sanitarios: <i class='fa-solid fa-toilet-paper'></i>";
+    echo "</li>";
   }
   if ($risco == 1) {
-    echo " Risco: true <br>";
+    echo "<li>";
+    echo " Risco: <i class='fa-solid fa-triangle-exclamation'></i>";
+    echo "</li>";
   }
   if ($acessib == 1) {
-    echo " Acessib: true <br>";
+    echo "<li>";
+    echo " Acessib: <i class='fa-brands fa-accessible-icon fa-shake'></i>";
+    echo "</li>";
   }
 
 ?>
