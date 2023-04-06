@@ -60,6 +60,8 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
             pontosturisticos.cidade AS cidade,
              pontosturisticos.uf AS uf,
                pontosturisticos.image AS image,
+               lanchonete,
+               autor
                pontos = ( SELECT SUM(valorVoto) / Count(idEvento) FROM classificacao)
 
             FROM pontosturisticos WHERE pontosturisticos.id =:id ";
@@ -83,6 +85,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     <!-- Lado Direito -->
                 <div class="col-md-6" >
                         <div class="row">
+
                             <div class="col-3 " >
                                 <br>
                                 <h5>Classificação:</h5>
@@ -104,7 +107,13 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <h5>Cidade: <?php echo $cidade?> - <?php echo $uf?></h5>
 
                             <div class="col-6 " >
-                            <i class="fa-regular fa-user-alien" aria-hidden="true"> Aliens</i>
+                            <?php
+                                if($lanchonete == 1){
+                                    echo "X";
+                                }else{
+                                    echo " ";
+                                }
+                            ?>
 
                             </div>
 
@@ -114,6 +123,10 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                 <div class="col-md-10 mt-5 mb-5" style=" padding-bottom:5px; margin-left:10px; margin-right: 10px; border: solid 1px black; border-radius: 10px; ">
                     <h3>Descrição</h3>
                     <p style=" padding:10px;"> <?php echo $descricao; ?></p>
+                </div>
+
+                <div class="col-6 " >
+                <p>Autor <?php echo $autor; ?></p>
                 </div>
 
 
