@@ -187,11 +187,12 @@ include_once 'connection.php';
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                    <label> Possui </label>
                         <div class="col-auto my-1">
-                            <label> Possui </label>
+
                             <div class="custom-control custom-checkbox mr-sm-2">
                             <label class="custom-control-label" for="lanchonete">Lanchonete</label>
-                                <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete">
+                                <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete" value="1">
                             </div>
                         </div>
 
