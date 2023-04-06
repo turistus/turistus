@@ -61,7 +61,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
              pontosturisticos.uf AS uf,
                pontosturisticos.image AS image,
                lanchonete,
-               autor
+               autor,
                pontos = ( SELECT SUM(valorVoto) / Count(idEvento) FROM classificacao)
 
             FROM pontosturisticos WHERE pontosturisticos.id =:id ";
