@@ -169,10 +169,20 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
 
                                     echo " <li> Sanitarios </li> ";
-                                }elseif($lanchonete == 0 && $camping == 0 && $hotelaria == 0 && $sanitarios == 0){
+                                }elseif($lanchonete == 1 && $camping == 0 && $hotelaria == 0 && $sanitarios == 1){
 
-                                    echo "";
+                                    echo " <li> Praça de Alimentação </li> ";
+
+
+                                    echo " <li> Sanitarios </li> ";
+                                }elseif($lanchonete == 0 && $camping == 1 && $hotelaria == 1 && $sanitarios == 0){
+
+
+                                    echo " <li> Camping </li> ";
+                                    echo " <li> Hotelaria a 5KM </li> ";
+
                                 }
+
 
                                 ?>
                                 </ul>
@@ -185,7 +195,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                 <div class="col-md-10 mt-5 mb-5" style=" padding-bottom:5px; margin-left:10px; margin-right: 10px; border: solid 1px black; border-radius: 10px; ">
                     <h3>Descrição</h3>
-                    <p style=" padding:10px;"> <?php echo $descricao ."<p style='color:blck;'> Autor". $autor . "</p>."; ?></p>
+                    <p style=" padding:10px;"> <?php echo $descricao ."<p style='color:blck;'> Autor ". $autor . ". </p>"; ?></p>
                 </div>
 
 
