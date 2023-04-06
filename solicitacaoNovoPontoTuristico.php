@@ -191,12 +191,13 @@ include_once 'connection.php';
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
-                            <label class="custom-control-label" for="lanchonete">Lanchonete</label>
                                 <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete" value="1">
+                                <label class="custom-control-label" for="lanchonete">Lanchonete</label>
                             </div>
                         </div>
 
                 </div>
+
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px;">
                         <label>Foto Ponto Turistico</label>
                         <input type="file" name="attachment" id="attachment" onchange="previewImagem()" required><br><br>
