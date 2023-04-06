@@ -106,10 +106,12 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                             <h5>Cidade: <?php echo $cidade?> - <?php echo $uf?></h5>
 
-                            <div class="col-6 " >
+                            <div class="col-6 " style="border: solid 1px black; height: 60px;">
+                                <h5>Praça de Alimentação</h5>
                             <?php
                                 if($lanchonete == 1){
-                                    echo "X";
+                                    echo "SIM";
+
                                 }else{
                                     echo " ";
                                 }
@@ -122,14 +124,8 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                 <div class="col-md-10 mt-5 mb-5" style=" padding-bottom:5px; margin-left:10px; margin-right: 10px; border: solid 1px black; border-radius: 10px; ">
                     <h3>Descrição</h3>
-                    <p style=" padding:10px;"> <?php echo $descricao; ?></p>
+                    <p style=" padding:10px;"> <?php echo $descricao ."<br>Autor". $autor . "."; ?></p>
                 </div>
-
-                <div class="col-6 " >
-                <p>Autor <?php echo $autor; ?></p>
-                </div>
-
-
 
 
                 <div class="col-md-10  mb-5" style=" padding-bottom:5px; margin-left:10px; margin-right: 10px; border: solid 1px black; border-radius: 10px; ">
