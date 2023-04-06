@@ -108,15 +108,44 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                             <div class="col-6 " style="border: solid 1px black; height: 60px;">
 
+                            <p>Praça de alimentação / Camping / Hotelaria a 5KM / Sanitarios </p>
                             <?php
-                                if($lanchonete == 1){
-                                    echo "Praça de alimentação";
-                                    echo "SIM";
+                                if($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1){
 
-                                }else{
-                                    echo "Praça de alimentação";
-                                    echo " ";
+                                    echo " SIM / SIM / SIM / SIM";
+
+                                }elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 1 && $sanitarios == 0){
+
+                                    echo " SIM / SIM / SIM / NAO";
+                                }elseif($lanchonete == 1 && $camping == 1 && $hotelaria == 0 && $sanitarios == 1){
+
+                                    echo " SIM / SIM / NAO / SIM";
                                 }
+                                elseif($lanchonete == 1 && $camping == 0 && $hotelaria == 1 && $sanitarios == 0){
+
+                                    echo " SIM / NAO / SIM / NAO";
+                                }
+                                elseif($lanchonete == 0 && $camping == 1 && $hotelaria == 1 && $sanitarios == 1){
+
+                                    echo " NAO / SIM / SIM / SIM";
+                                }
+                                elseif($lanchonete == 1 && $camping == 0 && $hotelaria == 1 && $sanitarios == 0){
+
+                                    echo " SIM / NAO / SIM / NAO";
+                                }
+                                elseif($lanchonete == 0 && $camping == 1 && $hotelaria == 0 && $sanitarios == 1){
+
+                                    echo " NAO / SIM / NAO / SIM";
+                                }
+                                elseif($lanchonete == 0 && $camping == 0 && $hotelaria == 0 && $sanitarios == 1){
+
+                                    echo " NAO / NAO / NAO / SIM";
+                                }elseif($lanchonete == 0 && $camping == 0 && $hotelaria == 0 && $sanitarios == 0){
+
+                                    echo " NAO / NAO / NAO / NAO";
+                                }
+
+
                             ?>
 
                             </div>
@@ -126,7 +155,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                 <div class="col-md-10 mt-5 mb-5" style=" padding-bottom:5px; margin-left:10px; margin-right: 10px; border: solid 1px black; border-radius: 10px; ">
                     <h3>Descrição</h3>
-                    <p style=" padding:10px;"> <?php echo $descricao ."<br>Autor". $autor . "."; ?></p>
+                    <p style=" padding:10px;"> <?php echo $descricao ."<p style='color:blck;'>Autor". $autor . "</p>."; ?></p>
                 </div>
 
 
