@@ -3,7 +3,8 @@
 // verifica cada campo booleano individualmente e exibe apenas os que são verdadeiros
 if ($lanchonete == 1) {
     echo "<li>";
-    echo " Praça de Alimentação: <i class='fa-solid fa-burger-soda'></i> </li>";
+    echo " Praça de Alimentação: <i class='fa-solid fa-burger'></i> ";
+    echo "</li>";
 
   }
   if ($camping == 1) {
