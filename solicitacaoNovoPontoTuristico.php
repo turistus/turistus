@@ -111,7 +111,7 @@ include_once 'connection.php';
                         ?>" autofocus required>
                 </div>
 
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px;">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px; max-width: 450px;">
                         <label> Descrição </label>
 
                         <textarea class="form-control" rows="3" cols="15" name="descricao" id="descricao" placeholder=" Descreva toda a história do ponto turistico." value="<?php
@@ -122,7 +122,7 @@ include_once 'connection.php';
 
                 </div>
 
-                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4" style="padding: 10px;">
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4" style="padding: 10px; border: 1px solid black;">
 
                     <label class="uf"> Estado UF </label>
                                 <select name="uf" class="custom-select d-block w-100 uf" id="uf" required>
@@ -158,7 +158,7 @@ include_once 'connection.php';
                 </div>
 
 
-                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 " style="padding: 10px;">
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 " style="padding: 10px; border: 1px solid black;">
                         <label > Cidade </label><br>
                         <input type="text" name="cidade" id="cidade" placeholder=" Nome do municipio"  value="<?php
                         if (isset($data['cidade'])) {
@@ -167,7 +167,7 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 
-                <div class="col-xl-6 col-lg-8 col-md-8 col-sm-6" style="padding: 10px;">
+                <div class="col-xl-6 col-lg-8 col-md-8 col-sm-6" style="padding: 10px; border: 1px solid black;">
                         <label > Autor </label><br>
                         <input type="text" name="autor" id="autor" placeholder=" Nome do autor"  value="<?php
                         if (isset($data['autor'])) {
@@ -176,7 +176,7 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 
-                <div class="col-xl-8 col-lg-6 col-md-6 col-sm-8" style="padding: 10px;">
+                <div class="col-xl-8 col-lg-6 col-md-6 col-sm-8" style="padding: 10px; border: 1px solid black;">
                         <label > CPF </label><br>
                         <input type="text" name="cpf" id="cpf" placeholder=" 000.000.000-00 "  value="<?php
                         if (isset($data['cpf'])) {
@@ -185,7 +185,7 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; border: 1px solid black;">
                         <label >Data nascimento </label><br>
                         <input type="date" name="nascimentoAut" id="nascimentoAut" value="<?php
                         if (isset($data['nascimentoAut'])) {
@@ -194,7 +194,7 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; border: 1px solid black;">
                     <label> Possui </label>
                         <div class="col-auto my-1">
 
@@ -206,7 +206,7 @@ include_once 'connection.php';
 
                 </div>
 
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; border: 1px solid black;">
                     <label> Possui </label>
                         <div class="col-auto my-1">
 
