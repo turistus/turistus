@@ -27,9 +27,6 @@ $uf=filter_input(INPUT_GET, "uf", FILTER_SANITIZE_URL);
         <div class="container">
             <h2 class="display-4 mt-5 mb-5">Pontos Turisticos</h2>
 
-
-
-
                 <div class="box-search" >
                     <div class="row ">
                         <div class=" col-xl-8 col-lg-8 col-md-8 col-sm-8 ">
@@ -49,9 +46,6 @@ $uf=filter_input(INPUT_GET, "uf", FILTER_SANITIZE_URL);
                     <label>Pesquise por Nome ou cidade</label>
                 </div>
             <br>
-
-
-
 
                 <!-- Aqui separa as buscas dos pontos por pesquisa de nome ou cidade ou todos-->
                 <?php
