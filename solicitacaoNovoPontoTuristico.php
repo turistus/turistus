@@ -40,7 +40,7 @@ include_once 'connection.php';
         <!-- PRIMEIRA LINHA -->
         <div class="row" >
 
-                        <h2 style="background: url(../images/bussola.jpg); margin-left: 10px;">Novo ponto turistico</h2>
+                        <h2 style="background: url(../images/bussola.jpg) no-repet; padding:15px; ">Novo ponto turistico</h2>
                         <?php
                         $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -103,7 +103,7 @@ include_once 'connection.php';
             <div class="row" style=" padding: 10px; margin: 20px;">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-10" style="padding: 10px;">
                     <form name="add_msg" action="" method="POST" enctype="multipart/form-data">
-                        <label>Nome </label>
+                        <label> Nome </label>
                         <input type="text" name="name" id="name" placeholder=" Nome turistico " value="<?php
                         if (isset($data['name'])) {
                             echo $data['name'];
@@ -112,7 +112,7 @@ include_once 'connection.php';
                 </div>
 
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px;">
-                        <label>Descrição </label>
+                        <label> Descrição </label>
 
                         <textarea class="form-control" rows="3" cols="15" name="descricao" id="descricao" placeholder=" Descreva toda a história do ponto turistico." value="<?php
                         if (isset($data['descricao'])) {
@@ -124,7 +124,7 @@ include_once 'connection.php';
 
                 <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4" style="padding: 10px;">
 
-                    <label class="uf">Estado UF</label>
+                    <label class="uf"> Estado UF </label>
                                 <select name="uf" class="custom-select d-block w-100 uf" id="uf" required>
                                     <option value="">Selecione</option>
                                     <option value="AC">AC</option>
@@ -158,7 +158,7 @@ include_once 'connection.php';
                 </div>
 
 
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10 control" style="padding: 10px;">
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 " style="padding: 10px;">
                         <label > Cidade </label><br>
                         <input type="text" name="cidade" id="cidade" placeholder=" Nome do municipio"  value="<?php
                         if (isset($data['cidade'])) {
@@ -167,7 +167,7 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                <div class="col-xl-6 col-lg-8 col-md-8 col-sm-6" style="padding: 10px;">
                         <label > Autor </label><br>
                         <input type="text" name="autor" id="autor" placeholder=" Nome do autor"  value="<?php
                         if (isset($data['autor'])) {
