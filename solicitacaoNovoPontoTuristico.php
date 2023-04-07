@@ -40,7 +40,7 @@ include_once 'connection.php';
         <!-- PRIMEIRA LINHA -->
         <div class="row" >
 
-                        <h2 style="background: url(../images/bussola.jpg) no-repet; padding:15px; ">Novo ponto turistico</h2>
+                        <h2 style="background: url(../images/bussola.jpg); padding:15px; ">Novo ponto turistico</h2>
                         <?php
                         $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -111,7 +111,7 @@ include_once 'connection.php';
                         ?>" autofocus required>
                 </div>
 
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px; max-width: 450px;">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px; max-width: 600px;">
                         <label> Descrição </label>
 
                         <textarea class="form-control" rows="3" cols="15" name="descricao" id="descricao" placeholder=" Descreva toda a história do ponto turistico." value="<?php
@@ -159,7 +159,7 @@ include_once 'connection.php';
                 </div>
 
 
-                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 " style="padding: 10px; border: 1px solid black;">
+                <div class="col-8 col-sm-3 col-md-3 col-lg-6 col-xl-6 " style="padding: 10px; border: 1px solid black;">
                         <label > Cidade </label><br>
                         <input type="text" name="cidade" id="cidade" placeholder=" Nome do municipio"  value="<?php
                         if (isset($data['cidade'])) {
