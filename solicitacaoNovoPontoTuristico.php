@@ -159,7 +159,7 @@ include_once 'connection.php';
                 </div>
 
 
-                <div class="col-8 col-sm-6 col-md-6 col-lg-6 col-xl-8 " style="padding: 10px; border: 1px solid black;">
+                <div class="col-8 col-sm-6 col-md-6 col-lg-6 col-xl-8 " style="padding: 10px;">
                         <label > Cidade </label><br>
                         <input type="text" name="cidade" id="cidade" placeholder=" Nome do municipio"  value="<?php
                         if (isset($data['cidade'])) {
@@ -168,7 +168,7 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 
-                <div class="col-xl-6 col-lg-8 col-md-8 col-sm-6" style="padding: 10px; border: 1px solid black;">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; border: 1px solid black;">
                         <label > Autor </label><br>
                         <input type="text" name="autor" id="autor" placeholder=" Nome do autor"  value="<?php
                         if (isset($data['autor'])) {
@@ -177,7 +177,7 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 
-                <div class="col-xl-8 col-lg-6 col-md-6 col-sm-8" style="padding: 10px; border: 1px solid black;">
+                <div class="col-xl-8 col-lg-6 col-md-6 col-sm-8" style="padding: 10px; ">
                         <label > CPF </label><br>
                         <input type="text" name="cpf" id="cpf" placeholder=" 000.000.000-00 "  value="<?php
                         if (isset($data['cpf'])) {
@@ -187,8 +187,8 @@ include_once 'connection.php';
                 </div>
                 <hr>
 
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; border: 1px solid black;">
-                        <label >Data nascimento </label><br>
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; ">
+                        <label > Data nascimento </label><br>
                         <input type="date" name="nascimentoAut" id="nascimentoAut" value="<?php
                         if (isset($data['nascimentoAut'])) {
                             echo $data['nascimentoAut'];
@@ -196,7 +196,7 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; border: 1px solid black;">
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; ">
                     <label> Contém </label>
                         <div class="col-auto my-1">
 
@@ -208,7 +208,7 @@ include_once 'connection.php';
 
                 </div>
 
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; border: 1px solid black;">
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; ">
                     <label> Contém </label>
                         <div class="col-auto my-1">
 
