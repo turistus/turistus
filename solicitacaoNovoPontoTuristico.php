@@ -202,67 +202,67 @@ include_once 'connection.php';
 
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete" value="1">
-                                <label class="custom-control-label" for="lanchonete">Lanchonete</label>
+                                <label class="custom-control-label" for="lanchonete"> Lanchonete <i class='fa-solid fa-burger'></i></label>
                             </div>
                         </div>
 
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; ">
-                    <label> Contém </label>
+
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="camping" name="camping" value="1">
-                                <label class="custom-control-label" for="camping">Camping</label>
+                                <label class="custom-control-label" for="camping"> Camping <i class='fa-solid fa-campground'></i></label>
                             </div>
                         </div>
 
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-                    <label> Contém </label>
+
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="hotelaria" name="hotelaria" value="1">
-                                <label class="custom-control-label" for="hotelaria"> Hotelaria</label>
+                                <label class="custom-control-label" for="hotelaria"> Hotelaria <i class='fa-solid fa-hotel'></i></label>
                             </div>
                         </div>
 
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-                    <label> Contém </label>
+
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="sanitarios" name="sanitarios" value="1">
-                                <label class="custom-control-label" for="sanitarios"> Banheiros</label>
+                                <label class="custom-control-label" for="sanitarios"> Banheiros <i class='fa-solid fa-toilet-paper'></i></label>
                             </div>
                         </div>
 
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-                    <label> Contém </label>
+
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="risco" name="risco" value="1">
-                                <label class="custom-control-label" for="risco"> Risco</label>
+                                <label class="custom-control-label" for="risco"> Risco <i class='fa-solid fa-triangle-exclamation'></i></label>
                             </div>
                         </div>
 
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-                    <label> Contém </label>
+
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="acessib" name="acessib" value="1">
-                                <label class="custom-control-label" for="acessib"> Acessibilidade </label>
+                                <label class="custom-control-label" for="acessib"> Acessibilidade <i class='fas fa-wheelchair'></i></label>
                             </div>
                         </div>
 
