@@ -98,6 +98,13 @@ include_once '../connection.php';
                                             }?>" required>
                                 </div>
 
+                                <div class="col-auto my-1">
+                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                        <input type="checkbox" class="custom-control-input" id="aceite" name="aceite" value="1">
+                                        <label class="custom-control-label" for="aceite">Aceito e concordo com os termos de uso</label>
+                                        <p><a href="../TERMOS DE USO.pdf">Detalhes</a></p>
+                                    </div>
+                                </div>
                                      <!-- BOTAO CADASTRAR  -->
 
                                 <div class="row" style="padding-left: 20px; margin-top:30px;">

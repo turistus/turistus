@@ -15,7 +15,7 @@ $dados['password'] = password_hash($dados['password'], PASSWORD_DEFAULT);
         $msg = "";
 
 //Salvar os dados no bd
-$result_markers = "INSERT INTO turistas ( name, email, password, celular, dtnascimento, aceite) VALUES (:name, :email, :password, :celular, :dtnascimento, 1)";
+$result_markers = "INSERT INTO turistas ( name, email, password, celular, dtnascimento, aceite) VALUES (:name, :email, :password, :celular, :dtnascimento, :aceite)";
 
 	 $add_pay = $conn->prepare($result_markers);
                 $add_pay->bindParam(':name', $dados['name'], PDO::PARAM_STR);
@@ -23,6 +23,7 @@ $result_markers = "INSERT INTO turistas ( name, email, password, celular, dtnasc
                 $add_pay->bindParam(':password', $dados['password'], PDO::PARAM_STR);
                 $add_pay->bindParam(':celular', $dados['celular'], PDO::PARAM_STR);
                 $add_pay->bindParam(':dtnascimento', $dados['dtnascimento'], PDO::PARAM_STR);
+                $add_pay->bindParam(':aceite', $dados['aceite'], PDO::PARAM_STR);
 
                 $add_pay->execute();
                       //PArte para mandar para o painel turista as Sessions do logado
