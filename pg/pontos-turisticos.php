@@ -37,8 +37,8 @@ include_once '../connection.php';
                             <button onclick="searchData()"  class="btn btn-primary"> Buscar </button>
                         </div>
                         <div class=" col-xl-2 col-lg-2 col-md-2 col-sm-2">
-                        <button class="btn btn-success"> <a href="../solicitacaoNovoPontoTuristico.php">
-                            <strong class="d-inline-block mb-2 " style="color:azure; font-size: smaller;"> Novo </strong></a>
+                        <button class="btn btn-success" style="color: white;" > <a href="../solicitacaoNovoPontoTuristico.php">
+                             Novo </a>
                         </button>
                         </div>
                     </div>
