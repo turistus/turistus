@@ -16,7 +16,8 @@ include_once 'connection.php';
         <link rel="shortcut icon" href="../images/icon/favicon.ico" >
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 
         <title>Solicitação Novo Ponto Turistico</title>
     </head>
@@ -121,7 +122,7 @@ include_once 'connection.php';
 
                 </div>
 
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-4" style="padding: 10px;">
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4" style="padding: 10px;">
 
                     <label class="uf">Estado UF</label>
                                 <select name="uf" class="custom-select d-block w-100 uf" id="uf" required>
@@ -157,8 +158,8 @@ include_once 'connection.php';
                 </div>
 
 
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" style="padding: 10px;">
-                        <label >Cidade </label>
+                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10 control" style="padding: 10px;">
+                        <label > Cidade </label><br>
                         <input type="text" name="cidade" id="cidade" placeholder=" Nome do municipio"  value="<?php
                         if (isset($data['cidade'])) {
                             echo $data['cidade'];
@@ -167,7 +168,7 @@ include_once 'connection.php';
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-10" style="padding: 10px;">
-                        <label >Autor </label>
+                        <label > Autor </label>
                         <input type="text" name="autor" id="autor" placeholder=" Nome do autor"  value="<?php
                         if (isset($data['autor'])) {
                             echo $data['autor'];
@@ -177,7 +178,7 @@ include_once 'connection.php';
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-8" style="padding: 10px;">
                         <label > CPF </label>
-                        <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00"  value="<?php
+                        <input type="text" name="cpf" id="cpf" placeholder=" 000.000.000-00 "  value="<?php
                         if (isset($data['cpf'])) {
                             echo $data['cpf'];
                         }
@@ -267,12 +268,9 @@ include_once 'connection.php';
 
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px;">
                         <label>Foto Ponto Turistico</label>
+                        <i class="fa-regular fa-images"></i>
                         <input type="file" name="attachment" id="attachment" onchange="previewImagem()" required><br><br>
 
-                        <div class="card">
-                             <img style="max-height: 200px; " src='<?php echo "./images/pontosturisticos/$id/$image"; ?>' class="card-img-top" alt="...">
-                        </div>
-                        <i class="fa-regular fa-images"></i>
              			<input type="submit" value="Enviar" name="SendAddMsg" >
                 </div>
 
