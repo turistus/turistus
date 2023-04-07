@@ -43,7 +43,7 @@ $usuarioId = isset($_SESSION['user_id']);
   <style>
 		/* Imagem de fundo */
 		body {
-			background-image: url('https://cdn.pixabay.com/photo/2017/09/26/13/50/nature-2784206_960_720.jpg');
+			background-image: url('../images/logooriginal.png');
 			background-size: cover;
 			background-position: center;
 		}
