@@ -23,7 +23,7 @@ include_once '../connection.php';
             ?>
         <main class="container" >
 
-            
+
             <div class="container">
                 <h2 class="display-4 mt-5 mb-5">Pontos Turisticos</h2>
 
@@ -36,9 +36,12 @@ include_once '../connection.php';
                         <div class=" col-lg-2 col-md-2 col-sm-2 col-mb-2">
                             <button onclick="searchData()"  class="btn btn-primary">Buscar</button>
                         </div>
-                    </div>       
+                        <div class=" col-lg-2 col-md-2 col-sm-2 col-mb-2">
+                        <button class="btn btn-primary"> <a href="../solicitacaoNovoPontoTuristico.php"> <strong class="d-inline-block mb-2 text-primary">Envie seus dados</strong></a></button>
+                        </div>
+                    </div>
                     <label>Pesquise por Nome ou cidade</label>
-                </div>    
+                </div>
             <br>
 
 
@@ -51,10 +54,10 @@ include_once '../connection.php';
                    // echo "contem algo, no pesquisar";
                     $palavra = $_GET['search'];
                     $query = "SELECT id, name, image, cidade FROM pontosturisticos WHERE pontosturisticos.name LIKE '%$palavra%' OR pontosturisticos.cidade LIKE '%$palavra%' ORDER BY name ASC";
-                    
+
                     $result_products = $conn->prepare($query);
                     $result_products->execute();
-                    
+
                 }else{
                     //echo "Nao tem nada no pesquisa, entao tras todos";
                     $query_products = "SELECT id, name, image FROM pontosturisticos ORDER BY id DESC";
@@ -62,13 +65,13 @@ include_once '../connection.php';
                     $result_products->execute();
                 }
 
-                
+
                 ?>
                 <div class="row row-cols-1 row-cols-md-3">
                     <?php
                     while ($row_product = $result_products->fetch(PDO::FETCH_ASSOC)) {
                         extract($row_product);
-                        
+
                         ?>
                         <div class="col-5 mb-4 text-center">
                             <div class="card" >
@@ -79,7 +82,7 @@ include_once '../connection.php';
                                 </div>
                             </div>
                         </div>
-                    
+
                     <?php
                     }
                     ?>
@@ -102,7 +105,7 @@ include_once '../connection.php';
 
 
         function searchData(){
-            window.location = 'pontos-turisticos.php?search='+search.value; 
+            window.location = 'pontos-turisticos.php?search='+search.value;
         }
     </script>
 
