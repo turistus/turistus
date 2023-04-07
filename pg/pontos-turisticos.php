@@ -38,11 +38,11 @@ include_once '../connection.php';
                         </div>
                         <div class=" col-xl-2 col-lg-2 col-md-2 col-sm-2">
                         <button class="btn btn-success " >
-                            <p style="color: white; text-decoration: none;">
-                                <a href="../solicitacaoNovoPontoTuristico.php">
+
+                                <a href="../solicitacaoNovoPontoTuristico.php" style="color: white; text-decoration: none;">
                                     Novo Ponto
                                 </a>
-                            </p>
+
                         </button>
                         </div>
                     </div>
