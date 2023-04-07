@@ -168,7 +168,7 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; border: 1px solid black;">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
                         <label > Autor </label><br>
                         <input type="text" name="autor" id="autor" placeholder=" Nome do autor"  value="<?php
                         if (isset($data['autor'])) {
@@ -195,14 +195,14 @@ include_once 'connection.php';
                         }
                         ?>" required>
                 </div>
-
+<br>
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; ">
                     <label> Contém </label>
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete" value="1">
-                                <label class="custom-control-label" for="lanchonete"> Lanchonete <i class='fa-solid fa-burger'></i></label>
+                                <label class="custom-control-label" for="lanchonete"> Praça de Alimentação <i class='fa-solid fa-burger'></i></label>
                             </div>
                         </div>
 
