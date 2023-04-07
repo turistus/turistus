@@ -30,7 +30,7 @@ $result_markers = "INSERT INTO servicos ( nome, cpf, email, senha, celular, dtna
                 $nome = $_SESSION['user_nome'];
                 unset($dados);
 
-header("Location: ../guias/painelGuia.php");
+//header("Location: ../guias/painelGuia.php");
 //var_dump($result_markers);
 
 //$resultado_markers = mysqli_query($conn, $result_markers
