@@ -41,13 +41,17 @@ $usuarioId = isset($_SESSION['user_id']);
   <link href="css/blog.rtl.css" rel="stylesheet">
 
   <style>
-		/* Imagem de fundo */
-		body {
+
+    /* Imagem de fundo com efeito parallax */
+		.parallax {
 			background-image: url('../images/logooriginal.png');
+			background-attachment: fixed;
 			background-size: cover;
 			background-position: center;
+			min-height: 100%;
+			overflow: auto;
 		}
-		/* Cabeçalho */
+				/* Cabeçalho */
 		.header {
 			background-color: rgba(0,0,0,0.7);
 			color: #fff;
@@ -88,17 +92,26 @@ $usuarioId = isset($_SESSION['user_id']);
   ?>
 
     <main>
-    <div class="conteiner-fluid text" style="border: 1px solid black; margin: 20px; padding: 20px;">
+      <!-- Conteúdo da página -->
+	  <div class="parallax">
+        <!-- Cabeçalho -->
+        <div class="header">
+          <h1>Minha Empresa</h1>
+          <p class="lead">Passeios na natureza com responsabilidade</p>
+        </div>
+        <div class="conteiner-fluid text" style="border: 1px solid black; margin: 20px; padding: 20px;">
 
-    <div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<p>Nós somos uma empresa apaixonada pelo turismo e pela natureza. Nosso objetivo é proporcionar experiências únicas e memoráveis para nossos clientes, ao mesmo tempo em que cuidamos do meio ambiente e contribuímos para a conservação da natureza.</p>
-				<p>Nós nos esforçamos para oferecer pacotes turísticos que permitam que nossos clientes explorem as belezas naturais de cada região de forma responsável e sustentável. Acreditamos que a natureza é nossa maior fonte de inspiração e que devemos preservá-la para as futuras gerações.</p>
-				<p>Além disso, a nossa equipe é formada por guias experientes e apaixonados pelo que fazem. Eles estão sempre dispostos a compartilhar seus conhecimentos e histórias sobre a natureza e a cultura local, proporcionando uma experiência ainda mais rica e autêntica para nossos clientes.</p>
-				<p>Nosso compromisso com a sustentabilidade é parte integral da nossa filosofia. Fazemos questão de minimizar nosso impacto ambiental e contribuir para as comunidades locais onde operamos. Acreditamos que o turismo pode ser uma força positiva para o desenvolvimento econômico e social, desde que seja feito de forma responsável e sustentável.</p>
-			</div>
-		</div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <p>Nós somos uma empresa apaixonada pelo turismo e pela natureza. Nosso objetivo é proporcionar experiências únicas e memoráveis para nossos clientes, ao mesmo tempo em que cuidamos do meio ambiente e contribuímos para a conservação da natureza.</p>
+            <p>Nós nos esforçamos para oferecer pacotes turísticos que permitam que nossos clientes explorem as belezas naturais de cada região de forma responsável e sustentável. Acreditamos que a natureza é nossa maior fonte de inspiração e que devemos preservá-la para as futuras gerações.</p>
+            <p>Além disso, a nossa equipe é formada por guias experientes e apaixonados pelo que fazem. Eles estão sempre dispostos a compartilhar seus conhecimentos e histórias sobre a natureza e a cultura local, proporcionando uma experiência ainda mais rica e autêntica para nossos clientes.</p>
+            <p>Nosso compromisso com a sustentabilidade é parte integral da nossa filosofia. Fazemos questão de minimizar nosso impacto ambiental e contribuir para as comunidades locais onde operamos. Acreditamos que o turismo pode ser uma força positiva para o desenvolvimento econômico e social, desde que seja feito de forma responsável e sustentável.</p>
+          </div>
+        </div>
 
+      </div>
+    </div>
     <br>
     <br>
 
