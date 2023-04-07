@@ -34,7 +34,7 @@ header("Location: ../guias/painelGuia.php");
 //var_dump($result_markers);
 
 //$resultado_markers = mysqli_query($conn, $result_markers
-
+/*
 if($conn->affected_rows){
 	$_SESSION['msg'] = "<span style='color: green';>Guia cadastrado com sucesso!</span>";
 	header("Location: painelGuia.php");
@@ -42,3 +42,4 @@ if($conn->affected_rows){
 	$_SESSION['msg'] = "<span style='color: red';>Erro: Guia não foi cadastrado com sucesso!</span>";
 	header("Location: painelGuia.php");
 }
+*/
