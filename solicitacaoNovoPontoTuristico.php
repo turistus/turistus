@@ -101,7 +101,7 @@ include_once 'connection.php';
                         ?>
             <!-- SEGUNDA (ROW) LINHA -->
             <div class="row" style=" padding: 10px; margin: 20px;">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-10" style="padding: 10px;">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px;">
                     <form name="add_msg" action="" method="POST" enctype="multipart/form-data">
                         <label> Nome </label>
                         <input type="text" name="name" id="name" placeholder=" Nome turistico " value="<?php
@@ -121,8 +121,9 @@ include_once 'connection.php';
                         ?>" required> </textarea>
 
                 </div>
+                <br>
 
-                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4" style="padding: 10px; border: 1px solid black;">
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2" style="padding: 10px; border: 1px solid black;">
 
                     <label class="uf"> Estado UF </label>
                                 <select name="uf" class="custom-select d-block w-100 uf" id="uf" required>
@@ -195,7 +196,7 @@ include_once 'connection.php';
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; border: 1px solid black;">
-                    <label> Possui </label>
+                    <label> Contém </label>
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
@@ -207,7 +208,7 @@ include_once 'connection.php';
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; border: 1px solid black;">
-                    <label> Possui </label>
+                    <label> Contém </label>
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
@@ -219,7 +220,7 @@ include_once 'connection.php';
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-                    <label> Possui </label>
+                    <label> Contém </label>
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
@@ -231,7 +232,7 @@ include_once 'connection.php';
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-                    <label> Possui </label>
+                    <label> Contém </label>
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
@@ -243,7 +244,7 @@ include_once 'connection.php';
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-                    <label> Possui </label>
+                    <label> Contém </label>
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
@@ -255,7 +256,7 @@ include_once 'connection.php';
                 </div>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-                    <label> Possui </label>
+                    <label> Contém </label>
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
