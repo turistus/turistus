@@ -226,7 +226,7 @@ include_once 'connection.php';
 
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="hotelaria" name="hotelaria" value="1">
-                                <label class="custom-control-label" for="hotelaria"> Hospedagens há 2Km<i class='fa-solid fa-hotel'></i></label>
+                                <label class="custom-control-label" for="hotelaria"> Hospedagens <i class='fa-solid fa-hotel'></i></label>
                             </div>
                         </div>
 

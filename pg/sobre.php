@@ -130,8 +130,6 @@ $usuarioId = isset($_SESSION['user_id']);
       A monetização da startup vem com a venda de eventos na plataforma, em que estipula uma taxa sobre o valor do serviço vendido,
       com uma participação variavel de 20% a 10% do valor. Além disso, oferecemos uma gamificação para fidelizar os profissionais e melhorar seus serviços,
       além de planos que viram no futuro para valorizar ainda mais nossos profissionais turisticos.</p>
-            <p>Hoje, existem inúmeros sites em que profissionais vendem serviços de diversos setores, mas e o setor turistico?
-      a Turist Us abrange diversos serviços, como passeios turísticos, trilhas, rapel, parapente, balonismo e mais de 50 atividades existentes no mercado.</p>
             <p>Somos uma equipe pequena, mas com uma grande visão de futuro para o setor de turismo. Nossa missão é gerar mais visibilidade e,
       consequentemente, renda para o setor, criando uma conexão natural entre todos os envolvidos.</p>
             <p>Em resumo, a Turist Us é uma plataforma inovadora que oferece soluções para o ramo de contratação de serviços turísticos,
