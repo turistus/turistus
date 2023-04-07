@@ -38,7 +38,7 @@ include_once '../connection.php';
                         </div>
                         <div class=" col-xl-2 col-lg-2 col-md-2 col-sm-2">
                         <button class="btn btn-success"> <a href="../solicitacaoNovoPontoTuristico.php">
-                            <strong class="d-inline-block mb-2 " style="color:azure; font-size: large;"> Novo Ponto </strong></a>
+                            <strong class="d-inline-block mb-2 " style="color:azure; font-size: smaller;"> Novo Ponto </strong></a>
                         </button>
                         </div>
                     </div>
