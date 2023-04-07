@@ -40,6 +40,45 @@ $usuarioId = isset($_SESSION['user_id']);
   <!-- Custom styles for this template -->
   <link href="css/blog.rtl.css" rel="stylesheet">
 
+  <style>
+		/* Imagem de fundo */
+		body {
+			background-image: url('https://cdn.pixabay.com/photo/2017/09/26/13/50/nature-2784206_960_720.jpg');
+			background-size: cover;
+			background-position: center;
+		}
+		/* Cabeçalho */
+		.header {
+			background-color: rgba(0,0,0,0.7);
+			color: #fff;
+			padding: 50px 0;
+			text-align: center;
+		}
+		/* Animação do cabeçalho */
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+		.header h1 {
+			animation: fadeIn 2s;
+		}
+		/* Imagem da empresa */
+		.company-image {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		/* Texto */
+		.text {
+			background-color: rgba(255,255,255,0.9);
+			padding: 50px 0;
+			text-align: justify;
+			margin-bottom: 0;
+		}
+	</style>
 </head>
 
 <body>
@@ -49,7 +88,7 @@ $usuarioId = isset($_SESSION['user_id']);
   ?>
 
     <main>
-    <div class="conteiner-fluid" style="border: 1px solid black; margin: 20px; padding: 20px;">
+    <div class="conteiner-fluid text" style="border: 1px solid black; margin: 20px; padding: 20px;">
 
     <div class="row">
 			<div class="col-md-8 col-md-offset-2">
