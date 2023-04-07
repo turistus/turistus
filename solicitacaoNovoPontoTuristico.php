@@ -159,7 +159,7 @@ include_once 'connection.php';
                 </div>
 
 
-                <div class="col-8 col-sm-3 col-md-3 col-lg-6 col-xl-6 " style="padding: 10px; border: 1px solid black;">
+                <div class="col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 " style="padding: 10px; border: 1px solid black;">
                         <label > Cidade </label><br>
                         <input type="text" name="cidade" id="cidade" placeholder=" Nome do municipio"  value="<?php
                         if (isset($data['cidade'])) {
@@ -185,6 +185,7 @@ include_once 'connection.php';
                         }
                         ?>" required>
                 </div>
+                <hr>
 
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; border: 1px solid black;">
                         <label >Data nascimento </label><br>
@@ -267,6 +268,7 @@ include_once 'connection.php';
 
                 </div>
 
+                <hr>
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px;">
                         <label>Foto Ponto Turistico</label>
                         <i class="fa-regular fa-images"></i>
