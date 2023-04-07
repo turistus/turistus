@@ -28,11 +28,7 @@ $uf=filter_input(INPUT_GET, "uf", FILTER_SANITIZE_URL);
             <h2 class="display-4 mt-5 mb-5">Pontos Turisticos</h2>
 
 
-            <?php
-            $query_products = "SELECT id, name, price, image, uf FROM pontosturisticos WHERE uf = '$uf' ORDER BY id ASC";
-            $result_products = $conn->prepare($query_products);
-            $result_products->execute();
-            ?>
+
 
                 <div class="box-search" >
                     <div class="row ">
@@ -70,9 +66,10 @@ $uf=filter_input(INPUT_GET, "uf", FILTER_SANITIZE_URL);
 
                 }else{
                     //echo "Nao tem nada no pesquisa, entao tras todos";
-                    $query_products = "SELECT id, name, image FROM pontosturisticos ORDER BY id DESC";
-                    $result_products = $conn->prepare($query_products);
-                    $result_products->execute();
+                $query_products = "SELECT id, name, price, image, uf FROM pontosturisticos WHERE uf = '$uf' ORDER BY id ASC";
+                $result_products = $conn->prepare($query_products);
+                $result_products->execute();
+
                 }
 
 
