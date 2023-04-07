@@ -166,9 +166,9 @@ include_once 'connection.php';
                         }
                         ?>" required>
                 </div>
-
+                <label > Autor </label><br>
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-                        <label > Autor </label><br>
+
                         <input type="text" name="autor" id="autor" placeholder=" Nome do autor"  value="<?php
                         if (isset($data['autor'])) {
                             echo $data['autor'];
@@ -176,8 +176,9 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 
+                <label > CPF </label><br>
                 <div class="col-xl-8 col-lg-6 col-md-6 col-sm-8" style="padding: 10px;">
-                        <label > CPF </label><br>
+
                         <input type="text" name="cpf" id="cpf" placeholder=" 000.000.000-00 "  value="<?php
                         if (isset($data['cpf'])) {
                             echo $data['cpf'];
