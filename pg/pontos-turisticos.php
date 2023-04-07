@@ -30,10 +30,10 @@ include_once '../connection.php';
             <br>
                 <div class="box-search" >
                     <div class="row ">
-                        <div class=" col-xl-8 col-lg-8 col-md-8 col-sm-7 ">
+                        <div class=" col-xl-8 col-lg-8 col-md-7 col-sm-7 ">
                             <input style="border: 1px solid black;" type="search" class="form-control " id="pesquisar">
                         </div>
-                        <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-5">
+                        <div class=" col-xl-3 col-lg-4 col-md-5 col-sm-5">
                             <button onclick="searchData()"  class="btn btn-primary"> Buscar </button>
                             <button class="btn btn-success " >
                                 <a href="../solicitacaoNovoPontoTuristico.php" style="color: white; text-decoration: none;">
