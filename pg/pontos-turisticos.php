@@ -33,7 +33,7 @@ include_once '../connection.php';
                         <div class=" col-xl-8 col-lg-8 col-md-8 col-sm-8 ">
                             <input style="border: 1px solid black;" type="search" class="form-control " id="pesquisar">
                         </div>
-                        <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-3">
+                        <div class=" col-xl-3 col-lg-4 col-md-4 col-sm-4">
                             <button onclick="searchData()"  class="btn btn-primary"> Buscar </button>
                             <button class="btn btn-success " >
                                 <a href="../solicitacaoNovoPontoTuristico.php" style="color: white; text-decoration: none;">
@@ -42,7 +42,7 @@ include_once '../connection.php';
                             </button>
 
                         </div>
-                        <div class=" col-xl-1 col-lg-0 col-md-0 col-sm-1">
+                        <div class=" col-xl-1 col-lg-0 col-md-0 col-sm-0">
 
                         </div>
                     </div>
