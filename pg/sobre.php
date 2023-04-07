@@ -96,8 +96,8 @@ $usuarioId = isset($_SESSION['user_id']);
 	  <div class="parallax">
         <!-- Cabeçalho -->
         <div class="header">
-          <h1>Minha Empresa</h1>
-          <p class="lead">Passeios na natureza com responsabilidade</p>
+          <h1> Turist Us </h1>
+          <p class="lead">Conexão com a natureza</p>
         </div>
         <div class="conteiner-fluid text" style="border: 1px solid black; margin: 20px; padding: 20px;">
 
