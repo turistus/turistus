@@ -50,33 +50,45 @@ $usuarioId = isset($_SESSION['user_id']);
 
     <main>
     <div class="conteiner" style="border: 1px solid black; margin: 20px; padding: 20px;">
-    <p> Em breve.. </p>
-       <!-- <h2>Um novo modelo em contratação de serviços turisticos</h2>
-        <p>
-        Voltada a distribuir renda e fomentar turismo em cada local
-        TuristUs traz uma conexão natural para o mundo
-        aproveitando a retomada de crecimento do turismo,
-        o qual ainda é pouco aproveitado e divulgado até então para muitos locais,
-        locais diversos espalhados por todo país.
-        </p>
-        <p>
-        Também precisam de mais destaque no mapa turistico para se desenvolver
-        um local bom para visitar, na visão da Turist Us de modo resumido, sendo que pode ser qualquer
-        lugar turistico ou cultural de sua cidade como
-        um morro, uma cascata, uma igreja, lagos, lugares historicos do municipio...
-        dentro destes locais existem varios serviços, ou ainda poderão existir
-        os quais necessitam de vizibilidade, de valorização
-        com nosso marketplace de serviços turistico e divulcação de locais
-        de forma facil para o turista encontrar serviços e as belezas a serem vizitadas por todo Brasil
-        trazendo a conexão que faltava para a recuperação do turismo no cenario mundial.
-        </p>
-        <h4>A turistus organiza o roteiro do turista e facilita na escolha
-        tambem ajuda empresas  e pessoas do ramo a divulgarem e venderem serviços sendo um market place aberto
-        voce esta pronto para poder enchergar o que esta a sua volta?</h4>
+    <p>
+      A Turist Us é uma plataforma inovadora que oferece soluções para a contratação de serviços turísticos em todo o Brasil.
+      Sabemos que pode ser difícil para turistas encontrar o melhor serviço turístico em uma determinada região afastada das grandes cidades,
+      assim como tambem é difícil para quem oferece ou quer oferecer serviços ou divulgar seus negócios.
+      <br>
+      É por isso que na Turist Us, trabalhamos em estreita colaboração com os profissionais do setor para entender suas necessidades reais
+       e oferecer soluções eficazes em questão de obter mais visitas a sua região local.
+      <br>
+      Nossa plataforma permite que os profissionais do setor turístico cadastrem seus pontos turísticos gratuitamente,
+      divulgando-os por cidade, região e tipo de turismo, trazendo visibilidade organizada aos pontos,
+       mais incriveis do Brasil conhecido por poucos e tudo de graça.
+      Além disso, os profissionais podem vincular serviços das diversas mobilidades de atividades existentes no turismo,
+      gerando renda ao municipio e reconhecimento ao seu trabalho.
+      <br>
+      É importante destacar que o ramo de serviços representa um total de 75% do setor de turismo,
+      e já passou da hora de ter uma ferramenta que auxilie nas operações.
+      <br>
+      A Turist Us surge como uma solução para essa demanda.
+      <br>
+      O cadastro de profissionais, pontos, turistas e até eventos é gratuito e deve seguir as regras estipuladas, para suas publicações.
+      A monetização da startup vem com a venda de eventos na plataforma, em que estipula uma taxa sobre o valor do serviço vendido,
+      com uma participação variavel de 20% a 10% do valor. Além disso, oferecemos uma gamificação para fidelizar os profissionais e melhorar seus serviços,
+      além de planos que viram no futuro para valorizar ainda mais nossos profissionais turisticos.
+      <br>
+      Hoje, existem inúmeros sites em que profissionais vendem serviços de diversos setores, mas e o setor turistico?
+      a Turist Us abrange diversos serviços, como passeios turísticos, trilhas, rapel, parapente, balonismo e mais de 50 atividades existentes no mercado.
+      <br>
+      Somos uma equipe pequena, mas com uma grande visão de futuro para o setor de turismo. Nossa missão é gerar mais visibilidade e,
+      consequentemente, renda para o setor, criando uma conexão natural entre todos os envolvidos.
+      <br>
+      Em resumo, a Turist Us é uma plataforma inovadora que oferece soluções para o ramo de contratação de serviços turísticos,
+      gerando mais visibilidade e renda para o setor. Com uma monetização baseada na venda de eventos na plataforma,
+      oferecemos aos profissionais uma facilidade para fidelizá-los e melhorar seu serviço.
+      <br>
+      Nossa plataforma abrange diversos serviços turísticos, promovendo uma conexão natural entre todos os envolvidos.
+      Com a Turist Us, você pode escolher o melhor serviço turístico a qualquer hora em qualquer região do Brasil.
+    </p>
 
 
-        <p style="color: green;">Turist Us a natural connection</p>
-        <a href="TERMOS DE USO.pdf">TERMOS</a>-->
 
     </div>
    </main><!-- /.container -->

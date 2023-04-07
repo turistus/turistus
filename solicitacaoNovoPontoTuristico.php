@@ -226,7 +226,7 @@ include_once 'connection.php';
 
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="hotelaria" name="hotelaria" value="1">
-                                <label class="custom-control-label" for="hotelaria"> Hotelaria <i class='fa-solid fa-hotel'></i></label>
+                                <label class="custom-control-label" for="hotelaria"> Hospedagens há 2Km<i class='fa-solid fa-hotel'></i></label>
                             </div>
                         </div>
 
@@ -238,7 +238,7 @@ include_once 'connection.php';
 
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="sanitarios" name="sanitarios" value="1">
-                                <label class="custom-control-label" for="sanitarios"> Banheiros <i class='fa-solid fa-toilet-paper'></i></label>
+                                <label class="custom-control-label" for="sanitarios"> Sanitários <i class='fa-solid fa-toilet-paper'></i></label>
                             </div>
                         </div>
 
@@ -250,7 +250,7 @@ include_once 'connection.php';
 
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="risco" name="risco" value="1">
-                                <label class="custom-control-label" for="risco"> Risco <i class='fa-solid fa-triangle-exclamation'></i></label>
+                                <label class="custom-control-label" for="risco"> Perigo de vida <i class='fa-solid fa-triangle-exclamation'></i></label>
                             </div>
                         </div>
 
