@@ -111,7 +111,7 @@ include_once 'connection.php';
                         ?>" autofocus required>
                 </div>
 
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px; max-width: 600px;">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px; max-width: 700px;">
                         <label> Descrição </label>
 
                         <textarea class="form-control" rows="3" cols="15" name="descricao" id="descricao" placeholder=" Descreva toda a história do ponto turistico." value="<?php
@@ -123,7 +123,7 @@ include_once 'connection.php';
                 </div>
                 <br>
 
-                <div class="col-8 col-sm-3 col-md-3 col-lg-6 col-xl-6 " style="padding: 10px; border: 1px solid black;">
+                <div class="col-8 col-sm-3 col-md-3 col-lg-6 col-xl-4 " style="padding: 10px; ">
 
                     <label class="uf"> Estado UF </label>
                                 <select name="uf" class="custom-select d-block w-100 uf" id="uf" required>
@@ -159,7 +159,7 @@ include_once 'connection.php';
                 </div>
 
 
-                <div class="col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 " style="padding: 10px; border: 1px solid black;">
+                <div class="col-8 col-sm-6 col-md-6 col-lg-6 col-xl-8 " style="padding: 10px; border: 1px solid black;">
                         <label > Cidade </label><br>
                         <input type="text" name="cidade" id="cidade" placeholder=" Nome do municipio"  value="<?php
                         if (isset($data['cidade'])) {
