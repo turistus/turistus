@@ -55,18 +55,6 @@ $body =
         "expiration_date" => "2023-04-29T20:15:59-03:00",
       ]
     ],
-    "shipping" => [
-      "address" => [
-        "street" => "Avenida Brigadeiro Faria Lima",
-        "number" => "1384",
-        "complement" => "apto 12",
-        "locality" => "Pinheiros",
-        "city" => "São Paulo",
-        "region_code" => "SP",
-        "country" => "BRA",
-        "postal_code" => "01452002"
-      ]
-    ],
     "notification_urls" => [
       "https://turistus.com.br/notificacaoPagSeguro.php"
     ]
