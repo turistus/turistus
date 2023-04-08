@@ -101,7 +101,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             </div>
                             <div class="col-4 " >
 
-                                <div class="star-ratings" style="margin-left:5px;">
+                                <div class="star-ratings" style="margin-left:15px;">
                                     <div class="fill-ratings" style="width: <?php echo $pontos . '%'?>;">
                                         <span>★★★★★</span>
                                     </div>

@@ -101,7 +101,7 @@ include_once 'connection.php';
                         ?>
             <!-- SEGUNDA (ROW) LINHA -->
             <div class="row" style=" padding: 10px; margin: 20px;">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px;">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10" style="padding: 10px;">
                     <form name="add_msg" action="" method="POST" enctype="multipart/form-data">
                         <label> Nome </label>
                         <input type="text" name="name" id="name" placeholder=" Nome turistico " value="<?php
@@ -111,7 +111,7 @@ include_once 'connection.php';
                         ?>" autofocus required>
                 </div>
 
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px; max-width: 700px;">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10" style="padding: 10px; max-width: 700px;">
                         <label> Descrição </label>
 
                         <textarea class="form-control" rows="3" cols="15" name="descricao" id="descricao" placeholder=" Descreva toda a história do ponto turistico." value="<?php

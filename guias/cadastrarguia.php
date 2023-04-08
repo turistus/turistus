@@ -35,7 +35,7 @@ include_once '../connection.php';
     <!-- Primeira LINHA Principal-->
     <div class="row">
 <!-- Titulo-->
-        <div class="row" style="padding-left: 100px;  margin-bottom: 50px; background: url(../images/bussola.jpg) repeat-x top center;">
+        <div class="row" style="padding-left: 50px;  margin-bottom: 50px; background: url(../images/bussola.jpg) repeat-x top center;">
             <div class="col-12">
             <h1>Cadastro de Guia Nativo</h1>
             </div>

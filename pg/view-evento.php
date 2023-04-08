@@ -121,7 +121,7 @@ session_start();
                                 <h5>Classificação:</h5>
                             </div>
                             <div class="col-4 " >
-                                <div class="star-ratings" style="margin-left:5px;">
+                                <div class="star-ratings" style="margin-left:15px;">
                                     <div class="fill-ratings" style="width: <?php echo $pontos . '%'?>;">
                                         <span>★★★★★</span>
                                     </div>
@@ -149,7 +149,7 @@ session_start();
 
                                         ?>
 
-                                        <div class="col-4 mt-1"  >
+                                        <div class="col-6 mt-1"  >
                                             <p>
                                                 <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn btn-outline-success" ><input id="BotaoPagamento" type="image" src="../icones/picpaylogo.png" name="submit" alt="" style="width: 80px; height: 40px;"/> </a>
                                             </p>
