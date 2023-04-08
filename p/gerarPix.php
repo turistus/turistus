@@ -79,7 +79,7 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
 curl_setopt($curl, CURLOPT_HTTPHEADER, [
   'Content-Type:application/json',
-  'Authorization: $token'
+  'Authorization: '.$token
 ]);
 
 $response = curl_exec($curl);
