@@ -25,45 +25,45 @@ $token = 'AF36513B07544C12B790A1D158E70911';
 
 $body =
   [
-    "reference_id" => $Dados['reference'],
+    "reference_id" => "101",
     "customer" => [
-      "name" => $Dados['senderName'],
-      "email" => $Dados['senderEmail'],
-      "tax_id" => $Dados['senderCPF'],
+      "name" => "Jose da Silva",
+      "email" => "email@test.com",
+      "tax_id" => "12345678909",
       "phones" => [
         [
           "country" => "55",
-          "area" => $Dados['senderAreaCode'],
-          "number" => $Dados['senderPhone'],
+          "area" => "11",
+          "number" => "999999999",
           "type" => "MOBILE"
         ]
       ]
     ],
     "items" => [
       [
-        "name" => $row_car['nome'],
+        "name" => "TRILHA DA MANTIQUEIRA",
         "quantity" => 1,
-        "unit_amount" => $total_venda
+        "unit_amount" => 5.00
       ]
     ],
     "qr_codes" => [
       [
         "amount" => [
-          "value" => $total_venda
+          "value" => 5.00
         ],
-        "expiration_date" => "2023-04-29T20:15:59-03:00"
+        "expiration_date" => "2023-04-29T20:15:59-03:00",
       ]
     ],
     "shipping" => [
       "address" => [
-        "street" => $Dados['billingAddressStreet'],
-        "number" => $Dados['billingAddressNumber'],
-        "complement" => $Dados['billingAddressComplement'],
-        "locality" => $Dados['billingAddressDistrict'],
-        "city" => $Dados['billingAddressCity'],
-        "region_code" => $Dados['billingAddressState'],
+        "street" => "Avenida Brigadeiro Faria Lima",
+        "number" => "1384",
+        "complement" => "apto 12",
+        "locality" => "Pinheiros",
+        "city" => "São Paulo",
+        "region_code" => "SP",
         "country" => "BRA",
-        "postal_code" => $Dados['billingAddressPostalCode']
+        "postal_code" => "01452002"
       ]
     ],
     "notification_urls" => [
@@ -79,7 +79,7 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
 curl_setopt($curl, CURLOPT_HTTPHEADER, [
   'Content-Type:application/json',
-  'Authorization:'.$token
+  'Authorization: $token'
 ]);
 
 $response = curl_exec($curl);
@@ -96,6 +96,24 @@ $data = json_decode($response, true);
 
 var_dump($data);
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QrCode Pix Pagseguro</title>
+</head>
+
+<body>
+  <?php if ($data) : ?>
+    <img src="<?php echo $data['qr_codes'][0]['links'][0]['href'] ?>" alt="">
+  <?php endif; ?>
+</body>
+
+</html>
 
 <!DOCTYPE html>
 <html lang="pt-br">
