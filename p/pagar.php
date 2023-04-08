@@ -81,6 +81,8 @@ $token = 'AF36513B07544C12B790A1D158E70911';
 
 
                 $add_pay_picpay->execute();
+
+
              // FIM DA INSERT EM PAYMENTS PICPAY
 
                 if ($add_pay_picpay->rowCount()) {
@@ -146,7 +148,7 @@ $token = 'AF36513B07544C12B790A1D158E70911';
                 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
                 curl_setopt($curl, CURLOPT_HTTPHEADER, [
                 'Content-Type:application/json',
-                'Authorization:Bearer'.$token
+                'Authorization:'.$token
                 ]);
 
                 $response = curl_exec($curl);
