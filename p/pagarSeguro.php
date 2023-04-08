@@ -6,7 +6,7 @@ $token = '7B51B77D7A7A2162240DDFA7FDEC306A';
 
 $body =
   [
-    "reference_id" => "0001",
+    "reference_id" => "0011",
     "customer" => [
       "name" => "Jose da Silva",
       "email" => "email@test.com",
@@ -32,7 +32,7 @@ $body =
         "amount" => [
           "value" => 5.00
         ],
-        "expiration_date" => "2023-04-29T20:15:59-03:00",
+        "expiration_date" => "2023-04-29T20:15:59-03:00"
       ]
     ],
     "shipping" => [
@@ -60,7 +60,7 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
 curl_setopt($curl, CURLOPT_HTTPHEADER, [
   'Content-Type:application/json',
-  'Authorization: $token'
+  'Authorization: Bearer ' .$token
 ]);
 
 $response = curl_exec($curl);
@@ -79,7 +79,7 @@ var_dump($data);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
