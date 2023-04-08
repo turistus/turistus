@@ -37,7 +37,7 @@ include_once '../connection.php';
                             <button onclick="searchData()"  class="btn btn-primary"> Buscar </button>
                             <button class="btn btn-success " >
                                 <a href="../solicitacaoNovoPontoTuristico.php" style="color: white; text-decoration: none;">
-                                    Novo Ponto
+                                    +Novo Ponto
                                 </a>
                             </button>
 
