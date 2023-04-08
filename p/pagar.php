@@ -3,8 +3,6 @@
 //include '../connection.php';
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
-$emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
-
 include '../connection.php';
 
 $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -149,7 +147,7 @@ $token = 'AF36513B07544C12B790A1D158E70911';
                 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
                 curl_setopt($curl, CURLOPT_HTTPHEADER, [
                 'Content-Type:application/json',
-                'Authorization:'.$token
+                'Authorization:Bearer'.$token
                 ]);
 
                 $response = curl_exec($curl);
@@ -215,7 +213,7 @@ $token = 'AF36513B07544C12B790A1D158E70911';
 
                     <!-- <div class="meio-pag">A</div> -->
                     <span id="msg"></span>
-                    <form name="formPagamento" action="" id="formPagamento">
+                    <form name="formPagamento" action="pagar.php?id=<?php echo $id; ?>" id="formPagamento">
                         <span id="msg"></span>
                         <h4 class="mb-3">Dados do Comprador</h4>
                         <div class="mb-3">
