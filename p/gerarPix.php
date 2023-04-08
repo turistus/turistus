@@ -43,13 +43,13 @@ $body =
       [
         "name" => "TRILHA DA MANTIQUEIRA",
         "quantity" => 1,
-        "unit_amount" => 50.00
+        "unit_amount" => 500.00
       ]
     ],
     "qr_codes" => [
       [
         "amount" => [
-          "value" => 50.00
+          "value" => 500.00
         ],
         "expiration_date" => "2023-04-29T20:15:59-03:00",
       ]
