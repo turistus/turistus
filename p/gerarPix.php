@@ -22,10 +22,11 @@ while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
 */
 $endpoint = 'https://sandbox.api.pagseguro.com/orders';
 $token = 'AF36513B07544C12B790A1D158E70911';
+$reference_id = '101';
 
 $body =
   [
-    "reference_id" => "101",
+    "reference_id" => $reference_id,
     "customer" => [
       "name" => "Jose da Silva",
       "email" => "email@test.com",
@@ -43,13 +44,13 @@ $body =
       [
         "name" => "TRILHA DA MANTIQUEIRA",
         "quantity" => 1,
-        "unit_amount" => 500.00
+        "unit_amount" => 100.00
       ]
     ],
     "qr_codes" => [
       [
         "amount" => [
-          "value" => 500.00
+          "value" => 100.00
         ],
         "expiration_date" => "2023-04-29T20:15:59-03:00",
       ]
