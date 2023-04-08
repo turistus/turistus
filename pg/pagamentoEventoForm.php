@@ -181,7 +181,7 @@ include_once './configPicPay.php';
                                         echo "<img src='" . $data_result->qrcode->base64 . "'><br><br>";
                                         ?>
                                         <p class="lead">Se tiver algum problema com a leitura do QR code, atualize o aplicativo.</p>
-                                        <p class="lead"><a href="https://meajuda.picpay.com/hc/pt-br/articles/360045117912-Quero-fazer-a-adi%C3%A7%C3%A3o-mas-a-op%C3%A7%C3%A3o-n%C3%A3o-aparece-para-mim-E-agora-" target="_blank">Saiba como atualizar o aplicativo</a></p>
+                                        <p class="lead"><a href="../pg/sobre.php" target="_blank">Saiba quem somos</a></p>
                                     </div>
                                     <div class="modal-footer">
 

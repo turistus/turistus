@@ -1,4 +1,4 @@
-<!-- PAGINA Criada Para realizar o checkout O AGENDAMENTO E PAGAMENTO de um Ponto Turistico vinculado a 1 GUIA com VALOR. 22/09/22-->
+<!-- PAGINA Criada Para realizar o checkout O AGENDAMENTO E PAGAMENTO de um Ponto Turistico vinculado a 1 GUIA com VALOR. 22/09/22 OK FUNCIONAL-->
 
 <?php
 define('ACCESS', true);
@@ -20,7 +20,7 @@ include_once 'config.php';
 
 ?>
         <?php
-                // AQUI DEVE CHAMAR id, guia e valor do guia nativo do ponto turistico
+                // AQUI DEVE CHAMAR id, guia e valor
                 $query = "SELECT *,
                 pontosturisticos.id AS id,
                 idGuia,

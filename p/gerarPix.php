@@ -1,50 +1,69 @@
 
 <?php
+include '../connection.php';
+
+$Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+$query_car = "SELECT car_prod.valor, car_prod.id,
+        car_prod.nome, car_prod.descricao
+        FROM eventos car_prod WHERE $id
+        ";
+
+$resultado_car = $conn->prepare($query_car);
+$resultado_car->execute();
+
+$cont_item = 1;
+while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
+
+    $total_venda = number_format($row_car['valor'], 2, '.', '');
+
+  }
+
 
 $endpoint = 'https://sandbox.api.pagseguro.com/orders';
 $token = 'AF36513B07544C12B790A1D158E70911';
 
 $body =
   [
-    "reference_id" => "110",
+    "reference_id" => $Dados['reference'],
     "customer" => [
-      "name" => "Jose da Silva",
-      "email" => "email@test.com",
-      "tax_id" => "12345678909",
+      "name" => $Dados['senderName'],
+      "email" => $Dados['senderEmail'],
+      "tax_id" => $Dados['senderCPF'],
       "phones" => [
         [
           "country" => "55",
-          "area" => "11",
-          "number" => "999999999",
+          "area" => $Dados['senderAreaCode'],
+          "number" => $Dados['senderPhone'],
           "type" => "MOBILE"
         ]
       ]
     ],
     "items" => [
       [
-        "name" => "TRILHA DA MANTIQUEIRA",
+        "name" => $row_car['nome'],
         "quantity" => 1,
-        "unit_amount" => 500.00
+        "unit_amount" => $total_venda
       ]
     ],
     "qr_codes" => [
       [
         "amount" => [
-          "value" => 500.00
+          "value" => $total_venda
         ],
         "expiration_date" => "2023-04-29T20:15:59-03:00"
       ]
     ],
     "shipping" => [
       "address" => [
-        "street" => "Avenida Brigadeiro Faria Lima",
-        "number" => "1384",
-        "complement" => "apto 12",
-        "locality" => "Pinheiros",
-        "city" => "São Paulo",
-        "region_code" => "SP",
+        "street" => $Dados['billingAddressStreet'],
+        "number" => $Dados['billingAddressNumber'],
+        "complement" => $Dados['billingAddressComplement'],
+        "locality" => $Dados['billingAddressDistrict'],
+        "city" => $Dados['billingAddressCity'],
+        "region_code" => $Dados['billingAddressState'],
         "country" => "BRA",
-        "postal_code" => "01452002"
+        "postal_code" => $Dados['billingAddressPostalCode']
       ]
     ],
     "notification_urls" => [
