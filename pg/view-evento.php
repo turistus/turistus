@@ -134,7 +134,7 @@ session_start();
 
                             <h5 class="card-title">Abertura: <?php echo date('d/m/Y',  strtotime($datah)); ?></h5>
                             <div class="col-6 " >
-                                <h4 style="text-align: center; border:solid 1px green; padding-left: 5px; ">por R$ <?php echo number_format($valor, 2, ",", "."); ?></h4>
+                                <h4 style="text-align: center; border:solid 1px green; padding-left: 5px; padding-bottom: 5px; "> por R$ <?php echo number_format($valor, 2, ",", "."); ?></h4>
                             </div>
 
 
@@ -149,9 +149,8 @@ session_start();
 
                                         ?>
 
-                                        <div class="col-4 mt-2"  >
+                                        <div class="col-4 mt-1"  >
                                             <p>
-
                                                 <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn btn-outline-success" ><input id="BotaoPagamento" type="image" src="../icones/picpaylogo.png" name="submit" alt="" style="width: 80px; height: 40px;"/> </a>
                                             </p>
 
@@ -197,7 +196,7 @@ session_start();
                             <div class="modal-content" id=acessaTurista>
 
                                 <?php
-                                include_once '../lgn/abreSturista.php';
+                                include_once '../lgn/entrarTurista.php';
                                 ?>
                             </div>
 
