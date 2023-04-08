@@ -24,7 +24,7 @@ $resultado_car->execute();
 
 while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
 
-    $total_venda = number_format($row_car['valor'], 2, '.', '');
+    $total_venda = number_format($row_car['custoEvento'], 2, '.', '');
 
   }
 
@@ -110,15 +110,15 @@ $token = 'AF36513B07544C12B790A1D158E70911';
                 ],
                 "items" => [
                     [
-                    "name" => $nome,
+                    "name" => $nomeEvento,
                     "quantity" => 1,
-                    "unit_amount" => $total_venda
+                    "unit_amount" => 500.0//$total_venda
                     ]
                 ],
                 "qr_codes" => [
                     [
                     "amount" => [
-                        "value" => $total_venda
+                        "value" => 500.0//$total_venda
                     ],
                     "expiration_date" => "2023-04-29T20:15:59-03:00"
                     ]
