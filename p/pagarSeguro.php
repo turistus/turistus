@@ -6,7 +6,7 @@ $token = 'AF36513B07544C12B790A1D158E70911';
 
 $body =
   [
-    "reference_id" => "0011",
+    "reference_id" => "110",
     "customer" => [
       "name" => "Jose da Silva",
       "email" => "email@test.com",
