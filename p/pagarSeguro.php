@@ -2,7 +2,7 @@
 <?php
 
 $endpoint = 'https://sandbox.api.pagseguro.com/orders';
-$token = '7B51B77D7A7A2162240DDFA7FDEC306A';
+$token = 'AF36513B07544C12B790A1D158E70911';
 
 $body =
   [
@@ -60,7 +60,7 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
 curl_setopt($curl, CURLOPT_HTTPHEADER, [
   'Content-Type:application/json',
-  'Authorization: Bearer ' .$token
+  'Authorization: Bearer' .$token
 ]);
 
 $response = curl_exec($curl);
