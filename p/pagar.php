@@ -1,8 +1,11 @@
 <?php
-
-//include '../connection.php';
+define('ACCESS', true);
+ob_start();
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-
+if (empty($id)) {
+    header("Location: ../pg/eventos.php");
+    die("Erro: página encontrada!<br>");
+}
 include '../connection.php';
 
 $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -17,12 +20,11 @@ eventos.valor AS custoEvento
 FROM eventos
 
 INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
-WHERE eventos.id =:id LIMIT 1 ";;
+WHERE eventos.id =:id LIMIT 1 ";
 
 $resultado_car = $conn->prepare($query_car);
 $resultado_car->execute();
 
-$cont_item = 1;
 while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
 
     $total_venda = number_format($row_car['valor'], 2, '.', '');
