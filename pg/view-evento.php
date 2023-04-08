@@ -197,7 +197,7 @@ session_start();
                             <div class="modal-content" id=acessaTurista>
 
                                 <?php
-                                include_once '../lgn/entrarTurista.php';
+                                include_once '../lgn/abreSturista.php';
                                 ?>
                             </div>
 
