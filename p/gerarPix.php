@@ -1,6 +1,6 @@
 
 <?php
-include '../connection.php';
+/**include '../connection.php';
 
 $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -19,7 +19,7 @@ while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
 
   }
 
-
+*/
 $endpoint = 'https://sandbox.api.pagseguro.com/orders';
 $token = 'AF36513B07544C12B790A1D158E70911';
 
