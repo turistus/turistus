@@ -58,7 +58,7 @@ $idT = isset($row_turista['idT']);
         <li><a href="#" class="nav-link px-2 link-dark"></a></li>
         <li><a href="pg/pontos-turisticos.php" class="nav-link px-2 link-secondary"><ion-icon name="image-outline"></ion-icon> Pontos turisticos</a></li>
         <li><a href="pg/eventos.php" class="nav-link px-2 link-secondary"><ion-icon name="leaf-outline"></ion-icon> Eventos</a></li>
-        <!-- <li><a href="guias/cadastrarguia.php" class="nav-link px-2 link-secondary"><ion-icon name="compass-outline"></ion-icon> Guia</a></li>-->
+        <li><a href="guias/cadastrarguia.php" class="nav-link px-2 link-secondary"><ion-icon name="compass-outline"></ion-icon> Guia</a></li>
         <li><a href="pg/mapa.php" class="nav-link px-2 link-secondary"><ion-icon name="earth-outline"></ion-icon> Mapa </a></li>
         <li><a href="pg/sobre.php" class="nav-link px-2 link-secondary"><ion-icon name="finger-print-outline"></ion-icon> Sobre </a></li>
 
@@ -158,17 +158,18 @@ $idT = isset($row_turista['idT']);
                 </div>
             </div>
          </div>
-
-        <div class="text-end">
-          <div class='dropdown text-end'>
+         <div class="text-end">
+          <div class='dropdown text-end'>bbb
           <a href='#' class='d-block link-dark text-decoration-none dropdown-toggle' id='dropdownCads' data-bs-toggle='dropdown' aria-expanded='false'>
-            Cadastro - se
-            <ul class='dropdown-menu text-small' aria-labelledby='dropdownCads'>
+          <button type="button" class="btn btn-outline-primary">Cadastrar</button>
+            <ul class='dropdown-menu text-small' >aa
               <li><a class='dropdown-item' href='./usuarios/cadastrarturista.php'>Turista</a></li>
               <li><a class='dropdown-item' href='./guias/cadastrarguia.php'>Profissional</a></li>
             </ul>
           </div>
         </div>
+          <a href=""> </a>
+
 
 
 
