@@ -60,7 +60,7 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
 curl_setopt($curl, CURLOPT_HTTPHEADER, [
   'Content-Type:application/json',
-  'Authorization: Bearer' .$token
+  'Authorization:'.$token
 ]);
 
 $response = curl_exec($curl);
