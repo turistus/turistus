@@ -162,6 +162,7 @@ $idT = isset($row_turista['idT']);
         <div class="text-end">
           <div class='dropdown text-end'>
           <a href='#' class='d-block link-dark text-decoration-none dropdown-toggle' id='dropdownCads' data-bs-toggle='dropdown' aria-expanded='false'>
+            Cadastro - se
             <ul class='dropdown-menu text-small' aria-labelledby='dropdownCads'>
               <li><a class='dropdown-item' href='./usuarios/cadastrarturista.php'>Turista</a></li>
               <li><a class='dropdown-item' href='./guias/cadastrarguia.php'>Profissional</a></li>
