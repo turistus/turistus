@@ -158,19 +158,18 @@ $idT = isset($row_turista['idT']);
                 </div>
             </div>
          </div>
-         <div class="text-end">
+
           <div class='dropdown text-end'>
           <button type="button" class="btn btn-outline-primary">
             <a href='#' class='d-block link-dark text-decoration-none dropdown-toggle' id='dropdown' data-bs-toggle='dropdown' aria-expanded='false'>
             Cadastre - se
 
-            <ul class='dropdown-menu text-small' aria-labelledby='dropdown'>aa
-              <li><a class='dropdown-item' href='./usuarios/cadastrarturista.php'>Turista</a></li>
-              <li><a class='dropdown-item' href='./guias/cadastrarguia.php'>Profissional</a></li>
+            <ul class='dropdown-menu text-small' aria-labelledby='dropdown'>
+              <li>b<a class='dropdown-item' href='./usuarios/cadastrarturista.php'> Turista </a></li>
+              <li>c<a class='dropdown-item' href='./guias/cadastrarguia.php'> Profissional </a></li>
             </ul>
             </button>
           </div>
-        </div>
 
 
 
