@@ -2,10 +2,7 @@
 define('ACCESS', true);
 ob_start();
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-if (empty($id)) {
-    header("Location: ../pg/eventos.php");
-    die("Erro: página encontrada!<br>");
-}
+
 include '../connection.php';
 
 $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
