@@ -1,6 +1,6 @@
 <?php
-define('ACCESS', true);
-ob_start();
+
+
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
 include '../connection.php';
