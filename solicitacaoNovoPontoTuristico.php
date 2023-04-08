@@ -250,7 +250,7 @@ include_once 'connection.php';
 
                             <div class="custom-control custom-checkbox mr-sm-2">
                                 <input type="checkbox" class="custom-control-input" id="risco" name="risco" value="1">
-                                <label class="custom-control-label" for="risco"> Perigo de vida <i class='fa-solid fa-triangle-exclamation'></i></label>
+                                <label class="custom-control-label" for="risco"> Perigo <i class='fa-solid fa-triangle-exclamation'></i></label>
                             </div>
                         </div>
 

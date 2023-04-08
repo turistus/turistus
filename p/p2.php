@@ -92,6 +92,8 @@ ob_start();
                         <div class="mb-3 bankName">
                             <label class="bankName">Banco</label>
                             <select name="bankName" id="bankName" class="form-control select-bank-name bankName">
+                            <option value="AC">CARTAO</option>
+                                    <option value="AL">PIX</option>
 
                             </select>
                         </div>
