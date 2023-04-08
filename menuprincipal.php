@@ -161,22 +161,14 @@ $idT = isset($row_turista['idT']);
 
           <button type="button" class="btn btn-outline-primary">
             <div class='dropdown text-end'>
-              <a href='#' class='d-block link-dark text-decoration-none dropdown-toggle' id='dropdown' data-bs-toggle='dropdown' aria-expanded='false'>
-              Cadastre - se
-              <ul class='dropdown-menu text-small' aria-labelledby='dropdown'>
+              <a href='#' class='d-block link-dark text-decoration-none dropdown-toggle' id='dropdown1' data-bs-toggle='dropdown' aria-expanded='false'>
+              Cadastre - se </a>
+              <ul class='dropdown-menu text-small' aria-labelledby='dropdown1'>
                 <a class='dropdown-item' href='./usuarios/cadastrarturista.php'> Turista </a>
                 <a class='dropdown-item' href='./guias/cadastrarguia.php'> Profissional </a>
               </ul>
             </div>
           </button>
-
-
-
-
-
-
-
-
 
 
 
