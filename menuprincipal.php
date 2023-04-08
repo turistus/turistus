@@ -161,8 +161,8 @@ $idT = isset($row_turista['idT']);
          <div class="text-end">
           <div class='dropdown text-end'>
           <button type="button" class="btn btn-outline-primary">
-            P<a href='#' class='d-block link-dark text-decoration-none dropdown-toggle' id='dropdownCads' data-bs-toggle='dropdown' aria-expanded='false'>
-            Cadastrar
+            <a href='#' class='d-block link-dark text-decoration-none dropdown-toggle' id='dropdown' data-bs-toggle='dropdown' aria-expanded='false'>
+            Cadastre - se
 
             <ul class='dropdown-menu text-small' >aa
               <li><a class='dropdown-item' href='./usuarios/cadastrarturista.php'>Turista</a></li>
