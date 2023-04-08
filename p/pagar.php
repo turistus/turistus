@@ -1,12 +1,12 @@
 <?php
 
 
-$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+
 
 include '../connection.php';
 
 $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
+$idEvento = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 $query_car = "SELECT *,
 svcs.id AS GuiaID,
 svcs.nome AS nomeGuia,
@@ -20,6 +20,7 @@ INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
 WHERE eventos.id =:id LIMIT 1 ";
 
 $resultado_car = $conn->prepare($query_car);
+$result_products->bindParam(':id', $id, PDO::PARAM_INT);
 $resultado_car->execute();
 
 while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
@@ -136,7 +137,7 @@ $token = 'AF36513B07544C12B790A1D158E70911';
                     ]
                 ],
                 "notification_urls" => [
-                    "https://turistus.com.br/notificacaoPagSeguro.php"
+                    "https://turistus.com.br/p/pagar.php"
                 ]
                 ];
 
@@ -148,7 +149,7 @@ $token = 'AF36513B07544C12B790A1D158E70911';
                 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
                 curl_setopt($curl, CURLOPT_HTTPHEADER, [
                 'Content-Type:application/json',
-                'Authorization:'.$token
+                'Authorization:Bearer'.$token
                 ]);
 
                 $response = curl_exec($curl);
@@ -313,7 +314,7 @@ $token = 'AF36513B07544C12B790A1D158E70911';
 
 
 
-                        <input type="hidden" name="reference" id="reference" value="<?php echo $id; ?>">
+                        <input type="hidden" name="reference" id="reference" value="<?php echo $idEvento; ?>">
 
                         <input type="hidden" name="amount" id="amount" value="<?php echo $total_venda; ?>">
 
