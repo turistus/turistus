@@ -2,8 +2,8 @@
 <?php
 
 
-$endpoint = 'https://api.pagseguro.com';
-$token = '2ec1526c-6da7-467f-b950-73129b6b5fc4e192b72c44e081c68c58638efbbbd16f318d-49a8-4a82-be6d-77f0366b88d2';
+$endpoint = 'https://api.pagseguro.com/orders';
+$token = '72CA6FA76A6A54D994113FB53D1AFF08';
 $reference_id = "158";
 
 $body =
@@ -50,7 +50,7 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
 curl_setopt($curl, CURLOPT_HTTPHEADER, [
   'Content-Type:application/json',
-  'Authorization: Bearer'.$token
+  'Authorization:'.$token
 ]);
 
 $response = curl_exec($curl);
