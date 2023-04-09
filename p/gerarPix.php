@@ -30,7 +30,7 @@ $body =
   [
     "reference_id" => $reference_id,
     "customer" => [
-      "name" => "Jose da Silva",
+      "name" => $Dados['senderName'],
       "email" => "email@test.com",
       "tax_id" => "12345678909",
       "phones" => [
@@ -58,7 +58,7 @@ $body =
       ]
     ],
     "notification_urls" => [
-      "https://turistus.com.br/notificacaoPagSeguro.php"
+      "https://turistus.com.br/p/pagar.php"
     ]
   ];
 

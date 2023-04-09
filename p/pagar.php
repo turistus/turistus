@@ -44,6 +44,27 @@ include_once '../connection.php';
 
     <div class="container">
 
+            <div class="py-5 text-center">
+
+                <img class="d-block mx-auto mb-4" src="../images/logo/LG.jpg" alt="" width="72" height="72">
+                    <h2>Formulário de Pagamento PIX</h2>
+                    <p class="lead" style="color: grey;">Realizando o pagamento por PIX.</p>
+            </div>
+            <div class="row mb-5">
+                <div class="col-md-8">
+                    <h3><?php echo $nomeEvento; ?></h3>
+                </div>
+
+                <div class="col-md-4">
+                   <p> Valor Total</p>
+                    <div class="mb-1 text-muted"> R$ <?php echo number_format($custoEvento, 2, ",", ".");?></div>
+                    <div class="mb-1 text-muted"> <?php echo $nomeGuia;?></div>
+
+                </div>
+            </div>
+
+
+
             <div class="row">
                 <div class="col-md-8 order-md-1">
 
@@ -78,78 +99,11 @@ include_once '../connection.php';
                             </div>
                         </div>
 
-                        <h4 class="mb-3 creditCard">Endereço do titular do cartão</h4>
-                        <div class="row creditCard">
-                            <div class="col-md-9 mb-3 creditCard">
-                                <label class="creditCard">Logradouro</label>
-                                <input type="text" name="billingAddressStreet" id="billingAddressStreet" placeholder="Av. Rua" value="Av. Brig. Faria Lima" class="creditCard form-control">
-                            </div>
-                            <div class="col-md-3 mb-3 creditCard">
-                                <label class="creditCard">Número</label>
-                                <input type="text" name="billingAddressNumber" id="billingAddressNumber" placeholder="Número" value="1384" class="creditCard form-control">
-                            </div>
-                        </div>
-
-                        <div class="mb-3 creditCard">
-                            <label class="creditCard">Complemento</label>
-                            <input type="text" name="billingAddressComplement" id="billingAddressComplement" placeholder="Complemento" value="5o andar" class="creditCard form-control">
-                        </div>
-
-                        <div class="row creditCard">
-                            <div class="col-md-5 mb-3 creditCard">
-                                <label class="creditCard">Bairro</label>
-                                <input type="text" name="billingAddressDistrict" id="billingAddressDistrict" placeholder="Bairro" value="Jardim Paulistano" class="creditCard form-control">
-                            </div>
-                            <div class="col-md-5 mb-3 creditCard">
-                                <label class="creditCard">Cidade</label>
-                                <input type="text" name="billingAddressCity" id="billingAddressCity" placeholder="Cidade" value="Sao Paulo" class="creditCard form-control">
-                            </div>
-                            <div class="col-md-2 mb-3 creditCard">
-                                <label class="creditCard">Estado</label>
-                                <select name="billingAddressState" class="custom-select d-block w-100 creditCard" id="billingAddressState">
-                                    <option value="">Selecione</option>
-                                    <option value="AC">AC</option>
-                                    <option value="AL">AL</option>
-                                    <option value="AP">AP</option>
-                                    <option value="AM">AM</option>
-                                    <option value="BA">BA</option>
-                                    <option value="CE">CE</option>
-                                    <option value="DF">DF</option>
-                                    <option value="ES">ES</option>
-                                    <option value="GO">GO</option>
-                                    <option value="MA">MA</option>
-                                    <option value="MT">MT</option>
-                                    <option value="MS">MS</option>
-                                    <option value="MG">MG</option>
-                                    <option value="PA">PA</option>
-                                    <option value="PB">PB</option>
-                                    <option value="PR">PR</option>
-                                    <option value="PE">PE</option>
-                                    <option value="PI">PI</option>
-                                    <option value="RJ">RJ</option>
-                                    <option value="RN">RN</option>
-                                    <option value="RS">RS</option>
-                                    <option value="RO">RO</option>
-                                    <option value="RR">RR</option>
-                                    <option value="SC">SC</option>
-                                    <option value="SP">SP</option>
-                                    <option value="SE">SE</option>
-                                    <option value="TO">TO</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="creditCard">CEP</label>
-                            <input type="text" name="billingAddressPostalCode" class="form-control creditCard" id="billingAddressPostalCode" placeholder="CEP sem traço" value="01452002">
-                        </div>
-
-                        <input type="hidden" name="reference" id="reference" value="<?php echo $idEvento; ?>">
-                        <input type="hidden" name="amount" id="amount" value="<?php echo $total_venda; ?>">
+                        <input type="hidden" name="reference" id="reference" value="<?php echo $id; ?>">
+                        <input type="hidden" name="amount" id="amount" value="<?php echo $custoEvento; ?>">
 
                             <!-- BOTAO ENVIAR PagSeguro -->
                         <button type="submit" name="BtnPagSeguro" class="btn btn-primary" value="Enviar">Gerar Pix</button>
-                        <input id="BotaoPagamento" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
 
                     </form>
                 </div>
