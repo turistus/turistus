@@ -83,7 +83,7 @@ if ($error) {
   die();
 }
 
-$Dados = json_decode($response, true);
+$data = json_decode($response, true);
 
 var_dump($data);
 
@@ -129,46 +129,9 @@ if (isset($Dados['BtnPagSeguro'])) {
         if ($add_pay_picpay->rowCount()) {
             $last_insert_id = $conn->lastInsertId();
 
-                    //Preciso ver se funciona igual aqui o CODE
-                        if (isset($data->code) AND $data->code != 200) {
-                            $msg = "<div class='alert alert-danger' role='alert'>Erro: Tente novamente!</div>";
-                        } else {
-                            //Editar a compra informado dados que o PicPay retornou
-                            $query_up_pay_picpay = "UPDATE payments_pagSeg SET payment_url = '" . $data->paymentUrl . "', qrcode = '" . $data->qrcode->base64 . "', modified = NOW() WHERE id = $last_insert_id LIMIT 1";
-                            $up_pay_picpay = $conn->prepare($query_up_pay_picpay);
-                            $up_pay_picpay->execute();
-                            ?>
-                            <!-- Janela modal com o QRCODE -->
-                            <div class="modal fade" id="pagseguro" tabindex="-1" aria-labelledby="pagseguroLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content text-center">
-                                        <div class="modal-header bg-success text-white">
-                                            <h5 class="modal-title" id="pagseguroLabel">Pague com Pix</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <h5 class="modal-title" id="pagseguroLabel">Abra o seu Banco em seu telefone e escaneie o código abaixo:</h5>
-                                            <?php
-                                            echo "<img src='" . $data->qrcode->base64 . "'><br><br>";
-                                            ?>
-                                            <p class="lead">Se tiver algum problema com a leitura do QR code, atualize o aplicativo.</p>
-                                            <p class="lead"><a href="../pg/sobre.php" target="_blank">Saiba quem somos</a></p>
-                                        </div>
-                                        <div class="modal-footer">
+                    header_loca
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php
-                        }
-                    } else {
-                        $msg = "<div class='alert alert-danger' role='alert'>Erro: Tente novamente!</div>";
                     }
-                }
-            }
 ?>
 
 <!DOCTYPE html>
