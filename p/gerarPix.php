@@ -110,28 +110,22 @@ if (isset($Dados['BtnPagSeguro'])) {
         $Dados['due_date'] = date('Y-m-d H:i:s', strtotime($Dados['created'] . '+3days'));
         $due_date = date(DATE_ATOM, strtotime($Dados['due_date']));
 
-
-
         //Salvar os dados da compra no banco de dados
         $query_pay_picpay = "INSERT INTO payments_pagSeg (titulo, dataGerada) VALUES (:titulo, :dataGerada)";
-
         $add_pay_picpay = $conn->prepare($query_pay_picpay);
-
         $add_pay_picpay->bindParam(":titulo", $nomeEvento, PDO::PARAM_STR);
         $add_pay_picpay->bindParam(":dataGerada", $Dados['due_date']);
 
-
         $add_pay_picpay->execute();
-
-
-     // FIM DA INSERT EM PAYMENTS PICPAY
+        // FIM DA INSERT EM PAYMENTS PICPAY
 
         if ($add_pay_picpay->rowCount()) {
             $last_insert_id = $conn->lastInsertId();
 
-                    header_loca
+
 
                     }
+       }
 ?>
 
 <!DOCTYPE html>
