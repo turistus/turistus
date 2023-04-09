@@ -104,7 +104,7 @@ var_dump($data);
   <?php endif; ?>
 
   <?php
-  echo $Dados['0'];
+  echo $Dados;
   ?>
 </body>
 
