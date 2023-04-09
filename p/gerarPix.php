@@ -20,6 +20,8 @@ while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
   }
 
 */
+
+$Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $endpoint = 'https://sandbox.api.pagseguro.com/orders';
 $token = 'AF36513B07544C12B790A1D158E70911';
 $reference_id = '101';
@@ -85,24 +87,6 @@ $data = json_decode($response, true);
 
 var_dump($data);
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QrCode Pix Pagseguro</title>
-</head>
-
-<body>
-  <?php if ($data) : ?>
-    <img src="<?php echo $data['qr_codes'][0]['links'][0]['href'] ?>" alt="">
-  <?php endif; ?>
-</body>
-
-</html>
 
 <!DOCTYPE html>
 <html lang="pt-br">
