@@ -126,6 +126,8 @@ if (isset($Dados['BtnPagSeguro'])) {
 
                     }
        }
+
+        }
 ?>
 
 <!DOCTYPE html>
