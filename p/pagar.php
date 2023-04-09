@@ -71,7 +71,7 @@ session_start();
 
                     <!-- <div class="meio-pag">A</div> -->
                     <span id="msg"></span>
-                    <form name="formPagamento" action="gerarPix.php?id=<?php echo $id; ?>" id="formPagamento">
+                    <form name="formPagamento" action="../p/gerarPix.php?id=<?php echo $id; ?>" id="formPagamento">
                         <span id="msg"></span>
                         <h4 class="mb-3">Dados do Comprador</h4>
                         <div class="mb-3">

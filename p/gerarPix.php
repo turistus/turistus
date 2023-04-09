@@ -1,25 +1,5 @@
 
 <?php
-/**include '../connection.php';
-
-$Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
-$query_car = "SELECT car_prod.valor, car_prod.id,
-        car_prod.nome, car_prod.descricao
-        FROM eventos car_prod WHERE $id
-        ";
-
-$resultado_car = $conn->prepare($query_car);
-$resultado_car->execute();
-
-$cont_item = 1;
-while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
-
-    $total_venda = number_format($row_car['valor'], 2, '.', '');
-
-  }
-
-*/
 
 $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $endpoint = 'https://sandbox.api.pagseguro.com/orders';
@@ -92,7 +72,7 @@ $msg = "";
 
 // Acessar o IF quando o usuário clica no botão
   if (isset($Dados['BtnPagSeguro'])) {
-    //var_dump($data);
+    var_dump($Dados);
     $empty_input = false;
     $Dados = array_map('trim', $Dados);
     if (in_array("", $Dados)) {
