@@ -83,9 +83,9 @@ if ($error) {
   die();
 }
 
-$data = json_decode($response, true);
+$dataR = json_decode($response, true);
 
-var_dump($data);
+//var_dump($data);
 
 // A variável recebe a mensagem de erro
 $msg = "";
@@ -148,8 +148,8 @@ if (isset($Dados['BtnPagSeguro'])) {
 
 
 
-  <?php if ($data) : ?>
-    <img src="<?php echo $data['qr_codes'][0]['links'][0]['href'] ?>" alt="">
+  <?php if ($dataR) : ?>
+    <img src="<?php echo $dataR['qr_codes'][0]['links'][0]['href'] ?>" alt="">
   <?php endif; ?>
 
   <?php
