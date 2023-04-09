@@ -44,6 +44,11 @@ include_once '../connection.php';
 
     <div class="container">
 
+                <?php
+                include_once '../p/buscaDadosPag.php';
+                ?>
+
+
             <div class="py-5 text-center">
 
                 <img class="d-block mx-auto mb-4" src="../images/logo/LG.jpg" alt="" width="72" height="72">
