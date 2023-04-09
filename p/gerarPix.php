@@ -71,7 +71,7 @@ var_dump($data);
 $msg = "";
 $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 // Acessar o IF quando o usuário clica no botão
-  if (!isset($Dados['BtnPagSeguro'])) {
+  if (isset($Dados['BtnPagSeguro'])) {
     //var_dump($Dados);
 
     echo $Dados['senderName'] . "DADOS ARRAY";
