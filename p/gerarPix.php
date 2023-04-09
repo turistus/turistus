@@ -73,7 +73,8 @@ $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 // Acessar o IF quando o usuário clica no botão
   if (isset($Dados['BtnPagSeguro'])) {
     //var_dump($Dados);
-    echo $Dados;
+    echo $Dados . "DADOS";
+    echo $Dados[0] . "DADOS ARRAY";
     $empty_input = false;
     $Dados = array_map('trim', $Dados);
     if (in_array("", $Dados)) {
