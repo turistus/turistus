@@ -24,7 +24,7 @@ while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
 $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $endpoint = 'https://sandbox.api.pagseguro.com/orders';
 $token = 'AF36513B07544C12B790A1D158E70911';
-$reference_id = '$Dados["reference"]';
+$reference_id = $Dados["reference"];
 
 $body =
   [
