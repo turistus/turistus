@@ -1,36 +1,10 @@
-<?php
 
-include '../connection.php';
-
-$idEvento = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-$query_car = "SELECT *,
-svcs.id AS GuiaID,
-svcs.nome AS nomeGuia,
-eventos.id AS id,
-eventos.nome AS nomeEvento,
-eventos.valor AS custoEvento
-
-FROM eventos
-
-INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
-WHERE eventos.id =:id LIMIT 1 ";
-
-$resultado_car = $conn->prepare($query_car);
-$result_products->bindParam(':id', $idEvento, PDO::PARAM_INT);
-$resultado_car->execute();
-
-while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
-
-    $total_venda = number_format($row_car['custoEvento'], 2, '.', '');
-
-  }
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
         <title>PIX - PagSeguro</title>
     </head>
     <body>
@@ -87,8 +61,6 @@ while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
                             <label class="creditCard">Complemento</label>
                             <input type="text" name="billingAddressComplement" id="billingAddressComplement" placeholder="Complemento" value="5o andar" class="creditCard form-control">
                         </div>
-
-
 
                         <div class="row creditCard">
                             <div class="col-md-5 mb-3 creditCard">
@@ -155,11 +127,8 @@ while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
         <?php
         include_once '../rodape.php';
         ?>
-
-
-
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
     </body>
 </html>
