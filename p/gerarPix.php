@@ -194,9 +194,9 @@ if (isset($Dados['BtnPagSeguro'])) {
   <?php endif; ?>
 
   <?php
-  echo "EXIBIR OS DADOS".$Dados;
+  echo $Dados. "EXIBIR OS DADOS";
 
-  var_dump($Dados);
+
   ?>
 </body>
 
