@@ -65,7 +65,7 @@ if ($error) {
 
 $data = json_decode($response, true);
 
-//var_dump($data);
+var_dump($data);
 
 // A variável recebe a mensagem de erro
 $msg = "";
@@ -152,7 +152,7 @@ if (isset($data->code) AND $data->code != 200) {
               <div class="modal-body">
                   <h5 class="modal-title" id="pagseguroLabel">Abra o seu Banco em seu telefone e escaneie o código abaixo:</h5>
                   <?php
-                  echo "<img src='" . $data->qrcode->base64 . "'><br><br>";
+                  echo $data['qr_codes'][0]['links'][0]['href']."<br><br>";
                   ?>
                   <p class="lead">Se tiver algum problema com a leitura do QR code, atualize o aplicativo.</p>
                   <p class="lead"><a href="../pg/sobre.php" target="_blank">Saiba quem somos</a></p>
@@ -171,7 +171,7 @@ if (isset($data->code) AND $data->code != 200) {
   ?>
 </body>
 <?php
-        if (isset($data_result->paymentUrl)) {
+        if (isset($data->paymentUrl)) {
             ?>
             <script>
                 $(document).ready(function () {

@@ -3,6 +3,7 @@ define('ACCESS', true);
 ob_start();
 //ID do EVENTOOO
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+$emailSessaoAberta = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
 echo "ID DO EVENTO".$id;
 include_once '../connection.php';
 session_start();
