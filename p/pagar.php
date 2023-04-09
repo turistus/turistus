@@ -20,7 +20,7 @@ INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
 WHERE eventos.id =:id LIMIT 1 ";
 
 $resultado_car = $conn->prepare($query_car);
-$result_products->bindParam(':id', $id, PDO::PARAM_INT);
+$result_products->bindParam(':id', $idEvento, PDO::PARAM_INT);
 $resultado_car->execute();
 
 while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {

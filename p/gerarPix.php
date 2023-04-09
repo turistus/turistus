@@ -102,6 +102,10 @@ var_dump($data);
   <?php if ($data) : ?>
     <img src="<?php echo $data['qr_codes'][0]['links'][0]['href'] ?>" alt="">
   <?php endif; ?>
+
+  <?php
+  echo $Dados['0'];
+  ?>
 </body>
 
 </html>
