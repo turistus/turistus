@@ -74,7 +74,7 @@ $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
   if (isset($Dados['BtnPagSeguro'])) {
     //var_dump($Dados);
 
-    echo $Dados['senderName'] . "DADOS ARRAY";
+
     $empty_input = false;
     $Dados = array_map('trim', $Dados);
     if (in_array("", $Dados)) {
@@ -87,6 +87,9 @@ $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
     // Acessa o IF quando não há nenhum erro no formulário
     if (!$empty_input) {
+
+      echo $Dados['senderName'] . "DADOS ARRAY";
+
         //Data para salvar no BD e enviar para o PicPay
         $Dados['created'] = date('Y-m-d H:i:s');
         $Dados['due_date'] = date('Y-m-d H:i:s', strtotime($Dados['created'] . '+3days'));

@@ -51,7 +51,7 @@ include_once './configPicPay.php';
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
         <link rel="shortcut icon" href="./images/icon/logo.ico" >
-        <title>Desconecta - formulario de chekout</title>
+        <title>Turist Us - Formulario de Pagamento</title>
     </head>
     <body>
 
