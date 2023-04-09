@@ -3,6 +3,33 @@ define('ACCESS', true);
 ob_start();
 //ID do EVENTOOO
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+echo "ID DO EVENTO".$id;
+include_once '../connection.php';
+
+?>
+                <?php
+                // AQUI DEVE CHAMAR id,guia,valor do EVENTO.
+                $query_products = "SELECT *,
+                svcs.id AS GuiaID,
+                svcs.nome AS nomeGuia,
+                eventos.id AS id,
+                eventos.nome AS nomeEvento,
+                eventos.valor AS custoEvento
+
+                FROM eventos
+
+                INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
+                WHERE eventos.id =:id LIMIT 1 ";
+
+                $result_products = $conn->prepare($query_products);
+                $result_products->bindParam(':id', $id, PDO::PARAM_INT);
+                $result_products->execute();
+                if ($result_products->rowCount() == 0) {
+                    header("Location: eventos.php");
+                    die("Erro: página encontrada!<br>");
+                }
+                $row_product = $result_products->fetch(PDO::FETCH_ASSOC);
+                extract($row_product);
 
 ?>
 <!DOCTYPE html>
