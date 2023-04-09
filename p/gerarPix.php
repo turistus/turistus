@@ -2,8 +2,8 @@
 <?php
 
 
-$endpoint = 'https://sandbox.api.pagseguro.com/orders';
-$token = 'AF36513B07544C12B790A1D158E70911';
+$endpoint = 'https://api.pagseguro.com/orders';
+$token = '2ec1526c-6da7-467f-b950-73129b6b5fc4e192b72c44e081c68c58638efbbbd16f318d-49a8-4a82-be6d-77f0366b88d2';
 $reference_id = "158";
 
 $body =
