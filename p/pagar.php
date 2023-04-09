@@ -1,4 +1,10 @@
+<?php
+define('ACCESS', true);
+ob_start();
+//ID do EVENTOOO
+$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
