@@ -30,7 +30,7 @@ $body =
   [
     "reference_id" => $reference_id,
     "customer" => [
-      "name" => $Dados['senderName'],
+      "name" => "ALBERTO Compra",
       "email" => "email@test.com",
       "tax_id" => "12345678909",
       "phones" => [
@@ -99,6 +99,13 @@ var_dump($data);
 </head>
 
 <body>
+
+
+
+
+
+
+
   <?php if ($data) : ?>
     <img src="<?php echo $data['qr_codes'][0]['links'][0]['href'] ?>" alt="">
   <?php endif; ?>

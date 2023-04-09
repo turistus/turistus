@@ -75,7 +75,7 @@ include_once '../connection.php';
                         <h4 class="mb-3">Dados do Comprador</h4>
                         <div class="mb-3">
                             <label>Nome</label>
-                            <input type="text" name="senderName" id="senderName" placeholder="Nome completo" value="Jose Comprador" class="form-control" required>
+                            <input type="text" name="senderName" id="senderName" placeholder="Nome completo" value="Jose Compradorss" class="form-control" required>
                         </div>
 
                         <div class="mb-3">
