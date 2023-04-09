@@ -5,6 +5,7 @@ ob_start();
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 echo "ID DO EVENTO".$id;
 include_once '../connection.php';
+session_start();
 
 ?>
                 <?php
@@ -43,11 +44,6 @@ include_once '../connection.php';
     <body>
 
     <div class="container">
-
-                <?php
-                include_once '../p/buscaDadosPag.php';
-                ?>
-
 
             <div class="py-5 text-center">
 

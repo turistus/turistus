@@ -24,7 +24,7 @@ while ($row_car = $resultado_car->fetch(PDO::FETCH_ASSOC)) {
 $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $endpoint = 'https://sandbox.api.pagseguro.com/orders';
 $token = 'AF36513B07544C12B790A1D158E70911';
-$reference_id = '101';
+$reference_id = '$Dados["reference"]';
 
 $body =
   [
@@ -83,7 +83,7 @@ if ($error) {
   die();
 }
 
-$dataR = json_decode($response, true);
+$data = json_decode($response, true);
 
 //var_dump($data);
 
@@ -91,7 +91,7 @@ $dataR = json_decode($response, true);
 $msg = "";
 
 // Acessar o IF quando o usuário clica no botão
-if (isset($Dados['BtnPagSeguro'])) {
+  if (isset($Dados['BtnPagSeguro'])) {
     //var_dump($data);
     $empty_input = false;
     $Dados = array_map('trim', $Dados);
@@ -121,13 +121,10 @@ if (isset($Dados['BtnPagSeguro'])) {
 
         if ($add_pay_picpay->rowCount()) {
             $last_insert_id = $conn->lastInsertId();
-
-
-
-                    }
-       }
-
-        }
+          $msg = "SUCESSO !!!!!";
+            }
+    }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -148,15 +145,61 @@ if (isset($Dados['BtnPagSeguro'])) {
 
 
 
-  <?php if ($dataR) : ?>
-    <img src="<?php echo $dataR['qr_codes'][0]['links'][0]['href'] ?>" alt="">
+  <?php if ($data) : ?>
+    <img src="<?php echo $data['qr_codes'][0]['links'][0]['href'] ?>" alt="">
   <?php endif; ?>
 
   <?php
-  echo $Dados. "EXIBIR OS DADOS";
+//Preciso ver se funciona igual aqui o CODE
+if (isset($data->code) AND $data->code != 200) {
+  $msg = "<div class='alert alert-danger' role='alert'>Erro: Tente novamente!</div>";
+} else {
+  //Editar a compra informado dados que o PicPay retornou
+  $query_up_pay_picpay = "UPDATE payments_pagSeg SET payment_url = '" . $data->paymentUrl . "', qrcode = '" . $data->qrcode->base64 . "', modified = NOW() WHERE id = $last_insert_id LIMIT 1";
+  $up_pay_picpay = $conn->prepare($query_up_pay_picpay);
+  $up_pay_picpay->execute();
+  ?>
+  <!-- Janela modal com o QRCODE -->
+  <div class="modal fade" id="pagseguro" tabindex="-1" aria-labelledby="pagseguroLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content text-center">
+              <div class="modal-header bg-success text-white">
+                  <h5 class="modal-title" id="pagseguroLabel">Pague com Pix</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <h5 class="modal-title" id="pagseguroLabel">Abra o seu Banco em seu telefone e escaneie o código abaixo:</h5>
+                  <?php
+                  echo "<img src='" . $data->qrcode->base64 . "'><br><br>";
+                  ?>
+                  <p class="lead">Se tiver algum problema com a leitura do QR code, atualize o aplicativo.</p>
+                  <p class="lead"><a href="../pg/sobre.php" target="_blank">Saiba quem somos</a></p>
+              </div>
+              <div class="modal-footer">
+
+              </div>
+          </div>
+      </div>
+  </div>
+  <?php
+}
+  echo $msg;
 
 
   ?>
 </body>
+<?php
+        if (isset($data_result->paymentUrl)) {
+            ?>
+            <script>
+                $(document).ready(function () {
+                    $('#pagSeg').modal('show');
+                });
+            </script>
+            <?php
+        }
+        ?>
 
 </html>
