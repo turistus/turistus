@@ -3,7 +3,7 @@
 
       background-image: url('./images/fundofooter.jpg');
       background-size: contain;
-      background:background-origin ;
+      background:background-origin,no-repeat ;
       background-attachment: fixed;
       padding-top: 20px;">
   <div class="container">
