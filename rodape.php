@@ -1,7 +1,7 @@
 
 <footer style="position: top center;
 
-      background-image: url('./images/fundofooter.jpg') no-repeat;
+      background-image: url('./images/frodape.jpg') no-repeat;
       background-size: absolute;
       background:background-origin;
 
