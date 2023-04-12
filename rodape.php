@@ -1,6 +1,6 @@
 
 <footer style="position: absolute;
-                       left: 10px; right: 10px;
+                       left: auto; right: auto;
       background-image: url('./images/fundofooter.jpg');
       background-size: contain;
       padding-top: 20px;">
