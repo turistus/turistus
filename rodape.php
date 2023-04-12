@@ -8,7 +8,7 @@
       padding-top: 20px;">
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3 col-sm-2">
         <h5>Contato</h5>
         <p style="font-size: 12px;">Endereço: Rua das Flores, 123</p>
         <p style="font-size: 12px;">Telefone: (11) 5555-5555</p>
@@ -19,7 +19,7 @@
           <a href="#" class="fa fa-instagram"></a>
         </div>
       </div>
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-3 col-sm-2">
         <h5>Navegação</h5>
         <ul class="list-unstyled">
           <li><a href="#">Eventos de viagem</a></li>
