@@ -301,10 +301,7 @@ ob_start();
       </div>
     </div>
     <!-- FINAL ONDE BUSCA OS PONTOS TURISTICOS -->
-
-
-  </main><!-- /.container -->
-  <footer style="position: absolute;
+    <footer style="position: absolute;
                       top: -50px; left: -50px; right: -50px; bottom: -50px;
       background-image: url('./images/fundofooter.jpg');
       background-size: cover;">
@@ -370,11 +367,14 @@ ob_start();
     </div>
   </div>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</footer>
+
+  </main><!-- /.container -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-</footer>
 
 </body>
 
