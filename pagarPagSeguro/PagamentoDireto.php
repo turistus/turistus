@@ -40,6 +40,8 @@ curl_close($Curl);
 $Xml=simplexml_load_string($Retorno);
 echo $Xml->code;
 
+var_dump($Xml);
+
 
 
 ?>
