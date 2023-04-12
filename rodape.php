@@ -3,7 +3,8 @@
 
       background-image: url('./images/fundofooter.jpg');
       background-size: absolute;
-      background:background-origin no-repeat ;
+      background:background-origin;
+      background: no-repeat ;
       background-attachment: fixed;
       padding-top: 20px;">
   <div class="container">
@@ -53,12 +54,12 @@
     <hr>
     <div class="row">
 
-      <div class="col-md-12 col-sm-10">
+      <div class="col-md-12 col-sm-12">
         <ul class="list-inline text-right">
-          <li><a href="#">Termos de uso</a></li>
-          <li><a href="#">Política de privacidade</a></li>
-          <li><a href="#">Selo de segurança</a></li>
-          <li><a href="cadastros/cadastrarEmpresa.php" class="nav-link px-2 link-dark"><ion-icon name="bed-outline"></ion-icon></a></li>
+          <li list-inline-item ><a href="#">Termos de uso</a></li>
+          <li list-inline-item ><a href="#">Política de privacidade</a></li>
+          <li list-inline-item ><a href="#">Selo de segurança</a></li>
+          <li list-inline-item ><a href="cadastros/cadastrarEmpresa.php" class="nav-link px-2 link-dark"><ion-icon name="bed-outline"></ion-icon></a></li>
         </ul>
       </div>
       <div class="col-md-9">
