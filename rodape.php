@@ -3,7 +3,6 @@
 
       background-image: url('./images/frodape.jpg') no-repeat;
       background-size: absolute;
-      background:background-origin;
 
       background-attachment: fixed;
       padding-top: 20px;">
