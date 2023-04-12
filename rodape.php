@@ -5,15 +5,16 @@
       background-size: absolute;
 
       background-attachment: fixed;
-      padding-top: 20px;">
+      padding-top: 20px;
+      margin-top: 40px;">
   <div class="container">
-    <div class="row">
+    <div class="row"  style="color:azure;" >
 
       <div class="col-md-3 col-sm-6 col-xs-6">
         <h5>Contato</h5>
-        <p style="font-size: 12px;">Endereço: Rua das Flores, 123</p>
-        <p style="font-size: 12px;">Telefone: (11) 5555-5555</p>
-        <p style="font-size: 12px;">E-mail: contato@turistus.com.br</p>
+        <p style="font-size: 15px;">Endereço: Rua das Flores, 123</p>
+        <p style="font-size: 15px;">Telefone: (11) 5555-5555</p>
+        <p style="font-size: 15px;">E-mail: contato@turistus.com.br</p>
         <div class="social-icons">
           <a href="#" class="fa fa-facebook"></a>
           <a href="#" class="fa fa-twitter"></a>
@@ -23,19 +24,19 @@
       <div class="col-md-3 col-sm-6 col-xs-6">
         <h5>Navegação</h5>
         <ul class="list-unstyled">
-          <li><a href="#">Eventos de viagem</a></li>
-          <li><a href="#">Destinos</a></li>
-          <li><a href="#">Mapa</a></li>
-          <li><a href="#">Sobre nós</a></li>
-          <li><a href="#">Contato</a></li>
+          <li style="font-size: 15px;" ><a href="#">Eventos de viagem</a></li>
+          <li style="font-size: 15px;" ><a href="#">Destinos</a></li>
+          <li style="font-size: 15px;" ><a href="#">Mapa</a></li>
+          <li style="font-size: 15px;" ><a href="#">Sobre nós</a></li>
+          <li style="font-size: 15px;" ><a href="#">Contato</a></li>
         </ul>
       </div>
       <div class="col-md-3 col-sm-3">
         <h5>Dúvidas</h5>
         <ul class="list-inline">
-          <li class="list-item"><a href="#">Como Criar Sua Conta ?</a></li>
-          <li class="list-item"><a href="#">Como Abrir um Evento ?</a></li>
-          <li class="list-item"><a href="#">Posso recebo no mesmo dia ?</a></li>
+          <li style="font-size: 15px;"  class="list-item"><a href="#">Como Criar Sua Conta ?</a></li>
+          <li style="font-size: 15px;"  class="list-item"><a href="#">Como Abrir um Evento ?</a></li>
+          <li style="font-size: 15px;"  class="list-item"><a href="#">Posso recebo no mesmo dia ?</a></li>
 
         </ul>
       </div>
@@ -67,6 +68,10 @@
     </div>
 
   </div>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 
 </footer>
 
