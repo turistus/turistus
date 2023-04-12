@@ -8,7 +8,7 @@
       padding-top: 20px;">
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-3">
         <h5>Contato</h5>
         <p style="font-size: 12px;">Endereço: Rua das Flores, 123</p>
         <p style="font-size: 12px;">Telefone: (11) 5555-5555</p>
@@ -19,7 +19,7 @@
           <a href="#" class="fa fa-instagram"></a>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-3">
         <h5>Navegação</h5>
         <ul class="list-unstyled">
           <li><a href="#">Eventos de viagem</a></li>
@@ -29,7 +29,7 @@
           <li><a href="#">Contato</a></li>
         </ul>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-3">
         <h5>Dúvidas</h5>
         <ul class="list-inline">
           <li class="list-item"><a href="#">Como Criar Sua Conta ?</a></li>
@@ -38,7 +38,7 @@
 
         </ul>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-3">
         <h5>Newsletter</h5>
         <p>Inscreva-se em nossa newsletter para receber as últimas notícias e promoções.</p>
         <form action="#">
@@ -54,7 +54,7 @@
       <div class="col-md-9">
       <p class="mb-1">&copy; 2020-2023 <a href="index.php">Turist Us Turismo - Todos os direitos reservados.</a></p>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-3">
         <ul class="list-inline text-right">
           <li><a href="#">Termos de uso</a></li>
           <li><a href="#">Política de privacidade</a></li>
