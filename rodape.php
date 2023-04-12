@@ -1,5 +1,13 @@
 
 
+<footer class="my-5 pt-5 text-muted text-center text-small">
+
+
+      </footer>
+
+
+
+
 <footer style="position: absolute;
                        left: -50px; right: -50px;
       background-image: url('./images/fundofooter.jpg');
@@ -28,17 +36,13 @@
         </ul>
       </div>
       <div class="col-md-3">
-        <h3>Idioma e Moeda</h3>
-        <select class="form-control">
-          <option value="pt-br">Português</option>
-          <option value="en">English</option>
-          <option value="es">Español</option>
-        </select>
-        <select class="form-control">
-          <option value="BRL">Real (R$)</option>
-          <option value="USD">Dólar ($)</option>
-          <option value="EUR">Euro (€)</option>
-        </select>
+        <h3>Dúvidas</h3>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="Política de Privacidade TuristUs.pdf">Privacidade</a></li>
+          <li class="list-inline-item"><a href="TERMOS de USO.pdf">Termos</a></li>
+          <li class="list-inline-item"><a href="./adm/loguin.php">Suporte</a></li>
+          <li><a href="cadastros/cadastrarEmpresa.php" class="nav-link px-2 link-dark"><ion-icon name="bed-outline"></ion-icon></a></li>
+        </ul>
       </div>
       <div class="col-md-3">
         <h3>Newsletter</h3>
@@ -64,6 +68,7 @@
         </ul>
       </div>
     </div>
+    <p class="mb-1">&copy; 2020-2023 <a href="index.php">Turist Us Turismo</a></p>
   </div>
 
 </footer>
