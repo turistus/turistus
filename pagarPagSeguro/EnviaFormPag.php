@@ -18,7 +18,7 @@
     </form>
 
     <script src="Libraries/zepto.min.js"></script>
-    <script src="Libraries/chamaPagDireto.min.js"></script>
+    <script src="Libraries/chamaPagDireto.js"></script>
 
 </body>
 </html>
