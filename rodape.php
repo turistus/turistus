@@ -2,18 +2,17 @@
 <footer style="position: top center;
 
       background-image: url('./images/fundofooter.jpg');
-      background-size: contain;
+      background-size: absolute;
       background:background-origin no-repeat ;
       background-attachment: fixed;
-      padding-top: 20px;
-      p { font-size: 12px};">
+      padding-top: 20px;">
   <div class="container">
     <div class="row">
       <div class="col-md-3">
         <h5>Contato</h5>
         <p style="font-size: 12px;">Endereço: Rua das Flores, 123</p>
-        <p>Telefone: (11) 5555-5555</p>
-        <p>E-mail: contato@turistus.com.br</p>
+        <p style="font-size: 12px;">Telefone: (11) 5555-5555</p>
+        <p style="font-size: 12px;">E-mail: contato@turistus.com.br</p>
         <div class="social-icons">
           <a href="#" class="fa fa-facebook"></a>
           <a href="#" class="fa fa-twitter"></a>
