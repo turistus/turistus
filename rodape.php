@@ -30,7 +30,7 @@
         <ul class="list-unstyled">
           <li><a href="#">Eventos de viagem</a></li>
           <li><a href="#">Destinos</a></li>
-          <li><a href="#">Promoções</a></li>
+          <li><a href="#">Mapa</a></li>
           <li><a href="#">Sobre nós</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
@@ -38,10 +38,10 @@
       <div class="col-md-3">
         <h3>Dúvidas</h3>
         <ul class="list-inline">
-          <li class="list-inline-item"><a href="Política de Privacidade TuristUs.pdf">Privacidade</a></li>
-          <li class="list-inline-item"><a href="TERMOS de USO.pdf">Termos</a></li>
-          <li class="list-inline-item"><a href="./adm/loguin.php">Suporte</a></li>
-          <li><a href="cadastros/cadastrarEmpresa.php" class="nav-link px-2 link-dark"><ion-icon name="bed-outline"></ion-icon></a></li>
+          <li class="list-item"><a href="#">Como Criar Sua Conta ?</a></li>
+          <li class="list-item"><a href="#">Como Abrir um Evento ?</a></li>
+          <li class="list-item"><a href="#">Posso recebo no mesmo dia ?</a></li>
+
         </ul>
       </div>
       <div class="col-md-3">
@@ -58,17 +58,18 @@
     <hr>
     <div class="row">
       <div class="col-md-6">
-        <p>&copy; 2023 Turistus. Todos os direitos reservados.</p>
+      <p class="mb-1">&copy; 2020-2023 <a href="index.php">Turist Us Turismo - Todos os direitos reservados.</a></p>
       </div>
       <div class="col-md-6">
         <ul class="list-inline text-right">
           <li><a href="#">Termos de uso</a></li>
           <li><a href="#">Política de privacidade</a></li>
           <li><a href="#">Selo de segurança</a></li>
+          <li><a href="cadastros/cadastrarEmpresa.php" class="nav-link px-2 link-dark"><ion-icon name="bed-outline"></ion-icon></a></li>
         </ul>
       </div>
     </div>
-    <p class="mb-1">&copy; 2020-2023 <a href="index.php">Turist Us Turismo</a></p>
+
   </div>
 
 </footer>
