@@ -302,7 +302,7 @@ ob_start();
     </div>
     <!-- FINAL ONDE BUSCA OS PONTOS TURISTICOS -->
     <footer style="position: absolute;
-                      top: -50px; left: -50px; right: -50px; bottom: -50px;
+
       background-image: url('./images/fundofooter.jpg');
       background-size: cover;">
   <div class="container">
