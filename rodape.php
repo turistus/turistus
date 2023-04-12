@@ -1,8 +1,10 @@
 
-<footer style="position: absolute;
-                       left: auto; right: auto;
+<footer style="position: top center;
+
       background-image: url('./images/fundofooter.jpg');
       background-size: contain;
+      background:background-origin ;
+      background-attachment: fixed;
       padding-top: 20px;">
   <div class="container">
     <div class="row">
