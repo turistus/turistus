@@ -1,7 +1,7 @@
 
 <footer style="position: top center;
 
-      background-image: url('./images/frodape.jpg') no-repeat;
+      background-color: #363636;
       background-size: absolute;
 
       background-attachment: fixed;
@@ -16,9 +16,9 @@
         <p style="font-size: 15px;">Telefone: (11) 5555-5555</p>
         <p style="font-size: 15px;">E-mail: contato@turistus.com.br</p>
         <div class="social-icons">
-          <a href="#" class="fa fa-facebook"></a>
-          <a href="#" class="fa fa-twitter"></a>
-          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fas fa-facebook"></a>
+          <a href="#" class="fas fa-twitter"></a>
+          <a href="#" class="fas fa-instagram"></a>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6">
