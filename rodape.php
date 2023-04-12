@@ -1,7 +1,7 @@
 
 
 <footer style="position: absolute;
-                       left: -50px; right: -50px; bottom: -50px;
+                       left: -50px; right: -50px;
       background-image: url('./images/fundofooter.jpg');
       background-size: cover;">
   <div class="container">
