@@ -53,7 +53,7 @@
     <hr>
     <div class="row">
 
-      <div class="col-md-3 col-sm-3">
+      <div class="col-md-12 col-sm-10">
         <ul class="list-inline text-right">
           <li><a href="#">Termos de uso</a></li>
           <li><a href="#">Política de privacidade</a></li>
