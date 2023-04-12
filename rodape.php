@@ -1,10 +1,10 @@
 
 <footer style="position: top center;
 
-      background-image: url('./images/fundofooter.jpg');
+      background-image: url('./images/fundofooter.jpg') no-repeat;
       background-size: absolute;
       background:background-origin;
-      background: no-repeat ;
+
       background-attachment: fixed;
       padding-top: 20px;">
   <div class="container">
