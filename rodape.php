@@ -1,15 +1,6 @@
 
-
-<footer class="my-5 pt-5 text-muted text-center text-small">
-
-
-      </footer>
-
-
-
-
 <footer style="position: absolute;
-                       left: -50px; right: -50px;
+                       left: 10px; right: 10px;
       background-image: url('./images/fundofooter.jpg');
       background-size: cover;">
   <div class="container">
@@ -57,10 +48,10 @@
     </div>
     <hr>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-9">
       <p class="mb-1">&copy; 2020-2023 <a href="index.php">Turist Us Turismo - Todos os direitos reservados.</a></p>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-3">
         <ul class="list-inline text-right">
           <li><a href="#">Termos de uso</a></li>
           <li><a href="#">Política de privacidade</a></li>
