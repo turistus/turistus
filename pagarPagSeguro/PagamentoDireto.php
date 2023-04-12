@@ -1,9 +1,9 @@
 <?php
-//include '../pagarPagSeguro/credenciais.php';
+include '../pagarPagSeguro/credenciais.php';
 
 
-$Data["email"]="desconectaprincipal@hotmail.com";
-$Data["token"]="AF36513B07544C12B790A1D158E70911";
+$Data["email"]=EMAIL_PAGSEGURO;
+$Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
 $Data["itemId1"]="1";
 $Data["itemDescription1"]="WebsiteTURISMOOO";
@@ -39,9 +39,6 @@ curl_close($Curl);
 
 $Xml=simplexml_load_string($Retorno);
 echo $Xml->code;
-
-var_dump($Xml);
-
 
 
 ?>
