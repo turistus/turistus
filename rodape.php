@@ -5,12 +5,13 @@
       background-size: contain;
       background:background-origin no-repeat ;
       background-attachment: fixed;
-      padding-top: 20px;">
+      padding-top: 20px;
+      p { font-size: 12px};">
   <div class="container">
     <div class="row">
       <div class="col-md-3">
-        <h3>Contato</h3>
-        <p>Endereço: Rua das Flores, 123</p>
+        <h5>Contato</h5>
+        <p style="font-size: 12px;">Endereço: Rua das Flores, 123</p>
         <p>Telefone: (11) 5555-5555</p>
         <p>E-mail: contato@turistus.com.br</p>
         <div class="social-icons">
@@ -20,7 +21,7 @@
         </div>
       </div>
       <div class="col-md-3">
-        <h3>Navegação</h3>
+        <h5>Navegação</h5>
         <ul class="list-unstyled">
           <li><a href="#">Eventos de viagem</a></li>
           <li><a href="#">Destinos</a></li>
@@ -30,7 +31,7 @@
         </ul>
       </div>
       <div class="col-md-3">
-        <h3>Dúvidas</h3>
+        <h5>Dúvidas</h5>
         <ul class="list-inline">
           <li class="list-item"><a href="#">Como Criar Sua Conta ?</a></li>
           <li class="list-item"><a href="#">Como Abrir um Evento ?</a></li>
@@ -39,7 +40,7 @@
         </ul>
       </div>
       <div class="col-md-3">
-        <h3>Newsletter</h3>
+        <h5>Newsletter</h5>
         <p>Inscreva-se em nossa newsletter para receber as últimas notícias e promoções.</p>
         <form action="#">
           <div class="form-group">
