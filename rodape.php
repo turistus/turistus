@@ -52,9 +52,7 @@
     </div>
     <hr>
     <div class="row">
-      <div class="col-md-9">
-      <p class="mb-1">&copy; 2020-2023 <a href="index.php">Turist Us Turismo - Todos os direitos reservados.</a></p>
-      </div>
+
       <div class="col-md-3 col-sm-3">
         <ul class="list-inline text-right">
           <li><a href="#">Termos de uso</a></li>
@@ -62,6 +60,9 @@
           <li><a href="#">Selo de segurança</a></li>
           <li><a href="cadastros/cadastrarEmpresa.php" class="nav-link px-2 link-dark"><ion-icon name="bed-outline"></ion-icon></a></li>
         </ul>
+      </div>
+      <div class="col-md-9">
+      <p class="mb-1">&copy; 2020-2023 <a href="index.php">Turist Us Turismo - Todos os direitos reservados.</a></p>
       </div>
     </div>
 
