@@ -2,7 +2,8 @@
 <footer style="position: absolute;
                        left: 10px; right: 10px;
       background-image: url('./images/fundofooter.jpg');
-      background-size: cover;">
+      background-size: cover;
+      padding-top: 20px;">
   <div class="container">
     <div class="row">
       <div class="col-md-3">
