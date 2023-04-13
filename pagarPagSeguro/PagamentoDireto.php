@@ -7,7 +7,7 @@ include '../pagarPagSeguro/credenciais.php';
 $Data["email"]=EMAIL_PAGSEGURO;
 $Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
-$Data["itemId1"]=$id;
+$Data["itemId1"]="101";
 $Data["itemDescription1"]="Website TURISMOOO";
 $Data["itemAmount1"]=$valor_rise;
 $Data["itemQuantity1"]="1";
