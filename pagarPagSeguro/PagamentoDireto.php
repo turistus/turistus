@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 include '../pagarPagSeguro/credenciais.php';
 
 $Data["email"]=EMAIL_PAGSEGURO;
