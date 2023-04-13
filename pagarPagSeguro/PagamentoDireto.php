@@ -1,8 +1,9 @@
 <?php
 
+include '../pagarPagSeguro/credenciais.php';
 
-$Data["email"]="desconectaprincipal@hotmail.com";
-$Data["token"]="AF36513B07544C12B790A1D158E70911";
+$Data["email"]=EMAIL_PAGSEGURO;
+$Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
 $Data["itemId1"]=$id;
 $Data["itemDescription1"]="Website TURISMOOO";
