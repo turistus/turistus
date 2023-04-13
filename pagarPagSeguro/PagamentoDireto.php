@@ -1,29 +1,22 @@
 <?php
+session_start();
 include '../pagarPagSeguro/credenciais.php';
-
+$idEvento = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
 $Data["email"]=EMAIL_PAGSEGURO;
 $Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
-$Data["itemId1"]="1";
+$Data["itemId1"]=$idEvento;
 $Data["itemDescription1"]="WebsiteTURISMOOO";
-$Data["itemAmount1"]="1000.00";
+$Data["itemAmount1"]=$valor_rise;
 $Data["itemQuantity1"]="1";
 $Data["itemWeight1"]="1000";
-$Data["reference"]="83783";
+$Data["reference"]="0009";
 $Data["senderName"]="João da Silva";
 $Data["senderAreaCode"]="37";
 $Data["senderPhone"]="99999999";
-$Data["senderEmail"]="clienteturista@email.com";
-$Data["shippingType"]="1";
-$Data["shippingAddressStreet"]="Rua Antonieta";
-$Data["shippingAddressNumber"]="10";
-$Data["shippingAddressComplement"]="Casa";
-$Data["shippingAddressDistrict"]="Jardim Paulistano";
-$Data["shippingAddressPostalCode"]="30690090";
-$Data["shippingAddressCity"]="Belo Horizonte";
-$Data["shippingAddressState"]="MG";
-$Data["shippingAddressCountry"]="BRA";
+$Data["senderEmail"]=$emailSessaoAberta;
+
 
 $BuildQuery=http_build_query($Data);
 $Url="https://ws.sandbox.pagseguro.uol.com.br/v2/checkout";

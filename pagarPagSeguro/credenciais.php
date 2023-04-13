@@ -2,7 +2,8 @@
 
 //Necessário testar em dominio com SSL
 define("URL", "https://turistus.com.br");
-define("EMAIL_PAGSEGURO", "desconectaprincipal@hotmail.com");
+
+    define("EMAIL_PAGSEGURO", "desconectaprincipal@hotmail.com");
     define("TOKEN_PAGSEGURO", "AF36513B07544C12B790A1D158E70911");
 
 $sandbox = true;
