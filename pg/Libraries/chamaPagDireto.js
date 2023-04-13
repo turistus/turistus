@@ -1,6 +1,6 @@
 var Root = "https://"+document.location.hostname+"/";
 
-console.log(Root);
+
 $('#BotaoPagamento').on('click',function(event){
     event.preventDefault();
 
@@ -9,7 +9,7 @@ $('#BotaoPagamento').on('click',function(event){
         type: 'POST',
         dataType:'html',
         success:function(data){
-            $('#code').val(data);
+            $('#code').val(Root);
             $('#FormPagamento').submit();
         }
     });
