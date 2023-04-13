@@ -1,7 +1,7 @@
 var Root = "https://"+document.location.hostname+"/";
 
 
-$('#BotaoPagamento').on('click',function(event){
+$('#BotaoPagar').on('click',function(event){
     event.preventDefault();
 
     $.ajax({
