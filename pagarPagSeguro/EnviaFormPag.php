@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <form name="FormPagamento" id="FormPagamento" action="https://sandbox.pagseguro.uol.com.br/v2/checkout/cart.html" method="GET">
+    <form name="FormPagamento" id="FormPagamento" action="https://sandbox.pagseguro.uol.com.br/checkout/v2/cart.html" method="GET">
         <!-- N�?O EDITE OS COMANDOS DAS LINHAS ABAIXO -->
         <input type="text" name="code" id="code" value="" />
         <input type="hidden" name="iot" value="button" />
