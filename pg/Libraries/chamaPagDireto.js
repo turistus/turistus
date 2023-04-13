@@ -1,5 +1,5 @@
-var Root = "https://"+document.location.hostname+"/";
 
+var Root = "https://"+document.location.hostname+"/";
 
 $('#BotaoPagamento').on('click',function(event){
     event.preventDefault();
