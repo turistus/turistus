@@ -10,15 +10,15 @@
 </head>
 <body>
 
-    <form name="FormPagamento" id="FormPagamento" action="https://sandbox.pagseguro.uol.com.br/checkout/v2/cart.html" method="GET">
+    <form name="FormPagamento" id="FormPagamento" action="https://sandbox.pagseguro.uol.com.br/v2/checkout/cart.html" method="GET">
         <!-- N�?O EDITE OS COMANDOS DAS LINHAS ABAIXO -->
         <input type="text" name="code" id="code" value="" />
         <input type="hidden" name="iot" value="button" />
         <input id="BotaoPagamento" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
     </form>
 
-    <script src="pagarPagSeguro/Libraries/zepto.min.js"></script>
-    <script src="pagarPagSeguro/Libraries/chamaPagDireto.js"></script>
+    <script src="Libraries/zepto.min.js"></script>
+    <script src="Libraries/chamaPagDireto.js"></script>
 
 </body>
 </html>
