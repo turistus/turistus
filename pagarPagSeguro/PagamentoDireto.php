@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 include '../pagarPagSeguro/credenciais.php';
 $idEvento = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
@@ -15,8 +16,16 @@ $Data["reference"]="0009";
 $Data["senderName"]="João da Silva";
 $Data["senderAreaCode"]="37";
 $Data["senderPhone"]="99999999";
-$Data["senderEmail"]=$emailSessaoAberta;
-
+$Data["senderEmail"]="Testeemail@hotmail.com";
+$Data["shippingType"]="1";
+$Data["shippingAddressStreet"]="Rua Antonieta";
+$Data["shippingAddressNumber"]="10";
+$Data["shippingAddressComplement"]="Casa";
+$Data["shippingAddressDistrict"]="Jardim Paulistano";
+$Data["shippingAddressPostalCode"]="30690090";
+$Data["shippingAddressCity"]="Belo Horizonte";
+$Data["shippingAddressState"]="MG";
+$Data["shippingAddressCountry"]="BRA";
 
 $BuildQuery=http_build_query($Data);
 $Url="https://ws.sandbox.pagseguro.uol.com.br/v2/checkout";
