@@ -1,6 +1,6 @@
 var Root = "https://"+document.location.hostname+"/";
 
-var_dump(Root);
+console.log(Root);
 $('#BotaoPagamento').on('click',function(event){
     event.preventDefault();
 
