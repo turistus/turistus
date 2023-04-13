@@ -5,7 +5,7 @@ $('#BotaoPagar').on('click',function(event){
     event.preventDefault();
 
     $.ajax({
-        url: Root+"/pagarPagSeguro/PagamentoDireto.php?id=$id",
+        url: Root+"/pagarPagSeguro/PagamentoDireto.php",
         type: 'POST',
         dataType:'html',
         success:function(data){

@@ -2,12 +2,11 @@
 
 session_start();
 include '../pagarPagSeguro/credenciais.php';
-$idEvento = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
 $Data["email"]=EMAIL_PAGSEGURO;
 $Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
-$Data["itemId1"]=$idEvento;
+$Data["itemId1"]=$id;
 $Data["itemDescription1"]="WebsiteTURISMOOO";
 $Data["itemAmount1"]=$valor_rise;
 $Data["itemQuantity1"]="1";
@@ -16,7 +15,7 @@ $Data["reference"]="0009";
 $Data["senderName"]="João da Silva";
 $Data["senderAreaCode"]="37";
 $Data["senderPhone"]="99999999";
-$Data["senderEmail"]="Testeemail@hotmail.com";
+$Data["senderEmail"]="c67684333726812232825@sandbox.pagseguro.com.br";
 $Data["shippingType"]="1";
 $Data["shippingAddressStreet"]="Rua Antonieta";
 $Data["shippingAddressNumber"]="10";
