@@ -2,7 +2,7 @@
     define("EMAIL_PAGSEGURO", "desconectaprincipal@hotmail.com");
     define("TOKEN_PAGSEGURO", "AF36513B07544C12B790A1D158E70911");
 
-include '../pagarPagSeguro/credenciais.php';
+
 
 $Data["email"]=EMAIL_PAGSEGURO;
 $Data["token"]=TOKEN_PAGSEGURO;
