@@ -21,7 +21,7 @@ include_once '../../connection.php';
                 eventos.id AS id,
                 eventos.nome AS nomeEvento,
                 eventos.valor AS custoEvento,
-                eventos.descricao AS descricao
+                eventos.breveDescricao AS descricao
 
                 FROM eventos
 
@@ -82,9 +82,9 @@ include_once '../../connection.php';
             <div class="col-md-4">
                 <form name="FormPagamento" id="FormPagamento" action="https://sandbox.pagseguro.uol.com.br/checkout/v2/payment.html" method="get">
                     <!-- N�?O EDITE OS COMANDOS DAS LINHAS ABAIXO -->
-                    <input type="text" name="code" id="code" value="" />
+                    <input type="hidden" name="code" id="code" value="" />
                     <input type="hidden" name="iot" value="button" />
-                    <input id="BotaoPagamento" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                    <input id="BotaoPagar" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                 </form>
             </div>
                 </div>
