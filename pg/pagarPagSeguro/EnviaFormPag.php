@@ -10,7 +10,7 @@ if (empty($id)) {
     die("Erro: página encontrada!<br>");
 }
 
-include_once '../connection.php';
+include_once '../../connection.php';
 
 ?>
                 <?php

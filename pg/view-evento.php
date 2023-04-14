@@ -159,9 +159,9 @@ session_start();
 
                                         <div class="col-8 mt-2"  >
 
-                                            <a href="pagarPagSeguro/EnviaFormPag.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn btn-outline-success" >
-                                            <input id="BotaoPagar" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
-
+                                            <a href="pagarPagSeguro/EnviaFormPag.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn btn-outline-primary" >
+                                            <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                                            </a>
                                         </div>
 
 
