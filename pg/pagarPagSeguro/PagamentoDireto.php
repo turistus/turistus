@@ -1,7 +1,6 @@
 <?php
-    define("EMAIL_PAGSEGURO", "desconectaprincipal@hotmail.com");
-    define("TOKEN_PAGSEGURO", "AF36513B07544C12B790A1D158E70911");
 
+    include_once 'credenciais.php';
 
 
 $Data["email"]=EMAIL_PAGSEGURO;
@@ -28,7 +27,7 @@ $Data["shippingAddressState"]="MG";
 $Data["shippingAddressCountry"]="BRA";
 
 $BuildQuery=http_build_query($Data);
-$Url="https://ws.sandbox.pagseguro.uol.com.br/v2/checkout";
+$Url="https://ws.pagseguro.uol.com.br/v2/checkout";
 
 $Curl=curl_init($Url);
 curl_setopt($Curl,CURLOPT_HTTPHEADER,Array("Content-Type: application/x-www-form-urlencoded; charset=UTF-8"));

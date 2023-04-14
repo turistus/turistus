@@ -45,7 +45,7 @@ include_once '../../connection.php';
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-        <link rel="shortcut icon" href="./images/logooriginal.png" >
+        <link rel="shortcut icon" href="../../images/logooriginal.png" >
         <title>Turist Us - Formulario de Pagamento</title>
     </head>
     <body>
@@ -59,7 +59,7 @@ include_once '../../connection.php';
             <div class="py-5 text-center">
 
                 <img class="d-block mx-auto mb-4" src="../images/logo/LG.jpg" alt="" width="72" height="72">
-                    <h2>Formulário de Pagamento de Eventos</h2>
+                    <h2>Formulário de Pagamento </h2>
                     <p class="lead" style="color: grey;">Realizando o pagamento por PagSeguro.</p>
             </div>
 
@@ -80,7 +80,7 @@ include_once '../../connection.php';
             <hr>
 
             <div class="col-md-4">
-                <form name="FormPagamento" id="FormPagamento" action="https://sandbox.pagseguro.uol.com.br/checkout/v2/payment.html" method="get">
+                <form name="FormPagamento" id="FormPagamento" action="https://pagseguro.uol.com.br/checkout/v2/payment.html" method="get">
                     <!-- N�?O EDITE OS COMANDOS DAS LINHAS ABAIXO -->
                     <input type="hidden" name="code" id="code" value="" />
                     <input type="hidden" name="iot" value="button" />

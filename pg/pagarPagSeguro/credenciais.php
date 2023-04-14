@@ -4,7 +4,7 @@
 define("URL", "https://turistus.com.br");
 
 
-$sandbox = true;
+$sandbox = false;
 if ($sandbox) {
     //Credenciais do SandBox
     define("EMAIL_PAGSEGURO", "desconectaprincipal@hotmail.com");
