@@ -159,12 +159,9 @@ session_start();
 
                                         <div class="col-8 mt-2"  >
 
-                                                <form name="FormPagamento" id="FormPagamento" action="https://sandbox.pagseguro.uol.com.br/checkout/v2/payment.html" method="get">
-                                                    <!-- N�?O EDITE OS COMANDOS DAS LINHAS ABAIXO -->
-                                                    <input type="hidden" name="code" id="code" value="" />
-                                                    <input type="hidden" name="iot" value="button" />
-                                                    <input id="BotaoPagar" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
-                                                </form>
+                                            <a href="pagarPagSeguro/EnviaFormPag.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn btn-outline-success" >
+                                            <input id="BotaoPagar" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+
                                         </div>
 
 
@@ -252,8 +249,6 @@ session_start();
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" ></script>
-        <script src="../Libraries/zepto.min.js"></script>
-        <script src="../Libraries/chamaPagDireto.js"></script>
     </body>
     <?php
         include_once '../rodape.php';
