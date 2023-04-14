@@ -38,12 +38,11 @@ include_once '../../connection.php';
                 $row_product = $result_products->fetch(PDO::FETCH_ASSOC);
                 extract($row_product);
                 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
         <link rel="shortcut icon" href="../../images/logooriginal.png" >
         <title>Turist Us - Formulario de Pagamento</title>
