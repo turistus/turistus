@@ -8,7 +8,7 @@ $Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
 $Data["itemId1"]="101";
 $Data["itemDescription1"]="Website TURISMOOO";
-$Data["itemAmount1"]=$custoEvento;
+$Data["itemAmount1"]="100";
 $Data["itemQuantity1"]="1";
 $Data["itemWeight1"]="1000";
 $Data["reference"]="565656";
@@ -27,7 +27,7 @@ $Data["shippingAddressState"]="MG";
 $Data["shippingAddressCountry"]="BRA";
 
 $BuildQuery=http_build_query($Data);
-$Url="https://ws.pagseguro.uol.com.br/v2/checkout";
+$Url="https://ws.sandbox.pagseguro.uol.com.br/v2/checkout";
 
 $Curl=curl_init($Url);
 curl_setopt($Curl,CURLOPT_HTTPHEADER,Array("Content-Type: application/x-www-form-urlencoded; charset=UTF-8"));
