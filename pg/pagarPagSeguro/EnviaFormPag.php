@@ -51,7 +51,7 @@ include_once '../../connection.php';
     <body>
 
         <?php
-        include_once './menu.php';
+        include_once '../menu.php';
         ?>
 
 
@@ -94,12 +94,12 @@ include_once '../../connection.php';
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" ></script>
-        <script src="../Libraries/zepto.min.js"></script>
-        <script src="../Libraries/chamaPagDireto.js"></script>
+        <script src="../../Libraries/zepto.min.js"></script>
+        <script src="../../Libraries/chamaPagDireto.js"></script>
 
     </body>
 
     <?php
-  include_once '../rodape.php';
+  include_once '../../rodape.php';
   ?>
 </html>
