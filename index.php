@@ -34,6 +34,32 @@ ob_start();
         font-size: 3.5rem;
       }
     }
+
+		.container {
+			width: 500px;
+			height: 500px;
+			background-color: #f2f2f2;
+			position: relative;
+		}
+		.text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 36px;
+			color: #333;
+			text-align: center;
+			z-index: 1;
+		}
+		.image {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(0);
+			transition: all 0.5s ease-in-out;
+			z-index: 0;
+		}
+
   </style>
 
 
@@ -52,7 +78,7 @@ ob_start();
 
 
   <main class="content" style="padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
-
+	<div class="container">
     <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
       <div class="col-md-6 px-0">
         <h1 class="display-4" >Marketplace Turístico</h1>
@@ -60,6 +86,7 @@ ob_start();
         <p class="lead mb-0"><a href="#" class="text-white fw-bold">Acesse o blog</a></p>
       </div>
     </div>
+  </div>
 
 
 <div class="row" >
@@ -307,6 +334,21 @@ ob_start();
   <?php
   include_once 'rodape.php';
   ?>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$.ajax({
+			url: 'https://turistus.com.br/index.php',
+			dataType: 'json',
+			success: function(data) {
+				$('.text').text(data.frase);
+				$('.image').attr('src', data.imagem);
+				$('.image').css('transform', 'translate(-50%, -50%) scale(1)');
+			}
+		});
+	});
+</script>
 
 </body>
 
