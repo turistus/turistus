@@ -35,6 +35,7 @@ ob_start();
       }
     }
 
+
   </style>
 
 
@@ -52,19 +53,15 @@ ob_start();
   ?>
 
 
-  <main class="container" style="padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
+  <main class="content" style="padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
 
-  <div class="content">
-	<img class="image" src="./images/praiaagua.jpg">
-	<div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: rgba(0, 0, 0, 0.5); position: absolute; bottom: 0; left: 0; right: 0;">
-		<h1 class="display-4">Marketplace Turístico</h1>
-		<p class="lead my-2">Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
-		<p class="lead mb-0"><a href="#" class="text-white fw-bold">Acesse o blog</a></p>
-		<div class="text-center">
-			<i class="fas fa-chevron-down fa-3x mt-3"></i>
-		</div>
-	</div>
-</div>
+    <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4" >Marketplace Turístico</h1>
+        <p class="lead my-2">Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
+        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Acesse o blog</a></p>
+      </div>
+    </div>
 
 
 <div class="row" >
@@ -312,8 +309,6 @@ ob_start();
   <?php
   include_once 'rodape.php';
   ?>
-
->
 
 </body>
 
