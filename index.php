@@ -42,7 +42,6 @@ ob_start();
   <!-- Custom styles for this template -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet"> -->
   <!-- Custom styles for this template -->
-   <link href="css/blog.rtl.css" rel="stylesheet">
 
 </head>
 
@@ -59,7 +58,7 @@ ob_start();
       <div class="col-md-6 px-0">
         <h1 class="display-4" >Marketplace Turístickkko</h1>
         <p class="lead my-2">Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
-        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Acesse o blog</a></p>
+        <p class="lead mb-0"><a href="./pg/sobre.php" class="text-white fw-bold">Saiba mais</a></p>
       </div>
     </div>
 
