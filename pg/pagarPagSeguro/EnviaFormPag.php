@@ -67,7 +67,7 @@ include_once '../../connection.php';
                 </div>
 
                 <div class="col-md-4">
-                   <p> Valor Total</p>
+                   <p> Descrição da Compra</p>
                     <div class="mb-1 text-muted"> R$ <?php echo number_format($custoEvento, 2, ",", ".");?></div>
                     <div class="mb-1 text-muted"> <?php echo $nomeGuia;?></div>
                     <div class="mb-1 text-muted"> <?php echo $descricao;?></div>

@@ -3,7 +3,7 @@
     include_once 'credenciais.php';
 
 
-$Data["email"]="desconectaprincipal@hotmail.com";
+$Data["email"]=EMAIL_PAGSEGURO;
 $Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
 $Data["itemId1"]="1002";
