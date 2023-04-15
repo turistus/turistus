@@ -1,7 +1,9 @@
 <?php
-
+session_start();
     include_once 'credenciais.php';
 
+    $nomeGuia = $_POST['nomeGuia'];
+    $custoEvento = $_POST['custoEvento'];
 
 $Data["email"]=EMAIL_PAGSEGURO;
 $Data["token"]=TOKEN_PAGSEGURO;
