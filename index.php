@@ -41,7 +41,7 @@ ob_start();
 	}
 	.image {
 		position: absolute;
-		top: 50%;
+
 		left: 50%;
 		transform: translate(-50%, -50%) scale(0);
 		transition: all 0.5s ease-in-out;
