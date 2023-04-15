@@ -6,9 +6,9 @@
 $Data["email"]=EMAIL_PAGSEGURO;
 $Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
-$Data["itemId1"]="1012";
+$Data["itemId1"]="1019";
 $Data["itemDescription1"]="Website TURISMOOO";
-$Data["itemAmount1"]="1.00";
+$Data["itemAmount1"]=$custoEvento;
 $Data["itemQuantity1"]="1";
 $Data["itemWeight1"]="1000";
 $Data["reference"]="577";
