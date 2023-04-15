@@ -11,7 +11,7 @@ $Data["currency"]="BRL";
 //tem que ter ID novo toda vez e CUSTO AMOUNT minimo 1.00 (um real)
 $Data["itemId1"]="1019";
 $Data["itemDescription1"]="TURISMOOO";
-$Data["itemAmount1"]=$custoEvento;
+$Data["itemAmount1"]="3.00";
 $Data["itemQuantity1"]="1";
 $Data["itemWeight1"]="1000";
 $Data["reference"]="577";
