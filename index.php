@@ -35,28 +35,6 @@ ob_start();
       }
     }
 
-
-    .content {
-		position: relative;
-	}
-	.image {
-		position: absolute;
-
-		left: 50%;
-		transform: translate(-50%, -50%) scale(0);
-		transition: all 0.5s ease-in-out;
-	}
-	.text {
-		opacity: 0;
-		transition: opacity 0.5s ease-in-out;
-	}
-	.container:hover .image {
-		transform: translate(-50%, -50%) scale(1);
-	}
-	.container:hover .text {
-		opacity: 1;
-	}
-
   </style>
 
 
@@ -335,20 +313,7 @@ ob_start();
   include_once 'rodape.php';
   ?>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-	$(document).ready(function() {
-		$.ajax({
-			url: 'https://turistus.com.br/index.php',
-			dataType: 'json',
-			success: function(data) {
-				$('.text').text(data.frase);
-				$('.image').attr('src', data.imagem);
-				$('.image').css('transform', 'translate(-50%, -50%) scale(1)');
-			}
-		});
-	});
-</script>
+>
 
 </body>
 
