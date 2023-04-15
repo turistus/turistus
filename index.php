@@ -35,30 +35,27 @@ ob_start();
       }
     }
 
-		.container {
-			width: 500px;
-			height: 500px;
-			background-color: #f2f2f2;
-			position: relative;
-		}
-		.text {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			font-size: 36px;
-			color: #333;
-			text-align: center;
-			z-index: 1;
-		}
-		.image {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%) scale(0);
-			transition: all 0.5s ease-in-out;
-			z-index: 0;
-		}
+
+    .container {
+		position: relative;
+	}
+	.image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(0);
+		transition: all 0.5s ease-in-out;
+	}
+	.text {
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
+	.container:hover .image {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	.container:hover .text {
+		opacity: 1;
+	}
 
   </style>
 
@@ -78,15 +75,18 @@ ob_start();
 
 
   <main class="content" style="padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
-	<div class="container">
-    <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
-      <div class="col-md-6 px-0">
-        <h1 class="display-4" >Marketplace Turístico</h1>
-        <p class="lead my-2">Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
-        <p class="lead mb-0"><a href="#" class="text-white fw-bold">Acesse o blog</a></p>
-      </div>
-    </div>
-  </div>
+
+  <div class="container">
+	<img class="image" src="./images/praiaagua.jpg">
+	<div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: rgba(0, 0, 0, 0.5); position: absolute; bottom: 0; left: 0; right: 0;">
+		<h1 class="display-4">Marketplace Turístico</h1>
+		<p class="lead my-2">Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
+		<p class="lead mb-0"><a href="#" class="text-white fw-bold">Acesse o blog</a></p>
+		<div class="text-center">
+			<i class="fas fa-chevron-down fa-3x mt-3"></i>
+		</div>
+	</div>
+</div>
 
 
 <div class="row" >
