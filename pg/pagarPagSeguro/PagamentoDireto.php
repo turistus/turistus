@@ -6,7 +6,7 @@
 $Data["email"]="desconectaprincipal@hotmail.com";
 $Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
-$Data["itemId1"]="1001";
+$Data["itemId1"]="1002";
 $Data["itemDescription1"]="Website TURISMOOO";
 $Data["itemAmount1"]="100";
 $Data["itemQuantity1"]="1";
