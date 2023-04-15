@@ -6,12 +6,12 @@
 $Data["email"]=EMAIL_PAGSEGURO;
 $Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
-$Data["itemId1"]="1002";
+$Data["itemId1"]="1012";
 $Data["itemDescription1"]="Website TURISMOOO";
-$Data["itemAmount1"]="100";
+$Data["itemAmount1"]="1.00";
 $Data["itemQuantity1"]="1";
 $Data["itemWeight1"]="1000";
-$Data["reference"]="5656577";
+$Data["reference"]="577";
 $Data["senderName"]="João da Silva";
 $Data["senderAreaCode"]="37";
 $Data["senderPhone"]="99999999";
