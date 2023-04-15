@@ -33,7 +33,7 @@ $codigoUsuario = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
         <li><a href="#" class="nav-link px-2 link-dark"></a></li>
         <li><a href="../pg/pontos-turisticos.php" class="nav-link px-2 link-secondary"><ion-icon name="image-outline"></ion-icon> Pontos turisticos</a></li>
         <li><a href="../pg/eventos.php" class="nav-link px-2 link-secondary"><ion-icon name="leaf-outline"></ion-icon> Eventos</a></li>
-        <li><a href="../guias/cadastrarguia.php" class="nav-link px-2 link-secondary"><ion-icon name="compass-outline"></ion-icon> Guia</a></li>
+        <!-- <li><a href="../guias/cadastrarguia.php" class="nav-link px-2 link-secondary"><ion-icon name="compass-outline"></ion-icon> Guia</a></li> -->
         <li><a href="../mapa.php" class="nav-link px-2 link-secondary"><ion-icon name="earth-outline"></ion-icon> Mapa </a></li>
         <li><a href="../sobre.php" class="nav-link px-2 link-secondary"><ion-icon name="finger-print-outline"></ion-icon> Sobre </a></li>
         <li><a href="../lgn/logout.php" class="nav-link px-2 link-secondary">Sair</a></li>
