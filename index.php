@@ -36,7 +36,7 @@ ob_start();
     }
 
 
-    .container {
+    .content {
 		position: relative;
 	}
 	.image {
@@ -74,9 +74,9 @@ ob_start();
   ?>
 
 
-  <main class="content" style="padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
+  <main class="container" style="padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
 
-  <div class="container">
+  <div class="content">
 	<img class="image" src="./images/praiaagua.jpg">
 	<div class="p-4 p-md-5 mb-4 text-white rounded" style="background-color: rgba(0, 0, 0, 0.5); position: absolute; bottom: 0; left: 0; right: 0;">
 		<h1 class="display-4">Marketplace Turístico</h1>
