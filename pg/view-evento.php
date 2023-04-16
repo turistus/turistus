@@ -226,7 +226,7 @@ session_start();
                                         </div>
                                         <div class="col-8 mt-2"  >
                                             <button type='button' class='btn btn-outline' data-bs-toggle='modal' data-bs-target='#loginModal'>
-                                                <input id="BotaoPagamento" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                                                <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             </button>
                                         </div>
 
