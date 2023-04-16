@@ -2,18 +2,19 @@
 session_start();
     include_once 'credenciais.php';
     $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
+    $nomeEvento = $Dados['nomeEvento'];
+    $custoEvento = $_POST['custoEvento'];
 
 $Data["email"]=EMAIL_PAGSEGURO;
 $Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
 //tem que ter ID novo toda vez e CUSTO AMOUNT minimo 1.00 (um real)
-$Data["itemId1"]="1020";
-$Data["itemDescription1"]=" Role Turistico ";
-$Data["itemAmount1"]="3.00";
+$Data["itemId1"]="1021";
+$Data["itemDescription1"]=$nomeEvento;
+$Data["itemAmount1"]="2.00";
 $Data["itemQuantity1"]="1";
 $Data["itemWeight1"]="1000";
-$Data["reference"]="577";
+$Data["reference"]="578";
 $Data["senderName"]="João da Silva";
 $Data["senderAreaCode"]="37";
 $Data["senderPhone"]="99999999";
