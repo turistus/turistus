@@ -10,7 +10,7 @@ $Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
 //tem que ter ID novo toda vez e CUSTO AMOUNT minimo 1.00 (um real)
 $Data["itemId1"]="1021";
-$Data["itemDescription1"]=$nomeEvento;
+$Data["itemDescription1"]="Nome do EVENTO";
 $Data["itemAmount1"]="2.00";
 $Data["itemQuantity1"]="1";
 $Data["itemWeight1"]="1000";

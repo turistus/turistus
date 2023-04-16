@@ -80,8 +80,6 @@ include_once '../../connection.php';
             <div class="col-md-4">
                 <form name="FormPagamento" id="FormPagamento" action="https://sandbox.pagseguro.uol.com.br/checkout/v2/payment.html" method="get">
                     <!-- N�?O EDITE OS COMANDOS DAS LINHAS ABAIXO -->
-                    <input type="hidden" name="nomeEvento" id="nomeEvento" value="<?php echo $nomeEvento; ?>" />
-                    <input type="hidden" name="custoEvento" id="custoEvento" value="" />
                     <input type="hidden" name="code" id="code" value="" />
                     <input type="hidden" name="iot" value="button" />
                     <input id="BotaoPagar" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
