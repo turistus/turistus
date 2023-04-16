@@ -10,6 +10,7 @@ $('#BotaoPagar').on('click',function(event){
         dataType:'html',
         success:function(data){
             $('#code').val(data);
+            $('#nomeEvento').val(data);
             $('#FormPagamento').submit();
         }
     });
