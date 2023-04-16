@@ -1,16 +1,15 @@
 <?php
 session_start();
     include_once 'credenciais.php';
-    $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-    $nomeGuia = $_POST['nomeGuia'];
-    $custoEvento = $_POST['custoEvento'];
+    $Dados = filter_input_array(INPUT_GET, FILTER_DEFAULT);
+
 
 $Data["email"]=EMAIL_PAGSEGURO;
 $Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
 //tem que ter ID novo toda vez e CUSTO AMOUNT minimo 1.00 (um real)
 $Data["itemId1"]="1020";
-$Data["itemDescription1"]=" aquele TURIS";
+$Data["itemDescription1"]=$Dados['descricao'];
 $Data["itemAmount1"]="3.00";
 $Data["itemQuantity1"]="1";
 $Data["itemWeight1"]="1000";
