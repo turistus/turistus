@@ -1,7 +1,7 @@
 <?php
 session_start();
     include_once 'credenciais.php';
-    $Dados = filter_input_array(INPUT_GET, FILTER_DEFAULT);
+    $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 
 $Data["email"]=EMAIL_PAGSEGURO;
@@ -9,7 +9,7 @@ $Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
 //tem que ter ID novo toda vez e CUSTO AMOUNT minimo 1.00 (um real)
 $Data["itemId1"]="1020";
-$Data["itemDescription1"]=$Dados['descricao'];
+$Data["itemDescription1"]=" Role Turistico ";
 $Data["itemAmount1"]="3.00";
 $Data["itemQuantity1"]="1";
 $Data["itemWeight1"]="1000";
