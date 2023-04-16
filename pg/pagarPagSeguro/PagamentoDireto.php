@@ -1,7 +1,7 @@
 <?php
 session_start();
     include_once 'credenciais.php';
-    $Dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+    $Dados = filter_input_array(INPUT_GET, FILTER_DEFAULT);
     $nomeEvento = $Dados['nomeEvento'];
     $custoEvento = $_POST['custoEvento'];
 
