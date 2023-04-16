@@ -135,7 +135,8 @@ $Retorno=curl_exec($Curl);
 curl_close($Curl);
 
 $Xml=simplexml_load_string($Retorno);
-$Xml->code;
+echo $Xml->code;
+echo $nomeEvento;
 
 
 ?>
