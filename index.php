@@ -34,7 +34,7 @@ ob_start();
         font-size: 3.5rem;
       }
     }
-    .containere {
+    .container{
 		background-image: url(./images/praiaagua.jpg);
 		background-size: cover;
 		height: 500px;
@@ -51,7 +51,7 @@ ob_start();
 		text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 		transition: all 0.5s ease-in-out;
 	}
-	.containere:hover .text {
+	.container:hover .text {
 		transform: translateX(+50%) translateY(0%) scale(1);
 		text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
 	}
@@ -77,7 +77,7 @@ ob_start();
 
     <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
       <div class="col-md-6 px-0">
-        <div class="containere">
+        <div class="container">
           <h1 class="display-4" >Marketplace Turístico</h1>
 
           <p class="lead my-2">Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
