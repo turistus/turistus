@@ -34,27 +34,6 @@ ob_start();
         font-size: 3.5rem;
       }
     }
-    .containere {
-		background-image: url(./images/praiaagua.jpg);
-		background-size: cover;
-		height: 350px;
-		position: relative;
-    padding: 10px;
-	}
-	.text {
-		color: white;
-		font-size: 50px;
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%) translateY(50%) scale(0.5);
-		text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
-		transition: all 0.5s ease-in-out;
-	}
-	.containere:hover .text {
-		transform: translateX(-50%) translateY(0%) scale(1);
-		text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
-	}
 
   </style>
 
@@ -77,7 +56,7 @@ ob_start();
 
     <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
       <div class="col-md-8 px-0">
-        <div class="containere">
+
           <h1 class="display-4" > Marketplace Turístico</h1>
 
           <p class="lead my-2">
@@ -88,7 +67,7 @@ ob_start();
 
           <h3 style="text-align: right; color:black;"><b>Turistus</b></h3><p style="text-align: right; color:black;"> <b> Seu guia de viagem online. </b></p>
         </div>
-      </div>
+
     </div>
 
 
