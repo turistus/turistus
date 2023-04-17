@@ -8,7 +8,7 @@ $Data["email"]=EMAIL_PAGSEGURO;
 $Data["token"]=TOKEN_PAGSEGURO;
 $Data["currency"]="BRL";
 //tem que ter ID novo toda vez e CUSTO AMOUNT minimo 1.00 (um real)
-$Data["itemId1"]="1022";
+$Data["itemId1"]="1025";//Deve ser gerado um numero ID ao inserir no banco essa venda Agendada
 $Data["itemDescription1"]="nome Exemplo";
 $Data["itemAmount1"]="2.00";
 $Data["itemQuantity1"]="1";
