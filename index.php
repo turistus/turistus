@@ -34,7 +34,7 @@ ob_start();
         font-size: 3.5rem;
       }
     }
-    .container {
+    .containere {
 		background-image: url(./images/praiaagua.jpg);
 		background-size: cover;
 		height: 500px;
@@ -76,7 +76,7 @@ ob_start();
 
     <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
       <div class="col-md-6 px-0">
-      <div class="container">
+      <div class="containere">
         <h1 class="display-4" >Marketplace Turístico</h1>
       </div>
         <p class="lead my-2">Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
