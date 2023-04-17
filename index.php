@@ -34,6 +34,10 @@ ob_start();
         font-size: 3.5rem;
       }
     }
+
+    .container{
+      transform: translateX(-80%) translateY(-80%) scale(0.5);
+    }
     .containere {
 		background-image: url(./images/praiaagua.jpg);
 		background-size: cover;
@@ -72,11 +76,11 @@ ob_start();
   ?>
 
 
-  <main class="content" style="padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
+  <main class="container" style="padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
 
 
     <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
-      <div class="col-md-6 px-0">
+      <div class="col-md-8 px-0">
         <div class="containere">
           <h1 class="display-4" >Marketplace Turístico</h1>
 
