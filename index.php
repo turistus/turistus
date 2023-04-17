@@ -111,18 +111,16 @@ ob_start();
 
             <h3 class="mb-0">Crie seu Ponto Turístico</h3>
             <h6><div class="text-muted">Serão aceitos somente informações fieis ao real e verdadeiro. </div></h6>
-
-
-
           </div>
-          <div class="col-12 p-4 d-flex flex-column ">
-          <a href="solicitacaoNovoPontoTuristico.php"> <strong class="btn btn-outline-primary">Envie seus dados</strong></a>
-          </div>
+
           <div class="col-auto d-none d-lg-block">
             <div class="col-md-12 margin-top ">
               <img src='<?php echo "./images/cachu.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 50px; padding-top: 20px;">
             </div>
+          </div>
 
+          <div class="col-12 p-4 d-flex flex-column ">
+            <a href="solicitacaoNovoPontoTuristico.php"> <strong class="btn btn-outline-success">Envie seus dados</strong></a>
           </div>
         </div>
       </div>
