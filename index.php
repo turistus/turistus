@@ -39,6 +39,7 @@ ob_start();
 		background-size: cover;
 		height: 500px;
 		position: relative;
+    padding: 10px;
 	}
 	.text {
 		color: white;
@@ -51,7 +52,7 @@ ob_start();
 		transition: all 0.5s ease-in-out;
 	}
 	.container:hover .text {
-		transform: translateX(-50%) translateY(0%) scale(1);
+		transform: translateX(+50%) translateY(0%) scale(1);
 		text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
 	}
 
@@ -76,11 +77,12 @@ ob_start();
 
     <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
       <div class="col-md-6 px-0">
-      <div class="containere">
-        <h1 class="display-4" >Marketplace Turístico</h1>
-      </div>
-        <p class="lead my-2">Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
-        <p class="lead mb-0"><a href="./pg/sobre.php" class="text-white fw-bold">Saiba mais</a></p>
+        <div class="containere">
+          <h1 class="display-4" >Marketplace Turístico</h1>
+
+          <p class="lead my-2">Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
+          <p class="lead mb-0"><a href="./pg/sobre.php" class="text-white fw-bold">Saiba mais</a></p>
+        </div>
       </div>
     </div>
 
