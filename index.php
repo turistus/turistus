@@ -78,13 +78,15 @@ ob_start();
     <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
       <div class="col-md-8 px-0">
         <div class="containere">
-          <h1 class="display-4" >Marketplace Turístico</h1>
+          <h1 class="display-4" > Marketplace Turístico</h1>
 
           <p class="lead my-2">
-          <h6><b>Turistus</b></h6> - seu guia de viagem online.
+
           <br> Descubra os melhores destinos, hotéis e atividades para tornar suas viagens inesquecíveis.
           <br> Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
           <p class="lead mb-0"><a href="./pg/sobre.php" class="text-white fw-bold">Saiba mais</a></p>
+
+          <h4><b>Turistus</b></h4><p>Seu guia de viagem online.</p>
         </div>
       </div>
     </div>
