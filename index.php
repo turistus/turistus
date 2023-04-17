@@ -81,8 +81,9 @@ ob_start();
           <h1 class="display-4" >Marketplace Turístico</h1>
 
           <p class="lead my-2">
-          Turistus - seu guia de viagem online. Descubra os melhores destinos, hotéis e atividades para tornar suas viagens inesquecíveis.
-          Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
+          <h6><b>Turistus</b></h6> - seu guia de viagem online.
+          <br> Descubra os melhores destinos, hotéis e atividades para tornar suas viagens inesquecíveis.
+          <br> Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
           <p class="lead mb-0"><a href="./pg/sobre.php" class="text-white fw-bold">Saiba mais</a></p>
         </div>
       </div>
