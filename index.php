@@ -34,10 +34,6 @@ ob_start();
         font-size: 3.5rem;
       }
     }
-
-    .container{
-      transform: translateX(-30%) translateY(-30%) scale(0.5);
-    }
     .containere {
 		background-image: url(./images/praiaagua.jpg);
 		background-size: cover;
@@ -76,7 +72,7 @@ ob_start();
   ?>
 
 
-  <main class="container" style="padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
+  <main class="content" style="  transform: translateX(-50%) translateY(-50%) scale(0.5); padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
 
 
     <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
