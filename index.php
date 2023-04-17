@@ -72,7 +72,7 @@ ob_start();
   ?>
 
 
-  <main class="content" style="  transform: translateX(50%) translateY(50%) scale(0.8); padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
+  <main class="content" style="  transform: scale(0.8); padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
 
 
     <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
