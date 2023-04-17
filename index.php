@@ -86,7 +86,7 @@ ob_start();
           <br> Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
           <p class="lead mb-0"><a href="./pg/sobre.php" class="text-white fw-bold">Saiba mais</a></p>
 
-          <h4><b>Turistus</b></h4><p>Seu guia de viagem online.</p>
+          <h4 style="text-align: right;"><b>Turistus</b></h4><p>Seu guia de viagem online.</p>
         </div>
       </div>
     </div>
