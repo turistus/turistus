@@ -51,7 +51,7 @@ ob_start();
 		text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 		transition: all 0.5s ease-in-out;
 	}
-	.container:hover .text {
+	.containere:hover .text {
 		transform: translateX(+50%) translateY(0%) scale(1);
 		text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
 	}
