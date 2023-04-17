@@ -34,7 +34,26 @@ ob_start();
         font-size: 3.5rem;
       }
     }
-
+    .container {
+		background-image: url(./images/praiaagua.jpg);
+		background-size: cover;
+		height: 500px;
+		position: relative;
+	}
+	.text {
+		color: white;
+		font-size: 50px;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%) translateY(50%) scale(0.5);
+		text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+		transition: all 0.5s ease-in-out;
+	}
+	.container:hover .text {
+		transform: translateX(-50%) translateY(0%) scale(1);
+		text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8);
+	}
 
   </style>
 
@@ -54,9 +73,12 @@ ob_start();
 
   <main class="content" style="padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
 
+
     <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image: url(./images/praiaagua.jpg); margin-bottom: 10px;">
       <div class="col-md-6 px-0">
+      <div class="container">
         <h1 class="display-4" >Marketplace Turístico</h1>
+      </div>
         <p class="lead my-2">Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
         <p class="lead mb-0"><a href="./pg/sobre.php" class="text-white fw-bold">Saiba mais</a></p>
       </div>
