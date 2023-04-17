@@ -115,7 +115,7 @@ ob_start();
 
           <div class="col-auto d-none d-lg-block">
             <div class="col-md-12 margin-top ">
-              <img src='<?php echo "./images/cachu.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 50px; padding-top: 20px;">
+              <img src='<?php echo "./images/cachu.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 20px; padding-top: 20px;">
             </div>
           </div>
 
