@@ -107,7 +107,7 @@ ob_start();
      <!-- Segundoo GAD..wea de Cadastro ou solicitação de PONTO TURISTICO -->
       <div class="col-md-12">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-400 position-relative " style="margin-bottom: 50px; min-height: 100px; padding-top: 20px;">
-          <div class="col-10 p-4 d-flex flex-column ">
+          <div class="col-10 p-4 d-flex flex-column " style="padding: 15px;">
 
             <h3 class="mb-0">Crie seu Ponto Turístico</h3>
             <h6><div class="text-muted">Serão aceitos somente informações fieis ao real e verdadeiro. </div></h6>
