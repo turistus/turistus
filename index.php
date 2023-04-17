@@ -36,7 +36,7 @@ ob_start();
     }
 
     .container{
-      transform: translateX(-80%) translateY(-80%) scale(0.5);
+      transform: translateX(-30%) translateY(-30%) scale(0.5);
     }
     .containere {
 		background-image: url(./images/praiaagua.jpg);
