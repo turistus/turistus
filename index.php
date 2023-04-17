@@ -65,7 +65,7 @@ ob_start();
 
 </head>
 
-<body style="font-family: 'EB Garamond';font-size: 20px; transform: scale(0.1);">
+<body style="font-family: 'EB Garamond';font-size: 20px; transform: scale(0.9);">
 
   <?php
   include_once 'menuprincipal.php';
