@@ -89,7 +89,11 @@ include_once '../../connection.php';
             </div>
         </div>
 <!-- -->
+<?php
 
+  header("Location: PagamentoDireto?nomeEvento=$nomeEvento");
+  exit();
+?>
 
 
 
