@@ -42,7 +42,8 @@ include_once '../../connection.php';
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
         <link rel="shortcut icon" href="../../images/logooriginal.png" >
         <title>Turist Us - Formulario de Pagamento</title>
     </head>
@@ -100,9 +101,10 @@ include_once '../../connection.php';
 
 
       <?php
-
+if(true){
 //Salvar os dados da compra no banco de dados
-$query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada) VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
+$query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
+                    VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
 $add_pagSeg = $conn->prepare($query_pa);
 $add_pagSeg->bindParam(":titulo", $nomeEvento, PDO::PARAM_STR);
 $add_pagSeg->bindParam(":idEv", $id);
@@ -125,7 +127,7 @@ setcookie("id", $id, time()+3600);
 
 $msg = "SUCESSO !!!!!";
     }
-
+}
 ?>
     </body>
 
