@@ -89,36 +89,6 @@ include_once '../../connection.php';
             </div>
         </div>
 
-
-
-      <?php
-
-        //Salvar os dados da compra no banco de dados
-        $query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada) VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
-        $add_pagSeg = $conn->prepare($query_pa);
-        $add_pagSeg->bindParam(":titulo", $nomeEvento, PDO::PARAM_STR);
-        $add_pagSeg->bindParam(":idEv", $id);
-        $add_pagSeg->bindParam(":descricao", $descricao, PDO::PARAM_STR);
-        $add_pagSeg->bindParam(":custoEvento", $custoEvento);
-        $add_pagSeg->bindParam(":idGuia", $idGuia);
-        $add_pagSeg->bindParam(":dataGerada", "0000-00-00");
-
-        $add_pagSeg->execute();
-        // FIM DA INSERT EM PAYMENTS PICPAY
-
-        if ($add_pagSeg->rowCount()) {
-            $last_insert_id = $conn->lastInsertId();
-
-        setcookie("titulo", $nomeEvento, time()+3600);
-        setcookie("custoEvento", $custoEvento, time()+3600);
-        setcookie("descricao", $descricao, time()+3600);
-        setcookie("last_insert_id", $last_insert_id, time()+3600);
-        setcookie("id", $id, time()+3600);
-
-        $msg = "SUCESSO !!!!!";
-            }
-
-?>
 <!-- -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -126,6 +96,37 @@ include_once '../../connection.php';
         <script src="../../Libraries/zepto.min.js"></script>
         <script src="../../Libraries/chamaPagDireto.js"></script>
 
+
+
+
+      <?php
+
+//Salvar os dados da compra no banco de dados
+$query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada) VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
+$add_pagSeg = $conn->prepare($query_pa);
+$add_pagSeg->bindParam(":titulo", $nomeEvento, PDO::PARAM_STR);
+$add_pagSeg->bindParam(":idEv", $id);
+$add_pagSeg->bindParam(":descricao", $descricao, PDO::PARAM_STR);
+$add_pagSeg->bindParam(":custoEvento", $custoEvento);
+$add_pagSeg->bindParam(":idGuia", $idGuia);
+$add_pagSeg->bindParam(":dataGerada", "0000-00-00");
+
+$add_pagSeg->execute();
+// FIM DA INSERT EM PAYMENTS PICPAY
+
+if ($add_pagSeg->rowCount()) {
+    $last_insert_id = $conn->lastInsertId();
+
+setcookie("titulo", $nomeEvento, time()+3600);
+setcookie("custoEvento", $custoEvento, time()+3600);
+setcookie("descricao", $descricao, time()+3600);
+setcookie("last_insert_id", $last_insert_id, time()+3600);
+setcookie("id", $id, time()+3600);
+
+$msg = "SUCESSO !!!!!";
+    }
+
+?>
     </body>
 
     <?php
