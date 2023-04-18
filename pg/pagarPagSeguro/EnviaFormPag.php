@@ -90,8 +90,6 @@ include_once '../../connection.php';
             </div>
         </div>
 
-<!-- -->
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" ></script>
         <script src="../../Libraries/zepto.min.js"></script>
@@ -126,7 +124,7 @@ setcookie("last_insert_id", $last_insert_id, time()+3600);
 setcookie("id", $id, time()+3600);
 
 $msg = "SUCESSO !!!!!";
-    }
+    }else{}
 }
 ?>
     </body>

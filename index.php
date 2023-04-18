@@ -269,7 +269,7 @@ ob_start();
 
 
                 <div class="row" style="padding: 20px;" >
-                  <h2 style="margin:auto;">Pontos Turísticos mais acessados</h2>
+                  <h2 style="margin:auto;"> Profissionais </h2>
                 </div>
                 <div class="col-12">
                     <hr>
@@ -280,7 +280,7 @@ ob_start();
     <div class="row">
       <div class="col-md-12">
         <?php
-        $query_products = "SELECT id, name, price, image FROM pontosturisticos ORDER BY price < 50 Limit 4";
+        $query_products = "SELECT *, image FROM servicos ORDER BY id Limit 4";
         $result_products = $conn->prepare($query_products);
         $result_products->execute();
         ?>
@@ -294,14 +294,11 @@ ob_start();
 
               <div class="card" style="padding: 20px; text-align: center; background-color: #f1f1f3;">
                 <div class="row text-center">
-                  <h5 class="card-title" style=" margin:auto; "><?php echo $name; ?></h5>
+                  <h5 class="card-title" style=" margin:auto; "><?php echo $nome; ?></h5>
                 </div>
 
-                <img style="height: 140px; max-height: 200px; max-width: 400px; margin:auto; border:1px solid green; box-shadow: 3px 2px 5px black;" src='<?php echo "./images/pontosturisticos/$id/$image"; ?>' class="card-img-top" alt="...">
+                <img style="height: 140px; max-height: 200px; max-width: 400px; margin:auto; border:1px solid green; box-shadow: 3px 2px 5px black;" src='<?php echo "./images/guias/$id/$image"; ?>' class="card-img-top" alt="...">
 
-                <div class="card-body">
-                  <a href="pg/view-products.php?id=<?php echo $id; ?>" class="btn btn-primary">Detalhes</a>
-                </div>
               </div>
 
             </div>
