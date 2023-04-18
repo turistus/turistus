@@ -99,7 +99,7 @@ $usuarioId = isset($_SESSION['user_id']);
         c-0.546-1.725-5.396-6.079-0.026-7.175c-3.175,0.959-1.944-4.027,0.875-3.012C316.726,200.733,314.044,200.527,313.276,197.775z"></path>
         <text transform="matrix(1 0 0 1 359.7324 210.1221)" fill="#FFFFFF" data-label="Bahia">BA</text>
     </a>
-    <a xlink:href="../pg/pontos-turisticos-uf.php?uf=SE" target="#" ><!-- Class disable deixe o estado cinza como nao liberado-->
+    <a xlink:href="../pg/pontos-turisticos-uf.php?uf=SE" target="#" class="disable" ><!-- Class disable deixe o estado cinza como nao liberado-->
         <title>Sergipe</title>
         <path stroke="#FFFFFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M408.561,191.735
         c0.521-1.505,2.465-0.725,3.533-0.794c2.273-0.164,0.494-2.738,1.095-3.778c2.026-3.793-2.738-5.999-1.998-10.408
