@@ -92,14 +92,6 @@ include_once '../../connection.php';
 
 
       <?php
-      $formulario = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-        // Acessa o IF quando não há nenhum erro no formulário
-    if (isset($formulario['BotaoPagar'])) {
-
-        //Data para salvar no BD e enviar para o PicPay
-        $Dados['created'] = date('Y-m-d H:i:s');
-        $Dados['due_date'] = date('Y-m-d H:i:s', strtotime($Dados['created'] . '+3days'));
-        $due_date = date(DATE_ATOM, strtotime($Dados['due_date']));
 
         //Salvar os dados da compra no banco de dados
         $query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada) VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
@@ -109,7 +101,7 @@ include_once '../../connection.php';
         $add_pagSeg->bindParam(":descricao", $descricao, PDO::PARAM_STR);
         $add_pagSeg->bindParam(":custoEvento", $custoEvento);
         $add_pagSeg->bindParam(":idGuia", $idGuia);
-        $add_pagSeg->bindParam(":dataGerada", $Dados['due_date']);
+        $add_pagSeg->bindParam(":dataGerada", "0000-00-00");
 
         $add_pagSeg->execute();
         // FIM DA INSERT EM PAYMENTS PICPAY
@@ -125,7 +117,6 @@ include_once '../../connection.php';
 
         $msg = "SUCESSO !!!!!";
             }
-    }
 
 ?>
 <!-- -->
