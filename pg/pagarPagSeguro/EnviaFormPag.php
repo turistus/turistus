@@ -91,8 +91,7 @@ include_once '../../connection.php';
 <!-- -->
 <?php
 
-  header("Location: PagamentoDireto?nomeEvento=$nomeEvento");
-  exit();
+setcookie("titulo", $nomeEvento, time()+3600);
 ?>
 
 

@@ -2,7 +2,7 @@
 session_start();
     include_once 'credenciais.php';
 
-    $nE = $_POST['nomeEvento'];
+    $nE = $_COOKIE['titulo'];
 
 
 
