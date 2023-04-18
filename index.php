@@ -297,7 +297,7 @@ ob_start();
                   <h5 class="card-title" style=" margin:auto; "><?php echo $nome; ?></h5>
                 </div>
 
-                <a href="./guias/perfilG.php?id=<?php echo $idG?>"> <img style="height: 140px; max-height: 200px; max-width: 400px; margin:auto; border:1px solid green; box-shadow: 3px 2px 5px black;" src='<?php echo "./images/guias/$id/$image"; ?>' class="card-img-top" alt="..."></a>
+                <a href="./guias/perfilG.php?idguia=<?php echo $idG?>"> <img style="height: 140px; max-height: 200px; max-width: 400px; margin:auto; border:1px solid green; box-shadow: 3px 2px 5px black;" src='<?php echo "./images/guias/$id/$image"; ?>' class="card-img-top" alt="..."></a>
 
               </div>
 
