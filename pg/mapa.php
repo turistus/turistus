@@ -15,13 +15,11 @@ $usuarioId = isset($_SESSION['user_id']);
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
   <link rel="icon" href="../images/icon/logo.png">
   <title>MAPA</title>
 
 
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.rtl.min.css" rel="stylesheet" integrity="sha384-trxYGD5BY4TyBTvU5H23FalSCYwpLA0vWEvXXGm5eytyztxb+97WzzY+IWDOSbav" crossorigin="anonymous">
 
   <style>
     .bd-placeholder-img {
@@ -42,8 +40,6 @@ $usuarioId = isset($_SESSION['user_id']);
 
   <!-- Custom styles for this template -->
   <link href="https://fonts.googleapis.com/css?family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/blog.rtl.css" rel="stylesheet">
 
 </head>
 
@@ -75,7 +71,10 @@ $usuarioId = isset($_SESSION['user_id']);
 
 ?>
 
+<div class="col-12">
+    <h1>Locais Disponiveis no Brasil </h1>
 
+</div>
 
 <div id="svg-map-container">
 <!-- DICA class="disabled" ATIVA O ESTADO em AZUL -->
