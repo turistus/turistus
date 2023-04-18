@@ -280,7 +280,7 @@ ob_start();
     <div class="row">
       <div class="col-md-12">
         <?php
-        $query_products = "SELECT *, image FROM servicos ORDER BY id Limit 4";
+        $query_products = "SELECT *, id AS idProfi, image FROM servicos ORDER BY id Limit 4";
         $result_products = $conn->prepare($query_products);
         $result_products->execute();
         ?>
@@ -297,7 +297,7 @@ ob_start();
                   <h5 class="card-title" style=" margin:auto; "><?php echo $nome; ?></h5>
                 </div>
 
-                <a href="./guias/perfilG.php?idguia=<?php echo $idG?>"> <img style="height: 140px; max-height: 200px; max-width: 400px; margin:auto; border:1px solid green; box-shadow: 3px 2px 5px black;" src='<?php echo "./images/guias/$id/$image"; ?>' class="card-img-top" alt="..."></a>
+                <a href="./guias/perfilG.php?idguia=<?php echo $idProfi?>"> <img style="height: 140px; max-height: 200px; max-width: 400px; margin:auto; border:1px solid green; box-shadow: 3px 2px 5px black;" src='<?php echo "./images/guias/$id/$image"; ?>' class="card-img-top" alt="..."></a>
 
               </div>
 
