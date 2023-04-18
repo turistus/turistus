@@ -87,7 +87,7 @@ $usuarioId = isset($_SESSION['user_id']);
         S234.852,233.695,289.558,235.641z"></path>
         <text transform="matrix(1 0 0 1 287.0137 188.3208)" fill="#FFFFFF" data-label="Tocantins">TO</text>
     </a>
-    <a xlink:href="../pg/pontos-turisticos-uf.php?uf=BA" target="#" >
+    <a xlink:href="../pg/pontos-turisticos-uf.php?uf=BA" target="#" available>
         <title>Bahia</title>
         <path stroke="#FFFFFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M313.276,197.775
         c2.084-2.739,3.506-7.012,6.464-8.764c1.641-0.973,3.232-4.684,4.271-5.163c2.304-1.014,12.161-25.143,20.706-22.513
@@ -99,7 +99,7 @@ $usuarioId = isset($_SESSION['user_id']);
         c-0.546-1.725-5.396-6.079-0.026-7.175c-3.175,0.959-1.944-4.027,0.875-3.012C316.726,200.733,314.044,200.527,313.276,197.775z"></path>
         <text transform="matrix(1 0 0 1 359.7324 210.1221)" fill="#FFFFFF" data-label="Bahia">BA</text>
     </a>
-    <a xlink:href="../pg/pontos-turisticos-uf.php?uf=SE" target="#" class="disable" ><!-- Class disable deixe o estado cinza como nao liberado-->
+    <a xlink:href="../pg/pontos-turisticos-uf.php?uf=SE" target="#" disable ><!-- Class disable deixe o estado cinza como nao liberado-->
         <title>Sergipe</title>
         <path stroke="#FFFFFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M408.561,191.735
         c0.521-1.505,2.465-0.725,3.533-0.794c2.273-0.164,0.494-2.738,1.095-3.778c2.026-3.793-2.738-5.999-1.998-10.408
