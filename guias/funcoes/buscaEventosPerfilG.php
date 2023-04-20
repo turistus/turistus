@@ -50,8 +50,7 @@ $Uid = filter_input(INPUT_GET, "idguia", FILTER_SANITIZE_NUMBER_INT);
                     <img style="height: 100px; width: 180px; " src= <?php echo "'../images/pontosturisticos/$idPt/$img";?>'>
                   </a><br><br>
                     <h5 class="card-title"><?php echo $nome;  ?></h5>
-                    <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
-                    <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($datah)); ?></h5><br>
+
 
 
                 </div>

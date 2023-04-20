@@ -85,58 +85,54 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                         </div>
 
                         <div class="col-6">
-                        <h3> Eventos </h3>
+                            <label>Apelido</label>
+                                <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
+                                    <h4><? echo $row_guia['apelido'];?> <?php if(isset($dados['apelido']))
+                                    { echo $dados['apelido'];}elseif(isset($row_guia['apelido']))
+                                    { echo $row_guia['apelido']; }?>
+                                    </h4>
+                                </div>
+
+                                <label>Nome</label>
+                                <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
+                                    <h4><?php if(isset($dados['nome']))
+                                    { echo $dados['nome'];}elseif(isset($row_guia['nome']))
+                                    { echo $row_guia['nome']; }?>
+                                    </h4>
+                                </div>
+
+                                <label>Celular</label>
+                                <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
+                                    <h4><?php if(isset($dados['celular']))
+                                    { echo $dados['celular'];}elseif(isset($row_guia['celular']))
+                                    { echo $row_guia['celular']; }?>
+                                    </h4>
+                                </div>
+
+                                <label>uf</label>
+                                <div class="col-xl-12 col-lg-6 col-md-12 col-sm-12 ">
+                                    <h4><?php if(isset($dados['uf']))
+                                    { echo $dados['uf'];}elseif(isset($row_guia['uf']))
+                                    { echo $row_guia['uf']; }?>
+                                    </h4>
+                                </div>
+
+                                <div class="row" style="padding-left: 10px; margin-top:30px;">
+                                    <div class="col-12">
+                                        <h5><a href="../usuarios/funcoes/avaliarGuia.php?id=<?php echo $Uid?>" class="btn btn text-dark" style="border: 1px solid black;"> Avaliar </a></h5>
+                                    </div>
+                                </div>
+
+                        </div>
+
+                        <div class="col-12" >
+                            <h3> Eventos </h3>
                             <?php
                                 include_once '../guias/funcoes/buscaEventosPerfilG.php';
                             ?>
                         </div>
 
-                            <label>Apelido</label>
-                            <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
-                                <h4><? echo $row_guia['apelido'];?> <?php if(isset($dados['apelido']))
-                                { echo $dados['apelido'];}elseif(isset($row_guia['apelido']))
-                                { echo $row_guia['apelido']; }?>
-                                </h4>
-                            </div>
-
-                            <label>Nome</label>
-                            <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
-                                <h4><?php if(isset($dados['nome']))
-                                { echo $dados['nome'];}elseif(isset($row_guia['nome']))
-                                { echo $row_guia['nome']; }?>
-                                </h4>
-                            </div>
-
-                            <label>Celular</label>
-                            <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
-                                <h4><?php if(isset($dados['celular']))
-                                { echo $dados['celular'];}elseif(isset($row_guia['celular']))
-                                { echo $row_guia['celular']; }?>
-                                </h4>
-                            </div>
-
-                            <label>uf</label>
-                            <div class="col-xl-12 col-lg-6 col-md-12 col-sm-12 ">
-                                <h4><?php if(isset($dados['uf']))
-                                { echo $dados['uf'];}elseif(isset($row_guia['uf']))
-                                { echo $row_guia['uf']; }?>
-                                </h4>
-                            </div>
-
-                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" >
-
-                            </div>
-
-
-                            <div class="row" style="padding-left: 10px; margin-top:30px;">
-                                <div class="col-12">
-                                    <h5><a href="../usuarios/funcoes/avaliarGuia.php?id=<?php echo $Uid?>" class="btn btn text-dark" style="border: 1px solid black;"> Avaliar </a></h5>
-                                </div>
-                            </div>
-
                     </div>
-
-
 
                 </div><!-- Fim da DIV ROW Conteiner -->
 
