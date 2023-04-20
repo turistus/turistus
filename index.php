@@ -120,7 +120,7 @@ ob_start();
           </div>
 
           <div class="col-12 p-4 d-flex flex-column position-static">
-            <a href="solicitacaoNovoPontoTuristico.php"> <strong class="btn btn-outline-success">Envie seus dados</strong></a>
+            <a href="solicitacaoNovoPontoTuristico.php"> <strong class="btn btn-outline-success"> +Novo Ponto </strong></a>
           </div>
         </div>
       </div>

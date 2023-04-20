@@ -63,7 +63,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
         <?php
             include_once './menuFora.php';
         ?>
-            <main class="content">
+            <main class="container">
                 <!-- Linha ROW de tudo -->
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
@@ -71,14 +71,15 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
 
                      padding: 20px;
                      border: 1px solid black;
-                     margin-left:50px;
-                     margin-top:50px; ">
+                     margin-left: 50px;
+                     margin-top: 50px;
+                     margin-right: 50px; ">
 
                             <div class="col-4 text-center" style="border: 1px solid black;" >
                                 <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
                                     src='<?php echo "../images/guias/$Uid/$fotoGuia"; ?>'>
 
-                                <div class="star-ratings" style="margin-left: 15px;" >
+                                <div class="star-ratings" style="margin-left: 15px; text-align: center;" >
                                     <div class="fill-ratings" style="width: <?php echo $row_guia['pontos'] . '%'?>;">
                                         <span>★★★★★</span>
                                     </div>
