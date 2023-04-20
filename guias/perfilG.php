@@ -67,11 +67,11 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                 <!-- Linha ROW de tudo -->
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
-                    style="min-height: 400px;
-                     padding: 20px;
-                     border: 1px solid black;
-                     margin-top: 50px;
-                     ">
+                        style="min-height: 400px;
+                        padding: 20px;
+                        border: 1px solid black;
+                        margin-top: 50px;
+                        ">
 
                         <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 text-center" style="border: 1px solid black;" >
                             <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
@@ -88,7 +88,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                         </div>
 
 
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" style="transform: scale(0.8); border: 1px solid black;">
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8" style="transform: scale(0.8); border: 1px solid black;">
                             <div class="row">
                             <label>Apelido</label>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 " style="border: 1px solid black;">
@@ -129,6 +129,16 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                             </div><!-- Fim da ROW dos DAOS DO GUIA -->
                         </div>
 
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                    <div class="row">
                         <div class="col-12" >
                             <h3> Eventos </h3>
                             <?php
@@ -136,9 +146,9 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                             ?>
                         </div>
 
-                    </div>
 
-                </div><!-- Fim da DIV ROW Conteiner -->
+
+                </div><!-- Fim da DIV  -->
 
         </main>
 

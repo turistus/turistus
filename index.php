@@ -146,7 +146,7 @@ ob_start();
             </div>
             <div class="col-auto d-none d-lg-block">
               <div class="col-md-12 margin-top ">
-                <img src='<?php echo "./images/camping.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 50px;">
+                <img src='<?php echo "./images/camping.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 20px;">
               </div>
             </div>
             <p class="card-text " style="margin: 20px;"> Aprenda a ganhar dinheiro com turismo local, e aumente sua renda.
