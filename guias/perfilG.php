@@ -120,7 +120,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                             <h3> Eventos </h3>
 
                             <?php
-                                include_once './guias/funcoes/buscaEventosPerfilG.php';
+                                include_once '../guias/funcoes/buscaEventosPerfilG.php';
                             ?>
                         </div>
 
