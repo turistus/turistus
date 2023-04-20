@@ -116,6 +116,15 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                             </h4>
                         </div>
 
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" >
+                            <h3> Eventos </h3>
+
+                            <?php
+                                include_once './guias/funcoes/buscaEventosPerfilG.php';
+                            ?>
+                        </div>
+
+
                             <div class="row" style="padding-left: 10px; margin-top:30px;">
                                 <div class="col-12">
                                     <h5><a href="../usuarios/funcoes/avaliarGuia.php?id=<?php echo $Uid?>" class="btn btn text-dark" style="border: 1px solid black;"> Avaliar </a></h5>
@@ -124,13 +133,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
 
                     </div>
 
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" >
-                        <h3> Eventos </h3>
 
-                        <?php
-                            include_once './guias/funcoes/buscaEventosPerfilG.php';
-                        ?>
-                    </div>
 
                 </div><!-- Fim da DIV ROW Conteiner -->
 
