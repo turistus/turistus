@@ -73,7 +73,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                         margin-top: 50px;
                         ">
                         <div class="row" >
-                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 text-center" style="border: 1px solid black;" >
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 text-center" style=" margin-top: 20px;" >
                                     <p><img style="max-height: 200px; max-width: 200px; background-color: gray; "
                                         src='<?php echo "../images/guias/$Uid/$fotoGuia"; ?>'></p>
 
@@ -107,7 +107,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                             </div>
 
                                             <label>Celular</label>
-                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 ">
+                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 ">
                                                 <h4><?php if(isset($dados['celular']))
                                                 { echo $dados['celular'];}elseif(isset($row_guia['celular']))
                                                 { echo $row_guia['celular']; }?>
