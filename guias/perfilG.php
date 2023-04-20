@@ -68,14 +68,12 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
                     style="min-height: 400px;
-
                      padding: 20px;
                      border: 1px solid black;
-                     margin-left: 50px;
                      margin-top: 50px;
-                     margin-right: 50px; ">
+                     ">
 
-                            <div class="col-4 text-center" style="border: 1px solid black;" >
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 text-center" style="border: 1px solid black;" >
                                 <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
                                     src='<?php echo "../images/guias/$Uid/$fotoGuia"; ?>'>
 
@@ -90,7 +88,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                             </div>
 
 
-                        <div class="col-6" style="transform: scale(0.8); border: 1px solid black;">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" style="transform: scale(0.8); border: 1px solid black;">
                             <label>Apelido</label>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 " style="border: 1px solid black;">
                                     <h4><? echo $row_guia['apelido'];?> <?php if(isset($dados['apelido']))
@@ -122,7 +120,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                     { echo $row_guia['uf']; }?>
                                     </h4>
                                 </div>
-
+<br>
                                     <div class="col-2">
                                         <h5><a href="../usuarios/funcoes/avaliarGuia.php?id=<?php echo $Uid?>" class="btn btn text-dark" style="border: 1px solid black;"> Avaliar </a></h5>
                                     </div>
