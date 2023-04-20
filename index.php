@@ -125,7 +125,7 @@ ob_start();
           </div>
 
 
-          <p class="card-text mb-auto">  Aqui você pode divulgar gratuitamente as belezas de sua região para que outras pessoas encontrem. </p>
+          <p class="card-text mb-auto ml-auto">  Aqui você pode divulgar gratuitamente as belezas de sua região para que outras pessoas encontrem. </p>
           <div class="col-12 p-4 d-flex flex-column position-static" style="text-align: center;">
             <a href="solicitacaoNovoPontoTuristico.php"> <button class="btn btn-success" style="color: white; text-decoration: none; ">
             + Cadastrar Novo Ponto </button></a>
