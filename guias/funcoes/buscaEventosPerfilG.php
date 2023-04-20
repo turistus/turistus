@@ -14,7 +14,7 @@ $Uid = filter_input(INPUT_GET, "idguia", FILTER_SANITIZE_NUMBER_INT);
 
 <div class="row">
 
-      <div class="col-md-12">
+      <div class="col-md-8">
         <!-- Aqui Busca os eventos criado pelo Guia -->
         <?php
         $query_products = "SELECT *,
