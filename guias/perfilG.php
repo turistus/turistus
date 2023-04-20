@@ -88,7 +88,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                 </div>
 
 
-                                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10" style="transform: scale(0.8); ">
+                                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-8" style="transform: scale(0.8); ">
                                         <div class="row">
                                         <label>Apelido</label>
                                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 ">
@@ -145,6 +145,9 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
 
 
         </main>
+        <?php
+            include_once '../rodape.php';
+        ?>
 
 
     </body>
