@@ -85,7 +85,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
 
                         <div class="col-6" style="transform: scale(0.8);">
                             <label>Apelido</label>
-                                <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 ">
                                     <h4><? echo $row_guia['apelido'];?> <?php if(isset($dados['apelido']))
                                     { echo $dados['apelido'];}elseif(isset($row_guia['apelido']))
                                     { echo $row_guia['apelido']; }?>
