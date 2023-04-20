@@ -66,7 +66,13 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
             <main class="content">
                 <!-- Linha ROW de tudo -->
                 <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="min-height: 400px; max-width: 800px; padding: 20px; border: 1px solid black; margin-left:50px; margin-top:50px; ">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12"
+                    style="min-height: 400px;
+
+                     padding: 20px;
+                     border: 1px solid black;
+                     margin-left:50px;
+                     margin-top:50px; ">
 
                             <div class="col-4 text-center" style="border: 1px solid black;" >
                                 <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
@@ -116,11 +122,10 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                     </h4>
                                 </div>
 
-                                <div class="row" style="padding-left: 10px; margin-top:30px;">
-                                    <div class="col-12">
+                                    <div class="col-2">
                                         <h5><a href="../usuarios/funcoes/avaliarGuia.php?id=<?php echo $Uid?>" class="btn btn text-dark" style="border: 1px solid black;"> Avaliar </a></h5>
                                     </div>
-                                </div>
+
 
                         </div>
 
