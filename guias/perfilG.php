@@ -65,19 +65,19 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
         ?>
             <main class="container">
                 <!-- Linha ROW de tudo -->
-                <div class="row" style="border: 3px solid red;">
+                <div class="row" >
                     <div class="col-12"
                         style="min-height: 400px;
 
                         border: 1px solid black;
                         margin-top: 50px;
                         ">
-                        <div class="row" style="border: 5px solid green;">
+                        <div class="row" >
                                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 text-center" style="border: 1px solid black;" >
                                     <p><img style="max-height: 200px; max-width: 200px; background-color: gray; "
                                         src='<?php echo "../images/guias/$Uid/$fotoGuia"; ?>'></p>
 
-                                    <div class="star-ratings" style="margin-left: 15px; text-align: center;" >
+                                    <div class="star-ratings text-center" style="margin-left: 15px; text-align: center;" >
                                         <div class="fill-ratings" style="width: <?php echo $row_guia['pontos'] . '%'?>;">
                                             <span>★★★★★</span>
                                         </div>
