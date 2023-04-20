@@ -90,7 +90,7 @@ ob_start();
 
 
             <p class="card-text mb-auto"> Crie aqui anúncios de seus serviços e atividades turisticas e conquiste mais vendas para o seu negocio. </p>
-            <a href="./guias/cadastrarguia.php" class="btn btn-outline-primary"> +Publicar </a>
+            <a href="./guias/cadastrarguia.php" class="btn btn-outline-primary"> + Publicar </a>
             </div>
 
           <div class="col-auto d-none d-lg-block">
@@ -126,8 +126,8 @@ ob_start();
 
 
           <p class="card-text mb-auto">  Aqui você pode divulgar gratuitamente as belezas de sua região para que outras pessoas encontrem. </p>
-          <div class="col-12 p-4 d-flex flex-column position-static">
-            <a href="solicitacaoNovoPontoTuristico.php"> <button class="btn btn-outline-success" style="color: white; text-decoration: none; text-align: center;">
+          <div class="col-12 p-4 d-flex flex-column position-static" style="text-align: center;">
+            <a href="solicitacaoNovoPontoTuristico.php"> <button class="btn btn-success" style="color: white; text-decoration: none; ">
             + Cadastrar Novo Ponto </button></a>
           </div>
         </div>
