@@ -81,11 +81,16 @@ ob_start();
                 style="margin-bottom: 50px; height: auto; ">
 
         <div class="col p-4 d-flex flex-column position-static" >
-                <h3 class="mb-0">Serviços </h3>
+                <h3 class="mb-0"> Divulgue Atividades </h3>
             <div class="mb-1 text-muted">Somente para maiores de 18 anos devidamente avaliados. </div>
 
-            <p class="card-text mb-auto">Morador da localidade aproveite a plataforma para divulgar seu trabalho e sua região.</p>
-            <a href="./guias/cadastrarguia.php" class="btn btn-outline-primary">Trabalhe conosco !</a>
+
+
+
+
+
+            <p class="card-text mb-auto"> Crie aqui anuncios de seus serviços e atividades turisticas e conquiste mais vendas para o seu negocio. </p>
+            <a href="./guias/cadastrarguia.php" class="btn btn-outline-primary"> +Publicar </a>
             </div>
 
           <div class="col-auto d-none d-lg-block">
@@ -119,6 +124,8 @@ ob_start();
             </div>
           </div>
 
+          <h6> Aqui você pode divulgar gratuitamente as belezas de sua região para que outras pessoas encontrem.</h6>
+
           <div class="col-12 p-4 d-flex flex-column position-static">
             <a href="solicitacaoNovoPontoTuristico.php"> <strong class="btn btn-outline-success"> +Novo Ponto </strong></a>
           </div>
@@ -132,9 +139,10 @@ ob_start();
       <div class="col-md-12">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-400" style="margin-bottom: 50px; min-height: 50px;">
           <div class="col p-4 d-flex flex-column ">
-            <h3 class="mb-0">Hospedagem</h3>
-            <p class="card-text mb-auto">Cadastre seu hostel, camping ou acampamento para conhecermos !</p>
-            <a href="./cadastroParceiro.php" class="stretched-link"> Fale conosco</a>
+            <h3 class="mb-0"> Manual do Turismo </h3>
+            <p class="card-text mb-auto"> Aqui você se informa sobre turismo e suas novidades.
+                                          Aprenda a ganhar dinheiro com turismo local, e aumente sua renda.</p>
+            <a href="./manualdoturismo.php" class="stretched-link"> +Informações </a>
           </div>
           <div class="col-auto d-none d-lg-block">
             <div class="col-md-12 margin-top ">
