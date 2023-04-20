@@ -124,7 +124,15 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
 
                     </div>
 
-                </div><!-- Fim da DIV Conteiner -->
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" >
+                        <h3> Eventos </h3>
+
+                        <?php
+                            include_once './guias/funcoes/buscaEventosPerfilG.php';
+                        ?>
+                    </div>
+
+                </div><!-- Fim da DIV ROW Conteiner -->
 
         </main>
 
