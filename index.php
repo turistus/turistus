@@ -141,15 +141,16 @@ ob_start();
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-400" style="margin-bottom: 50px; min-height: 50px;">
           <div class="col p-4 d-flex flex-column ">
             <h3 class="mb-0"> Manual do Turismo </h3>
-            <p class="card-text mb-auto"> Aqui você se informa sobre turismo e suas novidades.
-                                          Aprenda a ganhar dinheiro com turismo local, e aumente sua renda.</p>
-            <a href="./manualdoturismo.php" class="stretched-link"> +Informações </a>
+            <p class="card-text mb-auto"> Aqui você se informa sobre turismo e suas novidades.</p>
+
           </div>
           <div class="col-auto d-none d-lg-block">
             <div class="col-md-12 margin-top ">
               <img src='<?php echo "./images/camping.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 50px;">
             </div>
           </div>
+          <p class="card-text mb-auto"> Aprenda a ganhar dinheiro com turismo local, e aumente sua renda. </p>
+            <a href="./manualdoturismo.php" class="stretched-link"> +Informações </a>
         </div>
       </div>
 
