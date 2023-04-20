@@ -68,7 +68,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                 <div class="row">
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8" style="min-height: 400px; max-width: 800px; padding: 20px; border: 1px solid black; margin-left:50px; margin-top:50px; ">
 
-
+                    <div class="col-6">
                         <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 text-center">
                             <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
                                 src='<?php echo "../images/guias/$Uid/$fotoGuia"; ?>'>
@@ -82,7 +82,14 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                 </div>
                             </div>
                         </div>
+                    </div>
 
+                    <div class="col-6">
+                    <h3> Eventos </h3>
+                        <?php
+                            include_once '../guias/funcoes/buscaEventosPerfilG.php';
+                        ?>
+                    </div>
 
                         <label>Apelido</label>
                         <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
@@ -117,11 +124,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                         </div>
 
                         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" >
-                            <h3> Eventos </h3>
 
-                            <?php
-                                include_once '../guias/funcoes/buscaEventosPerfilG.php';
-                            ?>
                         </div>
 
 
