@@ -3,7 +3,7 @@
 <?php
 
 //echo $_SESSION['user_id'];
-
+$Uid = filter_input(INPUT_GET, "idguia", FILTER_SANITIZE_NUMBER_INT);
 
 ?>
 
@@ -13,12 +13,7 @@
         <div class="row">
 
 <div class="row">
-        <!-- Titulo-->
-        <div class="row" style=" padding-left: 50px;  margin-bottom: 50px; background: url(../images/bussola.jpg) repeat-x top center;">
-            <div class="col-12">
-            <h1 style="padding-top: 10px; ">Eventos Criados</h1>
-            </div>
-        </div>
+
       <div class="col-md-12">
         <!-- Aqui Busca os eventos criado pelo Guia -->
         <?php
@@ -51,11 +46,13 @@
             <div class="col mb-2 text-center" >
               <div class="card">
                   <div class="card-body" style="padding: 15px;">
-                    <img style="height: 100px; width: 180px; " src= <?php echo "'../images/pontosturisticos/$idPt/$img";?>'><br><br>
+                  <a href="../../pg/view-evento.php?id=<?php echo $id?>" class="btn btn text-dark">
+                    <img style="height: 100px; width: 180px; " src= <?php echo "'../images/pontosturisticos/$idPt/$img";?>'>
+                  </a><br><br>
                     <h5 class="card-title"><?php echo $nome;  ?></h5>
                     <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
                     <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($datah)); ?></h5><br>
-                    <a href="../guias/processaEditarEvento.php?id=<?php echo $id?>" class="btn btn text-dark"> Editar </a>
+
 
                 </div>
               </div>
