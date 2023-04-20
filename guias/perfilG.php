@@ -83,7 +83,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                             </div>
 
 
-                        <div class="col-6" style="transform: scale(0.8); border: 1px solid black;">
+                        <div class="col-12" style="transform: scale(0.8); border: 1px solid black;">
                             <label>Apelido</label>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 " style="border: 1px solid black;">
                                     <h4><? echo $row_guia['apelido'];?> <?php if(isset($dados['apelido']))
@@ -101,7 +101,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                 </div>
 
                                 <label>Celular</label>
-                                <div class="col-xl-10 col-lg-8 col-md-10 col-sm-10 " style="border: 1px solid black;">
+                                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 " style="border: 1px solid black;">
                                     <h4><?php if(isset($dados['celular']))
                                     { echo $dados['celular'];}elseif(isset($row_guia['celular']))
                                     { echo $row_guia['celular']; }?>
