@@ -71,98 +71,92 @@ ob_start();
     </div>
 
 
-<div class="row" >
-<!-- Sempre usar conteiner-->
+  <div class="row" >
+  <!-- Sempre usar conteiner-->
 
 
-    <!-- Primeiro Gad..wae de CADASTRO DE GUIA AVALIADO -->
-      <div class="col-md-6" style="padding-left: 20px;">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-400 position-relative"
-                style="margin-bottom: 50px; height: auto; ">
+      <!-- Primeiro Gad..wae de CADASTRO DE GUIA AVALIADO -->
+        <div class="col-md-6" style="padding-left: 20px;">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-400 position-relative"
+                  style="margin-bottom: 50px; height: auto; ">
 
-        <div class="col p-4 d-flex flex-column position-static" >
-                <h3 class="mb-0"> Divulgue Atividades </h3>
-            <div class="mb-1 text-muted">Somente para maiores de 18 anos devidamente avaliados. </div>
-
-
-
+          <div class="col p-4 d-flex flex-column position-static" >
+                  <h3 class="mb-0"> Divulgue Atividades </h3>
+              <div class="mb-1 text-muted">Somente para maiores de 18 anos devidamente avaliados. </div>
 
 
 
-            <p class="card-text mb-auto"> Crie aqui anúncios de seus serviços e atividades turisticas e conquiste mais vendas para o seu negocio. </p>
-            <a href="./guias/cadastrarguia.php" class="btn btn-outline-primary"> + Publicar </a>
+
+
+
+              <p class="card-text mb-auto"> Crie aqui anúncios de seus serviços e atividades turisticas e conquiste mais vendas para o seu negocio. </p>
+              <a href="./guias/cadastrarguia.php" class="btn btn-outline-primary"> + Publicar </a>
+              </div>
+
+            <div class="col-auto d-none d-lg-block">
+              <div class="col-md-12 margin-top ">
+                <img src='<?php echo "./images/lagoaLaranja.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 50px;">
+              </div>
             </div>
 
-          <div class="col-auto d-none d-lg-block">
-            <div class="col-md-12 margin-top ">
-              <img src='<?php echo "./images/lagoaLaranja.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 50px;">
-            </div>
-          </div>
 
 
-
-        </div>
-      </div>
-
-
-
-
-<div class="col-md-6">
-
-     <!-- Segundoo GAD..wea de Cadastro ou solicitação de PONTO TURISTICO -->
-      <div class="col-md-12">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-400 position-relative " style="margin-bottom: 50px; min-height: 100px; padding-top: 20px;">
-          <div class="col-10 p-4 d-flex flex-column ">
-
-            <h3 class="mb-0">Crie seu Ponto Turístico</h3>
-            <h6><div class="text-muted">Serão aceitos somente informações fieis ao real e verdadeiro. </div></h6>
-          </div>
-
-          <div class="col-auto d-none d-lg-block">
-            <div class="col-md-12 margin-top ">
-              <img src='<?php echo "./images/cachu.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 20px; padding-top: 20px;">
-            </div>
-          </div>
-
-
-          <p class="card-text mb-auto " style="margin-left: 20px;">  Aqui você pode divulgar gratuitamente as belezas de sua região para que outras pessoas encontrem. </p>
-          <div class="col-12 p-4 d-flex flex-column position-static" style="text-align: center;">
-            <a href="solicitacaoNovoPontoTuristico.php"> <button class="btn btn-success" style="color: white; text-decoration: none; ">
-            + Cadastrar Novo Ponto </button></a>
           </div>
         </div>
-      </div>
 
 
-      <!-- terceiro GAD..wea de PROPAGANDA PONTO TURISTICO -->
 
 
-      <div class="col-md-12">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-400" style="margin-bottom: 50px; min-height: 50px;">
-          <div class="col p-4 d-flex flex-column ">
-            <h3 class="mb-0"> Manual do Turismo </h3>
-            <p class="card-text mb-auto"> Aqui você se informa sobre turismo e suas novidades.</p>
+  <div class="col-md-6">
 
-          </div>
-          <div class="col-auto d-none d-lg-block">
-            <div class="col-md-12 margin-top ">
-              <img src='<?php echo "./images/camping.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 50px;">
+      <!-- Segundoo GAD..wea de Cadastro ou solicitação de PONTO TURISTICO -->
+        <div class="col-md-12">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-400 position-relative " style="margin-bottom: 50px; min-height: 100px; padding-top: 20px;">
+            <div class="col-10 p-4 d-flex flex-column ">
+
+              <h3 class="mb-0">Crie seu Ponto Turístico</h3>
+              <h6><div class="text-muted">Serão aceitos somente informações fieis ao real e verdadeiro. </div></h6>
+            </div>
+
+            <div class="col-auto d-none d-lg-block">
+              <div class="col-md-12 margin-top ">
+                <img src='<?php echo "./images/cachu.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 20px; padding-top: 20px;">
+              </div>
+            </div>
+
+
+            <p class="card-text mb-auto " style="margin-left: 20px;">  Aqui você pode divulgar gratuitamente as belezas de sua região para que outras pessoas encontrem. </p>
+            <div class="col-12 p-4 d-flex flex-column position-static" style="text-align: center;">
+              <a href="solicitacaoNovoPontoTuristico.php"> <button class="btn btn-success" style="color: white; text-decoration: none; ">
+              + Cadastrar Novo Ponto </button></a>
             </div>
           </div>
-          <p class="card-text mb-auto" style="margin-left: 20px;"> Aprenda a ganhar dinheiro com turismo local, e aumente sua renda. </p>
-            <a href="./manualdoturismo.php" class="stretched-link"> +Informações </a>
         </div>
-      </div>
-
-</div>
 
 
+        <!-- terceiro GAD..wea de PROPAGANDA PONTO TURISTICO -->
 
 
-</div>
+        <div class="col-md-12">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-400" style="margin-bottom: 50px; min-height: 50px;">
+            <div class="col p-4 d-flex flex-column ">
+              <h3 class="mb-0"> Manual do Turismo </h3>
+              <p class="card-text mb-auto"> Aqui você se informa sobre turismo e suas novidades.</p>
 
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <div class="col-md-12 margin-top ">
+                <img src='<?php echo "./images/camping.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 50px;">
+              </div>
+            </div>
+            <p class="card-text " style="margin: 20px;"> Aprenda a ganhar dinheiro com turismo local, e aumente sua renda.
+              <a href="./manualdoturismo.php" class="stretched-link"> +Informações </a>
+            </p>
+          </div>
+        </div>
+    </div>
 
-
+  </div>
 
                 <div class="row" style="padding: 20px;" >
                   <h2 style="margin:auto;">Turismo Brasileiro</h2>
