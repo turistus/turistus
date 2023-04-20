@@ -72,10 +72,10 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                         border: 1px solid black;
                         margin-top: 50px;
                         ">
-                        <div class="row" style="border: 3px solid green;">
+                        <div class="row" style="border: 5px solid green;">
                                 <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 text-center" style="border: 1px solid black;" >
-                                    <img style="max-height: 200px; max-width: 200px; background-color: gray; "
-                                        src='<?php echo "../images/guias/$Uid/$fotoGuia"; ?>'>
+                                    <p><img style="max-height: 200px; max-width: 200px; background-color: gray; "
+                                        src='<?php echo "../images/guias/$Uid/$fotoGuia"; ?>'></p>
 
                                     <div class="star-ratings" style="margin-left: 15px; text-align: center;" >
                                         <div class="fill-ratings" style="width: <?php echo $row_guia['pontos'] . '%'?>;">
@@ -88,10 +88,10 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                 </div>
 
 
-                                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10" style="transform: scale(0.8); border: 1px solid black;">
+                                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10" style="transform: scale(0.8); ">
                                         <div class="row">
                                         <label>Apelido</label>
-                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 " style="border: 1px solid black;">
+                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 ">
                                                 <h4><? echo $row_guia['apelido'];?> <?php if(isset($dados['apelido']))
                                                 { echo $dados['apelido'];}elseif(isset($row_guia['apelido']))
                                                 { echo $row_guia['apelido']; }?>
@@ -99,7 +99,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                             </div>
 
                                             <label>Nome</label>
-                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 " style="border: 1px solid black;">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 ">
                                                 <h4><?php if(isset($dados['nome']))
                                                 { echo $dados['nome'];}elseif(isset($row_guia['nome']))
                                                 { echo $row_guia['nome']; }?>
@@ -107,7 +107,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                             </div>
 
                                             <label>Celular</label>
-                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 " style="border: 1px solid black;">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 ">
                                                 <h4><?php if(isset($dados['celular']))
                                                 { echo $dados['celular'];}elseif(isset($row_guia['celular']))
                                                 { echo $row_guia['celular']; }?>
@@ -115,14 +115,14 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                             </div>
 
                                             <label>uf</label>
-                                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 " style="border: 1px solid black;">
+                                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 ">
                                                 <h4><?php if(isset($dados['uf']))
                                                 { echo $dados['uf'];}elseif(isset($row_guia['uf']))
                                                 { echo $row_guia['uf']; }?>
                                                 </h4>
                                             </div>
             <br>
-                                                <div class="col-2">
+                                                <div class="col-12">
                                                     <h5><a href="../usuarios/funcoes/avaliarGuia.php?id=<?php echo $Uid?>" class="btn btn text-dark" style="border: 1px solid black;"> Avaliar </a></h5>
                                                 </div>
 
