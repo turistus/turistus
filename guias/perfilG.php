@@ -68,64 +68,64 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                 <div class="row">
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8" style="min-height: 400px; max-width: 800px; padding: 20px; border: 1px solid black; margin-left:50px; margin-top:50px; ">
 
-                    <div class="col-6">
-                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 text-center">
-                            <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
-                                src='<?php echo "../images/guias/$Uid/$fotoGuia"; ?>'>
+                        <div class="col-2">
+                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 text-center">
+                                <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
+                                    src='<?php echo "../images/guias/$Uid/$fotoGuia"; ?>'>
 
-                            <div class="star-ratings" style="margin-left: 15px;" >
-                                <div class="fill-ratings" style="width: <?php echo $row_guia['pontos'] . '%'?>;">
-                                    <span>★★★★★</span>
-                                </div>
-                                <div class="empty-ratings">
-                                    <span>★★★★★</span>
+                                <div class="star-ratings" style="margin-left: 15px;" >
+                                    <div class="fill-ratings" style="width: <?php echo $row_guia['pontos'] . '%'?>;">
+                                        <span>★★★★★</span>
+                                    </div>
+                                    <div class="empty-ratings">
+                                        <span>★★★★★</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-6">
-                    <h3> Eventos </h3>
-                        <?php
-                            include_once '../guias/funcoes/buscaEventosPerfilG.php';
-                        ?>
-                    </div>
-
-                        <label>Apelido</label>
-                        <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
-                            <h4><? echo $row_guia['apelido'];?> <?php if(isset($dados['apelido']))
-                            { echo $dados['apelido'];}elseif(isset($row_guia['apelido']))
-                            { echo $row_guia['apelido']; }?>
-                            </h4>
+                        <div class="col-6">
+                        <h3> Eventos </h3>
+                            <?php
+                                include_once '../guias/funcoes/buscaEventosPerfilG.php';
+                            ?>
                         </div>
 
-                        <label>Nome</label>
-                        <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
-                            <h4><?php if(isset($dados['nome']))
-                            { echo $dados['nome'];}elseif(isset($row_guia['nome']))
-                            { echo $row_guia['nome']; }?>
-                            </h4>
-                        </div>
+                            <label>Apelido</label>
+                            <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
+                                <h4><? echo $row_guia['apelido'];?> <?php if(isset($dados['apelido']))
+                                { echo $dados['apelido'];}elseif(isset($row_guia['apelido']))
+                                { echo $row_guia['apelido']; }?>
+                                </h4>
+                            </div>
 
-                        <label>Celular</label>
-                        <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
-                            <h4><?php if(isset($dados['celular']))
-                            { echo $dados['celular'];}elseif(isset($row_guia['celular']))
-                            { echo $row_guia['celular']; }?>
-                            </h4>
-                        </div>
+                            <label>Nome</label>
+                            <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
+                                <h4><?php if(isset($dados['nome']))
+                                { echo $dados['nome'];}elseif(isset($row_guia['nome']))
+                                { echo $row_guia['nome']; }?>
+                                </h4>
+                            </div>
 
-                        <label>uf</label>
-                        <div class="col-xl-12 col-lg-6 col-md-12 col-sm-12 ">
-                            <h4><?php if(isset($dados['uf']))
-                            { echo $dados['uf'];}elseif(isset($row_guia['uf']))
-                            { echo $row_guia['uf']; }?>
-                            </h4>
-                        </div>
+                            <label>Celular</label>
+                            <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12 ">
+                                <h4><?php if(isset($dados['celular']))
+                                { echo $dados['celular'];}elseif(isset($row_guia['celular']))
+                                { echo $row_guia['celular']; }?>
+                                </h4>
+                            </div>
 
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" >
+                            <label>uf</label>
+                            <div class="col-xl-12 col-lg-6 col-md-12 col-sm-12 ">
+                                <h4><?php if(isset($dados['uf']))
+                                { echo $dados['uf'];}elseif(isset($row_guia['uf']))
+                                { echo $row_guia['uf']; }?>
+                                </h4>
+                            </div>
 
-                        </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4" >
+
+                            </div>
 
 
                             <div class="row" style="padding-left: 10px; margin-top:30px;">

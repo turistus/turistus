@@ -38,14 +38,14 @@ $Uid = filter_input(INPUT_GET, "idguia", FILTER_SANITIZE_NUMBER_INT);
         $result_products = $conn->prepare($query_products);
         $result_products->execute();
         ?>
-        <div class="row row-cols-1 row-cols-md-3">
+        <div class="row row-cols-6 row-cols-md-6">
           <?php
           while ($row_product = $result_products->fetch(PDO::FETCH_ASSOC)) {
             extract($row_product);
           ?>
             <div class="col mb-2 text-center" >
               <div class="card">
-                  <div class="card-body" style="padding: 15px;">
+                  <div class="card-body" style="padding: 10px;">
                   <a href="../../pg/view-evento.php?id=<?php echo $id?>" class="btn btn text-dark">
                     <img style="height: 100px; width: 180px; " src= <?php echo "'../images/pontosturisticos/$idPt/$img";?>'>
                   </a><br><br>
