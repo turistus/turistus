@@ -125,7 +125,7 @@ ob_start();
           </div>
 
 
-          <p class="card-text mb-auto ml-auto">  Aqui você pode divulgar gratuitamente as belezas de sua região para que outras pessoas encontrem. </p>
+          <p class="card-text mb-auto " style="margin-left: 20px;">  Aqui você pode divulgar gratuitamente as belezas de sua região para que outras pessoas encontrem. </p>
           <div class="col-12 p-4 d-flex flex-column position-static" style="text-align: center;">
             <a href="solicitacaoNovoPontoTuristico.php"> <button class="btn btn-success" style="color: white; text-decoration: none; ">
             + Cadastrar Novo Ponto </button></a>
@@ -149,7 +149,7 @@ ob_start();
               <img src='<?php echo "./images/camping.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 50px;">
             </div>
           </div>
-          <p class="card-text mb-auto"> Aprenda a ganhar dinheiro com turismo local, e aumente sua renda. </p>
+          <p class="card-text mb-auto" style="margin-left: 20px;"> Aprenda a ganhar dinheiro com turismo local, e aumente sua renda. </p>
             <a href="./manualdoturismo.php" class="stretched-link"> +Informações </a>
         </div>
       </div>
