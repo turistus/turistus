@@ -3,7 +3,7 @@
 <?php
 
 //echo $_SESSION['user_id'];
-$Uid = filter_input(INPUT_GET, "idguia", FILTER_SANITIZE_NUMBER_INT);
+
 
 ?>
 
