@@ -68,7 +68,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                 <div class="row">
                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8" style="min-height: 400px; max-width: 800px; padding: 20px; border: 1px solid black; margin-left:50px; margin-top:50px; ">
 
-                            <div class="col-2 text-center">
+                            <div class="col-2 text-center" style="border: 1px solid black;" >
                                 <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
                                     src='<?php echo "../images/guias/$Uid/$fotoGuia"; ?>'>
 
@@ -83,7 +83,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                             </div>
 
 
-                        <div class="col-6" style="transform: scale(0.8);">
+                        <div class="col-6" style="transform: scale(0.8); " style="border: 1px solid black;">
                             <label>Apelido</label>
                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 ">
                                     <h4><? echo $row_guia['apelido'];?> <?php if(isset($dados['apelido']))
