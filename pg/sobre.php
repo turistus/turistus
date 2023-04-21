@@ -102,7 +102,7 @@ $usuarioId = isset($_SESSION['user_id']);
         <div class="conteiner-fluid text" style="border: 1px solid black; margin: 20px; padding: 20px;">
 
         <div class="row text-center">
-          <div class="col-md-8 col-md-offset-2">
+          <div class="col-md-12 col-md-offset-2">
             <p>Nós somos uma empresa apaixonada pelo turismo e pela natureza. Nosso objetivo é proporcionar experiências únicas e memoráveis para nossos clientes, ao mesmo tempo em que cuidamos do meio ambiente e contribuímos para a conservação da natureza.</p>
             <p>Nós nos esforçamos para oferecer pacotes turísticos que permitam que nossos clientes explorem as belezas naturais de cada região de forma responsável e sustentável. Acreditamos que a natureza é nossa maior fonte de inspiração e que devemos preservá-la para as futuras gerações.</p>
             <p>Além disso, a nossa equipe é formada por guias experientes e apaixonados pelo que fazem. Eles estão sempre dispostos a compartilhar seus conhecimentos e histórias sobre a natureza e a cultura local, proporcionando uma experiência ainda mais rica e autêntica para nossos clientes.</p>
@@ -112,7 +112,7 @@ $usuarioId = isset($_SESSION['user_id']);
 
 
         <div class="row text-center">
-          <div class="col-md-8 col-md-offset-2">
+          <div class="col-md-12 col-md-offset-2">
             <p>A Turist Us é uma plataforma inovadora que oferece soluções para a contratação de serviços turísticos em todo o Brasil.
       Sabemos que pode ser difícil para turistas encontrar o melhor serviço turístico em uma determinada região afastada das grandes cidades,
       assim como tambem é difícil para quem oferece ou quer oferecer serviços ou divulgar seus negócios.</p>
