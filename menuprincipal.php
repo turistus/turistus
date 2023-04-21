@@ -40,7 +40,22 @@ $idT = isset($row_turista['idT']);
 //echo isset($row_turista['email']) . "Turista <br>";
 
 ?>
+<style>
 
+  /* Animação do cabeçalho */
+  @keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+		.header h2 {
+			animation: fadeIn 2s;
+		}
+
+</style>
 
 <header class="p-2 mb-2 border-bottom" style="font-family: 'EB Garamond'; font-size: 20px;  background-color:#f1f1f3;">
   <div class="container" >
