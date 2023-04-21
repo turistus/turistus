@@ -11,7 +11,7 @@ $idEv=$descreveEvento['idEv'];
 $descricao=$descreveEvento['descricao'];
 $custoEvento=$descreveEvento['custoEvento'];
 $idGuia=$descreveEvento['idGuia'];
-echo "oiii" . $t;
+echo "oiii" . $titulo . $idEv . $descricao . $custoEvento . $idguia;
 // A variável recebe a mensagem de erro
 $msg = "";
 
