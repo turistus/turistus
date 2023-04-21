@@ -6,7 +6,11 @@ include("../connection.php");
 
 //Receber os dados do formulário
 $descreveEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-$t=$descreveEvento['titulo'];
+$titulo=$descreveEvento['titulo'];
+$idEv=$descreveEvento['idEv'];
+$descricao=$descreveEvento['descricao'];
+$custoEvento=$descreveEvento['custoEvento'];
+$idGuia=$descreveEvento['idGuia'];
 echo "oiii" . $t;
 // A variável recebe a mensagem de erro
 $msg = "";
@@ -17,7 +21,7 @@ if ($descreveEvento['titulo']){
 $query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
                     VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
 $add_pagSeg = $conn->prepare($query_pa);
-$add_pagSeg->bindParam(":titulo", "ALOHA", PDO::PARAM_STR);
+$add_pagSeg->bindParam(":titulo", $titulo, PDO::PARAM_STR);
 $add_pagSeg->bindParam(":idEv", $id);
 $add_pagSeg->bindParam(":descricao", $descricao, PDO::PARAM_STR);
 $add_pagSeg->bindParam(":custoEvento", $custoEvento);
