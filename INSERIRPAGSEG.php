@@ -11,12 +11,12 @@ $descreveEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $msg = "";
 
 // Acessar o IF quando o usuário clica no botão
-if ($descreveEvento['BotaoPagar']){
+if ($descreveEvento['FormPagSeg']){
 //Salvar os dados da compra no banco de dados
 $query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
                     VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
 $add_pagSeg = $conn->prepare($query_pa);
-$add_pagSeg->bindParam(":titulo", $nomeEvento, PDO::PARAM_STR);
+$add_pagSeg->bindParam(":titulo", $descreveEvento['titulo'], PDO::PARAM_STR);
 $add_pagSeg->bindParam(":idEv", $id);
 $add_pagSeg->bindParam(":descricao", $descricao, PDO::PARAM_STR);
 $add_pagSeg->bindParam(":custoEvento", $custoEvento);
