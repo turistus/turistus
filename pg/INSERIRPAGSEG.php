@@ -1,0 +1,40 @@
+
+
+<form name="FormPagSeguro" id="FormPagSeguro" action="pagarPagSeguro/EnviarFormPag.php" method="POST">
+    <!-- N�?O EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+    <input type="hidden" name="titulo" id="titulo" value="SORTE" />
+    <input type="hidden" name="idEv" id="idEv" value="33" />
+    <input type="hidden" name="custoEvento" id="custoEvento" value="13.50" />
+    <input type="hidden" name="descricao" id="descricao" value="A Lagoa Perdida" />
+    <input type="hidden" name="idGuia" id="idGuia" value="01" />
+
+    <input id="BtnPagS" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+</form>
+
+<?php
+
+include("../connection.php");
+//Receber os dados do formulário
+$descreveEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+// A variável recebe a mensagem de erro
+$msg = "";
+
+// Acessar o IF quando o usuário clica no botão
+if (isset($descreveEvento['BtnPagS'])){
+//Salvar os dados da compra no banco de dados
+$query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
+VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
+$add_pagSeg = $conn->prepare($query_pa);
+$add_pagSeg->bindParam(":titulo", $descreveEvento['titulo'], PDO::PARAM_STR);
+$add_pagSeg->bindParam(":idEv", $descreveEvento['idEv']);
+$add_pagSeg->bindParam(":descricao", $descreveEvento['descricao'], PDO::PARAM_STR);
+$add_pagSeg->bindParam(":custoEvento", $descreveEvento['custoEvento']);
+$add_pagSeg->bindParam(":idGuia", $descreveEvento['idGuia']);
+$add_pagSeg->bindParam(":dataGerada", "0000-00-00");
+
+$add_pagSeg->execute();
+// FIM DA INSERT EM PAYMENTS PICPAY
+
+ }
+?>
