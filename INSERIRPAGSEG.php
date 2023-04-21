@@ -4,7 +4,7 @@ define('ACCESS', true);
 
 include("../connection.php");
 
-$query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada) VALUES ('ALOHA', 0545, 'ALoha é Familia', 10.80, 1, '0000-00-00')";
+$query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada, payment_url, qrcode) VALUES ('ALOHA', 0545, 'ALoha é Familia', 10.80, 1, '0000-00-00', 'VTNC', 'QRCOMERDA')";
 $add_pagSeg = $conn->prepare($query_pa);
 $add_pagSeg->execute();
 // FIM DA INSERT EM PAYMENTS PICPAY
