@@ -7,12 +7,12 @@
         <title>TESTE INSERIR</title>
     </head>
     <body>
-        <h1> Testando um insert </h1>
+        <h1> Testando um insert a</h1>
 
 
 <?php
 define('ACCESS', true);
-ob_start();
+
 include("../connection.php");
 
 
