@@ -159,9 +159,23 @@ session_start();
 
                                         <div class="col-8 mt-2"  >
 
+
+                                            <form name="FormPagSeg" id="FormPagSeg" action="INSERIRPAGSEG.php" method="POST">
+                                                <input type="hidden" name="titulo" id="titulo" value="Aloha" />
+                                                <input type="hidden" name="idEv" id="idEv" value="155" />
+                                                <input type="hidden" name="descricao" id="descricao" value="Aloha é familia" />
+                                                <input type="hidden" name="custoEvento" id="custoEvento" value="10" />
+                                                <input type="hidden" name="idGuia" id="idGuia" value="01" />
+                                                <input id="BotaoPagar" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                                            </form>
+
+
                                             <a href="pagarPagSeguro/EnviaFormPag.php?id=<?php echo $id;?>" class="btn " >
                                             <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             </a>
+
+
+
                                         </div>
 
 

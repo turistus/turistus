@@ -36,6 +36,7 @@ setcookie("last_insert_id", $last_insert_id, time()+3600);
 setcookie("id", $id, time()+3600);
 
 $msg = "SUCESSO !!!!!";
+header("location: ../pg/pagarPagSeguro/EnviaFormPag.php?id=<?php echo $id;?>");
     }else{}
 }
 ?>
