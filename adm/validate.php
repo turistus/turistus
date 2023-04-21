@@ -7,7 +7,7 @@ if(!defined('ACCESS')){
 
 
 //verifica se usuario esta online
-if((!isset($_SESSION['user_id'])) OR (!isset($_SESSION['user_email'])) OR (!isset($_SESSION['user_key'])) AND (($_SESSION['user_id']) == 2)){
+if((($_SESSION['user_id']) == 2)){
     unset($_SESSION['user_id'], $_SESSION['user_name'], $_SESSION['user_email'], $_SESSION['user_key']);
     $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Erro: Necessário realizar o login para acessar a página!</div>";
     header("Location: index.php");
