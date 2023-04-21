@@ -42,6 +42,7 @@ $add_pagSeg->bindParam(":dataGerada", "0000-00-00");
 
 $add_pagSeg->execute();
 // FIM DA INSERT EM PAYMENTS PICPAY
+echo "ok CHEGOU AQUI DPS DO INSERT";
 
  }else{
     header("Location: ./view-eventos.php");
