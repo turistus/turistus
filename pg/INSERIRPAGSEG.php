@@ -28,7 +28,7 @@ $idGuia = $descreveEvento['titulo'];
 $msg = "";
 
 // Acessar o IF quando o usuário clica no botão
-if (isset($descreveEvento['Formuo'])){
+if (!isset($descreveEvento['Formuo'])){
 //Salvar os dados da compra no banco de dados
 $query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
 VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
