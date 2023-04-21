@@ -16,7 +16,7 @@ echo "oiii" . $titulo . $idEv . $descricao . $custoEvento . $idguia;
 $msg = "";
 
 // Acessar o IF quando o usuário clica no botão
-if ($descreveEvento['titulo'] != false){
+if ($descreveEvento['titulo']){
 //Salvar os dados da compra no banco de dados
 $query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
                     VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
