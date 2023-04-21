@@ -52,8 +52,11 @@ $idT = isset($row_turista['idT']);
 			}
 		}
 		.header h2 {
-			animation: fadeIn 2s;
+			animation: fadeIn 3s;
 		}
+    .ion-icon {
+      animation: fadeIn 3s;
+    }
 
 </style>
 
