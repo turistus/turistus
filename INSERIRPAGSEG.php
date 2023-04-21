@@ -17,6 +17,10 @@ $msg = "";
 
 // Acessar o IF quando o usuário clica no botão
 if ($descreveEvento['titulo'] != true){
+
+echo "nao deu";
+
+}else{
 //Salvar os dados da compra no banco de dados
 $query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
                     VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
@@ -43,12 +47,10 @@ setcookie("id", $id, time()+3600);
 $msg = "SUCESSO !!!!!";
 header("location: ../pg/pagarPagSeguro/EnviaFormPag.php?id=<?php echo $id;?>");
     }
-
     else{
 
     }
-}else{
-    echo "Nao deu ";
+
 }
 ?>
 
