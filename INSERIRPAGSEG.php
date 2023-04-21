@@ -7,6 +7,7 @@ include("../connection.php");
 //Receber os dados do formulário
 $descreveEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
+echo "oiii";
 // A variável recebe a mensagem de erro
 $msg = "";
 
