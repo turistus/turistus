@@ -160,9 +160,56 @@ session_start();
                                         <div class="col-8 mt-2"  >
 
                                             <a href="pagarPagSeguro/EnviaFormPag.php?id=<?php echo $id;?>" class="btn " >
-                                            <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+
+                                                <form name="FormPagSeguro" id="FormPagSeguro" action="pagarPagSeguro/EnviarFormPag.php" method="POST">
+                                                    <!-- N�?O EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                                                    <input type="hidden" name="nome" id="nome" value="" />
+                                                    <input type="hidden" name="id" id="id" value="" />
+                                                    <input type="hidden" name="valor" id="valor" value="" />
+                                                    <input type="hidden" name="descricao" id="descricao" value="" />
+
+                                                    <input id="BtnPagS" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                                                </form>
+
                                             </a>
                                         </div>
+
+                                        <?php
+                            //Receber os dados do formulário
+                            $descreveEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+                            // A variável recebe a mensagem de erro
+                            $msg = "";
+
+                            // Acessar o IF quando o usuário clica no botão
+                            if (isset($descreveEvento['BtnPagS'])){
+                            //Salvar os dados da compra no banco de dados
+                            $query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
+                                                VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
+                            $add_pagSeg = $conn->prepare($query_pa);
+                            $add_pagSeg->bindParam(":titulo", $nomeEvento, PDO::PARAM_STR);
+                            $add_pagSeg->bindParam(":idEv", $id);
+                            $add_pagSeg->bindParam(":descricao", $descricao, PDO::PARAM_STR);
+                            $add_pagSeg->bindParam(":custoEvento", $custoEvento);
+                            $add_pagSeg->bindParam(":idGuia", $idGuia);
+                            $add_pagSeg->bindParam(":dataGerada", "0000-00-00");
+
+                            $add_pagSeg->execute();
+                            // FIM DA INSERT EM PAYMENTS PICPAY
+
+                            if ($add_pagSeg->rowCount()) {
+                                $last_insert_id = $conn->lastInsertId();
+
+                            setcookie("titulo", $nomeEvento, time()+3600);
+                            setcookie("custoEvento", $custoEvento, time()+3600);
+                            setcookie("descricao", $descricao, time()+3600);
+                            setcookie("last_insert_id", $last_insert_id, time()+3600);
+                            setcookie("id", $id, time()+3600);
+
+                            $msg = "SUCESSO !!!!!";
+                                }else{}
+                            }
+                            ?>
 
 
 

@@ -2,7 +2,7 @@
 <?php
 define('ACCESS', true);
 ob_start();
-//ID do EVENTOOO
+//ID do EVENTO para saber os dados pra venda
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
 if (empty($id)) {
@@ -14,7 +14,7 @@ include_once '../../connection.php';
 
 ?>
                 <?php
-                // AQUI DEVE CHAMAR id,guia,valor do EVENTO.
+                // AQUI DEVE CHAMAR id, guia, valor, nome, descricao do evento
                 $query_products = "SELECT *,
                 svcs.id AS GuiaID,
                 svcs.nome AS nomeGuia,
@@ -81,6 +81,7 @@ include_once '../../connection.php';
             <div class="col-md-4">
                 <form name="FormPagamento" id="FormPagamento" action="https://sandbox.pagseguro.uol.com.br/checkout/v2/payment.html" method="get">
                     <!-- N�?O EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+
                     <input type="hidden" name="code" id="code" value="" />
                     <input type="hidden" name="iot" value="button" />
                     <input id="BotaoPagar" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
@@ -98,35 +99,7 @@ include_once '../../connection.php';
 
 
 
-      <?php
-if(true){
-//Salvar os dados da compra no banco de dados
-$query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
-                    VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
-$add_pagSeg = $conn->prepare($query_pa);
-$add_pagSeg->bindParam(":titulo", $nomeEvento, PDO::PARAM_STR);
-$add_pagSeg->bindParam(":idEv", $id);
-$add_pagSeg->bindParam(":descricao", $descricao, PDO::PARAM_STR);
-$add_pagSeg->bindParam(":custoEvento", $custoEvento);
-$add_pagSeg->bindParam(":idGuia", $idGuia);
-$add_pagSeg->bindParam(":dataGerada", "0000-00-00");
 
-$add_pagSeg->execute();
-// FIM DA INSERT EM PAYMENTS PICPAY
-
-if ($add_pagSeg->rowCount()) {
-    $last_insert_id = $conn->lastInsertId();
-
-setcookie("titulo", $nomeEvento, time()+3600);
-setcookie("custoEvento", $custoEvento, time()+3600);
-setcookie("descricao", $descricao, time()+3600);
-setcookie("last_insert_id", $last_insert_id, time()+3600);
-setcookie("id", $id, time()+3600);
-
-$msg = "SUCESSO !!!!!";
-    }else{}
-}
-?>
     </body>
 
     <?php
