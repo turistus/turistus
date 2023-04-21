@@ -42,9 +42,13 @@ setcookie("id", $id, time()+3600);
 
 $msg = "SUCESSO !!!!!";
 header("location: ../pg/pagarPagSeguro/EnviaFormPag.php?id=<?php echo $id;?>");
-    }else{
-        echo "Nao deu ";
     }
+
+    else{
+
+    }
+}else{
+    echo "Nao deu ";
 }
 ?>
 
