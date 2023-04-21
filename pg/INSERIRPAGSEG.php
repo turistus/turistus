@@ -18,17 +18,17 @@ include("../connection.php");
 //Receber os dados do formulário
 $descreveEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-$titulo = $descreveEvento['titulo'];
-$idEv = $descreveEvento['titulo'];
-$descricao = $descreveEvento['titulo'];
-$custoEvento = $descreveEvento['titulo'];
-$idGuia = $descreveEvento['titulo'];
+$titulo = "ALOHA";
+$idEv = 0545;
+$descricao ="ALoha é Familia";
+$custoEvento = 10.80;
+$idGuia = 01;
 
 // A variável recebe a mensagem de erro
 $msg = "";
 
 // Acessar o IF quando o usuário clica no botão
-if (!isset($descreveEvento['Formuo'])){
+if (isset($titulo)){
 //Salvar os dados da compra no banco de dados
 $query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
 VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
