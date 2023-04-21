@@ -21,6 +21,7 @@ if ($descreveEvento['titulo'] != true){
 echo "nao deu";
 
 }else{
+    echo "Entrou no else";
 //Salvar os dados da compra no banco de dados
 $query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
                     VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
@@ -34,6 +35,7 @@ $add_pagSeg->bindParam(":dataGerada", "0000-00-00");
 
 $add_pagSeg->execute();
 // FIM DA INSERT EM PAYMENTS PICPAY
+echo "INSERIU !!!!!!!!!!!!!!!";
 
 if ($add_pagSeg->rowCount()) {
     $last_insert_id = $conn->lastInsertId();
