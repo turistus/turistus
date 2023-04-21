@@ -6,13 +6,13 @@ include("../connection.php");
 
 //Receber os dados do formulário
 $descreveEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
-echo "oiii";
+$t=$descreveEvento['titulo'];
+echo "oiii" . $t;
 // A variável recebe a mensagem de erro
 $msg = "";
 
 // Acessar o IF quando o usuário clica no botão
-if ($descreveEvento['FormPagSeg']){
+if ($descreveEvento['titulo']){
 //Salvar os dados da compra no banco de dados
 $query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
                     VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
