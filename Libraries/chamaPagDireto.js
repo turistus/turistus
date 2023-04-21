@@ -13,14 +13,20 @@ $('#BotaoPagar').on('click',function(event){
             $('#FormPagamento').submit();
         }
 
+
+
     });
 
     $.ajax({
-        url: Root+"../INSERIRPAGSEG.php",
+        caminho: Root+"../INSERIRPAGSEG.php",
         type: 'POST',
         dataType:'html',
         success:function(data){
             $('#titulo').val(data);
+            $('#idEv').val(data);
+            $('#descricao').val(data);
+            $('#custoEvento').val(data);
+            $('#idGuia').val(data);
 
             $('#FormPagamento').submit();
         }
