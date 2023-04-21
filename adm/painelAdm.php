@@ -5,7 +5,7 @@ define('ACCESS', true);
 include_once '../connection.php';
 include_once '../adm/validate.php';
 
-?>  
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -21,7 +21,7 @@ include_once '../adm/validate.php';
         include_once './menu.php';
         ?>
         <div class="container">
-        
+
             <h2 class="display-4 mt-3 mb-3">PAINEL ADM</h2>
             Aqui devemos validar todo pagamentos feito e deixar o status Pago ou refente ao caso.
             Alem de controlar todos os Pedidos Pagos e nao pagos.
@@ -31,14 +31,16 @@ include_once '../adm/validate.php';
                 echo $_SESSION['msg'];
                 unset($_SESSION['msg']);
             }
+
+            echo "Session ID: ". $_SESSION['user_id'];
             ?>
             <hr>
-           
+
 
 
             <div class="row" >
                 <div class="col-md-6" style="padding-left: 20px;">
-                    <h3>Pagina Principal do Administrador</h3>    
+                    <h3>Pagina Principal do Administrador</h3>
                     <p>Acesso liberado apenas para socios, para controlar todas as movimentações de pagamentos e agendamentos de eventos e turismos com GUIAS</p>
                 <hr>
                     <p>Aqui Deve Se MOSTRAR os pontos turisticos mais acessados ou pagos.
@@ -50,7 +52,7 @@ include_once '../adm/validate.php';
 
 
         </div><!-- Div CONTEINR FINAL -->
-                   
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     </body>

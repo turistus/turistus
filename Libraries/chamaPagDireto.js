@@ -12,5 +12,19 @@ $('#BotaoPagar').on('click',function(event){
             $('#code').val(data);
             $('#FormPagamento').submit();
         }
+
     });
+
+    $.ajax({
+        url: Root+"../INSERIRPAGSEG.php",
+        type: 'POST',
+        dataType:'html',
+        success:function(data){
+            $('#titulo').val(data);
+
+            $('#FormPagamento').submit();
+        }
+
+    });
+
 });
