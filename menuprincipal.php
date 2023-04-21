@@ -57,7 +57,7 @@ $idT = isset($row_turista['idT']);
 
 </style>
 
-<header class="p-2 mb-2 border-bottom" style="font-family: 'EB Garamond'; font-size: 20px;  background-color:#f1f1f3;">
+<header class="p-2 mb-2 border-bottom header" style="font-family: 'EB Garamond'; font-size: 20px;  background-color:#f1f1f3;">
   <div class="container" >
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" >
 
