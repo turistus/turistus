@@ -49,7 +49,7 @@ setcookie("titulo", $nomeEvento, time()+3600);
 setcookie("custoEvento", $custoEvento, time()+3600);
 setcookie("descricao", $descricao, time()+3600);
 setcookie("last_insert_id", $last_insert_id, time()+3600);
-setcookie("id", $id, time()+3600);
+setcookie("id", $idEv, time()+3600);
 
 $msg = "SUCESSO !!!!!";
 header("Location: ./pg/pagarPagSeguro/EnviaFormPag.php?id=$idEv");
