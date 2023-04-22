@@ -28,7 +28,8 @@ echo "oiii" . $titulo . $idEv . $descricao . $custoEvento . $idguia;
 //Salvar os dados da compra no banco de dados
 $query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
                     VALUES ($titulo, $idEv, $descricao, $custoEvento, $idguia, '0000-00-00')";
-
+$add_pagSeg = $conn->prepare($query_pa);
+$add_pagSeg->execute();
 // FIM DA INSERT EM PAYMENTS PICPAY
 echo "INSERIU !!!!!!!!!!!!!!!";
 
