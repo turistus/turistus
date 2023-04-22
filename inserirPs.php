@@ -14,7 +14,7 @@ $msg = "";
 if ($descreveEvento['titulo'] != true){
 
 
-echo "nao deu";
+echo "nao foi possivel !";
 
 }else{
 
@@ -45,7 +45,7 @@ if ($add_pagSeg->rowCount()) {
     echo "AQUI È O ID DO AGENDAMENTO ENTAO PASSOU O INSERT !!";
     $last_insert_id = $conn->lastInsertId();
 
-setcookie("titulo", $nomeEvento, time()+3600);
+setcookie("titulo", $titulo, time()+3600);
 setcookie("custoEvento", $custoEvento, time()+3600);
 setcookie("descricao", $descricao, time()+3600);
 setcookie("last_insert_id", $last_insert_id, time()+3600);
