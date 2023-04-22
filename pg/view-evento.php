@@ -160,7 +160,7 @@ session_start();
                                         <div class="col-8 mt-2"  >
 
 
-                                            <form name="FormPagSeg" id="FormPagSeg" action="../inserirPs.php" method="get">
+                                            <form name="FormPagSeg" id="FormPagSeg" action="../inserirPs.php" method="POST">
                                                 <input type="hidden" name="titulo" id="titulo" value="<?php echo $nome;?>" />
                                                 <input type="hidden" name="idEv" id="idEv" value="<?php echo $id;?>" />
                                                 <input type="hidden" name="descricao" id="descricao" value="<?php echo $descricao;?>" />
