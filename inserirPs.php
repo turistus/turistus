@@ -23,25 +23,32 @@ $idEv=$descreveEvento['idEv'];
 $descricao=$descreveEvento['descricao'];
 $custoEvento=$descreveEvento['custoEvento'];
 $idGuia=$descreveEvento['idGuia'];
-echo "oiii" . $titulo . $idEv . $descricao . $custoEvento . $idGuia;
+echo "oiii" . $titulo . $idEv . $descricao . $custoEvento . $idguia;
     echo "Entrou no else";
+//Salvar os dados da compra no banco de dados
+$query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
+                    VALUES (:titulo, :idEv, :descricao, :custoEvento, :idGuia, :dataGerada)";
+$add_pagSeg = $conn->prepare($query_pa);
+$add_pagSeg->bindParam(":titulo", $titulo, PDO::PARAM_STR);
+$add_pagSeg->bindParam(":idEv", $id);
+$add_pagSeg->bindParam(":descricao", $descricao, PDO::PARAM_STR);
+$add_pagSeg->bindParam(":custoEvento", $custoEvento);
+$add_pagSeg->bindParam(":idGuia", $idGuia);
+$add_pagSeg->bindParam(":dataGerada", "0000-00-00");
 
-$inserirPs = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
-                    VALUES ($titulo, $idEv, $descricao, $custoEvento, $idGuia, '0000-00-00')";
-$add_pagSeg = $conn->prepare($inserirPs);
 $add_pagSeg->execute();
-
+// FIM DA INSERT EM PAYMENTS PICPAY
 echo "INSERIU !!!!!!!!!!!!!!!";
 
 if ($add_pagSeg->rowCount()) {
     echo "AQUI È O ID DO AGENDAMENTO ENTAO PASSOU O INSERT !!";
     $last_insert_id = $conn->lastInsertId();
-setcookie("id", $id, time()+3600);
+
 setcookie("titulo", $nomeEvento, time()+3600);
 setcookie("custoEvento", $custoEvento, time()+3600);
 setcookie("descricao", $descricao, time()+3600);
 setcookie("last_insert_id", $last_insert_id, time()+3600);
-
+setcookie("id", $id, time()+3600);
 
 $msg = "SUCESSO !!!!!";
 header("Location: ../pg/pagarPagSeguro/EnviaFormPag.php");
