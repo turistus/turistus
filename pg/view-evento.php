@@ -169,7 +169,7 @@ session_start();
                                                 <input id="BotaoPagar" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             </form>
 
-
+<br>
                                             <a href="pagarPagSeguro/EnviaFormPag.php?id=<?php echo $id;?>" class="btn " >
                                             <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             </a>
