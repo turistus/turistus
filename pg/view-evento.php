@@ -166,7 +166,7 @@ session_start();
                                                 <input type="hidden" name="descricao" id="descricao" value="<?php echo $descricao;?>" />
                                                 <input type="hidden" name="custoEvento" id="custoEvento" value="<?php echo $valor;?>" />
                                                 <input type="hidden" name="idGuia" id="idGuia" value="<?php echo $idDoGuia;?>" />
-                                                <input id="BotaoQuePaga" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                                                <input id="BotaoPagar" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             </form>
 
 
