@@ -3,7 +3,7 @@
 define('ACCESS', true);
 ob_start();
 //ID do EVENTO para saber os dados pra venda
-$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+$id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_NUMBER_INT);
 
 if (empty($id)) {
     header("Location: index.php");
