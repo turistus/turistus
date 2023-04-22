@@ -52,7 +52,7 @@ setcookie("last_insert_id", $last_insert_id, time()+3600);
 setcookie("id", $idEv, time()+3600);
 
 $msg = "SUCESSO !!!!!";
-header("Location: ./pg/pagarPagSeguro/EnviaFormPag.php?id=$idEv");
+header("Location: ./pg/pagarPagSeguro/EnviaFormPag.php?id='$idEv'");
     }
     else{
 
