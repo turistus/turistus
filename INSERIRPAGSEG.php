@@ -41,6 +41,7 @@ $add_pagSeg->execute();
 echo "INSERIU !!!!!!!!!!!!!!!";
 
 if ($add_pagSeg->rowCount()) {
+    echo "AQUI È O ID DO AGENDAMENTO ENTAO PASSOU O INSERT !!"
     $last_insert_id = $conn->lastInsertId();
 
 setcookie("titulo", $nomeEvento, time()+3600);
