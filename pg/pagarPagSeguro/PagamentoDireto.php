@@ -1,6 +1,6 @@
 <?php
 session_start();
-    include_once 'credenciais.php';
+    include_once './credenciais.php';
 
     $nE = $_COOKIE['titulo'];
     $custoEvento = $_COOKIE['custoEvento'];
