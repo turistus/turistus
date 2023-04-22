@@ -161,11 +161,11 @@ session_start();
 
 
                                             <form name="FormPagSeg" id="FormPagSeg" action="../inserirPs.php" method="POST">
-                                                <input type="hidden" name="titulo" id="titulo" value="Alo Brasil" />
-                                                <input type="hidden" name="idEv" id="idEv" value="93" />
-                                                <input type="hidden" name="descricao" id="descricao" value="Aloha é familia" />
-                                                <input type="hidden" name="custoEvento" id="custoEvento" value="99" />
-                                                <input type="hidden" name="idGuia" id="idGuia" value="02" />
+                                                <input type="hidden" name="titulo" id="titulo" value="<?php echo $nome;?>" />
+                                                <input type="hidden" name="idEv" id="idEv" value="<?php echo $id;?>" />
+                                                <input type="hidden" name="descricao" id="descricao" value="<?php echo $descricao;?>" />
+                                                <input type="hidden" name="custoEvento" id="custoEvento" value="<?php echo $valor;?>" />
+                                                <input type="hidden" name="idGuia" id="idGuia" value="<?php echo $idDoGuia;?>" />
                                                 <input id="BotaoPagar" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             </form>
 
