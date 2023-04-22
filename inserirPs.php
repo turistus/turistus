@@ -26,9 +26,9 @@ $idGuia=$descreveEvento['idGuia'];
 echo "oiii" . $titulo . $idEv . $descricao . $custoEvento . $idGuia;
     echo "Entrou no else";
 
-$query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
+$inserirPs = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
                     VALUES ($titulo, $idEv, $descricao, $custoEvento, $idGuia, '0000-00-00')";
-$add_pagSeg = $conn->prepare($query_pa);
+$add_pagSeg = $conn->prepare($inserirPs);
 $add_pagSeg->execute();
 
 echo "INSERIU !!!!!!!!!!!!!!!";
@@ -36,12 +36,12 @@ echo "INSERIU !!!!!!!!!!!!!!!";
 if ($add_pagSeg->rowCount()) {
     echo "AQUI È O ID DO AGENDAMENTO ENTAO PASSOU O INSERT !!";
     $last_insert_id = $conn->lastInsertId();
-
+setcookie("id", $id, time()+3600);
 setcookie("titulo", $nomeEvento, time()+3600);
 setcookie("custoEvento", $custoEvento, time()+3600);
 setcookie("descricao", $descricao, time()+3600);
 setcookie("last_insert_id", $last_insert_id, time()+3600);
-setcookie("id", $id, time()+3600);
+
 
 $msg = "SUCESSO !!!!!";
 header("Location: ../pg/pagarPagSeguro/EnviaFormPag.php");
