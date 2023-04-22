@@ -2,7 +2,7 @@
 <?php
 define('ACCESS', true);
 
-include("../connection.php");
+include("./connection.php");
 
 //Receber os dados do formulário
 $descreveEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
