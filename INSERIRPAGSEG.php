@@ -6,21 +6,24 @@ include("../connection.php");
 
 //Receber os dados do formulário
 $descreveEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-$titulo=$descreveEvento['titulo'];
-$idEv=$descreveEvento['idEv'];
-$descricao=$descreveEvento['descricao'];
-$custoEvento=$descreveEvento['custoEvento'];
-$idGuia=$descreveEvento['idGuia'];
-echo "oiii" . $titulo . $idEv . $descricao . $custoEvento . $idguia;
+
 // A variável recebe a mensagem de erro
 $msg = "";
 
 // Acessar o IF quando o usuário clica no botão
 if ($descreveEvento['titulo'] != true){
 
+
 echo "nao deu";
 
 }else{
+
+$titulo=$descreveEvento['titulo'];
+$idEv=$descreveEvento['idEv'];
+$descricao=$descreveEvento['descricao'];
+$custoEvento=$descreveEvento['custoEvento'];
+$idGuia=$descreveEvento['idGuia'];
+echo "oiii" . $titulo . $idEv . $descricao . $custoEvento . $idguia;
     echo "Entrou no else";
 //Salvar os dados da compra no banco de dados
 $query_pa = "INSERT INTO payments_pagSeg (titulo, idEv, descricao, custoEvento, idGuia, dataGerada)
