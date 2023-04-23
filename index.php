@@ -329,7 +329,7 @@ ob_start();
     document.getElementById("texto-lento").textContent += texto.charAt(i);
     i++;
     if (i > texto.length) clearInterval();
-  }, 200); // tempo em milissegundos entre cada letra aparecer
+  }, 50); // tempo em milissegundos entre cada letra aparecer
 </script>
 
 </body>
