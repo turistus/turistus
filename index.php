@@ -226,7 +226,7 @@ ob_start();
                                      FROM eventos
                                      LEFT JOIN
                                      pontosturisticos AS prod
-                                     ON prod.id=eventos.idPt ORDER BY nomeE ASC LIMIT 4";
+                                     ON prod.id=eventos.idPt ORDER BY nomeE ASC LIMIT 3";
 
                     $result_Eventos = $conn->prepare($queryEventos);
                     $result_Eventos->execute();
@@ -241,8 +241,8 @@ ob_start();
                               extract($row_product);
                             ?>
 
-                      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-10 ">
-                        <div class="card flex-md-row mb-4 sm-12" style="width: 12rem; margin:auto;">
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-10 ">
+                        <div class="card flex-md-row mb-4 sm-12" style="width: 18rem; margin:auto;">
                           <div class="card-body d-flex flex-column ">
                             <strong class="d-inline-block mb-2 text-success">Evento</strong>
                             <h4 class="mb-0 text-center">
@@ -255,8 +255,8 @@ ob_start();
                             </a>
 
 
-                            <p class="card-text text-center mb-auto mt-auto" >Por apenas R$ <?php echo number_format($valor, 2, ",", "."); ?></p>
-                            <br>
+                            <p class="card-text text-center mb-auto " > Por apenas R$ <?php echo number_format($valor, 2, ",", "."); ?></p>
+
 
                             <p class="card-text mb-auto" style="height: 100px; border:1px solid blue; border-radius: 5px; padding-left: 10px;"><?php echo $breveDescricao.'<br>'; ?></p>
                           </div>
