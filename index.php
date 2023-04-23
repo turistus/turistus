@@ -59,10 +59,9 @@ ob_start();
 
           <h1 class="display-4" style="padding: 15px;" > Marketplace Turístico</h1>
 
-          <p class="lead my-2" style="padding: 15px;" >
+          <p id="texto-lento" class="lead my-2" style="padding: 15px;" >
 
-          <br> Descubra os melhores destinos, hotéis e atividades para tornar suas viagens inesquecíveis.
-          <br> Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.</p>
+          <br> </p>
           <p class="lead mb-0"><a href="./pg/sobre.php" class="text-white fw-bold" style="padding: 15px;" >Saiba mais</a></p>
 
           <h3 style="text-align: right; color:black;"><b>Turistus</b></h3><p style="text-align: right; color:white;"> <b> Seu guia de viagem online. </b></p>
@@ -216,7 +215,7 @@ ob_start();
                 <div class="row" style="padding: 20px;" >
                   <h2 style="margin:auto;"> Eventos </h2>
                 </div>
-
+<hr>
                 <?php
                     $queryEventos = "SELECT *, eventos.id AS id,
                                                  eventos.nome AS nomeE,
@@ -321,6 +320,18 @@ ob_start();
   <?php
   include_once 'rodape.php';
   ?>
+
+<script>
+  const texto = "Descubra os melhores destinos, hotéis e atividades para tornar suas viagens inesquecíveis"
+                "Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional";
+
+  let i = 0;
+  setInterval(() => {
+    document.getElementById("texto-lento").textContent += texto.charAt(i);
+    i++;
+    if (i > texto.length) clearInterval();
+  }, 500); // tempo em milissegundos entre cada letra aparecer
+</script>
 
 </body>
 
