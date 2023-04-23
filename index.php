@@ -322,15 +322,14 @@ ob_start();
   ?>
 
 <script>
-  const texto = "Descubra os melhores destinos, hotéis e atividades para tornar suas viagens inesquecíveis"
-                "Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional";
+  const texto = "Descubra os melhores destinos, hotéis e atividades para tornar suas viagens inesquecíveis Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional";
 
   let i = 0;
   setInterval(() => {
     document.getElementById("texto-lento").textContent += texto.charAt(i);
     i++;
     if (i > texto.length) clearInterval();
-  }, 500); // tempo em milissegundos entre cada letra aparecer
+  }, 200); // tempo em milissegundos entre cada letra aparecer
 </script>
 
 </body>
