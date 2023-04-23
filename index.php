@@ -213,7 +213,7 @@ ob_start();
 
         <div class="col-12">
                 <div class="row" style="padding: 20px;" >
-                  <h2 style="margin:auto;"> Eventos </h2>
+                  <h2 style="margin:auto;"> Atividades disponiveis </h2>
                 </div>
 <hr>
                 <?php

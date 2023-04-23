@@ -26,21 +26,23 @@ $uf=filter_input(INPUT_GET, "uf", FILTER_SANITIZE_URL);
 
         <div class="container">
             <h2 class="display-4 mt-5 mb-5">Pontos Turisticos</h2>
-
+            <br>
                 <div class="box-search" >
                     <div class="row ">
-                        <div class=" col-xl-8 col-lg-8 col-md-8 col-sm-8 ">
+                        <div class=" col-xl-8 col-lg-8 col-md-7 col-sm-7 ">
                             <input style="border: 1px solid black;" type="search" class="form-control " id="pesquisar">
                         </div>
-                        <div class=" col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                        <div class=" col-xl-3 col-lg-4 col-md-5 col-sm-5">
                             <button onclick="searchData()"  class="btn btn-primary"> Buscar </button>
-                        </div>
-                        <div class=" col-xl-2 col-lg-2 col-md-2 col-sm-2">
                             <button class="btn btn-success " >
-                                    <a href="../solicitacaoNovoPontoTuristico.php" style="color: white; text-decoration: none;">
-                                        Novo Ponto
-                                    </a>
+                                <a href="../solicitacaoNovoPontoTuristico.php" style="color: white; text-decoration: none;">
+                                    +Novo Ponto
+                                </a>
                             </button>
+
+                        </div>
+                        <div class=" col-xl-1 col-lg-0 col-md-0 col-sm-0">
+
                         </div>
                     </div>
                     <label>Pesquise por Nome ou cidade</label>
