@@ -242,7 +242,7 @@ ob_start();
                             ?>
 
                       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-10 ">
-                        <div class="card flex-md-row mb-4 sm-12" style="width: 18rem; margin:auto;">
+                        <div class="card flex-md-row mb-4 sm-12" style="width: 12rem; margin:auto;">
                           <div class="card-body d-flex flex-column ">
                             <strong class="d-inline-block mb-2 text-success">Evento</strong>
                             <h4 class="mb-0 text-center">
