@@ -170,7 +170,7 @@ ob_start();
     <div class="row">
       <div class="col-md-12">
         <?php
-        $query_products = "SELECT id, name, price, image FROM pontosturisticos ORDER BY id ASC Limit 8";
+        $query_products = "SELECT id, name, price, image FROM pontosturisticos ORDER BY price ASC Limit 4";
         $result_products = $conn->prepare($query_products);
         $result_products->execute();
         ?>
@@ -226,7 +226,7 @@ ob_start();
                                      FROM eventos
                                      LEFT JOIN
                                      pontosturisticos AS prod
-                                     ON prod.id=eventos.idPt ORDER BY nomeE ASC LIMIT 6";
+                                     ON prod.id=eventos.idPt ORDER BY nomeE ASC LIMIT 4";
 
                     $result_Eventos = $conn->prepare($queryEventos);
                     $result_Eventos->execute();
@@ -245,17 +245,19 @@ ob_start();
                         <div class="card flex-md-row mb-4 sm-12" style="width: 18rem; margin:auto;">
                           <div class="card-body d-flex flex-column ">
                             <strong class="d-inline-block mb-2 text-success">Evento</strong>
-                            <h4 class="mb-0">
+                            <h4 class="mb-0 text-center">
                               <p><?php echo $nomeE; ?></p>
                             </h4>
 
-                            <img style="height:190px; width: 235px; margin-left:5px; padding:10px;"   alt="..." src="<?php echo "./images/pontosturisticos/$idPt/$img"; ?>">
+                            <a href="pg/view-evento.php?id=<?php echo $id;?>" class="btn btn-primary">
+                              <img style="height:190px; width: 235px; margin-left:5px; padding:10px;"
+                              alt="..." src="<?php echo "./images/pontosturisticos/$idPt/$img"; ?>">
+                            </a>
 
 
-
-                            <p class="card-text mb-auto" style="margin-left: 20px;" >Por apenas R$ <?php echo number_format($valor, 2, ",", "."); ?></p>
+                            <p class="card-text text-center mb-auto" >Por apenas R$ <?php echo number_format($valor, 2, ",", "."); ?></p>
                             <br>
-                            <h6><a href="pg/view-evento.php?id=<?php echo $id;?>" class="btn btn-primary">Visitar <ion-icon name="pencil-outline"></ion-icon></a></h6>
+
                             <p class="card-text mb-auto" style="height: 100px; border:1px solid blue; border-radius: 5px; padding-left: 10px;"><?php echo $breveDescricao.'<br>'; ?></p>
                           </div>
 
