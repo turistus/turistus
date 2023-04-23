@@ -149,10 +149,10 @@ session_start();
 
                                         ?>
 
-                                        <div class="col-4 mt-1" style="height: 50px; width: 90px;" >
+                                        <div class="col-4 mt-1" >
                                             <p>
                                                 <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn btn-outline-success" >
-                                                <input id="BotaoPagamento" type="image" src="../icones/picpaylogo.png" name="submit" alt="" style="width: 80px; height: 40px;"/> </a>
+                                                <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/> </a>
                                             </p>
 
                                         </div>
