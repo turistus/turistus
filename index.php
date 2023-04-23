@@ -246,12 +246,12 @@ ob_start();
                           <div class="card-body d-flex flex-column ">
                             <strong class="d-inline-block mb-2 text-success">Evento</strong>
                             <h4 class="mb-0 text-center">
-                              <p><?php echo $nomeE; ?></p>
+                              <p><b><?php echo $nomeE; ?></b></p>
                             </h4>
 
-                            <a href="pg/view-evento.php?id=<?php echo $id;?>" class="btn btn-primary">
-                              <img style="height:190px; width: 235px; margin-left:5px; padding:10px;"
-                              alt="..." src="<?php echo "./images/pontosturisticos/$idPt/$img"; ?>">
+                            <a href="pg/view-evento.php?id=<?php echo $id;?>" class="text-center">
+                              <img style="height:190px; width: 235px; "
+                              alt="Ponto Turistico" src="<?php echo "./images/pontosturisticos/$idPt/$img"; ?>">
                             </a>
 
 
