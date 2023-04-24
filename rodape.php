@@ -16,7 +16,7 @@
         <p style="font-size: 15px;">Telefone: (11) 5555-5555</p>
         <p style="font-size: 15px;">E-mail: contato@turistus.com.br</p>
         <div class="social-icons">
-          <a href="#" class="fa fa-facebook" aria-hidden="true" style="background-image: url(./icones/facebook.png);"></a>
+          <img style="height: 20px; width: 20px;" src="./icones/facebook.png">
           <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
           <a href="#" class="fa fa-instagram" aria-hidden="true"></a>
         </div>
@@ -62,7 +62,7 @@
         </ul>
       </div>
       <div class="col-md-9">
-      <p class="mb-1">&copy; 2020-2023 <a href="index.php">Turist Us Turismo - Todos os direitos reservados.</a></p>
+      <p class="mb-1 text-muted">&copy; 2020-2023 <a href="index.php">Turist Us Turismo - Todos os direitos reservados.</a></p>
       </div>
     </div>
 
