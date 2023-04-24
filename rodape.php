@@ -62,7 +62,7 @@
         </ul>
       </div>
       <div class="col-md-9">
-      <p class="mb-1 text-muted">&copy; 2020-2023 <a href="index.php">Turist Us Turismo - Todos os direitos reservados.</a></p>
+      <p class="mb-1 " style="font-size: 15px;">&copy; 2020-2023 <a href="index.php">Turist Us Turismo - Todos os direitos reservados.</a></p>
       </div>
     </div>
 
