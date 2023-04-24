@@ -21,6 +21,7 @@ if ($formRodape['email'] != true){
     $add_pagSeg->execute();
     // FIM DA INSERT EM PAYMENTS PICPAY
     echo "Inscrito !";
+    header("Location: ./index.php");
  }
 
 
