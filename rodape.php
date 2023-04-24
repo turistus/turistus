@@ -17,8 +17,8 @@
         <p style="font-size: 15px;">E-mail: contato@turistus.com.br</p>
         <div class="social-icons">
           <img style="height: 20px; width: 20px;" src="./icones/facebook.png">
-          <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
-          <a href="#" class="fa fa-instagram" aria-hidden="true"></a>
+          <img style="height: 20px; width: 20px;" src="./icones/twitter.png">
+          <img style="height: 20px; width: 20px;" src="./icones/insta.png">
         </div>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6">
