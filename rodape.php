@@ -16,7 +16,7 @@
         <p style="font-size: 15px;">Telefone: (11) 5555-5555</p>
         <p style="font-size: 15px;">E-mail: contato@turistus.com.br</p>
         <div class="social-icons">
-          <a href="#" class="fa fa-facebook" aria-hidden="true"></a>
+          <a href="#" class="fa fa-facebook" aria-hidden="true" style="background-image: url(./icones/facebook.png);"></a>
           <a href="#" class="fa fa-twitter" aria-hidden="true"></a>
           <a href="#" class="fa fa-instagram" aria-hidden="true"></a>
         </div>
@@ -24,26 +24,26 @@
       <div class="col-md-3 col-sm-6 col-xs-6">
         <h5>Navegação</h5>
         <ul class="list-unstyled">
-          <li style="font-size: 15px;" ><a href="#">Eventos de viagem</a></li>
-          <li style="font-size: 15px;" ><a href="#">Destinos</a></li>
-          <li style="font-size: 15px;" ><a href="#">Mapa</a></li>
-          <li style="font-size: 15px;" ><a href="#">Sobre nós</a></li>
-          <li style="font-size: 15px;" ><a href="#">Contato</a></li>
+          <li style="font-size: 15px;" ><a href="./pg/eventos.php">Eventos de viagem</a></li>
+          <li style="font-size: 15px;" ><a href="./pg/pontos-turisticos.php">Destinos</a></li>
+          <li style="font-size: 15px;" ><a href="./pg/mapa.php">Mapa</a></li>
+          <li style="font-size: 15px;" ><a href="./pg/sobre.php">Sobre nós</a></li>
+
         </ul>
       </div>
       <div class="col-md-3 col-sm-3">
         <h5>Dúvidas</h5>
         <ul class="list-inline">
-          <li style="font-size: 15px;"  class="list-item"><a href="#">Como Criar Sua Conta ?</a></li>
-          <li style="font-size: 15px;"  class="list-item"><a href="#">Como Abrir um Evento ?</a></li>
-          <li style="font-size: 15px;"  class="list-item"><a href="#">Posso recebo no mesmo dia ?</a></li>
+          <li style="font-size: 15px;"  class="list-item"><a href="#">Como criar sua conta ?</a></li>
+          <li style="font-size: 15px;"  class="list-item"><a href="#">Como abrir um evento ?</a></li>
+          <li style="font-size: 15px;"  class="list-item"><a href="#">Como funciona o modo de pagamento ?</a></li>
 
         </ul>
       </div>
       <div class="col-md-3 col-sm-3">
         <h5>Newsletter</h5>
         <p>Inscreva-se em nossa newsletter para receber as últimas notícias e promoções.</p>
-        <form action="#">
+        <form action="inserirNewslater.php">
           <div class="form-group">
             <input type="email" class="form-control" placeholder="Seu e-mail">
           </div>
@@ -55,11 +55,10 @@
     <div class="row">
 
       <div class="col-md-12 col-sm-12">
-        <ul class="list-inline text-right">
+        <ul class="list-inline ">
           <li list-inline-item ><a href="#">Termos de uso</a></li>
           <li list-inline-item ><a href="#">Política de privacidade</a></li>
-          <li list-inline-item ><a href="#">Selo de segurança</a></li>
-          <li list-inline-item ><a href="cadastros/cadastrarEmpresa.php" class="nav-link px-2 link-dark"><ion-icon name="bed-outline"></ion-icon></a></li>
+          <li list-inline-item ><a href="#" class="nav-link px-2 link-dark"><ion-icon name="bed-outline"></ion-icon></a></li>
         </ul>
       </div>
       <div class="col-md-9">
