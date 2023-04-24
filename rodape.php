@@ -45,7 +45,7 @@
         <p>Inscreva-se em nossa newsletter para receber as últimas notícias e promoções.</p>
         <form action="./inserirNewslater.php" method="POST">
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="Seu e-mail">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Seu e-mail">
           </div>
           <button type="submit" class="btn btn-primary">Inscrever-se</button>
         </form>
