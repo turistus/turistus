@@ -43,7 +43,7 @@
       <div class="col-md-3 col-sm-3">
         <h5>Newsletter</h5>
         <p>Inscreva-se em nossa newsletter para receber as últimas notícias e promoções.</p>
-        <form action="inserirNewslater.php">
+        <form action="./inserirNewslater.php" method="POST">
           <div class="form-group">
             <input type="email" class="form-control" placeholder="Seu e-mail">
           </div>
