@@ -305,7 +305,7 @@ ob_start();
               <div class="card" style="padding: 20px; text-align: center; background-color: #f1f1f3;">
                 <div class="row " style="height:60px; ">
                   <div class="col-12 text-center">
-                  <h5 class="card-title" style=" margin-bottom: 20px;  "><?php echo $nome; ?></h5>
+                  <h5 class="card-title" style=" margin-bottom: 12px;  "><?php echo $nome; ?></h5>
                   </div>
                 </div>
 
