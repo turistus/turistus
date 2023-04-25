@@ -304,7 +304,9 @@ ob_start();
 
               <div class="card" style="padding: 20px; text-align: center; background-color: #f1f1f3;">
                 <div class="row " style="height:60px; ">
+                  <div class="col-12 text-center">
                   <h5 class="card-title" style=" margin-bottom: 20px;  "><?php echo $nome; ?></h5>
+                  </div>
                 </div>
 
                 <a href="./guias/perfilG.php?idguia=<?php echo $idProfi?>"> <img style="height: 140px; max-height: 200px; max-width: 400px; margin:auto; border:1px solid green; box-shadow: 3px 2px 5px black;" src='<?php echo "./images/guias/$id/$image"; ?>' class="card-img-top" alt="..."></a>
