@@ -36,8 +36,8 @@ ob_start();
     }
 
     .rotated {
-  transform: rotate(-13deg); /* Equal to rotateZ(45deg) */
-  background-color: #F08080;
+  transform: rotate(-9deg); /* Equal to rotateZ(45deg) */
+  background-color: #008B8B;
 }
 
   </style>
