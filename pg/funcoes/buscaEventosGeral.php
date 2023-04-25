@@ -80,7 +80,7 @@
             ?>
 
 
-              <div class="col-10 col-sm-6 mb-4 text-center " >
+              <div class="col-12 col-sm-6 mb-4 text-center " >
                     <div class="card-body" >
                       <h5 class="card-title " style="height: 40px;" ><?php echo $nome; ?></h5>
 
