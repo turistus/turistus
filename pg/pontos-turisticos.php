@@ -79,7 +79,7 @@ include_once '../connection.php';
                         extract($row_product);
 
                         ?>
-                        <div class="col-5 mb-4 text-center">
+                        <div class="col-6 mb-4 text-center">
                             <div class="card" >
                                 <img style="max-height: 200px" src='<?php echo "../images/pontosturisticos/$id/$image"; ?>' class="card-img-top" alt="...">
                                 <div class="card-body">
