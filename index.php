@@ -188,7 +188,7 @@ ob_start();
 
               <div class="card" style="padding: 20px; text-align: center; ">
                 <div class="row" style="height:60px; ">
-                  <h5 class="card-title" style=" margin-bottom: 12px;  "><?php echo $name; ?></h5>
+                  <h5 class="card-title col-12 text-center"" style=" margin-bottom: 12px;  "><?php echo $name; ?></h5>
                 </div>
 
                 <img style="height: 140px; max-height: 200px; max-width: 400px; margin:auto; border:1px solid green; box-shadow: 3px 2px 5px black;" src='<?php echo "./images/pontosturisticos/$id/$image"; ?>' class="card-img-top" alt="...">
