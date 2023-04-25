@@ -245,7 +245,7 @@ ob_start();
                               extract($row_product);
                             ?>
 
-                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-10 rotated" >
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-10 rotated"  style="padding: 10px;" >
                         <div class="card flex-md-row mb-4 sm-12" style="width: 18rem; margin:auto;">
                           <div class="card-body d-flex flex-column ">
                             <strong class="d-inline-block mb-2 text-success">Evento</strong>
