@@ -35,6 +35,11 @@ ob_start();
       }
     }
 
+    .rotated {
+  transform: rotate(-40deg); /* Equal to rotateZ(45deg) */
+  background-color: pink;
+}
+
   </style>
 
 
@@ -213,7 +218,7 @@ ob_start();
 
         <div class="col-12">
                 <div class="row" style="padding: 20px;" >
-                  <h2 style="margin:auto;"> Atividades disponiveis </h2>
+                  <h2 style="margin:auto; "> Atividades disponiveis </h2>
                 </div>
 <hr>
                 <?php
@@ -240,7 +245,7 @@ ob_start();
                               extract($row_product);
                             ?>
 
-                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-10 ">
+                      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-10 rotated" >
                         <div class="card flex-md-row mb-4 sm-12" style="width: 18rem; margin:auto;">
                           <div class="card-body d-flex flex-column ">
                             <strong class="d-inline-block mb-2 text-success">Evento</strong>
