@@ -130,7 +130,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                         <label> Valor Único </label>
-                        <input class="form-control" type="text" name="valor" for="valorInput" id="valor"
+                        <input class="form-control" type="text" name="valor" for="valorInput" id="valorInput"
                         value="<?php if(isset($dados_evento['valor']))
                         { echo $dados_evento['valor'];}elseif(isset($row_evento['valor']))
                         { echo $row_evento['valor']; }?>"required> <br>
@@ -140,7 +140,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
 
                         <label for="nVagas">  N° Vagas  </label>
-                                <select id="nVagas" name="nVagas" class="custom-select d-block w-100 uf" required>
+                                <select id="nVagas" name="nVagas" class="custom-select d-block w-100 nVagas" required>
                                     <option value="">Selecione</option>
                                     <option value="01">01</option>
                                     <option value="02">02</option>
