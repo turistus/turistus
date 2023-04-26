@@ -54,8 +54,8 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 </style>
 
 <body>
-<main class="content" style="font-family: 'Acme'; font-size: 20px;">
-    <div class="shadow-lg p-3 mb-5 bg-white rounded" style="border: solid 1px black;"  id="popupEditaEvento" style="display:none;">
+<main class="content" style="font-family: 'Acme'; font-size: 20px;" id="popupEditaEvento" style="display:none;">
+    <div class="shadow-lg p-3 mb-5 bg-white rounded" style="border: solid 1px black;"  >
         <!-- PRIMEIRA LINHA -->
         <div class="row" >
 
@@ -115,6 +115,14 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                         value="<?php if(isset($dados_evento['nome']))
                         { echo $dados_evento['nome'];}elseif(isset($row_evento['nome']))
                         { echo $row_evento['nome']; }?>"required> <br>
+                    </div>
+
+                    <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
+                        <label>	Breve Descricao </label>
+                        <input class="form-control" type="text" name="breveDescricao" id="breveDescricao"
+                        value="<?php if(isset($dados_evento['breveDescricao']))
+                        { echo $dados_evento['breveDescricao'];}elseif(isset($row_evento['breveDescricao']))
+                        { echo $row_evento['breveDescricao']; }?>"required> <br>
                     </div>
 
                     <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
@@ -259,7 +267,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                     </div>
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
 
-                    <label> Total </label>
+                    <label> Total R$ </label>
                              <!-- totais aqui  -->
 
                     <input class="form-control" type="text"  name="totala" id="totala"
@@ -310,13 +318,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                         { echo $row_evento['datah']; }?>"required> <br>
                     </div>
 
-                    <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
-                        <label>	Breve Descricao </label>
-                        <input class="form-control" type="text" name="breveDescricao" id="breveDescricao"
-                        value="<?php if(isset($dados_evento['breveDescricao']))
-                        { echo $dados_evento['breveDescricao'];}elseif(isset($row_evento['breveDescricao']))
-                        { echo $row_evento['breveDescricao']; }?>"required> <br>
-                    </div>
+
 
                 </div>
 
@@ -349,16 +351,6 @@ function closePopup() {
    document.getElementById("popupEditaEvento").style.display = "none";
 }
 
-document.getElementById("nVagas").addEventListener("change", function() {
-   calcularTotal();
-});
-
-function calcularTotal() {
-   var selectValor = parseInt(document.getElementById("nVagas").value);
-   var inputValor = parseInt(document.getElementById("valorInput").value);
-   var resultado = selectValor === 2 ? inputValor * selectValor : selectValor * inputValor;
-   document.getElementById("totalInput").value = resultado;
-}
 
 </script>
 
