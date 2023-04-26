@@ -38,8 +38,23 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
         <title>Editar Eventos</title>
     </head>
 
+<style>
+
+#popupEditaEvento {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: #fff;
+   border: 1px solid #ccc;
+   padding: 20px;
+   width: 500px;
+   max-width: 100%;
+}
+</style>
+
 <body>
-<main class="content" style="font-family: 'Acme'; font-size: 20px;" id="popupEditaEvento" style="display:none;">
+<main class="content" style="font-family: 'Acme'; font-size: 20px;" id="popupEditaEvento">
     <div class="shadow-lg p-3 mb-5 bg-white rounded" style="border: solid 1px black;"  >
         <!-- PRIMEIRA LINHA -->
         <div class="row" >
