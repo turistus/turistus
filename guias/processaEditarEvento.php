@@ -153,7 +153,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                     <option value="19">19</option>
                                     <option value="20">20</option>
 
-                                </select>
+                                </select><br>
 
                                 <select id="nVagas" name="nVagas" class="custom-select d-block w-100 nVagas" required>
                                     <option value="">Selecione</option>
@@ -178,7 +178,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                     <option value="19">19</option>
                                     <option value="20">20</option>
 
-                                </select>
+                                </select><br>
 
                                 <select id="nVagas" name="nVagas" class="custom-select d-block w-100 nVagas" required>
                                     <option value="">Selecione</option>
@@ -203,7 +203,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                     <option value="19">19</option>
                                     <option value="20">20</option>
 
-                                </select>
+                                </select><br>
 
                                 <select id="nVagas" name="nVagas" class="custom-select d-block w-100 nVagas" required>
                                     <option value="">Selecione</option>
@@ -228,7 +228,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                     <option value="19">19</option>
                                     <option value="20">20</option>
 
-                                </select>
+                                </select><br>
 
                                 <select id="nVagas" name="nVagas" class="custom-select d-block w-100 nVagas" required>
                                     <option value="">Selecione</option>
@@ -253,7 +253,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                     <option value="19">19</option>
                                     <option value="20">20</option>
 
-                                </select>
+                                </select><br>
 
 
                     </div>
@@ -262,27 +262,27 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                     <label> Total </label>
                              <!-- totais aqui  -->
 
-                    <input class="form-control" type="text" style="height: 100px;" name="totala" id="totala"
+                    <input class="form-control" type="text"  name="totala" id="totala"
                         value="<?php if(isset($dados_evento['totala']))
                         { echo $dados_evento['totala'];}elseif(isset($row_evento['totala']))
                         { echo $row_evento['totala']; }?>"required> <br>
 
-                    <input class="form-control" type="text" style="height: 100px;" name="totalb" id="totalb"
+                    <input class="form-control" type="text"  name="totalb" id="totalb"
                         value="<?php if(isset($dados_evento['totalb']))
                         { echo $dados_evento['totalb'];}elseif(isset($row_evento['totalb']))
                         { echo $row_evento['totalb']; }?>"required> <br>
 
-                    <input class="form-control" type="text" style="height: 100px;" name="totalc" id="totalc"
+                    <input class="form-control" type="text"  name="totalc" id="totalc"
                         value="<?php if(isset($dados_evento['totalc']))
                         { echo $dados_evento['totalc'];}elseif(isset($row_evento['totalc']))
                         { echo $row_evento['totalc']; }?>"required> <br>
 
-                    <input class="form-control" type="text" style="height: 100px;" name="totald" id="totald"
+                    <input class="form-control" type="text"  name="totald" id="totald"
                         value="<?php if(isset($dados_evento['totald']))
                         { echo $dados_evento['totald'];}elseif(isset($row_evento['totald']))
                         { echo $row_evento['totald']; }?>"required> <br>
 
-                    <input class="form-control" type="text" style="height: 100px;" name="totale" id="totale"
+                    <input class="form-control" type="text"  name="totale" id="totale"
                         value="<?php if(isset($dados_evento['totale']))
                         { echo $dados_evento['totale'];}elseif(isset($row_evento['totale']))
                         { echo $row_evento['totale']; }?>"required> <br>
