@@ -344,7 +344,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 <script>
 
   function editaEvento() {
-   document.getElementById("popupEditaEvento").style.display = "block";
+   document.getElementById("popupEditaEvento").style.display = "inline";
 }
 
 function closePopup() {
