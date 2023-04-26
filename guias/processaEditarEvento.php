@@ -159,6 +159,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                     <div class="col-12">
                         <input class="btn btn text-dark " type="submit" name="deletaEvento" value="Deletar Evento">
+                        <button onclick="closePopup()">Fechar</button>
                     </div>
 
                     <div class="col-12">
