@@ -126,16 +126,62 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                     </div>
 
-                    <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
-                        <label> Valor </label>
-                        <input class="form-control" type="text" name="valor" id="valor"
+
+
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <label> Valor Único </label>
+                        <input class="form-control" type="text" name="valor" for="valorInput" id="valor"
                         value="<?php if(isset($dados_evento['valor']))
                         { echo $dados_evento['valor'];}elseif(isset($row_evento['valor']))
                         { echo $row_evento['valor']; }?>"required> <br>
                     </div>
 
+
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                        <label> Data </label>
+
+                        <label for="nVagas">  N° Vagas  </label>
+                                <select id="nVagas" name="nVagas" class="custom-select d-block w-100 uf" required>
+                                    <option value="">Selecione</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+
+                                </select>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                        <label> Valor Total </label>
+                        <input class="form-control" type="number" id="totalInput" name="totalInput" readonly> <br>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <label> Data inicial </label>
+                        <input class="form-control" type="date" name="datah" id="datah"
+                        value="<?php if(isset($dados_evento['datah']))
+                        { echo $dados_evento['datah'];}elseif(isset($row_evento['datah']))
+                        { echo $row_evento['datah']; }?>"required> <br>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <label> Data Encerramento </label>
                         <input class="form-control" type="date" name="datah" id="datah"
                         value="<?php if(isset($dados_evento['datah']))
                         { echo $dados_evento['datah'];}elseif(isset($row_evento['datah']))
@@ -159,11 +205,11 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                     <div class="col-12">
                         <input class="btn btn text-dark " type="submit" name="deletaEvento" value="Deletar Evento">
-                        <button onclick="closePopup()">Fechar</button>
+
                     </div>
 
                     <div class="col-12">
-                        <input class="btn btn text-dark " type="reset" name="bt_limpar" value="Limpar campos">
+                        <button onclick="closePopup()">Fechar</button>
                     </div>
                 </form>
             </div>
@@ -180,6 +226,18 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 function closePopup() {
    document.getElementById("popupEditaEvento").style.display = "none";
 }
+
+document.getElementById("nVagas").addEventListener("change", function() {
+   calcularTotal();
+});
+
+function calcularTotal() {
+   var selectValor = parseInt(document.getElementById("nVagas").value);
+   var inputValor = parseInt(document.getElementById("valorInput").value);
+   var resultado = selectValor === 2 ? inputValor * selectValor : selectValor;
+   document.getElementById("totalInput").value = resultado;
+}
+
 </script>
 
 </body>
