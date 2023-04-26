@@ -234,7 +234,7 @@ document.getElementById("nVagas").addEventListener("change", function() {
 function calcularTotal() {
    var selectValor = parseInt(document.getElementById("nVagas").value);
    var inputValor = parseInt(document.getElementById("valorInput").value);
-   var resultado = selectValor === 2 ? inputValor * selectValor : selectValor;
+   var resultado = selectValor === 2 ? inputValor * selectValor : selectValor * inputValor;
    document.getElementById("totalInput").value = resultado;
 }
 
