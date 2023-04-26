@@ -23,12 +23,12 @@ $Uid = $_SESSION['user_id'];
         <!-- Aqui Busca os eventos criado pelo Guia -->
         <?php
         $query_products = "SELECT *,
-        eventos.id AS id, 
-        eventos.nome AS nome, 
-        eventos.valor AS valor, 
+        eventos.id AS id,
+        eventos.nome AS nome,
+        eventos.valor AS valor,
         eventos.idGuia AS idGuia,
 
-        idPt, 
+        idPt,
         datah,
 
         pontosturisticos.id AS pontoId,
@@ -36,8 +36,8 @@ $Uid = $_SESSION['user_id'];
 
         servicos.id AS IDdoGUIA
 
-        
-        FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt 
+
+        FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
         INNER JOIN servicos ON servicos.id = eventos.idGuia WHERE eventos.idGuia = $Uid ORDER BY eventos.id DESC";
 
         $result_products = $conn->prepare($query_products);
@@ -48,14 +48,14 @@ $Uid = $_SESSION['user_id'];
           while ($row_product = $result_products->fetch(PDO::FETCH_ASSOC)) {
             extract($row_product);
           ?>
-            <div class="col mb-2 text-center" >
+            <div class="col mb-2 text-center">
               <div class="card">
                   <div class="card-body" style="padding: 15px;">
                     <img style="height: 100px; width: 180px; " src= <?php echo "'../images/pontosturisticos/$idPt/$img";?>'><br><br>
                     <h5 class="card-title"><?php echo $nome;  ?></h5>
                     <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
                     <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($datah)); ?></h5><br>
-                    <a href="../guias/processaEditarEvento.php?id=<?php echo $id?>" class="btn btn text-dark"> Editar </a>
+                    <a href="../guias/processaEditarEvento.php?id=<?php echo $id?>" class="btn btn text-dark" onclick="editaEvento()"> Editar </a>
 
                 </div>
               </div>
@@ -70,3 +70,5 @@ $Uid = $_SESSION['user_id'];
         </div>
     </div>
   </main>
+
+
