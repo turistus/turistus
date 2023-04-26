@@ -126,11 +126,11 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                     </div>
 
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
 
                         <label for="nVagas">  N° Vagas  </label>
                              <!-- select AQUI   -->
-                        <select id="nVagas" name="nVagas" class="custom-select d-block w-100 nVagas" required>
+                                <select id="nVagas" name="nVagas" class="custom-select d-block w-100 nVagas" required>
                                     <option value="">Selecione</option>
                                     <option value="01">01</option>
                                     <option value="02">02</option>
@@ -153,7 +153,8 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                     <option value="19">19</option>
                                     <option value="20">20</option>
 
-                        </select>
+                                </select>
+                                <label> Total </label>
                         <input class="form-control" type="text" name="valor" for="valorInput" id="valorInput"
                         value="<?php if(isset($dados_evento['valor']))
                         { echo $dados_evento['valor'];}elseif(isset($row_evento['valor']))
@@ -184,7 +185,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                     <option value="20">20</option>
 
                                 </select>
-                                <input class="form-control" type="text" name="valor" for="valorInput" id="valorInput"
+                        <input class="form-control" type="text" name="valor" for="valorInput" id="valorInput"
                         value="<?php if(isset($dados_evento['valor']))
                         { echo $dados_evento['valor'];}elseif(isset($row_evento['valor']))
                         { echo $row_evento['valor']; }?>"required> <br>
@@ -287,16 +288,6 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
 
                     </div>
-
-
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                        <label> Total </label>
-                        <input class="form-control" type="text" name="valor" for="valorInput" id="valorInput"
-                        value="<?php if(isset($dados_evento['valor']))
-                        { echo $dados_evento['valor'];}elseif(isset($row_evento['valor']))
-                        { echo $row_evento['valor']; }?>"required> <br>
-                    </div>
-
 
 
 
