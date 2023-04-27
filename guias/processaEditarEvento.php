@@ -28,7 +28,15 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
 ?>
 
-
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="shortcut icon" href="../images/icon/favicon.ico" >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <title>Editar Eventos</title>
+    </head>
 
 <style>
 
@@ -45,8 +53,8 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 }
 </style>
 
-<body>
-<main class="content" style="font-family: 'Acme'; font-size: 20px;" id="popupEditaEvento">
+<body id="popupEditaEvento">
+<main class="content" style="font-family: 'Acme'; font-size: 20px;" >
     <div class="shadow-lg p-3 mb-5 bg-white rounded" style="border: solid 1px black;"  >
         <!-- PRIMEIRA LINHA -->
         <div class="row" >
@@ -357,3 +365,4 @@ function closePopup() {
 </script>
 
 </body>
+</html>
