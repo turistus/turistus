@@ -135,6 +135,14 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                     </div>
 
+
+
+
+
+
+
+
+
                     <div id="bloco" class="col-12 form-group">
 
                         <div class="col-4 ">
@@ -170,9 +178,18 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                 <input class="form-control" type="text"  name="total[]" id="total" value="" required> <br>
 
                         </div>
+                        <div class="col-3 ">
                         <button type="button" onclick="adicionarCampo()"> + </button>
-
+                        </div>
                     </div>
+
+
+
+
+
+
+
+
 
 
 
