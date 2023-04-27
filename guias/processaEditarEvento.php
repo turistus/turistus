@@ -190,7 +190,6 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                         <i class="fa-regular fa-images"></i>
                         <input type="file" name="attachment" id="attachment" onchange="previewImagem()" required><br><br>
 
-             			<input type="submit" value="Enviar" name="SendAddMsg" >
                     </div>
 
 
@@ -231,7 +230,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                                         <option value="18">18 Pessoas</option>
                                                         <option value="19">19 Pessoas</option>
                                                         <option value="20">20 Pessoas</option>
-                                                </select><br>
+                                                </select>
 
                                             <label> Total R$ </label>
                                                 <input class="form-control col-3" type="text"  name="total[]" id="total" value="" required>
