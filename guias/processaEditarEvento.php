@@ -144,7 +144,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                         <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
                                     <div class="form-group" id="bloco">
                                             <label>  N° Vagas  </label>
                                                 <!-- select AQUI   -->
@@ -174,7 +174,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label> Total R$ </label>
-                                                <input class="form-control" type="text"  name="total[]" id="total" value="" required> <br>
+                                                <input class="form-control" type="text"  name="total[]" id="total" value="" required>
                                             <button type="button" onclick="adicionarCampo()"> + </button>
                                     </div>
                             </div>
