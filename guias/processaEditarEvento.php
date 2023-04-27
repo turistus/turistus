@@ -48,8 +48,9 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
    background-color: #fff;
    border: 1px solid #ccc;
    padding: 20px;
-   width: 500px;
+   width: 600px;
    max-width: 100%;
+   float: left;
 }
 </style>
 
@@ -135,7 +136,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                     </div>
 
                     <div id="blocoVagas" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 form-group">
-                        <div class="col-6 ">
+                        <div class="col-4 ">
 
                             <label for="vagas">  N° Vagas  </label>
                                 <!-- select AQUI   -->
@@ -164,7 +165,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                                     </select><br>
                         </div>
-                        <div class="col-6 ">
+                        <div class="col-8 ">
                             <label> Total R$ </label>
                                 <!-- totais aqui  -->
 
