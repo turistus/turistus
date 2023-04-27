@@ -165,7 +165,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                                     </select><br>
                         </div>
-                        <div class="col-8 ">
+                        <div class="col-5 ">
                             <label> Total R$ </label>
                                 <!-- totais aqui  -->
 
@@ -174,8 +174,8 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                 { echo $dados_evento['total'];}elseif(isset($row_evento['total']))
                                 { echo $row_evento['total']; }?>"required> <br>
 
-                            <button type="button" onclick="adicionarCampo()"> + </button>
                         </div>
+                        <button type="button" onclick="adicionarCampo()"> + </button>
                     </div>
 
 
