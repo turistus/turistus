@@ -54,7 +54,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 }
 </style>
 
-<body id="popupEditaEvento">
+<body>
 <main class="content" style="font-family: 'Acme'; font-size: 20px;" >
     <div class="shadow-lg p-3 mb-5 bg-white rounded" style="border: solid 1px black;"  >
         <!-- PRIMEIRA LINHA -->
@@ -144,11 +144,9 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
 
                     <div class="form-group" id="bloco">
-
-                        <div class="col-4 ">
-                            <label for="vagas">  N° Vagas  </label>
+                            <label>  N° Vagas  </label>
                                 <!-- select AQUI   -->
-                                    <select id="vagas" name="vagas[]" class="custom-select d-block w-100 " required>
+                                <select id="vagas" name="vagas[]" class="custom-select d-block w-100 " required>
                                         <option value="">Selecione</option>
                                         <option value="01">01 Pessoa</option>
                                         <option value="02">02 Pessoas</option>
@@ -170,17 +168,10 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                         <option value="18">18 Pessoas</option>
                                         <option value="19">19 Pessoas</option>
                                         <option value="20">20 Pessoas</option>
-
-                                    </select><br>
-                        </div>
-                        <div class="col-5 ">
+                                </select><br>
                             <label> Total R$ </label>
                                 <input class="form-control" type="text"  name="total[]" id="total" value="" required> <br>
-
-                        </div>
-                        <div class="col-3 ">
-                        <button type="button" onclick="adicionarCampo()"> + </button>
-                        </div>
+                            <button type="button" onclick="adicionarCampo()"> + </button>
                     </div>
 
 
