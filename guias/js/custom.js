@@ -29,7 +29,7 @@ function maskPhone(numberPhone){
 function adicionarCampo(){
     var controleCampo = 1;
     controleCampo++;
-    document.getElementById('formulario').insertAdjacentHTML('beforeend','<div class="form-group" id="bloco">'+
+    document.getElementById('formulario').insertAdjacentHTML('beforeend','<div class="form-group" id="bloco' + controleCampo +'">'+
     '<label>  N° Vagas  </label>'+
         '<select id="vagas" name="vagas[]" class="custom-select d-block w-100 " required>'+
                 '<option value="">Selecione</option>'+
@@ -56,7 +56,7 @@ function adicionarCampo(){
         '</select><br>'+
     '<label> Total R$ </label>'+
         '<input class="form-control" type="text"  name="total[]" id="total" value="" required> <br>'+
-    '</div><button type="button" onclick="removerCampo()"> - </button></div></div>');
+    '</div><button type="button" id="'+ controleCampo +'" onclick="removerCampo('+ controleCampo +')"> - </button></div></div>');
 }
 
 function removerCampo(idCampo){
