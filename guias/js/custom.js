@@ -31,7 +31,7 @@ function adicionarCampo(){
     controleCampo++;
     document.getElementById('formulario').insertAdjacentHTML('beforeend','<div id="formulario" class="col-xl-12 col-lg-12 col-md-12 col-sm-12" >'+
     '<div class="form-group" id="bloco' + controleCampo +'" style="border: 1px solid green; padding:15px;">'+
-    '<button type="button" id="'+ controleCampo +'" onclick="removerCampo('+ controleCampo +')"> - </button>'+
+    '<button type="button" id="'+ controleCampo +'" onclick="removerCampo('+ controleCampo +')"> - </button><br>'+
     '<label>  N° Vagas  </label>'+
         '<select id="vagas" name="vagas[]" class="custom-select d-block col-3 " required>'+
                 '<option value="">Selecione</option>'+
