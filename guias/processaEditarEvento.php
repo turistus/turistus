@@ -328,6 +328,38 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                     { echo $row_evento['encontro']; }?>"required> <br>
                     </div>
 
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+
+                        <div class="col-auto my-1">
+
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="hotelaria" name="hotelaria" value="1">
+                                <label class="custom-control-label" for="hotelaria"> Transporte <i class='fa-solid fa-hotel'></i></label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+
+                        <div class="col-auto my-1">
+
+                            <div class="custom-control custom-checkbox mr-sm-2">
+                                <input type="checkbox" class="custom-control-input" id="hotelaria" name="hotelaria" value="1">
+                                <label class="custom-control-label" for="hotelaria"> Alimentação <i class='fa-solid fa-hotel'></i></label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px;">
+                        <label>Fotos do evento</label>
+                        <i class="fa-regular fa-images"></i>
+                        <input type="file" name="attachment" id="attachment" onchange="previewImagem()" required><br><br>
+
+             			<input type="submit" value="Enviar" name="SendAddMsg" >
+                    </div>
+
 
 
                 </div>
@@ -350,7 +382,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
         </div>
     </div>
 </main>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
 
   function editaEvento() {
@@ -361,6 +393,22 @@ function closePopup() {
    document.getElementById("popupEditaEvento").style.display = "none";
 }
 
+//BUSCA Imagem do evento
+                        function previewImagem(){
+                            var imagem = document.querySelector('input[name=attachment]').files[0];
+                            var preview = document.querySelector('img');
+
+                            var reader = new FileReader();
+
+                            reader.onloadend = function(){
+                                preview.src = reader.result;
+                            }
+                            if(imagem){
+                                reader.readAsDataURL(imagem);
+                            }else{
+                                preview.src = "";
+                            }
+                        }
 
 </script>
 
