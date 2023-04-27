@@ -70,5 +70,28 @@ $Uid = $_SESSION['user_id'];
         </div>
     </div>
   </main>
-  <script src="./js/custom.js"></script>
+  <script>
+
+
+function abrirTela() {
+    // Crie um div para a tela flutuante
+    var telaFlutuante = document.createElement("div");
+    // Adicione uma classe para estilização
+    telaFlutuante.classList.add("tela-flutuante");
+    // Faça uma requisição AJAX para obter o conteúdo do arquivo "formulario.html"
+    fetch("./processaEditarEvento.php")
+      .then(response => response.text())
+      .then(html => {
+        // Adicione o conteúdo do arquivo ao div da tela flutuante
+        telaFlutuante.innerHTML = html;
+        // Adicione a tela flutuante ao body do seu HTML
+        document.body.appendChild(telaFlutuante);
+        // Exiba a tela flutuante com a função "alert"
+        alert(telaFlutuante.innerHTML);
+        // Remova a tela flutuante do body após o usuário clicar em "ok"
+        document.body.removeChild(telaFlutuante);
+      });
+  }
+
+  </script>
 
