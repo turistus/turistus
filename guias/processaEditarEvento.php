@@ -135,62 +135,6 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                     </div>
 
-
-
-
-
-
-
-
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                        <div class="row" style="border: 1px solid black;">
-                            <div id="formulario" class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="border: 2px solid red;">
-                                    <div class="form-group" id="bloco" style="border: 1px solid green; padding:10px;">
-                                            <label>  N° Vagas  </label>
-                                                <!-- select AQUI   -->
-                                                <select id="vagas" name="vagas[]" class="custom-select d-block w-100 " required>
-                                                        <option value="">Selecione</option>
-                                                        <option value="01">01 Pessoa</option>
-                                                        <option value="02">02 Pessoas</option>
-                                                        <option value="03">03 Pessoas</option>
-                                                        <option value="04">04 Pessoas</option>
-                                                        <option value="05">05 Pessoas</option>
-                                                        <option value="06">06 Pessoas</option>
-                                                        <option value="07">07 Pessoas</option>
-                                                        <option value="08">08 Pessoas</option>
-                                                        <option value="09">09 Pessoas</option>
-                                                        <option value="10">10 Pessoas</option>
-                                                        <option value="11">11 Pessoas</option>
-                                                        <option value="12">12 Pessoas</option>
-                                                        <option value="13">13 Pessoas</option>
-                                                        <option value="14">14 Pessoas</option>
-                                                        <option value="15">15 Pessoas</option>
-                                                        <option value="16">16 Pessoas</option>
-                                                        <option value="17">17 Pessoas</option>
-                                                        <option value="18">18 Pessoas</option>
-                                                        <option value="19">19 Pessoas</option>
-                                                        <option value="20">20 Pessoas</option>
-                                                </select><br>
-
-                                            <label> Total R$ </label>
-                                                <input class="form-control" type="text"  name="total[]" id="total" value="" required>
-                                            <button type="button" onclick="adicionarCampo()"> + </button>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                         <label> Data inicial </label>
                         <input class="form-control" type="date" name="datah" id="datah"
@@ -251,6 +195,64 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
 
 
+
+
+
+
+
+
+
+
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="row" style="border: 1px solid black;">
+                            <div id="formulario" class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="border: 2px solid red;">
+                                    <div class="form-group" id="bloco" style="border: 1px solid green; padding:10px;">
+                                            <label>  N° Vagas  </label>
+                                                <!-- select AQUI   -->
+                                                <select id="vagas" name="vagas[]" class="custom-select col-4" required>
+                                                        <option value="">Selecione</option>
+                                                        <option value="01">01 Pessoa</option>
+                                                        <option value="02">02 Pessoas</option>
+                                                        <option value="03">03 Pessoas</option>
+                                                        <option value="04">04 Pessoas</option>
+                                                        <option value="05">05 Pessoas</option>
+                                                        <option value="06">06 Pessoas</option>
+                                                        <option value="07">07 Pessoas</option>
+                                                        <option value="08">08 Pessoas</option>
+                                                        <option value="09">09 Pessoas</option>
+                                                        <option value="10">10 Pessoas</option>
+                                                        <option value="11">11 Pessoas</option>
+                                                        <option value="12">12 Pessoas</option>
+                                                        <option value="13">13 Pessoas</option>
+                                                        <option value="14">14 Pessoas</option>
+                                                        <option value="15">15 Pessoas</option>
+                                                        <option value="16">16 Pessoas</option>
+                                                        <option value="17">17 Pessoas</option>
+                                                        <option value="18">18 Pessoas</option>
+                                                        <option value="19">19 Pessoas</option>
+                                                        <option value="20">20 Pessoas</option>
+                                                </select><br>
+
+                                            <label> Total R$ </label>
+                                                <input class="form-control" type="text"  name="total[]" id="total" value="" required>
+                                            <button type="button" onclick="adicionarCampo()"> + </button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
                 </div>
 
 
@@ -271,24 +273,19 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./js/custom.js"></script>
 <script>
-
-
-//BUSCA Imagem do evento
-                        function previewImagem(){
-                            var imagem = document.querySelector('input[name=attachment]').files[0];
-                            var preview = document.querySelector('img');
-
-                            var reader = new FileReader();
-
-                            reader.onloadend = function(){
-                                preview.src = reader.result;
-                            }
-                            if(imagem){
-                                reader.readAsDataURL(imagem);
-                            }else{
-                                preview.src = "";
-                            }
-                        }
+    function previewImagem(){
+        var imagem = document.querySelector('input[name=attachment]').files[0];
+        var preview = document.querySelector('img');
+            var reader = new FileReader();
+                reader.onloadend = function(){
+                preview.src = reader.result;
+                }
+                if(imagem){
+                          reader.readAsDataURL(imagem);
+                    }else{
+                          preview.src = "";
+                         }
+            }
 
 </script>
 
