@@ -135,7 +135,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                     </div>
 
-                    <div class="form-group" id="blocoVagas" >
+                    <div id="bloco" class="col-12 form-group">
 
                         <div class="col-4 ">
                             <label for="vagas">  N° Vagas  </label>
