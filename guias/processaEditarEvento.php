@@ -28,15 +28,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="../images/icon/favicon.ico" >
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <title>Editar Eventos</title>
-    </head>
+
 
 <style>
 
@@ -319,6 +311,16 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                     </div>
 
 
+                    <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
+
+                    <label> Ponto de encontro </label>
+                    <input class="form-control" type="text" name="encontro" id="encontro"
+                    value="<?php if(isset($dados_evento['encontro']))
+                    { echo $dados_evento['encontro'];}elseif(isset($row_evento['encontro']))
+                    { echo $row_evento['encontro']; }?>"required> <br>
+                    </div>
+
+
 
                 </div>
 
@@ -355,4 +357,3 @@ function closePopup() {
 </script>
 
 </body>
-</html>
