@@ -63,5 +63,5 @@ function adicionarCampo(){
 
 function removerCampo(idCampo){
 
-    document.getElementById('campo' + idCampo).remove();
+    document.getElementById('bloco' + idCampo).remove();
 }
