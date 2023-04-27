@@ -143,7 +143,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
 
 
-                    <div class="form-group" id="bloco">
+                    <div class="form-group a" id="bloco">
                             <label>  N° Vagas  </label>
                                 <!-- select AQUI   -->
                                 <select id="vagas" name="vagas[]" class="custom-select d-block w-100 " required>
