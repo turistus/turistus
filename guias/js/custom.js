@@ -25,10 +25,11 @@ function maskPhone(numberPhone){
     }
 }
 
-var controleCampo = 1;
+
 function adicionarCampo(){
+    var controleCampo = 1;
     controleCampo++;
-    document.getElementById('bloco').insertAdjacentHTML('beforeend','<div class="form-group" id="bloco">'+
+    document.getElementById('formulario').insertAdjacentHTML('beforeend','<div class="form-group" id="bloco">'+
     '<label>  N° Vagas  </label>'+
         '<select id="vagas" name="vagas[]" class="custom-select d-block w-100 " required>'+
                 '<option value="">Selecione</option>'+
