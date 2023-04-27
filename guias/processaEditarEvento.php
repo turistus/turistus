@@ -143,9 +143,9 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
 
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                        <div class="row">
-                            <div id="formulario" class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                                    <div class="form-group" id="bloco">
+                        <div class="row" style="border: 1px solid black;">
+                            <div id="formulario" class="col-xl-4 col-lg-4 col-md-4 col-sm-4" style="border: 2px solid red;">
+                                    <div class="form-group" id="bloco" style="border: 1px solid green;">
                                             <label>  N° Vagas  </label>
                                                 <!-- select AQUI   -->
                                                 <select id="vagas" name="vagas[]" class="custom-select d-block w-100 " required>
