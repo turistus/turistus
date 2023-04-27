@@ -196,7 +196,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                         <div class="row col-12" >
                             <div id="formulario" class="col-xl-12 col-lg-12 col-md-12 col-sm-12" >
                                 <div class="form-group" id="bloco" style="border: 1px solid green; padding:10px;">
-                                    <div class="col-6" >
+
                                             <label>  N° Vagas  </label>
                                                 <!-- select AQUI   -->
                                                 <select id="vagas" name="vagas[]" class="custom-select d-block w-100 col-3" required>
@@ -222,13 +222,10 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                                         <option value="19">19 Pessoas</option>
                                                         <option value="20">20 Pessoas</option>
                                                 </select>
-                                    </div>
-                                    <div class="col-6" >
                                             <label> Total R$ </label>
                                                 <input class="form-control col-3" type="text"  name="total[]" id="total" value="" required>
 
                                             <button type="button" onclick="adicionarCampo()"> + </button>
-                                    </div>
                                 </div>
                             </div>
                         </div>
