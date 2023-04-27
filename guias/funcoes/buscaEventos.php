@@ -71,4 +71,6 @@ $Uid = $_SESSION['user_id'];
     </div>
   </main>
 
-
+<?php
+include_once '../guias/processaEditarEvento.php';
+?>
