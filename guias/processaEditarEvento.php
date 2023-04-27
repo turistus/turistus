@@ -135,45 +135,46 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                     </div>
 
                     <div id="blocoVagas" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 form-group">
+                        <div class="col-6 ">
 
-                        <label for="nVagas">  N° Vagas  </label>
-                             <!-- select AQUI   -->
-                                <select id="vagas" name="vagas[]" class="custom-select d-block w-100 " required>
-                                    <option value="">Selecione</option>
-                                    <option value="01">01 Pessoa</option>
-                                    <option value="02">02 Pessoas</option>
-                                    <option value="03">03 Pessoas</option>
-                                    <option value="04">04 Pessoas</option>
-                                    <option value="05">05 Pessoas</option>
-                                    <option value="06">06 Pessoas</option>
-                                    <option value="07">07 Pessoas</option>
-                                    <option value="08">08 Pessoas</option>
-                                    <option value="09">09 Pessoas</option>
-                                    <option value="10">10 Pessoas</option>
-                                    <option value="11">11 Pessoas</option>
-                                    <option value="12">12 Pessoas</option>
-                                    <option value="13">13 Pessoas</option>
-                                    <option value="14">14 Pessoas</option>
-                                    <option value="15">15 Pessoas</option>
-                                    <option value="16">16 Pessoas</option>
-                                    <option value="17">17 Pessoas</option>
-                                    <option value="18">18 Pessoas</option>
-                                    <option value="19">19 Pessoas</option>
-                                    <option value="20">20 Pessoas</option>
+                            <label for="vagas">  N° Vagas  </label>
+                                <!-- select AQUI   -->
+                                    <select id="vagas" name="vagas[]" class="custom-select d-block w-100 " required>
+                                        <option value="">Selecione</option>
+                                        <option value="01">01 Pessoa</option>
+                                        <option value="02">02 Pessoas</option>
+                                        <option value="03">03 Pessoas</option>
+                                        <option value="04">04 Pessoas</option>
+                                        <option value="05">05 Pessoas</option>
+                                        <option value="06">06 Pessoas</option>
+                                        <option value="07">07 Pessoas</option>
+                                        <option value="08">08 Pessoas</option>
+                                        <option value="09">09 Pessoas</option>
+                                        <option value="10">10 Pessoas</option>
+                                        <option value="11">11 Pessoas</option>
+                                        <option value="12">12 Pessoas</option>
+                                        <option value="13">13 Pessoas</option>
+                                        <option value="14">14 Pessoas</option>
+                                        <option value="15">15 Pessoas</option>
+                                        <option value="16">16 Pessoas</option>
+                                        <option value="17">17 Pessoas</option>
+                                        <option value="18">18 Pessoas</option>
+                                        <option value="19">19 Pessoas</option>
+                                        <option value="20">20 Pessoas</option>
 
-                                </select><br>
+                                    </select><br>
+                        </div>
+                        <div class="col-6 ">
+                            <label> Total R$ </label>
+                                <!-- totais aqui  -->
 
+                            <input class="form-control" type="text"  name="total[]" id="total"
+                                value="<?php if(isset($dados_evento['total']))
+                                { echo $dados_evento['total'];}elseif(isset($row_evento['total']))
+                                { echo $row_evento['total']; }?>"required> <br>
 
-                        <label> Total R$ </label>
-                             <!-- totais aqui  -->
-
-                        <input class="form-control" type="text"  name="total[]" id="total"
-                            value="<?php if(isset($dados_evento['total']))
-                            { echo $dados_evento['total'];}elseif(isset($row_evento['total']))
-                            { echo $row_evento['total']; }?>"required> <br>
-
-                    <button type="button" onclick="adicionarCampo"> + </button>
-
+                            <button type="button" onclick="adicionarCampo()"> + </button>
+                        </div>
                     </div>
 
 
