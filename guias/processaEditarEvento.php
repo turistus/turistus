@@ -193,10 +193,10 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                     </div>
 
 
-                        <div class="row col-12" >
+                        <div class="row" >
 
-                            <div id="formulario" >
-                                <div class="form-group col-12" id="bloco" style="border: 1px solid green; padding:15px;">
+                            <div id="formulario" class="col-12" >
+                                <div class="form-group " id="bloco" style="border: 1px solid green; padding:15px;">
 
                                             <label>  N° Vagas  </label>
                                                 <!-- select AQUI   -->
