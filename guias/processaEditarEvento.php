@@ -135,9 +135,9 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                     </div>
 
-                    <div id="blocoVagas" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 form-group">
-                        <div class="col-4 ">
+                    <div class="form-group" id="blocoVagas" >
 
+                        <div class="col-4 ">
                             <label for="vagas">  N° Vagas  </label>
                                 <!-- select AQUI   -->
                                     <select id="vagas" name="vagas[]" class="custom-select d-block w-100 " required>
@@ -167,15 +167,11 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                         </div>
                         <div class="col-5 ">
                             <label> Total R$ </label>
-                                <!-- totais aqui  -->
-
-                            <input class="form-control" type="text"  name="total[]" id="total"
-                                value="<?php if(isset($dados_evento['total']))
-                                { echo $dados_evento['total'];}elseif(isset($row_evento['total']))
-                                { echo $row_evento['total']; }?>"required> <br>
+                                <input class="form-control" type="text"  name="total[]" id="total" value="" required> <br>
 
                         </div>
                         <button type="button" onclick="adicionarCampo()"> + </button>
+
                     </div>
 
 
