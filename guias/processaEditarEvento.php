@@ -267,7 +267,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
     </div>
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="./guias/js/custom.js"></script>
+<script src="./js/custom.js"></script>
 <script>
 
 
