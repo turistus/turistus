@@ -30,7 +30,7 @@ function adicionarCampo(){
     var controleCampo = 1;
     controleCampo++;
     document.getElementById('formulario').insertAdjacentHTML('beforeend','<div class="form-group col-3" id="bloco' + controleCampo +'" style="border: 1px solid green; padding:10px;">'+
-    '<button type="button" id="'+ controleCampo +'" onclick="removerCampo('+ controleCampo +')"> - </button></div>'+
+    '<button type="button" id="'+ controleCampo +'" onclick="removerCampo('+ controleCampo +')"> - </button>'+
     '<div class="col-6" ><label>  N° Vagas  </label>'+
         '<select id="vagas" name="vagas[]" class="custom-select d-block w-100 " required>'+
                 '<option value="">Selecione</option>'+
@@ -57,7 +57,7 @@ function adicionarCampo(){
         '</select></div>'+
     '<div class="col-6" ><label> Total R$ </label>'+
         '<input class="form-control col-3" type="text"  name="total[]" id="total" value="" required> <br>'+
-    '</div></div></div>');
+    '</div></div>');
 }
 
 function removerCampo(idCampo){

@@ -199,7 +199,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                     <div class="col-6" >
                                             <label>  N° Vagas  </label>
                                                 <!-- select AQUI   -->
-                                                <select id="vagas" name="vagas[]" class="custom-select col-2" required>
+                                                <select id="vagas" name="vagas[]" class="custom-select d-block w-100 col-3" required>
                                                         <option value="">Selecione</option>
                                                         <option value="01">01 Pessoa</option>
                                                         <option value="02">02 Pessoas</option>
