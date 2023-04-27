@@ -233,7 +233,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                                 </select>
 
                                             <label> Total R$ </label>
-                                                <input class="form-control col-3" type="text"  name="total[]" id="total" value="" required>
+                                                <input class="form-control form-inline col-3" type="text"  name="total[]" id="total" value="" required>
                                             <button type="button" onclick="adicionarCampo()"> + </button>
                                     </div>
                             </div>
