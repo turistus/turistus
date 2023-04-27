@@ -143,7 +143,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
 
 
-                    <div id="bloco" class="col-12 form-group">
+                    <div class="form-group" id="bloco">
 
                         <div class="col-4 ">
                             <label for="vagas">  N° Vagas  </label>
@@ -278,15 +278,6 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 <script src="../guias/js/custom.js"></script>
 <script>
 
-
-
-  function editaEvento() {
-   document.getElementById("popupEditaEvento").style.display = "inline";
-}
-
-function closePopup() {
-   document.getElementById("popupEditaEvento").style.display = "none";
-}
 
 //BUSCA Imagem do evento
                         function previewImagem(){
