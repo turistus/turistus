@@ -57,7 +57,7 @@ function adicionarCampo(){
         '</select></div>'+
     '<div class="col-6" ><label> Total R$ </label>'+
         '<input class="form-control col-3" type="text"  name="total[]" id="total" value="" required> <br>'+
-    '</div></div>');
+    '</div></div></div>');
 }
 
 function removerCampo(idCampo){

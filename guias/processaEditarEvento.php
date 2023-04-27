@@ -119,7 +119,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                     </div>
 
                     <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
-                        <label>	Breve Descricao </label>
+                        <label>	Breve descrição </label>
                         <input class="form-control" type="text" name="breveDescricao" id="breveDescricao"
                         value="<?php if(isset($dados_evento['breveDescricao']))
                         { echo $dados_evento['breveDescricao'];}elseif(isset($row_evento['breveDescricao']))
@@ -144,7 +144,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                     </div>
 
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                        <label> Data Encerramento </label>
+                        <label> Data final </label>
                         <input class="form-control" type="date" name="datah" id="datah"
                         value="<?php if(isset($dados_evento['datah']))
                         { echo $dados_evento['datah'];}elseif(isset($row_evento['datah']))
