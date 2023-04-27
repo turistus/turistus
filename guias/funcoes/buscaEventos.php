@@ -55,7 +55,7 @@ $Uid = $_SESSION['user_id'];
                     <h5 class="card-title"><?php echo $nome;  ?></h5>
                     <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
                     <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($datah)); ?></h5><br>
-                    <a href="../guias/processaEditarEvento.php?id=<?php echo $id?>" class="btn btn text-dark" > Editar </a>
+                    <a href="../guias/processaEditarEvento.php?id=<?php echo $id?>" class="btn btn text-dark" onclick="abrirTela()" > Editar </a>
 
                 </div>
               </div>
@@ -70,4 +70,5 @@ $Uid = $_SESSION['user_id'];
         </div>
     </div>
   </main>
+  <script src="./js/custom.js"></script>
 
