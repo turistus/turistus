@@ -77,6 +77,8 @@ $Uid = $_SESSION['user_id'];
     </div>
 
                         <div class="modal-content" id=formPrimeiro style="padding: 10px;">
+                        AAAAAAAAA<br>
+                        AAAA
                           <?php
                             include_once '../guias/processaEditarEvento.php?id=<?php echo'.$id.'?>';
                           ?>
