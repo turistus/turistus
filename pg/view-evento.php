@@ -1,8 +1,9 @@
 <?php
+session_start();
 define('ACCESS', true);
 include_once '../connection.php';
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-session_start();
+
 
     if(!isset ($_SESSION['user'])){
         $emailSessaoAberta = $_SESSION['user_email'];
@@ -18,7 +19,7 @@ session_start();
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="../images/icon/logo.ico" >
+        <link rel="shortcut icon" href="../images/logooriginal.png" >
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <title>Desconecta - Visualizar eventos</title>
         <style>
@@ -67,7 +68,7 @@ session_start();
              eventos.valor AS valor,
              eventos.idGuia AS idDoGuia,
              eventos.pontos AS pontos,
-             datah,
+             dataUp,
 
              idPt,
              prod.cidade AS cidade,
@@ -90,7 +91,7 @@ session_start();
             $result_products->execute();
             $row_product = $result_products->fetch(PDO::FETCH_ASSOC);
             extract($row_product);
-            $valor_rise = ($valor * 0.50) + $valor;
+            //$valor_rise = ($valor * 0.50) + $valor;
             ?>
 
 
@@ -132,7 +133,7 @@ session_start();
                             </div>
                             </div>
 
-                            <h5 class="card-title">Abertura: <?php echo date('d/m/Y',  strtotime($datah)); ?></h5>
+                            <h5 class="card-title">Abertura: <?php echo date('d/m/Y',  strtotime($dataUp)); ?></h5>
                             <div class="col-10 " >
 
                             <label for="nVagas">  N° Vagas  </label>
