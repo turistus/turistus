@@ -1,7 +1,8 @@
 <?php
+session_start();
 define('ACCESS', true);
 include_once '../connection.php';
-session_start();
+
 ob_start();
 $idE = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 if (empty($idE)) {
@@ -27,8 +28,8 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="../images/icon/favicon.ico" >
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
         <title>Editar Eventos</title>
     </head>
 
@@ -57,7 +58,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                         }
 
                     if(!$empty_input){
-                        //foreach($dados_evento['vagas'] as $chave => $valor){
+                        foreach($dados_evento['vagas'] as $chave => $valor){
 
                        $query_update_evento = "UPDATE eventos SET
                        nome=:nome,
@@ -95,7 +96,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                 echo "não gravoou !";
                                 header("Location: painelGuia.php");
                             }
-                       // }
+                        }
                     }
                 }
             ?>
@@ -242,11 +243,11 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
         </div>
     </div>
 </main>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./js/custom.js"></script>
 <script>
     function previewImagem(){
-        var imagem = document.querySelector('input[name=attachment]').files[0];
+        var imagem = document.querySelector('input[name=foto]').files[0];
         var preview = document.querySelector('img');
             var reader = new FileReader();
                 reader.onloadend = function(){
