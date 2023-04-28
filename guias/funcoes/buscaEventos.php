@@ -55,7 +55,7 @@ $Uid = $_SESSION['user_id'];
                     <h5 class="card-title"><?php echo $nome;  ?></h5>
                     <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
                     <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($datah)); ?></h5><br>
-                    <a href="buscaEventos.php?id=<?php echo $id?>" class="btn btn text-dark" data-bs-toggle='loginModal' data-bs-target='#loginModal'> Editar </a>
+                    <a href="buscaEventos.php?id=<?php echo $id?>" class="btn btn text-dark" data-bs-toggle='loginModal' data-bs-target='#Modal'> Editar </a>
 
                 </div>
               </div>
@@ -71,7 +71,7 @@ $Uid = $_SESSION['user_id'];
     </div>
   </main>
 
-  <div class="modal fade"  id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal fade"  id="Modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
