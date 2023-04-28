@@ -13,7 +13,7 @@ $emailusuario = $_SESSION['user_email'];
 
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt/br">
 
 <head>
@@ -41,7 +41,7 @@ $emailusuario = $_SESSION['user_email'];
 
     <!-- O GUIA tem um agendamento de um evento para fazer tbm -->
 
-    <div class="conteiner" style="padding-bottom: 20px;">
+    <div class="container" style="padding-bottom: 20px;">
 
               <!-- BOTAO de ACESSAR o Pontos Criar Eventos -->
               <div class="dialog">

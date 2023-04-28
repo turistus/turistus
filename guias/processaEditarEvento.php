@@ -32,22 +32,6 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
         <title>Editar Eventos</title>
     </head>
 
-<style>
-
-#popupEditaEvento {
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   background-color: #fff;
-   border: 1px solid #ccc;
-   padding: 20px;
-   width: 600px;
-   max-width: 100%;
-   float: left;
-}
-</style>
-
 <body>
 <main class="content" style="font-family: 'Acme'; font-size: 20px;" >
     <div class="shadow-lg p-3 mb-5 bg-white rounded" style="border: solid 1px black;"  >
@@ -73,7 +57,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                         }
 
                     if(!$empty_input){
-                        foreach($dados['vagas'] as $chave => $valor){
+                        foreach($dados_evento['vagas'] as $chave => $valor){
 
                        $query_update_evento = "UPDATE eventos SET
                        nome=:nome,
@@ -258,7 +242,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
         </div>
     </div>
 </main>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 <script src="./js/custom.js"></script>
 <script>
     function previewImagem(){
