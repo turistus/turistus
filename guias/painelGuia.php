@@ -337,7 +337,7 @@ $emailusuario = $_SESSION['user_email'];
                                 <div class="modal-content" id=formQuarto style="padding-bottom: 20px;">
 
                                   <?php
-                                      include_once '../guias/buscaEventos.php';
+                                      include_once './guias/buscaEventos.php';
                                   ?>
 
                                 </div>
