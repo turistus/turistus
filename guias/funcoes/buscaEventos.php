@@ -91,6 +91,7 @@ $Uid = $_SESSION['user_id'];
     $("#formPrimeiro").hide();
 
   $("#primeiroForm").click(function () {
+    console.log("AAAAAAAAA");
     $("#formPrimeiro").show(1000);
 	});
 
