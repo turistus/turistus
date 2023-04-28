@@ -55,9 +55,7 @@ $Uid = $_SESSION['user_id'];
                     <h5 class="card-title"><?php echo $nome;  ?></h5>
                     <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
                     <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($datah)); ?></h5><br>
-
-
-                            <button id="primeiroForm" type="button" class="btn btn text-dark "> Editar </button>
+                    <a href="../guias/processaEditarEvento.php?id=<?php echo $id?>" class="btn btn text-dark" id='primeiroForm'> Editar </a>
 
                 </div>
               </div>
@@ -71,33 +69,12 @@ $Uid = $_SESSION['user_id'];
     <!-- FINAL ONDE BUSCA OS eventoS -->
         </div>
     </div>
-                    <div class="dialog">
-                          <div class="modal-body">
-                        <div class="modal-content" id=formPrimeiro style="padding: 10px;">
-                        AAAAAAAAA<br>
-                        AAAA
-                          <?php
-                            include_once '../guias/processaEditarEvento.php?id=<?php echo $id?>';
-                          ?>
-                      </div>
 
-                      </div>
-                    </div>
 
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-  $(document).ready(function(){
-    $("#formPrimeiro").hide();
 
-  $("#primeiroForm").click(function () {
-
-    $("#formPrimeiro").show(1000);
-	});
-
-  });
 
 </script>
 </main>
