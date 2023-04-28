@@ -366,7 +366,8 @@ $emailusuario = $_SESSION['user_email'];
 
 </body>
 </html>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 
   $(document).ready(function() {
@@ -377,7 +378,6 @@ $emailusuario = $_SESSION['user_email'];
     $("#formCriarEvento").hide();
     $("#formTerceiro").hide();
     $("#formQuarto").hide();
-    $("#formSegundo").hide();
     $("#formPerfil").hide();
 
   $("#CriarEvento").click(function () {
@@ -385,22 +385,11 @@ $emailusuario = $_SESSION['user_email'];
     $("#formPainel").hide();
     $("#formTerceiro").hide();
     $("#formQuarto").hide();
-    $("#formSegundo").hide();
     $("#formPerfil").hide();
 	});
 
   $("#Painel").click(function () {
 		$("#formPainel").show(500);
-    $("#formCriarEvento").hide();
-    $("#formTerceiro").hide();
-    $("#formQuarto").hide();
-    $("#formSegundo").hide();
-    $("#formPerfil").hide();
-	});
-
-  $("#segundoForm").click(function () {
-		$("#formSegundo").show(500);
-    $("#formPainel").hide();
     $("#formCriarEvento").hide();
     $("#formTerceiro").hide();
     $("#formQuarto").hide();
@@ -412,7 +401,6 @@ $emailusuario = $_SESSION['user_email'];
     $("#formPainel").hide();
     $("#formCriarEvento").hide();
     $("#formQuarto").hide();
-    $("#formSegundo").hide();
     $("#formPerfil").hide();
 	});
 
@@ -421,7 +409,6 @@ $emailusuario = $_SESSION['user_email'];
     $("#formPainel").hide();
     $("#formCriarEvento").hide();
     $("#formTerceiro").hide();
-    $("#formSegundo").hide();
     $("#formPerfil").hide();
 	});
 
@@ -431,12 +418,8 @@ $emailusuario = $_SESSION['user_email'];
     $("#formCriarEvento").hide();
     $("#formTerceiro").hide();
     $("#formQuarto").hide();
-    $("#formSegundo").hide();
 
 	});
-
-
-
 
   });
 </script>
