@@ -23,7 +23,7 @@ $emailusuario = $_SESSION['user_email'];
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!-- Fonts and icons -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"/>
   <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <link rel="shortcut icon" type="imagex/png" href="../images/logooriginal.png">

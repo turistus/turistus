@@ -28,8 +28,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
         <title>Editar Eventos</title>
     </head>
@@ -183,7 +182,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px;">
                         <label>Fotos do evento</label>
                         <i class="fa-regular fa-images"></i>
-                        <input type="file" name="foto" id="foto" onchange="previewImagem()" required><br><br>
+                        <input type="file" name="foto[]" id="foto" multiple="multiple" onchange="previewImagem()" required><br><br>
 
                     </div>
 
