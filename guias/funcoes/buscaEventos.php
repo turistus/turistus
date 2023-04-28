@@ -55,7 +55,7 @@ $Uid = $_SESSION['user_id'];
                     <h5 class="card-title"><?php echo $nome;  ?></h5>
                     <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
                     <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($datah)); ?></h5><br>
-                    <a href="../guias/processaEditarEvento.php?id=<?php echo $id?>" class="btn btn text-dark" data-bs-toggle='loginModal' id='primeiroForm' data-bs-target='#Modal'> Editar </a>
+                    <a href="../guias/processaEditarEvento.php?id=<?php echo $id?>" class="btn btn text-dark" id='primeiroForm'> Editar </a>
 
                 </div>
               </div>
@@ -70,24 +70,12 @@ $Uid = $_SESSION['user_id'];
         </div>
     </div>
 
-    <div class="modal fade"  id="formPrimeiro" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <br>
                         <div class="modal-content" id=formPrimeiro style="padding: 10px;">
                           <?php
                             include_once '../../guias/processaEditarEvento.php';
                           ?>
                       </div>
-                    </div>
-                </div>
-            </div>
-         </div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
