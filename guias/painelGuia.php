@@ -25,7 +25,7 @@ $emailusuario = $_SESSION['user_email'];
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"/>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="shortcut icon" type="imagex/png" href="../images/logooriginal.png">
   <title>Painel Do Guia</title>
 </head>
@@ -54,7 +54,7 @@ $emailusuario = $_SESSION['user_email'];
                                     <button id="CriarEvento" type="button" class="btn btn text-dark "> Criar Evento </button>
                                     <button id="quartoForm" type="button" class="btn btn text-dark "> Eventos </button>
                                     <button id="perfilForm" type="button" class="btn btn text-dark "> Perfil </button>
-                                    <!-- <button id="quartoForm" type="button" class="btn btn text-dark "> Pontos Turisticos </button> -->
+
 
 
                                 </div>
@@ -352,15 +352,6 @@ $emailusuario = $_SESSION['user_email'];
 
                                 </div>
 
-
-
-                                 <!-- LISTA os seus pontos criados mas por enquanto esta desativado
-                                 <div class="modal-content" id=formQuarto style="padding-bottom: 20px;">
-
-
-                                </div>
-
-                                -->
                           </div>
                       </div>
               </div><!-- Final da MODAL DIALOG BUTONES-->
@@ -377,7 +368,6 @@ $emailusuario = $_SESSION['user_email'];
 
 </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   $(document).ready(function() {
