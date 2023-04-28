@@ -17,7 +17,6 @@ $emailusuario = $_SESSION['user_email'];
 <html lang="pt/br">
 
 <head>
-  <title>Painel Do Guia</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -25,10 +24,10 @@ $emailusuario = $_SESSION['user_email'];
   <!-- Fonts and icons -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
-  <!-- Material Kit CSS -->
+  <link rel="stylesheet" src="./assets/js/material-dashboard.min.js" >
 
   <link rel="shortcut icon" type="imagex/png" href="../images/Logooriginal.png">
+  <title>Painel Do Guia</title>
 </head>
 
 <body>
@@ -379,7 +378,7 @@ $emailusuario = $_SESSION['user_email'];
 </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   $(document).ready(function() {
 
