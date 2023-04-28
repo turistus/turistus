@@ -57,7 +57,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                         }
 
                     if(!$empty_input){
-                        foreach($dados_evento['vagas'] as $chave => $valor){
+                        //foreach($dados_evento['vagas'] as $chave => $valor){
 
                        $query_update_evento = "UPDATE eventos SET
                        nome=:nome,
@@ -95,7 +95,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                 echo "não gravoou !";
                                 header("Location: painelGuia.php");
                             }
-                        }
+                       // }
                     }
                 }
             ?>

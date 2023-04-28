@@ -33,7 +33,7 @@ include_once '../connection.php';
 			unset($_SESSION['msg']);
 		}
 		?>
-       
+
 <br>
 
 <!-- Div inicial abaixo do Titulo -->
@@ -42,11 +42,11 @@ include_once '../connection.php';
     <!-- Aqui abaixo tenho um exemplo de como usar a
     função cadastrar Turista processado em outra pagina php -->
             <form method="POST" action="processa-cad-evento.php">
-                    
+
                         <div class="row" >
-                        <!-- as melhores colunas organizadas da maior para menor -->    
+                        <!-- as melhores colunas organizadas da maior para menor -->
                                     <div class="col-xl-12 col-lg-12 col-sm-12 col-md-12 mb-12">
-                                    
+
                                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-mb-12">
                                             <p>Nome do turismo</p>
                                             <input type="text" class="form-control" id="nome" placeholder="" name="nome"
@@ -62,8 +62,8 @@ include_once '../connection.php';
                                                 if (isset($dados['datah'])) {
                                                     echo $dados['datah'];
                                                 }?>">
-                                            
-                                            
+
+
                                         </div>
                                         <div class="col-xl-12 col-lg-12  col-md-12 col-sm-12 col-mb-12">
                                             <p >Breve Descrição</p>
@@ -71,7 +71,7 @@ include_once '../connection.php';
                                                 if (isset($dados['breveDescricao'])) {
                                                     echo $dados['breveDescricao'];
                                                 }?>" required>
-                                            
+
                                         </div>
                                         <div class="col-xl-12 col-lg-12  col-md-12 col-sm-12 col-mb-12">
                                             <p >Descrição</p>
@@ -79,87 +79,87 @@ include_once '../connection.php';
                                                 if (isset($dados['descricao'])) {
                                                     echo $dados['descricao'];
                                                 }?>" required>
-                                            
+
                                         </div>
                                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-mb-12">
                                             <p >Valor</p>
-                                            <input type="text" class="form-control" id="valor" placeholder="R$" name="valor" 
+                                            <input type="text" class="form-control" id="valor" placeholder="R$" name="valor"
                                             value="<?php
                                                 if (isset($dados['valor'])) {
                                                     echo $dados['valor'];
                                                 }?>" required>
-                                            
+
                                         </div>
                                     </div>
                         </div><!-- Fim da ROW -->
-                        
+
                 <!-- SEGUNDA PARTE DO FORMULARIO DE CADASTRO DE EVENTO -->
 
 
-                            
+
                 <div class="col-md-6 mt-3">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-mb-12">
 
-                                    <h5 >Ponto Turistico</h5> 
+                                    <h5 >Ponto Turistico</h5>
                                         <select class="form-select" name="idPt" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
                                             <option>Selecione</option>
-                                            
+
                                                     <?php
-                                                    
+
                                                         $result = $conn->prepare("SELECT * FROM pontosturisticos ORDER BY name ASC;");
                                                         $result->execute();
                                                         $res = $result->fetchAll(PDO::FETCH_ASSOC);
                                                     ?>
-                                                    <?php   
+                                                    <?php
                                                         foreach($res as $ln ){
                                                     ?>
                                                         <option value="<?php echo $ln['id'];?>" name="idPt" id="idPt" >
-                                                    <?php 
+                                                    <?php
                                                         // echo $ln['id'].' - <br/>';
-                                                        echo $ln['name'].' - '.$ln['uf']; 
-                                                    } 
+                                                        echo $ln['name'].' - '.$ln['uf'];
+                                                    }
                                                     ?>
-                                                        </option> 
+                                                        </option>
                                         </select>
                                     <!-- Aqui Busca CERTINHO o nome e o ID do ponto turistico para o EVENTO ser cadastrado -->
-                                        
-                                                
+
+
                                 </div>
-                                     <!-- ID do PROPRIO GUIA ao cadastrar EVENTO  -->           
+                                     <!-- ID do PROPRIO GUIA ao cadastrar EVENTO  -->
                                 <div class="col-md-6 mb-3">
                                             <label hidden >Seu ID GUIA</label>
-                                            <input hidden type="text" class="form-control" id="idGuia" placeholder="" name="idGuia" 
+                                            <input hidden type="text" class="form-control" id="idGuia" placeholder="" name="idGuia"
                                             value="<?php
                                                 if (isset($Uid)) {
                                                     echo $Uid;
                                                 }?>" >
-                                           
+
                                         </div>
 
                         <!-- BOTAO CADASTRAR  -->
 
                                 <div class="row" style="padding-left: 20px; margin-top:20px;">
                                 <input type="submit" class="btn btn-success" style="  width: 150px; margin-right: 10px;" value="Cadastrar">
-                                <input type="reset" class="btn btn-info" style="  width: 100px;" name="bt_limpar" value="Novo">
+
                                     <div class="col-4">
-                                        
+
                                     </div>
 
-                                    <div class="col-6">           
-                                        
+                                    <div class="col-6">
+
                                     </div>
                                 </div>
-            </form> 
-                                                
-            
-            
+            </form>
+
+
+
 
                 </div>
             </div>
         </div><!-- Fim da linha ROW GERAL -->
     </div><!-- Fim da class Redonda -->
 </main>
- 
+
 	</body>
 </html>
 

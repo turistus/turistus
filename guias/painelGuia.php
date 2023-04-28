@@ -64,12 +64,10 @@ $emailusuario = $_SESSION['user_email'];
 
 
                                       <!-- INICIO PAINEL com as funçoes Administrativa   -->
-                                <div class="modal-content" id=formPainel style="padding: 10px;">
-
-                                          <div class="row" >
-
+                                          <div class="modal-content" id=formPainel style="padding: 10px;">
+                                            <div class="row" >
                                               <!-- VALOR TOTAL  -->
-                                              <div class="col-md-6" style="margin-bottom: 30px;">
+                                                <div class="col-md-6" style="margin-bottom: 30px;">
 
                                                     <div class="card ">
                                                       <div class="card-body" >
@@ -120,12 +118,7 @@ $emailusuario = $_SESSION['user_email'];
                                                             ?>
                                                       </div>
                                                     </div>
-
                                                 </div>
-
-
-
-
                                               <!-- MELHORES VENDAS  -->
                                               <div class="col-md-6" style="margin-bottom: 30px;">
 
@@ -325,7 +318,7 @@ $emailusuario = $_SESSION['user_email'];
                                               </div>
 
                                             </div>
-                                        </div>
+                                          </div>
                                                   <!-- Pag. para listar eventos Completo e realizados com comentarios -->
                                 <div class="modal-content" id=formTerceiro style="padding: 10px;">
 
@@ -384,7 +377,7 @@ $emailusuario = $_SESSION['user_email'];
 
 </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
