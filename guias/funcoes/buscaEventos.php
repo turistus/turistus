@@ -27,7 +27,7 @@ $Uid = $_SESSION['user_id'];
         eventos.idGuia AS idGuia,
 
         idPt,
-        datah,
+        dataUp,
 
         pontosturisticos.id AS pontoId,
         pontosturisticos.image AS img,
@@ -52,7 +52,7 @@ $Uid = $_SESSION['user_id'];
                     <img style="height: 100px; width: 180px; " src= <?php echo "'../images/pontosturisticos/$idPt/$img";?>'><br><br>
                     <h5 class="card-title"><?php echo $nome;  ?></h5>
                     <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
-                    <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($datah)); ?></h5><br>
+                    <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($dataUp)); ?></h5><br>
                     <a href="../processaEditarEvento.php?id=<?php echo $id?>" id="editar" class="btn btn-primary" > Editar </a>
 
                 </div>
