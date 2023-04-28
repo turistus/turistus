@@ -25,7 +25,6 @@ $Uid = $_SESSION['user_id'];
         eventos.nome AS nome,
         eventos.valor AS valor,
         eventos.idGuia AS idGuia,
-
         idPt,
         dataUp,
 

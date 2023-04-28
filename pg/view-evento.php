@@ -137,27 +137,27 @@ session_start();
 
                             <label for="nVagas">  N° Vagas  </label>
                              <!-- select AQUI   -->
-                             <select class="form-select" name="idPt" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
+                             <select class="form-select" name="vagas" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
                                             <option>Selecione</option>
 
                                                     <?php
 
-                                                        $result = $conn->prepare("SELECT id AS idValores, idEvento, valor1, valor2, valor3, valor4, valor5 FROM valores WHERE idEvento = $id ORDER BY $id ASC;");
+                                                        $result = $conn->prepare("SELECT *, FROM eventos WHERE id = $id ORDER BY $id ASC;");
                                                         $result->execute();
                                                         $res = $result->fetchAll(PDO::FETCH_ASSOC);
                                                     ?>
                                                     <?php
                                                         foreach($res as $ln ){
                                                     ?>
-                                                        <option value="<?php echo $ln['idValores'];?>" name="idValores" id="idValores" >
+                                                        <option value="<?php echo $ln['vagas'];?>" name="vagas" id="vagas" >
                                                     <?php
                                                         // echo $ln['id'].' - <br/>';
-                                                        echo $ln['name'].' - '.$ln['uf'];
+                                                        echo $ln['vagas'].' - '.$ln['valor']['0'];
                                                     }
                                                     ?>
                                                         </option>
                                         </select><br>
-                                <h4 style="text-align: center; border:solid 1px green; padding-left: 5px; padding-bottom: 5px; "> por R$ <?php echo number_format($valor, 2, ",", "."); ?></h4>
+
                             </div>
 
 
