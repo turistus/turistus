@@ -56,13 +56,9 @@ $Uid = $_SESSION['user_id'];
                     <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
                     <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($datah)); ?></h5><br>
 
-                      <div class="dialog">
-                        <div class="modal-content">
-                          <div class="modal-body">
+
                             <button id="primeiroForm" type="button" class="btn btn text-dark "> Editar </button>
-                          </div>
-                        </div>
-                      </div>
+
                 </div>
               </div>
             </div>
@@ -75,14 +71,18 @@ $Uid = $_SESSION['user_id'];
     <!-- FINAL ONDE BUSCA OS eventoS -->
         </div>
     </div>
-
+                    <div class="dialog">
+                          <div class="modal-body">
                         <div class="modal-content" id=formPrimeiro style="padding: 10px;">
                         AAAAAAAAA<br>
                         AAAA
                           <?php
-                            include_once '../guias/processaEditarEvento.php?id=<?php echo'.$id.'?>';
+                            include_once '../guias/processaEditarEvento.php?id=<?php echo $id?>';
                           ?>
                       </div>
+
+                      </div>
+                    </div>
 
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
@@ -93,7 +93,7 @@ $Uid = $_SESSION['user_id'];
     $("#formPrimeiro").hide();
 
   $("#primeiroForm").click(function () {
-    console.log("AAAAAAAAA");
+
     $("#formPrimeiro").show(1000);
 	});
 
