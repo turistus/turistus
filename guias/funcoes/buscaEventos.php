@@ -55,7 +55,7 @@ $Uid = $_SESSION['user_id'];
                     <h5 class="card-title"><?php echo $nome;  ?></h5>
                     <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
                     <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($datah)); ?></h5><br>
-                    <a href="?id=<?php echo $id?>" class="btn btn text-dark" onclick="abrirTela()" > Editar </a>
+                    <a href="../guias/processaEditarEvento.php?id=<?php echo $id?>" class="btn btn text-dark" data-bs-toggle='telaModal' data-bs-target='#telaModal'> Editar </a>
 
                 </div>
               </div>
@@ -70,28 +70,52 @@ $Uid = $_SESSION['user_id'];
         </div>
     </div>
   </main>
-  <script>
+
+  <div class="modal fade"  id="telaModal" tabindex="-1" aria-labelledby="telaModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Área Restrita</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                    <div class="row">
+                      <p></p>
+                      <button id="turista" type="button" class="btn btn-light text-dark me-2">Turista</button>
+                      <button id="guia" type="button" class="btn btn-light text-dark me-2">Guia</button>
+                    </div>
+                    <br>
+
+                      <div class="modal-content" id=formPrimeiro>
+                      <?php
+                            include_once './lgn/entrarGuia.php';
+                          ?>
+
+                      </div>
+
+                    </div>
+                </div>
+            </div>
+         </div>
 
 
-function abrirTela() {
-    // Crie um div para a tela flutuante
-    var telaFlutuante = document.createElement("div");
-    // Adicione uma classe para estilização
-    telaFlutuante.classList.add("tela-flutuante");
-    // Faça uma requisição AJAX para obter o conteúdo do arquivo "formulario.html"
-    fetch("./processaEditarEvento.php")
-      .then(response => response.text())
-      .then(html => {
-        // Adicione o conteúdo do arquivo ao div da tela flutuante
-        telaFlutuante.innerHTML = html;
-        // Adicione a tela flutuante ao body do seu HTML
-        document.body.appendChild(telaFlutuante);
-        // Exiba a tela flutuante com a função "alert"
-        alert(telaFlutuante.innerHTML);
-        // Remova a tela flutuante do body após o usuário clicar em "ok"
-        document.body.removeChild(telaFlutuante);
-      });
-  }
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+    $("#formPrimeiro").hide();
+
+  $("#formPrimeiro").click(function () {
+
+    $("#formPrimeiro").show(1000);
+
+	});
+
+
+
+  });
 
   </script>
 
