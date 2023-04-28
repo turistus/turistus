@@ -24,8 +24,7 @@ $emailusuario = $_SESSION['user_email'];
   <!-- Fonts and icons -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <link rel="stylesheet" src="./assets/js/material-dashboard.min.js" >
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
   <link rel="shortcut icon" type="imagex/png" href="../images/Logooriginal.png">
   <title>Painel Do Guia</title>
 </head>
@@ -331,7 +330,7 @@ $emailusuario = $_SESSION['user_email'];
                                 <div class="modal-content" id=formCriarEvento>
 
                                     <?php
-                                      include_once '../guias/cad-EventoFuncao.php';
+                                      include_once 'cad-EventoFuncao.php';
                                     ?>
                                 </div>
 
@@ -343,9 +342,9 @@ $emailusuario = $_SESSION['user_email'];
                                   ?>
 
                                 </div>
-
+                                                        <!-- Pag. para editar perfil guia -->
                                 <div class="modal-content" id=formPerfil style="padding-bottom: 20px;">
-                                                  <!-- Pag. para editar perfil guia -->
+
                                   <?php
                                       include_once 'funcoes/perfilPrivadoGuia.php';
                                   ?>
