@@ -23,9 +23,7 @@ $emailusuario = $_SESSION['user_email'];
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!-- Fonts and icons -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"/>
-  <link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
   <link rel="shortcut icon" type="imagex/png" href="../images/logooriginal.png">
   <title>Painel Do Guia</title>
 </head>
@@ -368,8 +366,9 @@ $emailusuario = $_SESSION['user_email'];
 
 </body>
 </html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+
   $(document).ready(function() {
     console.log("Testando o código JavaScript...");
     console.log("O documento está pronto!");

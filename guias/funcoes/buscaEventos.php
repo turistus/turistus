@@ -12,7 +12,7 @@ $Uid = $_SESSION['user_id'];
     <div class="shadow-lg p-3 mb-5 bg-white rounded"  >
         <div class="row">
 
-<div class="row">
+    <div class="row">
         <!-- Titulo-->
         <div class="row" style=" padding-left: 50px;  margin-bottom: 50px; background: url(../images/bussola.jpg) repeat-x top center;">
             <div class="col-12">
