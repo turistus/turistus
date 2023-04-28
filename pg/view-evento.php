@@ -150,10 +150,10 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                                     <?php
                                                         foreach($res as $ln ){
                                                     ?>
-                                                        <option value="<?php echo $ln['vagas'];?>" name="vagas" id="vagas" >
+                                                        <option value="<?php echo $ln['vagas']['0'];?>" name="vagas" id="vagas" >
                                                     <?php
                                                         // echo $ln['id'].' - <br/>';
-                                                        echo $ln['vagas'].' - '.$ln['valor']['0'];
+                                                        echo $ln['vagas']['0'].' - '.$ln['valor']['0'];
                                                     }
                                                     ?>
                                                         </option>
