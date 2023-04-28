@@ -56,8 +56,13 @@ $Uid = $_SESSION['user_id'];
                     <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
                     <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($datah)); ?></h5><br>
 
-                    <button id="primeiroForm" type="button" class="btn btn text-dark "> Editar </button>
-
+                      <div class="dialog">
+                        <div class="modal-content">
+                          <div class="modal-body">
+                            <button id="primeiroForm" type="button" class="btn btn text-dark "> Editar </button>
+                          </div>
+                        </div>
+                      </div>
                 </div>
               </div>
             </div>
