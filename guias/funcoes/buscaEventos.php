@@ -55,7 +55,7 @@ $Uid = $_SESSION['user_id'];
                     <h5 class="card-title"><?php echo $nome;  ?></h5>
                     <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
                     <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($datah)); ?></h5><br>
-                    <a href="buscaEventos.php?id=<?php echo $id?>" class="btn btn text-dark" data-bs-toggle='loginModal' data-bs-target='#Modal'> Editar </a>
+                    <a href="../guias/processaEditarEvento.php?id=<?php echo $id?>" class="btn btn text-dark" data-bs-toggle='loginModal' data-bs-target='#Modal'> Editar </a>
 
                 </div>
               </div>
@@ -79,21 +79,12 @@ $Uid = $_SESSION['user_id'];
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-
-                    <div class="row">
-                      <p></p>
-                      <button id="turista" type="button" class="btn btn-light text-dark me-2">Turista</button>
-                      <button id="guia" type="button" class="btn btn-light text-dark me-2">Guia</button>
-                    </div>
-                    <br>
-
+                        <br>
                       <div class="modal-content" id=formPrimeiro>
-                      <?php
+                          <?php
                             include_once '../../guias/processaEditarEvento.php';
                           ?>
-
                       </div>
-
                     </div>
                 </div>
             </div>
@@ -105,7 +96,7 @@ $Uid = $_SESSION['user_id'];
 <script>
   $(document).ready(function(){
 
-    $("#formPrimeiro").hide();
+
 
   $("#formPrimeiro").click(function () {
 
