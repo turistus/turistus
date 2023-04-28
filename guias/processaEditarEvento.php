@@ -73,20 +73,40 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                         }
 
                     if(!$empty_input){
+                        foreach($dados['vagas'] as $chave => $valor){
+                            echo $valor ."e". $chave;
+                            echo " valores e vagas". $dados['valor'][$chave]. "<br>";
+
+
+
                        $query_update_evento = "UPDATE eventos SET
                        nome=:nome,
-                       descricao=:descricao,
-                       valor=:valor,
-                       datah=:datah,
                        breveDescricao=:breveDescricao
+                       descricao=:descricao,
+                       datai=:datai,
+                       dataf=:dataf,
+                       encontro=:encontro,
+                       transporte=:transporte,
+                       alimentacao=:alimentacao,
+                       foto=:foto,
+                       vagas=:vagas,
+                       valor=:valor,
+                       dataUp=:dataUp
                        WHERE id=:id";
                        $editandoEvento = $conn->prepare($query_update_evento);
 
                        $editandoEvento->bindParam(':nome', $dados_evento['nome'], PDO::PARAM_STR);
-                       $editandoEvento->bindParam(':descricao', $dados_evento['descricao'], PDO::PARAM_STR);
-                       $editandoEvento->bindParam(':valor', $dados_evento['valor']);
-                       $editandoEvento->bindParam(':datah', $dados_evento['datah']);
                        $editandoEvento->bindParam(':breveDescricao', $dados_evento['breveDescricao']);
+                       $editandoEvento->bindParam(':descricao', $dados_evento['descricao'], PDO::PARAM_STR);
+                       $editandoEvento->bindParam(':datai', $dados_evento['datai']);
+                       $editandoEvento->bindParam(':dataf', $dados_evento['dataf']);
+                       $editandoEvento->bindParam(':encontro', $dados_evento['encontro']);
+                       $editandoEvento->bindParam(':transporte', $dados_evento['transporte']);
+                       $editandoEvento->bindParam(':alimentacao', $dados_evento['alimentacao']);
+                       $editandoEvento->bindParam(':foto', $dados_evento['foto']);
+                       $editandoEvento->bindParam(':vagas', $valor);
+                       $editandoEvento->bindParam(':valor', $dados_evento['valor'][$chave]);
+                       $editandoEvento->bindParam(':dataUp', $dados_evento['dataUp']);
                        $editandoEvento->bindParam(':id', $idE, PDO::PARAM_INT);
                             if($editandoEvento->execute()){
                                     echo "ok atualizou !";
@@ -95,8 +115,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                                 echo "não gravoou !";
                                 header("Location: painelGuia.php");
                             }
-
-
+                        }
                     }
                 }
             ?>
@@ -131,18 +150,18 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                         <label> Data inicial </label>
-                        <input class="form-control" type="date" name="datah" id="datah"
-                        value="<?php if(isset($dados_evento['datah']))
-                        { echo $dados_evento['datah'];}elseif(isset($row_evento['datah']))
-                        { echo $row_evento['datah']; }?>"required> <br>
+                        <input class="form-control" type="date" name="datai" id="datai"
+                        value="<?php if(isset($dados_evento['datai']))
+                        { echo $dados_evento['datai'];}elseif(isset($row_evento['datai']))
+                        { echo $row_evento['datai']; }?>"required> <br>
                     </div>
 
                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                         <label> Data final </label>
-                        <input class="form-control" type="date" name="datah" id="datah"
-                        value="<?php if(isset($dados_evento['datah']))
-                        { echo $dados_evento['datah'];}elseif(isset($row_evento['datah']))
-                        { echo $row_evento['datah']; }?>"required> <br>
+                        <input class="form-control" type="date" name="dataf" id="dataf"
+                        value="<?php if(isset($dados_evento['dataf']))
+                        { echo $dados_evento['dataf'];}elseif(isset($row_evento['dataf']))
+                        { echo $row_evento['dataf']; }?>"required> <br>
                     </div>
 
 
@@ -160,8 +179,8 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="hotelaria" name="hotelaria" value="1">
-                                <label class="custom-control-label" for="hotelaria"> Transporte <i class='fa-solid fa-hotel'></i></label>
+                                <input type="checkbox" class="custom-control-input" id="transporte" name="transporte" value="1">
+                                <label class="custom-control-label" for="transporte"> Transporte <i class='fa-solid fa-car'></i></label>
                             </div>
                         </div>
 
@@ -172,8 +191,8 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="hotelaria" name="hotelaria" value="1">
-                                <label class="custom-control-label" for="hotelaria"> Alimentação <i class='fa-solid fa-hotel'></i></label>
+                                <input type="checkbox" class="custom-control-input" id="alimentacao" name="alimentacao" value="1">
+                                <label class="custom-control-label" for="alimentacao"> Alimentação <i class='fa-solid fa-eat'></i></label>
                             </div>
                         </div>
 
