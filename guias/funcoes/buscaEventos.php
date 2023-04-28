@@ -89,7 +89,7 @@ $Uid = $_SESSION['user_id'];
 
                       <div class="modal-content" id=formPrimeiro>
                       <?php
-                            include_once './lgn/entrarGuia.php';
+                            include_once '../../guias/processaEditarEvento.php';
                           ?>
 
                       </div>
