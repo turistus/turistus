@@ -55,7 +55,8 @@ $Uid = $_SESSION['user_id'];
                     <h5 class="card-title"><?php echo $nome;  ?></h5>
                     <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
                     <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($datah)); ?></h5><br>
-                    <a href="../guias/processaEditarEvento.php?id=<?php echo $id?>" class="btn btn text-dark" id='primeiroForm'> Editar </a>
+
+                    <button id="primeiroForm" type="button" class="btn btn text-dark "> Editar </button>
 
                 </div>
               </div>
@@ -72,7 +73,7 @@ $Uid = $_SESSION['user_id'];
 
                         <div class="modal-content" id=formPrimeiro style="padding: 10px;">
                           <?php
-                            include_once '../guias/processaEditarEvento.php';
+                            include_once '../guias/processaEditarEvento.php?id=<?php echo'.$id.'?>';
                           ?>
                       </div>
 
