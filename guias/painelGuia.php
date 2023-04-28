@@ -337,7 +337,7 @@ $emailusuario = $_SESSION['user_email'];
                                 <div class="modal-content" id=formQuarto style="padding-bottom: 20px;">
 
                                   <?php
-                                      include_once './funcoes/listaEventosPerfilGuia.php';
+                                      include_once '../guias/funcoes/listaEventosPerfilGuia.php';
                                   ?>
 
                                 </div>
@@ -345,7 +345,7 @@ $emailusuario = $_SESSION['user_email'];
                                 <div class="modal-content" id=formPerfil style="padding-bottom: 20px;">
 
                                   <?php
-                                      include_once './funcoes/perfilPrivadoGuia.php';
+                                      include_once '../guias/funcoes/perfilPrivadoGuia.php';
                                   ?>
 
                                 </div>
