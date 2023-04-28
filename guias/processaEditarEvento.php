@@ -74,10 +74,6 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
                     if(!$empty_input){
                         foreach($dados['vagas'] as $chave => $valor){
-                            echo $valor ."e". $chave;
-                            echo " valores e vagas". $dados['valor'][$chave]. "<br>";
-
-
 
                        $query_update_evento = "UPDATE eventos SET
                        nome=:nome,
