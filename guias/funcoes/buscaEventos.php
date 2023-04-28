@@ -69,18 +69,17 @@ $Uid = $_SESSION['user_id'];
     <!-- FINAL ONDE BUSCA OS eventoS -->
         </div>
     </div>
-  </main>
 
-  <div class="modal fade"  id="formPrimeiro" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal fade"  id="formPrimeiro" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="loginModalLabel">Área Restrita</h5>
+
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <br>
-                      <div class="modal-content" id=formPrimeiro>
+                        <div class="modal-content" id=formPrimeiro style="padding: 10px;">
                           <?php
                             include_once '../../guias/processaEditarEvento.php';
                           ?>
@@ -90,23 +89,21 @@ $Uid = $_SESSION['user_id'];
             </div>
          </div>
 
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
-
     $("#formPrimeiro").hide();
-
   $("#primeiroForm").click(function () {
-
     $("#formPrimeiro").show(1000);
-
 	});
-
-
 
   });
 
-  </script>
+</script>
+</main>
+
+
+
+
+
 
