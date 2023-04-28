@@ -3,21 +3,16 @@ define('ACCESS', true);
 include_once '../connection.php';
 session_start();
 ob_start();
-
 $idE = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-
 if (empty($idE)) {
     $_SESSION['msg'] = "<p style='color: #f00;'>Erro: Evento não encontrado!</p>";
     header("Location: painelGuia.php");
     exit();
 }
 
-
 $query_busca_evento = "SELECT * FROM eventos WHERE id = $idE limit 1";
 $evento_selecionado = $conn->prepare($query_busca_evento);
 $evento_selecionado->execute();
-
-
 
 if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
     $row_evento = $evento_selecionado->fetch(PDO::FETCH_ASSOC);
@@ -25,7 +20,6 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
     header("Location: ../guias/painelGuia.php");
     exit();
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +54,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
         <!-- PRIMEIRA LINHA -->
         <div class="row" >
 
-            <div class="conteiner form-group col-12">
+            <div class="container form-group col-12">
 
             <h3> Editar Evento </h3>
 
