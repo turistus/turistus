@@ -25,7 +25,8 @@ $emailusuario = $_SESSION['user_email'];
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
-  <link rel="shortcut icon" type="imagex/png" href="../images/Logooriginal.png">
+
+  <link rel="shortcut icon" type="imagex/png" href="../images/logooriginal.png">
   <title>Painel Do Guia</title>
 </head>
 
@@ -327,10 +328,10 @@ $emailusuario = $_SESSION['user_email'];
 
                                 </div>
                                                   <!-- Pag. para cadastro novo EVENTO desse guia -->
-                                <div class="modal-content" id=formCriarEvento>
+                                <div class="modal-content" id=formCriarEvento style="padding-bottom: 20px;">
 
                                     <?php
-                                      include_once 'cad-EventoFuncao.php';
+                                      include_once '../guias/cad-EventoFuncao.php';
                                     ?>
                                 </div>
 
@@ -380,6 +381,8 @@ $emailusuario = $_SESSION['user_email'];
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
   $(document).ready(function() {
+    console.log("Testando o código JavaScript...");
+    console.log("O documento está pronto!");
 
     $("#formPainel").show();
     $("#formCriarEvento").hide();
@@ -442,6 +445,7 @@ $emailusuario = $_SESSION['user_email'];
     $("#formSegundo").hide();
 
 	});
+
 
 
 

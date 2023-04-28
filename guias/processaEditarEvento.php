@@ -27,8 +27,9 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
         <title>Editar Eventos</title>
     </head>
@@ -58,7 +59,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                         }
 
                     if(!$empty_input){
-                        foreach($dados_evento['vagas'] as $chave => $valor){
+                        foreach($dados_evento['vagas'] as $chave => $nVagas){
 
                        $query_update_evento = "UPDATE eventos SET
                        nome=:nome,
@@ -85,7 +86,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                        $editandoEvento->bindParam(':transporte', $dados_evento['transporte']);
                        $editandoEvento->bindParam(':alimentacao', $dados_evento['alimentacao']);
                        $editandoEvento->bindParam(':foto', $dados_evento['foto']);
-                       $editandoEvento->bindParam(':vagas', $valor);
+                       $editandoEvento->bindParam(':vagas', $nVagas);
                        $editandoEvento->bindParam(':valor', $dados_evento['valor'][$chave]);
                        $editandoEvento->bindParam(':dataUp', $dados_evento['dataUp']);
                        $editandoEvento->bindParam(':id', $idE, PDO::PARAM_INT);
@@ -182,7 +183,7 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px;">
                         <label>Fotos do evento</label>
                         <i class="fa-regular fa-images"></i>
-                        <input type="file" name="attachment" id="attachment" onchange="previewImagem()" required><br><br>
+                        <input type="file" name="foto" id="foto" onchange="previewImagem()" required><br><br>
 
                     </div>
 
@@ -243,8 +244,10 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
         </div>
     </div>
 </main>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>
 <script src="./js/custom.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
     function previewImagem(){
         var imagem = document.querySelector('input[name=foto]').files[0];
@@ -261,6 +264,3 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
             }
 
 </script>
-
-</body>
-</html>
