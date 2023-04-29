@@ -24,7 +24,6 @@ $Uid = filter_input(INPUT_GET, "idguia", FILTER_SANITIZE_NUMBER_INT);
         eventos.idGuia AS idGuia,
 
         idPt,
-        datah,
 
         pontosturisticos.id AS pontoId,
         pontosturisticos.image AS img,
