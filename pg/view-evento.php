@@ -152,7 +152,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 <br>
 
                                     <?php
-                                    $buscaValores = "SELECT *, valores.id AS idVal, vagas FROM valores WHERE idEvento = $id";
+                                    $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY idVal";
                                     $result = $conn->prepare($buscaValores);
                                     $result->execute();
                                     $res = $result->fetchAll(PDO::FETCH_ASSOC);
@@ -164,14 +164,21 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         <div class="col-auto my-1">,
 
                                             <div class="custom-control custom-checkbox mr-sm-2">
-                                                <input type="checkbox" class="custom-control-input" id="totalEvento" name="totalEvento" value="">
-                                                <label class="custom-control-label" for="totalEvento"> AAA  <i class='fa-solid fa-car'></i></label>
+
+                                                <input type="checkbox" class="custom-control-input" id="idVal" name="idVal" value="
+                                                <?php
+                                                for($cont = 0; $cont < count($ln['idVal']); $cont++ ){
+                                                    echo $ln['vagas'][$cont];
+                                                    echo $ln['total'][$cont];
+                                                }
+                                                ?>">
+                                                <label class="custom-control-label" for="totalEvento"> AAA<?php echo $ln['vagas'][$cont] .' Pessoas - Valor '.$ln['total'][$cont] ?>  <i class='fa-solid fa-car'></i></label>
                                             </div>
                                         </div>
                                     </div>
                                     <?php
-                                        }
 
+                                    }
                                     ?>
                                     <br>
                             </div>
