@@ -186,7 +186,7 @@ include_once '../connection.php';
 
                                                     <?php
 
-                                                        $result = $conn->prepare("SELECT *, pontosturisticos.uf AS Estado FROM pontosturisticos
+                                                        $result = $conn->prepare("SELECT *, pontosturisticos.id AS id, pontosturisticos.uf AS Estado FROM pontosturisticos
                                                         INNER JOIN servicos WHERE Estado = servicos.uf AND WHERE servicos.id = $Uid ORDER BY name ASC;");
                                                         $result->execute();
                                                         $res = $result->fetchAll(PDO::FETCH_ASSOC);
