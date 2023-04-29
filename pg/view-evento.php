@@ -162,13 +162,13 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                     ?>
                                     <!-- Check box do VALOR TOTAL SELECIONADO na Compra -->
                                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8" style="padding: 10px;">
-                                        <div class="col-auto my-1">
+
                                             <div class="custom-control custom-checkbox mr-sm-2">
                                                 <input type="checkbox" class="custom-control-input" id="total" name="total" value="">
                                                 <label class="custom-control-label" for="total"> <?php echo 'Vagas: ' .  $ln['vagas'] .' - Valor: '.$ln['total']?>  </label>
                                             </div>
+
                                         </div>
-                                    </div>
 
                                     <?php
                                         }
