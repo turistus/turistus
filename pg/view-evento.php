@@ -136,7 +136,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <h5 class="card-title">Abertura: <?php echo date('d/m/Y',  strtotime($dataUp)); ?></h5>
                             <div class="col-10 " >
 
-                            <label for="nVagas">  N° Vagas  </label>
+                            <label for="vagas">  N° Vagas  </label>
                              <!-- select AQUI   -->
                              <select class="form-select" name="vagas" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
                                             <option>Selecione</option>
@@ -189,7 +189,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                                 <input type="hidden" name="titulo" id="titulo" value="<?php echo $nome;?>" />
                                                 <input type="hidden" name="idEv" id="idEv" value="<?php echo $id;?>" />
                                                 <input type="hidden" name="descricao" id="descricao" value="<?php echo $descricao;?>" />
-                                                <input type="hidden" name="custoEvento" id="custoEvento" value="<?php echo $valor;?>" />
+                                                <input type="hidden" name="custoEvento" id="custoEvento" value="<?php echo $ln['valor']['0'];?>" />
                                                 <input type="hidden" name="idGuia" id="idGuia" value="<?php echo $idDoGuia;?>" />
                                                 <input id="BotaoPagar" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             </form>
