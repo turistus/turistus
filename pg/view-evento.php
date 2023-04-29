@@ -154,6 +154,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                                     <?php
                                                         // echo $ln['id'].' - <br/>';
                                                         echo $ln['vagas']['0'].' - '.$ln['valor']['0'];
+                                                        echo $ln['vagas']['1'].' - '.$ln['valor']['1'];
                                                     }
                                                     ?>
                                                         </option>
