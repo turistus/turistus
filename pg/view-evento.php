@@ -138,6 +138,8 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-10 " >
 
                                 <label for="vagas">  N° Vagas  </label>
+                                <input type="checkbox" class="custom-control-input" id="totalEvento" name="totalEvento" value="">
+                                <label class="custom-control-label" for="totalEvento"> PESSOAS <i class='fa-solid fa-car'></i></label>
                                     <?php
                                     $result = $conn->prepare("SELECT *, vagas FROM valores WHERE idEv = $id");
                                     $result->execute();
