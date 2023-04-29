@@ -29,7 +29,7 @@ $id = 96;
                                             </div>
                                         </div>
                                     </div>
-                                    <br>
+
 
                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;  border: 1px solid black;">
                                         <div class="col-auto my-1">
@@ -39,7 +39,7 @@ $id = 96;
                                             </div>
                                         </div>
                                     </div>
-
+                                        <hr>
 
                                     <?php
                                         }
