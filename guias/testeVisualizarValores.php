@@ -25,17 +25,28 @@ $id = 96;
                                         <div class="col-auto my-1">
                                             <div class="custom-control custom-checkbox mr-sm-2">
                                                 <input type="checkbox" class="custom-control-input" id="idVal" name="idVal" value="">
-                                                <label class="custom-control-label" for="vagas"> <?php echo $ln['vagas']['0'] .' Pessoas - Valor '.$ln['total']['0'] ?>  <i class='fa-solid fa-car'></i></label>
+                                                <label class="custom-control-label" for="vagas"> <?php echo "IDV: ". $idVal ." ". $ln['vagas'][0] .' Pessoas - Valor '.$ln['total'][0] ?>  <i class='fa-solid fa-car'></i></label>
                                             </div>
                                         </div>
                                     </div>
+                                    <br>
 
 
                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;  border: 1px solid black;">
                                         <div class="col-auto my-1">
                                             <div class="custom-control custom-checkbox mr-sm-2">
                                                 <input type="checkbox" class="custom-control-input" id="vagas" name="vagas" value="">
-                                                <label class="custom-control-label" for="vagas"> <?php echo "IDV:". $idVal . $ln['vagas']['1'] .' Pessoas - Valor '.$ln['total']['1'] ?>  <i class='fa-solid fa-car'></i></label>
+                                                <label class="custom-control-label" for="vagas"> <?php echo "IDV: ". $idVal ." ". $ln['vagas']['1'] .' Pessoas - Valor '.$ln['total']['1'] ?>  <i class='fa-solid fa-car'></i></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;  border: 1px solid black;">
+                                        <div class="col-auto my-1">
+                                            <div class="custom-control custom-checkbox mr-sm-2">
+                                                <input type="checkbox" class="custom-control-input" id="vagas" name="vagas" value="">
+                                                <label class="custom-control-label" for="vagas"> <?php echo "IDV: ". $idVal ." ". $ln['vagas']['2'] .' Pessoas - Valor '.$ln['total']['2'] ?>  <i class='fa-solid fa-car'></i></label>
                                             </div>
                                         </div>
                                     </div>
