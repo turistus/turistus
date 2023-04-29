@@ -161,7 +161,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                     ?>
                                     <!-- Check box do VALOR TOTAL SELECIONADO na Compra -->
-                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8" style="padding: 10px;">
                                         <div class="col-auto my-1">
                                             <div class="custom-control custom-checkbox mr-sm-2">
                                                 <input type="checkbox" class="custom-control-input" id="total" name="total" value="">
@@ -174,7 +174,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         }
 
                                     ?>
-                                    <br>
+
                             </div>
 
 
