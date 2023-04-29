@@ -121,7 +121,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="row">
                             <div class="col-3 " >
                                 <br>
-                                <h5 style="text-align: center;">Classificação:</h5>
+                                <h5 style="margin-left: 5px;"> Classificação: </h5>
                             </div>
                             <div class="col-4 " >
                                 <div class="star-ratings" style="margin-left:15px;">
@@ -135,7 +135,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             </div>
                             </div>
 
-                            <h5 class="card-title" style="text-align: center;"> Inicio: <?php echo date('d/m/Y',  strtotime($datai)) . " Final: ". date('d/m/Y',  strtotime($dataf)); ?></h5>
+                            <h5 class="card-title" > Inicio: <?php echo date('d/m/Y',  strtotime($datai)) . " - Final: ". date('d/m/Y',  strtotime($dataf)); ?></h5>
 
                             <div class="col-10 " >
 
