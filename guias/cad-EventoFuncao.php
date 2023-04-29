@@ -127,7 +127,7 @@ include_once '../connection.php';
 
 
 
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px;">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px;">
                         <label>Fotos do evento</label>
                         <i class="fa-regular fa-images"></i>
                         <input type="file" name="foto[]" id="foto" multiple="multiple" onchange="previewImagem()" required><br><br>

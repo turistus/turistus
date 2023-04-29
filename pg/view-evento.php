@@ -147,11 +147,9 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                     ?>
                                 </ul>
                             </div>
-                            <div class="col-10 " >
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" >
 
-                                <label for="vagas">  N° Vagas  </label>
-
-                                <br>
+                                <label for="total">  N° Vagas  </label>
 
                                     <?php
                                     $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY idVal";
@@ -160,25 +158,21 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                     $res = $result->fetchAll(PDO::FETCH_ASSOC);
 
                                         foreach($res as $ln ){
-                                            for($cont = 0; $cont < count($ln['idVal']); $cont++ ){
+
                                     ?>
                                     <!-- Check box do VALOR TOTAL SELECIONADO na Compra -->
-                                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-                                        <div class="col-auto my-1">,
-
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                                        <div class="col-auto my-1">
                                             <div class="custom-control custom-checkbox mr-sm-2">
-
-                                                <input type="checkbox" class="custom-control-input" id="idVal" name="idVal" value="
-                                                <?php echo $ln['vagas'][$cont]; echo $ln['total'][$cont];
-                                                }// fim do FOR
-                                                ?>">
-                                                <label class="custom-control-label" for="vagas"> AAA<?php echo $ln['vagas'][$cont] .' Pessoas - Valor '.$ln['total'][$cont] ?>  <i class='fa-solid fa-car'></i></label>
+                                                <input type="checkbox" class="custom-control-input" id="total" name="total" value="">
+                                                <label class="custom-control-label" for="total"> <?php echo "IDV: ". $idVal ." - ". 'Vagas: ' .  $ln['vagas'] .' - Valor: '.$ln['total']?>  <i class='fa-solid fa-car'></i></label>
                                             </div>
                                         </div>
                                     </div>
-                                    <?php
 
-                                    }
+                                    <?php
+                                        }
+
                                     ?>
                                     <br>
                             </div>
