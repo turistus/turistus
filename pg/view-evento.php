@@ -123,7 +123,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="row">
                             <div class="col-3 " >
                                 <br>
-                                <h5 style="margin-left: 5px;"> Classificação: </h5>
+                                <h5 style="margin-left: 15px;"> Classificação: </h5>
                             </div>
                             <div class="col-4 " >
                                 <div class="star-ratings" style="margin-left:15px;">
@@ -136,10 +136,11 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 </div>
                             </div>
                             </div>
+
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px;">
                                 <h5 class="card-title" style="margin-left: 5px;" > Inicio: <?php echo date('d/m/Y',  strtotime($datai)) . " - Final: ". date('d/m/Y',  strtotime($dataf)); ?></h5>
                                 <ul class="form-inline">
-                                    <?php
+                                    <?php //esse Busca as opções de Transporte e refeiçao inclusos
                                         include_once './funcoes/separarListaValores.php';
                                     ?>
                                 </ul>
@@ -161,18 +162,10 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                     ?>
                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
                                         <div class="col-auto my-1">,
-                                            <div class="custom-control custom-checkbox mr-sm-2">
-                                                    <input type="checkbox" class="custom-control-input" id="alimentacao" name="alimentacao" value="1">
-                                                    <label class="custom-control-label" for="alimentacao"> Alimentação <i class='fa-solid fa-eat'></i></label>
-                                                </div>
-                                            <div class="custom-control custom-checkbox mr-sm-2">
 
-                                                <input type="checkbox" class="custom-control-input" id="totalEvento" name="totalEvento" value="
-                                                <?php
-                                                for($cont = 0; $cont < count($ln['idVal']); $cont++ ){
-                                                    echo $ln['vagas'][$cont];
-                                                ?>">
-                                            <label class="custom-control-label" for="totalEvento"> AAA<?php echo $ln['vagas'][$cont] .' Pessoas - Valor '.$ln['vagas'][$cont] ?>  <i class='fa-solid fa-car'></i></label>
+                                            <div class="custom-control custom-checkbox mr-sm-2">
+                                                <input type="checkbox" class="custom-control-input" id="totalEvento" name="totalEvento" value="">
+                                                <label class="custom-control-label" for="totalEvento"> AAA  <i class='fa-solid fa-car'></i></label>
                                             </div>
                                         </div>
                                     </div>
