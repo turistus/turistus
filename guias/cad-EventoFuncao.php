@@ -117,7 +117,7 @@ include_once '../connection.php';
 
                                                 <div class="custom-control custom-checkbox mr-sm-2">
                                                     <input type="checkbox" class="custom-control-input" id="alimentacao" name="alimentacao" value="1">
-                                                    <label class="custom-control-label" for="alimentacao"> Alimentação <i class='fa-solid fa-eat'></i></label>
+                                                    <label class="custom-control-label" for="alimentacao"> Alimentação <i class='fa-solid fa-burger'></i></label>
                                                 </div>
                                             </div>
 

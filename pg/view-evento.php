@@ -116,7 +116,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                         <div class="col-md-6" style="border: 0,5px solid black;">
 
                             <div class="col-md-12 ">
-                                <h4>Profissional organizador:  <a href="../guias/perfilG.php?idguia=<?php echo $idGuia;?>"><?php echo $nomeGuia;?></h4></a>
+                                <h5>Profissional organizador:  <a href="../guias/perfilG.php?idguia=<?php echo $idGuia;?>"><?php echo $nomeGuia;?></h5></a>
                                 <h3 style="text-align: center;"><?php echo $cidade?> - <?php echo $uf?></h3>
                             </div>
                             <hr>
@@ -158,19 +158,17 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                     $res = $result->fetchAll(PDO::FETCH_ASSOC);
 
                                         foreach($res as $ln ){
-
+                                            for($cont = 0; $cont < count($ln['idVal']); $cont++ ){
                                     ?>
+                                    <!-- Check box do VALOR TOTAL SELECIONADO na Compra -->
                                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
                                         <div class="col-auto my-1">,
 
                                             <div class="custom-control custom-checkbox mr-sm-2">
 
                                                 <input type="checkbox" class="custom-control-input" id="idVal" name="idVal" value="
-                                                <?php
-                                                for($cont = 0; $cont < count($ln['idVal']); $cont++ ){
-                                                    echo $ln['vagas'][$cont];
-                                                    echo $ln['total'][$cont];
-                                                }
+                                                <?php echo $ln['vagas'][$cont]; echo $ln['total'][$cont];
+                                                }// fim do FOR
                                                 ?>">
                                                 <label class="custom-control-label" for="totalEvento"> AAA<?php echo $ln['vagas'][$cont] .' Pessoas - Valor '.$ln['total'][$cont] ?>  <i class='fa-solid fa-car'></i></label>
                                             </div>
