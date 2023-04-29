@@ -133,44 +133,33 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             </div>
                             </div>
 
-                            <h5 class="card-title">Abertura: <?php echo date('d/m/Y',  strtotime($datai)); ?></h5>
-                            <h5 class="card-title">Final: <?php echo date('d/m/Y',  strtotime($dataf)); ?></h5>
+                            <h5 class="card-title"> Abertura: <?php echo date('d/m/Y',  strtotime($datai)); ?></h5>
+                            <h5 class="card-title"> Final: <?php echo date('d/m/Y',  strtotime($dataf)); ?></h5>
                             <div class="col-10 " >
 
-                            <label for="vagas">  N° Vagas  </label>
-                             <!-- select AQUI   -->
+                                <label for="vagas">  N° Vagas  </label>
+                                    <?php
+                                    $result = $conn->prepare("SELECT *, vagas FROM valores WHERE idEv = $id ORDER BY $id ASC");
+                                    $result->execute();
+                                    $res = $result->fetchAll(PDO::FETCH_ASSOC);
 
-
-                                                    <?php
-
-                                                        $result = $conn->prepare("SELECT *, vagas FROM valores WHERE idEv = $id ORDER BY $id ASC");
-                                                        $result->execute();
-                                                        $res = $result->fetchAll(PDO::FETCH_ASSOC);
-                                                    ?>
-                                                    <?php
-                                                        foreach($res as $ln ){
-                                                            for($cont = 0; $cont < count($ln['vagas']); $cont++ )
-                                                            {
-                                                    ?>
-                                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-                                                            <div class="col-auto my-1">
-                                                                <div class="custom-control custom-checkbox mr-sm-2">
-                                                                    <input type="checkbox" class="custom-control-input" id="totalEvento" name="totalEvento" value="
-                                                                    <?php echo $ln['vagas'][$cont];
-
-                                                                     ?>">
-                                                                    <label class="custom-control-label" for="totalEvento"> <?php echo $ln['vagas'][$cont] .' Pessoas - Valor '.$ln['vagas'][$cont] ?>  <i class='fa-solid fa-car'></i></label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                    <?php
-                                                        }
-                                                    }
-                                                    ?>
-
-                                        <br>
-
+                                        foreach($res as $ln ){
+                                            for($cont = 0; $cont < count($ln['vagas']); $cont++ ){
+                                    ?>
+                                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                                        <div class="col-auto my-1">
+                                            <div class="custom-control custom-checkbox mr-sm-2">
+                                                <input type="checkbox" class="custom-control-input" id="totalEvento" name="totalEvento" value="
+                                                <?php echo $ln['vagas'][$cont];?>">
+                                            <label class="custom-control-label" for="totalEvento"> <?php echo $ln['vagas'][$cont] .' Pessoas - Valor '.$ln['vagas'][$cont] ?>  <i class='fa-solid fa-car'></i></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+                                    <br>
                             </div>
 
 
