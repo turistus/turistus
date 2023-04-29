@@ -143,9 +143,6 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                 <br>
 
-                                <input type="checkbox" class="custom-control-input" id="totalEvento" name="totalEvento" value="">
-                                <label class="custom-control-label" for="totalEvento"> PESSOAS <i class='fa-solid fa-car'></i></label>
-
                                     <?php
                                     $buscaValores = "SELECT *, vagas FROM valores WHERE idEvento = $id";
                                     $result = $conn->prepare($buscaValores);
@@ -160,7 +157,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                             <div class="custom-control custom-checkbox mr-sm-2">
                                                 <input type="checkbox" class="custom-control-input" id="totalEvento" name="totalEvento" value="
                                                 <?php echo $ln['vagas'][$cont];?>">
-                                            <label class="custom-control-label" for="totalEvento"> <?php echo $ln['vagas'][$cont] .' Pessoas - Valor '.$ln['vagas'][$cont] ?>  <i class='fa-solid fa-car'></i></label>
+                                            <label class="custom-control-label" for="totalEvento"> AAA<?php echo $ln['vagas'][$cont] .' Pessoas - Valor '.$ln['vagas'][$cont] ?>  <i class='fa-solid fa-car'></i></label>
                                             </div>
                                         </div>
                                     </div>
