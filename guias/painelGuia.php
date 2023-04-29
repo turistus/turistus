@@ -3,7 +3,7 @@ session_start();
 define('ACCESS', true);
 include_once '../connection.php';
 
-ob_start();
+//ob_start();
 
 
 //echo $_SESSION['user_id'];

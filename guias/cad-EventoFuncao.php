@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once '../connection.php';
-$Uidcad = $_SESSION['user_id'];
+
 
 
 ?>
@@ -189,7 +189,7 @@ $Uidcad = $_SESSION['user_id'];
                                                     <?php
 
                                                         $result = $conn->prepare("SELECT *, pontosturisticos.id AS id, pontosturisticos.uf AS Estado FROM pontosturisticos
-                                                        INNER JOIN servicos WHERE servicos.id = $Uidcad ORDER BY id ASC;");
+                                                        INNER JOIN servicos WHERE servicos.id = $Uid ORDER BY id ASC;");
                                                         $result->execute();
                                                         $res = $result->fetchAll(PDO::FETCH_ASSOC);
                                                     ?>
@@ -213,8 +213,8 @@ $Uidcad = $_SESSION['user_id'];
                                             <label hidden >Seu ID GUIA</label>
                                             <input hidden type="text" class="form-control" id="idGuia" placeholder="" name="idGuia"
                                             value="<?php
-                                                if (isset($Uidcad)) {
-                                                    echo $Uidcad;
+                                                if (isset($Uid)) {
+                                                    echo $Uid;
                                                 }?>" >
 
                                         </div>
