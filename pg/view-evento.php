@@ -138,7 +138,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 <h5 class="card-title" style="margin-left: 5px;" > Inicio: <?php echo date('d/m/Y',  strtotime($datai)) . " - Final: ". date('d/m/Y',  strtotime($dataf)); ?></h5>
                                 <ul>
                                     <?php
-                                        include_once './pg/funcoes/separarListaValores.php';
+                                        include_once '../pg/funcoes/separarListaValores.php';
                                     ?>
                                 </ul>
                             </div>
