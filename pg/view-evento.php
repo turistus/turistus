@@ -147,7 +147,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                     ?>
                                 </ul>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6" >
+                            <div class="col-12" >
 
                                 <label for="total">  N° Vagas  </label>
 
@@ -165,7 +165,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         <div class="col-auto my-1">
                                             <div class="custom-control custom-checkbox mr-sm-2">
                                                 <input type="checkbox" class="custom-control-input" id="total" name="total" value="">
-                                                <label class="custom-control-label" for="total"> <?php echo "IDV: ". $idVal ." - ". 'Vagas: ' .  $ln['vagas'] .' - Valor: '.$ln['total']?>  <i class='fa-solid fa-car'></i></label>
+                                                <label class="custom-control-label" for="total"> <?php echo 'Vagas: ' .  $ln['vagas'] .' - Valor: '.$ln['total']?>  </label>
                                             </div>
                                         </div>
                                     </div>
