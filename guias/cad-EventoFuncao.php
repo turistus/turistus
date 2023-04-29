@@ -43,7 +43,7 @@ include_once '../connection.php';
     função cadastrar Turista processado em outra pagina php -->
             <form method="POST" action="processa-cad-evento.php">
 
-                        <div class="row" >
+                        <div class="row" style="padding: 20px;">
                         <!-- as melhores colunas organizadas da maior para menor -->
                                     <div class="col-xl-12 col-lg-12 col-sm-12 col-md-12 mb-12">
 
@@ -123,15 +123,53 @@ include_once '../connection.php';
 
 
 
-                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-mb-12">
-                                            <p >Valor</p>
-                                            <input type="text" class="form-control" id="valor" placeholder="R$" name="valor"
-                                            value="<?php
-                                                if (isset($dados['valor'])) {
-                                                    echo $dados['valor'];
-                                                }?>" required>
 
-                                        </div>
+
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px;">
+                        <label>Fotos do evento</label>
+                        <i class="fa-regular fa-images"></i>
+                        <input type="file" name="foto[]" id="foto" multiple="multiple" onchange="previewImagem()" required><br><br>
+
+                    </div>
+
+
+                        <div class="row col-12" >
+                            <div id="formulario" class="col-xl-12 col-lg-12 col-md-12 col-sm-12" >
+                                <div class="form-group form-inline" id="bloco" style="border: 1px solid green; padding:15px;">
+
+                                            <label>  N° Vagas  </label>
+                                                <!-- select AQUI   -->
+                                                <select id="vagas" name="vagas[]" class="custom-select col-3" required>
+                                                        <option value="">Selecione</option>
+                                                        <option value="01">01 Pessoa</option>
+                                                        <option value="02">02 Pessoas</option>
+                                                        <option value="03">03 Pessoas</option>
+                                                        <option value="04">04 Pessoas</option>
+                                                        <option value="05">05 Pessoas</option>
+                                                        <option value="06">06 Pessoas</option>
+                                                        <option value="07">07 Pessoas</option>
+                                                        <option value="08">08 Pessoas</option>
+                                                        <option value="09">09 Pessoas</option>
+                                                        <option value="10">10 Pessoas</option>
+                                                        <option value="11">11 Pessoas</option>
+                                                        <option value="12">12 Pessoas</option>
+                                                        <option value="13">13 Pessoas</option>
+                                                        <option value="14">14 Pessoas</option>
+                                                        <option value="15">15 Pessoas</option>
+                                                        <option value="16">16 Pessoas</option>
+                                                        <option value="17">17 Pessoas</option>
+                                                        <option value="18">18 Pessoas</option>
+                                                        <option value="19">19 Pessoas</option>
+                                                        <option value="20">20 Pessoas</option>
+                                                </select>
+                                            <label> Total R$ </label>
+                                                <input class="form-control col-3" type="text"  name="total[]" id="total" value="" required>
+
+                                            <button type="button" onclick="adicionarCampo()"> + </button>
+                                </div>
+                            </div>
+
+                        </div>
                                     </div>
                         </div><!-- Fim da ROW -->
 
@@ -148,7 +186,8 @@ include_once '../connection.php';
 
                                                     <?php
 
-                                                        $result = $conn->prepare("SELECT * FROM pontosturisticos ORDER BY name ASC;");
+                                                        $result = $conn->prepare("SELECT *, pontosturisticos.uf AS Estado FROM pontosturisticos
+                                                        INNER JOIN servicos WHERE Estado = servicos.uf ORDER BY name ASC;");
                                                         $result->execute();
                                                         $res = $result->fetchAll(PDO::FETCH_ASSOC);
                                                     ?>
@@ -158,7 +197,7 @@ include_once '../connection.php';
                                                         <option value="<?php echo $ln['id'];?>" name="idPt" id="idPt" >
                                                     <?php
                                                         // echo $ln['id'].' - <br/>';
-                                                        echo $ln['name'].' - '.$ln['uf'];
+                                                        echo $ln['name'];
                                                     }
                                                     ?>
                                                         </option>
@@ -168,7 +207,7 @@ include_once '../connection.php';
 
                                 </div>
                                      <!-- ID do PROPRIO GUIA ao cadastrar EVENTO  -->
-                                <div class="col-md-6 mb-3">
+                                        <div class="col-md-6 mb-3">
                                             <label hidden >Seu ID GUIA</label>
                                             <input hidden type="text" class="form-control" id="idGuia" placeholder="" name="idGuia"
                                             value="<?php
@@ -201,4 +240,5 @@ include_once '../connection.php';
 
 	</body>
 </html>
+<script src="./js/custom.js"></script>
 
