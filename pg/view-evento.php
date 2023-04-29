@@ -147,7 +147,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 <label class="custom-control-label" for="totalEvento"> PESSOAS <i class='fa-solid fa-car'></i></label>
 
                                     <?php
-                                    $buscaValores = "SELECT *, vagas FROM valores WHERE idEventos = $id";
+                                    $buscaValores = "SELECT *, vagas FROM valores WHERE idEvento = $id";
                                     $result = $conn->prepare($buscaValores);
                                     $result->execute();
                                     $res = $result->fetchAll(PDO::FETCH_ASSOC);
