@@ -133,14 +133,14 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             </div>
                             </div>
 
-                            <h5 class="card-title">Abertura: <?php echo date('d/m/Y',  strtotime($dataUp)); ?></h5>
+                            <h5 class="card-title">Abertura: <?php echo date('d/m/Y',  strtotime($datai)); ?></h5>
+                            <h5 class="card-title">Abertura: <?php echo date('d/m/Y',  strtotime($dataf)); ?></h5>
                             <div class="col-10 " >
 
                             <label for="vagas">  N° Vagas  </label>
                              <!-- select AQUI   -->
-                             <select class="form-select" name="vagas" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
-                                            <option>Selecione</option>
 
+                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
                                                     <?php
 
                                                         $result = $conn->prepare("SELECT *, FROM valores WHERE idEv = $id ORDER BY $id ASC;");
@@ -149,31 +149,27 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                                     ?>
                                                     <?php
                                                         foreach($res as $ln ){
+                                                            for($cont = 0; $cont < count($ln['vagas']); $cont++ )
+                                                            {
                                                     ?>
 
-                                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-
                                                             <div class="col-auto my-1">
-
                                                                 <div class="custom-control custom-checkbox mr-sm-2">
                                                                     <input type="checkbox" class="custom-control-input" id="totalEvento" name="totalEvento" value="
-                                                                    <?php echo $ln['vagas']['0'] ?>
+                                                                    <?php echo $ln['vagas'][$cont];
+
+                                                                     ?>
                                                                     ">
-                                                                    <label class="custom-control-label" for="totalEvento"> <?php echo $ln['vagas']['0'] ?> Pessoas  <i class='fa-solid fa-eat'></i></label>
+                                                                    <label class="custom-control-label" for="totalEvento"> <?php echo $ln['vagas'][$cont] .' Pessoas - Valor '.$ln['vagas'][$cont] ?>  <i class='fa-solid fa-car'></i></label>
                                                                 </div>
                                                             </div>
 
-                                                        </div>
                                                     <?php
-                                                        // echo $ln['id'].' - <br/>';
-                                                        echo $ln['vagas']['0'].' - '.$ln['valor']['0'];
-                                                        echo $ln['vagas']['1'].' - '.$ln['valor']['1'];
-
-
+                                                        }
                                                     }
                                                     ?>
-
-                                        </select><br>
+                                        </div>
+                                        <br>
 
                             </div>
 
