@@ -134,13 +134,14 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 </div>
                             </div>
                             </div>
-
-                            <h5 class="card-title" style="margin-left: 5px;" > Inicio: <?php echo date('d/m/Y',  strtotime($datai)) . " - Final: ". date('d/m/Y',  strtotime($dataf)); ?></h5>
-                            <ul>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px;">
+                                <h5 class="card-title" style="margin-left: 5px;" > Inicio: <?php echo date('d/m/Y',  strtotime($datai)) . " - Final: ". date('d/m/Y',  strtotime($dataf)); ?></h5>
+                                <ul>
                                     <?php
-                                        include_once './funcoes/separarListaValores.php';
+                                        include_once './pg/funcoes/separarListaValores.php';
                                     ?>
                                 </ul>
+                            </div>
                             <div class="col-10 " >
 
                                 <label for="vagas">  N° Vagas  </label>
