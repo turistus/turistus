@@ -136,7 +136,11 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             </div>
 
                             <h5 class="card-title" style="margin-left: 5px;" > Inicio: <?php echo date('d/m/Y',  strtotime($datai)) . " - Final: ". date('d/m/Y',  strtotime($dataf)); ?></h5>
-
+                            <ul>
+                                    <?php
+                                        include_once './funcoes/separarListaValores.php';
+                                    ?>
+                                </ul>
                             <div class="col-10 " >
 
                                 <label for="vagas">  N° Vagas  </label>
