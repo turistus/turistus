@@ -139,7 +139,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                 <label for="vagas">  N° Vagas  </label>
                                     <?php
-                                    $result = $conn->prepare("SELECT *, vagas FROM valores WHERE idEv = $id ORDER BY $id ASC");
+                                    $result = $conn->prepare("SELECT *, vagas FROM valores WHERE idEv = $id");
                                     $result->execute();
                                     $res = $result->fetchAll(PDO::FETCH_ASSOC);
 
