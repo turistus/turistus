@@ -73,7 +73,7 @@ var_dump($dados);
         }
 
         unset($dados);
-        header("Location: ../guias/painelGuia.php");
+        //header("Location: ../guias/painelGuia.php");
 
 if(($conn)){
 	$_SESSION['msg'] = "<span style='color: green';>evento cadastrado com sucesso!</span>";
