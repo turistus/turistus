@@ -143,7 +143,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                                     <?php
 
-                                                        $result = $conn->prepare("SELECT *, FROM eventos WHERE id = $id ORDER BY $id ASC;");
+                                                        $result = $conn->prepare("SELECT *, FROM valores WHERE idEv = $id ORDER BY $id ASC;");
                                                         $result->execute();
                                                         $res = $result->fetchAll(PDO::FETCH_ASSOC);
                                                     ?>

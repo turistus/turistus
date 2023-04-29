@@ -56,31 +56,41 @@ include_once '../connection.php';
                                                 }?>" required>
                                         </div>
 
-                                        <div class="col-xl-6 col-lg-6  col-md-9 col-sm-7 col-mb-3">
-                                            <p >Data Abertura </p>
-                                            <input type="date" class="form-control" id="datah" placeholder="" name="datah" value="<?php
-                                                if (isset($dados['datah'])) {
-                                                    echo $dados['datah'];
-                                                }?>">
+                                        <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
+                                            <label>	Breve descrição </label>
+                                            <input class="form-control" type="text" name="breveDescricao" id="breveDescricao"
+                                            value="<?php if(isset($dados_evento['breveDescricao']))
+                                            { echo $dados_evento['breveDescricao'];}elseif(isset($row_evento['breveDescricao']))
+                                            { echo $row_evento['breveDescricao']; }?>"required> <br>
+                                        </div>
 
+                                        <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
+                                            <label> Descrição </label>
+                                            <input class="form-control" type="text" style="height: 100px;" name="descricao" id="descricao"
+                                            value="<?php if(isset($dados_evento['descricao']))
+                                            { echo $dados_evento['descricao'];}elseif(isset($row_evento['descricao']))
+                                            { echo $row_evento['descricao']; }?>"required> <br>
 
                                         </div>
-                                        <div class="col-xl-12 col-lg-12  col-md-12 col-sm-12 col-mb-12">
-                                            <p >Breve Descrição</p>
-                                            <input style=" height:100px;" type="textarea" class="form-control" id="breveDescricao" placeholder="maximo 80 caracteres" name="breveDescricao" value="<?php
-                                                if (isset($dados['breveDescricao'])) {
-                                                    echo $dados['breveDescricao'];
-                                                }?>" required>
 
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <label> Data inicial </label>
+                                            <input class="form-control" type="date" name="datai" id="datai"
+                                            value="<?php if(isset($dados_evento['datai']))
+                                            { echo $dados_evento['datai'];}elseif(isset($row_evento['datai']))
+                                            { echo $row_evento['datai']; }?>"required> <br>
                                         </div>
-                                        <div class="col-xl-12 col-lg-12  col-md-12 col-sm-12 col-mb-12">
-                                            <p >Descrição</p>
-                                            <input style=" height:100px;" type="textarea" class="form-control" id="descricao" placeholder="maximo 200 caracteres" name="descricao" value="<?php
-                                                if (isset($dados['descricao'])) {
-                                                    echo $dados['descricao'];
-                                                }?>" required>
 
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                            <label> Data final </label>
+                                            <input class="form-control" type="date" name="dataf" id="dataf"
+                                            value="<?php if(isset($dados_evento['dataf']))
+                                            { echo $dados_evento['dataf'];}elseif(isset($row_evento['dataf']))
+                                            { echo $row_evento['dataf']; }?>"required> <br>
                                         </div>
+
+
+
                                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-mb-12">
                                             <p >Valor</p>
                                             <input type="text" class="form-control" id="valor" placeholder="R$" name="valor"
@@ -98,7 +108,7 @@ include_once '../connection.php';
 
 
                 <div class="col-md-6 mt-3">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-mb-12">
+                                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 ">
 
                                     <h5 >Ponto Turistico</h5>
                                         <select class="form-select" name="idPt" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
@@ -150,9 +160,6 @@ include_once '../connection.php';
                                     </div>
                                 </div>
             </form>
-
-
-
 
                 </div>
             </div>

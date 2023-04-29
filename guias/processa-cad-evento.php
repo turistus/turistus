@@ -12,19 +12,41 @@ var_dump($dados);
         $msg = "";
 
 //Salvar os dados no bd
-$result_markers = "INSERT INTO eventos ( nome, datah, breveDescricao, descricao, valor, idGuia, idPt ) VALUES 
-(:nome, :datah, :breveDescricao, :descricao, :valor, :idGuia, :idPt )";
+$result_markers = "INSERT INTO eventos SET
+                       nome=:nome,
+                       breveDescricao=:breveDescricao
+                       descricao=:descricao,
+                       datai=:datai,
+                       dataf=:dataf,
+                       encontro=:encontro,
+                       transporte=:transporte,
+                       alimentacao=:alimentacao,
+                       foto=:foto,
+                       vagas=:vagas,
+                       valor=:valor,
+                       dataUp=:dataUp";
 
 	 $add_pay = $conn->prepare($result_markers);
-                $add_pay->bindParam(':nome', $dados['nome'], PDO::PARAM_STR);
-                $add_pay->bindParam(':datah', $dados['datah'], PDO::PARAM_STR);
-                $add_pay->bindParam(':breveDescricao', $dados['breveDescricao'], PDO::PARAM_STR);
-                $add_pay->bindParam(':descricao', $dados['descricao'], PDO::PARAM_STR);
-                $add_pay->bindParam(':valor', $dados['valor'], PDO::PARAM_STR);
-                $add_pay->bindParam(':idPt', $dados['idPt'], PDO::PARAM_STR);
-                $add_pay->bindParam(':idGuia', $dados['idGuia'], PDO::PARAM_STR);
-                
+         $editandoEvento->bindParam(':nome', $dados['nome'], PDO::PARAM_STR);
+         $editandoEvento->bindParam(':breveDescricao', $dados['breveDescricao']);
+         $editandoEvento->bindParam(':descricao', $dados['descricao'], PDO::PARAM_STR);
+         $editandoEvento->bindParam(':datai', $dados['datai']);
+         $editandoEvento->bindParam(':dataf', $dados['dataf']);
+         $editandoEvento->bindParam(':encontro', $dados['encontro']);
+         $editandoEvento->bindParam(':transporte', $dados['transporte']);
+         $editandoEvento->bindParam(':alimentacao', $dados['alimentacao']);
+         $editandoEvento->bindParam(':foto', $dados['foto']);
+         $editandoEvento->bindParam(':dataUp', $dados['dataUp']);
+
                 $add_pay->execute();
+
+                $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
+                $preparandoQuerySQL = $conn->prepare($result_markers);
+                $editandoEvento->bindParam(':idEvento', $id);
+                $editandoEvento->bindParam(':vagas', $dados['vagas'][$chave]);
+                $editandoEvento->bindParam(':total', $dados['valor'][$chave]);
+
+
                 unset($dados);
 
 header("Location: ../guias/painelGuia.php");
@@ -37,5 +59,5 @@ if(($conn)){
 	header("Location: painelGuia.php");
 }else{
 	$_SESSION['msg'] = "<span style='color: red';>Erro: evento não foi cadastrado com sucesso!</span>";
-	header("Location: painelGuia.php");	
+	header("Location: painelGuia.php");
 }
