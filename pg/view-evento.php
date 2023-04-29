@@ -138,7 +138,9 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             </div>
 
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px;">
+
                                 <h5 class="card-title" style="margin-left: 5px;" > Inicio: <?php echo date('d/m/Y',  strtotime($datai)) . " - Final: ". date('d/m/Y',  strtotime($dataf)); ?></h5>
+
                                 <ul class="form-inline">
                                     <?php //esse Busca as opções de Transporte e refeiçao inclusos
                                         include_once './funcoes/separarListaValores.php';
@@ -170,7 +172,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                                 <?php echo $ln['vagas'][$cont]; echo $ln['total'][$cont];
                                                 }// fim do FOR
                                                 ?>">
-                                                <label class="custom-control-label" for="totalEvento"> AAA<?php echo $ln['vagas'][$cont] .' Pessoas - Valor '.$ln['total'][$cont] ?>  <i class='fa-solid fa-car'></i></label>
+                                                <label class="custom-control-label" for="vagas"> AAA<?php echo $ln['vagas'][$cont] .' Pessoas - Valor '.$ln['total'][$cont] ?>  <i class='fa-solid fa-car'></i></label>
                                             </div>
                                         </div>
                                     </div>
