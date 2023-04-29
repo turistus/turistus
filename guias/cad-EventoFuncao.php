@@ -43,7 +43,7 @@ include_once '../connection.php';
     <div class="col-md-8 order-md-1">
     <!-- Aqui abaixo tenho um exemplo de como usar a
     função cadastrar Turista processado em outra pagina php -->
-            <form method="POST" action="processa-cad-evento.php">
+            <form method="POST" action="processa-cad-evento.php" enctype="multipart/form-data">
 
                         <div class="row" style="padding: 20px;">
                         <!-- as melhores colunas organizadas da maior para menor -->
@@ -232,6 +232,26 @@ include_once '../connection.php';
                                     </div>
                                 </div>
             </form>
+            <!-- Para buscar a foto na pasta-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                    <script>
+                        function previewImagem(){
+                            var imagem = document.querySelector('input[name=foto]').files[0];
+                            var preview = document.querySelector('img');
+
+                            var reader = new FileReader();
+
+                            reader.onloadend = function(){
+                                preview.src = reader.result;
+                            }
+                            if(imagem){
+                                reader.readAsDataURL(imagem);
+                            }else{
+                                preview.src = "";
+                            }
+                        }
+
+                    </script>
 
                 </div>
             </div>

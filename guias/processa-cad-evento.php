@@ -11,8 +11,11 @@ var_dump($dados);
 // A variável recebe a mensagem de erro
         $msg = "";
 
-//Salvar os dados no bd
-$result_markers = "INSERT INTO eventos SET
+        if(!empty($dados['Cadastrar'])){
+                $arquivo = $_FILES['foto'];
+
+                //Salvar os dados no bd
+                $result_markers = "INSERT INTO eventos SET
                        nome=:nome,
                        breveDescricao=:breveDescricao
                        descricao=:descricao,
@@ -23,10 +26,9 @@ $result_markers = "INSERT INTO eventos SET
                        alimentacao=:alimentacao,
                        foto=:foto,
                        vagas=:vagas,
-                       valor=:valor,
                        dataUp=:dataUp";
 
-	 $add_pay = $conn->prepare($result_markers);
+	 $editandoEvento = $conn->prepare($result_markers);
          $editandoEvento->bindParam(':nome', $dados['nome'], PDO::PARAM_STR);
          $editandoEvento->bindParam(':breveDescricao', $dados['breveDescricao']);
          $editandoEvento->bindParam(':descricao', $dados['descricao'], PDO::PARAM_STR);
@@ -35,24 +37,43 @@ $result_markers = "INSERT INTO eventos SET
          $editandoEvento->bindParam(':encontro', $dados['encontro']);
          $editandoEvento->bindParam(':transporte', $dados['transporte']);
          $editandoEvento->bindParam(':alimentacao', $dados['alimentacao']);
-         $editandoEvento->bindParam(':foto', $dados['foto']);
+         $editandoEvento->bindParam(':foto', $arquivo['name']);
          $editandoEvento->bindParam(':dataUp', $dados['dataUp']);
 
                 $add_pay->execute();
 
+        if(!empty($dados['Cadastrar'])){
+                $last_id = $conn->lastInsertId();
                 $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
-                $preparandoQuerySQL = $conn->prepare($result_markers);
-                $editandoEvento->bindParam(':idEvento', $id);
-                $editandoEvento->bindParam(':vagas', $dados['vagas'][$chave]);
-                $editandoEvento->bindParam(':total', $dados['valor'][$chave]);
+                $preparandoQuerySQL = $conn->prepare($CriarValores);
+                $preparandoQuerySQL->bindParam(':idEvento', $last_id);
+                $preparandoQuerySQL->bindParam(':vagas', $dados['vagas'][$chave]);
+                $preparandoQuerySQL->bindParam(':total', $dados['valor'][$chave]);
+                $preparandoQuerySQL->execute();
 
+                for($cont = 0; $cont < count($arquivo['name']); $cont++ ){
+                        $destino = "images/eventos/" .$id . $arquivo['name'][$cont];
+        //Criar o diretório
+                mkdir($destino, 0755);
+                //Upload do arquivo
+                $file = $arquivo['name'];
+                move_uploaded_file($arquivo['tmp_name'], $destino . $file);
+                }
 
-                unset($dados);
+                if(move_uploaded_file($arquivo['temp_name'][$cont], $destino)){
+                        $_SESSION['msg'] = "<p> Upload Realizado !</p>";
+                }else{
+                        $_SESSION['msg'] = "<p> Upload Não Realizado !</p>";
+                     }
+                }
+        }
+        if(isset($_SESSION['msg'])){
+                echo $_SESSION['msg'];
+                unset($_SESSION['msg']);
+        }
 
-header("Location: ../guias/painelGuia.php");
-//var_dump($result_markers);
-
-//$resultado_markers = mysqli_query($conn, $result_markers
+        unset($dados);
+        header("Location: ../guias/painelGuia.php");
 
 if(($conn)){
 	$_SESSION['msg'] = "<span style='color: green';>evento cadastrado com sucesso!</span>";
