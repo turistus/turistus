@@ -22,7 +22,6 @@
         eventos.idGuia AS idGuia,
 
         idPt,
-        datah,
 
         pontosturisticos.id,
         pontosturisticos.image AS img,
