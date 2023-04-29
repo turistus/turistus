@@ -89,6 +89,38 @@ include_once '../connection.php';
                                             { echo $row_evento['dataf']; }?>"required> <br>
                                         </div>
 
+                                        <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
+                                            <label> Ponto de encontro </label>
+                                            <input class="form-control" type="text" name="encontro" id="encontro"
+                                            value="<?php if(isset($dados_evento['encontro']))
+                                            { echo $dados_evento['encontro'];}elseif(isset($row_evento['encontro']))
+                                            { echo $row_evento['encontro']; }?>"required> <br>
+                                        </div>
+
+                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+
+                                            <div class="col-auto my-1">
+
+                                                <div class="custom-control custom-checkbox mr-sm-2">
+                                                    <input type="checkbox" class="custom-control-input" id="transporte" name="transporte" value="1">
+                                                    <label class="custom-control-label" for="transporte"> Transporte <i class='fa-solid fa-car'></i></label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+
+                                            <div class="col-auto my-1">
+
+                                                <div class="custom-control custom-checkbox mr-sm-2">
+                                                    <input type="checkbox" class="custom-control-input" id="alimentacao" name="alimentacao" value="1">
+                                                    <label class="custom-control-label" for="alimentacao"> Alimentação <i class='fa-solid fa-eat'></i></label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
 
 
                                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-mb-12">

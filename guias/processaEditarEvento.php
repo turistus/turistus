@@ -147,12 +147,11 @@ if(($evento_selecionado) AND ($evento_selecionado->rowCount() != 0) ){
 
 
                     <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
-
-                    <label> Ponto de encontro </label>
-                    <input class="form-control" type="text" name="encontro" id="encontro"
-                    value="<?php if(isset($dados_evento['encontro']))
-                    { echo $dados_evento['encontro'];}elseif(isset($row_evento['encontro']))
-                    { echo $row_evento['encontro']; }?>"required> <br>
+                        <label> Ponto de encontro </label>
+                        <input class="form-control" type="text" name="encontro" id="encontro"
+                        value="<?php if(isset($dados_evento['encontro']))
+                        { echo $dados_evento['encontro'];}elseif(isset($row_evento['encontro']))
+                        { echo $row_evento['encontro']; }?>"required> <br>
                     </div>
 
                     <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
