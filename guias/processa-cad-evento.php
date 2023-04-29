@@ -52,7 +52,7 @@ var_dump($dados);
                 $preparandoQuerySQL->execute();
 
                 for($cont = 0; $cont < count($arquivo['name']); $cont++ ){
-                        $destino = "images/eventos/" .$id . $arquivo['name'][$cont];
+                        $destino = "images/eventos/" .$last_id . $arquivo['name'][$cont];
         //Criar o diretório
                 mkdir($destino, 0755);
                 //Upload do arquivo
