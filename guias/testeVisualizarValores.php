@@ -25,7 +25,7 @@ $id = 96;
                                         <div class="col-auto my-1">
                                             <div class="custom-control custom-checkbox mr-sm-2">
                                                 <input type="checkbox" class="custom-control-input" id="vagas" name="vagas" value="">
-                                                <label class="custom-control-label" for="vagas"> <?php echo "IDV: ". $idVal ." ". $ln['vagas'][0] .' Pessoas - Valor '.$ln['total'][0] ?>  <i class='fa-solid fa-car'></i></label>
+                                                <label class="custom-control-label" for="vagas"> <?php echo "IDV: ". $idVal ." - ". 'Vagas: ' .  $ln['vagas'] .' - Valor: '.$ln['total']?>  <i class='fa-solid fa-car'></i></label>
                                             </div>
                                         </div>
                                     </div>
