@@ -44,6 +44,7 @@ $novaData = date("Y/m/d");
                 $editandoEvento->bindParam(':dataUp', $novaData);
                 $add_pay->execute();
                 echo "passou aquifffffffffff";
+                var_dump($result_markers);
 
                 if(!empty($dados_CadEvento['Cadastrar'])){
                         $last_id = $conn->lastInsertId();
