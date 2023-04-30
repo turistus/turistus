@@ -45,86 +45,77 @@ include_once '../connection.php';
     função cadastrar Turista processado em outra pagina php -->
             <form method="POST" action="processa-cad-evento.php" enctype="multipart/form-data">
 
-                        <div class="row" style="padding: 20px;">
+                <div class="row" style="padding: 20px;">
                         <!-- as melhores colunas organizadas da maior para menor -->
-                                    <div class="col-xl-12 col-lg-12 col-sm-12 col-md-12 mb-12">
+                    <div class="col-xl-12 col-lg-12 col-sm-12 col-md-12 mb-12">
 
-                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-mb-12">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-mb-12">
                                             <p>Nome do turismo</p>
                                             <input type="text" class="form-control" id="nome" placeholder="" name="nome"
                                             value="<?php
                                                 if (isset($dados['nome'])) {
                                                     echo $dados['nome'];
                                                 }?>" required>
-                                        </div>
+                        </div>
 
-                                        <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
+                        <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                             <label>	Breve descrição </label>
                                             <input class="form-control" type="text" name="breveDescricao" id="breveDescricao"
                                             value="<?php if(isset($dados_evento['breveDescricao']))
                                             { echo $dados_evento['breveDescricao'];}elseif(isset($row_evento['breveDescricao']))
                                             { echo $row_evento['breveDescricao']; }?>"required> <br>
-                                        </div>
+                        </div>
 
-                                        <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
+                        <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                             <label> Descrição </label>
                                             <input class="form-control" type="text" style="height: 100px;" name="descricao" id="descricao"
                                             value="<?php if(isset($dados_evento['descricao']))
                                             { echo $dados_evento['descricao'];}elseif(isset($row_evento['descricao']))
                                             { echo $row_evento['descricao']; }?>"required> <br>
 
-                                        </div>
+                        </div>
 
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label> Data inicial </label>
                                             <input class="form-control" type="date" name="datai" id="datai"
                                             value="<?php if(isset($dados_evento['datai']))
                                             { echo $dados_evento['datai'];}elseif(isset($row_evento['datai']))
                                             { echo $row_evento['datai']; }?>"required> <br>
-                                        </div>
+                        </div>
 
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label> Data final </label>
                                             <input class="form-control" type="date" name="dataf" id="dataf"
                                             value="<?php if(isset($dados_evento['dataf']))
                                             { echo $dados_evento['dataf'];}elseif(isset($row_evento['dataf']))
                                             { echo $row_evento['dataf']; }?>"required> <br>
-                                        </div>
+                        </div>
 
-                                        <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
+                        <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                             <label> Ponto de encontro </label>
                                             <input class="form-control" type="text" name="encontro" id="encontro"
                                             value="<?php if(isset($dados_evento['encontro']))
                                             { echo $dados_evento['encontro'];}elseif(isset($row_evento['encontro']))
                                             { echo $row_evento['encontro']; }?>"required> <br>
-                                        </div>
+                        </div>
 
-                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                            <div class="col-auto my-1">
+                                <div class="custom-control custom-checkbox mr-sm-2">
+                                    <input type="checkbox" class="custom-control-input" id="transporte" name="transporte" value="1">
+                                    <label class="custom-control-label" for="transporte"> Transporte <i class='fa-solid fa-car'></i></label>
+                                </div>
+                            </div>
+                        </div>
 
-                                            <div class="col-auto my-1">
-
-                                                <div class="custom-control custom-checkbox mr-sm-2">
-                                                    <input type="checkbox" class="custom-control-input" id="transporte" name="transporte" value="1">
-                                                    <label class="custom-control-label" for="transporte"> Transporte <i class='fa-solid fa-car'></i></label>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-
-                                            <div class="col-auto my-1">
-
-                                                <div class="custom-control custom-checkbox mr-sm-2">
-                                                    <input type="checkbox" class="custom-control-input" id="alimentacao" name="alimentacao" value="1">
-                                                    <label class="custom-control-label" for="alimentacao"> Alimentação <i class='fa-solid fa-burger'></i></label>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-
-
+                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                            <div class="col-auto my-1">
+                                <div class="custom-control custom-checkbox mr-sm-2">
+                                    <input type="checkbox" class="custom-control-input" id="alimentacao" name="alimentacao" value="1">
+                                    <label class="custom-control-label" for="alimentacao"> Alimentação <i class='fa-solid fa-burger'></i></label>
+                                </div>
+                            </div>
+                        </div>
 
 
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px;">
@@ -138,10 +129,9 @@ include_once '../connection.php';
                         <div class="row col-12" >
                             <div id="formulario" class="col-xl-12 col-lg-12 col-md-12 col-sm-12" >
                                 <div class="form-group form-inline" id="bloco" style="border: 1px solid green; padding:15px;">
-
-                                            <label>  N° Vagas  </label>
-                                                <!-- select AQUI   -->
-                                                <select id="vagas" name="vagas[]" class="custom-select col-3" required>
+                                    <label>  N° Vagas  </label>
+                                        <!-- select AQUI   -->
+                                    <select id="vagas" name="vagas[]" class="custom-select col-3" required>
                                                         <option value="">Selecione</option>
                                                         <option value="01">01 Pessoa</option>
                                                         <option value="02">02 Pessoas</option>
@@ -163,17 +153,15 @@ include_once '../connection.php';
                                                         <option value="18">18 Pessoas</option>
                                                         <option value="19">19 Pessoas</option>
                                                         <option value="20">20 Pessoas</option>
-                                                </select>
-                                            <label> Total R$ </label>
-                                                <input class="form-control col-3" type="text"  name="total[]" id="total" value="" required>
-
-                                            <button type="button" onclick="adicionarCampo()"> + </button>
+                                    </select>
+                                        <label style="margin-left: 10px;"> Total R$ </label>
+                                        <input class="form-control col-3" type="text"  name="total[]" id="total" value="" required>
+                                        <button type="button" onclick="adicionarCampo()"> + </button>
                                 </div>
                             </div>
-
                         </div>
-                                    </div>
-                        </div><!-- Fim da ROW -->
+                    </div>
+                </div><!-- Fim da ROW -->
 
                 <!-- SEGUNDA PARTE DO FORMULARIO DE CADASTRO DE EVENTO -->
 
