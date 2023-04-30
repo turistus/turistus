@@ -5,7 +5,7 @@ include_once '../connection.php';
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 var_dump($dados_CadEvento);
-
+echo $arquivo = $_FILES['foto'];
 
 if(!empty($dados_CadEvento['Cadastrar'])){
 
@@ -28,7 +28,7 @@ if(!empty($dados_CadEvento['Cadastrar'])){
         $editandoEvento->bindParam(':idPt', $dados_CadEvento['idPt']);
         $editandoEvento->bindParam(':dataUp', $novaData);
         $editandoEvento->execute();
-        var_dump("passou aquifffffffffff". $novaData);
+        var_dump("INSERIIII !!!!! agora dia: ". $novaData);
 
         // Acessa o IF quando cadastrar o usuário no BD
         if ($editandoEvento->rowCount()) {
