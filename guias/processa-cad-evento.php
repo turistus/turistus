@@ -8,4 +8,17 @@ var_dump($dados_CadEvento."VAAAR");
 echo $dados_CadEvento;
 $novaData = date("Y/m/d");
 echo $novaData;
+
+if(!empty($dados_CadEvento['Cadastrar'])){
+        $last_id = 96;
+
+        $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
+        $preparandoQuerySQL = $conn->prepare($CriarValores);
+        $preparandoQuerySQL->bindParam(':idEvento', $last_id);
+        $preparandoQuerySQL->bindParam(':vagas', $dados_CadEvento['vagas'][$chave]);
+        $preparandoQuerySQL->bindParam(':total', $dados_CadEvento['valor'][$chave]);
+        $preparandoQuerySQL->execute();
+
+}
+
 ?>
