@@ -4,16 +4,17 @@ include_once '../connection.php';
 
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-var_dump($dados_CadEvento['input="Cadastrar"']);
-$novaData = date("Y/m/d");
+var_dump($dados_CadEvento['Cadastrar']);
+
 
 if(!empty($dados_CadEvento['Cadastrar'])){
 
+        $novaData = date("Y/m/d");
         //Salvar os dados no bd
-        $result_markers = "INSERT INTO eventos (nome, breveDescricao, descricao, datai, dataf, encontro, transporte, alimentacao, foto, idGuia, dataUp )
+        $Cria_Evento = "INSERT INTO eventos (nome, breveDescricao, descricao, datai, dataf, encontro, transporte, alimentacao, foto, idGuia, dataUp )
          VALUES (:nome, :breveDescricao, :descricao, :datai, :dataf, :encontro, :transporte, :alimentacao, :foto, :idGuia, :dataUp)";
 
-        $editandoEvento = $conn->prepare($result_markers);
+        $editandoEvento = $conn->prepare($Cria_Evento);
         $editandoEvento->bindParam(':nome', $dados_CadEvento['nome'], PDO::PARAM_STR);
         $editandoEvento->bindParam(':breveDescricao', $dados_CadEvento['breveDescricao']);
         $editandoEvento->bindParam(':descricao', $dados_CadEvento['descricao'], PDO::PARAM_STR);
