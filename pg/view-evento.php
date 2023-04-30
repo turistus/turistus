@@ -153,7 +153,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                 <label for="total">  Escolha quantas vagas  </label>
                                 <select class="form-select" name="total" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
-                                            <option>Selecione</option>
+
                                     <?php
                                     $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY idVal";
                                     $result = $conn->prepare($buscaValores);
@@ -165,7 +165,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                     ?>
 
                                     <option value="<?php echo $ln['id'];?>" name="total" id="total" >
-                                    <?php echo $ln['vagas'] . ' Pessoas ' . $ln['total']?>
+                                    <?php echo $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
                                     <!-- Check box do VALOR TOTAL SELECIONADO na Compra -->
 
                                     <?php
