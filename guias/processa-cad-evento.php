@@ -5,7 +5,7 @@ include_once '../connection.php';
 
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-//var_dump($dados_CadEvento);
+var_dump($dados_CadEvento);
 //$arquivo = $_FILES['foto']['name'];
 //var_dump($arquivo);
 
@@ -76,7 +76,7 @@ if(!empty($dados_CadEvento['Cadastrar'])){
             }
  }else{
        echo "NAO CADASTROU !!";
-       header("Location: ../guias/painelGuia.php");
+       //header("Location: ../guias/painelGuia.php");
  }
 
 if(isset($_SESSION['msg'])){
