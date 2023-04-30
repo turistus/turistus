@@ -4,8 +4,8 @@ include_once '../connection.php';
 
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-var_dump($dados_CadEvento);
-$arquivo = $_FILES['foto'];
+//var_dump($dados_CadEvento);
+$arquivo = $_FILES['name'];
 var_dump($arquivo);
 
 if(!empty($dados_CadEvento['Cadastrar'])){
