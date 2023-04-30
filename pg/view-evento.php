@@ -73,6 +73,8 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
              dataUp,
              alimentacao,
              transporte,
+             datai,
+             dataf,
 
              idPt,
              prod.cidade AS cidade,
