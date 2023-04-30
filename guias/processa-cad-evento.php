@@ -9,7 +9,6 @@ $novaData = date("Y/m/d");
 // A variável recebe a mensagem de erro
 $msg = "";
 
-if($dados_CadEvento['Cadastrar']){
         $arquivo = $_FILES['foto'];
 
         //Salvar os dados no bd
@@ -42,7 +41,6 @@ if($dados_CadEvento['Cadastrar']){
         echo "passou aquifffffffffff";
         var_dump($result_markers);
 
-        if(!empty($dados_CadEvento['Cadastrar'])){
                 $last_id = $conn->lastInsertId();
 
                 $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
@@ -69,8 +67,7 @@ if($dados_CadEvento['Cadastrar']){
                                         $_SESSION['msg'] = "<p> Upload Não Realizado !</p>";
                                 }
                 }
-        }
-}
+
 if(isset($_SESSION['msg'])){
         echo $_SESSION['msg'];
         unset($_SESSION['msg']);
