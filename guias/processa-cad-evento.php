@@ -7,7 +7,7 @@ $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 var_dump($dados_CadEvento['input="Cadastrar"']);
 $novaData = date("Y/m/d");
 
-if(!empty($dados_CadEvento['Cadastrar'])){
+if($dados_CadEvento['Cadastrar']==true){
         $arquivo = $_FILES['foto'];
 
         //Salvar os dados no bd
@@ -38,9 +38,8 @@ if(!empty($dados_CadEvento['Cadastrar'])){
         $editandoEvento->bindParam(':dataUp', $novaData);
         $add_pay->execute();
         echo "passou aquifffffffffff";
-        var_dump($result_markers);
 
-        if(!empty($dados_CadEvento['Cadastrar'])){
+        if($dados_CadEvento['Cadastrar']==true){
                 $last_id = $conn->lastInsertId();
 
                 $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
