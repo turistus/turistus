@@ -10,6 +10,7 @@ var_dump($dados_CadEvento['Cadastrar']);
 if(!empty($dados_CadEvento['Cadastrar'])){
 
         $novaData = date("Y/m/d");
+        echo $novaData;
         //Salvar os dados no bd
         $Cria_Evento = "INSERT INTO eventos (nome, breveDescricao, descricao, datai, dataf, encontro, transporte, alimentacao, foto, idGuia, dataUp )
          VALUES (:nome, :breveDescricao, :descricao, :datai, :dataf, :encontro, :transporte, :alimentacao, :foto, :idGuia, :dataUp)";
