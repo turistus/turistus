@@ -75,7 +75,6 @@ if(!empty($dados_CadEvento['Cadastrar'])){
             }
  }else{
        echo "NAO CADASTROU !!";
-       var_dump($dados_CadEvento);
  }
 
 if(isset($_SESSION['msg'])){
@@ -83,7 +82,7 @@ if(isset($_SESSION['msg'])){
         unset($_SESSION['msg']);
 }
 
-//unset($dados);
+unset($dados);
 //header("Location: ../guias/painelGuia.php");
 
 ?>
