@@ -49,7 +49,7 @@ include_once '../connection.php';
                         <!-- as melhores colunas organizadas da maior para menor -->
                     <div class="col-xl-12 col-lg-12 col-sm-12 col-md-12 mb-12">
 
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-mb-12">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
                                             <p>Nome do turismo</p>
                                             <input type="text" class="form-control" id="nome" placeholder="" name="nome"
                                             value="<?php
@@ -209,7 +209,7 @@ include_once '../connection.php';
                         <!-- BOTAO CADASTRAR  -->
 
                                 <div class="row" style="padding-left: 20px; margin-top:20px;">
-                                <input type="submit" class="btn btn-success" style="  width: 150px; margin-right: 10px;" value="Cadastrar">
+                                <input type="submit" class="btn btn-success" style="  width: 150px; margin-right: 10px;" name="Cadastrar" value="Cadastrar">
 
                                     <div class="col-4">
 

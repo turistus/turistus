@@ -7,8 +7,7 @@ $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 var_dump($dados_CadEvento['input="Cadastrar"']);
 $novaData = date("Y/m/d");
 
-if($dados_CadEvento['Cadastrar']==true){
-        $arquivo = $_FILES['foto'];
+if(!empty($dados_CadEvento['Cadastrar'])){
 
         //Salvar os dados no bd
         $result_markers = "INSERT INTO eventos SET
@@ -33,38 +32,69 @@ if($dados_CadEvento['Cadastrar']==true){
         $editandoEvento->bindParam(':encontro', $dados_CadEvento['encontro']);
         $editandoEvento->bindParam(':transporte', $dados_CadEvento['transporte']);
         $editandoEvento->bindParam(':alimentacao', $dados_CadEvento['alimentacao']);
-        $editandoEvento->bindParam(':foto', $arquivo['foto']);
         $editandoEvento->bindParam(':idGuia', $dados_CadEvento['idGuia']);
         $editandoEvento->bindParam(':dataUp', $novaData);
-        $add_pay->execute();
+        $editandoEvento->execute();
         echo "passou aquifffffffffff";
 
-        if($last_id = $conn->lastInsertId()){
+        // Acessa o IF quando cadastrar o usuário no BD
+        if ($editandoEvento->rowCount()) {
 
+                $eventoInserido= $conn->lastInsertId();
+                $diretorio = "images/eventos/" . $eventoInserido ."/";
+                // Criar o diretório
+                mkdir($diretorio, 0755);
 
+                // Receber os arquivos do formulário
+                $arquivo = $_FILES['foto'];
+                //var_dump($arquivo);
 
+                // Ler o array de arquivos
+                for ($cont = 0; $cont < count($arquivo['name']); $cont++) {
 
+                        // Receber nome da imagem
+                        $nome_arquivo = $arquivo['name'][$cont];
 
+                        // Criar o endereço de destino das imagens
+                        $destino = $diretorio . $arquivo['name'][$cont];
 
-                if ((isset($arquivo['foto'])) AND (!empty($arquivo['foto']))) {
+                        // Acessa o IF quando realizar o upload corretamente
+                        if (move_uploaded_file($arquivo['tmp_name'][$cont], $destino)) {
+                        $query_imagem = "UPDATE eventos SET foto=:foto WHERE id = :eventoInserido";
+                        $cad_imagem = $conn->prepare($query_imagem);
+                        $cad_imagem->bindParam(':foto', $foto);
+                        $cad_imagem->bindParam(':eventoInserido', $eventoInserido);
 
-                        for($cont = 0; $cont < count($arquivo['foto']); $cont++ ){
-                        $destino = "images/eventos/" .$last_id .'/'. $arquivo['foto'][$cont];
-                        //Criar o diretório
-                        mkdir($destino, 0755);
-                        //Upload do arquivo
-                        $file = $arquivo['foto'][$cont];
-                        move_uploaded_file($arquivo['tmp_name'], $destino . $file);
+                                if ($cad_imagem->execute()) {
+                                        $_SESSION['msg'] = "<p style='color: green;'>FOTO cadastrado com sucesso!</p>";
+                                } else {
+                                        $_SESSION['msg'] = "<p style='color: #f00;'>Erro: FOTO não cadastrada com sucesso!</p>";
+                                }
+                        } else {
+                        $_SESSION['msg'] = "<p style='color: #f00;'>Erro: FOTO não cadastrada com sucesso!</p>";
+                        }
+                }
+
+                 // Ler o array de arquivos
+                 for ($chave = 0; $chave < count($dados_CadEvento['vagas']); $chave++) {
+                $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
+                $preparandoQuerySQL = $conn->prepare($CriarValores);
+                $preparandoQuerySQL->bindParam(':idEvento', $eventoInserido);
+                $preparandoQuerySQL->bindParam(':vagas', $dados_CadEvento['vagas'][$chave]);
+                $preparandoQuerySQL->bindParam(':total', $dados_CadEvento['total'][$chave]);
+                $preparandoQuerySQL->execute();
+                }
+                        if ($cad_imagem->execute()) {
+                                $_SESSION['msg'] = "<p style='color: green;'>FOTO cadastrado com sucesso!</p>";
+                        } else {
+                                $_SESSION['msg'] = "<p style='color: #f00;'>Erro: FOTO não cadastrada com sucesso!</p>";
                         }
 
-                                if(move_uploaded_file($arquivo['temp_name'][$cont], $destino)){
-                                        $_SESSION['msg'] = "<p> Upload Realizado !</p>";
-                                }else{
-                                        $_SESSION['msg'] = "<p> Upload Não Realizado !</p>";
-                                }
-                }
-        }
-}
+        } else {
+                $_SESSION['msg'] = "<p style='color: #f00;'>Erro: Usuário não cadastrado com sucesso!</p>";
+            }
+ }
+
 if(isset($_SESSION['msg'])){
         echo $_SESSION['msg'];
         unset($_SESSION['msg']);
