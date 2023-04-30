@@ -9,7 +9,7 @@ $novaData = date("Y/m/d");
 // A variável recebe a mensagem de erro
 $msg = "";
 
-if(!empty($dados_CadEvento['Cadastrar'])){
+if($dados_CadEvento['Cadastrar']){
         $arquivo = $_FILES['foto'];
 
         //Salvar os dados no bd
