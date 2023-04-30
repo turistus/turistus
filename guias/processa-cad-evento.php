@@ -11,7 +11,7 @@ $msg = "";
 
 if(!empty($dados_CadEvento['Cadastrar'])){
         $arquivo = $_FILES['foto'];
-
+        $_SESSION['msgs'] = "<p> Upload Realizadossssssssssss !</p>";
         //Salvar os dados no bd
         $result_markers = "INSERT INTO eventos SET
                nome=:nome,

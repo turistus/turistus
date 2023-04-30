@@ -59,7 +59,10 @@ $emailusuario = $_SESSION['user_email'];
 
                               <h4 class="display-6 mt-3 mb-2">Bem Vindo, Guia <?php echo $nome?> </h4>
                               <p> Cód.Guia: 00<?php echo $Uid?></p>
-
+<?php if(isset($_SESSION['msgs'])){
+        echo $_SESSION['msgs'];
+        unset($_SESSION['msgs']);
+}?>
 
                                       <!-- INICIO PAINEL com as funçoes Administrativa   -->
                                           <div class="modal-content" id=formPainel style="padding: 10px;">
