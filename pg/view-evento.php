@@ -165,7 +165,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                     ?>
 
                                     <option value="<?php echo $ln['id'];?>" name="total" id="total" >
-                                    <?php echo 'Vagas: ' .  $ln['vagas'] .' - Valor: '.$ln['total']?>
+                                    <?php echo $ln['vagas'] . ' Pessoas ' . $ln['total']?>
                                     <!-- Check box do VALOR TOTAL SELECIONADO na Compra -->
 
                                     <?php
