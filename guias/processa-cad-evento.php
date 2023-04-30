@@ -76,6 +76,7 @@ if(!empty($dados_CadEvento['Cadastrar'])){
             }
  }else{
        echo "NAO CADASTROU !!";
+       header("Location: ../guias/painelGuia.php");
  }
 
 if(isset($_SESSION['msg'])){
