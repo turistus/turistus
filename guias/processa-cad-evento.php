@@ -10,7 +10,7 @@ $novaData = date("Y/m/d");
 echo $novaData;
 
 if(!empty($dados_CadEvento['Cadastrar'])){
-        $last_id = 96;
+        $last_id = 95;
 
         $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
         $preparandoQuerySQL = $conn->prepare($CriarValores);
