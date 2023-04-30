@@ -12,7 +12,7 @@ if(!empty($dados_CadEvento['Cadastrar'])){
         $novaData = date("Y/m/d");
 
         //Salvar os dados no bd
-        $Cria_Evento = "INSERT INTO eventos ('nome', 'breveDescricao', 'descricao', 'datai', 'dataf', 'encontro', 'transporte', 'alimentacao', 'foto', 'valor', 'idGuia', 'idPt', 'dataUp' )
+        $Cria_Evento = "INSERT INTO eventos (nome, breveDescricao, descricao, datai, dataf, encontro, transporte, alimentacao, foto, valor, idGuia, idPt, dataUp )
          VALUES (:nome, :breveDescricao, :descricao, :datai, :dataf, :encontro, :transporte, :alimentacao, :foto, 1, :idGuia, :idpt, :dataUp)";
 
         $editandoEvento = $conn->prepare($Cria_Evento);
@@ -24,6 +24,7 @@ if(!empty($dados_CadEvento['Cadastrar'])){
         $editandoEvento->bindParam(':encontro', $dados_CadEvento['encontro']);
         $editandoEvento->bindParam(':transporte', $dados_CadEvento['transporte']);
         $editandoEvento->bindParam(':alimentacao', $dados_CadEvento['alimentacao']);
+
         $editandoEvento->bindParam(':idGuia', $dados_CadEvento['idGuia']);
         $editandoEvento->bindParam(':idPt', $dados_CadEvento['idPt']);
         $editandoEvento->bindParam(':dataUp', $novaData);
@@ -55,7 +56,7 @@ if(!empty($dados_CadEvento['Cadastrar'])){
                         if (move_uploaded_file($arquivo['tmp_name'][$cont], $destino)) {
                         $query_imagem = "UPDATE eventos SET foto=:foto WHERE id = :eventoInserido";
                         $cad_imagem = $conn->prepare($query_imagem);
-                        $cad_imagem->bindParam(':foto', $foto);
+                        $cad_imagem->bindParam(':foto', $nome_arquivo);
                         $cad_imagem->bindParam(':eventoInserido', $eventoInserido);
 
                                 if ($cad_imagem->execute()) {
