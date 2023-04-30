@@ -8,10 +8,10 @@ echo $dados_CadEvento['input="Cadastrar"'];
 $novaData = date("Y/m/d");
 // A variável recebe a mensagem de erro
 $msg = "";
-
+$_SESSION['msgs'] = "<p> AQUI CHEGOU !</p>";
 if(!empty($dados_CadEvento['Cadastrar'])){
         $arquivo = $_FILES['foto'];
-        $_SESSION['msgs'] = "<p> Upload Realizadossssssssssss !</p>";
+
         //Salvar os dados no bd
         $result_markers = "INSERT INTO eventos SET
                nome=:nome,
