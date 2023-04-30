@@ -72,6 +72,8 @@ if(!empty($dados_CadEvento['Cadastrar'])){
         } else {
                 $_SESSION['msg'] = "<p style='color: #f00;'>Erro: Usuário não cadastrado com sucesso!</p>";
             }
+ }else{
+       echo "NAO CADASTROU !!";
  }
 
 if(isset($_SESSION['msg'])){
