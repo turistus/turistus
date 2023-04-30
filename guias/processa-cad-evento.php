@@ -4,11 +4,9 @@ include_once '../connection.php';
 
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-echo $dados_CadEvento['input="Cadastrar"'];
+var_dump($dados_CadEvento['input="Cadastrar"']);
 $novaData = date("Y/m/d");
-// A variável recebe a mensagem de erro
-$msg = "";
-$_SESSION['msgs'] = "<p> AQUI CHEGOU !</p>";
+
 if(!empty($dados_CadEvento['Cadastrar'])){
         $arquivo = $_FILES['foto'];
 
