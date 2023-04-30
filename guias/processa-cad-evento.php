@@ -5,8 +5,10 @@ ob_start();
 include_once '../connection.php';
 
 //Receber os dados do formulário
-$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+$dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 var_dump($dados);
+
+$novaData = date("Y/m/d");
 
 // A variável recebe a mensagem de erro
         $msg = "";
@@ -28,43 +30,47 @@ var_dump($dados);
                        vagas=:vagas,
                        dataUp=:dataUp";
 
-	 $editandoEvento = $conn->prepare($result_markers);
-         $editandoEvento->bindParam(':nome', $dados['nome'], PDO::PARAM_STR);
-         $editandoEvento->bindParam(':breveDescricao', $dados['breveDescricao']);
-         $editandoEvento->bindParam(':descricao', $dados['descricao'], PDO::PARAM_STR);
-         $editandoEvento->bindParam(':datai', $dados['datai']);
-         $editandoEvento->bindParam(':dataf', $dados['dataf']);
-         $editandoEvento->bindParam(':encontro', $dados['encontro']);
-         $editandoEvento->bindParam(':transporte', $dados['transporte']);
-         $editandoEvento->bindParam(':alimentacao', $dados['alimentacao']);
-         $editandoEvento->bindParam(':foto', $arquivo['foto']);
-         $editandoEvento->bindParam(':dataUp', $dados['dataUp']);
-
+                $editandoEvento = $conn->prepare($result_markers);
+                $editandoEvento->bindParam(':nome', $dados_CadEvento['nome'], PDO::PARAM_STR);
+                $editandoEvento->bindParam(':breveDescricao', $dados_CadEvento['breveDescricao']);
+                $editandoEvento->bindParam(':descricao', $dados_CadEvento['descricao'], PDO::PARAM_STR);
+                $editandoEvento->bindParam(':datai', $dados_CadEvento['datai']);
+                $editandoEvento->bindParam(':dataf', $dados_CadEvento['dataf']);
+                $editandoEvento->bindParam(':encontro', $dados_CadEvento['encontro']);
+                $editandoEvento->bindParam(':transporte', $dados_CadEvento['transporte']);
+                $editandoEvento->bindParam(':alimentacao', $dados_CadEvento['alimentacao']);
+                $editandoEvento->bindParam(':foto', $arquivo['foto']);
+                $editandoEvento->bindParam(':dataUp', $novaData);
                 $add_pay->execute();
+                echo "passou aquifffffffffff";
 
-        if(!empty($dados['Cadastrar'])){
-                $last_id = $conn->lastInsertId();
-                $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
-                $preparandoQuerySQL = $conn->prepare($CriarValores);
-                $preparandoQuerySQL->bindParam(':idEvento', $last_id);
-                $preparandoQuerySQL->bindParam(':vagas', $dados['vagas'][$chave]);
-                $preparandoQuerySQL->bindParam(':total', $dados['valor'][$chave]);
-                $preparandoQuerySQL->execute();
+                if(!empty($dados_CadEvento['Cadastrar'])){
+                        $last_id = $conn->lastInsertId();
 
-                for($cont = 0; $cont < count($arquivo['name']); $cont++ ){
-                        $destino = "images/eventos/" .$last_id . $arquivo['name'][$cont];
-        //Criar o diretório
-                mkdir($destino, 0755);
-                //Upload do arquivo
-                $file = $arquivo['name'];
-                move_uploaded_file($arquivo['tmp_name'], $destino . $file);
-                }
+                        $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
+                        $preparandoQuerySQL = $conn->prepare($CriarValores);
+                        $preparandoQuerySQL->bindParam(':idEvento', $last_id);
+                        $preparandoQuerySQL->bindParam(':vagas', $dados_CadEvento['vagas'][$chave]);
+                        $preparandoQuerySQL->bindParam(':total', $dados_CadEvento['valor'][$chave]);
+                        $preparandoQuerySQL->execute();
 
-                if(move_uploaded_file($arquivo['temp_name'][$cont], $destino)){
-                        $_SESSION['msg'] = "<p> Upload Realizado !</p>";
-                }else{
-                        $_SESSION['msg'] = "<p> Upload Não Realizado !</p>";
-                     }
+                        if ((isset($arquivo['name'])) AND (!empty($arquivo['name']))) {
+
+                                for($cont = 0; $cont < count($arquivo['foto']); $cont++ ){
+                                $destino = "images/eventos/" .$last_id .'/'. $arquivo['foto'][$cont];
+                                //Criar o diretório
+                                mkdir($destino, 0755);
+                                //Upload do arquivo
+                                $file = $arquivo['foto'][$cont];
+                                move_uploaded_file($arquivo['tmp_name'], $destino . $file);
+                                }
+
+                                        if(move_uploaded_file($arquivo['temp_name'][$cont], $destino)){
+                                                $_SESSION['msg'] = "<p> Upload Realizado !</p>";
+                                        }else{
+                                                $_SESSION['msg'] = "<p> Upload Não Realizado !</p>";
+                                        }
+                        }
                 }
         }
         if(isset($_SESSION['msg'])){

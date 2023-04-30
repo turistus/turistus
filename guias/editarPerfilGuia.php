@@ -95,10 +95,6 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                             //header("Location: painelGuia.php");
                             //echo "AAAA ".$Uid;
                                 if ((isset($attachment['name'])) AND (!empty($attachment['name']))) {
-                                    ///Recuperar último ID inserido no banco de dados
-                                    //$last_id = $conn->lastInsertId();
-                                    //echo "$last_id";
-                                    //Diretório onde o arquivo será salvo
 
                                     $directory = '../images/guias/' . $Aid . "/";
 
