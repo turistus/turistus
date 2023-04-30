@@ -27,7 +27,7 @@ $novaData = date("Y/m/d");
                        transporte=:transporte,
                        alimentacao=:alimentacao,
                        foto=:foto,
-                       vagas=:vagas,
+                       idGuia=:idGuia,
                        dataUp=:dataUp";
 
                 $editandoEvento = $conn->prepare($result_markers);
@@ -40,6 +40,7 @@ $novaData = date("Y/m/d");
                 $editandoEvento->bindParam(':transporte', $dados_CadEvento['transporte']);
                 $editandoEvento->bindParam(':alimentacao', $dados_CadEvento['alimentacao']);
                 $editandoEvento->bindParam(':foto', $arquivo['foto']);
+                $editandoEvento->bindParam(':idGuia', $dados_CadEvento['idGuia']);
                 $editandoEvento->bindParam(':dataUp', $novaData);
                 $add_pay->execute();
                 echo "passou aquifffffffffff";
