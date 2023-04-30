@@ -36,8 +36,8 @@ ob_start();
     }
 
     .rotated {
-  transform: rotate(-5deg); /* Equal to rotateZ(45deg) */
-  background-color: #008B8B;
+  transform: rotate(-2deg); /* Equal to rotateZ(45deg) */
+
 }
 
   </style>
@@ -329,7 +329,7 @@ ob_start();
   ?>
 
 <script>
-  const texto = "Descubra os melhores destinos, hotéis e atividades para tornar suas viagens inesquecíveis Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional";
+  const texto = "Descubra os melhores destinos, hotéis e atividades para tornar suas viagens inesquecíveis. Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.";
 
   let i = 0;
   setInterval(() => {
