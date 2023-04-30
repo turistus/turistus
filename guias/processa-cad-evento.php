@@ -8,7 +8,7 @@ $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 //$arquivo = $_FILES['foto']['name'];
 //var_dump($arquivo);
 
-if($dados_CadEvento['Cadastrar'] != 0){
+if(!empty($dados_CadEvento['Cadastrar'])){
 
         $novaData = date("Y/m/d");
 
@@ -75,6 +75,7 @@ if($dados_CadEvento['Cadastrar'] != 0){
             }
  }else{
        echo "NAO CADASTROU !!";
+       var_dump($dados_CadEvento);
  }
 
 if(isset($_SESSION['msg'])){
@@ -82,7 +83,7 @@ if(isset($_SESSION['msg'])){
         unset($_SESSION['msg']);
 }
 
-unset($dados);
+//unset($dados);
 //header("Location: ../guias/painelGuia.php");
 
 ?>
