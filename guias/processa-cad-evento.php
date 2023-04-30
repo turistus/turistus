@@ -26,7 +26,7 @@ if(!empty($dados_CadEvento['Cadastrar'])){
         $editandoEvento->bindParam(':idGuia', $dados_CadEvento['idGuia']);
         $editandoEvento->bindParam(':dataUp', $novaData);
         $editandoEvento->execute();
-        echo "passou aquifffffffffff";
+        var_dump("passou aquifffffffffff". $novaData);
 
         // Acessa o IF quando cadastrar o usuário no BD
         if ($editandoEvento->rowCount()) {
