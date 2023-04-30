@@ -156,7 +156,7 @@ include_once '../connection.php';
                                     </select>
                                         <label style="margin-left: 10px;"> Total R$ </label>
                                         <input class="form-control col-3" type="text"  name="total[]" id="total" value="" required>
-                                        <button type="button" onclick="adicionarCampo()"> + </button>
+                                        <button style="margin-left: 10px;" type="button" onclick="adicionarCampo()"> + </button>
                                 </div>
                             </div>
                         </div>
