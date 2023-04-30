@@ -4,7 +4,7 @@ include_once '../connection.php';
 
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-var_dump($dados_CadEvento."VAAAR");
+var_dump($dados_CadEvento['input=']."VAAAR");
 echo $dados_CadEvento;
 $novaData = date("Y/m/d");
 echo $novaData;
