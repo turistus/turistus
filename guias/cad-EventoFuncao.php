@@ -209,7 +209,7 @@ include_once '../connection.php';
                         <!-- BOTAO CADASTRAR  -->
 
                                 <div class="row" style="padding-left: 20px; margin-top:20px;">
-                                <input type="submit" class="btn btn-success" style="  width: 150px; margin-right: 10px;" name="Cadastrar" value="Cadastrar">
+                                <input type="submit" class="btn btn-success" style="  width: 150px; margin-right: 10px;" id="Cadastrar" name="Cadastrar" value="Cadastrar">
 
                                     <div class="col-4">
 
