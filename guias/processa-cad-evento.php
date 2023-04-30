@@ -21,6 +21,7 @@ echo $novaData;
         $preparandoQuerySQL->bindParam(':total', $v2);
         $preparandoQuerySQL->execute();
 
+        echo "PAssou o insert de valores";
 
 
 ?>
