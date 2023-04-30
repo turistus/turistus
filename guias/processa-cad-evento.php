@@ -4,11 +4,12 @@ include_once '../connection.php';
 
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
+echo $dados_CadEvento['input="Cadastrar"'];
 $novaData = date("Y/m/d");
 // A variável recebe a mensagem de erro
 $msg = "";
 
+if(!empty($dados_CadEvento['Cadastrar'])){
         $arquivo = $_FILES['foto'];
 
         //Salvar os dados no bd
@@ -41,6 +42,7 @@ $msg = "";
         echo "passou aquifffffffffff";
         var_dump($result_markers);
 
+        if(!empty($dados_CadEvento['Cadastrar'])){
                 $last_id = $conn->lastInsertId();
 
                 $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
@@ -67,7 +69,8 @@ $msg = "";
                                         $_SESSION['msg'] = "<p> Upload Não Realizado !</p>";
                                 }
                 }
-
+        }
+}
 if(isset($_SESSION['msg'])){
         echo $_SESSION['msg'];
         unset($_SESSION['msg']);
