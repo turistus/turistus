@@ -75,20 +75,6 @@ if(!empty($dados_CadEvento['Cadastrar'])){
                         }
                 }
 
-                 // Ler o array de arquivos
-                 for ($chave = 0; $chave < count($dados_CadEvento['vagas']); $chave++) {
-                $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
-                $preparandoQuerySQL = $conn->prepare($CriarValores);
-                $preparandoQuerySQL->bindParam(':idEvento', $eventoInserido);
-                $preparandoQuerySQL->bindParam(':vagas', $dados_CadEvento['vagas'][$chave]);
-                $preparandoQuerySQL->bindParam(':total', $dados_CadEvento['total'][$chave]);
-                $preparandoQuerySQL->execute();
-                }
-                        if ($cad_imagem->execute()) {
-                                $_SESSION['msg'] = "<p style='color: green;'>FOTO cadastrado com sucesso!</p>";
-                        } else {
-                                $_SESSION['msg'] = "<p style='color: #f00;'>Erro: FOTO não cadastrada com sucesso!</p>";
-                        }
 
         } else {
                 $_SESSION['msg'] = "<p style='color: #f00;'>Erro: Usuário não cadastrado com sucesso!</p>";
