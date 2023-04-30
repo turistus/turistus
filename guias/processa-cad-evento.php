@@ -5,7 +5,8 @@ include_once '../connection.php';
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 var_dump($dados_CadEvento);
-echo $arquivo = $_FILES['foto'];
+$arquivo = $_FILES['foto'];
+var_dump($arquivo);
 
 if(!empty($dados_CadEvento['Cadastrar'])){
 
@@ -40,7 +41,7 @@ if(!empty($dados_CadEvento['Cadastrar'])){
 
                 // Receber os arquivos do formulário
                 $arquivo = $_FILES['foto'];
-                //var_dump($arquivo);
+                var_dump($arquivo);
 
                 // Ler o array de arquivos
                 for ($cont = 0; $cont < count($arquivo['name']); $cont++) {
