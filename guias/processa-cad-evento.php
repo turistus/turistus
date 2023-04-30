@@ -9,7 +9,7 @@ echo $dados_CadEvento;
 $novaData = date("Y/m/d");
 echo $novaData;
 
-if(!empty($dados_CadEvento['Cadastrar'])){
+
         $last_id = 95;
         $v1=1;
         $v2=10;
@@ -21,6 +21,6 @@ if(!empty($dados_CadEvento['Cadastrar'])){
         $preparandoQuerySQL->bindParam(':total', $v2);
         $preparandoQuerySQL->execute();
 
-}
+
 
 ?>
