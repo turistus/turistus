@@ -10,18 +10,8 @@ $novaData = date("Y/m/d");
 if(!empty($dados_CadEvento['Cadastrar'])){
 
         //Salvar os dados no bd
-        $result_markers = "INSERT INTO eventos SET
-               nome=:nome,
-               breveDescricao=:breveDescricao
-               descricao=:descricao,
-               datai=:datai,
-               dataf=:dataf,
-               encontro=:encontro,
-               transporte=:transporte,
-               alimentacao=:alimentacao,
-               foto=:foto,
-               idGuia=:idGuia,
-               dataUp=:dataUp";
+        $result_markers = "INSERT INTO eventos (nome, breveDescricao, descricao, datai, dataf, encontro, transporte, alimentacao, foto, idGuia, dataUp )
+         VALUES (:nome, :breveDescricao, :descricao, :datai, :dataf, :encontro, :transporte, :alimentacao, :foto, :idGuia, :dataUp)";
 
         $editandoEvento = $conn->prepare($result_markers);
         $editandoEvento->bindParam(':nome', $dados_CadEvento['nome'], PDO::PARAM_STR);
