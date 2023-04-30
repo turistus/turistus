@@ -37,7 +37,7 @@ var_dump($dados);
          $editandoEvento->bindParam(':encontro', $dados['encontro']);
          $editandoEvento->bindParam(':transporte', $dados['transporte']);
          $editandoEvento->bindParam(':alimentacao', $dados['alimentacao']);
-         $editandoEvento->bindParam(':foto', $arquivo['name']);
+         $editandoEvento->bindParam(':foto', $arquivo['foto']);
          $editandoEvento->bindParam(':dataUp', $dados['dataUp']);
 
                 $add_pay->execute();
