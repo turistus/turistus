@@ -82,16 +82,6 @@ if(isset($_SESSION['msg'])){
 }
 
 unset($dados);
-header("Location: ../guias/painelGuia.php");
-
-if(($conn)){
-$_SESSION['msg'] = "<span style='color: green';>evento cadastrado com sucesso!</span>";
-header("Location: painelGuia.php");
-}else{
-$_SESSION['msg'] = "<span style='color: red';>Erro: evento não foi cadastrado com sucesso!</span>";
-header("Location: painelGuia.php");
-}
-
-
+//header("Location: ../guias/painelGuia.php");
 
 ?>
