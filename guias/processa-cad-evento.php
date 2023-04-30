@@ -5,26 +5,27 @@ include_once '../connection.php';
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 var_dump($dados_CadEvento['Cadastrar']);
-
+echo $dados_CadEvento['idPt'];
 
 if(!empty($dados_CadEvento['Cadastrar'])){
 
         $novaData = date("Y/m/d");
-        echo $novaData;
+
         //Salvar os dados no bd
-        $Cria_Evento = "INSERT INTO eventos (nome, breveDescricao, descricao, datai, dataf, encontro, transporte, alimentacao, foto, idGuia, dataUp )
-         VALUES (:nome, :breveDescricao, :descricao, :datai, :dataf, :encontro, :transporte, :alimentacao, :foto, :idGuia, :dataUp)";
+        $Cria_Evento = "INSERT INTO eventos ('nome', 'breveDescricao', 'descricao', 'datai', 'dataf', 'encontro', 'transporte', 'alimentacao', 'foto', 'valor', 'idGuia', 'idPt', 'dataUp' )
+         VALUES (:nome, :breveDescricao, :descricao, :datai, :dataf, :encontro, :transporte, :alimentacao, :foto, 1, :idGuia, :idpt, :dataUp)";
 
         $editandoEvento = $conn->prepare($Cria_Evento);
-        $editandoEvento->bindParam(':nome', $dados_CadEvento['nome'], PDO::PARAM_STR);
+        $editandoEvento->bindParam(':nome', $dados_CadEvento['nome']);
         $editandoEvento->bindParam(':breveDescricao', $dados_CadEvento['breveDescricao']);
-        $editandoEvento->bindParam(':descricao', $dados_CadEvento['descricao'], PDO::PARAM_STR);
+        $editandoEvento->bindParam(':descricao', $dados_CadEvento['descricao']);
         $editandoEvento->bindParam(':datai', $dados_CadEvento['datai']);
         $editandoEvento->bindParam(':dataf', $dados_CadEvento['dataf']);
         $editandoEvento->bindParam(':encontro', $dados_CadEvento['encontro']);
         $editandoEvento->bindParam(':transporte', $dados_CadEvento['transporte']);
         $editandoEvento->bindParam(':alimentacao', $dados_CadEvento['alimentacao']);
         $editandoEvento->bindParam(':idGuia', $dados_CadEvento['idGuia']);
+        $editandoEvento->bindParam(':idPt', $dados_CadEvento['idPt']);
         $editandoEvento->bindParam(':dataUp', $novaData);
         $editandoEvento->execute();
         var_dump("passou aquifffffffffff". $novaData);
