@@ -39,15 +39,12 @@ if($dados_CadEvento['Cadastrar']==true){
         $add_pay->execute();
         echo "passou aquifffffffffff";
 
-        if($dados_CadEvento['Cadastrar']==true){
-                $last_id = $conn->lastInsertId();
+        if($last_id = $conn->lastInsertId()){
 
-                $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
-                $preparandoQuerySQL = $conn->prepare($CriarValores);
-                $preparandoQuerySQL->bindParam(':idEvento', $last_id);
-                $preparandoQuerySQL->bindParam(':vagas', $dados_CadEvento['vagas'][$chave]);
-                $preparandoQuerySQL->bindParam(':total', $dados_CadEvento['total'][$chave]);
-                $preparandoQuerySQL->execute();
+
+
+
+
 
                 if ((isset($arquivo['foto'])) AND (!empty($arquivo['foto']))) {
 
