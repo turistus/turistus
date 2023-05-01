@@ -9,7 +9,7 @@ var_dump($dados_CadEvento);
 //$arquivo = $_FILES['foto']['name'];
 //var_dump($arquivo);
 
-if($dados_CadEvento['Cadastrar'] == "Cadastrar"){
+if($dados_CadEvento['Cadastrar'] != "Cadastrar"){
 
         $novaData = date("Y/m/d");
 
