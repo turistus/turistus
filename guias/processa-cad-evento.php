@@ -5,7 +5,9 @@ include_once '../connection.php';
 
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-echo $dados_CadEvento;
+echo $dados_CadEvento['nome'];
+echo $dados_CadEvento['breveDescricao'];
+
 //$arquivo = $_FILES['foto']['name'];
 //var_dump($arquivo);
 
@@ -17,6 +19,7 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
         $Cria_Evento = "INSERT INTO eventos (nome, breveDescricao, descricao, datai, dataf, encontro, transporte, alimentacao, valor, idGuia, idPt, dataUp )
          VALUES (:nome, :breveDescricao, :descricao, :datai, :dataf, :encontro, :transporte, :alimentacao, 1, :idGuia, :idpt, :dataUp)";
 
+echo $Cria_Evento;
         $editandoEvento = $conn->prepare($Cria_Evento);
         $editandoEvento->bindParam(':nome', $dados_CadEvento['nome']);
         $editandoEvento->bindParam(':breveDescricao', $dados_CadEvento['breveDescricao']);
