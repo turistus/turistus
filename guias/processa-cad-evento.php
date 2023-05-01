@@ -95,6 +95,6 @@ if(isset($_SESSION['msg'])){
 }
 
 unset($dados);
-//header("Location: ../guias/painelGuia.php");
+header("Location: ../guias/painelGuia.php");
 
 ?>
