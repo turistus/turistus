@@ -78,7 +78,6 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
              idPt,
              prod.cidade AS cidade,
-             prod.image AS img,
              prod.uf AS uf,
 
 
@@ -87,11 +86,16 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
              guias.uf AS estadoGuia,
 
              val.idEvento,
-             val.total
+             val.total,
+
+             ftEventos.foto AS img
+
+
              FROM eventos
              LEFT JOIN pontosturisticos AS prod ON prod.id=eventos.idPt
              LEFT JOIN servicos AS guias ON guias.id=eventos.idGuia
              LEFT JOIN valores AS val ON val.idEvento=eventos.id
+             INNER JOIN foto_Eventos AS ftEventos ON ftEventos.idEv=eventos.id
              WHERE eventos.id =:id ";
 
 
