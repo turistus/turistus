@@ -17,9 +17,8 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
 
         //Salvar os dados no bd
         $Cria_Evento = "INSERT INTO eventos (nome, breveDescricao, descricao, datai, dataf, encontro, transporte, alimentacao, valor, idGuia, idPt, dataUp )
-         VALUES (:nome, :breveDescricao, :descricao, :datai, :dataf, :encontro, :transporte, :alimentacao, 1, :idGuia, :idpt, :dataUp)";
+         VALUES (:nome, :breveDescricao, :descricao, :datai, :dataf, :encontro, :transporte, :alimentacao, 1, :idGuia, :idPt, :dataUp)";
 
-echo $Cria_Evento;
         $editandoEvento = $conn->prepare($Cria_Evento);
         $editandoEvento->bindParam(':nome', $dados_CadEvento['nome']);
         $editandoEvento->bindParam(':breveDescricao', $dados_CadEvento['breveDescricao']);
