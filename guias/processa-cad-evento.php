@@ -5,14 +5,14 @@ include_once '../connection.php';
 
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-var_dump($dados_CadEvento);
+echo $dados_CadEvento;
 //$arquivo = $_FILES['foto']['name'];
 //var_dump($arquivo);
 
 if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
         echo "ENTROU NO IF KKKKKKKKKKKKKKKKKKKK";
         $novaData = date("Y/m/d");
-echo $dados_CadEvento['nome'];
+
         //Salvar os dados no bd
         $Cria_Evento = "INSERT INTO eventos (nome, breveDescricao, descricao, datai, dataf, encontro, transporte, alimentacao, valor, idGuia, idPt, dataUp )
          VALUES (:nome, :breveDescricao, :descricao, :datai, :dataf, :encontro, :transporte, :alimentacao, 1, :idGuia, :idpt, :dataUp)";
