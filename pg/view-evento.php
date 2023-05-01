@@ -86,8 +86,8 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
              guias.nome AS nomeGuia,
              guias.uf AS estadoGuia,
 
-             valores.idEvento,
-             total
+             val.idEvento,
+             val.total
              FROM eventos
              LEFT JOIN pontosturisticos AS prod ON prod.id=eventos.idPt
              LEFT JOIN servicos AS guias ON guias.id=eventos.idGuia
