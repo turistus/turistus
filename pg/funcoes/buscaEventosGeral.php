@@ -62,9 +62,13 @@
         datah,
 
         pontosturisticos.id,
-        pontosturisticos.image AS img
+        pontosturisticos.image AS img,
+        val.idEvento,
+        val.total
 
-        FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt ORDER BY pontosturisticos.name ASC";
+        FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
+        LEFT JOIN valores AS val ON val.idEvento=eventos.id
+        ORDER BY pontosturisticos.name ASC";
         //WHERE eventos.pontos != 0
 
         $result_products = $conn->prepare($query_products);
@@ -99,7 +103,7 @@
                       </div>
 
 
-                    <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
+                    <h5 class="card-title">R$ <?php echo number_format($total, 2, ",", ".") ?></h5>
                       <a href="view-evento.php?id=<?php echo $idE; ?>" class="btn btn-primary">Detalhes</a>
 
                   </div>
