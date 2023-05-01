@@ -12,7 +12,7 @@ var_dump($dados_CadEvento);
 if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
         echo "ENTROU NO IF KKKKKKKKKKKKKKKKKKKK";
         $novaData = date("Y/m/d");
-echo $novaData;
+echo $dados_CadEvento['nome'];
         //Salvar os dados no bd
         $Cria_Evento = "INSERT INTO eventos (nome, breveDescricao, descricao, datai, dataf, encontro, transporte, alimentacao, valor, idGuia, idPt, dataUp )
          VALUES (:nome, :breveDescricao, :descricao, :datai, :dataf, :encontro, :transporte, :alimentacao, 1, :idGuia, :idpt, :dataUp)";
