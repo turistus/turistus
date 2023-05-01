@@ -118,7 +118,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                     <!-- Lado Esquerdo -->
                     <div class="col-md-6" >
-                        <img style="height: 300px;" src='<?php echo "../images/pontosturisticos/$idPt/$img"; ?>' class="card-img-top">
+                        <img style="height: 300px;" src='<?php echo "../images/eventos/$id/$img"; ?>' class="card-img-top">
 
                     </div>
 
