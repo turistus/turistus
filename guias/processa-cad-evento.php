@@ -83,7 +83,7 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
                                         $_SESSION['msg'] = "<p style='color: #f00;'>AAAAAErro: FOTO não cadastrada com sucesso!</p>";
                                 }
                         } else {
-                        $_SESSION['msg'] = "<p style='color: #f00;'>Erro: 0000FOTO não cadastrada com sucesso!</p>";
+                        $_SESSION['msg'] = "<p style='color: #f00;'>Erro: 0000  aFOTO não cadastrada com sucesso!</p>";
                         }
                 }
 
