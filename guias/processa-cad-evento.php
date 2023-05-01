@@ -38,6 +38,16 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
         if ($editandoEvento->rowCount()) {
 
                 $eventoInserido= $conn->lastInsertId();
+                // Ler o array de arquivos
+                for ($chave = 0; $chave < count($dados_CadEvento['vagas']); $chave++) {
+                        $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
+                        $preparandoQuerySQL = $conn->prepare($CriarValores);
+                        $preparandoQuerySQL->bindParam(':idEvento', $eventoInserido);
+                        $preparandoQuerySQL->bindParam(':vagas', $dados_CadEvento['vagas'][$chave]);
+                        $preparandoQuerySQL->bindParam(':total', $dados_CadEvento['total'][$chave]);
+                        $preparandoQuerySQL->execute();
+                        }
+
                 $diretorio = "images/eventos/" . $eventoInserido ."/";
                 // Criar o diretório
                 mkdir($diretorio, 0755);
@@ -57,10 +67,11 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
 
                         // Acessa o IF quando realizar o upload corretamente
                         if (move_uploaded_file($arquivo['tmp_name'][$cont], $destino)) {
-                        $query_imagem = "UPDATE eventos SET foto=:foto WHERE eventos.id = :eventoInserido";
+                        $query_imagem = "INSERT INTO foto_Eventos (foto, idEv) VALUES (:foto, :idEv ";
                         $cad_imagem = $conn->prepare($query_imagem);
                         $cad_imagem->bindParam(':foto', $nome_arquivo);
-                        $cad_imagem->bindParam(':eventoInserido', $eventoInserido);
+                        $cad_imagem->bindParam(':idEv', $eventoInserido);
+
 
                                 if ($cad_imagem->execute()) {
                                         $_SESSION['msg'] = "<p style='color: green;'>FOTO cadastrado com sucesso!</p>";
