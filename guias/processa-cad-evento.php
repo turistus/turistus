@@ -41,7 +41,7 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
                         $preparandoQuerySQL->bindParam(':total', $dados_CadEvento['total'][$chave]);
                         $preparandoQuerySQL->execute();
 
-                                if ($preparandoQuerySQL->execute()) {
+                                if ($preparandoQuerySQL->rowCount()) {
                                         $_SESSION['msg'] = "<p style='color: green;'> Inseriu valores com sucesso!</p>";
                                 } else {
                                         $_SESSION['msg'] = "<p style='color: #f00;'> Erro: Não Inseriu Valores !</p>";
