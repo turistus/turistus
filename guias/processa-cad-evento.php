@@ -6,9 +6,6 @@ include_once '../connection.php';
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-//$arquivo = $_FILES['foto']['name'];
-//var_dump($arquivo);
-
 if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
 
         $novaData = date("Y/m/d");
@@ -30,7 +27,6 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
         $editandoEvento->bindParam(':idPt', $dados_CadEvento['idPt']);
         $editandoEvento->bindParam(':dataUp', $novaData);
         $editandoEvento->execute();
-        //var_dump("INSERIIII !!!!! agora dia: ". $novaData);
 
         // Acessa o IF quando cadastrar o usuário no BD
         if ($editandoEvento->rowCount()) {
@@ -46,9 +42,9 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
                         $preparandoQuerySQL->execute();
 
                                 if ($preparandoQuerySQL->execute()) {
-                                        $_SESSION['msg'] = "<p style='color: green;'> INSERIU VALORES com sucesso!</p>";
+                                        $_SESSION['msg'] = "<p style='color: green;'> Inseriu valores com sucesso!</p>";
                                 } else {
-                                        $_SESSION['msg'] = "<p style='color: #f00;'>Erro: Não INSERIU VALORES com sucesso!!</p>";
+                                        $_SESSION['msg'] = "<p style='color: #f00;'> Erro: Não Inseriu Valores !</p>";
                                 }
                         }
 
@@ -58,7 +54,6 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
 
                 // Receber os arquivos do formulário
                 $arquivo = $_FILES['foto'];
-                //var_dump($arquivo);
 
                 // Ler o array de arquivos
                 for ($cont = 0; $cont < count($arquivo['name']); $cont++) {
@@ -68,7 +63,6 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
 
                         // Criar o endereço de destino das imagens
                         $destino = $diretorio . $arquivo['name'][$cont];
-                        echo $arquivo['tmp_name'][$cont] . "AAAAAAAAAAAAAAAAAAAAAAAAAA";
 
                         // Acessa o IF quando realizar o upload corretamente
                         move_uploaded_file($arquivo['tmp_name'][$cont], $destino);
@@ -79,16 +73,16 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
 
 
                                 if ($cad_imagem->execute()) {
-                                        $_SESSION['msg'] = "<p style='color: green;'> BOA FOTO cadastrado com sucesso!</p>";
+                                        $_SESSION['msg'] = "<p style='color: green;'> Evento Criado com sucesso!</p>";
                                 } else {
-                                        $_SESSION['msg'] = "<p style='color: #f00;'>AAAAAErro: FOTO não cadastrada com sucesso!</p>";
+                                        $_SESSION['msg'] = "<p style='color: #f00;'> Erro: Evento não criado com sucesso!</p>";
                                 }
 
                 }
 
 
         } else {
-                $_SESSION['msg'] = "<p style='color: #f00;'>Erro: não cadastraooouuuuuauauau com sucesso!</p>";
+                $_SESSION['msg'] = "<p style='color: #f00;'> Erro: não cadastrou !</p>";
             }
  }else{
        echo "NAO CADASTROU !!";
