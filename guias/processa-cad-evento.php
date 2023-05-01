@@ -68,7 +68,7 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
 
                         // Criar o endereço de destino das imagens
                         $destino = $diretorio . $arquivo['name'][$cont];
-                        echo $destino; echo $eventoInserido." TESTE DE ID que TA AGORA por ULTIMO";
+                        echo $arquivo['tmp_name'][$cont] . "AAAAAAAAAAAAAAAAAAAAAAAAAA";
                         // Acessa o IF quando realizar o upload corretamente
                         if (move_uploaded_file($arquivo['tmp_name'][$cont], $destino)) {
                         $query_imagem = "INSERT INTO foto_Eventos (foto, idEv) VALUES (:foto, :idEv )";
