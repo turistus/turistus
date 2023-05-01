@@ -5,14 +5,12 @@ include_once '../connection.php';
 
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-echo $dados_CadEvento['nome'];
-echo $dados_CadEvento['breveDescricao'];
 
 //$arquivo = $_FILES['foto']['name'];
 //var_dump($arquivo);
 
 if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
-        echo "ENTROU NO IF KKKKKKKKKKKKKKKKKKKK";
+
         $novaData = date("Y/m/d");
 
         //Salvar os dados no bd
@@ -32,7 +30,7 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
         $editandoEvento->bindParam(':idPt', $dados_CadEvento['idPt']);
         $editandoEvento->bindParam(':dataUp', $novaData);
         $editandoEvento->execute();
-        var_dump("INSERIIII !!!!! agora dia: ". $novaData);
+        //var_dump("INSERIIII !!!!! agora dia: ". $novaData);
 
         // Acessa o IF quando cadastrar o usuário no BD
         if ($editandoEvento->rowCount()) {
@@ -60,7 +58,7 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
 
                 // Receber os arquivos do formulário
                 $arquivo = $_FILES['foto'];
-                var_dump($arquivo);
+                //var_dump($arquivo);
 
                 // Ler o array de arquivos
                 for ($cont = 0; $cont < count($arquivo['name']); $cont++) {
@@ -72,7 +70,7 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
                         $destino = $diretorio . $arquivo['name'][$cont];
 
                         // Acessa o IF quando realizar o upload corretamente
-                        if (move_uploaded_file($arquivo['tmp_name'][$cont], $destino)) {
+                        if (move_uploaded_file($arquivo['name'][$cont], $destino)) {
                         $query_imagem = "INSERT INTO foto_Eventos (foto, idEv) VALUES (:foto, :idEv )";
                         $cad_imagem = $conn->prepare($query_imagem);
                         $cad_imagem->bindParam(':foto', $nome_arquivo);
