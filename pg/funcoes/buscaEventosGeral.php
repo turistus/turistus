@@ -67,7 +67,7 @@
         val.total
 
         FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
-        LEFT JOIN valores AS val ON val.idEvento=eventos.id
+        INNER JOIN valores AS val ON val.idEvento=eventos.id
         ORDER BY pontosturisticos.name ASC";
         //WHERE eventos.pontos != 0
 
