@@ -37,8 +37,8 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
                         $CriarValores = "INSERT INTO valores (idEvento, vagas, total ) VALUES (:idEvento, :vagas, :total) ";
                         $preparandoQuerySQL = $conn->prepare($CriarValores);
                         $preparandoQuerySQL->bindParam(':idEvento', $eventoInserido);
-                        $preparandoQuerySQL->bindParam(':vagas', $dados_CadEvento['vagas']);
-                        $preparandoQuerySQL->bindParam(':total', $dados_CadEvento['total']);
+                        $preparandoQuerySQL->bindParam(':vagas', $dados_CadEvento['vagas'][$chave]);
+                        $preparandoQuerySQL->bindParam(':total', $dados_CadEvento['total'][$chave]);
                         $preparandoQuerySQL->execute();
 
                                 if ($preparandoQuerySQL->execute()) {
