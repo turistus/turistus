@@ -52,7 +52,7 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
                                 }
                         }
 
-                $diretorio = "images/eventos/" . $eventoInserido ."/";
+                $diretorio = "images/eventos/$eventoInserido/";
                 // Criar o diretório
                 mkdir($diretorio, 0755);
 
@@ -70,7 +70,7 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
                         $destino = $diretorio . $arquivo['name'][$cont];
 
                         // Acessa o IF quando realizar o upload corretamente
-                        if (move_uploaded_file($arquivo['name'][$cont], $destino)) {
+                        if (move_uploaded_file($arquivo['tmp_name'][$cont], $destino)) {
                         $query_imagem = "INSERT INTO foto_Eventos (foto, idEv) VALUES (:foto, :idEv )";
                         $cad_imagem = $conn->prepare($query_imagem);
                         $cad_imagem->bindParam(':foto', $nome_arquivo);
