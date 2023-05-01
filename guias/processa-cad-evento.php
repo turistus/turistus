@@ -64,8 +64,8 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
                         // Criar o endereço de destino das imagens
                         $destino = $diretorio . $arquivo['name'][$cont];
 
-                        // Acessa o IF quando realizar o upload corretamente
-                        move_uploaded_file($arquivo['tmp_name'][$cont], $destino);
+                        // Acessa o IF quando realizar o upload corretamente AQQUQUIII QE TEM O B.O SE ELE NAO MOVER PARA A PASTA COMO FAZ O INSERT.
+                        move_uploaded_file($arquivo['name'][$cont], $destino);
                         $query_imagem = "INSERT INTO foto_Eventos (foto, idEv) VALUES (:foto, :idEv )";
                         $cad_imagem = $conn->prepare($query_imagem);
                         $cad_imagem->bindParam(':foto', $nome_arquivo);
@@ -95,6 +95,6 @@ if(isset($_SESSION['msg'])){
 }
 
 unset($dados);
-header("Location: ../guias/painelGuia.php");
+//header("Location: ../guias/painelGuia.php");
 
 ?>
