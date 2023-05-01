@@ -53,11 +53,11 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
                         $nome_arquivo = $arquivo['name'][$cont];
 
                         // Criar o endereço de destino das imagens
-                        $destino = $diretorio . $nome_arquivo;
+                        $destino = $diretorio . $arquivo['name'][$cont];
 
                         // Acessa o IF quando realizar o upload corretamente
                         if (move_uploaded_file($arquivo['tmp_name'][$cont], $destino)) {
-                        $query_imagem = "UPDATE eventos SET foto=:foto WHERE id = :eventoInserido";
+                        $query_imagem = "UPDATE eventos SET foto=:foto WHERE eventos.id = :eventoInserido";
                         $cad_imagem = $conn->prepare($query_imagem);
                         $cad_imagem->bindParam(':foto', $nome_arquivo);
                         $cad_imagem->bindParam(':eventoInserido', $eventoInserido);
@@ -68,7 +68,7 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
                                         $_SESSION['msg'] = "<p style='color: #f00;'>Erro: FOTO não cadastrada com sucesso!</p>";
                                 }
                         } else {
-                        $_SESSION['msg'] = "<p style='color: #f00;'>Erro: FOTO não cadastrada com sucesso!</p>";
+                        $_SESSION['msg'] = "<p style='color: #f00;'>Erro: 0000FOTO não cadastrada com sucesso!</p>";
                         }
                 }
 
