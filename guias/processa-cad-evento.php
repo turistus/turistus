@@ -10,7 +10,7 @@ var_dump($dados_CadEvento);
 //var_dump($arquivo);
 
 if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
-
+        echo "ENTROU NO IF KKKKKKKKKKKKKKKKKKKK";
         $novaData = date("Y/m/d");
 
         //Salvar os dados no bd
