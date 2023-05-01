@@ -46,6 +46,12 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
                         $preparandoQuerySQL->bindParam(':vagas', $dados_CadEvento['vagas'][$chave]);
                         $preparandoQuerySQL->bindParam(':total', $dados_CadEvento['total'][$chave]);
                         $preparandoQuerySQL->execute();
+
+                                if ($preparandoQuerySQL->execute()) {
+                                        $_SESSION['msg'] = "<p style='color: green;'> INSERIU VALORES com sucesso!</p>";
+                                } else {
+                                        $_SESSION['msg'] = "<p style='color: #f00;'>Erro: Não INSERIU VALORES com sucesso!!</p>";
+                                }
                         }
 
                 $diretorio = "images/eventos/" . $eventoInserido ."/";
