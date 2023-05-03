@@ -119,14 +119,14 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
             <div class="row" >
 
                     <!-- Lado Esquerdo Precisoo POR um CONT aqui para Criar o CARROSEL de pelomenos 3 imagens mas sem maximo.. ou com 10 fotos maximo-->
-                    <div class="col-md-6 carousel" >
+                    <div class="col-md-6 " >
+                        <div class="carousel" >
+                            <?php foreach ($img as $imagem) { ?>
+                                <div><img src="<?php echo $imagem; ?>"></div>
+                                <img style="height: 300px;" src='<?php echo "../images/eventos/$id/$imagem"; ?>' class="card-img-top">
 
-                    <?php foreach ($img as $imagem) { ?>
-                        <div><img src="<?php echo $imagem; ?>"></div>
-                        <img style="height: 300px;" src='<?php echo "../images/eventos/$id/$imagem"; ?>' class="card-img-top">
-
-                    <?php } ?>
-
+                            <?php } ?>
+                        </div>
 
 
 
@@ -366,7 +366,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
 
     $(document).ready(function(){
-    $('.col-md-6 carousel').slick({
+    $('.carousel').slick({
       slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
