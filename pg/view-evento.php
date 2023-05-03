@@ -381,8 +381,8 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
       autoplay: true,
       autoplaySpeed: 2000,
       arrows: true,
-      prevArrow: '<button type="button" class="slick-prev btn btn-primary">Anterior</button>',
-      nextArrow: '<button type="button" class="slick-next btn btn-primary">Proximo</button>',
+      prevArrow: '<button type="button" class="slick-prev btn btn-primary form-inline">Anterior</button>',
+      nextArrow: '<button type="button" class="slick-next btn btn-primary form-inline">Proximo</button>',
       responsive: [
         {
           breakpoint: 768,
