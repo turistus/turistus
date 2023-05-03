@@ -120,7 +120,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                     <!-- Lado Esquerdo Precisoo POR um CONT aqui para Criar o CARROSEL de pelomenos 3 imagens mas sem maximo.. ou com 10 fotos maximo-->
                     <div class="col-md-6 " >
-                        <div class="row" >
+                        <div class="row-12" >
                             <div class="carousel"  >
                                 <?php
 
