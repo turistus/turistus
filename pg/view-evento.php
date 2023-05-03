@@ -122,7 +122,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     <div class="col-md-6 " >
                         <div class="row-12" >
                             <div class="col-md-6 " >
-                                <div class="carousel"  >
+                                <div class="carousel" style="border:1px solid black; " >
                                     <?php
 
                                     // Busque as imagens na tabela "fotos"
@@ -133,7 +133,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                     }
                                     foreach ($imagens as $imagem) { ?>
 
-                                            <div style="border:1px solid black; "><img src="../images/eventos/<?php echo $id.'/'.$imagem; ?>" style="margin:auto; height: 300px;"> </div>
+                                            <div ><img src="../images/eventos/<?php echo $id.'/'.$imagem; ?>" style="margin:auto; height: 300px;"> </div>
 
                                     <?php } ?>
                                 </div>
@@ -385,7 +385,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2
+            slidesToShow: 1
           }
         },
         {
