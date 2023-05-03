@@ -378,7 +378,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000,
-      arrows: false,
+      arrow: true,
       prevArrow: '<button type="button" class="slick-prev btn btn-primary">Anterior</button><br>',
       nextArrow: '<button type="button" class="slick-next btn btn-primary">Proximo</button>',
       responsive: [
