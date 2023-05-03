@@ -23,6 +23,8 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
         <title>Desconecta - Visualizar eventos</title>
         <style>
         .star-ratings {
@@ -88,7 +90,8 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
              val.idEvento,
              val.total,
 
-             ftEventos.foto AS img
+             ftEventos.foto AS img,
+             ftEventos.idEv AS idEv
 
 
              FROM eventos
@@ -104,14 +107,18 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
             $result_products->bindParam(':id', $id, PDO::PARAM_INT);
             $result_products->execute();
             $row_product = $result_products->fetch(PDO::FETCH_ASSOC);
-            extract($row_product);
+
             //$valor_rise = ($valor * 0.50) + $valor;
+
+            $imagens = array();
+            while ($row = mysqli_fetch_assoc($row_product)) {
+                $imagens[] = $row['foto'];
+            }
+            extract($row_product);
             ?>
 
 
             <h1 class="display-3 mt-5 mb-3"><?php echo $nome; ?></h1>
-
-
 
             <!-- LINHA PRINCIPAL -->
             <div class="row" >
@@ -119,8 +126,17 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     <!-- Lado Esquerdo Precisoo POR um CONT aqui para Criar o CARROSEL de pelomenos 3 imagens mas sem maximo.. ou com 10 fotos maximo-->
                     <div class="col-md-6" >
 
+                    <?php foreach ($imagens as $imagem) { ?>
+                        <div><img src="<?php echo $imagem; ?>"></div>
+                        <br>
 
-                        <img style="height: 300px;" src='<?php echo "../images/eventos/$id/$img"; ?>' class="card-img-top">
+
+
+
+                    <?php } ?>
+
+
+
 
                     </div>
 
@@ -313,6 +329,9 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" ></script>
+
+        <script type="text/javascript" src="slick/slick.min.js"></script>
+
     </body>
     <?php
         include_once '../rodape.php';
@@ -350,6 +369,35 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                         $('.star-ratings').width(star_rating_width);
 
                         });
+
+
+
+
+  $(document).ready(function(){
+    $('.carousel').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      arrows: true,
+      prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+      nextArrow: '<button type="button" class="slick-next">Next</button>',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  });
 
 
 </script>
