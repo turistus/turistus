@@ -121,9 +121,8 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     <!-- Lado Esquerdo Precisoo POR um CONT aqui para Criar o CARROSEL de pelomenos 3 imagens mas sem maximo.. ou com 10 fotos maximo-->
                     <div class="col-md-6 " >
                         <div class="row-12" >
-
-                            <div class="col-md-12 form-inline" >
-                                <div class="carousel" style="border:1px solid black; " >
+                            <div class="col-md-12 " >
+                                <div class="carousel form-inline" style="border:1px solid black; " >
                                     <?php
 
                                     // Busque as imagens na tabela "fotos"
@@ -380,7 +379,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
       autoplay: true,
       autoplaySpeed: 2000,
       arrows: true,
-      prevArrow: '<button type="button" class="slick-prev btn btn-primary">Anterior</button>',
+      prevArrow: '<button type="button" class="slick-prev btn btn-primary">Anterior</button><br>',
       nextArrow: '<button type="button" class="slick-next btn btn-primary">Proximo</button>',
       responsive: [
         {
