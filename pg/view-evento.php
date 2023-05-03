@@ -132,7 +132,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 }
                                 foreach ($imagens as $imagem) { ?>
 
-                                        <div style="border:1px solid black; "><img src="../images/eventos/<?php echo $id.'/'.$imagem; ?>" style="margin:auto;"> </div>
+                                        <div style="border:1px solid black; "><img src="../images/eventos/<?php echo $id.'/'.$imagem; ?>" style="margin:auto; height: 300px;"> </div>
 
                                 <?php } ?>
                                 </div>
