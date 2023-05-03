@@ -122,7 +122,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     <div class="col-md-6 " >
                         <div class="carousel" >
                             <?php
-                            echo $img;
+
                             // Busque as imagens na tabela "fotos"
                             $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $id");
                             $imagens = array();
@@ -130,7 +130,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 $imagens[] = $row['foto'];
                             }
                             foreach ($imagens as $imagem) { ?>
-                                <div><img src="<?php echo $imagem; ?>"></div>
+                                <div><img src="<?php echo $imagem; ?>"> <? echo $imagem;?></div>
                             <?php } ?>
                         </div>
 
