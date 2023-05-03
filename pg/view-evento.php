@@ -122,7 +122,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     <!-- Lado Esquerdo Precisoo POR um CONT aqui para Criar o CARROSEL de pelomenos 3 imagens mas sem maximo.. ou com 10 fotos maximo-->
                     <div class="col-md-6" >
 
-                    <?php foreach ($imagens as $imagem) { ?>
+                    <?php foreach ($img as $imagem) { ?>
                         <div><img src="<?php echo $imagem; ?>"></div>
                         <img style="height: 300px;" src='<?php echo "../images/eventos/$id/$img"; ?>' class="card-img-top">
 
