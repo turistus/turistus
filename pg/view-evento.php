@@ -123,10 +123,14 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                         <div class="carousel" >
                             <?php
                             echo $img;
-                            foreach ($img as $imagem) { ?>
+                            // Busque as imagens na tabela "fotos"
+                            $busca_Fotos = mysqli_query($conex, "SELECT * FROM fotos_Eventos WHERE fotos_Eventos.idEv = $id");
+                            $imagens = array();
+                                while ($row = mysqli_fetch_assoc($busca_Fotos)) {
+                                $imagens[] = $row['foto'];
+                            }
+                            foreach ($imagens as $imagem) { ?>
                                 <div><img src="<?php echo $imagem; ?>"></div>
-                                <img style="height: 300px;" src='<?php echo "../images/eventos/$id/$imagem"; ?>' class="card-img-top">
-
                             <?php } ?>
                         </div>
 
