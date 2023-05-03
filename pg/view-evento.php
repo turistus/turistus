@@ -130,7 +130,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 $imagens[] = $row['foto'];
                             }
                             foreach ($imagens as $imagem) { ?>
-                                <div><img src="<?php echo $imagem; ?>"> <? echo $imagem;?></div>
+                                <div style="height: 300px; width: 400px;"><img src="<?php echo $imagem; ?>"> <? echo $imagem; ?></div>
                             <?php } ?>
                         </div>
 
