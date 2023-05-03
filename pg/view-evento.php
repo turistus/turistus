@@ -132,7 +132,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 }
                                 foreach ($imagens as $imagem) { ?>
 
-                                        <div style="max-height: 100px; max-width: 100px;"><img src="../images/eventos/<?php echo $id.'/'.$imagem; ?>"> </div>
+                                        <div style="border:1px solid black; "><img src="../images/eventos/<?php echo $id.'/'.$imagem; ?>"> </div>
 
                                 <?php } ?>
                                 </div>
@@ -372,12 +372,12 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
     $(document).ready(function(){
     $('.carousel').slick({
-      slidesToShow: 1,
+      slidesToShow: 2,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000,
       arrows: true,
-      prevArrow: '<button type="button" class="slick-prev">Anterior</button>',
+      prevArrow: '<button type="button" class="slick-prev btn btn-primary">Anterior</button>',
       nextArrow: '<button type="button" class="slick-next btn btn-primary">Proximo</button>',
       responsive: [
         {
