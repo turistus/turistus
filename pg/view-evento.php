@@ -124,7 +124,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <?php
                             echo $img;
                             // Busque as imagens na tabela "fotos"
-                            $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE fotos_Eventos.idEv = $id");
+                            $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $id");
                             $imagens = array();
                                 while ($row = mysqli_fetch_assoc($busca_Fotos)) {
                                 $imagens[] = $row['foto'];
