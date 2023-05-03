@@ -121,22 +121,24 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     <!-- Lado Esquerdo Precisoo POR um CONT aqui para Criar o CARROSEL de pelomenos 3 imagens mas sem maximo.. ou com 10 fotos maximo-->
                     <div class="col-md-6 " >
                         <div class="row-12" >
-                            <div class="carousel"  >
-                                <?php
+                            <div class="col-md-6 " >
+                                <div class="carousel"  >
+                                    <?php
 
-                                // Busque as imagens na tabela "fotos"
-                                $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $id");
-                                $imagens = array();
-                                    while ($row = mysqli_fetch_assoc($busca_Fotos)) {
-                                    $imagens[] = $row['foto'];
-                                }
-                                foreach ($imagens as $imagem) { ?>
+                                    // Busque as imagens na tabela "fotos"
+                                    $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $id");
+                                    $imagens = array();
+                                        while ($row = mysqli_fetch_assoc($busca_Fotos)) {
+                                        $imagens[] = $row['foto'];
+                                    }
+                                    foreach ($imagens as $imagem) { ?>
 
-                                        <div style="border:1px solid black; "><img src="../images/eventos/<?php echo $id.'/'.$imagem; ?>" style="margin:auto; height: 300px;"> </div>
+                                            <div style="border:1px solid black; "><img src="../images/eventos/<?php echo $id.'/'.$imagem; ?>" style="margin:auto; height: 300px;"> </div>
 
-                                <?php } ?>
+                                    <?php } ?>
                                 </div>
                             </div>
+                        </div>
                     </div>
 
                     <!-- Lado Direito -->
@@ -372,7 +374,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
     $(document).ready(function(){
     $('.carousel').slick({
-      slidesToShow: 2,
+      slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000,
