@@ -107,18 +107,14 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
             $result_products->bindParam(':id', $id, PDO::PARAM_INT);
             $result_products->execute();
             $row_product = $result_products->fetch(PDO::FETCH_ASSOC);
-
-            //$valor_rise = ($valor * 0.50) + $valor;
-
-            $imagens = array();
-            while ($row = mysqli_fetch_assoc($row_product)) {
-                $imagens[] = $row['foto'];
-            }
             extract($row_product);
+            //$valor_rise = ($valor * 0.50) + $valor;
             ?>
 
 
             <h1 class="display-3 mt-5 mb-3"><?php echo $nome; ?></h1>
+
+
 
             <!-- LINHA PRINCIPAL -->
             <div class="row" >
@@ -128,10 +124,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                     <?php foreach ($imagens as $imagem) { ?>
                         <div><img src="<?php echo $imagem; ?>"></div>
-                        <br>
-
-
-
+                        <img style="height: 300px;" src='<?php echo "../images/eventos/$id/$img"; ?>' class="card-img-top">
 
                     <?php } ?>
 
@@ -177,7 +170,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             </div>
                             <div class="col-12" >
 
-                                <label for="total">  Escolha quantas vagas  </label>
+                                <label for="total">  Quantidade Pessoas </label>
                                 <select class="form-select" name="total" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
 
                                     <?php
@@ -369,35 +362,6 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                         $('.star-ratings').width(star_rating_width);
 
                         });
-
-
-
-
-  $(document).ready(function(){
-    $('.carousel').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      arrows: true,
-      prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-      nextArrow: '<button type="button" class="slick-next">Next</button>',
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
-  });
 
 
 </script>
