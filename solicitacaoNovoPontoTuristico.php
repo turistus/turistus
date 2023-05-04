@@ -114,11 +114,11 @@ include_once 'connection.php';
                 <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10" style="padding: 10px; max-width: 700px;">
                         <label> Descrição </label>
 
-                        <textarea class="form-control" rows="3" cols="15" name="descricao" id="descricao" placeholder=" Descreva toda a história do ponto turistico." value="<?php
+                        <textarea class="form-control" rows="3" cols="15" name="descricao" id="descricao"  value="<?php
                         if (isset($data['descricao'])) {
                             echo $data['descricao'];
                         }
-                        ?>" required> </textarea>
+                        ?>" required> Descreva toda a história do ponto turistico. </textarea>
 
                 </div>
                 <br>
