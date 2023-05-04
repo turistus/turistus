@@ -185,8 +185,9 @@ include_once 'connection.php';
                 </div>
 <br>
                         <div class="row">
+                        <label> Local Possui </label>
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; ">
-                    <label> Contém </label>
+
                         <div class="col-auto my-1">
 
                             <div class="custom-control custom-checkbox mr-sm-2">
@@ -259,7 +260,7 @@ include_once 'connection.php';
                         </div><!-- FIM da ROW dos Check BOX-->
                 <hr>
                 <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px;">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px; display: none;">
                         <label>Foto Ponto Turistico</label>
                         <i class="fa-regular fa-images"></i>
                         <input type="file" name="attachment" id="attachment" onchange="previewImagem()" required><br><br>
