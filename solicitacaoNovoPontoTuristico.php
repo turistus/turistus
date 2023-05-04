@@ -99,7 +99,7 @@ include_once 'connection.php';
                         ?>" autofocus required>
                 </div>
 
-                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10" style="padding: 10px; max-width: 700px;">
+                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10" style="padding: 10px; max-width: 500px;">
                         <label> Descrição </label>
 
                         <textarea class="form-control" rows="3" cols="15" name="descricao" id="descricao"  value="<?php
