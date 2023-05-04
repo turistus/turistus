@@ -99,6 +99,6 @@ if(isset($_SESSION['msg'])){
 }
 
 unset($dados_CadEvento);
-header("Location: ../guias/painelGuia.php");
+//header("Location: ../guias/painelGuia.php");
 
 ?>
