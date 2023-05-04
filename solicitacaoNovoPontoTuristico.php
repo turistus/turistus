@@ -38,7 +38,8 @@ include_once 'connection.php';
 <main class="content" style="font-family: 'Acme'; font-size: 20px;">
     <div class="shadow-lg p-3 mb-5 ml-3 mr-3 bg-white rounded" style="border: solid 1px black;">
         <!-- PRIMEIRA LINHA -->
-        <div class="row" >
+
+
 
                         <h2 style="background: url(../images/bussola.jpg); padding:15px; ">Novo ponto turistico</h2>
                         <?php
@@ -101,7 +102,8 @@ include_once 'connection.php';
                         ?>
             <!-- SEGUNDA (ROW) LINHA -->
             <div class="row" style=" padding: 10px; margin: 20px;">
-                <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10" style="padding: 10px;">
+            <!--         XS <576px SM > 576  MD > 768  LG > 992  XL > 1200-->
+                <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10" style="padding: 10px;">
                     <form name="add_msg" action="" method="POST" enctype="multipart/form-data">
                         <label> Nome </label>
                         <input type="text" name="name" id="name" placeholder=" Nome turistico " value="<?php
@@ -123,7 +125,7 @@ include_once 'connection.php';
                 </div>
                 <br>
 
-                <div class="col-8 col-sm-3 col-md-3 col-lg-6 col-xl-4 " style="padding: 10px; ">
+                <div class=" col-sm-3 col-md-3 col-lg-6 col-xl-4 " style="padding: 10px; ">
 
                     <label class="uf"> Estado UF </label>
                                 <select name="uf" class="custom-select d-block w-100 uf" id="uf" required>
@@ -302,7 +304,7 @@ include_once 'connection.php';
                     </script>
 
             </div><!-- Fim da DIV Row 2 -->
-        </div><!-- Fim da ROW principal -->
+
     </div><!-- Fim da Shadown-->
 </main>
 
