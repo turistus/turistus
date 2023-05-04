@@ -41,6 +41,7 @@ include_once 'connection.php';
         <div class="row" >
 
                         <h2 style="background: url(../images/bussola.jpg); padding:15px; ">Novo ponto turistico</h2>
+        </div>
                         <?php
                         $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
                             try {
@@ -84,6 +85,7 @@ include_once 'connection.php';
                                     echo "Erro: Mensagem de contato não enviada com sucesso !<br>" . $e;
                                 }
                         ?>
+
             <!-- SEGUNDA (ROW) LINHA -->
             <div class="row" style=" padding: 10px; margin: 20px;">
             <!--         XS <576px SM > 576  MD > 768  LG > 992  XL > 1200-->
@@ -288,7 +290,6 @@ include_once 'connection.php';
                     </script>
 
             </div><!-- Fim da DIV Row 2 -->
-        </div><!-- Fim da ROW principal -->
     </div><!-- Fim da Shadown-->
 </main>
 
