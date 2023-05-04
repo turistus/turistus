@@ -78,7 +78,6 @@ include_once 'connection.php';
                                         $file = $attachment['name'];
                                         move_uploaded_file($attachment['tmp_name'], $directory . $file);
                                     }
-                                    //echo "Mensagem de foto enviada com sucesso!<br>";
                                 echo "Solicitação Enviada !";
                           }
                          } catch (Exception $e) {
@@ -88,6 +87,7 @@ include_once 'connection.php';
 
             <!-- SEGUNDA (ROW) LINHA -->
             <div class="row" style=" padding: 10px; margin: 20px;">
+
             <!--         XS <576px SM > 576  MD > 768  LG > 992  XL > 1200-->
                 <div class="col-8 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px;">
                     <form name="add_msg" action="" method="POST" enctype="multipart/form-data">
@@ -261,7 +261,7 @@ include_once 'connection.php';
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px;">
                         <label>Foto Ponto Turistico</label>
                         <i class="fa-regular fa-images"></i>
-                        <input type="file" name="attachment" id="attachment" onchange="previewImagem()" required><br><br>
+                        <input type="file" name="attachment" id="attachment" placeholder="teste" onchange="previewImagem()" required><br><br>
 
              			<input type="submit" value="Enviar" name="SendAddMsg" >
                 </div>
