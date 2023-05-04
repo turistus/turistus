@@ -208,7 +208,7 @@ include_once 'connection.php';
                         </div>
 
                 </div>
-
+                <br>
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; ">
 
                         <div class="col-auto my-1">
