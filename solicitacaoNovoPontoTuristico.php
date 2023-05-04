@@ -109,7 +109,7 @@ include_once 'connection.php';
                 </div>
                 <br>
 
-                <div class=" col-12 col-sm-3 col-md-3 col-lg-6 col-xl-4 " style="padding: 10px; ">
+                <div class=" col-2 col-sm-2 col-md-3 col-lg-6 col-xl-4 " style="padding: 10px; ">
 
                     <label class="uf"> Estado UF </label>
                                 <select name="uf" class="custom-select d-block  uf" id="uf" required>
