@@ -1,12 +1,16 @@
+<?php
+//session_start();
+define('ACCESS', true);
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
   <title>Turismo - Curso Online</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
   <!-- Font Awesome icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 
@@ -61,22 +65,6 @@
 
     .bg-light {
       background-color: #f8f9fa !important;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #003366;
-      color: #fff;
-      padding: 60px 0;
-    }
-
-    footer a {
-      color: #fff;
-    }
-
-    footer a:hover {
-      color: #ccc;
-      text-decoration: none;
     }
 
     .social-icons i {
