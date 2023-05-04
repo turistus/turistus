@@ -260,10 +260,10 @@ include_once 'connection.php';
                         </div><!-- FIM da ROW dos Check BOX-->
                 <hr>
                 <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px; display: none;">
-                        <label>Foto Ponto Turistico</label>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px; ">
+                        <label for="attachment" class="btn">Foto Ponto Turistico</label>
                         <i class="fa-regular fa-images"></i>
-                        <input type="file" name="attachment" id="attachment" onchange="previewImagem()" required><br><br>
+                        <input type="file" name="attachment" id="attachment" onchange="previewImagem()" style="display: none;" required><br><br>
 
              			<input type="submit" value="Enviar" name="SendAddMsg" >
                 </div>
