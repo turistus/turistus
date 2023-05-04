@@ -77,6 +77,8 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
                                 } else {
                                         $_SESSION['msg'] = "<p style='color: #f00;'> Erro: Evento não criado com sucesso!</p>";
                                 }
+                        }else{
+                                echo "NAO ENVIOU IMAGEM PRO SERVIDOR";
                         }
 
                 }
