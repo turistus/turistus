@@ -38,23 +38,16 @@ include_once 'connection.php';
 <main class="content" style="font-family: 'Acme'; font-size: 20px;">
     <div class="shadow-lg p-3 mb-5 ml-3 mr-3 bg-white rounded" style="border: solid 1px black;">
         <!-- PRIMEIRA LINHA -->
-
-
+        <div class="row" >
 
                         <h2 style="background: url(../images/bussola.jpg); padding:15px; ">Novo ponto turistico</h2>
                         <?php
                         $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-
-                            //painel onde os ADM insere um ponto turistico
                             try {
-
                 		        if (!empty($data['SendAddMsg'])) {
                 		            $attachment = $_FILES['attachment'];
-                		            //var_dump($data);
-                		            //var_dump($attachment);
                 		            $query_msg = "INSERT INTO pontosturisticos (name, descricao, price, image, created, idGuia, cidade, uf, autor, cpf, nascimentoAut, lanchonete, camping, hotelaria, sanitarios, risco, acessib, liberado) VALUES (:name, :descricao, 13, :image, NOW(), 1, :cidade, :uf, :autor, :cpf, :nascimentoAut, :lanchonete, :camping, :hotelaria, :sanitarios, :risco, :acessib, 0)";
                 		            $add_msg = $conn->prepare($query_msg);
-
                 		            $add_msg->bindParam(':name', $data['name'], PDO::PARAM_STR);
                 		            $add_msg->bindParam(':descricao', $data['descricao'], PDO::PARAM_STR);
                 		            $add_msg->bindParam(':image', $attachment['name'], PDO::PARAM_STR);
@@ -69,16 +62,9 @@ include_once 'connection.php';
                                     $add_msg->bindParam(':sanitarios', $data['sanitarios']);
                                     $add_msg->bindParam(':risco', $data['risco']);
                                     $add_msg->bindParam(':acessib', $data['acessib']);
-
-
-
-
                 		            $add_msg->execute();
-
                 		            unset($data);
-
                                     if ((isset($attachment['name'])) AND (!empty($attachment['name']))) {
-                                        ///Recuperar último ID inserido no banco de dados
                                         $last_id = $conn->lastInsertId();
 
                                         //Diretório onde o arquivo será salvo
@@ -97,15 +83,13 @@ include_once 'connection.php';
                          } catch (Exception $e) {
                                     echo "Erro: Mensagem de contato não enviada com sucesso !<br>" . $e;
                                 }
-                        //}
-                //aqui e onde vai SALVAR no BANCOOOOOOO  ATE AQUII
                         ?>
             <!-- SEGUNDA (ROW) LINHA -->
             <div class="row" style=" padding: 10px; margin: 20px;">
             <!--         XS <576px SM > 576  MD > 768  LG > 992  XL > 1200-->
-                <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10" style="padding: 10px;">
+                <div class="col-8 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px;">
                     <form name="add_msg" action="" method="POST" enctype="multipart/form-data">
-                        <label> Nome </label>
+                        <label> Titulo </label>
                         <input type="text" name="name" id="name" placeholder=" Nome turistico " value="<?php
                         if (isset($data['name'])) {
                             echo $data['name'];
@@ -125,10 +109,10 @@ include_once 'connection.php';
                 </div>
                 <br>
 
-                <div class=" col-sm-3 col-md-3 col-lg-6 col-xl-4 " style="padding: 10px; ">
+                <div class=" col-12 col-sm-3 col-md-3 col-lg-6 col-xl-4 " style="padding: 10px; ">
 
                     <label class="uf"> Estado UF </label>
-                                <select name="uf" class="custom-select d-block w-100 uf" id="uf" required>
+                                <select name="uf" class="custom-select d-block  uf" id="uf" required>
                                     <option value="">Selecione</option>
                                     <option value="AC">AC</option>
                                     <option value="AL">AL</option>
@@ -304,7 +288,7 @@ include_once 'connection.php';
                     </script>
 
             </div><!-- Fim da DIV Row 2 -->
-
+        </div><!-- Fim da ROW principal -->
     </div><!-- Fim da Shadown-->
 </main>
 
