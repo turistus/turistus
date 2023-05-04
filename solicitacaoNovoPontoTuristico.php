@@ -87,10 +87,10 @@ include_once 'connection.php';
 
             <!-- SEGUNDA (ROW) LINHA -->
             <div class="row" style=" padding: 10px; margin: 20px;">
-
+            <form name="add_msg" action="" method="POST" enctype="multipart/form-data">
             <!--         XS <576px SM > 576  MD > 768  LG > 992  XL > 1200-->
                 <div class="col-8 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px;">
-                    <form name="add_msg" action="" method="POST" enctype="multipart/form-data">
+
                         <label> Titulo </label>
                         <input type="text" name="name" id="name" placeholder=" Nome turistico " value="<?php
                         if (isset($data['name'])) {
