@@ -97,7 +97,7 @@ define('ACCESS', true);
 <section class="bg-light py-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <h2>Descubra serviços turísticos e atividades com nossa plataforma</h2>
         <p>Está planejando uma viagem? Nós podemos ajudá-lo a encontrar os melhores lugares para visitar em cada destino, desde os pontos turísticos mais populares até os tesouros escondidos.</p>
         <p>Além disso, se você é proprietário de um negócio turístico, pode usar nossa plataforma para divulgar seus serviços e atividades e alcançar um público mais amplo.</p>
