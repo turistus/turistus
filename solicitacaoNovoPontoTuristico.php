@@ -184,80 +184,82 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 <br>
-                        <div class="row">
-                        <label> <p>Local Possui</p> </label>
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; ">
+                    <div class="row">
+                        <div class="col-8 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px; ">
+                            <label> <p>Local Possui</p> </label>
+                         </div>
+                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; ">
 
-                        <div class="col-auto my-1">
+                                <div class="col-auto my-1">
 
-                            <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete" value="1">
-                                <label class="custom-control-label" for="lanchonete"> Praça de Alimentação <i class='fa-solid fa-burger'></i></label>
-                            </div>
+                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                        <input type="checkbox" class="custom-control-input" id="lanchonete" name="lanchonete" value="1">
+                                        <label class="custom-control-label" for="lanchonete"> Praça de Alimentação <i class='fa-solid fa-burger'></i></label>
+                                    </div>
+                                </div>
+
+                        </div>
+                        <br>
+                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; ">
+
+                                <div class="col-auto my-1">
+
+                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                        <input type="checkbox" class="custom-control-input" id="camping" name="camping" value="1">
+                                        <label class="custom-control-label" for="camping"> Camping <i class='fa-solid fa-campground'></i></label>
+                                    </div>
+                                </div>
+
                         </div>
 
-                </div>
-                <br>
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; ">
+                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
 
-                        <div class="col-auto my-1">
+                                <div class="col-auto my-1">
 
-                            <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="camping" name="camping" value="1">
-                                <label class="custom-control-label" for="camping"> Camping <i class='fa-solid fa-campground'></i></label>
-                            </div>
+                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                        <input type="checkbox" class="custom-control-input" id="hotelaria" name="hotelaria" value="1">
+                                        <label class="custom-control-label" for="hotelaria"> Hospedagens <i class='fa-solid fa-hotel'></i></label>
+                                    </div>
+                                </div>
+
                         </div>
 
-                </div>
+                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
 
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                                <div class="col-auto my-1">
 
-                        <div class="col-auto my-1">
+                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                        <input type="checkbox" class="custom-control-input" id="sanitarios" name="sanitarios" value="1">
+                                        <label class="custom-control-label" for="sanitarios"> Sanitários <i class='fa-solid fa-toilet-paper'></i></label>
+                                    </div>
+                                </div>
 
-                            <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="hotelaria" name="hotelaria" value="1">
-                                <label class="custom-control-label" for="hotelaria"> Hospedagens <i class='fa-solid fa-hotel'></i></label>
-                            </div>
                         </div>
 
-                </div>
+                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
 
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                                <div class="col-auto my-1">
 
-                        <div class="col-auto my-1">
+                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                        <input type="checkbox" class="custom-control-input" id="risco" name="risco" value="1">
+                                        <label class="custom-control-label" for="risco"> Perigo <i class='fa-solid fa-triangle-exclamation'></i></label>
+                                    </div>
+                                </div>
 
-                            <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="sanitarios" name="sanitarios" value="1">
-                                <label class="custom-control-label" for="sanitarios"> Sanitários <i class='fa-solid fa-toilet-paper'></i></label>
-                            </div>
                         </div>
 
-                </div>
+                        <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
 
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                                <div class="col-auto my-1">
 
-                        <div class="col-auto my-1">
+                                    <div class="custom-control custom-checkbox mr-sm-2">
+                                        <input type="checkbox" class="custom-control-input" id="acessib" name="acessib" value="1">
+                                        <label class="custom-control-label" for="acessib"> Acessibilidade <i class='fas fa-wheelchair'></i></label>
+                                    </div>
+                                </div>
 
-                            <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="risco" name="risco" value="1">
-                                <label class="custom-control-label" for="risco"> Perigo <i class='fa-solid fa-triangle-exclamation'></i></label>
-                            </div>
                         </div>
-
-                </div>
-
-                <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
-
-                        <div class="col-auto my-1">
-
-                            <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="acessib" name="acessib" value="1">
-                                <label class="custom-control-label" for="acessib"> Acessibilidade <i class='fas fa-wheelchair'></i></label>
-                            </div>
-                        </div>
-
-                </div>
-                        </div><!-- FIM da ROW dos Check BOX-->
+                    </div><!-- FIM da ROW dos Check BOX-->
                 <hr>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px; ">
                         <label for="attachment" class="btn">Foto Ponto Turistico</label>
