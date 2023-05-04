@@ -258,7 +258,7 @@ include_once 'connection.php';
                 </div>
                         </div><!-- FIM da ROW dos Check BOX-->
                 <hr>
-                <div class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px;">
+                <div class="col-6 col-sm-6 col-md-12 col-lg-12 col-xl-12" style="padding: 10px;">
                         <label>Foto Ponto Turistico</label>
                         <i class="fa-regular fa-images"></i>
                         <input type="file" name="attachment" id="attachment" placeholder="teste" onchange="previewImagem()" required><br><br>
