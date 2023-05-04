@@ -112,7 +112,7 @@ define('ACCESS', true);
 <section class="bg-light py-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12">
         <h2>Para turistas: dicas para uma boa viagem</h2>
         <p>Aqui vão algumas dicas importantes para ter uma viagem mais tranquila e aproveitar ao máximo sua experiência:</p>
         <ul>
@@ -125,7 +125,7 @@ define('ACCESS', true);
           <li>Experimente a culinária local e interaja com os habitantes da região, para vivenciar a cultura de forma mais autêntica.</li>
         </ul>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-12">
         <h2>Para profissionais: dicas para oferecer uma boa experiência aos turistas</h2>
         <p>Se você trabalha com turismo, seja como guia, agente de viagens ou empreendedor, aqui estão algumas dicas para proporcionar uma experiência inesquecível aos seus clientes:</p>
         <ul>
