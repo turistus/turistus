@@ -196,7 +196,7 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 <br>
-                        <div class="row">
+                        <div class="row-12">
                 <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px; ">
                     <label> Contém </label>
                         <div class="col-auto my-1">
