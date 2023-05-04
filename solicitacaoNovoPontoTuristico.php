@@ -111,7 +111,7 @@ include_once 'connection.php';
                 </div>
                 <br>
 
-                <div class=" col-3 col-sm-2 col-md-3 col-lg-6 col-xl-4 " style="padding: 10px; ">
+                <div class=" col-3 col-sm-4 col-md-3 col-lg-6 col-xl-4 " style="padding: 10px; ">
 
                     <label class="uf"> Estado UF </label>
                                 <select name="uf" class="custom-select d-block  uf" id="uf" required>
@@ -147,7 +147,7 @@ include_once 'connection.php';
                 </div>
 
 
-                <div class="col-8 col-sm-6 col-md-6 col-lg-6 col-xl-8 " style="padding: 10px;">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-8 " style="padding: 10px;">
                         <label > Cidade </label><br>
                         <input type="text" name="cidade" id="cidade" placeholder=" Nome do municipio"  value="<?php
                         if (isset($data['cidade'])) {
