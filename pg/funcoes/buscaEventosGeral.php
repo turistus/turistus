@@ -99,7 +99,7 @@
                       </div>
 
 
-                    <h5 class="card-title">R$ <?php echo number_format($menorVal, 2, ",", ".") ?></h5>
+                    <h5 class="card-title">R$ <?php echo number_format($menorVal[0], 2, ",", ".") ?></h5>
                       <a href="view-evento.php?id=<?php echo $idE; ?>" class="btn btn-primary">Detalhes</a>
 
                   </div>

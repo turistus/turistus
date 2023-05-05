@@ -97,7 +97,7 @@ include_once '../connection.php';
                                             <input class="form-control" type="text" name="encontro" id="encontro"
                                             value="<?php if(isset($dados_evento['encontro']))
                                             { echo $dados_evento['encontro'];}elseif(isset($row_evento['encontro']))
-                                            { echo $row_evento['encontro']; }?>"required> <br>
+                                            { echo $row_evento['encontro']; }?>" placeholder="Rua.." required> <br>
                         </div>
 
                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
@@ -154,6 +154,7 @@ include_once '../connection.php';
                                                         <option value="18">18 Pessoas</option>
                                                         <option value="19">19 Pessoas</option>
                                                         <option value="20">20 Pessoas</option>
+                                                        <option value="20">Livre</option>
                                     </select>
                                         <label style="margin-left: 10px;"> Total R$ </label>
                                         <input class="form-control col-3" type="text"  name="total[]" id="total" value="" required>
