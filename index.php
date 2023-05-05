@@ -329,7 +329,7 @@ ob_start();
   ?>
 
 <script>
-  const texto = "Descubra os melhores destinos, hotéis e atividades para tornar suas viagens inesquecíveis. Grupo organizado em desenvolvimento cultural e urbano, trazendo visibilidade ao turismo regional.";
+  const texto = "Serviços turisticos e atividades disponiveis em todo BRASIL. Encontre ou divulgue os melhores lugares para turistar.";
 
   let i = 0;
   setInterval(() => {
