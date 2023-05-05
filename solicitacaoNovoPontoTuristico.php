@@ -185,7 +185,7 @@ include_once 'connection.php';
                 </div>
 <br>
                         <div class="col-8 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px; ">
-                            <label> Local Possui </label>
+                            <label> Local possui </label>
                         </div>
                     <div class="row">
 

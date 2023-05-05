@@ -106,16 +106,12 @@ echo $nome;
 
 
                 <div class="col-md-6">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-mb-12">
+
 
                         <label >Ponto Turistico</label>
                             <select name="idPt"><!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
                                 <option>Selecioneee</option>
-
-
-
                                         <?php
-
                                             $result = $conn->prepare("SELECT * FROM pontosturisticos ORDER BY name ASC;");
                                             $result->execute();
                                             $res = $result->fetchAll(PDO::FETCH_ASSOC);
