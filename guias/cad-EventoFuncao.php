@@ -119,10 +119,10 @@ include_once '../connection.php';
                         </div>
 
 
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px;">
-                        <label>Fotos do evento</label>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px; ">
+                        <label for="foto">Fotos do evento</label>
                         <i class="fa-regular fa-images"></i>
-                        <input type="file" name="foto[]" id="foto" multiple="multiple" onchange="previewImagem()" required><br><br>
+                        <input type="file" name="foto[]" id="foto" multiple="multiple" onchange="previewImagem()" style="display: none;" required><br><br>
 
                     </div>
 
@@ -132,7 +132,7 @@ include_once '../connection.php';
                                 <div class="form-group form-inline" id="bloco" style="border: 1px solid green; padding:15px;">
                                     <label>  N° Vagas  </label>
                                         <!-- select AQUI   -->
-                                    <select id="vagas" name="vagas[]" class="custom-select col-3" required>
+                                    <select id="vagas" name="vagas[]" class="custom-select " required style="min-width: 300px;">
                                                         <option value="">Selecione</option>
                                                         <option value="01">01 Pessoa</option>
                                                         <option value="02">02 Pessoas</option>
@@ -154,10 +154,9 @@ include_once '../connection.php';
                                                         <option value="18">18 Pessoas</option>
                                                         <option value="19">19 Pessoas</option>
                                                         <option value="20">20 Pessoas</option>
-                                                        <option value="20">Livre</option>
                                     </select>
                                         <label style="margin-left: 10px;"> Total R$ </label>
-                                        <input class="form-control col-3" type="text"  name="total[]" id="total" value="" required>
+                                        <input class="form-control col-3" type="text"  name="total[]" id="total" value="" required style="min-width: 300px;">
                                         <button style="margin-left: 10px;" type="button" onclick="adicionarCampo()"> + </button>
                                 </div>
                             </div>
