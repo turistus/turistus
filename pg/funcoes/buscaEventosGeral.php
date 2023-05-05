@@ -50,7 +50,7 @@
           $query_products = "SELECT *,
         eventos.id AS idE,
         eventos.nome AS nome,
-        eventos.valor AS valor,
+
         eventos.idGuia AS idGuia,
         eventos.idPt,
         eventos.pontos,
@@ -70,8 +70,9 @@
 
         FROM eventos
         INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
+        INNER JOIN foto_Eventos AS ft ON ft.idEv = eventos.id
         INNER JOIN valores AS val ON val.idEvento = eventos.id GROUP BY val.idEvento
-        INNER JOIN foto_Eventos AS ft ON ft.idEv = eventos.id ";
+        ";
 
         //WHERE eventos.pontos != 0
 
