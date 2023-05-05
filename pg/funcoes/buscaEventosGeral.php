@@ -55,7 +55,7 @@
         eventos.idPt,
         eventos.pontos
 
-        datah,
+        dataUp,
 
         pontosturisticos.id,
         pontosturisticos.image AS img
