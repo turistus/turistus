@@ -66,7 +66,7 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
 
                         // Acessa o IF quando realizar o upload corretamente AQQUQUIII QE TEM O B.O SE ELE NAO MOVER PARA A PASTA COMO FAZ O INSERT.
 
-                        if(move_uploaded_file($_FILES['foto']['tmp_name'][$cont], $diretorio.$_FILES['foto']['name'])){
+                        if(move_uploaded_file($_FILES['foto']['tmp_name'][$cont], $diretorio.$_FILES['foto'])){
                         $query_imagem = "INSERT INTO foto_Eventos (foto, idEv) VALUES (:foto, :idEv )";
                         $cad_imagem = $conn->prepare($query_imagem);
                         $cad_imagem->bindParam(':foto', $nome_arquivo);
