@@ -76,7 +76,7 @@
 
 
         $sqlValorEvento = " SELECT idEvento, Min(total) AS menorVal WHERE idEvento = $id ";
-        $retornoSQLVALOR = $conn->prepare($query_products);
+        $retornoSQLVALOR = $conn->prepare($sqlValorEvento);
         $retornoSQLVALOR->execute();
 
         ?>
