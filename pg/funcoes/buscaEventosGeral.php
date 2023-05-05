@@ -63,9 +63,11 @@
         val.idEvento,
         val.total
 
+
+
         FROM eventos
         INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
-        INNER JOIN valores AS val ON val.idEvento = eventos.id";
+        INNER JOIN valores AS val ON val.idEvento = eventos.id GROUP BY val.idEvento";
 
         //WHERE eventos.pontos != 0
 
@@ -104,7 +106,7 @@
                       </div>
 
 
-                    <h5 class="card-title">R$ <?php echo number_format($menorVal, 2, ",", ".") ?></h5>
+                    <h5 class="card-title">R$ <?php echo number_format($total, 2, ",", ".") ?></h5>
                       <a href="view-evento.php?id=<?php echo $idE; ?>" class="btn btn-primary">Detalhes</a>
 
                   </div>
