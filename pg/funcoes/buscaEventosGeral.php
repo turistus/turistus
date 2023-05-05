@@ -53,21 +53,25 @@
         eventos.valor AS valor,
         eventos.idGuia AS idGuia,
         eventos.idPt,
-        eventos.pontos
+        eventos.pontos,
 
         dataUp,
 
         pontosturisticos.id,
-        pontosturisticos.image AS img,
 
         val.idEvento,
-        val.total
+        val.total,
+
+        ft.id AS idFoto,
+        ft.foto AS img,
+        ft.idEv
 
 
 
         FROM eventos
         INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
-        INNER JOIN valores AS val ON val.idEvento = eventos.id GROUP BY val.idEvento";
+        INNER JOIN valores AS val ON val.idEvento = eventos.id GROUP BY val.idEvento
+        INNER JOIN foto_Eventos AS ft ON ft.idE = eventos.id GROUP BY ft.idEvento";
 
         //WHERE eventos.pontos != 0
 
