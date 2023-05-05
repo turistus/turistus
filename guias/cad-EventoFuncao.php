@@ -172,7 +172,7 @@ include_once '../connection.php';
                                 <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 ">
 
                                     <h5 >Ponto Turistico</h5>
-                                        <select class="form-select" name="idPt" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
+                                        <select class="form-select" name="idPt" style="border: 1px solid blue; border-radius: 10; width: 150px;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
                                             <option>Selecione</option>
 
                                                     <?php
