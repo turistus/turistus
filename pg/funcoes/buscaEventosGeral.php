@@ -71,7 +71,7 @@
         FROM eventos
         INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
         INNER JOIN valores AS val ON val.idEvento = eventos.id GROUP BY val.idEvento
-        INNER JOIN foto_Eventos AS ft ON ft.idEv = eventos.id GROUP BY ft.idEvento";
+        INNER JOIN foto_Eventos AS ft ON ft.idEv = eventos.id GROUP BY ft.idEv";
 
         //WHERE eventos.pontos != 0
 
