@@ -132,7 +132,7 @@ include_once '../connection.php';
                                 <div class="form-group form-inline" id="bloco" style="border: 1px solid green; padding:15px;">
                                     <label>  N° Vagas  </label>
                                         <!-- select AQUI   -->
-                                    <select id="vagas" name="vagas[]" class="custom-select col-6" required >
+                                    <select id="vagas" name="vagas[]" class="custom-select col-12" required >
                                                         <option value="">Selecione</option>
                                                         <option value="01">01 Pessoa</option>
                                                         <option value="02">02 Pessoas</option>
@@ -156,7 +156,7 @@ include_once '../connection.php';
                                                         <option value="20">20 Pessoas</option>
                                     </select>
                                         <label style="margin-left: 10px;"> Total R$ </label>
-                                        <input class="form-control col-6" type="text"  name="total[]" id="total" value="" required >
+                                        <input class="form-control col-12" type="text"  name="total[]" id="total" value="" required >
                                         <button style="margin-left: 10px;" type="button" onclick="adicionarCampo()"> + </button>
                                 </div>
                             </div>
