@@ -62,10 +62,9 @@
         datah,
 
         pontosturisticos.id,
-        pontosturisticos.image AS img,
+        pontosturisticos.image AS img
 
-        val.idEvento,
-        (SELECT Min(val.total) WHERE val.idEvento = $id ) AS menorVal
+
 
         FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
         INNER JOIN valores AS val ON val.idEvento=eventos.id ";
@@ -74,6 +73,11 @@
         $result_products = $conn->prepare($query_products);
         $result_products->execute();
         }
+
+
+        $sqlValorEvento = " SELECT idEvento, Min(total) AS menorVal WHERE idEvento = $id ";
+        $retornoSQLVALOR = $conn->prepare($query_products);
+        $retornoSQLVALOR->execute();
 
         ?>
 
