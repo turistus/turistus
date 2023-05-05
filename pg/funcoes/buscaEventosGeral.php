@@ -95,7 +95,7 @@
                     <div class="card-body" >
                       <h5 class="card-title " style="height: 40px;" ><?php echo $nome; ?></h5>
 
-                      <img style="height: 100px; width: 180px; " src= <?php echo "'../images/pontosturisticos/$id/$img";?>'><br>
+                      <img style="height: 100px; width: 180px; " src= <?php echo "'../images/eventos/$idE/$img";?>'><br>
                       <div class="col-12" >
                             <div class="star-ratings" style=" margin: auto; " >
                                 <div class="fill-ratings" style="width: <?php echo $pontos .'%'?>; ">
