@@ -63,8 +63,9 @@
         val.idEvento,
         val.total
 
-        FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
-        INNER JOIN valores AS val WHERE val.idEvento = idE";
+        FROM eventos
+        INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
+        INNER JOIN valores AS val ON val.idEvento = idE";
 
         //WHERE eventos.pontos != 0
 
