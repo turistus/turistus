@@ -19,10 +19,6 @@
   <div class="conteiner"  style="border-top: 4px solid green; margin: auto;">
     <div class="row">
       <div class="col-12" style="margin:AUTO; padding-top: 10px; padding-bottom: 10px;">
-
-
-
-
         <!-- Aqui Busca os eventos criado pelo Guia -->
         <?php
 
@@ -75,7 +71,7 @@
         }
 
 
-        $sqlValorEvento = " SELECT idEvento, Min(total) AS menorVal WHERE idEvento = $id ";
+        $sqlValorEvento = " SELECT idEvento, Min(total) AS menorVal WHERE idEvento = $idE ";
         $retornoSQLVALOR = $conn->prepare($sqlValorEvento);
         $retornoSQLVALOR->execute();
 
