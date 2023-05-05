@@ -65,7 +65,7 @@
         pontosturisticos.image AS img,
 
         val.idEvento,
-        ( MIN(val.total) WHERE val.idEvento = eventos.id limit 1 ) AS menorVal
+        MIN(val.total) AS menorVal
 
         FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
         INNER JOIN valores AS val ON val.idEvento=eventos.id
