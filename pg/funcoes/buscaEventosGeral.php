@@ -64,8 +64,7 @@
         pontosturisticos.id,
         pontosturisticos.image AS img,
         val.idEvento,
-        val.total
-
+        (val.total < val.total) AS menorVal
         FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
         INNER JOIN valores AS val ON val.idEvento=eventos.id
         ORDER BY pontosturisticos.name ASC";

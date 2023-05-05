@@ -57,24 +57,10 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
 
 <div class="row">
-<!--            só espaço mesmo   PRECISO manter uma SESSAO aberta com email e senha ou oque eu precisar para liberar as outras coisas como pontos pagos
 
-            PRECISA SER ATUALIZADO AUTOMATICAMENTE QUANDO TURISTA ESTIVER FEITO O
-            PAGAMENTO, O STATUS DO PEDIDO VAI ESTAR ID 5 entao pode aparecer no
-
-            PAINEL DE AGENDAMENTO DO USUARIO TURISTA
-
-
-            // a Mesma coisa se repete para a AGENDA de TURISTA
-//por DATA
-// para quando houver INSERT da tabela payments_picpays O STATUS DO PEDIDO VAI ESTAR ID 5
-// deve se ser pesquisado a ultima transação  e descobrir de que GUIA é
-// e a data para mostrar no PAINEL DO TURISTA pela tabela AGENDATuristaGuia
--->
 </div>
 
 <div class="content ">
-
 
 </div>
       <main class="content">
