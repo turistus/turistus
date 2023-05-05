@@ -62,8 +62,7 @@
 
 
 
-        FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
-        INNER JOIN valores AS val ON val.idEvento=eventos.id ";
+        FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt";
         //WHERE eventos.pontos != 0
 
         $result_products = $conn->prepare($query_products);
@@ -71,7 +70,7 @@
         }
 
 
-        $sqlValorEvento = " SELECT idEvento, Min(total) AS menorVal WHERE idEvento = $idE ";
+        $sqlValorEvento = " SELECT idEvento, Min(total) AS menorVal FROM valores WHERE idEvento = $idE ";
         $retornoSQLVALOR = $conn->prepare($sqlValorEvento);
         $retornoSQLVALOR->execute();
 
