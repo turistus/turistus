@@ -48,7 +48,7 @@ if($dados_CadEvento['Cadastrar'] === "Cadastrar"){
                                 }
                         }
 
-                $diretorio = "images/eventos/$eventoInserido/";
+                $diretorio = "../images/eventos/$eventoInserido/";
                 // Criar o diretório
                 mkdir($diretorio, 0755);
 
