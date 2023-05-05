@@ -329,7 +329,7 @@ ob_start();
   ?>
 
 <script>
-  const texto = "Serviços turisticos e atividades disponiveis em todo BRASIL. Encontre ou divulgue os melhores lugares para turistar.";
+  const texto = "Descubra a riqueza do Brasil com nossos serviços turísticos disponíveis em todo o país. Encontre ou divulgue os melhores lugares para turistar e mergulhe em aventuras inesquecíveis em cada destino que visitar.";
 
   let i = 0;
   setInterval(() => {

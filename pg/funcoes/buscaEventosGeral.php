@@ -58,16 +58,20 @@
         dataUp,
 
         pontosturisticos.id,
-        pontosturisticos.image AS img
+        pontosturisticos.image AS img,
 
+        val.idEvento,
+        val.total
 
+        FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
+        INNER JOIN valores AS val WHERE val.idEvento = idE";
 
-        FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt";
         //WHERE eventos.pontos != 0
 
         $result_products = $conn->prepare($query_products);
         $result_products->execute();
         }
+
 
 
 
@@ -99,7 +103,7 @@
                       </div>
 
 
-                    <h5 class="card-title">R$ <?php echo number_format($menorVal[0], 2, ",", ".") ?></h5>
+                    <h5 class="card-title">R$ <?php echo number_format($menorVal, 2, ",", ".") ?></h5>
                       <a href="view-evento.php?id=<?php echo $idE; ?>" class="btn btn-primary">Detalhes</a>
 
                   </div>
