@@ -11,6 +11,6 @@ $preparandoDelete = $conn->prepare($query_deletar_evento);
 $preparandoDelete->execute();
 
 echo "Deletado !";
-header("Location: ./painelGuia.php");
+header("Location: ../painelGuia.php");
 
 ?>
