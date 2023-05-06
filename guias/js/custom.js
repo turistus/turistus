@@ -33,7 +33,7 @@ function adicionarCampo(){
     '<div class="form-group form-inline" id="bloco' + controleCampo +'" style="border: 1px solid green; padding:15px;">'+
         '<br>'+
         '<label>  N° Vagas  </label> '+
-            '<select id="vagas" name="vagas[]" class="custom-select col-3 " required>'+
+            '<select id="vagas" name="vagas[]" class="custom-select col-12 " required>'+
                     '<option value="">Selecione</option>'+
                     '<option value="01">01 Pessoa</option>'+
                     '<option value="02">02 Pessoas</option>'+
