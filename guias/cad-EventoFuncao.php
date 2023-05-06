@@ -127,7 +127,7 @@ include_once '../connection.php';
                     </div>
 
 
-                        <div class="row col-12" >
+                        <div class="row " >
                             <div id="formulario" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" >
                                 <div class="form-group form-inline" id="bloco" style="border: 1px solid green; padding:15px;">
                                     <label>  N° Vagas  </label>

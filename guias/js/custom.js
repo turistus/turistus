@@ -57,7 +57,7 @@ function adicionarCampo(){
                     '<option value="20">20 Pessoas</option>'+
             '</select> ' +
     ' <label style="margin-left: 10px;"> Total R$ </label>'+
-        '<input class="form-control col-3" type="text"  name="total[]" id="total" value="" required> <button style="margin-left: 10px;" type="button" id="'+ controleCampo +'" onclick="removerCampo('+ controleCampo +')"> - </button><br>'+
+        '<input class="form-control col-12" type="text"  name="total[]" id="total" value="" required> <button style="margin-left: 10px;" type="button" id="'+ controleCampo +'" onclick="removerCampo('+ controleCampo +')"> - </button><br>'+
     '</div>');
 }
 
