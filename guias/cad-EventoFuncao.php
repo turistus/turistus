@@ -100,7 +100,9 @@ include_once '../connection.php';
                                             { echo $row_evento['encontro']; }?>" placeholder="Rua.." required> <br>
                         </div>
 
+
                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
+                        <label> Contempla </label>
                             <div class="col-auto my-1">
                                 <div class="custom-control custom-checkbox mr-sm-2">
                                     <input type="checkbox" class="custom-control-input" id="transporte" name="transporte" value="1">
