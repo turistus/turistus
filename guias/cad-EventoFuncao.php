@@ -186,7 +186,7 @@ include_once '../connection.php';
                                                     ?>
                                                         <option value="<?php echo $ln['id'];?>" name="idPt" id="idPt" >
                                                     <?php
-                                                        // echo $ln['id'].' - <br/>';
+
                                                         echo $ln['name'];
                                                     }
                                                     ?>
