@@ -51,8 +51,8 @@ $Uid = $_SESSION['user_id'];
                     <img style="height: 100px; width: 180px; " src= <?php echo "'../images/pontosturisticos/$idPt/$img";?>'><br><br>
                     <h5 class="card-title"><?php echo $nome;  ?></h5>
                     <h5 class="card-title"><?php echo date('d/m/Y',  strtotime($dataUp)); ?></h5><br>
-                    <a href="../processaEditarEvento.php?id=<?php echo $id?>" id="editar" type="hidden" class="btn btn-primary" > Editar </a>
-                    <a href="../funcoes/delEvento.php?id=<?php echo $id?>" id="editar" type="hidden" class="btn btn-danger" > Excluir </a>
+                    <!-- <a href="../processaEditarEvento.php?id=//echo $id" id="editar" class="btn btn-primary" > Editar </a> -->
+                    <a href="./funcoes/delEvento.php?id=<?php echo $id?>" id="editar" type="hidden" class="btn btn-danger" > Excluir </a>
                 </div>
               </div>
             </div>
