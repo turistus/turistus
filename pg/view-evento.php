@@ -179,7 +179,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-12" >
 
                                 <label for="total">  Quantidade Pessoas </label>
-                                <form action="../pagamentoEventoForm.php?&nVgs=<?php echo $ln['vagas'];?>&total=<?php echo $ln['total'];?>" method="GET">
+                                <form action="../pagamentoEventoForm.php?&nVgs=<?php echo $ln['vagas'];?>&total=<?php echo $ln['total'];?>" method="POST">
                                     <select class="form-select" name="total" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
 
                                         <?php

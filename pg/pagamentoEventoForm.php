@@ -7,7 +7,8 @@ ob_start();
 $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 $emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
-$total = filter_input(INPUT_GET, "total", FILTER_SANITIZE_EMAIL);
+$total = $_POST['total'];
+$nVagas = $_POST['nVgs'];
 
 //echo $id ." ";
 //echo $idGuia;
@@ -216,7 +217,9 @@ include_once './configPicPay.php';
                 <div class="col-md-4">
                    <p> Valor Total</p>
                     <div class="mb-1 text-muted"> R$ <?php echo number_format($total, 2, ",", ".");?></div>
+                    <div class="mb-1 text-muted"> <?php echo $nVagas;?></div>
                     <div class="mb-1 text-muted"> <?php echo $nomeGuia;?></div>
+
 
                 </div>
             </div>
