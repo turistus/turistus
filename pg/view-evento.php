@@ -179,29 +179,29 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-12" >
 
                                 <label for="total">  Quantidade Pessoas </label>
-                                <form action="../pagamentoEventoForm.php?nVgs=<?php echo $ln['vagas'];?>&total=<?php echo $ln['total'];?>" method="GET">
-                                <select class="form-select" name="total" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
+                                <form action="../pagamentoEventoForm.php?&nVgs=<?php echo $ln['vagas'];?>&total=<?php echo $ln['total'];?>" method="GET">
+                                    <select class="form-select" name="total" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
 
-                                    <?php
-                                    $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY idVal";
-                                    $result = $conn->prepare($buscaValores);
-                                    $result->execute();
-                                    $res = $result->fetchAll(PDO::FETCH_ASSOC);
+                                        <?php
+                                        $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY idVal";
+                                        $result = $conn->prepare($buscaValores);
+                                        $result->execute();
+                                        $res = $result->fetchAll(PDO::FETCH_ASSOC);
 
-                                        foreach($res as $ln ){
+                                            foreach($res as $ln ){
 
-                                    ?>
+                                        ?>
 
-                                    <option value="<?php echo $ln['total'];?>" name="total" id="total" >
-                                    <?php echo $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
-                                    <!-- Check box do VALOR TOTAL SELECIONADO na Compra -->
+                                        <option value="<?php echo $ln['total'];?>" name="total" id="total" >
+                                        <?php echo $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
+                                        <!-- Check box do VALOR TOTAL SELECIONADO na Compra -->
 
-                                    <?php
-                                        }
+                                        <?php
+                                            }
 
-                                    ?>
-                                    </option>
-                                        </select>
+                                        ?>
+                                        </option>
+                                    </select>
 
                             </div>
 

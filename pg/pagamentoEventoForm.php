@@ -8,6 +8,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 $emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
 $total = filter_input(INPUT_GET, "total", FILTER_SANITIZE_EMAIL);
+
 //echo $id ." ";
 //echo $idGuia;
 
