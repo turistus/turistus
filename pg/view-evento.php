@@ -155,7 +155,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 <h5 style="margin-left: 15px;"> Classificação: </h5>
                             </div>
                             <div class="col-4 " >
-                                <div class="star-ratings" style="margin-left:22px;">
+                                <div class="star-ratings" style="margin-left:30px;">
                                     <div class="fill-ratings" style="width: <?php echo $pontos . '%'?>;">
                                         <span>★★★★★</span>
                                     </div>
