@@ -177,7 +177,7 @@ include_once '../connection.php';
 
                                                     <?php
 
-                                                        $result = $conn->prepare("SELECT *, pontosturisticos.id AS id, pontosturisticos.uf AS Estado FROM pontosturisticos ORDER BY id ASC;");
+                                                        $result = $conn->prepare("SELECT *, pontosturisticos.id AS id, pontosturisticos.uf AS Estado FROM pontosturisticos ORDER BY name DESC;");
                                                         $result->execute();
                                                         $res = $result->fetchAll(PDO::FETCH_ASSOC);
                                                     ?>
