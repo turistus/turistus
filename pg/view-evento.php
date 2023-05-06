@@ -179,6 +179,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-12" >
 
                                 <label for="total">  Quantidade Pessoas </label>
+                                <form action="../pagamentoEventoForm.php?nVgs=<?php echo $ln['vagas'];?>&total=<?php echo $ln['total'];?>" method="GET">
                                 <select class="form-select" name="total" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
 
                                     <?php
@@ -218,9 +219,10 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         <div class="col-4 mt-1" >
                                             <p>
-                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>&nVgs=<?php echo $ln['vagas'];?>&total=<?php echo $ln['total'];?>" class="btn btn-outline-success" >
+                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>" class="btn btn-outline-success" >
                                                 <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/> </a>
                                             </p>
+                                            </form>
 
                                         </div>
 
