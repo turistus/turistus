@@ -40,7 +40,7 @@ include_once './configPicPay.php';
 
                 val.id AS idVal,
                 val.total AS total,
-                val.nVagas AS nVagas
+                val.nVagas AS nVagas,
                 val.idEvento AS idEVENTOVALORES
                 FROM eventos
 
