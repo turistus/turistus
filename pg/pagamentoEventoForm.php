@@ -10,9 +10,10 @@ ob_start();
 $id = $_POST['id'];
 $idGuia = $_POST['idGuia'];
 $emailSA = $_POST['emailSA'];
+$idVal = $_POST['idVal'];
 
-$total = $_POST['total'];
-$nVagas = $_POST['nVgs'];
+//$total = $_POST['total'];
+//$nVagas = $_POST['nVgs'];
 
 //echo $id ." ";
 //echo $idGuia;
@@ -34,15 +35,22 @@ include_once './configPicPay.php';
 
                 eventos.id AS id,
                 eventos.nome AS nomeEvento,
-                eventos.valor AS custoEvento
+                eventos.valor AS custoEvento,
+                eventos.encontro AS encontro,
 
+                val.id AS idVal,
+                val.total AS total,
+                val.nVagas AS nVagas
+                val.idEvento AS
                 FROM eventos
 
                 INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
+                INNER JOIN valores AS val ON val.idVal=:idValores
                 WHERE eventos.id =:id LIMIT 1 ";
 
                 $result_products = $conn->prepare($query_products);
                 $result_products->bindParam(':id', $id, PDO::PARAM_INT);
+                $result_products->bindParam(':idValores', $idVal, PDO::PARAM_INT);
                 $result_products->execute();
                 if ($result_products->rowCount() == 0) {
                     header("Location: eventos.php");
@@ -73,7 +81,7 @@ include_once './configPicPay.php';
         $msg = "";
 
         // Acessar o IF quando o usuário clica no botão
-        if (isset($data['BotaoPagamento'])) {
+        if (isset($data['BtnPicPay'])) {
             //var_dump($data);
             $empty_input = false;
             $data = array_map('trim', $data);
@@ -114,6 +122,12 @@ include_once './configPicPay.php';
              // FIM DA INSERT EM PAYMENTS PICPAY
 
                 if ($add_pay_picpay->rowCount()) {
+
+
+
+
+
+
                     $last_insert_id = $conn->lastInsertId();
                     $phone_form = str_replace("(", " ", $data['phone']);
                     $phone_form = str_replace(")", " ", $phone_form);
@@ -217,6 +231,7 @@ include_once './configPicPay.php';
             <div class="row mb-5">
                 <div class="col-md-8">
                     <h3><?php echo $nomeEvento; ?></h3>
+                    <div class="mb-1 text-muted"> <?php echo "Ponto Encontro ". $encontro;?></div>
                 </div>
 
                 <div class="col-md-4">
