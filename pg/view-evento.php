@@ -216,7 +216,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         <div class="col-4 mt-1" >
                                             <p>
-                                            <form method="POST" action="pagamentoEventoForm.php">
+                                            <form method="POST" action="pagamentoEventoForm.php?idVal=<?php echo $ln['idVal'];?>">
 
 
 
@@ -225,7 +225,6 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                             <input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
                                             <input type="hidden" name="idGuia" id="idGuia" value="<?php echo $idGuia;?>" />
                                             <input type="hidden" name="email" id="email" value="<?php echo $emailSessaoAberta;?>" />
-                                            <option value="<?php echo $ln['idVal'];?>" name="idVal" id="idVal" >
                                             <input type="hidden" name="encontro" id="encontro" value="<?php echo $encontro;?>" />
 
                                             </form>
