@@ -4,16 +4,11 @@
 define('ACCESS', true);
 ob_start();
 //ID do EVENTOOO
-//$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-//$idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
-//$emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
-$id = $_POST['id'];
-$idGuia = $_POST['idGuia'];
-$emailSA = $_POST['email'];
+$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+$idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
+$emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
 $idVal = filter_input(INPUT_GET, "idVal", FILTER_SANITIZE_NUMBER_INT);
-
-//$total = $_POST['total'];
-//$nVagas = $_POST['nVgs'];
+echo $idVal;
 
 //echo $id ." ";
 //echo $idGuia;
@@ -32,25 +27,17 @@ include_once './configPicPay.php';
                 $query_products = "SELECT *,
                 svcs.id AS GuiaID,
                 svcs.nome AS nomeGuia,
-
                 eventos.id AS id,
                 eventos.nome AS nomeEvento,
-                eventos.valor AS custoEvento,
-                eventos.encontro AS encontro,
+                eventos.valor AS custoEvento
 
-                val.id AS idVal,
-                val.total AS total,
-                val.nVagas AS nVagas,
-                val.idEvento AS idEVENTOVALORES
                 FROM eventos
 
                 INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
-                INNER JOIN valores AS val ON val.idVal=:idValores
                 WHERE eventos.id =:id LIMIT 1 ";
 
                 $result_products = $conn->prepare($query_products);
                 $result_products->bindParam(':id', $id, PDO::PARAM_INT);
-                $result_products->bindParam(':idValores', $idVal, PDO::PARAM_INT);
                 $result_products->execute();
                 if ($result_products->rowCount() == 0) {
                     header("Location: eventos.php");
@@ -122,12 +109,6 @@ include_once './configPicPay.php';
              // FIM DA INSERT EM PAYMENTS PICPAY
 
                 if ($add_pay_picpay->rowCount()) {
-
-
-
-
-
-
                     $last_insert_id = $conn->lastInsertId();
                     $phone_form = str_replace("(", " ", $data['phone']);
                     $phone_form = str_replace(")", " ", $phone_form);
@@ -231,7 +212,6 @@ include_once './configPicPay.php';
             <div class="row mb-5">
                 <div class="col-md-8">
                     <h3><?php echo $nomeEvento; ?></h3>
-                    <div class="mb-1 text-muted"> <?php echo "Ponto Encontro ". $encontro;?></div>
                 </div>
 
                 <div class="col-md-4">

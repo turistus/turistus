@@ -216,18 +216,11 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         <div class="col-4 mt-1" >
                                             <p>
-                                            <form method="POST" action="pagamentoEventoForm.php?idVal=<?php echo $ln['idVal'];?>">
-
-
-
+                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>&idVal=<?php echo $ln['idVal'];?>" class="btn btn" >
                                                 <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/> </a>
                                             </p>
-                                            <input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
-                                            <input type="hidden" name="idGuia" id="idGuia" value="<?php echo $idGuia;?>" />
-                                            <input type="hidden" name="email" id="email" value="<?php echo $emailSessaoAberta;?>" />
-                                            <input type="hidden" name="encontro" id="encontro" value="<?php echo $encontro;?>" />
-
                                             </form>
+
                                         </div>
 
                                         <div class="col-8 mt-2"  >
