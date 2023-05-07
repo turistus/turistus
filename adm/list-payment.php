@@ -75,14 +75,18 @@ include_once '../adm/validate.php';
                     sta.color,
 
                     eventos.id AS idE,
-                    eventos.nome AS nomeE
+                    eventos.nome AS nomeE,
+
+                    valores.id AS idVal,
+                    valores.idEvento AS idEventoVal,
+                    valores.vagas,
+                    valores.total
 
                     FROM payments_picpays pay
-
+                    INNER JOIN turistas ON turistas.eturista = pay.email
                     INNER JOIN eventos ON eventos.idE = pay.product_id
-
+                    INNER JOIN valores ON valores.idVal = pay.valorId
                     INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
-                    WHERE turistas.eturista = pay.email
                     ORDER BY pay.id DESC ";
 
                 $result_payments = $conn->prepare($query_payments);
@@ -100,8 +104,8 @@ include_once '../adm/validate.php';
                         //EVENTOS
                         echo "<td>$nomeE</td>";
                         //VALORES
-                        //echo "<td>$vagas</td>";
-                        //echo "<td>". number_format($total, 2, ",", ".") ."</td>";
+                        echo "<td>$vagas</td>";
+                        echo "<td>". number_format($total, 2, ",", ".") ."</td>";
                         //EVENTO tem Guia
                         echo "<td>ID GUIA nome</td>";
                         //Payments Status
