@@ -13,7 +13,7 @@ include_once 'connection.php';
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="../images/icon/favicon.ico" >
+        <link rel="shortcut icon" type="imagex/png" href="../images/logooriginal.png">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
@@ -263,7 +263,7 @@ include_once 'connection.php';
                     </div><!-- FIM da ROW dos Check BOX-->
                 <hr>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px; ">
-                        <label for="attachment" class="btn">Foto Ponto Turistico</label>
+                        <label for="attachment" class="btn" style="border: 1px solid black; ">Foto Ponto Turistico</label>
                         <i class="fa-regular fa-images"></i>
                         <input type="file" name="attachment" id="attachment" onchange="previewImagem()" style="display: none;" required><br><br>
 
