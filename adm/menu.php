@@ -8,12 +8,12 @@ if(!defined('ACCESS')){
     <div class="container">
         <a class="navbar-brand" href="painelAdm.php"> ADM Desconecta </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">***</span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExample07">
             <ul class="navbar-nav mr-auto">
-                
+
                 <li class="nav-item active">
                     <a class="nav-link" href="painelAdm.php">ADM OOO</a>
                 </li>
@@ -21,7 +21,7 @@ if(!defined('ACCESS')){
                 <li class="nav-item active">
                     <a class="nav-link" href="list-payment.php">sTaTuS Pagamentos</a>
                 </li>
-                
+
                 <li class="nav-item active">
                     <a class="nav-link" href="todosUsuarios.php">USUARIOS</a>
                 </li>
@@ -37,8 +37,8 @@ if(!defined('ACCESS')){
                 <li class="nav-item active">
                     <a class="nav-link" href="cad-ponto-turistico.php">Cadastro Ponto Turistico</a>
                 </li>
-                
-                <li class="nav-item ">
+
+                <li class="nav-item active">
                     <a class="nav-link" href="todosPagamentos.php">Pagamentos</a>
                 </li>
 

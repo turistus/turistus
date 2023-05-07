@@ -267,7 +267,7 @@ include_once 'connection.php';
                         <i class="fa-regular fa-images"></i>
                         <input type="file" name="attachment" id="attachment" onchange="previewImagem()" style="display: none;" required><br><br>
 
-             			<input type="submit" value="Enviar" name="SendAddMsg" >
+             			<input type="submit" value="Solicitar" name="SendAddMsg" >
                 </div>
 
 

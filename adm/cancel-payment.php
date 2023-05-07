@@ -3,14 +3,14 @@ session_start();
 ob_start();
 define('ACCESS', true);
 
-include_once './validate.php';
+
 include '../pg/config.php';
 
 $reference_id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 if (!empty($reference_id)) {
     include_once './function.php';
-    
+
     // Verificar o status do pagamento, salvar no BD e recuperar o authorizationId antes de cancelar a compra
     $data_result = paymentStatus($reference_id);
 
@@ -48,10 +48,10 @@ if (!empty($reference_id)) {
 
     // Fechar a conexão
     curl_close($ch);
-    
+
     // Verificar o status do pagamento e salvar no BD
     paymentStatus($reference_id);
-    
+
     //Mensagem de sucesso
     $_SESSION['msg'] = "<div class='alert alert-success' role='alert'>Pagamento cancelado com sucesso!</div>";
     //Redirecionar o usuário
