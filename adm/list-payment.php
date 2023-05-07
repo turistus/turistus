@@ -83,10 +83,11 @@ include_once '../adm/validate.php';
                     valores.total
 
                     FROM payments_picpays pay
-                    INNER JOIN turistas ON turistas.eturista = pay.email
+
                     INNER JOIN eventos ON eventos.idE = pay.product_id
                     INNER JOIN valores ON valores.idVal = pay.valorId
                     INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
+                    WHERE turistas.eturista = pay.email
                     ORDER BY pay.id DESC ";
 
                 $result_payments = $conn->prepare($query_payments);
