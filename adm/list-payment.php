@@ -72,7 +72,7 @@ include_once '../adm/validate.php';
 
                     FROM payments_picpays pay
 
-                    ORDER BY pay.id DESC GROUP BY valores.idEventoVal";
+                    ORDER BY pay.id DESC ";
 
                 $result_payments = $conn->prepare($query_payments);
                 $result_payments->execute();
