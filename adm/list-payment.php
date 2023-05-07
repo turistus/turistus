@@ -64,6 +64,7 @@ include_once '../adm/validate.php';
                     pay.email,
                     pay.created,
                     pay.dataagendada,
+                    pay.valorId,
 
                     prod.name AS name_prod,
 
@@ -80,8 +81,8 @@ include_once '../adm/validate.php';
 
                     FROM payments_picpays pay
                     INNER JOIN turistas ON turistas.email = pay.email
-                    INNER JOIN valores ON valores.idEventoVal = pay.product_id
-                    INNER JOIN eventos ON eventos.idEvento = valores.idEventoVal
+                    INNER JOIN eventos ON eventos.idEvento = pay.product_id
+                    INNER JOIN valores ON valores.idEventoVal = pay.valorId
                     INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
                     ORDER BY pay.id DESC ";
                 $result_payments = $conn->prepare($query_payments);
