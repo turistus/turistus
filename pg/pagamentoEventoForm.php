@@ -9,7 +9,7 @@ ob_start();
 //$emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
 $id = $_POST['id'];
 $idGuia = $_POST['idGuia'];
-$emailSA = $_POST['emailSA'];
+$emailSA = $_POST['email'];
 $idVal = $_POST['idVal'];
 
 //$total = $_POST['total'];
