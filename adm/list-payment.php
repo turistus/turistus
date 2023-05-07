@@ -66,9 +66,7 @@ include_once '../adm/validate.php';
                     pay.dataagendada,
                     pay.valorId,
 
-                    turistas.email,
-
-                    prod.name AS name_prod,
+                    turistas.email AS eturista,
 
                     sta.name AS name_sta,
                     sta.color,
@@ -82,7 +80,7 @@ include_once '../adm/validate.php';
                     valores.total
 
                     FROM payments_picpays pay
-                    INNER JOIN turistas ON turistas.email = pay.email
+                    INNER JOIN turistas ON turistas.eturista = pay.email
                     INNER JOIN eventos ON eventos.idE = pay.product_id
                     INNER JOIN valores ON valores.idEventoVal = pay.valorId
                     INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
