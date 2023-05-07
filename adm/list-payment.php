@@ -80,7 +80,7 @@ include_once '../adm/validate.php';
                     //var_dump($row_payment);
                     extract($row_payment);
                     echo "<tr>";
-                        echo "<td>$id</td>";
+                        echo "<td>$id a</td>";
                         echo "<td>". date('d/m/Y',  strtotime($created)) ."</td>";
                         echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
                        // echo "<td>$first_name</td>";
