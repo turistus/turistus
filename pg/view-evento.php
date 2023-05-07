@@ -57,14 +57,9 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
     <?php
     include_once 'menu.php';
     ?>
- <!--  Precisa ser feito a busca dos guias disponiveis e os dias e valores do evento todo -->
- <!--  Para finalizar a compra do servico com ponto turistico -->
 
         <div class="container">
-
             <?php
-
-
             $query_products = "SELECT eventos.id AS id,
              eventos.nome AS nome,
              eventos.descricao AS descricao,
@@ -148,6 +143,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-md-12 ">
                                 <h5>Profissional organizador:  <a href="../guias/perfilG.php?idguia=<?php echo $idGuia;?>"><?php echo $nomeGuia;?></h5></a>
                                 <h3 style="text-align: center;"><?php echo $cidade?> - <?php echo $uf?></h3>
+                                <p><?php echo $encontro?></p>
                             </div>
                             <hr>
                             <div class="row">
