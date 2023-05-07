@@ -4,9 +4,13 @@
 define('ACCESS', true);
 ob_start();
 //ID do EVENTOOO
-$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-$idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
-$emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
+//$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+//$idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
+//$emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
+$id = $_POST['id'];
+$idGuia = $_POST['idGuia'];
+$emailSA = $_POST['emailSA'];
+
 $total = $_POST['total'];
 $nVagas = $_POST['nVgs'];
 
@@ -27,6 +31,7 @@ include_once './configPicPay.php';
                 $query_products = "SELECT *,
                 svcs.id AS GuiaID,
                 svcs.nome AS nomeGuia,
+
                 eventos.id AS id,
                 eventos.nome AS nomeEvento,
                 eventos.valor AS custoEvento
@@ -68,7 +73,7 @@ include_once './configPicPay.php';
         $msg = "";
 
         // Acessar o IF quando o usuário clica no botão
-        if (isset($data['BtnPicPay'])) {
+        if (isset($data['BotaoPagamento'])) {
             //var_dump($data);
             $empty_input = false;
             $data = array_map('trim', $data);

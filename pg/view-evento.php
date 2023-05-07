@@ -114,7 +114,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
             <!-- LINHA PRINCIPAL -->
             <div class="row" >
 
-                    <!-- Lado Esquerdo Precisoo POR um CONT aqui para Criar o CARROSEL de pelomenos 3 imagens mas sem maximo.. ou com 10 fotos maximo-->
+                    <!-- Lado Esquerdo limite 5 fotos  -->
                     <div class="col-md-6 " >
                         <div class="row-12" >
                             <div class="col-md-12 " >
@@ -143,7 +143,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-md-12 ">
                                 <h5>Profissional organizador:  <a href="../guias/perfilG.php?idguia=<?php echo $idGuia;?>"><?php echo $nomeGuia;?></h5></a>
                                 <h3 style="text-align: center;"><?php echo $cidade?> - <?php echo $uf?></h3>
-                                <p><?php echo $encontro?></p>
+                                <p style="text-align: center;"><?php echo "Ponto de encontro ".$encontro?></p>
                             </div>
                             <hr>
                             <div class="row">
@@ -175,9 +175,9 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             </div>
                             <div class="col-12" >
 
-                                <label for="total">  Quantidade Pessoas </label>
+                                <label for="idVal">  Quantidade Pessoas </label>
 
-                                    <select class="form-select" name="total" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
+                                    <select class="form-select" name="idVal" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
 
                                         <?php
                                         $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY idVal";
@@ -189,7 +189,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         ?>
 
-                                        <option value="<?php echo $ln['total'];?>" name="total" id="total" >
+                                        <option value="<?php echo $ln['idVal'];?>" name="idVal" id="idVal" >
                                         <?php echo $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
                                         <!-- Check box do VALOR TOTAL SELECIONADO na Compra -->
 
@@ -216,11 +216,19 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         <div class="col-4 mt-1" >
                                             <p>
-                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>&nVgs=<?php echo $ln['vagas'];?>&total=<?php echo $ln['total'];?>" class="btn btn-outline-success" >
+                                            <form method="POST" action="pagamentoEventoForm.php">
+
+
+
                                                 <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/> </a>
                                             </p>
-                                            </form>
+                                            <input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
+                                            <input type="hidden" name="idGuia" id="idGuia" value="<?php echo $idGuia;?>" />
+                                            <input type="hidden" name="email" id="email" value="<?php echo $emailSessaoAberta;?>" />
+                                            <input type="hidden" name="idVal" id="idVal" value="<?php echo $idVal;?>" />
+                                            <input type="hidden" name="encontro" id="encontro" value="<?php echo $encontro;?>" />
 
+                                            </form>
                                         </div>
 
                                         <div class="col-8 mt-2"  >
