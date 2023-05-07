@@ -10,7 +10,7 @@ ob_start();
 $id = $_POST['id'];
 $idGuia = $_POST['idGuia'];
 $emailSA = $_POST['email'];
-$idVal = $_POST['idVal'];
+$idVal = filter_input(INPUT_GET, "idVal", FILTER_SANITIZE_NUMBER_INT);
 
 //$total = $_POST['total'];
 //$nVagas = $_POST['nVgs'];
