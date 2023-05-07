@@ -93,18 +93,15 @@ include_once '../adm/validate.php';
                 while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
                     //var_dump($row_payment);
                     extract($row_payment);
-                    $totalFormatado = number_format($total, 2, ",", ".");
                     echo "<tr>";
-
-
-                        echo "<th>$id</th>";
-                        echo "<th>". date('d/m/Y',  strtotime($created)) ."</th>";
-                        echo "<th>". date('d/m/Y',  strtotime($dataagendada)) ."</th>";
+                        echo "<td>$id</td>";
+                        echo "<td>". date('d/m/Y',  strtotime($created)) ."</td>";
+                        echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
                         echo "<td>$first_name</td>";
                         echo "<td>$email</td>";
                         echo "<td>$nomeE</td>";
                         echo "<td>$vagas</td>";
-                        echo "<td>$totalFormatado</td>";
+                        echo "<td>". number_format($total, 2, ",", ".") ."</td>";
                         echo "<td>ID GUIA nome</td>";
 
                         echo "<td class='text-center'><span class='badge badge-pill badge-$color'>$name_sta</span></td>";
