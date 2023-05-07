@@ -40,8 +40,7 @@ include_once '../adm/validate.php';
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr style="font-size: 0.8em;">
-                        <th scope="col" class="text-center">Status</th>
-                        <th scope="col" class="text-center">Ações</th>
+
 
                         <th scope="col">ID</th>
                         <th scope="col">Data Pedido</th>
@@ -53,6 +52,9 @@ include_once '../adm/validate.php';
                         <th scope="col">Total</th>
 
                         <th scope="col" class="text-center">Guia Nativo</th>
+
+                        <th scope="col" class="text-center">Status</th>
+                        <th scope="col" class="text-center">Ações</th>
 
                     </tr>
                 </thead>
@@ -82,9 +84,9 @@ include_once '../adm/validate.php';
                     FROM payments_picpays pay
                     INNER JOIN turistas ON turistas.eturista = pay.email
                     INNER JOIN eventos ON eventos.idE = pay.product_id
-                    INNER JOIN valores ON valores.idEventoVal = pay.valorId
+                    INNER JOIN valores ON valores.idVal = pay.valorId
                     INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
-                    ORDER BY pay.id DESC ";
+                    ORDER BY pay.id DESC GROUP BY valores.idEventoVal";
 
                 $result_payments = $conn->prepare($query_payments);
                 $result_payments->execute();
@@ -93,11 +95,7 @@ include_once '../adm/validate.php';
                     extract($row_payment);
                     $totalFormatado = number_format($total, 2, ",", ".");
                     echo "<tr>";
-                        echo "<td class='text-center'><span class='badge badge-pill badge-$color'>$name_sta</span></td>";
-                        echo "<td class='text-center'>";
-                            echo "<a href='payment-status.php?id=$id' class='btn btn-outline-primary btn-sm'>Status</a> ";
-                            echo "<a href='cancel-payment.php?id=$id' class='btn btn-outline-danger btn-sm'>Cancelar</a>";
-                        echo "</td>";
+
 
                         echo "<th>$id</th>";
                         echo "<th>". date('d/m/Y',  strtotime($created)) ."</th>";
@@ -108,6 +106,12 @@ include_once '../adm/validate.php';
                         echo "<td>$vagas</td>";
                         echo "<td>$totalFormatado</td>";
                         echo "<td>ID GUIA nome</td>";
+
+                        echo "<td class='text-center'><span class='badge badge-pill badge-$color'>$name_sta</span></td>";
+                        echo "<td class='text-center'>";
+                            echo "<a href='payment-status.php?id=$id' class='btn btn-outline-primary btn-sm'>Status</a> ";
+                            echo "<a href='cancel-payment.php?id=$id' class='btn btn-outline-danger btn-sm'>Cancelar</a>";
+                        echo "</td>";
                     echo "</tr>";
 
                 }
