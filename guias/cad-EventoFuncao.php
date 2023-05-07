@@ -127,7 +127,7 @@ include_once '../connection.php';
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px; ">
                         <label for="foto" class="btn" style="border: 1px solid black; ">Fotos do evento</label>
                         <i class="fa-regular fa-images"></i>
-                        <div class="text-muted" style="font-size: 0.5em;">envie no máximo 5 fotos.</div>
+                        <div class="text-muted" style="font-size: 0.8em;">envie no máximo 5 fotos.</div>
                         <input type="file" name="foto[]" id="foto" multiple="multiple" onchange="previewImagem()" style="display: none;" required><br><br>
 
                     </div>
