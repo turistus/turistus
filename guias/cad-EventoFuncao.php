@@ -101,7 +101,7 @@ include_once '../connection.php';
                         </div>
 
                         <div class="col-8 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px; ">
-                            <label> Local possui </label>
+                            <label> Evento Contempla </label>
                         </div>
 
                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
@@ -124,7 +124,7 @@ include_once '../connection.php';
                         </div>
 
 
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px; ">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px; border:1px solid black;">
                         <label for="foto" class="btn">Fotos do evento</label>
                         <i class="fa-regular fa-images"></i>
                         <input type="file" name="foto[]" id="foto" multiple="multiple" onchange="previewImagem()" style="display: none;" required><br><br>
