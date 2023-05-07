@@ -66,13 +66,28 @@ include_once '../adm/validate.php';
                     pay.created AS created,
                     pay.dataagendada AS dataagendada,
                     pay.valorId AS valorId,
-                    pay.product_id AS product_id
+                    pay.product_id AS product_id,
 
+                    turistas.id AS codTurista,
+                    turistas.email AS eturista,
 
+                    sta.name AS name_sta,
+                    sta.color,
+
+                    eventos.id AS idE,
+                    eventos.nome AS nomeE,
+
+                    valores.id AS idVal,
+                    valores.idEvento AS idEventoVal,
+                    valores.vagas,
+                    valores.total
 
                     FROM payments_picpays pay
-
-                    ORDER BY pay.id DESC ";
+                    INNER JOIN turistas ON turistas.eturista = pay.email
+                    INNER JOIN eventos ON eventos.idE = pay.product_id
+                    INNER JOIN valores ON valores.idVal = pay.valorId
+                    INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
+                    ORDER BY pay.id DESC GROUP BY valores.idEventoVal";
 
                 $result_payments = $conn->prepare($query_payments);
                 $result_payments->execute();
@@ -80,17 +95,21 @@ include_once '../adm/validate.php';
                     //var_dump($row_payment);
                     extract($row_payment);
                     echo "<tr>";
-                        echo "<td>$id a</td>";
+                        //Pay
+                        echo "<td>$id</td>";
                         echo "<td>". date('d/m/Y',  strtotime($created)) ."</td>";
                         echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
-                       // echo "<td>$first_name</td>";
-                        //echo "<td>$email</td>";
-                       // echo "<td>$nomeE</td>";
-                        //echo "<td>$vagas</td>";
-                        //echo "<td>". number_format($total, 2, ",", ".") ."</td>";
+                        echo "<td>$first_name</td>";
+                        echo "<td>$email</td>";
+                        //EVENTOS
+                        echo "<td>$nomeE</td>";
+                        //VALORES
+                        echo "<td>$vagas</td>";
+                        echo "<td>". number_format($total, 2, ",", ".") ."</td>";
+                        //EVENTO tem Guia
                         echo "<td>ID GUIA nome</td>";
-
-                        //echo "<td class='text-center'><span class='badge badge-pill badge-$color'>$name_sta</span></td>";
+                        //Payments Status
+                        echo "<td class='text-center'><span class='badge badge-pill badge-$color'>$name_sta</span></td>";
                         echo "<td class='text-center'>";
                             echo "<a href='payment-status.php?id=$id' class='btn btn-outline-primary btn-sm'>Status</a> ";
                             echo "<a href='cancel-payment.php?id=$id' class='btn btn-outline-danger btn-sm'>Cancelar</a>";
