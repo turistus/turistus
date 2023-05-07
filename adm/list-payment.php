@@ -65,6 +65,7 @@ include_once '../adm/validate.php';
                     pay.created,
                     pay.dataagendada,
                     pay.valorId,
+                    pay.product_id,
 
                     turistas.email AS eturista,
 
