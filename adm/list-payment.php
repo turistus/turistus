@@ -57,15 +57,14 @@ include_once '../adm/validate.php';
                     </tr>
                 </thead>
                 <?php
-                $query_payments =
-                    "SELECT
-                    pay.id,
-                    pay.first_name,
-                    pay.email,
-                    pay.created,
-                    pay.dataagendada,
-                    pay.valorId,
-                    pay.product_id,
+                $query_payments ="SELECT
+                    pay.id AS id,
+                    pay.first_name AS first_name,
+                    pay.email AS email,
+                    pay.created AS created,
+                    pay.dataagendada AS dataagendada,
+                    pay.valorId AS valorId,
+                    pay.product_id AS product_id,
 
                     turistas.email AS eturista,
 
@@ -85,7 +84,7 @@ include_once '../adm/validate.php';
                     INNER JOIN eventos ON eventos.idE = pay.product_id
                     INNER JOIN valores ON valores.idEventoVal = pay.valorId
                     INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
-                    ORDER BY pay.id DESC ";
+                    ORDER BY pay.id DESC GROUP BY valores.idEventoVal";
 
                 $result_payments = $conn->prepare($query_payments);
                 $result_payments->execute();
