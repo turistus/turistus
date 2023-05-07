@@ -66,12 +66,14 @@ include_once '../adm/validate.php';
                     pay.dataagendada,
                     pay.valorId,
 
+                    turistas.email,
+
                     prod.name AS name_prod,
 
                     sta.name AS name_sta,
                     sta.color,
 
-                    eventos.id AS idEvento,
+                    eventos.id AS idE,
                     eventos.nome AS nomeE,
 
                     valores.id AS idVal,
@@ -81,10 +83,11 @@ include_once '../adm/validate.php';
 
                     FROM payments_picpays pay
                     INNER JOIN turistas ON turistas.email = pay.email
-                    INNER JOIN eventos ON eventos.idEvento = pay.product_id
+                    INNER JOIN eventos ON eventos.idE = pay.product_id
                     INNER JOIN valores ON valores.idEventoVal = pay.valorId
                     INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
                     ORDER BY pay.id DESC ";
+
                 $result_payments = $conn->prepare($query_payments);
                 $result_payments->execute();
                 while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
