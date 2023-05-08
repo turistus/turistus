@@ -293,8 +293,9 @@ ob_start();
 
 
           <div class="row">
-            <iframe width="560" height="315" src="https://youtu.be/nj5O7NDpe-s" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nj5O7NDpe-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
+
   </main><!-- /.container -->
   <?php
   include_once 'rodape.php';
