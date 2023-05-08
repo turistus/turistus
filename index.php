@@ -277,21 +277,17 @@ ob_start();
               </div>
         </div>
 
+   <?php
+    //include_once('../turistus/pg/funcoes/linhaBuscaGuiaPublico.php');
+   ?>
 
-                <div class="row" style="padding: 20px;" >
-                  <h2 style="margin:auto;"> Profissionais </h2>
+          <div class="row" style="padding: 20px;" >
+                  <h2 style="margin:auto;"> Videos Instrucionais </h2>
                 </div>
                 <div class="col-12">
                     <hr>
                     <br>
               </div>
-
-   <?php
-    //include_once('../turistus/pg/funcoes/linhaBuscaGuiaPublico.php');
-   ?>
-
-
-
           <div class="row">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/nj5O7NDpe-s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>

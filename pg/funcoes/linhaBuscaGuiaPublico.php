@@ -1,3 +1,12 @@
+            <div class="row" style="padding: 20px;" >
+                  <h2 style="margin:auto;"> Profissionais </h2>
+                </div>
+                <div class="col-12">
+                    <hr>
+                    <br>
+            </div>
+
+
  <!-- ONDE BUSCA OS Guias TURISTICOS -->
  <div class="row">
       <div class="col-md-12">
