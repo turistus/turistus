@@ -178,14 +178,14 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                      <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idVAL -->
                                      <option>Selecione</option>
                                         <?php
-                                        $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY idVal ASC";
+                                        $buscaValores = "SELECT valores.id, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY id ASC";
                                         $result = $conn->prepare($buscaValores);
                                         $result->execute();
                                         $res = $result->fetchAll(PDO::FETCH_ASSOC);
                                             foreach($res as $ln ){
                                         ?>
 
-                                            <option value="<?php echo $ln['idVal'];?>" name="idValores" id="idValores">
+                                            <option value="<?php echo $ln['id'];?>" name="idValores" id="idValores">
                                         <?php echo $ln['idVal'];?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
 
                                         <?php
