@@ -34,7 +34,7 @@ include_once './configPicPay.php';
                 eventos.nome AS nomeEvento,
                 eventos.valor AS custoEvento,
 
-                val.id = idVal,
+                val.id AS idVal,
                 val.idEvento,
                 val.vagas,
                 val.total
