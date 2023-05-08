@@ -174,9 +174,9 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-12" >
 
                                 <label>  Quantidade Pessoas </label>
-                                    <select class="form-select" name="idValores" id="idValores" style="border: 1px solid blue; border-radius: 10;" >
+                                    <select class="form-select" name="idValores" style="border: 1px solid blue; border-radius: 10;" >
                                      <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idVAL -->
-
+                                     <option>Selecione</option>
                                         <?php
                                         $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY idVal ASC";
                                         $result = $conn->prepare($buscaValores);
