@@ -9,7 +9,7 @@ $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 $emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
 $idVal = filter_input(INPUT_GET, "$ln.['idValores']", FILTER_SANITIZE_NUMBER_INT);
 $dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-echo " id POR inputarrray DO VALORES:".$dados_pagamento['idValores']." ";
+echo " id POR inputarrray DO VALORES:".$dados_pagamento." ";
 
 echo " id DO VALORES:".$idVal." ";
 echo " iD EVENTO:".$id." ";
