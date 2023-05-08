@@ -109,8 +109,6 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
             <h1 class="display-3 mt-5 mb-3"><?php echo $nome; ?></h1>
 
-
-
             <!-- LINHA PRINCIPAL -->
             <div class="row" >
 
@@ -147,20 +145,20 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             </div>
                             <hr>
                             <div class="row">
-                            <div class="col-3 " >
-                                <br>
-                                <h5 style="margin-left: 15px;"> Classificação: </h5>
-                            </div>
-                            <div class="col-4 " >
-                                <div class="star-ratings" style="margin-left:30px;">
-                                    <div class="fill-ratings" style="width: <?php echo $pontos . '%'?>;">
-                                        <span>★★★★★</span>
-                                    </div>
-                                    <div class="empty-ratings">
-                                        <span>★★★★★</span>
+                                <div class="col-3 " >
+                                    <br>
+                                    <h5 style="margin-left: 15px;"> Classificação: </h5>
+                                </div>
+                                <div class="col-4 " >
+                                    <div class="star-ratings" style="margin-left:30px;">
+                                        <div class="fill-ratings" style="width: <?php echo $pontos . '%'?>;">
+                                            <span>★★★★★</span>
+                                        </div>
+                                        <div class="empty-ratings">
+                                            <span>★★★★★</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             </div>
 
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="padding: 10px;">
@@ -189,7 +187,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         ?>
 
-                                        <option value="<?php echo $ln['idVal'];?>" name="idVal" id="idVal" >
+                                        <option value="<?php echo $ln['idVal'];?>">
                                         <?php echo $ln['idVal'];?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
                                         <?php
                                             }
@@ -252,7 +250,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="row">
                             <p></p>
                             <button id="turista" type="button" class="btn btn-light text-dark me-2">Turista</button>
-                            <button id="guia" type="button" class="btn btn-light text-dark me-2">Guia</button>
+
                             </div>
                             <br>
                             <!-- form vazio pra abrir limpo-->
