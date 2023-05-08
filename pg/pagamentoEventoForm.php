@@ -42,11 +42,12 @@ include_once './configPicPay.php';
                 FROM eventos
 
                 INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
-                INNER JOIN valores AS val ON val.idVal=$idVal;
+                INNER JOIN valores AS val ON val.idVal=:idVal;
                 WHERE eventos.id =:id LIMIT 1 ";
 
                 $result_products = $conn->prepare($query_products);
                 $result_products->bindParam(':id', $id, PDO::PARAM_INT);
+                $result_products->bindParam(':idVal', $idVal, PDO::PARAM_INT);
                 $result_products->execute();
                 if ($result_products->rowCount() == 0) {
                     header("Location: eventos.php");
