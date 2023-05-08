@@ -174,7 +174,12 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 </ul>
                             </div>
                             <div class="col-12" >
-                            <?php
+
+                                <label for="idVal">  Quantidade Pessoas </label>
+
+                                    <select class="form-select" name="idVal" id="idVal" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
+
+                                        <?php
                                         $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY idVal";
                                         $result = $conn->prepare($buscaValores);
                                         $result->execute();
@@ -183,26 +188,15 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                             foreach($res as $ln ){
 
                                         ?>
-                                <label for="idVal">  Quantidade Pessoas </label>
-
-                                    <select class="form-select" name="idVal" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
-
-
 
                                         <option value="<?php echo $ln['idVal'];?>" name="idVal" id="idVal" >
                                         <?php echo $ln['idVal'];?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
-                                        <!-- Check box do VALOR TOTAL SELECIONADO na Compra -->
-
-
+                                        <?php
+                                            }
+                                        ?>
                                         </option>
                                     </select>
-                                    <?php
-                                            }
-
-                                        ?>
                             </div>
-
-
 
                             <!-- botao -->
                             <div class="col-md-12 mt-2" >
@@ -211,9 +205,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         <?php
                                         if($emailSessaoAberta == true){
 
-
                                         ?>
-
                                         <div class="col-4 mt-1" >
                                             <p>
                                                 <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>&idVal=<?php echo $ln['idVal'];?>" class="btn btn" >
