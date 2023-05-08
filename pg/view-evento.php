@@ -174,7 +174,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-12" >
 
                                 <label>  Quantidade Pessoas </label>
-                                    <select class="form-select " name="idValores" id="idValores" style="border: 1px solid blue; border-radius: 10;" >
+                                    <select class="form-select" name="idValores" id="idValores" style="border: 1px solid blue; border-radius: 10;" >
                                      <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idVAL -->
 
                                         <?php
@@ -186,11 +186,10 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         ?>
 
                                             <option value="<?php echo $ln['idVal'];?>" name="idValores" id="idValores">
-
+                                        <?php echo $ln['idVal'];?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
 
                                         <?php
-                                        echo $ln.['idVal'] . " - ". $ln.['vagas'] . ' Pessoas R$ ' . number_format($ln.['total'], 2, ",", ".");
-                                        }
+                                            }
                                         ?>
                                         </option>
                                     </select>
@@ -206,7 +205,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         ?>
                                         <div class="col-4 mt-1" >
                                             <p>
-                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>&idVal=<?php echo $idValores;?>" class="btn btn" >
+                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>&idVal=<?php echo $ln['idValores'];?>" class="btn btn" >
                                                 <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/> </a>
                                             </p>
                                             </form>
