@@ -174,12 +174,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 </ul>
                             </div>
                             <div class="col-12" >
-
-                                <label for="idVal">  Quantidade Pessoas </label>
-
-                                    <select class="form-select" name="idVal" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
-
-                                        <?php
+                            <?php
                                         $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY idVal";
                                         $result = $conn->prepare($buscaValores);
                                         $result->execute();
@@ -188,18 +183,23 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                             foreach($res as $ln ){
 
                                         ?>
+                                <label for="idVal">  Quantidade Pessoas </label>
+
+                                    <select class="form-select" name="idVal" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
+
+
 
                                         <option value="<?php echo $ln['idVal'];?>" name="idVal" id="idVal" >
-                                        <?php echo $ln['idVal'];?><?php echo $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
+                                        <?php echo $ln['idVal'];?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
                                         <!-- Check box do VALOR TOTAL SELECIONADO na Compra -->
 
-                                        <?php
+
+                                        </option>
+                                    </select>
+                                    <?php
                                             }
 
                                         ?>
-                                        </option>
-                                    </select>
-
                             </div>
 
 
