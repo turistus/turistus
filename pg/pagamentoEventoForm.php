@@ -8,10 +8,10 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 $emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
 $idVal = filter_input(INPUT_GET, "idVal", FILTER_SANITIZE_NUMBER_INT);
-echo " iV ".$idVal." ";
-echo " i ".$id." ";
-echo " iG ".$idGuia." ";
-echo " eSa ".$emailSA." ";
+echo " id DO VALORES:".$idVal." ";
+echo " iD EVENTO:".$id." ";
+echo " id GUIA:".$idGuia." ";
+echo " eMailSa:".$emailSA." ";
 
 //echo $id ." ";
 //echo $idGuia;
@@ -32,11 +32,17 @@ include_once './configPicPay.php';
                 svcs.nome AS nomeGuia,
                 eventos.id AS id,
                 eventos.nome AS nomeEvento,
-                eventos.valor AS custoEvento
+                eventos.valor AS custoEvento,
+
+                val.id = idVal,
+                val.idEvento,
+                val.vagas,
+                val.total
 
                 FROM eventos
 
                 INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
+                INNER JOIN valores AS val ON val.idVal=$idVal;
                 WHERE eventos.id =:id LIMIT 1 ";
 
                 $result_products = $conn->prepare($query_products);
