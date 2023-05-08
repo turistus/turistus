@@ -205,7 +205,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         ?>
                                         <div class="col-4 mt-1" >
                                             <p>
-                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>&idVal=<?php echo $idValores;?>" class="btn btn" >
+                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>&idVal=<?php echo $idValores['idVal'];?>" class="btn btn" >
                                                 <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/> </a>
                                             </p>
                                             </form>
