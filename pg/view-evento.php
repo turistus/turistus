@@ -190,7 +190,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         ?>
 
                                         <option value="<?php echo $ln['idVal'];?>" name="idVal" id="idVal" >
-                                        <?php echo $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
+                                        <?php echo $ln['idVal'];?><?php echo $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
                                         <!-- Check box do VALOR TOTAL SELECIONADO na Compra -->
 
                                         <?php
@@ -216,7 +216,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         <div class="col-4 mt-1" >
                                             <p>
-                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>&idVal=<?php echo $idVal;?>" class="btn btn" >
+                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>&idVal=<?php echo $ln['idVal'];?>" class="btn btn" >
                                                 <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/> </a>
                                             </p>
                                             </form>
@@ -244,14 +244,9 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         </div>
 
-
-
-                                            <?php
-                                                }else{
-                                                    //SE NAOxxsx TIVER EMAIL DE USUARIO LOGADO FAÇA;;
-
-                                            ?>
-
+                                    <?php
+                                        }else{ //SE NAOxxsx TIVER EMAIL DE USUARIO LOGADO FAÇA;;
+                                    ?>
 <!-- MODAL PARA ABRIR QND NAO TIVER NINGUEM LOGADO e assim LOGAR e CAIR NA EVENTOS NOVAMENTE -->
             <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -271,9 +266,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <!-- form vazio pra abrir limpo-->
                             <div class="modal-content" id=formPrimeiro>
 
-
                             </div>
-
                             <!--o id é acessado pelo JS quando o botao com id turista é clicado e busca o include -->
                             <div class="modal-content" id=acessaTurista>
 
@@ -281,14 +274,6 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                 include_once '../lgn/entrarTurista.php';
                                 ?>
                             </div>
-
-                            <!--o id é acessado pelo JS quando o botao com id GUIA é clicado e busca o include -->
-                            <div class="modal-content" id=acessaGuia>
-                                <?php
-                                include_once '../lgn/entrarGuia.php';
-                                ?>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -297,7 +282,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         <div class="col-4 mt-2"  >
                                             <p>
-                                                <button type='button' class='btn btn-outline-success' data-bs-toggle='modal' data-bs-target='#loginModal'>
+                                                <button type='button' class='btn btn' data-bs-toggle='modal' data-bs-target='#loginModal'>
 
                                                 <input id="BotaoPagamento" type="image" src="../icones/picpaylogo.png" name="submit" alt="picpaay" style="width: 80px; height: 40px;" />
 
@@ -341,22 +326,13 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
   $(document).ready(function(){
 
     $("#acessaTurista").hide();
-    $("#acessaGuia").hide();
     $("#formPrimeiro").show();
 
   $("#turista").click(function () {
     $("#acessaTurista").show(1000);
-    $("#acessaGuia").hide();
     $("#formPrimeiro").hide();
 
 	});
-
-  $("#guia").click(function () {
-	$("#acessaGuia").show(1000);
-    $("#acessaTurista").hide();
-    $("#formPrimeiro").hide();
-	});
-
 
   });
 
@@ -376,7 +352,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 3000,
       arrows: false,
       prevArrow: '<button type="button" class="slick-prev btn btn-primary">Anterior</button><br>',
       nextArrow: '<button type="button" class="slick-next btn btn-primary">Proximo</button>',
