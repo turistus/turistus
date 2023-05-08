@@ -180,7 +180,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                     <select class="form-select" name="idVal" id="idVal" style="border: 1px solid blue; border-radius: 10;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
 
                                         <?php
-                                        $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY idVal";
+                                        $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY idVal ASC";
                                         $result = $conn->prepare($buscaValores);
                                         $result->execute();
                                         $res = $result->fetchAll(PDO::FETCH_ASSOC);
