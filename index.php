@@ -289,10 +289,10 @@ ob_start();
                     <br>
               </div>
           <div class="row">
-            <div class="col-12 col-xl-12 col-lg-6 col-md-6 col-sm-12">
+            <div class="col-12 col-xl-12 col-lg-6 col-md-6 col-sm-12 center">
               <iframe width="300" height="170" src="https://www.youtube.com/embed/nj5O7NDpe-s"  title="Tutorial Criar Pontos Turísticos Turist Us" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
              </div>
-             <div class="col-12 col-xl-12 col-lg-6 col-md-6 col-sm-12">
+             <div class="col-12 col-xl-12 col-lg-6 col-md-6 col-sm-12 center">
              <iframe width="300" height="170" src="https://www.youtube.com/embed/jrnjUKGcrAc" title="Tutorial Criar Anúncios de Eventos Turísticos Turist Us" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
              </div>
           </div>
