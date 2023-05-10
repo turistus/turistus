@@ -69,7 +69,7 @@ ob_start();
           <br> </p>
           <p class="lead mb-0"><a href="./pg/sobre.php" class="text-white fw-bold" style="padding: 15px;" >Saiba mais</a></p>
 
-          <h3 style="text-align: right; color:black; margin-right: 20px;"><b>Turistus</b></h3><p style="text-align: right; color:white;"> <b> Seu guia de viagem online. </b></p>
+          <h3 style="text-align: right; color:black; margin-right: 20px;"><b>Turist Us</b></h3><p style="text-align: right; color:white; margin-right: 20px;"> <b> Seu guia de viagem online. </b></p>
         </div>
 
     </div>
