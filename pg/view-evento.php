@@ -174,7 +174,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-12" >
 
                                 <label>  Quantidade Pessoas </label>
-                                    <select id="SelecaoValores" style="border: 1px solid blue; border-radius: 10;" >
+                                    <select class="select-vaga" id="SelecaoValores" style="border: 1px solid blue; border-radius: 10;" >
                                      <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idVAL -->
                                      <option>Selecione</option>
                                         <?php
@@ -378,6 +378,16 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
     });
   });
+
+
+  const selectsVaga = document.querySelectorAll('.select-vaga');
+
+selectsVaga.forEach((select) => {
+  select.addEventListener('change', () => {
+    const valorSelecionado = select.value;
+
+  });
+});
 
 </script>
 
