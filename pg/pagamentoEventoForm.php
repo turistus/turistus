@@ -3,8 +3,8 @@
 <?php
 session_start();
 
-if(isset($_SESSION['opcao'])) {
-  $opcao = $_SESSION['opcao'];
+if(isset($_SESSION['idVal'])) {
+  $opcao = $_SESSION['idVal'];
   echo "OPÇÂO DO VALOR: ".$opção."Dentro do if))";
 
   // Use a variável $opcao aqui como desejar
@@ -23,19 +23,11 @@ echo "OPÇÂO DO VALOR: ".$opção;
 
 echo " id :".$dados_pagamento['id']." ";
 echo "<br>";
-echo " idVal:".$dados_pagamento['idVal']." ";
+echo " idVal:".$_SESSION['idVal']." ";
 echo "<br>";
 echo " email:".$dados_pagamento['email']." ";
 echo "<br>";
 echo " idGuia:".$dados_pagamento['idGuia']." ";
-
-echo " id DO VALORES:".$idVal." ";
-echo " iD EVENTO:".$id." ";
-echo " id GUIA:".$idGuia." ";
-echo " eMailSa:".$emailSA." ";
-
-//echo $id ." ";
-//echo $idGuia;
 
 if (empty($dados_pagamento['id'])) {
     header("Location: index.php");
