@@ -14,9 +14,9 @@
         <h5>Redes Sociais</h5>
 
         <div class="social-icons">
-          <a href=""><img style="height: 20px; width: 20px;" src="./icones/facebook.png"></a>
+          <a href="https://www.facebook.com/profile.php?id=100092012276121&mibextid=ZbWKwL"><img style="height: 20px; width: 20px;" src="./icones/facebook.png"></a>
           <a href=""><img style="height: 20px; width: 20px;" src="./icones/twitter.png"></a>
-          <a href=""><img style="height: 20px; width: 20px;" src="./icones/insta.png"></a>
+          <a href="https://www.instagram.com/_turist.us/?igshid=ZDdkNTZiNTM%3D"><img style="height: 20px; width: 20px;" src="./icones/insta.png"></a>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6">

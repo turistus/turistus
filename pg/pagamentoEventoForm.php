@@ -31,7 +31,7 @@ echo " eMailSa:".$emailSA." ";
 //echo $id ." ";
 //echo $idGuia;
 
-if (empty($id)) {
+if (empty($dados_pagamento['id'])) {
     header("Location: index.php");
     die("Erro: página encontrada!<br>");
 }
