@@ -21,7 +21,13 @@ $dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 echo "OPÇÂO DO VALOR: ".$opção;
 
-echo " id POR inputarrray DO VALORES:".$dados_pagamento." ";
+echo " id :".$dados_pagamento['id']." ";
+echo "<br>";
+echo " idVal:".$dados_pagamento['idVal']." ";
+echo "<br>";
+echo " email:".$dados_pagamento['email']." ";
+echo "<br>";
+echo " idGuia:".$dados_pagamento['idGuia']." ";
 
 echo " id DO VALORES:".$idVal." ";
 echo " iD EVENTO:".$id." ";
