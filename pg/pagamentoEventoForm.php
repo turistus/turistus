@@ -12,12 +12,17 @@ $emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
 $idVal = filter_input(INPUT_GET, "$ln.['idValores']", FILTER_SANITIZE_NUMBER_INT);
 $dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
+if (isset($_POST['opcaoSelecionada'])) {
+    $valorSelecionado = $_POST['opcaoSelecionada'];
+    // Faça algo com o valor selecionado, como processar um formulário ou consultar um banco de dados
+  }
+
 
 echo "OPÇÂO DO VALOR: ".$opção;
 
 echo " id :".$dados_pagamento['id']." ";
 echo "<br>";
-echo " idVal:".$dados_pagamento['idVal']." ";
+echo " idVal:".$valorSelecionado." ";
 echo "<br>";
 echo " email:".$dados_pagamento['email']." ";
 echo "<br>";
