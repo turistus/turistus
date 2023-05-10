@@ -174,7 +174,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-12" >
 
                                 <label>  Quantidade Pessoas </label>
-                                    <select class="form-select" name="idVal" id="idVal" style="border: 1px solid blue; border-radius: 10;" >
+                                    <select class="form-select" name="idVal" style="border: 1px solid blue; border-radius: 10;" >
                                      <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idVAL -->
                                      <option>Selecione</option>
                                         <?php
@@ -186,9 +186,9 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         ?>
 
-                                            <option value="<?php echo $ln['idVal'];?>" name="idVal" id="idVal">
+                                            <option value="<?php echo $idVal;?>">
                                         <?php
-                                            echo $ln['idVal'];?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".")
+                                            echo $idVal;?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".")
                                         ?>
                                             </option>
                                         <?php
@@ -197,6 +197,10 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                     </select>
                             </div>
+
+
+
+
 
                             <!-- botao -->
                             <div class="col-md-12 mt-2" >
