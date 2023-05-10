@@ -11,6 +11,9 @@ $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 $emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
 $idVal = filter_input(INPUT_GET, "$ln.['idValores']", FILTER_SANITIZE_NUMBER_INT);
 $dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+$id = $dados_pagamento['id'];
+$idGuia = $dados_pagamento['idGuia'];
+$emailSA = $dados_pagamento['email'];
 
 if (isset($_POST['opcaoSelecionada'])) {
     $valorSelecionado = $_POST['opcaoSelecionada'];
@@ -22,7 +25,7 @@ echo "OPÇÂO DO VALOR: ".$opção;
 
 echo " id :".$dados_pagamento['id']." ";
 echo "<br>";
-echo " idVal:".$valorSelecionado." ";
+echo " idVal:".$opção." ";
 echo "<br>";
 echo " email:".$dados_pagamento['email']." ";
 echo "<br>";
