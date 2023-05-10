@@ -216,7 +216,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                                 <input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
                                                 <input type="hidden" name="idGuia" id="idGuia" value="<?php echo $idGuia;?>" />
                                                 <input type="hidden" name="email" id="email" value="<?php echo $emailSessaoAberta;?>" />
-                                                <input type="hidden" name="opcaoSelecionada" id="opcaoSelecionada" value="<?php echo $ln['idVal'];?>"/>
+                                                <input type="hidden" name="opcaoSelecionada" id="opcaoSelecionada" value=""/>
                                                 <input type="hidden" name="encontro" id="encontro" value="<?php echo $encontro;?>" />
 
 
