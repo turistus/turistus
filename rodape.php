@@ -11,14 +11,12 @@
     <div class="row"  style="color:azure;" >
 
       <div class="col-md-3 col-sm-6 col-xs-6">
-        <h5>Contato</h5>
-        <p style="font-size: 15px;">Endereço: Rua das Flores, 123</p>
-        <p style="font-size: 15px;">Telefone: (11) 5555-5555</p>
-        <p style="font-size: 15px;">E-mail: contato@turistus.com.br</p>
+        <h5>Redes Sociais</h5>
+
         <div class="social-icons">
-          <img style="height: 20px; width: 20px;" src="./icones/facebook.png">
-          <img style="height: 20px; width: 20px;" src="./icones/twitter.png">
-          <img style="height: 20px; width: 20px;" src="./icones/insta.png">
+          <a href=""><img style="height: 20px; width: 20px;" src="./icones/facebook.png"></a>
+          <a href=""><img style="height: 20px; width: 20px;" src="./icones/twitter.png"></a>
+          <a href=""><img style="height: 20px; width: 20px;" src="./icones/insta.png"></a>
         </div>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-6">
