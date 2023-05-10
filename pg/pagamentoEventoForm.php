@@ -1,6 +1,14 @@
 
 
 <?php
+session_start();
+
+if(isset($_SESSION['opcao'])) {
+  $opcao = $_SESSION['opcao'];
+  echo "OPÇÂO DO VALOR: ".$opção."Dentro do if))";
+
+  // Use a variável $opcao aqui como desejar
+}
 define('ACCESS', true);
 ob_start();
 //ID do EVENTOOO
@@ -9,6 +17,10 @@ $idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 $emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
 $idVal = filter_input(INPUT_GET, "$ln.['idValores']", FILTER_SANITIZE_NUMBER_INT);
 $dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+
+echo "OPÇÂO DO VALOR: ".$opção;
+
 echo " id POR inputarrray DO VALORES:".$dados_pagamento." ";
 
 echo " id DO VALORES:".$idVal." ";
