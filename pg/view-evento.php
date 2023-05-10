@@ -136,8 +136,6 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     </div>
 
                     <!-- Lado Direito -->
-
-                    <form action="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>" method="POST">
                         <div class="col-md-6" style="border: 0,5px solid black;">
 
                             <div class="col-md-12 ">
@@ -176,7 +174,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-12" >
 
                                 <label>  Quantidade Pessoas </label>
-                                    <select class="form-select" name="idValores" style="border: 1px solid blue; border-radius: 10;" >
+                                    <select class="form-select" name="idVal" style="border: 1px solid blue; border-radius: 10;" >
                                      <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idVAL -->
                                      <option>Selecione</option>
                                         <?php
@@ -185,15 +183,14 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         $result->execute();
                                         $res = $result->fetchAll(PDO::FETCH_ASSOC);
                                             foreach($res as $ln ){
-                                                $VTOTAL = $ln['id'];
+
                                         ?>
 
-                                            <option value="<?php echo $VTOTAL;?>" name="idValor" id="idValor">
+                                            <option value="<?php echo $ln['id'];?>" name="idVal" id="idVal">
                                         <?php
-                                        echo $ln['idVal'];?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
+                                        echo $ln['id'];?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
 
                                         <?php
-
                                             }
                                         ?>
                                         </option>
@@ -206,21 +203,14 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         <?php
                                         if($emailSessaoAberta == true){
-                                            // Verifica se foi selecionada uma opção
-                                            if(isset($_POST['idValor'])) {
-                                                $opcao = $_POST['idValor'];
-
-                                                // Salva a opção selecionada na sessão
-                                                $_SESSION['idValor'] = $opcao;
-                                            }
 
                                         ?>
                                         <div class="col-4 mt-1" >
                                             <p>
-
-                                                <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/>
+                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>&idVal=<?php echo $idVal;?>" class="btn btn" >
+                                                <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/> </a>
                                             </p>
-                    </form>
+                                            </form>
 
                                         </div>
 
