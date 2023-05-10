@@ -17,7 +17,7 @@ echo "OPÇÂO DO VALOR: ".$opção;
 
 echo " id :".$dados_pagamento['id']." ";
 echo "<br>";
-echo " idVal:".$dados_pagamento['opc']." ";
+echo " idVal:".$dados_pagamento['idVal']." ";
 echo "<br>";
 echo " email:".$dados_pagamento['email']." ";
 echo "<br>";
