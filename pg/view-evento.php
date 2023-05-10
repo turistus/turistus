@@ -174,26 +174,27 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-12" >
 
                                 <label>  Quantidade Pessoas </label>
-                                    <select class="form-select" name="idVal" style="border: 1px solid blue; border-radius: 10;" >
+                                    <select class="form-select" name="idVal" id="idVal" style="border: 1px solid blue; border-radius: 10;" >
                                      <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idVAL -->
                                      <option>Selecione</option>
                                         <?php
-                                        $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY id ASC";
-                                        $result = $conn->prepare($buscaValores);
-                                        $result->execute();
-                                        $res = $result->fetchAll(PDO::FETCH_ASSOC);
-                                            foreach($res as $ln ){
+                                            $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY id ASC";
+                                            $result = $conn->prepare($buscaValores);
+                                            $result->execute();
+                                            $res = $result->fetchAll(PDO::FETCH_ASSOC);
+                                                foreach($res as $ln ){
 
                                         ?>
 
                                             <option value="<?php echo $ln['idVal'];?>" name="idVal" id="idVal">
                                         <?php
-                                        echo $ln['idVal'];?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".") ?>
-
+                                            echo $ln['idVal'];?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".")
+                                        ?>
+                                            </option>
                                         <?php
                                             }
                                         ?>
-                                        </option>
+
                                     </select>
                             </div>
 
