@@ -3,12 +3,6 @@
 <?php
 session_start();
 
-if(isset($_SESSION['idVal'])) {
-  $opcao = $_SESSION['idVal'];
-  echo "OPÇÂO DO VALOR: ".$opção."Dentro do if))";
-
-  // Use a variável $opcao aqui como desejar
-}
 define('ACCESS', true);
 ob_start();
 //ID do EVENTOOO
@@ -23,11 +17,14 @@ echo "OPÇÂO DO VALOR: ".$opção;
 
 echo " id :".$dados_pagamento['id']." ";
 echo "<br>";
-echo " idVal:".$_SESSION['idVal']." ";
+echo " idVal:".$dados_pagamento['opc']." ";
 echo "<br>";
 echo " email:".$dados_pagamento['email']." ";
 echo "<br>";
 echo " idGuia:".$dados_pagamento['idGuia']." ";
+echo "<br>";
+echo " encontro:".$dados_pagamento['encontro']." ";
+
 
 if (empty($dados_pagamento['id'])) {
     header("Location: index.php");

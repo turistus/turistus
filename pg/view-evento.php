@@ -187,7 +187,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         ?>
 
                                             <option value="<?php echo $ln['idVal'];?>">
-                                        <?php
+                                        <?php $opc = $ln['idVal'];
                                             echo $ln['idVal'];?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".")
                                         ?>
                                             </option>
@@ -216,16 +216,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                                 <input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
                                                 <input type="hidden" name="idGuia" id="idGuia" value="<?php echo $idGuia;?>" />
                                                 <input type="hidden" name="email" id="email" value="<?php echo $emailSessaoAberta;?>" />
-                                                <input type="hidden" name="idVal" id="idVal" value="<?php
-                                                // Verifica se foi selecionada uma opção
-                                                    if(isset($_POST['idVal'])) {
-                                                        $opcao = $_POST['idVal'];
-
-                                                        // Salva a opção selecionada na sessão
-                                                        $_SESSION['idVal'] = $opcao;
-                                                    }
-
-                                                ?>" />
+                                                <input type="hidden" name="idVal" id="idVal" value="<?php echo $opc;?>" />
                                                 <input type="hidden" name="encontro" id="encontro" value="<?php echo $encontro;?>" />
 
 
