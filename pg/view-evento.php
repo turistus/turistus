@@ -174,7 +174,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-12" >
 
                                 <label>  Quantidade Pessoas </label>
-                                    <select class="form-select" name="idVal" style="border: 1px solid blue; border-radius: 10;" >
+                                    <select id="SelecaoValores" style="border: 1px solid blue; border-radius: 10;" >
                                      <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idVAL -->
                                      <option>Selecione</option>
                                         <?php
@@ -186,9 +186,9 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         ?>
 
-                                            <option value="<?php echo $idVal;?>">
+                                            <option value="<?php echo $ln['idVal'];?>">
                                         <?php
-                                            echo $idVal;?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".")
+                                            echo $ln['idVal'];?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".")
                                         ?>
                                             </option>
                                         <?php
@@ -211,10 +211,28 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         ?>
                                         <div class="col-4 mt-1" >
-                                            <p>
-                                                <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>&idVal=<?php echo $ln['idVal'];?>" class="btn btn" >
-                                                <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/> </a>
-                                            </p>
+
+                                            <form action="pagamentoEventoForm.php" method="POST">
+                                                <input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
+                                                <input type="hidden" name="idGuia" id="idGuia" value="<?php echo $idGuia;?>" />
+                                                <input type="hidden" name="email" id="email" value="<?php echo $emailSessaoAberta;?>" />
+                                                <input type="hidden" name="idVal" id="idVal" value="<?php
+                                                // Verifica se foi selecionada uma opção
+                                                    if(isset($_POST['idVal'])) {
+                                                        $opcao = $_POST['idVal'];
+
+                                                        // Salva a opção selecionada na sessão
+                                                        $_SESSION['idVal'] = $opcao;
+                                                    }
+
+                                                ?>" />
+                                                <input type="hidden" name="encontro" id="encontro" value="<?php echo $encontro;?>" />
+
+
+                                                <p>
+                                                    <a href="pagamentoEventoForm.php?id=<?php echo $id;?>&idGuia=<?php echo $idGuia;?>&email=<?php echo $emailSessaoAberta;?>&idVal=<?php echo $ln['idVal'];?>" class="btn btn" >
+                                                    <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/> </a>
+                                                </p>
                                             </form>
 
                                         </div>
