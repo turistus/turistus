@@ -36,7 +36,7 @@ echo " encontro:".$dados_pagamento['encontro']." ";
 
 
 if (empty($dados_pagamento['id'])) {
-    header("Location: index.php");
+    header("Location: ../index.php");
     die("Erro: página encontrada!<br>");
 }
 
@@ -100,7 +100,7 @@ include_once './configPicPay.php';
 
         // Acessar o IF quando o usuário clica no botão
         if ($data['BtnPicPay'] == "Enviar") {
-            //echo "VARIAVEL DATA dentro do IF: ". $data;
+            echo "VARIAVEL DATA dentro do IF: ". $data;
             var_dump($data);
             $empty_input = false;
             $data = array_map('trim', $data);
