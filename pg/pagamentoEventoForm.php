@@ -96,11 +96,11 @@ include_once './configPicPay.php';
 
         // A variável recebe a mensagem de erro
         $msg = "";
-        echo "VARIAVEL DATA: ". $data;
+       // echo "VARIAVEL DATA: ". $data;
 
         // Acessar o IF quando o usuário clica no botão
-        if (!isset($data['BtnPicPay'])) {
-            echo "VARIAVEL DATA dentro do IF: ". $data;
+        if ($data['BtnPicPay'] =! "") {
+            //echo "VARIAVEL DATA dentro do IF: ". $data;
             var_dump($data);
             $empty_input = false;
             $data = array_map('trim', $data);
