@@ -1,7 +1,7 @@
 
 
 <?php
-ini_set('display_errors', 1);
+//ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
@@ -247,8 +247,9 @@ include_once './configPicPay.php';
                 <div class="col-md-4">
                    <p> Valor Total</p>
                     <div class="mb-1 text-muted"> R$ <?php echo number_format($total, 2, ",", ".");?></div>
-                    <div class="mb-1 text-muted"> <?php echo $nVagas;?></div>
+                    <div class="mb-1 text-muted"> <?php echo $vagas;?></div>
                     <div class="mb-1 text-muted"> <?php echo $nomeGuia;?></div>
+                    <div class="mb-1 text-muted"> <?php echo $encontro;?></div>
 
 
                 </div>
