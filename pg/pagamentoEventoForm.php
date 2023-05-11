@@ -35,6 +35,10 @@ echo "<br>";
 echo " encontro:".$dados_pagamento['encontro']." ";
 
 
+if (empty($dados_pagamento['id'])) {
+    header("Location: index.php");
+    die("Erro: página encontrada!<br>");
+}
 
 include_once '../connection.php';
 include_once './configPicPay.php';
@@ -263,7 +267,7 @@ include_once './configPicPay.php';
                         $msg = "";
                     }
                     ?>
-                    <form method="POST" action="pagamentoEventoForm.php?id=<?php echo $id; ?>">
+                    <form method="POST" action="pagamentoEventoForm.php?id=<?php echo $dados_pagamento['id']; ?>">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="first_name">Primeiro Nome</label>
