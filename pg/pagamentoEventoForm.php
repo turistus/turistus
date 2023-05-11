@@ -99,7 +99,7 @@ include_once './configPicPay.php';
         echo "VARIAVEL DATA: ". $data;
 
         // Acessar o IF quando o usuário clica no botão
-        if (isset($data['BtnPicPay'])) {
+        if (!isset($data['BtnPicPay'])) {
             echo "VARIAVEL DATA dentro do IF: ". $data;
             var_dump($data);
             $empty_input = false;
