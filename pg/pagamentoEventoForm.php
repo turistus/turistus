@@ -92,18 +92,18 @@ include_once './configPicPay.php';
         include_once 'menu.php';
 
         //Receber os dados do formulário
-        $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+        $datas = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
         // A variável recebe a mensagem de erro
         $msg = "";
        // echo "VARIAVEL DATA: ". $data;
 
         // Acessar o IF quando o usuário clica no botão
-        if ($data['BtnPicPay'] =! "") {
+        if ($datas['BtnPicPay'] =! "") {
             //echo "VARIAVEL DATA dentro do IF: ". $data;
             var_dump($data);
             $empty_input = false;
-            $data = array_map('trim', $data);
+            $data = array_map('trim', $datas);
             if (in_array("", $data)) {
                 $empty_input = true;
                 $msg = "<div class='alert alert-danger' role='alert'>Erro: Necessário preencher todos os campos!</div>";
