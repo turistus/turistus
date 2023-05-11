@@ -267,7 +267,7 @@ include_once './configPicPay.php';
                         $msg = "";
                     }
                     ?>
-                    <form method="POST" action="">
+                    <form method="POST" action="pagamentoEventoForm.php?id=<?php echo $dados_pagamento['id'];?>">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="first_name">Primeiro Nome</label>
