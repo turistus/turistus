@@ -67,7 +67,7 @@ include_once './configPicPay.php';
 
                 $result_products = $conn->prepare($query_products);
                 $result_products->bindParam(':id', $id, PDO::PARAM_INT);
-                $result_products->bindParam(':idVal', $idVal, PDO::PARAM_INT);
+                $result_products->bindParam(':idVal', $valorSelecionado, PDO::PARAM_INT);
                 $result_products->execute();
                 if ($result_products->rowCount() == 0) {
                     header("Location: eventos.php");
