@@ -41,7 +41,38 @@ include_once '../connection.php';
 include_once './configPicPay.php';
 
 ?>
+                <?php
+                // AQUI DEVE CHAMAR id,guia,valor do EVENTO.
+                $query_products = "SELECT
+                svcs.id AS GuiaID,
+                svcs.nome AS nomeGuia,
 
+                eventos.id AS id,
+                eventos.nome AS nomeEvento,
+                eventos.valor AS custoEvento,
+
+                val.id AS idValor,
+                val.idEvento,
+                val.vagas,
+                val.total AS total
+
+                FROM eventos
+
+                INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
+                INNER JOIN valores AS val ON val.idValor=:idVal
+                WHERE eventos.id =:id LIMIT 1 ";
+
+                $result_products = $conn->prepare($query_products);
+                $result_products->bindParam(':id', $id, PDO::PARAM_INT);
+                $result_products->bindParam(':idVal', $idVal, PDO::PARAM_INT);
+                $result_products->execute();
+                if ($result_products->rowCount() == 0) {
+                    header("Location: eventos.php");
+                    die("Erro: página encontrada!<br>");
+                }
+                $row_product = $result_products->fetch(PDO::FETCH_ASSOC);
+                extract($row_product);
+                ?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
