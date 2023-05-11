@@ -99,7 +99,7 @@ include_once './configPicPay.php';
 
         // Acessar o IF quando o usuário clica no botão
         if (isset($data['BtnPicPay'])) {
-            //var_dump($data);
+            var_dump($data);
             $empty_input = false;
             $data = array_map('trim', $data);
             if (in_array("", $data)) {
@@ -118,7 +118,6 @@ include_once './configPicPay.php';
                 $due_date = date(DATE_ATOM, strtotime($data['due_date']));
 
 
-var_dump($due_date);
                 //Salvar os dados da compra no banco de dados
                 $query_pay_picpay = "INSERT INTO payments_picpays (first_name, last_name, cpf, phone, email, expires_at, product_id, payments_statu_Id, created, guiaId, dataagendada, confirmado) VALUES (:first_name, :last_name, :cpf, :phone, :email, :expires_at, :product_id, 1, :created, :guiaId, :dataagendada, 1)";
 
