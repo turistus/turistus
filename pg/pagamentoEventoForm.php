@@ -43,7 +43,7 @@ include_once './configPicPay.php';
 ?>
                 <?php
                 // AQUI DEVE CHAMAR id,guia,valor do EVENTO.
-                $query_products = "SELECT
+                $query_products = "SELECT *,
                 svcs.id AS GuiaID,
                 svcs.nome AS nomeGuia,
 
@@ -54,7 +54,7 @@ include_once './configPicPay.php';
                 val.id AS idValor,
                 val.idEvento,
                 val.vagas,
-                val.total AS total
+                val.total
 
                 FROM eventos
 
