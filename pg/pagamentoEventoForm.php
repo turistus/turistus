@@ -245,7 +245,7 @@ include_once './configPicPay.php';
 
                 <div class="col-md-4">
                    <p> Valor Total</p>
-                    <div class="mb-1 text-muted"> R$ <?php echo number_format($total, 2, ",", ".");?></div>
+                    <div class="mb-1 text-muted">R$ <?php echo number_format($total, 2, ",", ".");?></div>
                     <div class="mb-1 text-muted">Vagas: <?php echo $vagas;?></div>
                     <div class="mb-1 text-muted">Guia: <?php echo $nomeGuia;?></div>
                     <div class="mb-1 text-muted">Ponto de Encontro: <?php echo $encontro;?></div>
