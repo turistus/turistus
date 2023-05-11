@@ -118,7 +118,7 @@ include_once './configPicPay.php';
                 $data['created'] = date('Y-m-d H:i:s');
                 $data['due_date'] = date('Y-m-d H:i:s', strtotime($data['created'] . '+3days'));
                 $due_date = date(DATE_ATOM, strtotime($data['due_date']));
-                var_dump($due_date);
+                var_dump($data['first_name']);
 
                 //Salvar os dados da compra no banco de dados
                 $query_pay_picpay = "INSERT INTO payments_picpays (first_name, last_name, cpf, phone, email, expires_at, product_id, payments_statu_Id, created, guiaId, dataagendada, confirmado) VALUES (:first_name, :last_name, :cpf, :phone, :email, :expires_at, :product_id, 1, :created, :guiaId, :dataagendada, 1)";
