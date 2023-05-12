@@ -114,7 +114,7 @@ echo " encontro:".$dados_pagamento['encontro']." ";
 
 
                 //Salvar os dados da compra no banco de dados
-                $query_pay_picpay = "INSERT INTO payments_picpays (first_name, last_name, cpf, phone, email, expires_at, product_id, payments_statu_Id, created, guiaId, dataagendada, valorId, nVagas, custoPedido) VALUES (:first_name, :last_name, :cpf, :phone, :email, :expires_at, :product_id, 1, :created, :guiaId, :dataagendada, :valorId, :nVagas, :custoPedido)";
+                $query_pay_picpay = "INSERT INTO payments_picpays (first_name, last_name, cpf, phone, email, expires_at, product_id, payments_statu_Id, created, guiaId, dataagendada, valorId, nVagas, custoPedido) VALUES (:first_name, :last_name, :cpf, :phone, :email, :expires_at, :product_id, 1, :created, :guiaId, :dataagendada, 1,1,1)";
 
                 $add_pay_picpay = $conn->prepare($query_pay_picpay);
 
@@ -128,9 +128,7 @@ echo " encontro:".$dados_pagamento['encontro']." ";
                 $add_pay_picpay->bindParam(":created", $data['created']);
                 $add_pay_picpay->bindParam(":guiaId", $data['idGuia']);
                 $add_pay_picpay->bindParam(":dataagendada", $data['dataagendada']);
-                $add_pay_picpay->bindParam(":valorId", $valorSelecionado);
-                $add_pay_picpay->bindParam(":nVagas", $vagas);
-                $add_pay_picpay->bindParam(":custoPedido", $total);
+
 
 
                 $add_pay_picpay->execute();
