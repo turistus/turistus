@@ -50,7 +50,7 @@ include_once './configPicPay.php';
                 eventos.nome AS nomeEvento,
                 eventos.valor AS custoEvento,
 
-                val.id,
+                val.id AS CODV,
                 val.idEvento,
                 val.vagas,
                 val.total
@@ -58,7 +58,7 @@ include_once './configPicPay.php';
                 FROM eventos
 
                 INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
-                INNER JOIN valores AS val ON val.id =:idVal
+                INNER JOIN valores AS val ON val.CODV =:idVal
                 WHERE eventos.id =:id LIMIT 1 ";
 
                 $result_products = $conn->prepare($query_products);
