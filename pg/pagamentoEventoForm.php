@@ -1,10 +1,6 @@
 
 
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-session_start();
 
 define('ACCESS', true);
 ob_start();
@@ -12,22 +8,6 @@ ob_start();
 //$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 //$idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 
-$dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-$id = $dados_pagamento['id'];
-$idGuia = $dados_pagamento['idGuia'];
-$emailSA = $dados_pagamento['email'];
-$valorSelecionado = $_POST['opcaoSelecionada'];
-
-
-echo " <br> id :".$dados_pagamento['id']." ";
-echo "<br>";
-echo " idVal:".$valorSelecionado." ";
-echo "<br>";
-echo " email:".$dados_pagamento['email']." ";
-echo "<br>";
-echo " idGuia:".$dados_pagamento['idGuia']." ";
-echo "<br>";
-echo " encontro:".$dados_pagamento['encontro']." ";
 
 
 include_once '../connection.php';
@@ -49,6 +29,24 @@ include_once './configPicPay.php';
 
         <?php
         include_once 'menu.php';
+
+
+$dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+$id = $dados_pagamento['id'];
+$idGuia = $dados_pagamento['idGuia'];
+$emailSA = $dados_pagamento['email'];
+$valorSelecionado = $_POST['opcaoSelecionada'];
+
+
+echo " <br> id :".$dados_pagamento['id']." ";
+echo "<br>";
+echo " idVal:".$valorSelecionado." ";
+echo "<br>";
+echo " email:".$dados_pagamento['email']." ";
+echo "<br>";
+echo " idGuia:".$dados_pagamento['idGuia']." ";
+echo "<br>";
+echo " encontro:".$dados_pagamento['encontro']." ";
 
         if (empty($id)) {
             header("Location: index.php");
