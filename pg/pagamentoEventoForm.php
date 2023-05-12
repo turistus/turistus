@@ -47,7 +47,6 @@ include_once './configPicPay.php';
                 // AQUI DEVE CHAMAR id,guia,valor do EVENTO.
                 $query_products = "SELECT *,
                 svcs.id AS GuiaID,
-                svcs.valor AS valorG,
                 svcs.nome AS nomeGuia,
                 eventos.id AS id,
                 eventos.nome AS nomeEvento,
