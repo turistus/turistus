@@ -4,66 +4,42 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-session_start();
 
 define('ACCESS', true);
 ob_start();
 //ID do EVENTOOO
-//$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-//$idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
-//$emailSA = filter_input(INPUT_GET, "email", FILTER_SANITIZE_EMAIL);
-//$idVal = filter_input(INPUT_GET, "$ln.['idValores']", FILTER_SANITIZE_NUMBER_INT);
+$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+$idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 
-$dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-$id = $dados_pagamento['id'];
-$idGuia = $dados_pagamento['idGuia'];
-$emailSA = $dados_pagamento['email'];
+echo $id ." ";
+echo $idGuia;
 
-
-    $valorSelecionado = $_POST['opcaoSelecionada'];
-
-
-echo " <br> id :".$dados_pagamento['id']." ";
-echo "<br>";
-echo " idVal:".$valorSelecionado." ";
-echo "<br>";
-echo " email:".$dados_pagamento['email']." ";
-echo "<br>";
-echo " idGuia:".$dados_pagamento['idGuia']." ";
-echo "<br>";
-echo " encontro:".$dados_pagamento['encontro']." ";
-
-
-
+if (empty($id)) {
+    header("Location: index.php");
+    die("Erro: página encontrada!<br>");
+}
 
 include_once '../connection.php';
-include_once './configPicPay.php';
+include_once 'config.php';
 
 ?>
                 <?php
                 // AQUI DEVE CHAMAR id,guia,valor do EVENTO.
                 $query_products = "SELECT *,
                 svcs.id AS GuiaID,
+                svcs.valor AS valorG,
                 svcs.nome AS nomeGuia,
-
                 eventos.id AS id,
                 eventos.nome AS nomeEvento,
-                eventos.valor AS custoEvento,
+                eventos.valor AS custoEvento
 
-                val.id,
-                val.idEvento,
-                val.vagas,
-                val.total
+                FROM eventos
 
-                FROM valores AS val
-
-
-                INNER JOIN eventos  ON val.id = :idVal
                 INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
-                WHERE eventos.id = val.idEvento LIMIT 1 ";
+                WHERE eventos.id =:id LIMIT 1 ";
 
                 $result_products = $conn->prepare($query_products);
-                $result_products->bindParam(':idVal', $valorSelecionado, PDO::PARAM_INT);
+                $result_products->bindParam(':id', $id, PDO::PARAM_INT);
                 $result_products->execute();
                 if ($result_products->rowCount() == 0) {
                     header("Location: eventos.php");
@@ -78,9 +54,9 @@ include_once './configPicPay.php';
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <link rel="shortcut icon" href="./images/icon/logo.ico" >
-        <title>Turist Us - Formulario de Pagamento</title>
+        <title>Desconecta - formulario de chekout</title>
     </head>
     <body>
 
@@ -92,12 +68,10 @@ include_once './configPicPay.php';
 
         // A variável recebe a mensagem de erro
         $msg = "";
-       // echo "VARIAVEL DATA: ". $data;
 
         // Acessar o IF quando o usuário clica no botão
-        if ($data['BtnPicPay'] == "Enviar") {
-            echo "VARIAVEL DATA dentro do IF: ". $data;
-            var_dump($data);
+        if (isset($data['BtnPicPay'])) {
+            //var_dump($data);
             $empty_input = false;
             $data = array_map('trim', $data);
             if (in_array("", $data)) {
@@ -114,10 +88,11 @@ include_once './configPicPay.php';
                 $data['created'] = date('Y-m-d H:i:s');
                 $data['due_date'] = date('Y-m-d H:i:s', strtotime($data['created'] . '+3days'));
                 $due_date = date(DATE_ATOM, strtotime($data['due_date']));
-                var_dump($data['first_name']);
+
+
 
                 //Salvar os dados da compra no banco de dados
-                $query_pay_picpay = "INSERT INTO payments_picpays (first_name, last_name, cpf, phone, email, expires_at, product_id, payments_statu_Id, created, guiaId, dataagendada, confirmado) VALUES (:first_name, :last_name, :cpf, :phone, :email, :expires_at, :product_id, 1, :created, :guiaId, :dataagendada, 1)";
+                $query_pay_picpay = "INSERT INTO payments_picpays (first_name, last_name, cpf, phone, email, expires_at, product_id, payments_statu_Id, created, guiaId) VALUES (:first_name, :last_name, :cpf, :phone, :email, :expires_at, :product_id, 1, :created, :guiaId)";
 
                 $add_pay_picpay = $conn->prepare($query_pay_picpay);
 
@@ -130,7 +105,6 @@ include_once './configPicPay.php';
                 $add_pay_picpay->bindParam(":product_id", $id);
                 $add_pay_picpay->bindParam(":created", $data['created']);
                 $add_pay_picpay->bindParam(":guiaId", $data['idGuia']);
-                $add_pay_picpay->bindParam(":dataagendada", $data['dataagendada']);
 
                 $add_pay_picpay->execute();
              // FIM DA INSERT EM PAYMENTS PICPAY
@@ -143,7 +117,7 @@ include_once './configPicPay.php';
                         "referenceId" => $last_insert_id,
                         "callbackUrl" => CALLBACKURL,
                         "returnUrl" => RETURNURL . $last_insert_id,
-                        "value" => (double) $total,
+                        "value" => (double) $custoEvento,
                         "expiresAt" => $due_date,
                         "buyer" => [
                             "firstName" => $data['first_name'],
@@ -211,7 +185,7 @@ include_once './configPicPay.php';
                                         echo "<img src='" . $data_result->qrcode->base64 . "'><br><br>";
                                         ?>
                                         <p class="lead">Se tiver algum problema com a leitura do QR code, atualize o aplicativo.</p>
-                                        <p class="lead"><a href="../pg/sobre.php" target="_blank">Saiba quem somos</a></p>
+                                        <p class="lead"><a href="https://meajuda.picpay.com/hc/pt-br/articles/360045117912-Quero-fazer-a-adi%C3%A7%C3%A3o-mas-a-op%C3%A7%C3%A3o-n%C3%A3o-aparece-para-mim-E-agora-" target="_blank">Saiba como atualizar o aplicativo</a></p>
                                     </div>
                                     <div class="modal-footer">
 
@@ -243,11 +217,8 @@ include_once './configPicPay.php';
 
                 <div class="col-md-4">
                    <p> Valor Total</p>
-                    <div class="mb-1 text-muted">R$ <?php echo number_format($total, 2, ",", ".");?></div>
-                    <div class="mb-1 text-muted">Vagas: <?php echo $vagas;?></div>
-                    <div class="mb-1 text-muted">Guia: <?php echo $nomeGuia;?></div>
-                    <div class="mb-1 text-muted">Ponto de Encontro: <?php echo $encontro;?></div>
-
+                    <div class="mb-1 text-muted"> R$ <?php echo number_format($custoEvento, 2, ",", ".");?></div>
+                    <div class="mb-1 text-muted"> <?php echo $nomeGuia;?></div>
 
                 </div>
             </div>
@@ -263,7 +234,7 @@ include_once './configPicPay.php';
                         $msg = "";
                     }
                     ?>
-                    <form method="POST" action="pagamentoEventoForm.php?id=<?php echo $id;?>">
+                    <form method="POST" action="pagamentoEventoForm.php?id=<?php echo $id; ?>">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="first_name">Primeiro Nome</label>
@@ -307,22 +278,13 @@ include_once './configPicPay.php';
                         <div class="form-group">
                             <label for="email">E-mail</label>
                             <input type="email" name="email" id="email" class="form-control" placeholder="Digite o seu melhor e-mail" value="<?php
-                                if (isset($emailSA)) {
-                                    echo $emailSA;
+                                if (isset($data['email'])) {
+                                    echo $data['email'];
                                 }
                     ?>">
                         </div>
 
                         <div class="form-group">
-                            <label for="dataagendada">Data</label>
-                            <input type="date" name="dataagendada" id="dataagendada" class="form-control" value="<?php
-                                if (isset($data['dataagendada'])) {
-                                    echo $data['dataagendada'];
-                                }
-                    ?>">
-                        </div>
-
-                        <div class=" col-md-6 col-sm-6">
 
                             <input type="hidden" name="idGuia" id="idGuia" class="form-control" value="<?php
                                 if (isset($row_product['idGuia'])) {
@@ -341,7 +303,7 @@ include_once './configPicPay.php';
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
+        <script src="js/custom.js"></script>
 
         <?php
         if (isset($data_result->paymentUrl)) {
@@ -359,6 +321,5 @@ include_once './configPicPay.php';
 
     <?php
   include_once '../rodape.php';
-
   ?>
 </html>
