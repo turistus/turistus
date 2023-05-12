@@ -9,11 +9,11 @@ session_start();
 define('ACCESS', true);
 ob_start();
 //ID do EVENTOOO
-//$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 //$idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 
 $dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-$id = $dados_pagamento['id'];
+//$id = $dados_pagamento['id'];
 $idGuia = $dados_pagamento['idGuia'];
 $emailSA = $dados_pagamento['email'];
 
@@ -40,7 +40,7 @@ if (empty($id)) {
 }
 
 include_once '../connection.php';
-include_once 'config.php';
+include_once './configPicPay.php';
 
 ?>
                 <?php
