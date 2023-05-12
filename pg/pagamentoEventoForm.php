@@ -59,11 +59,17 @@ echo " encontro:".$dados_pagamento['encontro']." ";
         svcs.nome AS nomeGuia,
         eventos.id AS id,
         eventos.nome AS nomeEvento,
-        eventos.valor AS custoEvento
+        eventos.valor AS custoEventom
+
+        val.id AS idValo,
+        val.idEvento,
+        val.vagas,
+        val.total
 
         FROM eventos
 
         INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
+        LEFT JOIN valores AS val ON val.idEvento=eventos.id
         WHERE eventos.id =:id LIMIT 1 ";
 
         $result_products = $conn->prepare($query_products);
