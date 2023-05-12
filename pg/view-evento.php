@@ -198,10 +198,6 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                     </select>
                             </div>
 
-
-
-
-
                             <!-- botao -->
                             <div class="col-md-12 mt-2" >
                                 <div class="row">

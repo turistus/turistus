@@ -5,7 +5,7 @@
 define('ACCESS', true);
 ob_start();
 //ID do EVENTOOO
-//$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+$id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_NUMBER_INT);
 //$idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 
 
@@ -32,7 +32,7 @@ include_once './configPicPay.php';
 
 
 $dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-$id = $dados_pagamento['id'];
+//$id = $dados_pagamento['id'];
 $idGuia = $dados_pagamento['idGuia'];
 $emailSA = $dados_pagamento['email'];
 $valorSelecionado = $_POST['opcaoSelecionada'];
@@ -49,7 +49,7 @@ echo "<br>";
 echo " encontro:".$dados_pagamento['encontro']." ";
 
         if (empty($dados_pagamento['id'])) {
-            header("Location: index.php");
+            header("Location: ../index.php");
             die("Erro: página encontrada!<br>");
         }else{
 
