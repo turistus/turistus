@@ -309,6 +309,10 @@ echo " encontro:".$dados_pagamento['encontro']." ";
                                 }
                     ?>">
                         </div>
+                        <div class="form-group">
+                            <label for="dataagendada">E-mail</label>
+                            <input type="date" name="dataagendada" id="dataagendada" class="form-control" >
+                        </div>
 
                         <div class="form-group">
 
@@ -318,6 +322,14 @@ echo " encontro:".$dados_pagamento['encontro']." ";
                                 }
                     ?>">
                         </div>
+
+
+                        <input type="hidden" name="email" id="email" value="<?php echo $emailSA;?>" />
+                        <input type="hidden" name="custoPedido" id="custoPedido" value="<?php echo $custoPedido;?>"/>
+                        <input type="hidden" name="encontro" id="encontro" value="<?php echo $encontro;?>" />
+
+
+
                             <!-- BOTAO ENVIAR PICPAY -->
                         <button type="submit" name="BtnPicPay" class="btn btn-primary" value="Enviar">Enviar Pic Pay</button>
 
