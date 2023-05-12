@@ -48,7 +48,7 @@ echo " idGuia:".$dados_pagamento['idGuia']." ";
 echo "<br>";
 echo " encontro:".$dados_pagamento['encontro']." ";
 
-        if (empty($id)) {
+        if (empty($dados_pagamento['id'])) {
             header("Location: index.php");
             die("Erro: página encontrada!<br>");
         }else{
