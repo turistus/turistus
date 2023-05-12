@@ -221,8 +221,8 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
 
                                                 <p>
-                                                    <a href="pagamentoEventoForm.php" class="btn btn" >
-                                                    <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/> </a>
+
+                                                    <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/>
                                                 </p>
                                             </form>
 
