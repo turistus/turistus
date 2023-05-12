@@ -59,6 +59,8 @@ echo " encontro:".$dados_pagamento['encontro']." ";
         svcs.nome AS nomeGuia,
         eventos.id AS id,
         eventos.nome AS nomeEvento,
+        eventos.encontro,
+        eventos.descricao,
 
 
         val.id AS idValo,
@@ -236,9 +238,13 @@ echo " encontro:".$dados_pagamento['encontro']." ";
                 </div>
 
                 <div class="col-md-4">
-                   <p> Valor Total</p>
-                    <div class="mb-1 text-muted"> R$ <?php echo number_format($custoEvento, 2, ",", ".");?></div>
-                    <div class="mb-1 text-muted"> <?php echo $nomeGuia;?></div>
+                   <p> Pedido </p>
+                    <div class="mb-1 text-muted"> <?php echo $vagas." Vagas ";?></div>
+                    <div class="mb-1 text-muted"> R$ <?php echo number_format($total, 2, ",", ".");?></div>
+
+                    <div class="mb-1 text-muted"> <?php echo $descricao;?></div>
+                    <div class="mb-1 text-muted"> <?php echo $encontro;?></div>
+
 
                 </div>
             </div>
