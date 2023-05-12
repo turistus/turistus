@@ -16,9 +16,7 @@ $dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $id = $dados_pagamento['id'];
 $idGuia = $dados_pagamento['idGuia'];
 $emailSA = $dados_pagamento['email'];
-
-
-    $valorSelecionado = $_POST['opcaoSelecionada'];
+$valorSelecionado = $_POST['opcaoSelecionada'];
 
 
 echo " <br> id :".$dados_pagamento['id']." ";
@@ -31,42 +29,12 @@ echo " idGuia:".$dados_pagamento['idGuia']." ";
 echo "<br>";
 echo " encontro:".$dados_pagamento['encontro']." ";
 
-echo $id ." ";
-echo $idGuia;
-
-if (empty($id)) {
-    header("Location: index.php");
-    die("Erro: página encontrada!<br>");
-}
 
 include_once '../connection.php';
 include_once './configPicPay.php';
 
 ?>
-                <?php
-                // AQUI DEVE CHAMAR id,guia,valor do EVENTO.
-                $query_products = "SELECT *,
-                svcs.id AS GuiaID,
-                svcs.nome AS nomeGuia,
-                eventos.id AS id,
-                eventos.nome AS nomeEvento,
-                eventos.valor AS custoEvento
 
-                FROM eventos
-
-                INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
-                WHERE eventos.id =:id LIMIT 1 ";
-
-                $result_products = $conn->prepare($query_products);
-                $result_products->bindParam(':id', $id, PDO::PARAM_INT);
-                $result_products->execute();
-                if ($result_products->rowCount() == 0) {
-                    header("Location: eventos.php");
-                    die("Erro: página encontrada!<br>");
-                }
-                $row_product = $result_products->fetch(PDO::FETCH_ASSOC);
-                extract($row_product);
-                ?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -82,6 +50,35 @@ include_once './configPicPay.php';
         <?php
         include_once 'menu.php';
 
+        if (empty($id)) {
+            header("Location: index.php");
+            die("Erro: página encontrada!<br>");
+        }else{
+            $id = $dados_pagamento['id'];
+        // AQUI DEVE CHAMAR id,guia,valor do EVENTO.
+        $query_products = "SELECT *,
+        svcs.id AS GuiaID,
+        svcs.nome AS nomeGuia,
+        eventos.id AS id,
+        eventos.nome AS nomeEvento,
+        eventos.valor AS custoEvento
+
+        FROM eventos
+
+        INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
+        WHERE eventos.id =:id LIMIT 1 ";
+
+        $result_products = $conn->prepare($query_products);
+        $result_products->bindParam(':id', $id, PDO::PARAM_INT);
+        $result_products->execute();
+        if ($result_products->rowCount() == 0) {
+            header("Location: eventos.php");
+            die("Erro: página encontrada!<br>");
+        }
+        $row_product = $result_products->fetch(PDO::FETCH_ASSOC);
+        extract($row_product);
+
+        }
         //Receber os dados do formulário
         $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
