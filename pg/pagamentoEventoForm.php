@@ -128,7 +128,7 @@ echo " encontro:".$dados_pagamento['encontro']." ";
                 $add_pay_picpay->bindParam(":created", $data['created']);
                 $add_pay_picpay->bindParam(":guiaId", $data['idGuia']);
                 $add_pay_picpay->bindParam(":dataagendada", $data['dataagendada']);
-                $add_pay_picpay->bindParam(":valorId", $data['idValo']);
+                $add_pay_picpay->bindParam(":valorId", $data['valorId']);
 
 
 
