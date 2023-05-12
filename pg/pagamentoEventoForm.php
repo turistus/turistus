@@ -327,6 +327,16 @@ echo " encontro:".$dados_pagamento['encontro']." ";
                     ?>">
                         </div>
 
+                        <div class="form-group">
+
+                            <input type="text" name="valorId" id="valorId" class="form-control" value="<?php
+                                if (isset($valorSelecionado)) {
+                                    echo $valorSelecionado;
+                                }
+                    ?>">
+                        </div>
+
+
                             <!-- BOTAO ENVIAR PICPAY -->
                         <button type="submit" name="BtnPicPay" class="btn btn-primary" value="Enviar">Enviar Pic Pay</button>
 
