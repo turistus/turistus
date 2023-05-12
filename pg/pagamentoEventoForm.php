@@ -54,7 +54,7 @@ include_once './configPicPay.php';
             header("Location: index.php");
             die("Erro: página encontrada!<br>");
         }else{
-            $id = $dados_pagamento['id'];
+
         // AQUI DEVE CHAMAR id,guia,valor do EVENTO.
         $query_products = "SELECT *,
         svcs.id AS GuiaID,
