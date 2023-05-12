@@ -60,7 +60,6 @@ include_once './configPicPay.php';
                 INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
                 INNER JOIN valores AS val ON val.CODV =:idVal
                ";
-
                 $result_products = $conn->prepare($query_products);
 
                 $result_products->bindParam(':idVal', $valorSelecionado, PDO::PARAM_INT);
