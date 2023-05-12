@@ -59,7 +59,7 @@ echo " encontro:".$dados_pagamento['encontro']." ";
         svcs.nome AS nomeGuia,
         eventos.id AS id,
         eventos.nome AS nomeEvento,
-        eventos.valor AS custoEventom
+
 
         val.id AS idValo,
         val.idEvento,
