@@ -19,10 +19,7 @@ $id = $dados_pagamento['id'];
 $idGuia = $dados_pagamento['idGuia'];
 $emailSA = $dados_pagamento['email'];
 
-if (isset($_POST['opcaoSelecionada'])) {
-    $valorSelecionado = $_POST['opcaoSelecionada'];
-    // Faça algo com o valor selecionado, como processar um formulário ou consultar um banco de dados
-  }
+
 
 echo " <br> id :".$dados_pagamento['id']." ";
 echo "<br>";
@@ -46,6 +43,12 @@ include_once './configPicPay.php';
 ?>
                 <?php
                 // AQUI DEVE CHAMAR id,guia,valor do EVENTO.
+
+            if (isset($_POST['opcaoSelecionada'])) {
+                    $valorSelecionado = $_POST['opcaoSelecionada'];
+                    // Faça algo com o valor selecionado, como processar um formulário ou consultar um banco de dados
+
+
                 $query_products = "SELECT *,
                 svcs.id AS GuiaID,
                 svcs.nome AS nomeGuia,
@@ -75,6 +78,9 @@ include_once './configPicPay.php';
                 }
                 $row_product = $result_products->fetch(PDO::FETCH_ASSOC);
                 extract($row_product);
+            }else{
+                echo "sem Opçao Selecionado entao.";
+              }
                 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -113,7 +119,7 @@ include_once './configPicPay.php';
             }
 
             // Acessa o IF quando não há nenhum erro no formulário
-            if (!$empty_input) {
+            if ($empty_input) {
                 //Data para salvar no BD e enviar para o PicPay
                 $data['created'] = date('Y-m-d H:i:s');
                 $data['due_date'] = date('Y-m-d H:i:s', strtotime($data['created'] . '+3days'));
