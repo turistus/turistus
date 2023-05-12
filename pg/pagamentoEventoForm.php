@@ -55,14 +55,14 @@ include_once './configPicPay.php';
                 val.vagas,
                 val.total
 
-                FROM eventos
+                FROM valores AS val
 
+
+                INNER JOIN eventos  ON val.id = :idVal
                 INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
-                INNER JOIN valores AS val ON val.id =:idVal
-                WHERE eventos.id =:id LIMIT 1 ";
+                WHERE eventos.id = val.idEvento LIMIT 1 ";
 
                 $result_products = $conn->prepare($query_products);
-                $result_products->bindParam(':id', $id, PDO::PARAM_INT);
                 $result_products->bindParam(':idVal', $valorSelecionado, PDO::PARAM_INT);
                 $result_products->execute();
                 if ($result_products->rowCount() == 0) {
@@ -263,7 +263,7 @@ include_once './configPicPay.php';
                         $msg = "";
                     }
                     ?>
-                    <form method="POST" action="pagamentoEventoForm.php?id=<?php echo $idEvento;?>">
+                    <form method="POST" action="pagamentoEventoForm.php?id=<?php echo $id;?>">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="first_name">Primeiro Nome</label>
