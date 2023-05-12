@@ -5,7 +5,7 @@
 define('ACCESS', true);
 ob_start();
 //ID do EVENTOOO
-$id = filter_input(INPUT_POST, "id", FILTER_SANITIZE_NUMBER_INT);
+$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 //$idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 
 
