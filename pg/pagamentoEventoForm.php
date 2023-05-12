@@ -34,10 +34,7 @@ echo "<br>";
 echo " encontro:".$dados_pagamento['encontro']." ";
 
 
-if (empty($id)) {
-    header("Location: ../index.php");
-    die("Erro: página encontrada!<br>");
-}else{
+
 
 include_once '../connection.php';
 include_once './configPicPay.php';
@@ -362,6 +359,6 @@ include_once './configPicPay.php';
 
     <?php
   include_once '../rodape.php';
-   }
+
   ?>
 </html>
