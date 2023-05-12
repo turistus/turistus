@@ -23,7 +23,7 @@ if (isset($_POST['opcaoSelecionada'])) {
     $valorSelecionado = $_POST['opcaoSelecionada'];
     // Faça algo com o valor selecionado, como processar um formulário ou consultar um banco de dados
   }else{
-    echo "sem Opçao Selecionado"
+    echo "sem Opçao Selecionado";
   }
 
 echo " <br> id :".$dados_pagamento['id']." ";
