@@ -139,7 +139,7 @@ echo " encontro:".$dados_pagamento['encontro']." ";
                         "referenceId" => $last_insert_id,
                         "callbackUrl" => CALLBACKURL,
                         "returnUrl" => RETURNURL . $last_insert_id,
-                        "value" => (double) $custoEvento,
+                        "value" => (double) $total,
                         "expiresAt" => $due_date,
                         "buyer" => [
                             "firstName" => $data['first_name'],
@@ -243,7 +243,7 @@ echo " encontro:".$dados_pagamento['encontro']." ";
                     <div class="mb-1 text-muted"> R$ <?php echo number_format($total, 2, ",", ".");?></div>
 
                     <div class="mb-1 text-muted"> <?php echo $descricao;?></div>
-                    <div class="mb-1 text-muted"> <?php echo $encontro;?></div>
+                    <div class="mb-1 text-muted">Ponto de inicio <?php echo $encontro;?></div>
 
 
                 </div>
