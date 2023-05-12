@@ -89,7 +89,7 @@ include_once './configPicPay.php';
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-        <link rel="shortcut icon" href="./images/icon/logo.ico" >
+        <link rel="shortcut icon" href="./images/Logooriginal.png" >
         <title>Turist Us - Formulario de Pagamento</title>
     </head>
     <body>
@@ -273,7 +273,7 @@ include_once './configPicPay.php';
                         $msg = "";
                     }
                     ?>
-                    <form method="POST" action="pagamentoEventoForm.php?id=<?php echo $dados_pagamento['id'];?>">
+                    <form method="POST" action="pagamentoEventoForm.php?id=<?php echo $id;?>">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="first_name">Primeiro Nome</label>
