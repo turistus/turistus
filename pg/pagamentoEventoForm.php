@@ -129,8 +129,8 @@ echo " encontro:".$dados_pagamento['encontro']." ";
                 $add_pay_picpay->bindParam(":guiaId", $data['idGuia']);
                 $add_pay_picpay->bindParam(":dataagendada", $data['dataagendada']);
                 $add_pay_picpay->bindParam(":valorId", $data['valorId']);
-                $add_pay_picpay->bindParam(":nVagas", $row_product['vagas']);
-                $add_pay_picpay->bindParam(":custoPedido", $row_product['total']);
+                $add_pay_picpay->bindParam(":nVagas", $vagas);
+                $add_pay_picpay->bindParam(":custoPedido", $total);
 
 
 
@@ -245,13 +245,8 @@ echo " encontro:".$dados_pagamento['encontro']." ";
 
                 <div class="col-md-4">
                    <p> Pedido </p>
-                    <div class="mb-1 text-muted"> <?php
-                    $bValor = "SELECT id AS CoValor, vagas AS v, total AS t FROM valores WHERE valores.CoValor = :valorSelecionado limit 1";
-                    $reBValor = $conn->prepare($bValor);
-                    $reBValor->bindParam(':valorSelecionado', $valorSelecionado, PDO::PARAM_INT);
-                    $reBValor->execute();
-                    echo $reBValor['vagas']." Vagas ";?></div>
-                    <div class="mb-1 text-muted"> R$ <?php echo number_format($row_product['total'], 2, ",", ".");?></div>
+                    <div class="mb-1 text-muted"> <?php echo $vagas." Vagas ";?></div>
+                    <div class="mb-1 text-muted"> R$ <?php echo number_format($total, 2, ",", ".");?></div>
 
                     <div class="mb-1 text-muted"> <?php echo $descricao;?></div>
                     <div class="mb-1 text-muted">Ponto de inicio <?php echo $encontro;?></div>
