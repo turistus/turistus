@@ -4,7 +4,8 @@
 
 define('ACCESS', true);
 ob_start();
-
+//ID do EVENTOOO
+$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 //$idGuia = filter_input(INPUT_GET, "idGuia", FILTER_SANITIZE_NUMBER_INT);
 
 
@@ -35,8 +36,7 @@ $dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $idGuia = $dados_pagamento['idGuia'];
 $emailSA = $dados_pagamento['email'];
 $valorSelecionado = $_POST['opcaoSelecionada'];
-//ID do EVENTOOO
-$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+
 
 echo " <br> id :".$dados_pagamento['id']." ";
 echo "<br>";
@@ -72,10 +72,10 @@ echo " encontro:".$dados_pagamento['encontro']." ";
 
         INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
         LEFT JOIN valores AS val ON val.idEvento=eventos.id
-        WHERE idValo = :id LIMIT 1 ";
+        WHERE eventos.id =:id GROUP BY eventos.id LIMIT 1 ";
 
         $result_products = $conn->prepare($query_products);
-        $result_products->bindParam(':id', $valorSelecionado, PDO::PARAM_INT);
+        $result_products->bindParam(':id', $id, PDO::PARAM_INT);
         $result_products->execute();
         if ($result_products->rowCount() == 0) {
             header("Location: eventos.php");
