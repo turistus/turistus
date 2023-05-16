@@ -94,7 +94,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
              LEFT JOIN servicos AS guias ON guias.id=eventos.idGuia
              LEFT JOIN valores AS val ON val.idEvento=eventos.id
              INNER JOIN foto_Eventos AS ftEventos ON ftEventos.idEv=eventos.id
-             WHERE eventos.id =:id ";
+             WHERE eventos.id =:id GROUP BY val.idEvento";
 
 
 
