@@ -72,7 +72,7 @@ echo " encontro:".$dados_pagamento['encontro']." ";
 
         INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
         LEFT JOIN valores AS val ON val.idEvento=eventos.id
-        WHERE val.idValo = :id GROUP BY val.idEvento LIMIT 1 ";
+        WHERE val.idValo = :id GROUP BY val.idValo LIMIT 1 ";
 
         $result_products = $conn->prepare($query_products);
         $result_products->bindParam(':id', $valorSelecionado, PDO::PARAM_INT);
