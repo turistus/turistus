@@ -231,6 +231,15 @@ echo " encontro:".$dados_pagamento['encontro']." ";
         ?>
 
         <div class="container">
+
+
+
+        <?php
+            while ($row_product = $result_products->fetch(PDO::FETCH_ASSOC)) {
+              extract($row_product);
+
+            ?>
+
             <div class="py-5 text-center">
 
                 <img class="d-block mx-auto mb-4" src="../images/logo/LG.jpg" alt="" width="72" height="72">
@@ -254,7 +263,7 @@ echo " encontro:".$dados_pagamento['encontro']." ";
 
                 </div>
             </div>
-
+<?php  } ?>
             <hr>
 
             <div class="row mb-5">
