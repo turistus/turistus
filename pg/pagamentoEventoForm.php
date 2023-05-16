@@ -245,8 +245,8 @@ echo " encontro:".$dados_pagamento['encontro']." ";
 
                 <div class="col-md-4">
                    <p> Pedido </p>
-                    <div class="mb-1 text-muted"> <?php echo $vagas." Vagas ";?></div>
-                    <div class="mb-1 text-muted"> R$ <?php echo number_format($total, 2, ",", ".");?></div>
+                    <div class="mb-1 text-muted"> <?php echo $row_product['vagas']." Vagas ";?></div>
+                    <div class="mb-1 text-muted"> R$ <?php echo number_format($row_product['total'], 2, ",", ".");?></div>
 
                     <div class="mb-1 text-muted"> <?php echo $descricao;?></div>
                     <div class="mb-1 text-muted">Ponto de inicio <?php echo $encontro;?></div>
