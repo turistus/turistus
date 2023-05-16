@@ -35,10 +35,7 @@ ob_start();
       }
     }
 
-    .rotated {
-  transform: rotate(-2deg); /* Equal to rotateZ(45deg) */
 
-}
 
   </style>
 

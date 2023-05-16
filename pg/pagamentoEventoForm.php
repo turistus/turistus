@@ -331,7 +331,7 @@ echo " encontro:".$dados_pagamento['encontro']." ";
 
                         <div class="form-group">
 
-                            <input type="text" name="valorId" id="valorId" class="form-control" value="<?php
+                            <input type="hidden" name="valorId" id="valorId" class="form-control" value="<?php
                                 if (isset($valorSelecionado)) {
                                     echo $valorSelecionado;
                                 }
