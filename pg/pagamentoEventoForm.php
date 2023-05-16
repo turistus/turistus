@@ -71,11 +71,12 @@ echo " encontro:".$dados_pagamento['encontro']." ";
         FROM eventos
 
         INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
-        INNER JOIN valores AS val ON val.idEvento=eventos.id GROUP BY val.idEvento
-        WHERE eventos.id =:id LIMIT 1 ";
+        INNER JOIN valores AS val ON val.idEvento=eventos.id
+        WHERE eventos.id =:id AND WHERE val.idValo = :valorSelecionado GROUP BY val.idEvento LIMIT 1 ";
 
         $result_products = $conn->prepare($query_products);
         $result_products->bindParam(':id', $id, PDO::PARAM_INT);
+        $result_products->bindParam(':valorSelecionado', $valorSelecionado, PDO::PARAM_INT);
         $result_products->execute();
         if ($result_products->rowCount() == 0) {
             header("Location: eventos.php");
