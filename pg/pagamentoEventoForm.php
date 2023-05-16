@@ -250,7 +250,7 @@ echo " encontro:".$dados_pagamento['encontro']." ";
                 <div class="col-md-4">
                    <p> Pedido </p>
                    <?php
-            while ($vagas) {
+            while ($valorSelecionado == $idValo) {
 
             ?>
                     <div class="mb-1 text-muted"> <?php echo $vagas." Vagas ";?></div>
