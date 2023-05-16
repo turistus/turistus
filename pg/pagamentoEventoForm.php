@@ -246,7 +246,7 @@ echo " encontro:".$dados_pagamento['encontro']." ";
                 <div class="col-md-4">
                    <p> Pedido </p>
                     <div class="mb-1 text-muted"> <?php
-                    $bValor = "SELECT id AS CoValor, vagas AS v, total AS t FROM valores WHERE valores.CoValor = :valorSelecionado";
+                    $bValor = "SELECT id AS CoValor, vagas AS v, total AS t FROM valores WHERE valores.CoValor = :valorSelecionado limit 1";
                     $reBValor = $conn->prepare($bValor);
                     $reBValor->bindParam(':valorSelecionado', $valorSelecionado, PDO::PARAM_INT);
                     $reBValor->execute();
