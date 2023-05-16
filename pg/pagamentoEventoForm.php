@@ -249,13 +249,10 @@ echo " encontro:".$dados_pagamento['encontro']." ";
 
                 <div class="col-md-4">
                    <p> Pedido </p>
-                   <?php
-            while ($valorSelecionado == $idValo) {
 
-            ?>
                     <div class="mb-1 text-muted"> <?php echo $vagas." Vagas ";?></div>
                     <div class="mb-1 text-muted"> R$ <?php echo number_format($total, 2, ",", ".");?></div>
-<?php  } ?>
+
                     <div class="mb-1 text-muted"> <?php echo $descricao;?></div>
                     <div class="mb-1 text-muted">Ponto de inicio <?php echo $encontro;?></div>
 
