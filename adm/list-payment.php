@@ -59,7 +59,7 @@ include_once '../adm/validate.php';
                     </tr>
                 </thead>
                 <?php
-                $query_payments ="SELECT *,
+                $query_payments ="SELECT
                     pay.id AS id,
                     pay.first_name AS first_name,
                     pay.email AS email,
@@ -77,8 +77,8 @@ include_once '../adm/validate.php';
                     valores.total
 
                     FROM payments_picpays AS pay
-                    INNER JOIN eventos AS evts ON evts.idE = pay.product_id
-                    INNER JOIN valores AS val ON val.idVal = pay.valorId
+                    INNER JOIN eventos ON eventos.id = pay.product_id
+                    INNER JOIN valores ON valores.id = pay.valorId
                     INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
                     ORDER BY pay.id DESC ";
 
