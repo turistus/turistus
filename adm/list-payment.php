@@ -87,7 +87,7 @@ include_once '../adm/validate.php';
                     INNER JOIN eventos ON eventos.idE = pay.product_id
                     INNER JOIN valores ON valores.idVal = pay.valorId
                     INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
-                    ORDER BY pay.id DESC ";
+                    WHERE pay.id  ";
 
                 $result_payments = $conn->prepare($query_payments);
                 $result_payments->execute();
