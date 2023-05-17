@@ -87,7 +87,7 @@ include_once '../adm/validate.php';
                     INNER JOIN eventos ON eventos.idE = pay.product_id
                     INNER JOIN valores ON valores.idVal = pay.valorId
                     INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
-                    WHERE pay.id  ";
+                    ORDER BY pay.id DESC ";
 
                 $result_payments = $conn->prepare($query_payments);
                 $result_payments->execute();
@@ -104,8 +104,8 @@ include_once '../adm/validate.php';
                         //EVENTOS
                         echo "<td>$nomeE</td>";
                         //VALORES
-                        echo "<td>$vagas</td>";
-                        echo "<td>". number_format($total, 2, ",", ".") ."</td>";
+                        echo "<td>$row_payment.['vagas']</td>";
+                        echo "<td>". number_format($row_payment['total'], 2, ",", ".") ."</td>";
                         //EVENTO tem Guia
                         echo "<td>ID GUIA nome</td>";
                         //Payments Status
