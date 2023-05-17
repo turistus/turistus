@@ -105,7 +105,7 @@ include_once '../adm/validate.php';
                         echo "<td>".$row_payment['vagas']."</td>";
                         echo "<td>". number_format($row_payment['total'], 2, ",", ".") ."</td>";
                         //EVENTO tem Guia
-                        echo "<td>ID GUIA nome</td>";
+                        echo "<td>".$row_payment['nome']."<br>".$row_payment['celular']."</td>";
 
 
                         //Payments Status
