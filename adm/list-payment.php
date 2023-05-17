@@ -67,6 +67,10 @@ include_once '../adm/validate.php';
                     pay.dataagendada AS dataagendada,
                     pay.valorId AS valorId,
                     pay.product_id AS product_id,
+                    pay.guiaId,
+                    servicos.nome,
+                    servicos.celular,
+
                     sta.name AS name_sta,
                     sta.color,
                     eventos.id AS idE,
@@ -79,6 +83,7 @@ include_once '../adm/validate.php';
                     FROM payments_picpays AS pay
                     INNER JOIN eventos ON eventos.id = pay.product_id
                     INNER JOIN valores ON valores.id = pay.valorId
+                    INNER JOIN servicos ON servicos.id = pay.guiaId
                     INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
                     ORDER BY pay.id DESC ";
 
@@ -101,6 +106,8 @@ include_once '../adm/validate.php';
                         echo "<td>". number_format($row_payment['total'], 2, ",", ".") ."</td>";
                         //EVENTO tem Guia
                         echo "<td>ID GUIA nome</td>";
+
+
                         //Payments Status
                         echo "<td class='text-center'><span class='badge badge-pill badge-$color'>$name_sta</span></td>";
                         echo "<td class='text-center'>";
