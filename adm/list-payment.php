@@ -59,7 +59,7 @@ include_once '../adm/validate.php';
                     </tr>
                 </thead>
                 <?php
-                $query_payments ="SELECT
+                $query_payments ="SELECT *,
                     pay.id AS id,
                     pay.first_name AS first_name,
                     pay.email AS email,
