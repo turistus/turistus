@@ -80,8 +80,8 @@ include_once '../adm/validate.php';
                     valores.total
 
                     FROM payments_picpays AS pay
-                    INNER JOIN eventos ON eventos.idE = pay.product_id
-                    INNER JOIN valores ON valores.idVal = pay.valorId
+                    INNER JOIN eventos AS evts ON evts.idE = pay.product_id
+                    INNER JOIN valores AS VAL ON Val.idVal = pay.valorId
                     INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
                     ORDER BY pay.id DESC ";
 
