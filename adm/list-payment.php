@@ -67,13 +67,10 @@ include_once '../adm/validate.php';
                     pay.dataagendada AS dataagendada,
                     pay.valorId AS valorId,
                     pay.product_id AS product_id,
-
                     sta.name AS name_sta,
                     sta.color,
-
                     eventos.id AS idE,
                     eventos.nome AS nomeE,
-
                     valores.id AS idVal,
                     valores.idEvento AS idEventoVal,
                     valores.vagas,
@@ -81,7 +78,7 @@ include_once '../adm/validate.php';
 
                     FROM payments_picpays AS pay
                     INNER JOIN eventos AS evts ON evts.idE = pay.product_id
-                    INNER JOIN valores AS VAL ON Val.idVal = pay.valorId
+                    INNER JOIN valores AS val ON val.idVal = pay.valorId
                     INNER JOIN payments_status AS sta ON sta.id=pay.payments_statu_Id
                     ORDER BY pay.id DESC ";
 
