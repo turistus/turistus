@@ -66,72 +66,7 @@ include_once '../adm/validate.php';
                                             ?>
                                             <hr>
 
-                                            <table class="table table-bordered table-striped table-hover">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">ID PICPAY</th>
-                                                        <th scope="col">PicPayPayments Nome </th>
-                                                        <th scope="col">E-mail <br> Celular</th>
-                                                        <th scope="col">Ponto <br>Turistico </th>
-                                                        <th scope="col" class="text-center">AGENDADO <br>Dia</th>
 
-
-                                                        <th scope="col" class="text-center">Guia Nativo</th>
-                                                        <th scope="col" class="text-center">VALOR<br>GUIA+Informação <br> Ponto Turistico</th>
-
-                                                    </tr>
-                                                </thead>
-                                                <?php
-                                                $query_payments = "SELECT pay.id AS idPicPay, pay.first_name, pay.last_name, pay.email,
-                                                    pay.phone AS nCelular,
-                                                    prod.name AS name_Pt,
-                                                    sta.name AS name_sta,
-                                                    sta.color,
-                                                    sta.id AS idStatus,
-                                                    pay.created AS dataPedido,
-                                                    guias.nome AS nomeGuia,
-                                                    guias.celular AS numeroGuia,
-                                                    guias.valor AS vGuia
-
-
-                                                    FROM payments_picpays AS pay
-
-
-                                                    /**Aqui Busca os PONTOS que estão na TABELA Payments PIC PAY  */
-                                                    INNER JOIN pontosturisticos AS prod ON prod.id=pay.product_id
-
-                                                    /**Aqui Busca os GUIAS que estão na TABELA EVENTOS  */
-                                                    INNER JOIN servicos AS guias ON guias.id=pay.guiaId
-
-                                                 /** tenho que buscar o VALOR do EVENTO na tabela picpayments que devo criar um campo valor pra salvar junto da compra */
-
-                                                    /**Aqui abaixo Busca os STATUS que estão na TABELA Payments PIC PAY  */
-                                                    /**A POSIÇAO de CADA linha de SQL importa */
-                                                    INNER JOIN payments_status AS sta ON sta.id = pay.payments_statu_Id WHERE pay.payments_statu_Id = '5'
-
-                                                    ORDER BY idPicPay DESC";
-                                                $result_payments = $conn->prepare($query_payments);
-                                                $result_payments->execute();
-                                                while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
-                                                    //var_dump($row_payment);
-                                                    extract($row_payment);
-                                                    echo "<tr>";
-                                                    echo "<th>$idPicPay</th>";
-                                                    echo "<td>$first_name $last_name</td>";
-                                                    echo "<td>$email <br> $nCelular</td>";
-                                                    echo "<td>$name_Pt</td>";
-                                                    echo "<td>$dataPedido</td>";
-
-
-                                                    echo "<td>$nomeGuia - $numeroGuia </td>";
-                                                    echo "<td class='text-center'><span class='badge badge-pill badge-$color'>R$ $vGuia <br> $name_sta</span></td>";
-
-                                                    echo "</tr>";
-
-                                                }
-
-                                                ?>
-                                            </table>
 
 
 
