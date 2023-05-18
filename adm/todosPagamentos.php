@@ -36,9 +36,9 @@ include_once '../adm/validate.php';
 
                                 <div class="row">
                                     <button id="primeiroForm" type="button" class="btn btn-light text-dark me-2"> Informações </button>
-                                    <button id="CriarEvento" type="button" class="btn btn-light text-dark me-2"> - </button>
-                                    <button id="segundoForm" type="button" class="btn btn-light text-dark me-2"> - </button>
-                                    <button id="terceiroForm" type="button" class="btn btn-light text-dark me-2"> - </button>
+                                    <button id="CriarEvento" type="button" class="btn btn-light text-dark me-2"> Plano Geral 20% </button>
+                                    <button id="segundoForm" type="button" class="btn btn-light text-dark me-2"> Plano VIP 15% </button>
+                                    <button id="terceiroForm" type="button" class="btn btn-light text-dark me-2"> Plano Premium 10% </button>
 
 
                                 </div>
@@ -141,7 +141,7 @@ include_once '../adm/validate.php';
         <!-- ------------------------------------------ primeiro Form ----------------------------------------------------------------- -->
                                 <div class="modal-content m-1 p-5" id=formPrimeiro>
 
-										<h2>Informações e Pagamentos </h2>
+										<h2>Informações e Pagamentos aaa </h2>
                                     <p>Aqui deve apresentar tudo sobre os pagamentos, quantos,
                                         valores mais altos, melhores turistas pagantes, melhor ponto turistico,
                                         melhor evento,
@@ -301,30 +301,27 @@ include_once '../adm/validate.php';
     $("#formPrimeiro").show();
     $("#formCriarEvento").hide();
     $("#formTerceiro").hide();
-
     $("#formSegundo").hide();
 
 
   $("#CriarEvento").click(function () {
-		$("#formCriarEvento").show(500);
+	$("#formCriarEvento").show(500);
     $("#formPrimeiro").hide();
     $("#formTerceiro").hide();
-
     $("#formSegundo").hide();
 
 	});
 
   $("#primeiroForm").click(function () {
-		$("#formPrimeiro").show(500);
+	$("#formPrimeiro").show(500);
     $("#formCriarEvento").hide();
     $("#formTerceiro").hide();
-
     $("#formSegundo").hide();
 
 	});
 
   $("#segundoForm").click(function () {
-		$("#formSegundo").show(500);
+	$("#formSegundo").show(500);
     $("#formPrimeiro").hide();
     $("#formCriarEvento").hide();
     $("#formTerceiro").hide();
@@ -332,7 +329,6 @@ include_once '../adm/validate.php';
 	});
 
   $("#terceiroForm").click(function () {
-
     $("#formPrimeiro").hide();
     $("#formCriarEvento").hide();
     $("#formTerceiro").show(500);
