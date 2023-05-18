@@ -19,10 +19,6 @@ if(!defined('ACCESS')){
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="list-payment.php">sTaTuS Pagamentos</a>
-                </li>
-
-                <li class="nav-item active">
                     <a class="nav-link" href="todosUsuarios.php">USUARIOS</a>
                 </li>
 
@@ -32,10 +28,6 @@ if(!defined('ACCESS')){
 
                 <li class="nav-item active">
                     <a class="nav-link" href="listadeEventos.php">Eventos</a>
-                </li>
-
-                <li class="nav-item active">
-                    <a class="nav-link" href="cad-ponto-turistico.php">Cadastro Ponto Turistico</a>
                 </li>
 
                 <li class="nav-item active">
