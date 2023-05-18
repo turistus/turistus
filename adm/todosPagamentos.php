@@ -227,8 +227,8 @@ include_once '../adm/validate.php';
                                                     sta.id AS idStatus,
                                                     pay.created AS dataPedido,
                                                     guias.nome AS nomeGuia,
-                                                    guias.celular AS numeroGuia,
-                                                    guias.valor AS vGuia
+                                                    guias.celular AS numeroGuia
+
 
 
                                                     FROM payments_picpays AS pay
@@ -261,7 +261,7 @@ include_once '../adm/validate.php';
 
 
                                                     echo "<td>$nomeGuia - $numeroGuia </td>";
-                                                    echo "<td class='text-center'><span class='badge badge-pill badge-$color'>R$ $vGuia <br> $name_sta</span></td>";
+                                                    echo "<td class='text-center'><span class='badge badge-pill badge-$color'>R$ <br> $name_sta</span></td>";
 
                                                     echo "</tr>";
 
