@@ -37,8 +37,11 @@ include_once '../adm/validate.php';
                                 <div class="row">
 
                                     <button id="primeiroForm" type="button" class="btn btn-light text-dark me-2"> Plano Geral 20% </button>
-                                    <button id="segundoForm" type="button" class="btn btn-light text-dark me-2"> Plano VIP 15% </button>
-                                    <button id="terceiroForm" type="button" class="btn btn-light text-dark me-2"> Plano Premium 10% </button>
+                                    <button id="segundoForm" type="button" class="btn btn-light text-dark me-2"> Segundo form </button>
+                                    <button id="terceiroForm" type="button" class="btn btn-light text-dark me-2"> terceiro Form </button>
+                                    <button id="PG20Form" type="button" class="btn btn-light text-dark me-2"> Plano Geral 20% </button>
+                                    <button id="PG15Form" type="button" class="btn btn-light text-dark me-2"> Plano VIP 15% </button>
+                                    <button id="PG10Form" type="button" class="btn btn-light text-dark me-2"> Plano Premium 10% </button>
                                     <button id="CriarEvento" type="button" class="btn btn-light text-dark me-2"> Informações </button>
 
 
