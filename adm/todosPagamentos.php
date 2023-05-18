@@ -36,13 +36,13 @@ include_once '../adm/validate.php';
 
                                 <div class="row">
 
-                                    <button id="primeiroForm" type="button" class="btn btn-light text-dark me-2"> Plano Geral 20% </button>
-                                    <button id="segundoForm" type="button" class="btn btn-light text-dark me-2"> Segundo form </button>
-                                    <button id="terceiroForm" type="button" class="btn btn-light text-dark me-2"> terceiro Form </button>
+                                    <button id="primeiroForm" type="button" class="btn btn-light text-dark me-2"> Pagamentos GERAL </button>
+                                    <button id="segundoForm" type="button" class="btn btn-light text-dark me-2"> PagSeguro </button>
+                                    <button id="terceiroForm" type="button" class="btn btn-light text-dark me-2"> Agendados </button>
                                     <button id="PG20Form" type="button" class="btn btn-light text-dark me-2"> Plano Geral 20% </button>
                                     <button id="PG15Form" type="button" class="btn btn-light text-dark me-2"> Plano VIP 15% </button>
                                     <button id="PG10Form" type="button" class="btn btn-light text-dark me-2"> Plano Premium 10% </button>
-                                    <button id="CriarEvento" type="button" class="btn btn-light text-dark me-2"> Informações </button>
+                                    <button id="CriarEvento" type="button" class="btn btn-light text-dark me-2"> Ped. PontosT </button>
 
 
 
@@ -184,6 +184,30 @@ include_once '../adm/validate.php';
 
                                 </div>
 
+                                <!-- ------------------------------------------ PG20 Form ----------------------------------------------------------------- -->
+                                <div class="modal-content" id=formPG20>
+
+                                  <h2>Pagamentos de Guias 20% </h2>
+                                  <p>LISTA DE AGENDADOS ATRAZADOS </p>
+
+                                </div>
+
+                                <!-- ------------------------------------------ PG15 Form ----------------------------------------------------------------- -->
+                                <div class="modal-content" id=formPG15>
+
+                                  <h2>Pagamentos de Guias 15% </h2>
+                                  <p>LISTA DE AGENDADOS ATRAZADOS </p>
+
+                                </div>
+
+                                <!-- ------------------------------------------ PG10 Form ----------------------------------------------------------------- -->
+                                <div class="modal-content" id=formPG10>
+
+                                  <h2>Pagamentos de Guias 10% </h2>
+                                  <p>LISTA DE AGENDADOS ATRAZADOS </p>
+
+                                </div>
+
                                 <!-- INICIO DO PAINEL PEDIDOS Registrados pela TABELA PIC PAY por PONTOS -->
                                 <div class="modal-content" id=formCriarEvento>
 
@@ -309,14 +333,54 @@ include_once '../adm/validate.php';
     $("#formPrimeiro").show();
     $("#formCriarEvento").hide();
     $("#formTerceiro").hide();
-    $("#formSegundo").hide();
+    $("#formSegundo").hide();formPG10
+    $("#formPG20").hide();
+    $("#formPG15").hide();
+    $("#formPG10").hide();
 
+
+$("#PG20Form").click(function () {
+    $("#formPG20").show(500);
+	$("#formCriarEvento").hide();
+    $("#formPrimeiro").hide();
+    $("#formTerceiro").hide();
+    $("#formSegundo").hide();
+    $("#formPG15").hide();
+    $("#formPG10").hide();
+
+	});
+
+
+$("#PG15Form").click(function () {
+    $("#formPG15").show(500);
+	$("#formCriarEvento").hide();
+    $("#formPrimeiro").hide();
+    $("#formTerceiro").hide();
+    $("#formSegundo").hide();
+    $("#formPG20").hide();
+    $("#formPG10").hide();
+
+	});
+
+$("#PG10Form").click(function () {
+    $("#formPG10").show(500);
+	$("#formCriarEvento").hide();
+    $("#formPrimeiro").hide();
+    $("#formTerceiro").hide();
+    $("#formSegundo").hide();
+    $("#formPG20").hide();
+    $("#formPG15").hide();
+
+	});
 
   $("#CriarEvento").click(function () {
 	$("#formCriarEvento").show(500);
     $("#formPrimeiro").hide();
     $("#formTerceiro").hide();
     $("#formSegundo").hide();
+    $("#formPG20").hide();
+    $("#formPG15").hide();
+    $("#formPG10").hide();
 
 	});
 
@@ -325,14 +389,20 @@ include_once '../adm/validate.php';
     $("#formCriarEvento").hide();
     $("#formTerceiro").hide();
     $("#formSegundo").hide();
+    $("#formPG20").hide();
+    $("#formPG15").hide();
+    $("#formPG10").hide();
 
 	});
 
   $("#segundoForm").click(function () {
-	$("#formSegundo").show(500);
-    $("#formPrimeiro").hide();
+	$("#formPrimeiro").hide();
     $("#formCriarEvento").hide();
     $("#formTerceiro").hide();
+    $("#formSegundo").show(500);
+    $("#formPG20").hide();
+    $("#formPG15").hide();
+    $("#formPG10").hide();
 
 	});
 
@@ -341,6 +411,9 @@ include_once '../adm/validate.php';
     $("#formCriarEvento").hide();
     $("#formTerceiro").show(500);
     $("#formSegundo").hide();
+    $("#formPG20").hide();
+    $("#formPG15").hide();
+    $("#formPG10").hide();
 
 	});
 
