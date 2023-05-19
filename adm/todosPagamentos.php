@@ -36,7 +36,7 @@ include_once '../adm/validate.php';
 
                                 <div class="row">
 
-                                    <button id="primeiroForm" type="button" class="btn btn-light text-dark me-2"> Pagamentos GERAL </button>
+                                    <button id="primeiroForm" type="button" class="btn btn-light text-dark me-2"> PicPay </button>
                                     <button id="segundoForm" type="button" class="btn btn-light text-dark me-2"> PagSeguro </button>
                                     <button id="terceiroForm" type="button" class="btn btn-light text-dark me-2"> Agendados </button>
                                     <button id="PG20Form" type="button" class="btn btn-light text-dark me-2"> Plano Geral 20% </button>
@@ -101,10 +101,16 @@ include_once '../adm/validate.php';
 
                                     <div class="container">
 
-                                        <h2 class="display-4 mt-3 mb-3">Pedidos Agendados de Turistas EVENTOS</h2>
+                                        <h2 class="display-4 mt-3 mb-3">Pedidos EVENTOS Agendados de Turistas </h2>
 
                                         <hr>
-                                            Aqui a lista deve mostrar os Pedidos/EVENTOS que estao agendados, Se Foi Pago PIC PAY, Entao Pagar o GUIA?
+                                            lista deve mostrar os Pedidos de EVENTOS que estao agendados,
+                                            <br>
+                                            listados por Turistas e data Agendada,  e exibindo o total bruto,
+                                            <br>
+                                            para ser recebido, para o guia fazer o evento.
+                                            Se Foi Pago PIC PAY, Entao Pagar o GUIA?
+
 
                                         <?php
                                         if(isset($_SESSION['msg'])){
@@ -138,8 +144,10 @@ include_once '../adm/validate.php';
                                                 pay.created AS dataPedido,
 
                                                 sta.name AS name_sta, sta.color,
+
                                                 agend.id AS IDAGENDADOS,
                                                 agend.first_name AS NomeTur,
+
                                                 guias.nome AS nomeGuia,
                                                 guias.celular AS numeroGuia,
                                                 even.nome AS nomeEvento
@@ -188,7 +196,8 @@ include_once '../adm/validate.php';
                                 <div class="modal-content" id=formPG20>
 
                                   <h2>Pagamentos de Guias 20% </h2>
-                                  <p>LISTA DE AGENDADOS ATRAZADOS </p>
+                                  <p>LISTA DE guias que usam o plano de 20%, sendo feito os Pagamentos todo dia 10.  </p>
+                                  <p>Com total dos pedidos de eventos por GUIA e total em VALOR e total -20% que é o valor a ser depositado  </p>
 
                                 </div>
 
@@ -196,15 +205,16 @@ include_once '../adm/validate.php';
                                 <div class="modal-content" id=formPG15>
 
                                   <h2>Pagamentos de Guias 15% </h2>
-                                  <p>LISTA DE AGENDADOS ATRAZADOS </p>
-
+                                  <p>LISTA DE guias que usam o plano de 15%, sendo feito os Pagamentos todo dia 10.  </p>
+                                  <p>Com total dos pedidos de eventos por GUIA e total em VALOR e total -15% que é o valor a ser depositado  </p>
                                 </div>
 
                                 <!-- ------------------------------------------ PG10 Form ----------------------------------------------------------------- -->
                                 <div class="modal-content" id=formPG10>
 
                                   <h2>Pagamentos de Guias 10% </h2>
-                                  <p>LISTA DE AGENDADOS ATRAZADOS </p>
+                                  <p>LISTA DE guias que usam o plano de 10%, sendo feito os Pagamentos todo dia 10.  </p>
+                                  <p>Com total dos pedidos de eventos por GUIA e total em VALOR e total -10% que é o valor a ser depositado  </p>
 
                                 </div>
 

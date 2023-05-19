@@ -15,7 +15,7 @@ if(!defined('ACCESS')){
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="painelAdm.php">ADM OOO</a>
+                    <a class="nav-link" href="painelAdm.php">ADM </a>
                 </li>
 
                 <li class="nav-item active">
