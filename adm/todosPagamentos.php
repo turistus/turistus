@@ -256,13 +256,17 @@ include_once '../adm/validate.php';
                                         even.nome AS nomeEvento,
                                         even.valor AS valor,
                                         pay.phone AS phone,
-                                        pay.dataagendada AS dataagendada
+                                        pay.dataagendada AS dataagendada,
+                                        pay.valorId,
+                                        valores.id,
+                                        valores.total
 
                                         FROM payments_picpays AS pay
                                         /**Aqui abaixo Busca os STATUS que estão na TABELA Payments PIC PAY  */
 
                                         INNER JOIN eventos AS even ON even.id = pay.product_id
                                             INNER JOIN pontosturisticos ON pontosturisticos.id = even.idPt
+                                            INNER JOIN valores ON valores.id = pay.valorId
                                             INNER JOIN servicos AS guias ON guias.id = pay.guiaId GROUP BY guias.id
 
 
@@ -281,9 +285,9 @@ include_once '../adm/validate.php';
 
 
                                         echo "<td>$nomeGuia - $numeroGuia Numero PIX</td>";
-                                        echo "<td> R$ $valor  </td>";
+                                        echo "<td> R$ $total  </td>";
 
-                                        $valor20p = $valor - $valor*0.2;
+                                        $valor20p = $total - $total*0.2;
                                         echo "<td> R$ $valor20p  </td>";
                                         echo "<td> Pagar/Depositar  </td>";
                                         echo "</tr>";
