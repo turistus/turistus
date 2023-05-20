@@ -111,13 +111,6 @@ include_once '../adm/validate.php';
                                             para ser recebido, para o guia fazer o evento.
                                             Se Foi Pago PIC PAY, Entao Pagar o GUIA?
 
-
-                                        <?php
-                                        if(isset($_SESSION['msg'])){
-                                            echo $_SESSION['msg'];
-                                            unset($_SESSION['msg']);
-                                        }
-                                        ?>
                                         <hr>
 
                                         <table class="table table-bordered table-striped table-hover" style="max-width: 600px;">
@@ -195,22 +188,17 @@ include_once '../adm/validate.php';
                                 <!-- ------------------------------------------ PG20 Form ----------------------------------------------------------------- -->
                                 <div class="modal-content" id=formPG20>
 
-                                  <h2>Pagamentos de Guias 20% </h2>
-                                  <p>LISTA DE guias que usam o plano de 20%, sendo feito os Pagamentos todo dia 10.  </p>
-                                  <p>Com total dos pedidos de eventos por GUIA e total em VALOR e total -20% que é o valor a ser depositado  </p>
-
-                                  <h2>Valor Ganho Por Guia</h2>
-
+                                <h2>Valor Ganho Por Guia</h2>
                                 <p>Como PAGAR os 80% Do GUIA <br>
                                 1 - Ter o Agendamento de confirmado e PAGO.<br>
-
+                                2 - Lista de guias Com Total Bruto.<br>
+                                3 - Valor Liquido a ser depositado.<br>
+                                4 - Buscar todos os guias que nao tem Plano, e no caso pagam 20%.
+                                5 - em Ordem de Pagamento, como todo dia 10. ou 1.
                                 </p>
-
 
                                 <h2 class="display-4 mt-3 mb-3">Pedidos EVENTOS pagos Agendados de Turistas </h2>
 
-                                <hr>
-                                    Aqui a lista deve mostrar os Pedidos/EVENTOS que estao agendados, Se Foi Pago PIC PAY, Entao Pagar o GUIA?
                                 <br>
                                 Devemos pagar SOMENTE depois que passar da data do evento e perguntar se foi feito para o turista.
                                 <?php
