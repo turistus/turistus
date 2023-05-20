@@ -281,7 +281,8 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
             </div>
 
 
-                                        <div class="col-4 mt-2"  >
+                                        <div class="col-10 mt-2"  >
+                                            <h6><b>Pague com Pix</b></h6>
                                             <p>
                                                 <button type='button' class='btn btn' data-bs-toggle='modal' data-bs-target='#loginModal'>
 
@@ -290,9 +291,10 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                                 </button>
                                             </p>
                                         </div>
-                                        <div class="col-8 mt-2"  >
+
+                                        <div class="col-2 mt-2"  >
                                             <button type='button' class='btn btn-outline' data-bs-toggle='modal' data-bs-target='#loginModal'>
-                                                <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                                                <input type="hidden" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             </button>
                                         </div>
 
