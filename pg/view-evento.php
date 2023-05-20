@@ -207,7 +207,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                         ?>
                                         <div class="col-4 mt-1" >
-
+                                        <h6><b>Pague com Pix PicPay</b></h6>
                                             <form action="pagamentoEventoForm.php?id=<?php echo $id; ?>" method="POST">
                                                 <input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
                                                 <input type="hidden" name="idGuia" id="idGuia" value="<?php echo $idGuia;?>" />
@@ -225,7 +225,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         </div>
 
                                         <div class="col-8 mt-2"  >
-                                            <h6><b>Pague com Pix PicPay</b></h6>
+
 
                                             <form name="FormPagSeg" id="FormPagSeg" action="../inserirPs.php" method="POST">
                                                 <input type="hidden" name="titulo" id="titulo" value="<?php echo $nome;?>" />
