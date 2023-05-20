@@ -272,7 +272,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="modal-content" id=acessaTurista>
 
                                 <?php
-                                include_once '../lgn/entrarTurista.php';
+                                include_once './funcoes/acessaTurista.php';
                                 ?>
                             </div>
                         </div>
