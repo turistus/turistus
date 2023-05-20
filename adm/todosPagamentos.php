@@ -236,6 +236,7 @@ include_once '../adm/validate.php';
                                         guias.celular AS numeroGuia,
                                         even.nome AS nomeEvento,
                                         even.valor AS valor,
+                                        COUNT(even.id) AS nEventosGuia,
                                         pay.phone AS phone,
                                         pay.dataagendada AS dataagendada,
                                         pay.valorId,
@@ -261,7 +262,7 @@ include_once '../adm/validate.php';
                                         echo "<tr>";
                                         echo "<th>$idPag</th>";
 
-                                        echo "<td>$nomeGuia - $numeroGuia Numero PIX</td>";
+                                        echo "<td>$nomeGuia - $numeroGuia Numero PIX <br> Num Evts $nEventosGuia</td>";
                                         echo "<td> R$ $bruto  </td>";
                                         $liquido = $bruto*0.2;
                                         $valor20p = $bruto - $liquido;
