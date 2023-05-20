@@ -239,7 +239,8 @@ include_once '../adm/validate.php';
                                         pay.dataagendada AS dataagendada,
                                         pay.valorId,
                                         valores.id,
-                                        valores.total
+                                        valores.total,
+                                        SUM(valores.total) AS bruto
 
                                         FROM payments_picpays AS pay
                                         /**Aqui abaixo Busca os STATUS que estão na TABELA Payments PIC PAY  */
@@ -260,7 +261,7 @@ include_once '../adm/validate.php';
                                         echo "<th>$idPag</th>";
 
                                         echo "<td>$nomeGuia - $numeroGuia Numero PIX</td>";
-                                        echo "<td> R$ $total  </td>";
+                                        echo "<td> R$ $bruto  </td>";
 
                                         $valor20p = $total - $total*0.2;
                                         echo "<td> R$ $valor20p  </td>";
