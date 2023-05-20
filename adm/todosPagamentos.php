@@ -199,6 +199,100 @@ include_once '../adm/validate.php';
                                   <p>LISTA DE guias que usam o plano de 20%, sendo feito os Pagamentos todo dia 10.  </p>
                                   <p>Com total dos pedidos de eventos por GUIA e total em VALOR e total -20% que é o valor a ser depositado  </p>
 
+                                  <h2>Valor Ganho Por Guia</h2>
+
+                                <p>Como PAGAR os 80% Do GUIA <br>
+                                0 - Ter o Agendamento de confirmado e PAGO.<br>
+                                1 - Buscar os Eventos realizados e agendados Por CADA Turista e PAGO. <br>
+                                </p>
+
+                                <!-- <span id="conteudoAgendados"></span> -->
+
+
+
+                                <h2 class="display-4 mt-3 mb-3">Pedidos EVENTOS pagos Agendados de Turistas </h2>
+
+                                <hr>
+                                    Aqui a lista deve mostrar os Pedidos/EVENTOS que estao agendados, Se Foi Pago PIC PAY, Entao Pagar o GUIA?
+                                <br>
+                                Devemos pagar SOMENTE depois que passar da data do evento e perguntar se foi feito para o turista.
+                                <?php
+                                if(isset($_SESSION['msg'])){
+                                    echo $_SESSION['msg'];
+                                    unset($_SESSION['msg']);
+                                }
+                                ?>
+                                <hr>
+
+                                <table class="table table-bordered table-striped table-hover">
+                                    <thead>
+                                        <tr style="background-color: #DAA520;">
+                                            <th scope="col">ID </th>
+                                            <th scope="col">Turista </th>
+                                            <th scope="col">E-mail <br> Celular</th>
+                                            <th scope="col">EVENTO</th>
+                                            <th scope="col" class="text-center">AGENDADO <br>Dia</th>
+
+
+                                            <th scope="col" class="text-center">Guia Nativo</th>
+
+                                            <th scope="col" class="text-center">VALOR</th>
+                                            <th scope="col" class="text-center">Valor -20% Guia</th>
+                                            <th scope="col" class="text-center">DEPOSITAR</th>
+                                        </tr>
+                                    </thead>
+                                    <?php
+                                    $query_payments = "SELECT
+                                        pay.id AS idPag,
+                                        pay.first_name,
+                                        pay.email,
+                                        pay.payments_statu_Id AS statusPay,
+                                        pay.created AS dataPedido,
+
+
+
+                                        guias.nome AS nomeGuia,
+                                        guias.celular AS numeroGuia,
+                                        even.nome AS nomeEvento,
+                                        even.valor AS valor,
+                                        pay.phone AS phone,
+                                        pay.dataagendada AS dataagendada
+
+                                        FROM payments_picpays AS pay
+                                        /**Aqui abaixo Busca os STATUS que estão na TABELA Payments PIC PAY  */
+
+                                        INNER JOIN eventos AS even ON even.id = pay.product_id
+                                            INNER JOIN pontosturisticos ON pontosturisticos.id = even.idPt
+                                            INNER JOIN servicos AS guias ON guias.id = pay.guiaId GROUP BY guias.id
+
+
+                                        ORDER BY idPag DESC LIMIT 13";
+                                    $result_payments = $conn->prepare($query_payments);
+                                    $result_payments->execute();
+                                    while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
+                                        //var_dump($row_payment);
+                                        extract($row_payment);
+                                        echo "<tr>";
+                                        echo "<th>$idPag</th>";
+                                        echo "<td>$first_name</td>";
+                                        echo "<td>$email <br> $phone </td>";
+                                        echo "<td>$nomeEvento</td>";
+                                        echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
+
+
+                                        echo "<td>$nomeGuia - $numeroGuia Numero PIX</td>";
+                                        echo "<td> R$ $valor  </td>";
+
+                                        $valor20p = $valor - $valor*0.2;
+                                        echo "<td> R$ $valor20p  </td>";
+                                        echo "<td> Pagar/Depositar  </td>";
+                                        echo "</tr>";
+
+                                    }
+                                    ?>
+                                </table>
+
+
                                 </div>
 
                                 <!-- ------------------------------------------ PG15 Form ----------------------------------------------------------------- -->
