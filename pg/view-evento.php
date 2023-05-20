@@ -225,7 +225,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         </div>
 
                                         <div class="col-8 mt-2"  >
-
+                                            <h6><b>Pague com Pix PicPay</b></h6>
 
                                             <form name="FormPagSeg" id="FormPagSeg" action="../inserirPs.php" method="POST">
                                                 <input type="hidden" name="titulo" id="titulo" value="<?php echo $nome;?>" />
@@ -281,7 +281,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
             </div>
 
 
-                                        <div class="col-10 mt-2"  >
+                                        <div class="col-8 mt-2"  >
                                             <h6><b>Pague com Pix</b></h6>
                                             <p>
                                                 <button type='button' class='btn btn' data-bs-toggle='modal' data-bs-target='#loginModal'>
