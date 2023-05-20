@@ -193,8 +193,9 @@ include_once '../adm/validate.php';
                                 1 - Ter o Agendamento de confirmado e PAGO.<br>
                                 2 - Lista de guias Com Total Bruto.<br>
                                 3 - Valor Liquido a ser depositado.<br>
-                                4 - Buscar todos os guias que nao tem Plano, e no caso pagam 20%.
-                                5 - em Ordem de Pagamento, como todo dia 10. ou 1.
+                                4 - Buscar todos os guias que nao tem Plano, e no caso pagam 20%.<br>
+                                5 - em Ordem de Pagamento, como todo dia 10. ou 1.<br>
+                                <b>6 - GUIA SOLICITAR SAQUE é melhor</b>
                                 </p>
 
                                 <h2 class="display-4 mt-3 mb-3">Pedidos EVENTOS pagos Agendados de Turistas </h2>
