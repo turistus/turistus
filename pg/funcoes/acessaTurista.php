@@ -44,7 +44,7 @@
                         $_SESSION['user_email'] = $row_user['email'];
                         $_SESSION['user_key'] = password_hash($row_user['id'], PASSWORD_DEFAULT);
                         $msg = "<div class='alert alert-success' role='alert'>Entrou!</div>";
-                        header("Location: ./view-evento.php");
+                        header("Location: ../pg/view-evento.php");
                         exit();
                     }else{
                         $msg = "<div class='alert alert-danger' role='alert'>Erro: Usuário ou a senha incorreta!</div>";
