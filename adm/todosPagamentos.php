@@ -202,12 +202,9 @@ include_once '../adm/validate.php';
                                   <h2>Valor Ganho Por Guia</h2>
 
                                 <p>Como PAGAR os 80% Do GUIA <br>
-                                0 - Ter o Agendamento de confirmado e PAGO.<br>
-                                1 - Buscar os Eventos realizados e agendados Por CADA Turista e PAGO. <br>
+                                1 - Ter o Agendamento de confirmado e PAGO.<br>
+
                                 </p>
-
-                                <!-- <span id="conteudoAgendados"></span> -->
-
 
 
                                 <h2 class="display-4 mt-3 mb-3">Pedidos EVENTOS pagos Agendados de Turistas </h2>
@@ -228,15 +225,9 @@ include_once '../adm/validate.php';
                                     <thead>
                                         <tr style="background-color: #DAA520;">
                                             <th scope="col">ID </th>
-                                            <th scope="col">Turista </th>
-                                            <th scope="col">E-mail <br> Celular</th>
-                                            <th scope="col">EVENTO</th>
-                                            <th scope="col" class="text-center">AGENDADO <br>Dia</th>
-
-
                                             <th scope="col" class="text-center">Guia Nativo</th>
 
-                                            <th scope="col" class="text-center">VALOR</th>
+                                            <th scope="col" class="text-center">TOTAL Bruto</th>
                                             <th scope="col" class="text-center">Valor -20% Guia</th>
                                             <th scope="col" class="text-center">DEPOSITAR</th>
                                         </tr>
@@ -278,11 +269,6 @@ include_once '../adm/validate.php';
                                         extract($row_payment);
                                         echo "<tr>";
                                         echo "<th>$idPag</th>";
-                                        echo "<td>$first_name</td>";
-                                        echo "<td>$email <br> $phone </td>";
-                                        echo "<td>$nomeEvento</td>";
-                                        echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
-
 
                                         echo "<td>$nomeGuia - $numeroGuia Numero PIX</td>";
                                         echo "<td> R$ $total  </td>";
