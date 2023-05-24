@@ -103,7 +103,7 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
 
                 $busc_Valor = mysqli_query($conex, "SELECT *, valores.total AS ttl, valores.vagas AS nVga FROM valores WHERE valores.id = $valorSelecionado");
                 $linhaValue = mysqli_fetch_assoc($busc_Valor);
-                $custoTotalSelecionado = $linhaValue['ttl'];
+
 
 
 
@@ -123,8 +123,8 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                 $add_pay_picpay->bindParam(":guiaId", $data['idGuia']);
                 $add_pay_picpay->bindParam(":dataagendada", $data['dataagendada']);
                 $add_pay_picpay->bindParam(":valorId", $data['valorId']);
-                $add_pay_picpay->bindParam(":nVagas", $vagas);
-                $add_pay_picpay->bindParam(":custoPedido", $total);
+                $add_pay_picpay->bindParam(":nVagas", $nVga);
+                $add_pay_picpay->bindParam(":custoPedido", $ttl);
 
 
 
@@ -139,7 +139,7 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                         "referenceId" => $last_insert_id,
                         "callbackUrl" => CALLBACKURL,
                         "returnUrl" => RETURNURL . $last_insert_id,
-                        "value" => (double) $custoTotalSelecionado,
+                        "value" => (double) $ttl,
                         "expiresAt" => $due_date,
                         "buyer" => [
                             "firstName" => $data['first_name'],
