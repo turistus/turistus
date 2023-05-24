@@ -213,7 +213,7 @@ include_once '../adm/validate.php';
                                 <table class="table table-bordered table-striped table-hover">
                                     <thead>
                                         <tr style="background-color: #DAA520;">
-                                            <th scope="col">ID </th>
+                                            <th scope="col">ID / N³ Vendas</th>
                                             <th scope="col" class="text-center">Guia Nativo</th>
 
                                             <th scope="col" class="text-center">TOTAL Bruto</th>
@@ -260,9 +260,9 @@ include_once '../adm/validate.php';
                                         //var_dump($row_payment);
                                         extract($row_payment);
                                         echo "<tr>";
-                                        echo "<th>$idPag</th>";
+                                        echo "<th>$idPag /<br> $nEventosGuia</th>";
 
-                                        echo "<td>$nomeGuia - $numeroGuia Numero PIX <br> Num Evts $nEventosGuia</td>";
+                                        echo "<td>$nomeGuia - $numeroGuia Numero PIX </td>";
                                         echo "<td> R$ $bruto  </td>";
                                         $liquido = $bruto*0.2;
                                         $valor20p = $bruto - $liquido;
