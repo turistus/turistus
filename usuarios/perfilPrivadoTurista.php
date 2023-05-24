@@ -58,7 +58,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                     </h6>
                 </div>
 
-                <div class="col-xl-6 col-lg-8 col-md-6 col-sm-12">
+                <div class="col-xl-4 col-lg-8 col-md-6 col-sm-12">
                     <label>Nome</label>
                     <h6><?php if (isset($dados['name'])) {
                             echo $dados['name'];
