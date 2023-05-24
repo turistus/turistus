@@ -39,10 +39,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="min-height: 350px; padding: 20px; ">
             <div class="row">
-                <!-- Deve ser possivel alterar alguns dados do Perfil do Usuario Turistaa -->
-                <div class="col-xl-4 col-lg-2 col-md-6 col-sm-12 ">
 
-                </div>
 
                 <div class="col-xl-12 col-lg-8 col-md-6 col-sm-12">
 
