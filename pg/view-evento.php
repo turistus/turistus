@@ -141,7 +141,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             <div class="col-md-12 ">
                                 <h5>Profissional organizador:  <a href="../guias/perfilG.php?idguia=<?php echo $idGuia;?>"><?php echo $nomeGuia;?></h5></a>
                                 <h3 style="text-align: center;"><?php echo $cidade?> - <?php echo $uf?></h3>
-
+                                <p style="text-align: center;"><?php echo "Ponto de encontro ".$encontro?></p>
                             </div>
                             <hr>
                             <div class="row">
@@ -197,7 +197,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                     </select>
                             </div>
-
+                        </div>
                             <!-- botao -->
                             <div class="col-md-12 mt-2" >
                                 <div class="row">
@@ -206,7 +206,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         if($emailSessaoAberta == true){
 
                                         ?>
-                                        <div class="col-12 mt-1" >
+                                        <div class="col-4 mt-1" >
                                         <h6><b>Pague com Pix </b></h6>
                                             <form action="pagamentoEventoForm.php?id=<?php echo $id; ?>" method="POST">
                                                 <input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
@@ -306,10 +306,10 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             </div>
 
 
-                        </div>
+
                         <div class="col-md-10 mt-4 mb-5" style="  padding-bottom:5px; margin-left:10px; margin-right: 10px; border: solid 1px black; border-radius: 10px; ">
-                        <h3>Descrição</h3>
-                        <p style="border:  padding:10px;"> <?php echo $descricao; ?></p>
+                            <h3>Descrição</h3>
+                            <p style="border:  padding:10px;"> <?php echo $descricao; ?></p>
                         </div>
             </div>
 
