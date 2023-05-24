@@ -101,6 +101,10 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                 $data['due_date'] = date('Y-m-d H:i:s', strtotime($data['created'] . '+3days'));
                 $due_date = date(DATE_ATOM, strtotime($data['due_date']));
 
+                $busc_Valor = mysqli_query($conex, "SELECT *, valores.total AS ttl, valores.vagas AS nVga FROM valores WHERE valores.id = $valorSelecionado");
+                $linhaValue = mysqli_fetch_assoc($busc_Valor);
+                $custoTotalSelecionado = $linhaValue['ttl'];
+
 
 
                 //Salvar os dados da compra no banco de dados
@@ -131,13 +135,6 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                     $last_insert_id = $conn->lastInsertId();
                     $phone_form = str_replace("(", " ", $data['phone']);
                     $phone_form = str_replace(")", " ", $phone_form);
-
-
-                   if($valorSelecionado){
-                    $busc_Valor = mysqli_query($conex, "SELECT *, valores.total AS ttl, valores.vagas AS nVga FROM valores WHERE valores.id = $valorSelecionado");
-                    $linhaValue = mysqli_fetch_assoc($busc_Valor);
-                    $custoTotalSelecionado = $linhaValue['ttl'];
-                }
                     $data_buy = [
                         "referenceId" => $last_insert_id,
                         "callbackUrl" => CALLBACKURL,
