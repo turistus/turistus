@@ -154,8 +154,8 @@ include_once '../connection.php';
         <div class="col-auto my-1">
             <div class="custom-control custom-checkbox mr-sm-2">
                 <input type="checkbox" class="custom-control-input" id="aceite" name="aceite" value="1">
-                <label class="custom-control-label" for="aceite">Aceito e concordo com os termos de uso</label>
-                <p><a href="../TERMOS DE USO.pdf">Detalhes</a></p>
+                <label class="custom-control-label" for="aceite">Aceito e concordo com o <a href="../TERMOS DE USO.pdf">termo de uso.</a></label>
+
             </div>
         </div>
 
