@@ -137,7 +137,7 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                     $busc_Valor = mysqli_query($conex, "SELECT *, valores.total AS ttl, valores.vagas AS nVga FROM valores WHERE valores.id = $valorSelecionado");
                     $linhaValue = mysqli_fetch_assoc($busc_Valor);
                     $custoTotalSelecionado = $linhaValue['ttl'];
-
+                }
                     $data_buy = [
                         "referenceId" => $last_insert_id,
                         "callbackUrl" => CALLBACKURL,
@@ -152,7 +152,7 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                             "phone" => "+55 $phone_form"
                         ]
                     ];
-                }
+
                     //Iniciar cUrl
                     $ch = curl_init();
 
