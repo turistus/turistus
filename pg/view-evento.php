@@ -218,7 +218,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                                 <p>
 
-                                                    <input id="BotaoPagamento" type="hidden" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/>
+                                                    <input id="BotaoPagamento" type="image" src="../icones/logopicpay.png" name="submit" alt="" style="width: 80px; height: 30px;"/>
                                                 </p>
                                             </form>
 
@@ -233,7 +233,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                                 <input type="hidden" name="descricao" id="descricao" value="<?php echo $descricao;?>" />
                                                 <input type="hidden" name="custoEvento" id="custoEvento" value="<?php echo $ln['valor']['0'];?>" />
                                                 <input type="hidden" name="idGuia" id="idGuia" value="<?php echo $idDoGuia;?>" />
-                                                <input id="BotaoPagar" type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                                                <input id="BotaoPagar" type="hidden" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-pagar-azul-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                                             </form>
 
 <br>
