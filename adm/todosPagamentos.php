@@ -262,7 +262,7 @@ include_once '../adm/validate.php';
                                         echo "<tr>";
                                         echo "<th>$idPag /<br> $nEventosGuia</th>";
 
-                                        echo "<td>$nomeGuia - $numeroGuia Numero PIX </td>";
+                                        echo "<td>$nomeGuia - $numeroGuia <br> Numero PIX </td>";
                                         echo "<td> R$ $bruto  </td>";
                                         $liquido = $bruto*0.2;
                                         $valor20p = $bruto - $liquido;
