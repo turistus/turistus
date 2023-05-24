@@ -38,14 +38,15 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
         <!-- Linha ROW de tudo -->
         <div class="row">
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="min-height: 350px; padding: 20px; ">
+            <div class="row">
                 <!-- Deve ser possivel alterar alguns dados do Perfil do Usuario Turistaa -->
                 <div class="col-xl-4 col-lg-2 col-md-6 col-sm-12 ">
 
                 </div>
 
-                <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
+                <div class="col-xl-12 col-lg-8 col-md-6 col-sm-12">
 
-                            <img style="max-height: 100px; max-width: 200px; background-color: gray; padding: auto; border-radius: 50%;"
+                            <img style="max-height: 180px; max-width: 200px; background-color: gray; padding: auto; border-radius: 50%;"
                             src='<?php echo "../images/turistas/$Tid/$foto"; ?>'>
 
                 </div>
@@ -106,7 +107,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                                 <h5><a href="../usuarios/editarPerfilTurista.php?id=<?php echo $row_turista['id']?>" class="btn btn text-dark" style="border: 1px solid black;"> Editar </a></h5>
                             </div>
                         </div>
-
+                </div>
             </div>
         </div>
     </main>
