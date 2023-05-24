@@ -230,6 +230,28 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                 <img class="d-block mx-auto mb-4" src="../images/logo/LG.jpg" alt="" width="72" height="72">
                     <h2>Formulário de Pagamento de Eventos</h2>
                     <p class="lead" style="color: grey;">Realizando o pagamento por PicPay.</p>
+
+                    <div class="col-md-6 " >
+                        <div class="row-12" >
+                            <div class="col-md-12 " >
+                                <div class="carousel form-inline" style="border:1px solid black; " >
+                                    <?php
+
+                                    // Busque as imagens na tabela "fotos"
+                                    $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $id");
+                                    $imagens = array();
+                                        while ($row = mysqli_fetch_assoc($busca_Fotos)) {
+                                        $imagens[] = $row['foto'];
+                                    }
+                                    foreach ($imagens as $imagem) { ?>
+
+                                            <div ><img src="../images/eventos/<?php echo $id.'/'.$imagem; ?>" style="margin:auto; height: 300px; text-align: center;"> </div>
+
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
 
             <div class="row mb-5">
