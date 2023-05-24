@@ -41,7 +41,7 @@ $email = $_SESSION['user_email'];
                                                       <div class="text-center" >
                                                         <div class="">
                                                             <div class="card-body pl-1">
-                                                            <h5 class="card-title">Nº Pedido<?php echo $idPag; ?></h5>
+                                                            <h5 class="card-title">Nº Pedido <?php echo $idPag; ?></h5>
                                                             <h4 class="card-title" ><?php echo "<img style='max-height: 120px; max-width: 180px;' src='../images/pontosturisticos/$idPt/$i'><br>";?></h4>
                                                             <h3 class="card-title" style="background-color: black; color: white; border-radius: 5px;"> Evento: <?php echo $nE; ?></h3>
                                                               <div class="card" style="background-color: #F04B35; padding: 15px;" >

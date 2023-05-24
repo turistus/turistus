@@ -42,15 +42,15 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                 <div class="col-xl-4 col-lg-2 col-md-12 col-sm-12 ">
 
                 </div>
-            <h4> Perfil </h4>
-                <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
 
-                            <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
+                <div class="col-xl-12 col-lg-8 col-md-6 col-sm-12">
+
+                            <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto; border-radius: 50%;"
                             src='<?php echo "../images/turistas/$Tid/$foto"; ?>'>
 
                 </div>
 
-                <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
+                <div class="col-xl-12 col-lg-8 col-md-6 col-sm-12">
                     <label>Apelido</label>
                     <h6><?php if (isset($dados['apelido'])) {
                             echo $dados['apelido'];
@@ -60,7 +60,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                     </h6>
                 </div>
 
-                <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
+                <div class="col-xl-12 col-lg-8 col-md-6 col-sm-12">
                     <label>Nome</label>
                     <h6><?php if (isset($dados['name'])) {
                             echo $dados['name'];
@@ -70,7 +70,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                     </h6>
                 </div>
 
-                <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
+                <div class="col-xl-12 col-lg-8 col-md-6 col-sm-12">
                     <label>Cidade</label>
                     <h6><?php if (isset($dados['cidade'])) {
                             echo $dados['cidade'];
@@ -80,7 +80,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                     </h6>
                 </div>
 
-                <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
+                <div class="col-xl-12 col-lg-8 col-md-6 col-sm-12">
                     <label>Celular</label>
                     <h6><?php if (isset($dados['celular'])) {
                             echo $dados['celular'];
@@ -90,7 +90,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                     </h6>
                 </div>
 
-                <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
+                <div class="col-xl-12 col-lg-8 col-md-6 col-sm-12">
                     <label>Email</label>
                     <h6><?php if (isset($dados['email'])) {
                             echo $dados['email'];
