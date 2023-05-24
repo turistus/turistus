@@ -240,7 +240,7 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
 
                         <div class="row-12" >
                             <div class="col-md-12 " >
-                                <div class="carousel form-inline" style="border:1px solid black; " >
+                                <div class="carousel form-inline"  >
                                     <?php
 
                                     // Busque as imagens na tabela "fotos"
@@ -249,14 +249,10 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                                         $row = mysqli_fetch_assoc($busca_Fotos);
                                         $imagens[] = $row['foto'];
 
-
-
-
                                     ?>
                                       <div >
                                             <img src="../images/eventos/<?php echo $id.'/'.$imagens[0]; ?>"
                                             style="margin:auto; height: 100px; text-align: center;"> </div>
-
                                 </div>
                             </div>
                         </div>
@@ -265,11 +261,9 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                 <div class="col-md-4">
                    <p> Pedido </p>
 
-                    <div class="mb-1 text-muted"> <?php echo $vagas." Vagas ";?></div>
-                    <div class="mb-1 text-muted"> R$ <?php echo number_format($total, 2, ",", ".");?></div>
-
+                    <div class="mb-1 text-muted"> <?php echo $vagas." Vagas R$ ".number_format($total, 2, ",", ".") ;?></div>
                     <div class="mb-1 text-muted"> <?php echo $descricao;?></div>
-                    <div class="mb-1 text-muted">Ponto de inicio <?php echo $encontro;?></div>
+                    <div class="mb-1 text-muted"><b>Ponto de inicio:</b> <?php echo $encontro;?></div>
 
 
                 </div>
