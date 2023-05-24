@@ -152,7 +152,7 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                             "phone" => "+55 $phone_form"
                         ]
                     ];
-
+                }
                     //Iniciar cUrl
                     $ch = curl_init();
 
