@@ -261,7 +261,17 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                 <div class="col-md-4">
                    <p> Pedido </p>
 
+                   <?php
+
+                   if($valorSelecionado){
+                    $busca_custo = mysqli_query($conex, "SELECT * FROM valores WHERE valores.id = $valorSelecionado");
+                    $linhaDeValores = mysqli_fetch_assoc($busca_custo);
+
+                   ?>
                     <div class="mb-1 text-muted"> <?php echo $vagas." Vagas R$ ".number_format($total, 2, ",", ".") ;?></div>
+                    <?php
+                    }
+                    ?>
                     <div class="mb-1 text-muted"> <?php echo $descricao;?></div>
                     <div class="mb-1 text-muted"><b>Ponto de inicio:</b> <?php echo $encontro;?></div>
 
