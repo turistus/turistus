@@ -45,7 +45,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
 
                 <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
 
-                            <img style="max-height: 150px; max-width: 300px; background-color: gray; padding: auto; border-radius: 30%;"
+                            <img style="max-height: 100px; max-width: 200px; background-color: gray; padding: auto; border-radius: 50%;"
                             src='<?php echo "../images/turistas/$Tid/$foto"; ?>'>
 
                 </div>
