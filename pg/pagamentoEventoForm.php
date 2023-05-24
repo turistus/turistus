@@ -264,11 +264,11 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                    <?php
 
                    if($valorSelecionado){
-                    $busca_custo = mysqli_query($conex, "SELECT * FROM valores WHERE valores.id = $valorSelecionado");
+                    $busca_custo = mysqli_query($conex, "SELECT *, valores.total AS totCusto, valores.vagas AS nDeVagas FROM valores WHERE valores.id = $valorSelecionado");
                     $linhaDeValores = mysqli_fetch_assoc($busca_custo);
 
                    ?>
-                    <div class="mb-1 text-muted"> <?php echo $vagas." Vagas R$ ".number_format($total, 2, ",", ".") ;?></div>
+                    <div class="mb-1 text-muted"> <?php echo $nDeVagas." Vagas R$ ".number_format($totCusto, 2, ",", ".") ;?></div>
                     <?php
                     }
                     ?>
