@@ -231,7 +231,13 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                     <h2>Formulário de Pagamento de Eventos</h2>
                     <p class="lead" style="color: grey;">Realizando o pagamento por PicPay.</p>
 
-                    <div class="col-md-6 " >
+
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-md-8">
+                    <h3><?php echo $nomeEvento; ?></h3>
+
                         <div class="row-12" >
                             <div class="col-md-12 " >
                                 <div class="carousel form-inline" style="border:1px solid black; " >
@@ -252,12 +258,6 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                             </div>
                         </div>
                     </div>
-            </div>
-
-            <div class="row mb-5">
-                <div class="col-md-8">
-                    <h3><?php echo $nomeEvento; ?></h3>
-                </div>
 
                 <div class="col-md-4">
                    <p> Pedido </p>
