@@ -62,7 +62,7 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
 
         INNER JOIN servicos AS svcs ON svcs.id=eventos.idGuia
         INNER JOIN valores AS val ON val.idEvento=eventos.id
-        WHERE eventos.id =:id AND WHERE val.id = $valorSelecionado LIMIT 1 ";
+        WHERE eventos.id =:id LIMIT 1 ";
 
         $result_products = $conn->prepare($query_products);
         $result_products->bindParam(':id', $id, PDO::PARAM_INT);
