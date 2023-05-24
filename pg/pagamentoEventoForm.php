@@ -134,9 +134,9 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
 
 
                    if($valorSelecionado){
-                    $busc_Valor = mysqli_query($conex, "SELECT *, valores.total AS totCusto, valores.vagas AS nDeVagas FROM valores WHERE valores.id = $valorSelecionado");
+                    $busc_Valor = mysqli_query($conex, "SELECT *, valores.total AS ttl, valores.vagas AS nVga FROM valores WHERE valores.id = $valorSelecionado");
                     $linhaValue = mysqli_fetch_assoc($busc_Valor);
-                    $custoTotalSelecionado = $linhaValue['totCusto'];
+                    $custoTotalSelecionado = $linhaValue['ttl'];
 
                     $data_buy = [
                         "referenceId" => $last_insert_id,
