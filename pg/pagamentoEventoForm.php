@@ -268,7 +268,7 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                     $linhaDeValores = mysqli_fetch_assoc($busca_custo);
 
                    ?>
-                    <div class="mb-1 text-muted"> <?php echo $linhaDeValores['nDeVagas']." Vagas R$ ".number_format($totCusto, 2, ",", ".") ;?></div>
+                    <div class="mb-1 text-muted"> <?php echo $linhaDeValores['nDeVagas']." Vagas R$ ".number_format($linhaDeValores['totCusto'], 2, ",", ".") ;?></div>
                     <?php
                     }
                     ?>
