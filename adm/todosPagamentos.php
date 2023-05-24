@@ -213,7 +213,7 @@ include_once '../adm/validate.php';
                                 <table class="table table-bordered table-striped table-hover">
                                     <thead>
                                         <tr style="background-color: #DAA520;">
-                                            <th scope="col">ID / N³ Vendas</th>
+                                            <th scope="col">ID / Nº Vendas</th>
                                             <th scope="col" class="text-center">Guia Nativo</th>
 
                                             <th scope="col" class="text-center">TOTAL Bruto</th>
