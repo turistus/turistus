@@ -206,7 +206,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                                         if($emailSessaoAberta == true){
 
                                         ?>
-                                        <div class="col-4 mt-1" >
+                                        <div class="col-12 mt-1" >
                                         <h6><b>Pague com Pix </b></h6>
                                             <form action="pagamentoEventoForm.php?id=<?php echo $id; ?>" method="POST">
                                                 <input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
