@@ -131,11 +131,18 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                     $last_insert_id = $conn->lastInsertId();
                     $phone_form = str_replace("(", " ", $data['phone']);
                     $phone_form = str_replace(")", " ", $phone_form);
+
+
+                   if($valorSelecionado){
+                    $busc_Valor = mysqli_query($conex, "SELECT *, valores.total AS totCusto, valores.vagas AS nDeVagas FROM valores WHERE valores.id = $valorSelecionado");
+                    $linhaValue = mysqli_fetch_assoc($busc_Valor);
+                    $custoTotalSelecionado = $linhaValue['totCusto'];
+
                     $data_buy = [
                         "referenceId" => $last_insert_id,
                         "callbackUrl" => CALLBACKURL,
                         "returnUrl" => RETURNURL . $last_insert_id,
-                        "value" => (double) $total,
+                        "value" => (double) $custoTotalSelecionado,
                         "expiresAt" => $due_date,
                         "buyer" => [
                             "firstName" => $data['first_name'],
