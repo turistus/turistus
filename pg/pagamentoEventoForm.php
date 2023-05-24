@@ -38,16 +38,6 @@ $emailSA = $dados_pagamento['email'];
 $valorSelecionado = $_POST['opcaoSelecionada'];
 
 
-echo " <br> id :".$dados_pagamento['id']." ";
-echo "<br>";
-echo " idVal:".$valorSelecionado." ";
-echo "<br>";
-echo " email:".$dados_pagamento['email']." ";
-echo "<br>";
-echo " idGuia:".$dados_pagamento['idGuia']." ";
-echo "<br>";
-echo " encontro:".$dados_pagamento['encontro']." ";
-
         if (empty($id)) {
             header("Location: ../index.php");
             die("Erro: página encontrada!<br>");
