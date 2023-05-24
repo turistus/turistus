@@ -335,7 +335,7 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
 
 
                             <!-- BOTAO ENVIAR PICPAY -->
-                        <button type="submit" name="BtnPicPay" class="btn btn-primary" value="Enviar">Enviar Pic Pay</button>
+                        <button type="submit" name="BtnPicPay" class="btn btn-primary" value="Enviar">Gerar Pix</button>
 
                     </form>
                 </div>
