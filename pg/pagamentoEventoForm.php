@@ -244,7 +244,7 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                                     <?php
 
                                     // Busque as imagens na tabela "fotos"
-                                    $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $id");
+                                    $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $id limit 1");
 
 
 
