@@ -252,7 +252,7 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
 
                                     ?>
                                       <div >
-                                            <img src="../images/eventos/<?php echo $id.'/'.$imagem; ?>"
+                                            <img src="../images/eventos/<?php echo $id.'/'.$foto; ?>"
                                             style="margin:auto; height: 100px; text-align: center;"> </div>
 
                                 </div>
