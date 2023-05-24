@@ -123,8 +123,8 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                 $add_pay_picpay->bindParam(":guiaId", $data['idGuia']);
                 $add_pay_picpay->bindParam(":dataagendada", $data['dataagendada']);
                 $add_pay_picpay->bindParam(":valorId", $data['valorId']);
-                $add_pay_picpay->bindParam(":nVagas", $vagas);
-                $add_pay_picpay->bindParam(":custoPedido", $total);
+                $add_pay_picpay->bindParam(":nVagas", $data['nVagas']);
+                $add_pay_picpay->bindParam(":custoPedido", $data['custoPedido']);
 
 
 
@@ -364,6 +364,17 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                                     echo $valorSelecionado;
                                 }
                     ?>">
+                    <input type="text" name="nVagas" id="nVagas" class="form-control" style="display:none;" value="<?php
+                                if (isset($vagas)) {
+                                    echo $vagas;
+                                }
+                    ?>">
+                    <input type="text" name="custoPedido" id="custoPedido" class="form-control" style="display:none;" value="<?php
+                                if (isset($total)) {
+                                    echo $total;
+                                }
+                    ?>">
+
                         </div>
 
 
