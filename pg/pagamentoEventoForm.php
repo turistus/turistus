@@ -245,15 +245,16 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
 
                                     // Busque as imagens na tabela "fotos"
                                     $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $id");
-                                    $imagens = array();
-                                        while ($row = mysqli_fetch_assoc($busca_Fotos)) {
-                                        $imagens[] = $row['foto'];
-                                    }
-                                    foreach ($imagens as $imagem) { ?>
 
-                                            <div ><img src="../images/eventos/<?php echo $id.'/'.$imagem; ?>" style="margin:auto; height: 300px; text-align: center;"> </div>
 
-                                    <?php } ?>
+
+
+
+                                    ?>
+                                      <div >
+                                            <img src="../images/eventos/<?php echo $id.'/'.$imagem; ?>"
+                                            style="margin:auto; height: 100px; text-align: center;"> </div>
+
                                 </div>
                             </div>
                         </div>
