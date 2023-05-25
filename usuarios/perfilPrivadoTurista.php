@@ -41,14 +41,14 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
             <div class="row" >
 
 
-                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-8">
+                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-8">
 
                             <img style="max-height: 80px; max-width: 120px; background-color: gray; padding: auto; border-radius: 50%; border:1px solid black;"
                             src='<?php echo "../images/turistas/$Tid/$foto"; ?>'>
 
                 </div>
 <br>
-                <div class="col-xl-4 col-lg-8 col-md-4 col-sm-6 col-6" >
+                <div class="col-xl-4 col-lg-10 col-md-4 col-sm-6 col-6" >
                     <label>Apelido</label>
                     <h6><?php if (isset($dados['apelido'])) {
                             echo $dados['apelido'];
