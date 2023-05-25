@@ -36,8 +36,8 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
 <body>
     <main class="content">
         <!-- Linha ROW de tudo -->
-        <div class="row" style="border:2px solid violet;">
-            <div class="col-12" style="min-height: 280px; padding: 20px; border:1px solid blue;">
+        <div class="row" >
+            <div class="col-12" style="min-height: 280px; padding: 20px; ">
             <div class="row" >
 
 
