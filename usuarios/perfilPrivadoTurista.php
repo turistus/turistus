@@ -37,7 +37,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
     <main class="content">
         <!-- Linha ROW de tudo -->
         <div class="row">
-            <div class="col-12" style="min-height: 350px; padding: 20px; border:1px solid blue;">
+            <div class="col-12" style="min-height: 280px; padding: 20px; border:1px solid blue;">
             <div class="row" style="border:1px solid green;">
 
 
@@ -48,7 +48,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
 
                 </div>
 <br>
-                <div class="col-xl-4 col-lg-8 col-md-4 col-sm-12" style="border:2px solid red;">
+                <div class="col-xl-4 col-lg-8 col-md-4 col-sm-12" style="border:1px solid red;">
                     <label>Apelido</label>
                     <h6><?php if (isset($dados['apelido'])) {
                             echo $dados['apelido'];
@@ -58,7 +58,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                     </h6>
                 </div>
 
-                <div class="col-xl-4 col-lg-8 col-md-4 col-sm-12"style="border:2px solid red;">
+                <div class="col-xl-4 col-lg-8 col-md-4 col-sm-12"style="border:1px solid red;">
                     <label>Nome</label>
                     <h6><?php if (isset($dados['name'])) {
                             echo $dados['name'];
@@ -68,7 +68,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                     </h6>
                 </div>
 
-                <div class="col-xl-6 col-lg-8 col-md-6 col-sm-12"style="border:2px solid red;">
+                <div class="col-xl-6 col-lg-8 col-md-6 col-sm-12"style="border:1px solid red;">
                     <label>Cidade</label>
                     <h6><?php if (isset($dados['cidade'])) {
                             echo $dados['cidade'];
