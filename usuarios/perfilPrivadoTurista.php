@@ -48,7 +48,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
 
                 </div>
 <br>
-                <div class="col-xl-4 col-lg-8 col-md-4 col-sm-6" style="border:1px solid red;">
+                <div class="col-xl-4 col-lg-8 col-md-4 col-sm-6 col-6" style="border:1px solid red;">
                     <label>Apelido</label>
                     <h6><?php if (isset($dados['apelido'])) {
                             echo $dados['apelido'];
@@ -58,7 +58,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                     </h6>
                 </div>
 
-                <div class="col-xl-4 col-lg-8 col-md-4 col-sm-6"style="border:1px solid red;">
+                <div class="col-xl-4 col-lg-8 col-md-4 col-sm-6 col-6"style="border:1px solid red;">
                     <label>Nome</label>
                     <h6><?php if (isset($dados['name'])) {
                             echo $dados['name'];
@@ -68,7 +68,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                     </h6>
                 </div>
 
-                <div class="col-xl-6 col-lg-8 col-md-6 col-sm-6"style="border:1px solid red;">
+                <div class="col-xl-6 col-lg-8 col-md-6 col-sm-6 col-6"style="border:1px solid red;">
                     <label>Cidade</label>
                     <h6><?php if (isset($dados['cidade'])) {
                             echo $dados['cidade'];
@@ -78,7 +78,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                     </h6>
                 </div>
 
-                <div class="col-xl-6 col-lg-8 col-md-6 col-sm-12">
+                <div class="col-xl-6 col-lg-8 col-md-6 col-sm-6 col-6">
                     <label>Celular</label>
                     <h6><?php if (isset($dados['celular'])) {
                             echo $dados['celular'];
@@ -88,7 +88,7 @@ if(($turista_selecionado) AND ($turista_selecionado->rowCount() != 0) ){
                     </h6>
                 </div>
 
-                <div class="col-xl-6 col-lg-8 col-md-6 col-sm-12">
+                <div class="col-xl-6 col-lg-8 col-md-6 col-sm-6 col-12">
                     <label>Email</label>
                     <h6><?php if (isset($dados['email'])) {
                             echo $dados['email'];
