@@ -22,10 +22,10 @@
       <div class="col-md-3 col-sm-6 col-xs-6">
         <h5>Navegação</h5>
         <ul class="list-unstyled">
-          <li style="font-size: 15px;" ><a href="./pg/eventos.php">Eventos de viagem</a></li>
-          <li style="font-size: 15px;" ><a href="./pg/pontos-turisticos.php">Destinos</a></li>
-          <li style="font-size: 15px;" ><a href="./pg/mapa.php">Mapa</a></li>
-          <li style="font-size: 15px;" ><a href="./pg/sobre.php">Sobre nós</a></li>
+          <li style="font-size: 15px;" ><a href="../pg/eventos.php">Eventos de viagem</a></li>
+          <li style="font-size: 15px;" ><a href="../pg/pontos-turisticos.php">Destinos</a></li>
+          <li style="font-size: 15px;" ><a href="../pg/mapa.php">Mapa</a></li>
+          <li style="font-size: 15px;" ><a href="../pg/sobre.php">Sobre nós</a></li>
 
         </ul>
       </div>
@@ -60,7 +60,7 @@
         </ul>
       </div>
       <div class="col-md-9">
-      <p class="mb-1 " style="font-size: 15px;">&copy; 2020-2023 <a href="index.php">Turist Us Turismo - Todos os direitos reservados.</a></p>
+      <p class="mb-1 " style="font-size: 15px;">&copy; 2020-2023 <a href="../index.php">Turist Us Turismo - Todos os direitos reservados.</a></p>
       </div>
     </div>
 
