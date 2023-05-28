@@ -55,7 +55,7 @@
       <div class="col-md-12 col-sm-12">
         <ul class="list-inline ">
           <li list-inline-item ><a href="../TERMOS DE USO.pdf">Termos de uso</a></li>
-          <li list-inline-item ><a href="../Política de Privacidade TuristUs">Política de privacidade</a></li>
+          <li list-inline-item ><a href="../Política de Privacidade TuristUs.pdf">Política de privacidade</a></li>
           <!-- <li list-inline-item ><a href="#" class="nav-link px-2 link-dark"><ion-icon name="bed-outline"></ion-icon></a></li> -->
         </ul>
       </div>
