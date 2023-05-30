@@ -30,7 +30,7 @@
         servicos.nome AS nomeGuia,
 
         val.idEvento,
-        val.total,
+        val.total
 
 
         FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
