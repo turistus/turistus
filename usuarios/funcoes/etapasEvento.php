@@ -22,3 +22,11 @@ if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
 echo "Passou por fora do IF";
 
 ?>
+
+
+<div style="display:inline;">
+    <h2>Pedido #<?php echo $row_Pedido['id']; ?></h2>
+    <h2>Data Agendada: <?php echo $row_Pedido['dataagendada']; ?></h2>
+    <h2>Etapa #<?php echo $row_Pedido['payments_statu_Id']; ?></h2>
+
+</div>
