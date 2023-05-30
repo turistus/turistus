@@ -13,7 +13,7 @@ if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
     $data = $row_Pedido['dataagendada'];
 
     if($etapa == 5){
-        echo "Etapa: ".$etapa;
+        echo "Eeeeetapa: ".$etapa;
     }
 
 }else {
