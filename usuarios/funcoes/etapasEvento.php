@@ -14,7 +14,7 @@ if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
 
     $data = $row_Pedido['dataagendada'];
 
-    if($row_Pedido['payments_statu_Id'] == 5){
+    if($row_Pedido['payments_statu_Id'] === 5){
         echo "Eeeeetapa: ".$row_Pedido['payments_statu_Id'];
     }
 
