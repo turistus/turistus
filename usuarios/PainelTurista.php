@@ -76,11 +76,7 @@ $emailUsuario = $_SESSION['user_email'];
                               <div class="col mb-2 text-center">
                                 <div class="card ">
                                   <div class="card-body">
-                                    <h3>Pedidos realizados</h3>
-
-                                    <?php
-                                    include_once './funcoes/etapasEvento.php';
-                                    ?>
+                                  <h3>Solicitações de datas</h3>
 
                                   </div>
                                 </div>
@@ -91,9 +87,11 @@ $emailUsuario = $_SESSION['user_email'];
                               <div class="col mb-2 text-center">
                                 <div class="card ">
                                   <div class="card-body">
-                                    <h3>Solicitações de datas</h3>
+                                    <h3>Pedidos realizados</h3>
 
-
+                                      <?php
+                                      include_once './funcoes/etapasEvento.php';
+                                      ?>
                                   </div>
                                 </div>
                               </div>
