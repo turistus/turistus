@@ -16,7 +16,7 @@ if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
         Data Agendada: <?php echo date('d/m/Y',  strtotime($row_Pedido['dataagendada'])); ?>
         <br>
         Etapa #<?php echo $row_Pedido['payments_statu_Id']; ?>
-        #<?php if($row_Pedido['confirmado'] == 1){echo "<p style='background:green;'>Evento Confirmado </p>"; }else{ echo "Aguarde o guia aceitar !"; }; ?></h6>
+        <?php if($row_Pedido['confirmado'] == 1){echo "<p style='background:green;'>Evento Confirmado </p>"; }else{ echo "Aguarde o guia aceitar !"; }; ?></h6>
         <hr>
 
     </div>
