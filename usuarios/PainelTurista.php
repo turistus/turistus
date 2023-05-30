@@ -79,7 +79,7 @@ $emailUsuario = $_SESSION['user_email'];
                                     <h3>Pagos e aceitos</h3>
 
                                     <?php
-                                    include_once './funcoes/etapasEvento.php';
+                                   // include_once './funcoes/etapasEvento.php';
                                     ?>
 
                                   </div>
