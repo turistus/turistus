@@ -140,7 +140,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                             <div class="col-md-12 ">
                                 <h5>Profissional organizador:  <a href="../guias/perfilG.php?idguia=<?php echo $idGuia;?>"><?php echo $nomeGuia;?></h5></a>
-                                <h3 style="text-align: center;"><?php echo $cidade?> - <?php echo $uf?></h3>
+                                <h3 style="text-align: center;">Município <?php echo $cidade?> - <?php echo $uf?></h3>
 
                             </div>
                             <hr>
@@ -173,10 +173,10 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                             </div>
                             <div class="col-12" >
 
-                                <label>  Quantidade Pessoas </label>
+                                <label>  Selecione Vagas </label>
                                     <select class="select-vaga" id="SelecaoValores" style="border: 1px solid blue; border-radius: 10;" >
                                      <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idVAL -->
-                                     <option>Selecione</option>
+
                                         <?php
                                             $buscaValores = "SELECT valores.id AS idVal, idEvento, vagas, total FROM valores WHERE idEvento = $id ORDER BY id ASC";
                                             $result = $conn->prepare($buscaValores);
