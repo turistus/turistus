@@ -27,11 +27,16 @@
         pontosturisticos.image AS img,
 
         servicos.id,
-        servicos.nome AS nomeGuia
+        servicos.nome AS nomeGuia,
+
+        val.idEvento,
+        val.total,
 
 
         FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
-        INNER JOIN servicos ON servicos.id = eventos.idGuia WHERE pontosturisticos.id = $id ORDER BY $id DESC";
+        INNER JOIN servicos ON servicos.id = eventos.idGuia
+        INNER JOIN valores AS val ON val.idEvento = eventos.id GROUP BY val.idEvento
+        WHERE pontosturisticos.id = $id ORDER BY $id DESC";
 
         $result_products = $conn->prepare($query_products);
         $result_products->execute();
@@ -48,7 +53,7 @@
                 <div class="card-body " style="padding: 10px;  ">
                   <img style="height: 80px; width: 100px; " src= <?php echo "'../images/pontosturisticos/$idPt/$img";?>'><br>
                     <h6 class="card-title"><?php echo $nome; ?></h6>
-                    <p class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></p>
+                    <p class="card-title">R$ <?php echo number_format($total, 2, ",", ".") ?></p>
                     <p class="card-title"><?php echo $nomeGuia; ?></p>
 
 
