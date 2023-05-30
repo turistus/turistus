@@ -3,7 +3,7 @@ echo "Email".$emailUsuario;
 
 
 
-$query_busca_Pedido = "SELECT *, dataagendada, payments_statu_Id FROM payments_picpays WHERE payments_picpays.email = $emailUsuario";
+$query_busca_Pedido = "SELECT *, dataagendada, payments_statu_Id FROM payments_picpays WHERE payments_picpays.email = $emailUsuario LIMIT 1" ;
 $pedido_selecionado = $conn->prepare($query_busca_Pedido);
 $pedido_selecionado->execute();
 
