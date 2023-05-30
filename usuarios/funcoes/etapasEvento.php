@@ -9,15 +9,17 @@ $pedido_selecionado->execute();
 
 echo  "etapaaa: " . $payments_statu_Id;
 
-if($row_Pedido = $pedido_selecionado->fetch(PDO::FETCH_ASSOC)){
+    if($row_Pedido = $pedido_selecionado->fetch(PDO::FETCH_ASSOC)){
 
-    if($row_Pedido['payments_statu_Id'] === 5){
-        echo "Eeeeetapa: ".$row_Pedido['payments_statu_Id'];
+        if($row_Pedido['payments_statu_Id'] === 5){
+            echo "Eeeeetapa: ".$row_Pedido['payments_statu_Id'];
+        }
+
+    }else {
+        header("Location: ../index.php");
+        exit();
     }
 
-}else {
-    header("Location: ../index.php");
-    exit();
-}
+echo "Passou por fora do IF";
 
 ?>
