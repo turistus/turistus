@@ -16,26 +16,62 @@ if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
         Data Agendada: <?php echo date('d/m/Y',  strtotime($row_Pedido['dataagendada'])); ?>
 
         Etapa <?php if($row_Pedido['payments_statu_Id'] == 1){
-            echo " Pedido Criado ";
+
          } elseif($row_Pedido['payments_statu_Id'] == 2){
-            echo "Pague o evento";
+            echo "<p style='background:blue;'> 2 - Aguardando Pagamento !</p> ";
+            echo "<p> 3 - Cancelado ! </p>";
+            echo "<p> 4 - Pagamento em Analise !</p>";
+            echo "<p> 5 - Pago !</p>";
+            echo "<p> 6 - Aguarde confirmaçao do guia !</p>";
+            echo "<p> 7 - Pagamento Estornado !</p>";
+
          }
          elseif($row_Pedido['payments_statu_Id'] == 3){
-            echo "Cancelado";
+            echo "<p > 2 - Aguardando Pagamento !</p> ";
+            echo "<p style='background:red;'> 3 - Cancelado ! </p>";
+            echo "<p> 4 - Pagamento em Analise !</p>";
+            echo "<p> 5 - Pago !</p>";
+            echo "<p> 6 - Aguarde confirmaçao do guia !</p>";
+            echo "<p> 7 - Pagamento Estornado !</p>";
+
          }
          elseif($row_Pedido['payments_statu_Id'] == 4){
-            echo "Pagamento em Analise !";
+            echo "<p > 2 - Aguardando Pagamento !</p> ";
+            echo "<p > 3 - Cancelado ! </p>";
+            echo "<p style='background:blue;'> 4 - Pagamento em Analise !</p>";
+            echo "<p> 5 - Pago !</p>";
+            echo "<p> 6 - Aguarde confirmaçao do guia !</p>";
+            echo "<p> 7 - Pagamento Estornado !</p>";
+
          }
          elseif($row_Pedido['payments_statu_Id'] == 5){
-            echo "Pago !";
+            echo "<p > 2 - Aguardando Pagamento !</p> ";
+            echo "<p > 3 - Cancelado ! </p>";
+            echo "<p > 4 - Pagamento em Analise !</p>";
+            echo "<p style='background:green;'> 5 - Pago !</p>";
+            echo "<p> 6 - Aguarde confirmaçao do guia !</p>";
+            echo "<p> 7 - Pagamento Estornado !</p>";
+
          }
          elseif($row_Pedido['payments_statu_Id'] == 6){
-            echo "Pago, Aguarde confirmaçao do guia";
+            echo "<p > 2 - Aguardando Pagamento !</p> ";
+            echo "<p > 3 - Cancelado ! </p>";
+            echo "<p > 4 - Pagamento em Analise !</p>";
+            echo "<p > 5 - Pago !</p>";
+            echo "<p style='background:green;'> 6 - Aguarde confirmaçao do guia !</p>";
+            echo "<p> 7 - Pagamento Estornado !</p>";
+
          }
          elseif($row_Pedido['payments_statu_Id'] == 7){
-            echo "Estornado o pagamento";
+            echo "<p > 2 - Aguardando Pagamento !</p> ";
+            echo "<p > 3 - Cancelado ! </p>";
+            echo "<p > 4 - Pagamento em Analise !</p>";
+            echo "<p > 5 - Pago !</p>";
+            echo "<p > 6 - Aguarde confirmaçao do guia !</p>";
+            echo "<p style='background:orange;'> 7 - Pagamento Estornado !</p>";
+
          }?>
-        <?php if($row_Pedido['confirmado'] == 1){echo "<p style='background:green;'>Evento Confirmado </p>"; }; ?></h6>
+        <?php if($row_Pedido['confirmado'] == 1){echo "<p style='background:green;'> Pedido Confirmado </p>"; }; ?></h6>
         <hr>
 
     </div>
