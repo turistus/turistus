@@ -50,7 +50,7 @@ $emailUsuario = $_SESSION['user_email'];
 
             <div class="row">
               <button id="Painel" type="button" class="btn btn text-dark"> Perfil </button>
-              <button id="terceiroForm" type="button" class="btn btn text-dark "> Eventos Pagos </button>
+              <button id="terceiroForm" type="button" class="btn btn text-dark "> Meus Eventos </button>
               <!-- <button id="CriarEvento" type="button" class="btn btn text-dark "> Fotos </button>
               <button id="quartoForm" type="button" class="btn btn text-dark "> Favoritos </button>
               <button id="perfilForm" type="button" class="btn btn text-dark "> Pontos Classificação</button> -->
