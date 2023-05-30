@@ -15,6 +15,7 @@ if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
         <h6>Pedido #<?php echo $row_Pedido['id']; ?></h6>
         <h6>Data Agendada: <?php echo $row_Pedido['dataagendada']; ?></h6>
         <h6>Etapa #<?php echo $row_Pedido['payments_statu_Id']; ?></h6>
+        <hr>
 
     </div>
 <?php
