@@ -16,9 +16,10 @@ if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
         Data Agendada: <?php echo date('d/m/Y',  strtotime($row_Pedido['dataagendada'])); ?>
 <br>
         Status do pedido <?php if($row_Pedido['payments_statu_Id'] == 1){
+            echo "<p style='background:#4169E1;'> 1 - Pedido Gerado !</p> ";
 
          } elseif($row_Pedido['payments_statu_Id'] == 2){
-            echo "<p style='background:blue;'> 2 - Aguardando Pagamento !</p> ";
+            echo "<p style='background:#4169E1;'> 2 - Aguardando Pagamento !</p> ";
 
 
          }
@@ -30,19 +31,19 @@ if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
          }
          elseif($row_Pedido['payments_statu_Id'] == 4){
 
-            echo "<p style='background:blue;'> 4 - Pagamento em Analise !</p>";
+            echo "<p style='background:#4169E1;'> 4 - Pagamento em Analise !</p>";
 
 
          }
          elseif($row_Pedido['payments_statu_Id'] == 5){
 
-            echo "<p style='background:green;'> 5 - Pago !</p>";
+            echo "<p style='background:#228B22;'> 5 - Pago !</p>";
 
 
          }
          elseif($row_Pedido['payments_statu_Id'] == 6){
 
-            echo "<p style='background:green;'> 6 - Aguarde confirmaçao do guia !</p>";
+            echo "<p style='background:#228B22;'> 6 - Aguarde confirmaçao do guia !</p>";
 
 
          }
