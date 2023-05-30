@@ -35,7 +35,7 @@
         FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
         INNER JOIN servicos ON servicos.id = eventos.idGuia
         INNER JOIN valores AS val ON val.idEvento = eventos.id
-        WHERE pontosturisticos.id = $id ";
+        WHERE pontosturisticos.id = $id GROUP BY val.idEvento";
 
         $result_products = $conn->prepare($query_products);
         $result_products->execute();
