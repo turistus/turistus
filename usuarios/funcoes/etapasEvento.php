@@ -15,8 +15,8 @@ if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
         <h6>Pedido #<?php echo $row_Pedido['id']; ?>
         Data Agendada: <?php echo date('d/m/Y',  strtotime($row_Pedido['dataagendada'])); ?>
 
-        Etapa #<?php if($row_Pedido['payments_statu_Id'] == 1){
-            echo " 1";
+        Etapa <?php if($row_Pedido['payments_statu_Id'] == 1){
+            echo " Pedido Criado ";
          } elseif($row_Pedido['payments_statu_Id'] == 2){
             echo "Pague o evento";
          }
@@ -35,7 +35,7 @@ if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
          elseif($row_Pedido['payments_statu_Id'] == 7){
             echo "Estornado o pagamento";
          }?>
-        <?php if($row_Pedido['confirmado'] == 1){echo "<p style='background:green;'>Evento Confirmado </p>"; }else{ echo " e aguarde confirmação !"; }; ?></h6>
+        <?php if($row_Pedido['confirmado'] == 1){echo "<p style='background:green;'>Evento Confirmado </p>"; }; ?></h6>
         <hr>
 
     </div>
