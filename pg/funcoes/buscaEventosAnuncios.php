@@ -32,7 +32,6 @@
         val.idEvento,
         val.total
 
-
         FROM eventos INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
         INNER JOIN servicos ON servicos.id = eventos.idGuia
         INNER JOIN valores AS val ON val.idEvento = eventos.id GROUP BY val.idEvento
@@ -47,7 +46,7 @@
             extract($row_product);
           ?>
             <div class="text-center" >
-              <div class="card " >
+              <div class="card" >
 
               <a href="view-evento.php?id=<?php echo $idE;?>" class="btn ">
                 <div class="card-body " style="padding: 10px;  ">
