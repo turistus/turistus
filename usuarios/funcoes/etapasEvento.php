@@ -1,12 +1,13 @@
 <?php
 
-$query_busca_Pedido = "SELECT *, email, dataagendada, payments_statu_Id FROM payments_picpays WHERE payments_picpays.email = $emailUsuario" ;
+$query_busca_Pedido = "SELECT *, email, dataagendada, payments_statu_Id FROM payments_picpays WHERE payments_picpays.email = '$emailUsuario'" ;
 $pedido_selecionado = $conn->prepare($query_busca_Pedido);
 $pedido_selecionado->execute();
 
-echo  "etapaaa: " . $dataagendada;
+echo  "etapaaa: ";
 if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
     $row_Pedido = $pedido_selecionado->fetch(PDO::FETCH_ASSOC);
+    extract($row_Pedido);
 
             echo "Eeeeetapa: ".$row_Pedido['payments_statu_Id'];
 
