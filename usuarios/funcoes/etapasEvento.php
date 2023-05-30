@@ -4,12 +4,21 @@ $query_busca_Pedido = "SELECT *, email, dataagendada, payments_statu_Id FROM pay
 $pedido_selecionado = $conn->prepare($query_busca_Pedido);
 $pedido_selecionado->execute();
 
-echo  "etapaaa: ";
-if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
-    $row_Pedido = $pedido_selecionado->fetch(PDO::FETCH_ASSOC);
-    extract($row_Pedido);
 
-            echo "Eeeeetapa: ".$row_Pedido['payments_statu_Id'];
+if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
+
+    while ($row_Pedido = $pedido_selecionado->fetch(PDO::FETCH_ASSOC)) {
+    extract($row_Pedido);
+    ?>
+
+    <div class="container" style="display:inline;">
+        <h6>Pedido #<?php echo $row_Pedido['id']; ?></h6>
+        <h6>Data Agendada: <?php echo $row_Pedido['dataagendada']; ?></h6>
+        <h6>Etapa #<?php echo $row_Pedido['payments_statu_Id']; ?></h6>
+
+    </div>
+<?php
+         }
 
 
     }else {
@@ -18,14 +27,5 @@ if(($pedido_selecionado) AND ($pedido_selecionado->rowCount() != 0) ){
         exit();
     }
 
-echo "Passou por fora do IF";
-
 ?>
 
-
-<div class="container" style="display:inline;">
-    <h2>Pedido #<?php echo $row_Pedido['id']; ?></h2>
-    <h2>Data Agendada: <?php echo $row_Pedido['dataagendada']; ?></h2>
-    <h2>Etapa #<?php echo $row_Pedido['payments_statu_Id']; ?></h2>
-
-</div>
