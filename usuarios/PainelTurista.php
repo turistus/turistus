@@ -78,7 +78,9 @@ $emailUsuario = $_SESSION['user_email'];
                                   <div class="card-body">
                                     <h3>Pagos e aceitos</h3>
 
-
+                                    <?php
+                                    include_once './funcoes/etapasEvento.php';
+                                    ?>
 
                                   </div>
                                 </div>
