@@ -140,7 +140,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                             <div class="col-md-12 ">
                                 <h5>Profissional organizador:  <a href="../guias/perfilG.php?idguia=<?php echo $idGuia;?>"><?php echo $nomeGuia;?></h5></a>
-                                <h3 style="text-align: center;">Município <?php echo $cidade?> - <?php echo $uf?></h3>
+                                <h3>Município <?php echo $cidade?> - <?php echo $uf?></h3>
 
                             </div>
                             <hr>
