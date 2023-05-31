@@ -35,7 +35,7 @@ include_once './configPicPay.php';
                 $idGuia = $dados_pagamento['idGuia'];
                 $emailSA = $dados_pagamento['email'];
                 $valorSelecionado = $_POST['opcaoSelecionada'];
-
+                echo $valorSelecionado;
 
         if (empty($id)) {
             header("Location: ../index.php");
