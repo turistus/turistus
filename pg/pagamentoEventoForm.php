@@ -34,8 +34,8 @@ include_once './configPicPay.php';
                 //$id = $dados_pagamento['id'];
                 $idGuia = $dados_pagamento['idGuia'];
                 $emailSA = $dados_pagamento['email'];
-                $valorSelecionado = $_POST['opcaoSelecionada'];
-                echo $valorSelecionado;
+                $opcaoSelecionada = $_POST['opcaoSelecionada'];
+                echo $opcaoSelecionada;
 
         if (empty($id)) {
             header("Location: ../index.php");
@@ -267,9 +267,9 @@ include_once './configPicPay.php';
 
                     <?php
 
-                    if($valorSelecionado){
-                        echo $valorSelecionado ." - ". $dados_pagamento['opcaoSelecionada'];
-                        $busca_custo = mysqli_query($conex, "SELECT *, valores.total AS totCusto, valores.vagas AS nDeVagas FROM valores WHERE valores.id = $valorSelecionado ");
+                    if($opcaoSelecionada){
+                        echo $opcaoSelecionada ." - ". $dados_pagamento['opcaoSelecionada'];
+                        $busca_custo = mysqli_query($conex, "SELECT *, valores.total AS totCusto, valores.vagas AS nDeVagas FROM valores WHERE valores.id = $opcaoSelecionada ");
                         $linhaDeValores = mysqli_fetch_assoc($busca_custo);
 
                     ?>
