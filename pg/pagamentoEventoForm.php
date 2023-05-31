@@ -36,9 +36,6 @@ $dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $idGuia = $dados_pagamento['idGuia'];
 $emailSA = $dados_pagamento['email'];
 $valorSelecionado = $_POST['opcaoSelecionada'];
-echo "A".$valorSelecionado;
-
-echo "B".$dados_pagamento['opcaoSelecionada'];
 
         if (empty($id)) {
             header("Location: ../index.php");
@@ -124,7 +121,7 @@ echo "B".$dados_pagamento['opcaoSelecionada'];
                 $add_pay_picpay->bindParam(":created", $data['created']);
                 $add_pay_picpay->bindParam(":guiaId", $data['idGuia']);
                 $add_pay_picpay->bindParam(":dataagendada", $data['dataagendada']);
-                $add_pay_picpay->bindParam(":valorId", $valorSelecionado);
+                $add_pay_picpay->bindParam(":valorId", $dados_pagamento['opcaoSelecionada']);
                 $add_pay_picpay->bindParam(":nVagas", $data['nVagas']);
                 $add_pay_picpay->bindParam(":custoPedido", $data['custoPedido']);
 
