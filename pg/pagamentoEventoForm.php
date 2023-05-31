@@ -265,13 +265,13 @@ include_once './configPicPay.php';
                 <div class="col-md-4">
                    <p> Pedido </p>
 
-                   <?php
+                    <?php
 
-                   if($valorSelecionado){
-                    $busca_custo = mysqli_query($conex, "SELECT *, valores.total AS totCusto, valores.vagas AS nDeVagas FROM valores WHERE valores.id = $valorSelecionado ");
-                    $linhaDeValores = mysqli_fetch_assoc($busca_custo);
+                    if($valorSelecionado){
+                        $busca_custo = mysqli_query($conex, "SELECT *, valores.total AS totCusto, valores.vagas AS nDeVagas FROM valores WHERE valores.id = $valorSelecionado ");
+                        $linhaDeValores = mysqli_fetch_assoc($busca_custo);
 
-                   ?>
+                    ?>
                     <div class="mb-1 text-muted"> <?php echo $linhaDeValores['nDeVagas']." Vagas R$ ".number_format($linhaDeValores['totCusto'], 2, ",", ".") ;?></div>
                     <?php
                     }
