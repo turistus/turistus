@@ -360,17 +360,17 @@ include_once './configPicPay.php';
 
                         <div class="form-group">
 
-                            <input type="text" name="valorId" id="valorId" class="form-control" style="display:none;" value="<?php
+                            <input type="text" name="valorId" id="valorId" class="form-control"  value="<?php
                                 if (isset($valorSelecionado)) {
                                     echo $valorSelecionado;
                                 }
                     ?>">
-                    <input type="text" name="nVagas" id="nVagas" class="form-control" style="display:none;" value="<?php
+                    <input type="text" name="nVagas" id="nVagas" class="form-control"  value="<?php
                                 if (isset($vagas)) {
                                     echo $vagas;
                                 }
                     ?>">
-                    <input type="text" name="custoPedido" id="custoPedido" class="form-control" style="display:none;" value="<?php
+                    <input type="text" name="custoPedido" id="custoPedido" class="form-control"  value="<?php
                                 if (isset($total)) {
                                     echo $total;
                                 }
