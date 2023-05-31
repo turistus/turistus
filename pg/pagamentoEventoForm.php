@@ -361,8 +361,8 @@ include_once './configPicPay.php';
                         <div class="form-group">
 
                             <input type="text" name="valorId" id="valorId" class="form-control"  value="<?php
-                                if (isset($valorSelecionado)) {
-                                    echo $valorSelecionado;
+                                if (isset($opcaoSelecionada)) {
+                                    echo $opcaoSelecionada;
                                 }
                     ?>">
                     <input type="text" name="nVagas" id="nVagas" class="form-control"  value="<?php
