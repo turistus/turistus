@@ -229,7 +229,7 @@ ob_start();
                                      FROM eventos
                                      LEFT JOIN pontosturisticos AS prod ON prod.id=eventos.idPt
                                      INNER JOIN valores AS val ON val.idEvento = eventos.id
-                                     ORDER BY nomeE ASC LIMIT 3 GROUP BY val.idEvento";
+                                     GROUP BY val.idEvento ORDER BY nomeE ASC LIMIT 3 ";
 
                     $result_Eventos = $conn->prepare($queryEventos);
                     $result_Eventos->execute();
