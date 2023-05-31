@@ -268,7 +268,7 @@ include_once './configPicPay.php';
                    <?php
 
                    if($valorSelecionado){
-                    $busca_custo = mysqli_query($conex, "SELECT *, valores.total AS totCusto, valores.vagas AS nDeVagas FROM valores WHERE valores.id = $valorSelecionado GROUP BY valores.idEvento ");
+                    $busca_custo = mysqli_query($conex, "SELECT *, valores.total AS totCusto, valores.vagas AS nDeVagas FROM valores WHERE valores.id = $valorSelecionado ");
                     $linhaDeValores = mysqli_fetch_assoc($busca_custo);
 
                    ?>
