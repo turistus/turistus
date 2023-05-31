@@ -36,7 +36,9 @@ $dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 $idGuia = $dados_pagamento['idGuia'];
 $emailSA = $dados_pagamento['email'];
 $valorSelecionado = $_POST['opcaoSelecionada'];
+echo "A".$valorSelecionado;
 
+echo "B".$valorSelecionado['opcaoSelecionada'];
 
         if (empty($id)) {
             header("Location: ../index.php");
