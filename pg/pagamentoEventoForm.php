@@ -31,11 +31,6 @@ include_once './configPicPay.php';
         include_once 'menu.php';
 
 
-$dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-//$id = $dados_pagamento['id'];
-$idGuia = $dados_pagamento['idGuia'];
-$emailSA = $dados_pagamento['email'];
-$valorSelecionado = $_POST['opcaoSelecionada'];
 
         if (empty($id)) {
             header("Location: ../index.php");
@@ -102,6 +97,11 @@ $valorSelecionado = $_POST['opcaoSelecionada'];
                 $due_date = date(DATE_ATOM, strtotime($data['due_date']));
 
 
+                $dados_pagamento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+                //$id = $dados_pagamento['id'];
+                $idGuia = $dados_pagamento['idGuia'];
+                $emailSA = $dados_pagamento['email'];
+                //$valorSelecionado = $_POST['opcaoSelecionada'];
 
 
 
