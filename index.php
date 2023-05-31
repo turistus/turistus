@@ -220,14 +220,16 @@ ob_start();
 <hr>
                 <?php
                     $queryEventos = "SELECT *, eventos.id AS id,
-                                                 eventos.nome AS nomeE,
-                                                    eventos.idGuia AS idGuia,
-                                                      prod.image AS img,
-                                                        eventos.breveDescricao AS breveDescricao
+                                               eventos.nome AS nomeE,
+                                               eventos.idGuia AS idGuia,
+                                               prod.image AS img,
+                                               eventos.breveDescricao AS breveDescricao,
+                                               val.idEvento,
+                                               val.total
                                      FROM eventos
-                                     LEFT JOIN
-                                     pontosturisticos AS prod
-                                     ON prod.id=eventos.idPt ORDER BY nomeE ASC LIMIT 3";
+                                     LEFT JOIN pontosturisticos AS prod ON prod.id=eventos.idPt
+                                     INNER JOIN valores AS val ON val.idEvento = eventos.id
+                                     ORDER BY nomeE ASC LIMIT 3 GROUP BY val.idEvento";
 
                     $result_Eventos = $conn->prepare($queryEventos);
                     $result_Eventos->execute();
@@ -256,7 +258,7 @@ ob_start();
                             </a>
 
 
-                            <p class="card-text text-center mb-auto " > Por apenas R$ <?php echo number_format($valor, 2, ",", "."); ?></p>
+                            <p class="card-text text-center mb-auto " > Por apenas R$ <?php echo number_format($total, 2, ",", "."); ?></p>
 
 
                             <p class="card-text mb-auto" style="height: 100px; border:1px solid blue; border-radius: 5px; padding-left: 10px;"><?php echo $breveDescricao.'<br>'; ?></p>
