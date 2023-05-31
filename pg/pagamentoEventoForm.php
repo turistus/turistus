@@ -122,7 +122,7 @@ include_once './configPicPay.php';
                 $add_pay_picpay->bindParam(":created", $data['created']);
                 $add_pay_picpay->bindParam(":guiaId", $data['idGuia']);
                 $add_pay_picpay->bindParam(":dataagendada", $data['dataagendada']);
-                $add_pay_picpay->bindParam(":valorId", $data['opcaoSelecionada']);
+                $add_pay_picpay->bindParam(":valorId", $valorSelecionado);
                 $add_pay_picpay->bindParam(":nVagas", $data['nVagas']);
                 $add_pay_picpay->bindParam(":custoPedido", $data['custoPedido']);
 
