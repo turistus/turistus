@@ -101,7 +101,7 @@ include_once './configPicPay.php';
                 //$id = $dados_pagamento['id'];
                 $idGuia = $dados_pagamento['idGuia'];
                 $emailSA = $dados_pagamento['email'];
-                //$valorSelecionado = $_POST['opcaoSelecionada'];
+                $valorSelecionado = $_POST['opcaoSelecionada'];
 
 
 
