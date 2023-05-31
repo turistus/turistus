@@ -34,8 +34,8 @@ include_once './configPicPay.php';
                 //$id = $dados_pagamento['id'];
                 $idGuia = $dados_pagamento['idGuia'];
                 $emailSA = $dados_pagamento['email'];
-                $opcaoSelecionada = $_POST['valorSelecionado'];
-                echo $opcaoSelecionada;
+                $valorSelecionado = $_POST['opcaoSelecionada'];
+            echo $valorSelecionado;
 
         if (empty($id)) {
             header("Location: ../index.php");
@@ -122,7 +122,7 @@ include_once './configPicPay.php';
                 $add_pay_picpay->bindParam(":created", $data['created']);
                 $add_pay_picpay->bindParam(":guiaId", $data['idGuia']);
                 $add_pay_picpay->bindParam(":dataagendada", $data['dataagendada']);
-                $add_pay_picpay->bindParam(":valorId", $data['valorId']);
+                $add_pay_picpay->bindParam(":valorId", $valorSelecionado);
                 $add_pay_picpay->bindParam(":nVagas", $data['nVagas']);
                 $add_pay_picpay->bindParam(":custoPedido", $data['custoPedido']);
 
@@ -267,9 +267,9 @@ include_once './configPicPay.php';
 
                     <?php
 
-                    if($opcaoSelecionada){
-                        echo $opcaoSelecionada ." - ". $dados_pagamento['opcaoSelecionada'];
-                        $busca_custo = mysqli_query($conex, "SELECT *, valores.total AS totCusto, valores.vagas AS nDeVagas FROM valores WHERE valores.id = $opcaoSelecionada ");
+                    if($valorSelecionado){
+                        echo $valorSelecionado ." - ". $dados_pagamento['opcaoSelecionada'];
+                        $busca_custo = mysqli_query($conex, "SELECT *, valores.total AS totCusto, valores.vagas AS nDeVagas FROM valores WHERE valores.id = $valorSelecionado ");
                         $linhaDeValores = mysqli_fetch_assoc($busca_custo);
 
                     ?>
@@ -360,17 +360,17 @@ include_once './configPicPay.php';
 
                         <div class="form-group">
 
-                            <input type="text" name="valorId" id="valorId" class="form-control"  value="<?php
-                                if (isset($opcaoSelecionada)) {
-                                    echo $opcaoSelecionada;
+                            <input type="text" name="valorId" id="valorId" class="form-control" style="display:none;" value="<?php
+                                if (isset($valorSelecionado)) {
+                                    echo $valorSelecionado;
                                 }
                     ?>">
-                    <input type="text" name="nVagas" id="nVagas" class="form-control"  value="<?php
+                    <input type="text" name="nVagas" id="nVagas" class="form-control" style="display:none;" value="<?php
                                 if (isset($vagas)) {
                                     echo $vagas;
                                 }
                     ?>">
-                    <input type="text" name="custoPedido" id="custoPedido" class="form-control"  value="<?php
+                    <input type="text" name="custoPedido" id="custoPedido" class="form-control" style="display:none;" value="<?php
                                 if (isset($total)) {
                                     echo $total;
                                 }
