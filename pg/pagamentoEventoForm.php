@@ -38,7 +38,7 @@ $emailSA = $dados_pagamento['email'];
 $valorSelecionado = $_POST['opcaoSelecionada'];
 echo "A".$valorSelecionado;
 
-echo "B".$valorSelecionado['opcaoSelecionada'];
+echo "B".$dados_pagamento['opcaoSelecionada'];
 
         if (empty($id)) {
             header("Location: ../index.php");
