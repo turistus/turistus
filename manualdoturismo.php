@@ -10,6 +10,7 @@ define('ACCESS', true);
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
+  <link rel="shortcut icon" type="imagex/png" href="../images/logooriginal.png">
   <title>Turismo - Curso Online</title>
   <!-- Font Awesome icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">

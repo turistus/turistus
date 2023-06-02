@@ -16,7 +16,7 @@ $usuarioId = isset($_SESSION['user_id']);
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
-  <link rel="icon" href="../images/icon/logo.png">
+  <link rel="shortcut icon" type="imagex/png" href="../images/logooriginal.png">
   <title>MAPA</title>
 
 

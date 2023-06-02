@@ -76,7 +76,7 @@ $emailUsuario = $_SESSION['user_email'];
                               <div class="col mb-2 text-center">
                                 <div class="card ">
                                   <div class="card-body">
-                                  <h3>Solicitações de datas</h3>
+                                  <h3>Novos Eventos </h3>
 
                                   </div>
                                 </div>
