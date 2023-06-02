@@ -5,8 +5,7 @@
       background-size: absolute;
 
       background-attachment: fixed;
-      padding-top: 20px;
-      margin-top: 10px;">
+      padding-top: 20px;">
   <div class="container">
     <div class="row"  style="color:azure;" >
 

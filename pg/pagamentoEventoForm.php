@@ -22,7 +22,7 @@ include_once './configPicPay.php';
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <link rel="shortcut icon" href="./images/icon/logo.ico" >
+        <link rel="shortcut icon" type="imagex/png" href="../images/logooriginal.png">
         <title>Desconecta - formulario de chekout</title>
     </head>
     <body>
@@ -35,7 +35,7 @@ include_once './configPicPay.php';
                 $idGuia = $dados_pagamento['idGuia'];
                 $emailSA = $dados_pagamento['email'];
                 $valorSelecionado = $_POST['opcaoSelecionada'];
-            echo $valorSelecionado;
+           // echo $valorSelecionado;
 
         if (empty($id)) {
             header("Location: ../index.php");
@@ -268,7 +268,7 @@ include_once './configPicPay.php';
                     <?php
 
                     if($valorSelecionado){
-                        echo $valorSelecionado ." - ". $dados_pagamento['opcaoSelecionada'];
+
                         $busca_custo = mysqli_query($conex, "SELECT *, valores.total AS totCusto, valores.vagas AS nDeVagas FROM valores WHERE valores.id = $valorSelecionado ");
                         $linhaDeValores = mysqli_fetch_assoc($busca_custo);
 
