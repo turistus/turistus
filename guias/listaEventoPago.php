@@ -37,7 +37,7 @@ $Uid = $_SESSION['user_id'];
 
                             INNER JOIN eventos ON eventos.id = pay.product_id
                             INNER JOIN servicos ON servicos.id = pay.guiaId
-                            WHERE pay.guiaId = $Uid AND pay.payments_statu_Id >= 5";
+                            WHERE pay.guiaId = $Uid AND pay.payments_statu_Id >= 5 DESC";
 
                          $result_products = $conn->prepare($query_products);
                          $result_products->execute();
