@@ -167,7 +167,7 @@ include_once 'connection.php';
 
                 <div class="col-xl-8 col-lg-6 col-md-6 col-sm-8" style="padding: 10px; ">
                         <label > CPF </label><br>
-                        <input type="text" name="cpf" id="cpf" placeholder=" 000.000.000-00 " oninput="maskCPF()" value="<?php
+                        <input type="text" name="cpf" id="cpf" placeholder=" 000.000.000-00 " oninput="maskCPF(this)" value="<?php
                         if (isset($data['cpf'])) {
                             echo $data['cpf'];
                         }
