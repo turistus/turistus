@@ -125,7 +125,7 @@ $emailusuario = $_SESSION['user_email'];
                                                     <div class="card-body" >
                                                       <h5>Contratar Plano </h5>
                                                       <div class="row" >
-                                                        <div class="col-6" >
+                                                        <div class="col-6" style="font-size: smaller;">
                                                           <p> Mensal </p>
                                                             <ul>
                                                               <li> Comum - 20% </li>
