@@ -275,7 +275,7 @@ include_once 'connection.php';
 
                     <!-- Para buscar a foto na pasta-->
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-                    <script src="./guias/js/custom.js"></script>
+
                     <script>
                         function previewImagem(){
                             var imagem = document.querySelector('input[name=attachment]').files[0];
@@ -290,6 +290,23 @@ include_once 'connection.php';
                                 reader.readAsDataURL(imagem);
                             }else{
                                 preview.src = "";
+                            }
+                        }
+
+
+                        function maskCPF(numberCPF){
+                            var cpf = numberCPF.value;
+
+                            if (isNaN(cpf[cpf.length - 1])) {
+                                numberCPF.value = cpf.substring(0, cpf.length - 1);
+                                return;
+                            }
+
+                            if(cpf.length === 3 || cpf.length === 7){
+                                numberCPF.value += ".";
+                            }
+                            if(cpf.length === 11){
+                                numberCPF.value += "-";
                             }
                         }
 
