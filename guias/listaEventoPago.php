@@ -16,7 +16,7 @@ $Uid = $_SESSION['user_id'];
                 </div>
 
                 <div class="col-12">
-                    <p> Seus pedidos realizados por turistas e seus comentarios. </p>
+                    <h5> Seus pedidos realizados por turistas e seus comentarios. </h5>
                 </div>
              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style=" min-height: 50px;">
                   <?php
