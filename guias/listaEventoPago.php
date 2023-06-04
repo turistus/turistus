@@ -10,9 +10,8 @@ $Uid = $_SESSION['user_id'];
          <div class="row" style="margin: 10px;">
                 <!-- Titulo-->
                 <div class="row" style="padding-left: 50px;  margin-bottom: 50px; background: url(../images/bussola.jpg) repeat-x top center;">
-                    <div class="col-12">
                         <h1 style="padding-top: 10px;">Pedidos Completos</h1>
-                    </div>
+
                 </div>
 </br>
                 <p> Seus pedidos realizados por turistas e seus comentarios </p>
