@@ -16,7 +16,7 @@ $Uid = $_SESSION['user_id'];
 
                     </div>
                 </div>
-
+                <br>
                 <p>Seus pedidos são realizados por turistas e seus comentarios</p>
 
              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style=" min-height: 50px;">
@@ -31,10 +31,11 @@ $Uid = $_SESSION['user_id'];
                             pay.product_id,
                             pay.last_name AS last_name,
                             phone,
+                            pay.custoPedido AS valor,
                         eventos.id AS idE,
                             eventos.nome AS nE,
                             eventos.idPt AS idPt,
-                            eventos.valor AS valor,
+
                             eventos.idGuia,
                         pontosturisticos.id,
                             pontosturisticos.image AS i
@@ -44,7 +45,7 @@ $Uid = $_SESSION['user_id'];
                             INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
                             INNER JOIN servicos ON servicos.id = pay.guiaId
 
-                            WHERE pay.guiaId = $Uid AND payments_statu_Id >= '5'";
+                            WHERE pay.guiaId = $Uid AND pay.payments_statu_Id >= 5";
 
                          $result_products = $conn->prepare($query_products);
                          $result_products->execute();
