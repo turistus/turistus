@@ -12,12 +12,10 @@ $Uid = $_SESSION['user_id'];
                 <div class="row" style="padding-left: 50px;  margin-bottom: 50px; background: url(../images/bussola.jpg) repeat-x top center;">
                     <div class="col-12">
                         <h1 style="padding-top: 10px;">Pedidos Completos</h1>
-
-
                     </div>
                 </div>
                 <br>
-                <p>Seus pedidos são realizados por turistas e seus comentarios</p>
+                <p> Seus pedidos realizados por turistas e seus comentarios </p>
 
              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style=" min-height: 50px;">
                   <?php
@@ -62,16 +60,13 @@ $Uid = $_SESSION['user_id'];
                             <div class="card ">
                                 <div class="card-body">
                                     <p>AG: <?php echo $idagendado; ?></p>
-                                    <h5 class="card-title">E 000<?php echo $idE; ?> <?php echo $id; ?></h5>
+                                    <h6 class="card-title">Evento: <?php echo $idE; ?> Ponto: <?php echo $id; ?>
+                                    Nome: <?php echo $nE; ?>
+                                    R$ <?php echo number_format($valor, 2, ",", ".") ?>
+                                    Turista: <?php echo $first_name ." ". $last_name ?>
+                                    Contato: <?php echo $phone ?>
+                                </h6>
 
-
-                                    <h4 class="card-title">
-                                        <?php echo "<img style='max-height: 125px; max-width: 260px;' src='../images/pontosturisticos/$idPt/$i'><br>";?>
-                                    </h4>
-                                    <h3 class="card-title"><?php echo $nE; ?></h3>
-                                    <h5 class="card-title">R$ <?php echo number_format($valor, 2, ",", ".") ?></h5>
-                                    <h5 class="card-title"><?php echo $first_name ." ". $last_name ?></h5>
-                                    <h5 class="card-title"><?php echo $phone ?></h5>
                                     <a href="#" class="btn btn text-dark " style="border: 1px solid green;">Ver comentarios</a>
                                     <!-- Ao clicar Confirmar, o GUIA lança uma movimentação para
                                      OUTRA tabela guardando que foi confirmado esse Agendamento do turista,
