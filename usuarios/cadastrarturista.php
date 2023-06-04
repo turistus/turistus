@@ -123,7 +123,7 @@ include_once '../connection.php';
 
                         // ********************** CELULAR MASK
                         function maskCelularInput(input) {
-                            var value = input.value.replace(/\D/g, '').substring(0, 14);
+                            var value = input.value.replace(/\D/g, '').substring(0, 11);
                               value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
                                 value = value.replace(/(\d)(\d{4})$/, '$1-$2');
                                 input.value = value;
