@@ -241,7 +241,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                                 </tr>
                                                             </thead>
-                                                            <tbody>
+                                                            <tbody style='font-size: 8px; height: 5px;'>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
