@@ -128,17 +128,17 @@ $emailusuario = $_SESSION['user_email'];
                                                         <div class="col-6" >
                                                           <p> Mensal </p>
                                                             <ul>
-                                                              <li> 20% </li>
-                                                              <li> 15% </li>
-                                                              <li> 10% </li>
+                                                              <li> Comum - 20% </li>
+                                                              <li> Completo - 15% </li>
+                                                              <li> Completo Premium - 10% </li>
                                                             </ul>
                                                         </div>
                                                         <div class="col-6" >
                                                           <p> Anual </p>
                                                             <ul>
-                                                              <li> 20% </li>
-                                                              <li> 15% </li>
-                                                              <li> 10% </li>
+                                                              <li> Comum - 20% </li>
+                                                              <li> Completo - 15% </li>
+                                                              <li> Completo Premium - 10% </li>
                                                             </ul>
                                                         </div>
                                                       </div>
