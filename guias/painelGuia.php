@@ -58,7 +58,7 @@ $emailusuario = $_SESSION['user_email'];
                                 </div>
 
                               <h4 class="display-6 mt-3 mb-2">Bem Vindo, Guia <?php echo $nome?> </h4>
-                              <p> Cód.Guia: 00<?php echo $Uid?> <b>Plano Atual: <span style="border-radius: 10px; border: black solid 1px; padding:3px;">BASICO.</span></b></p>
+                              <p> Cód.Guia: 00<?php echo $Uid?> <b>Plano Atual: <span style="border-radius: 10px; border: black solid 1px; padding:2px;">BASICO.</span></b></p>
                               <?php if(isset($_SESSION['msg'])){
                                       echo $_SESSION['msg'];
                                       unset($_SESSION['msg']);
@@ -153,7 +153,7 @@ $emailusuario = $_SESSION['user_email'];
                                                   <div class="col mb-2 text-center" >
                                                     <div class="card ">
                                                       <div class="card-body" >
-                                                        <h3>Solicitações Pagas</h3>
+                                                        <h3>Solicitações de Pedidos</h3>
 
                                                         <table class="table table-responsive{-sm|-md|-lg|-xl} table-hover" style="width: 100%;" >
                                                             <thead class="thead-light" style='font-size: 10px;'>
