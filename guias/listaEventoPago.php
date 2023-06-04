@@ -14,7 +14,7 @@ $Uid = $_SESSION['user_id'];
                         <h1 style="padding-top: 10px;">Pedidos Completos</h1>
                     </div>
                 </div>
-                <br>
+</br>
                 <p> Seus pedidos realizados por turistas e seus comentarios </p>
 
              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style=" min-height: 50px;">
