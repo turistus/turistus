@@ -280,8 +280,21 @@ include_once 'connection.php';
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
                     <script>
-                        $(document).ready(function() {
-                            $('.cpf-input').inputmask('999.999.999-99');
+                       // Função para aplicar a máscara de CPF
+                        function maskCpfInput(input) {
+                        var value = input.value.replace(/\D/g, '');
+                        value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                        value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                        value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+                        input.value = value;
+                        }
+
+                        // Obter o campo de entrada do CPF
+                        var cpfInput = document.getElementById('cpf');
+
+                        // Adicionar um ouvinte de evento 'input' ao campo de entrada
+                        cpfInput.addEventListener('input', function() {
+                        maskCpfInput(cpfInput);
                         });
 
                         function previewImagem(){
