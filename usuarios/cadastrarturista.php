@@ -118,6 +118,26 @@ include_once '../connection.php';
             </div>
         </div><!-- Fim da linha ROW GERAL -->
     </div><!-- Fim da class Redonda -->
+
+    <script>
+
+                        // ********************** CELULAR MASK
+                        function maskCelularInput(input) {
+                            var value = input.value.replace(/\D/g, '').substring(0, 14);
+                              value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+                                value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+                                input.value = value;
+                        }
+
+                        // Obter o campo de entrada do CPF
+                        var celularInput = document.getElementById('celular');
+
+                        // Adicionar um ouvinte de evento 'input' ao campo de entrada
+                        celularInput.addEventListener('input', function() {
+                        maskCelularInput(celularInput);
+                        });
+
+    </script>
 </main>
  <?php
   include_once '../rodape.php';

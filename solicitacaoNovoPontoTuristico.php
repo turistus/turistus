@@ -297,6 +297,10 @@ include_once 'connection.php';
                         maskCpfInput(cpfInput);
                         });
 
+
+
+
+
                         function previewImagem(){
                             var imagem = document.querySelector('input[name=attachment]').files[0];
                             var preview = document.querySelector('img');
