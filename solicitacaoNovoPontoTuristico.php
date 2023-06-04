@@ -282,11 +282,11 @@ include_once 'connection.php';
                     <script>
                        // Função para aplicar a máscara de CPF
                         function maskCpfInput(input) {
-                        var value = input.value.replace(/\D/g, '');
-                        value = value.replace(/(\d{3})(\d)/, '$1.$2');
-                        value = value.replace(/(\d{3})(\d)/, '$1.$2');
-                        value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
-                        input.value = value;
+                            var value = input.value.replace(/\D/g, '').substring(0, 11);
+                            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                            value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+                            input.value = value;
                         }
 
                         // Obter o campo de entrada do CPF
