@@ -167,7 +167,7 @@ include_once 'connection.php';
 
                 <div class="col-xl-8 col-lg-6 col-md-6 col-sm-8" style="padding: 10px; ">
                         <label > CPF </label><br>
-                        <input type="text" name="cpf" id="cpf" placeholder=" 000.000.000-00 "  value="<?php
+                        <input type="text" name="cpf" id="cpf" placeholder=" 000.000.000-00 " oninput="maskCPF()" value="<?php
                         if (isset($data['cpf'])) {
                             echo $data['cpf'];
                         }
@@ -275,6 +275,7 @@ include_once 'connection.php';
 
                     <!-- Para buscar a foto na pasta-->
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                    <script src="./guias/js/custom.js"></script>
                     <script>
                         function previewImagem(){
                             var imagem = document.querySelector('input[name=attachment]').files[0];
