@@ -13,18 +13,18 @@ $Uid = $_SESSION['user_id'];
                     <div class="col-12">
                         <h1 style="padding-top: 10px;">Pedidos Completos</h1>
 
-                            
+
                     </div>
                 </div>
-               
-                <p>Seus pedidos são realizados por turistas e você poderá concordar em realizar o evento clicando em confirmar, logo abaixo de cada pedido.</p>       
+
+                <p>Seus pedidos são realizados por turistas e você poderá concordar em realizar o evento clicando em confirmar, logo abaixo de cada pedido.</p>
 
              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style=" min-height: 50px;">
                   <?php
-                        $query_products = 
-                        "SELECT 
+                        $query_products =
+                        "SELECT
                         pay.id AS idagendado,
-                            pay.first_name, 
+                            pay.first_name,
                             pay.phone AS celular,
                             pay.guiaId,
                             payments_statu_Id,
@@ -37,14 +37,14 @@ $Uid = $_SESSION['user_id'];
                             eventos.valor AS valor,
                             eventos.idGuia,
                         pontosturisticos.id,
-                            pontosturisticos.image AS i    
+                            pontosturisticos.image AS i
                         FROM payments_picpays AS pay
-                             
-                            INNER JOIN eventos ON eventos.id = pay.product_id 
+
+                            INNER JOIN eventos ON eventos.id = pay.product_id
                             INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
-                            INNER JOIN servicos ON servicos.id = pay.guiaId 
-                            
-                            WHERE pay.guiaId = $Uid AND payments_statu_Id >= 6";
+                            INNER JOIN servicos ON servicos.id = pay.guiaId
+
+                            WHERE pay.guiaId = $Uid AND payments_statu_Id >= 5";
 
                          $result_products = $conn->prepare($query_products);
                          $result_products->execute();
@@ -53,17 +53,17 @@ $Uid = $_SESSION['user_id'];
                         <?php
                             while ($row_product = $result_products->fetch(PDO::FETCH_ASSOC)) {
                                 extract($row_product);
-                                
-                                
+
+
                         ?>
-                  
+
                         <div class="col mb-2 text-center" >
                             <div class="card ">
                                 <div class="card-body">
-                                    <p>AG: <?php echo $idagendado; ?></p>    
+                                    <p>AG: <?php echo $idagendado; ?></p>
                                     <h5 class="card-title">E 000<?php echo $idE; ?> <?php echo $id; ?></h5>
-                                    
-                                    
+
+
                                     <h4 class="card-title">
                                         <?php echo "<img style='max-height: 125px; max-width: 260px;' src='../images/pontosturisticos/$idPt/$i'><br>";?>
                                     </h4>
