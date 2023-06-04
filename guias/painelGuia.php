@@ -175,7 +175,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 payments_statu_Id,
                                                                 pay.product_id,
                                                                 pay.dataagendada AS dataagendada,
-                                                                pay.custoPedido AS valor
+                                                                pay.custoPedido AS valor,
                                                             eventos.id AS idE,
                                                                 eventos.nome AS nE,
                                                                 eventos.idPt AS idPt,
