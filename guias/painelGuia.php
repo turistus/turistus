@@ -72,7 +72,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                     <div class="card ">
                                                       <div class="card-body" >
-                                                        <h3>Histórico Vendas </h3>
+                                                        <h5>Histórico Vendas </h5>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
@@ -106,13 +106,11 @@ $emailusuario = $_SESSION['user_email'];
                                                             }
                                                             echo "<div class='row' style='margin:5px; padding: 10px; background-color:#00BFFF; border-radius: 5px;'>";
                                                             echo "<div class='col-md-5'>";
-                                                            echo "<h4 style='color: red;'> Bruto <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h4>";
+                                                            echo "<h6 style='color: red;'> Total Vendas <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
                                                             echo "</div>";
-                                                            echo "<div class='col-md-5'>";
-                                                            echo "<h4 style='color: blue;'> Liquido <br>R$ ".number_format($totalVendas-($totalVendas*0.2), 2, ',', '.') ."</h4>";
-                                                            echo "</div>";
+
                                                             echo "<div class='col-md-4'>";
-                                                            echo "<h4> Vendas <br> ".$nVendas."</h4>";
+                                                            echo "<h6> Nº Vendas <br> ".$nVendas."</h6>";
                                                             echo "</div>";
 
                                                             echo "</div>";
@@ -125,48 +123,23 @@ $emailusuario = $_SESSION['user_email'];
 
                                                   <div class="card ">
                                                     <div class="card-body" >
-                                                      <h3>Maior Venda </h3>
-                                                          <?php
-                                                          $query_payments = "SELECT
-                                                          pay.id AS idagendado,
-                                                              pay.first_name,
-                                                              pay.phone AS celular,
-                                                              pay.guiaId,
-                                                              payments_statu_Id,
-                                                              pay.product_id,
-                                                              pay.dataagendada AS dataagendada,
-                                                          eventos.id AS idE,
-                                                              eventos.nome AS nE,
-                                                              eventos.idPt AS idPt,
-                                                              eventos.valor AS valor,
-                                                              eventos.idGuia,
-                                                              MAX(eventos.valor) AS mVenda
+                                                      <h5>Contratar Plano </h5>
 
+                                                      <p> Mensal </p>
+                                                      <ul>
 
-                                                          FROM payments_picpays AS pay
-                                                              INNER JOIN eventos ON eventos.id = pay.product_id
-                                                              INNER JOIN servicos ON servicos.id = pay.guiaId
+                                                      <li> 20% </li>
+                                                      <li> 15% </li>
+                                                      <li> 10% </li>
+                                                      </ul>
 
-                                                              WHERE pay.guiaId = $Uid ORDER BY idagendado DESC Limit 3";
+                                                      <p> Anual </p>
+                                                      <ul>
 
-
-                                                          $result_payments = $conn->prepare($query_payments);
-                                                          $result_payments->execute();
-
-                                                          while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
-                                                              //var_dump($row_payment);
-                                                              extract($row_payment);
-                                                              echo "<div class='row'>";
-                                                                echo "<div class='col-md-10'>";
-                                                                echo "<h6 style='color: blue;'> ( Evento  00$idE ) </h6><br>";
-                                                                echo "<h6> Evento $nE R$  ".number_format($mVenda, 2, ',', '.')." <br></h6>";
-
-                                                                echo "</div>";
-
-                                                              echo "</div>";
-                                                          }
-
-                                                          ?>
+                                                      <li> 20% </li>
+                                                      <li> 15% </li>
+                                                      <li> 10% </li>
+                                                      </ul>
                                                     </div>
                                                   </div>
 
@@ -336,7 +309,7 @@ $emailusuario = $_SESSION['user_email'];
                                     ?>
                                 </div>
 
-                                                            <!-- Pag. para listar eventos  Guia -->
+                                                  <!-- Pag. para listar eventos  Guia -->
                                 <div class="modal-content" id=formQuarto style="padding-bottom: 20px;">
 
                                   <?php
@@ -344,7 +317,7 @@ $emailusuario = $_SESSION['user_email'];
                                   ?>
 
                                 </div>
-                                                        <!-- Pag. para editar perfil guia -->
+                                                  <!-- Pag. para editar perfil guia -->
                                 <div class="modal-content" id=formPerfil style="padding-bottom: 20px;">
 
                                   <?php
