@@ -19,6 +19,7 @@ include_once 'connection.php';
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 
 
+
         <title>Solicitação Novo Ponto Turistico</title>
     </head>
 <body>
@@ -165,9 +166,9 @@ include_once 'connection.php';
                         ?>" required>
                 </div>
 
-                <div class="col-xl-8 col-lg-6 col-md-6 col-sm-8" style="padding: 10px; ">
+                <div class="col-xl-8 col-lg-6 col-md-6 col-sm-8 " style="padding: 10px; ">
                         <label > CPF </label><br>
-                        <input type="text" name="cpf" id="cpf" placeholder=" 000.000.000-00 " oninput="maskCPF(this)" value="<?php
+                        <input class="cpf-input" type="text" name="cpf" id="cpf" placeholder=" 000.000.000-00 " value="<?php
                         if (isset($data['cpf'])) {
                             echo $data['cpf'];
                         }
@@ -275,7 +276,8 @@ include_once 'connection.php';
 
                     <!-- Para buscar a foto na pasta-->
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
                     <script>
                         function previewImagem(){
                             var imagem = document.querySelector('input[name=attachment]').files[0];
@@ -294,24 +296,9 @@ include_once 'connection.php';
                         }
 
 
-                        function maskCPF(numberCPF){
-                            var cpf = numberCPF.value;
-
-                            if (isNaN(cpf[cpf.length - 1])) {
-                                numberCPF.value = cpf.substring(0, cpf.length - 1);
-                                return;
-                            }
-
-                            if(cpf.length === 3 || cpf.length === 7){
-                                numberCPF.value += ".";
-                            }
-                            if(cpf.length === 11){
-                                numberCPF.value += "-";
-                            }
-                            if(cpf.length >= 12){
-
-                            }
-                        }
+                        $(document).ready(function() {
+                            $('.cpf-input').inputmask('999.999.999-99');
+                        });
 
                     </script>
 
