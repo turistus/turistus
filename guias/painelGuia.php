@@ -241,7 +241,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                                 </tr>
                                                             </thead>
-                                                            <tbody style='font-size: 8px; height: 5px;'>
+                                                            <tbody style='font-size: 12px; height: 5px;'>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
@@ -251,18 +251,13 @@ $emailusuario = $_SESSION['user_email'];
                                                                 payments_statu_Id,
                                                                 pay.product_id,
                                                                 pay.dataagendada AS dataagendada,
+                                                                pay.custoPedido AS valor,
                                                             eventos.id AS idE,
-                                                                eventos.nome AS nE,
-                                                                eventos.idPt AS idPt,
-                                                                eventos.valor AS valor,
-                                                                eventos.idGuia,
-                                                            pontosturisticos.id,
-                                                                pontosturisticos.image AS i,
-                                                                pontosturisticos.name AS name_prod
+                                                                eventos.nome AS nE
+
                                                             FROM payments_picpays AS pay
 
                                                                 INNER JOIN eventos ON eventos.id = pay.product_id
-                                                                INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
                                                                 INNER JOIN servicos ON servicos.id = pay.guiaId
 
                                                                 WHERE pay.guiaId = $Uid AND payments_statu_Id = 5 AND confirmado = 1 ORDER BY idagendado DESC Limit 15";
