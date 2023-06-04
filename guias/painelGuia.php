@@ -124,22 +124,24 @@ $emailusuario = $_SESSION['user_email'];
                                                   <div class="card ">
                                                     <div class="card-body" >
                                                       <h5>Contratar Plano </h5>
-
-                                                      <p> Mensal </p>
-                                                      <ul>
-
-                                                      <li> 20% </li>
-                                                      <li> 15% </li>
-                                                      <li> 10% </li>
-                                                      </ul>
-
-                                                      <p> Anual </p>
-                                                      <ul>
-
-                                                      <li> 20% </li>
-                                                      <li> 15% </li>
-                                                      <li> 10% </li>
-                                                      </ul>
+                                                      <div class="row" >
+                                                        <div class="col-6" >
+                                                          <p> Mensal </p>
+                                                            <ul>
+                                                              <li> 20% </li>
+                                                              <li> 15% </li>
+                                                              <li> 10% </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-6" >
+                                                          <p> Anual </p>
+                                                            <ul>
+                                                              <li> 20% </li>
+                                                              <li> 15% </li>
+                                                              <li> 10% </li>
+                                                            </ul>
+                                                        </div>
+                                                      </div>
                                                     </div>
                                                   </div>
 
