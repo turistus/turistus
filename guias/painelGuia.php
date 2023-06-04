@@ -58,7 +58,7 @@ $emailusuario = $_SESSION['user_email'];
                                 </div>
 
                               <h4 class="display-6 mt-3 mb-2">Bem Vindo, Guia <?php echo $nome?> </h4>
-                              <p> Cód.Guia: 00<?php echo $Uid?></p>
+                              <p> Cód.Guia: 00<?php echo $Uid?> <b>Plano Atual: <span style="border-radius: 10px; border: black solid 1px;">BASICO.</span><b></p>
                               <?php if(isset($_SESSION['msg'])){
                                       echo $_SESSION['msg'];
                                       unset($_SESSION['msg']);
@@ -72,7 +72,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                     <div class="card ">
                                                       <div class="card-body" >
-                                                        <h5>Histórico Vendas </h5>
+                                                        <h5>Previsão de Vendas </h5>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
@@ -112,7 +112,7 @@ $emailusuario = $_SESSION['user_email'];
                                                             echo "</div>";
 
                                                             echo "<div class='col-md-4'>";
-                                                            echo "<h6> Nº Vendas <br> ".$nVendas."</h6>";
+                                                            echo "<h6> Nº Pedidos <br> ".$nVendas."</h6>";
                                                             echo "</div>";
 
                                                             echo "</div>";
