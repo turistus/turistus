@@ -265,7 +265,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
                                                                 INNER JOIN servicos ON servicos.id = pay.guiaId
 
-                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id = 5 AND confirmado = 2 ORDER BY idagendado DESC Limit 15";
+                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id = 5 AND confirmado = 1 ORDER BY idagendado DESC Limit 15";
 
 
 
