@@ -87,12 +87,14 @@ $emailusuario = $_SESSION['user_email'];
                                                                 eventos.idPt AS idPt,
                                                                 eventos.valor AS valor,
                                                                 eventos.idGuia,
-                                                                SUM(eventos.valor) AS totalVendas,
+
+                                                                SUM(pay.custoPedido) AS totalVendas,
                                                                 COUNT(pay.id) AS nVendas
 
                                                             FROM payments_picpays AS pay
                                                                 INNER JOIN eventos ON eventos.id = pay.product_id
                                                                 INNER JOIN servicos ON servicos.id = pay.guiaId
+
 
                                                                 WHERE pay.guiaId = $Uid AND payments_statu_Id <= 5 ORDER BY idagendado DESC Limit 10";
 
@@ -106,7 +108,7 @@ $emailusuario = $_SESSION['user_email'];
                                                             }
                                                             echo "<div class='row' style='margin:5px; padding: 10px; background-color:#00BFFF; border-radius: 5px;'>";
                                                             echo "<div class='col-md-5'>";
-                                                            echo "<h6 style='color: red;'> Total Vendas <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
+                                                            echo "<h6> Total Vendas <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
                                                             echo "</div>";
 
                                                             echo "<div class='col-md-4'>";
