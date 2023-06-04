@@ -308,6 +308,9 @@ include_once 'connection.php';
                             if(cpf.length === 11){
                                 numberCPF.value += "-";
                             }
+                            if(cpf.length >= 12){
+
+                            }
                         }
 
                     </script>
