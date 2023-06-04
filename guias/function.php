@@ -6,7 +6,7 @@ if(!defined('ACCESS')){
 
 function paymentStatus($reference_id) {
 
-    //Conexão com banco dados 
+    //Conexão com banco dados
     include '../connection.php';
     $result = $reference_id;
 
@@ -34,15 +34,15 @@ function paymentStatus($reference_id) {
                     $row_pay_status = $result_pay_status->fetch(PDO::FETCH_ASSOC);
                     //var_dump($row_pay_status);
                     extract($row_pay_status);
-                    
+
 
                 //Editar a compra informado o status da compra no PicPay
-                $query_up_pay_picpay = "UPDATE payments_picpays SET confirmado = 2, modified = NOW() WHERE id = $reference_id LIMIT 1";
+                $query_up_pay_picpay = "UPDATE payments_picpays SET confirmado = 1, modified = NOW() WHERE id = $reference_id LIMIT 1";
                 $up_pay_picpay = $conn->prepare($query_up_pay_picpay);
                 $up_pay_picpay->execute();
                 }
 
-    
+
     }
     return $data_result;
 }

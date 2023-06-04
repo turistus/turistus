@@ -175,10 +175,10 @@ $emailusuario = $_SESSION['user_email'];
                                                                 payments_statu_Id,
                                                                 pay.product_id,
                                                                 pay.dataagendada AS dataagendada,
+                                                                pay.custoPedido AS valor
                                                             eventos.id AS idE,
                                                                 eventos.nome AS nE,
                                                                 eventos.idPt AS idPt,
-                                                                eventos.valor AS valor,
                                                                 eventos.idGuia,
                                                             pontosturisticos.id,
                                                                 pontosturisticos.image AS i,
@@ -189,7 +189,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
                                                                 INNER JOIN servicos ON servicos.id = pay.guiaId
 
-                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id <= 4 AND confirmado = 1 ORDER BY idagendado DESC Limit 10";
+                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id <= 4 AND confirmado = 0 ORDER BY idagendado DESC Limit 10";
 
 
 
