@@ -4,8 +4,12 @@
     <!-- Conteúdo do pop-up -->
     <h2>Cadastre seu Ponto Turistico !</h2>
 
-    <a href="./solicitacaoNovoPontoTuristico.php"><button class="btn" id="cad" style="border: 1px solid green; border-radius: 5px;"> Cadastrar </button></a>
-    <a href=""><button class="btn" id="close-button" style="border: 1px solid green; border-radius: 5px;"> Fechar </button></a>
+    <a href="./solicitacaoNovoPontoTuristico.php">
+        <button class="btn" id="cad" style="border: 1px solid green; border-radius: 5px;"> Cadastrar </button>
+    </a>
+    <a href="#">
+        <button class="btn" id="close-button" style="border: 1px solid green; border-radius: 5px;"> Fechar </button>
+    </a>
   </div>
 </div>
 
@@ -34,9 +38,7 @@
   margin-top: 0;
 }
 
-#close-button {
-  margin-top: 10px;
-}
+
 </style>
 <script>
 // Obter elementos do DOM
