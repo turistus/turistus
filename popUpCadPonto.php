@@ -59,7 +59,7 @@ function closePopup() {
 window.addEventListener('load', function() {
   // Exibir o pop-up quando o mouse passar no topo da página
   window.addEventListener('mousemove', function(event) {
-    if (event.clientY < 50) {
+    if (event.clientY < 50 || event.touches[0].clientY < 50) {
       openPopup();
     }
   });
