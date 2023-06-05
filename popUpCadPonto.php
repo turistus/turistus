@@ -2,9 +2,10 @@
 <div id="popup" class="popup">
   <div class="popup-content">
     <!-- Conteúdo do pop-up -->
-    <h2>Cadastre seu Ponto Turistico !</h2>
-    <p><b><a href="./solicitacaoNovoPontoTuristico.php"> Cadastre Já ! </a></b></p>
-    <button id="close-button">Fechar</button>
+    <h2>Cadastre um novo Ponto Turistico !</h2>
+
+    <button class="btn" id="cad"><a href="./solicitacaoNovoPontoTuristico.php">Cadastre Já !</a></button>
+    <button class="btn" id="close-button">Fechar</button>
   </div>
 </div>
 
