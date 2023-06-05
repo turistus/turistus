@@ -74,6 +74,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                         </div>
 
                         <div class="row">
+                            <!-- IMAGEM DO PERFIL-->
                             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 ">
                                 <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
                                     src='<?php echo "../images/guias/$Uid/$image"; ?>'
@@ -85,7 +86,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                             </div>
 
 
-
+                                <!-- ALTERA SENHA -->
 
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                 <label>Email</label>
@@ -94,7 +95,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                 { echo $row_guia['email']; }?>
                                 </h4>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-xl-8 col-lg-8 col-md-6 col-sm-6">
                                 <label>Senha</label>
                                 <h4><?php if(isset($dados['senha']))
                                 { echo $dados['senha'];}elseif(isset($row_guia['senha']))
