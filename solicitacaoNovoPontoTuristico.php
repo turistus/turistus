@@ -95,7 +95,7 @@ include_once 'connection.php';
                 <div class="col-8 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px;">
 
                         <label> Titulo </label>
-                        <input type="text" name="name" id="name" placeholder=" Nome turistico " value="<?php
+                        <input type="text" name="name" id="name" placeholder=" Nome turistico " maxlength="50" value="<?php
                         if (isset($data['name'])) {
                             echo $data['name'];
                         }
