@@ -94,13 +94,14 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                 { echo $dados['email'];}elseif(isset($row_guia['email']))
                                 { echo $row_guia['email']; }?>
                                 </h6>
-                            </div>
-                            <div class="col-xl-8 col-lg-8 col-md-6 col-sm-6">
+
                                 <label>Senha</label>
                                 <h6><?php if(isset($dados['senha']))
                                 { echo $dados['senha'];}elseif(isset($row_guia['senha']))
                                 { echo $row_guia['senha']; }?>
                                 </h6>
+
+                                <button class="btn"> Alterar </button>
                             </div>
 
 
