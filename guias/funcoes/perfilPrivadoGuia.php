@@ -96,7 +96,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                 </h6>
 
                                 <label>Senha</label>
-                                <h6><input class="form-control" type="password" value="<?php if(isset($dados['senha']))
+                                <h6><input class="form-control" type="password" maxlength="10" value="<?php if(isset($dados['senha']))
                                 { echo $dados['senha'];}elseif(isset($row_guia['senha']))
                                 { echo $row_guia['senha']; }?>">
 
