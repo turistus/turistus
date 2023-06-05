@@ -103,7 +103,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
 
                                 </h6>
 
-                                <label style="font-size: larger; color: black;">Nova Senha</label>
+                                <label style="font-size: small; color: black;">Nova Senha</label>
                                 <input class="form-control" type="text" name="senha" id="senha"
                                 value="">
 
