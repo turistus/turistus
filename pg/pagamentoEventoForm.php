@@ -404,6 +404,44 @@ include_once './configPicPay.php';
         }
         ?>
 
+
+<script>
+
+                        // Função para aplicar a máscara de CPF
+                        function maskCpfInput(input) {
+                            var value = input.value.replace(/\D/g, '').substring(0, 11);
+                            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                            value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+                            input.value = value;
+                        }
+
+                        // Obter o campo de entrada do CPF
+                        var cpfInput = document.getElementById('cpf');
+
+                        // Adicionar um ouvinte de evento 'input' ao campo de entrada
+                        cpfInput.addEventListener('input', function() {
+                        maskCpfInput(cpfInput);
+                        });
+
+                        // ********************** CELULAR MASK
+                        function maskCelularInput(input) {
+                            var value = input.value.replace(/\D/g, '').substring(0, 11);
+                              value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+                                value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+                                input.value = value;
+                        }
+
+                        // Obter o campo de entrada do CPF
+                        var celularInput = document.getElementById('phone');
+
+                        // Adicionar um ouvinte de evento 'input' ao campo de entrada
+                        celularInput.addEventListener('input', function() {
+                        maskCelularInput(celularInput);
+                        });
+
+    </script>
+
     </body>
 
     <?php
