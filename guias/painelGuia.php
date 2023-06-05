@@ -260,7 +260,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 INNER JOIN eventos ON eventos.id = pay.product_id
                                                                 INNER JOIN servicos ON servicos.id = pay.guiaId
 
-                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id = 5 AND confirmado = 1 ORDER BY idagendado DESC Limit 20";
+                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id = 5 AND confirmado = 1 ORDER BY dataagendada DESC Limit 20";
 
 
 
@@ -307,7 +307,6 @@ $emailusuario = $_SESSION['user_email'];
                                       include_once '../guias/cad-EventoFuncao.php';
                                     ?>
                                 </div>
-
                                                   <!-- Pag. para listar eventos  Guia -->
                                 <div class="modal-content" id=formQuarto style="padding-bottom: 20px;">
 

@@ -73,15 +73,38 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
 
                         </div>
 
-                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 ">
-                            <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
-                                src='<?php echo "../images/guias/$Uid/$image"; ?>'
-                                value="<?php
-                                        if(isset($dados['image']))
-                                            { echo $dados['image']; }
-                                        elseif(isset($row_guia['image']))
-                                            { echo $row_guia['image'];  }?>;" class="card-img-top" alt="Carregar Foto...">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 ">
+                                <img style="max-height: 200px; max-width: 200px; background-color: gray; padding: auto;"
+                                    src='<?php echo "../images/guias/$Uid/$image"; ?>'
+                                    value="<?php
+                                            if(isset($dados['image']))
+                                                { echo $dados['image']; }
+                                            elseif(isset($row_guia['image']))
+                                                { echo $row_guia['image'];  }?>;" class="card-img-top" alt="Carregar Foto...">
+                            </div>
+
+
+
+
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <label>Email</label>
+                                <h4><?php if(isset($dados['email']))
+                                { echo $dados['email'];}elseif(isset($row_guia['email']))
+                                { echo $row_guia['email']; }?>
+                                </h4>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <label>Senha</label>
+                                <h4><?php if(isset($dados['senha']))
+                                { echo $dados['senha'];}elseif(isset($row_guia['senha']))
+                                { echo $row_guia['senha']; }?>
+                                </h4>
+                            </div>
+
+
                         </div>
+
                         <div class="star-ratings" style="margin-left: 15px;" >
                             <div class="fill-ratings" style="width: <?php echo $pontos . '%'?>;">
                                 <span>★★★★★</span>
@@ -125,20 +148,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                             { echo $row_guia['uf']; }?>
                             </h4>
                         </div>
-                        <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
-                            <label>Email</label>
-                            <h4><?php if(isset($dados['email']))
-                            { echo $dados['email'];}elseif(isset($row_guia['email']))
-                            { echo $row_guia['email']; }?>
-                            </h4>
-                        </div>
-                        <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
-                            <label>Senha</label>
-                            <h4><?php if(isset($dados['senha']))
-                            { echo $dados['senha'];}elseif(isset($row_guia['senha']))
-                            { echo $row_guia['senha']; }?>
-                            </h4>
-                        </div>
+
                         <div class="col-xl-12 col-lg-8 col-md-12 col-sm-12">
                             <label>Banco</label>
                             <h5><?php if(isset($dados['banco']))
