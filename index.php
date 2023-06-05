@@ -300,6 +300,10 @@ ob_start();
   <?php
   include_once 'rodape.php';
   ?>
+  <?php
+  include_once 'popUpCadPonto.php';
+  ?>
+
 
 <script>
   const texto = "Descubra as riqueza do Brasil e seus serviços turísticos disponíveis em todo o país. Encontre ou divulgue os melhores lugares para turistar e mergulhe em aventuras inesquecíveis em cada destino que visitar.";
@@ -311,6 +315,7 @@ ob_start();
     if (i > texto.length) clearInterval();
   }, 50); // tempo em milissegundos entre cada letra aparecer
 </script>
+
 
 </body>
 
