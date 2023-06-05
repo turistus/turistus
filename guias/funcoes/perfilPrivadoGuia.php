@@ -96,10 +96,16 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                 </h6>
 
                                 <label>Senha</label>
-                                <h6><?php if(isset($dados['senha']))
+                                <h6><input class="form-control" type="password" ><?php if(isset($dados['senha']))
                                 { echo $dados['senha'];}elseif(isset($row_guia['senha']))
                                 { echo $row_guia['senha']; }?>
+
+
                                 </h6>
+
+                                <label style="font-size: larger; color: black;">Nova Senha</label>
+                                <input class="form-control" type="text" name="senha" id="senha"
+                                value="">
 
                                 <button class="btn"> Alterar </button>
                             </div>
