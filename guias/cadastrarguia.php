@@ -169,8 +169,8 @@ include_once '../connection.php';
                       </div>
     	</form>
     </div>
-    <div class="col-10" style=" margin: auto; padding-top: 15px;">
-        <h6>Todos os guias devem respeitar as normas e orientações descritas no termo de uso.</h6>
+    <div class="col-12" style=" margin: auto; padding-top: 15px;">
+        <p><b>Todos os guias devem respeitar as normas e orientações descritas no termo de uso.</b></p>
     </div>
     <br>
 
