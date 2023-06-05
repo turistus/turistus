@@ -2,7 +2,7 @@
 <div id="popup" class="popup">
   <div class="popup-content">
     <!-- Conteúdo do pop-up -->
-    <h2>Cadastre seu Ponto Turistico !</h2>
+    <h2>Cadastre seu Ponto Turístico !</h2>
 
     <a href="./solicitacaoNovoPontoTuristico.php">
         <button class="btn" id="cad" style="border: 1px solid green; border-radius: 5px;"> Cadastrar </button>
@@ -59,7 +59,7 @@ function closePopup() {
 window.addEventListener('load', function() {
   // Exibir o pop-up quando o mouse passar no topo da página
   window.addEventListener('mousemove', function(event) {
-    if (event.clientY < 50 || event.touches[0].clientY < 50) {
+    if (event.clientY < 10 || event.touches[0].clientY < 50) {
       openPopup();
     }
   });
