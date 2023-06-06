@@ -216,9 +216,9 @@ include_once '../adm/validate.php';
                                             <th scope="col">ID / Nº Vendas</th>
                                             <th scope="col" class="text-center">Guia Nativo</th>
 
-                                            <th scope="col" class="text-center">TOTAL Bruto</th>
-                                            <th scope="col" class="text-center">Bruto -20%</th>
+                                            <th scope="col" class="text-center">Bruto</th>
                                             <th scope="col" class="text-center">Total PAGO </th>
+                                            <th scope="col" class="text-center">Bruto -20%</th>
                                             <th scope="col" class="text-center">Valor 20%</th>
                                             <th scope="col" class="text-center">Solicitou Saque ?</th>
                                         </tr>
@@ -265,11 +265,10 @@ include_once '../adm/validate.php';
 
                                         echo "<td>$nomeGuia - $numeroGuia <br> Numero PIX </td>";
                                         echo "<td> R$ $bruto  </td>";
-
-                                        $liquido = $bruto*0.2;
-                                        $valor20p = $bruto - $liquido;
-                                        echo "<td> R$ $valor20p  </td>";
                                         echo "<td> R$ $valor  </td>";
+                                        $liquido = $valor*0.2;
+                                        $valor20p = $valor - $liquido;
+                                        echo "<td> R$ $valor20p  </td>";
                                         echo "<td> R$ $liquido </td>";
                                         echo "<td> Pagar/Depositar  </td>";
                                         echo "</tr>";
