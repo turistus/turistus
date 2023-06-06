@@ -265,7 +265,7 @@ include_once '../adm/validate.php';
                                         INNER JOIN pontosturisticos ON pontosturisticos.id = even.idPt
                                         INNER JOIN valores ON valores.id = pay.valorId
                                         INNER JOIN servicos AS guias ON guias.id = pay.guiaId GROUP BY guias.id
-                                        WHERE statusPay = 5
+                                        WHERE pay.payments_statu_Id = 5
 
 
                                         ORDER BY idPag DESC LIMIT 13";
