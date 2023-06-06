@@ -237,7 +237,7 @@ include_once '../adm/validate.php';
                                         guias.celular AS numeroGuia,
                                         even.nome AS nomeEvento,
                                         COUNT(even.id) AS nEventosGuia,
-                                        SELECT (SUM(pay.custoPedido) AS valor WHERE pay.payments_statu_Id = 5),
+
                                         pay.phone AS phone,
                                         pay.dataagendada AS dataagendada,
                                         pay.valorId,
