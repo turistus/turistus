@@ -217,7 +217,8 @@ include_once '../adm/validate.php';
                                             <th scope="col" class="text-center">Guia Nativo</th>
 
                                             <th scope="col" class="text-center">TOTAL Bruto</th>
-                                            <th scope="col" class="text-center">Valor -20% Guia</th>
+                                            <th scope="col" class="text-center">Bruto -20%</th>
+                                            <th scope="col" class="text-center">Total PAGO </th>
                                             <th scope="col" class="text-center">Valor 20%</th>
                                             <th scope="col" class="text-center">Solicitou Saque ?</th>
                                         </tr>
@@ -235,8 +236,8 @@ include_once '../adm/validate.php';
                                         guias.nome AS nomeGuia,
                                         guias.celular AS numeroGuia,
                                         even.nome AS nomeEvento,
-                                        even.valor AS valor,
                                         COUNT(even.id) AS nEventosGuia,
+                                        SUM(pay.custoPedido WHERE pay.payments_statu_Id = 5) AS valor,
                                         pay.phone AS phone,
                                         pay.dataagendada AS dataagendada,
                                         pay.valorId,
@@ -264,6 +265,7 @@ include_once '../adm/validate.php';
 
                                         echo "<td>$nomeGuia - $numeroGuia <br> Numero PIX </td>";
                                         echo "<td> R$ $bruto  </td>";
+                                        echo "<td> R$ $valor  </td>";
                                         $liquido = $bruto*0.2;
                                         $valor20p = $bruto - $liquido;
                                         echo "<td> R$ $valor20p  </td>";
