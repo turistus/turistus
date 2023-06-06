@@ -262,10 +262,10 @@ include_once '../adm/validate.php';
                                         /**Aqui abaixo Busca os STATUS que estão na TABELA Payments PIC PAY  */
 
                                         INNER JOIN eventos AS even ON even.id = pay.product_id
-                                            INNER JOIN pontosturisticos ON pontosturisticos.id = even.idPt
-                                            INNER JOIN valores ON valores.id = pay.valorId
-                                            INNER JOIN servicos AS guias ON guias.id = pay.guiaId GROUP BY guias.id
-
+                                        INNER JOIN pontosturisticos ON pontosturisticos.id = even.idPt
+                                        INNER JOIN valores ON valores.id = pay.valorId
+                                        INNER JOIN servicos AS guias ON guias.id = pay.guiaId GROUP BY guias.id
+                                        WHERE statusPay = 5
 
 
                                         ORDER BY idPag DESC LIMIT 13";
