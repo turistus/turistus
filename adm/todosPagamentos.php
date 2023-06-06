@@ -264,7 +264,7 @@ include_once '../adm/validate.php';
                                         INNER JOIN eventos AS even ON even.id = pay.product_id
                                         INNER JOIN pontosturisticos ON pontosturisticos.id = even.idPt
                                         INNER JOIN valores ON valores.id = pay.valorId
-                                        INNER JOIN servicos AS guias ON guias.id = pay.guiaId GROUP BY guias.id
+                                        INNER JOIN servicos AS guias ON guias.id = pay.guiaId
                                         WHERE pay.payments_statu_Id = 5
 
 
