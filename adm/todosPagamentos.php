@@ -202,6 +202,19 @@ include_once '../adm/validate.php';
 
                                 <br>
                                 Devemos pagar SOMENTE depois que passar da data do evento e perguntar se foi feito para o turista.
+                                <br>
+
+                                1- Bruto = Soma Unica dos valores de eventos criados por aquele Guia.
+                                            <br>
+                                2- Bruto Pedidos criados = Soma dos Valores dos Pedidos que ja foram criados. estao aguardando pagamento.
+                                            <br>
+                                3- Bruto -20% = É a quantia que devemos pagar ao Guia.
+                                            <br>
+                                4- Valor 20% = é o valor que fica pra empresa.
+                                            <br>
+                                5-
+
+
                                 <?php
                                 if(isset($_SESSION['msg'])){
                                     echo $_SESSION['msg'];
@@ -217,7 +230,7 @@ include_once '../adm/validate.php';
                                             <th scope="col" class="text-center">Guia Nativo</th>
 
                                             <th scope="col" class="text-center">Bruto</th>
-                                            <th scope="col" class="text-center">Total PAGO </th>
+                                            <th scope="col" class="text-center">Bruto Pedidos criados </th>
                                             <th scope="col" class="text-center">Bruto -20%</th>
                                             <th scope="col" class="text-center">Valor 20%</th>
                                             <th scope="col" class="text-center">Solicitou Saque ?</th>
@@ -252,6 +265,7 @@ include_once '../adm/validate.php';
                                             INNER JOIN pontosturisticos ON pontosturisticos.id = even.idPt
                                             INNER JOIN valores ON valores.id = pay.valorId
                                             INNER JOIN servicos AS guias ON guias.id = pay.guiaId GROUP BY guias.id
+
 
 
                                         ORDER BY idPag DESC LIMIT 13";
