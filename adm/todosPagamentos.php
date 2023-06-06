@@ -204,9 +204,9 @@ include_once '../adm/validate.php';
                                 Devemos pagar SOMENTE depois que passar da data do evento e perguntar se foi feito para o turista.
                                 <br>
 
-                                1- Bruto = Soma Unica dos valores de eventos criados por aquele Guia.
+                                1- Bruto = Soma Pedidos.
                                             <br>
-                                2- Bruto Pedidos criados = Soma dos Valores dos Pedidos que ja foram criados. estao aguardando pagamento.
+                                2- Bruto Pedidos PAGO = Soma dos Valores dos Pedidos pago.
                                             <br>
                                 3- Bruto -20% = É a quantia que devemos pagar ao Guia.
                                             <br>
@@ -230,9 +230,10 @@ include_once '../adm/validate.php';
                                             <th scope="col" class="text-center">Guia Nativo</th>
 
                                             <th scope="col" class="text-center">Bruto</th>
-                                            <th scope="col" class="text-center">Bruto Pedidos criados </th>
+                                            <th scope="col" class="text-center">Bruto Pedidos PAGO </th>
                                             <th scope="col" class="text-center">Bruto -20%</th>
                                             <th scope="col" class="text-center">Valor 20%</th>
+
                                             <th scope="col" class="text-center">Solicitou Saque ?</th>
                                         </tr>
                                     </thead>
