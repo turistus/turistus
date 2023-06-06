@@ -276,7 +276,7 @@ include_once '../adm/validate.php';
                                         //var_dump($row_payment);
                                         extract($row_payment);
                                         echo "<tr>";
-                                        echo "<th>$idPag /<br> $nEventosGuia</th>";
+                                        echo "<th>#0$idPag /<br> $nEventosGuia</th>";
 
                                         echo "<td>$nomeGuia - $numeroGuia <br> Numero PIX </td>";
                                         echo "<td> R$ $bruto  </td>";
