@@ -279,12 +279,12 @@ include_once '../adm/validate.php';
                                         echo "<th> $nEventosGuia</th>";
 
                                         echo "<td>$nomeGuia - $numeroGuia <br> Numero PIX </td>";
-                                        echo "<td> R$ $bruto  </td>";
-                                        echo "<td> R$ $valor  </td>";
+                                        echo "<td> R$ ". number_format($bruto, 2, ",", ".")  ."</td>";
+                                        echo "<td> R$ ". number_format($valor, 2, ",", ".")  ."</td>";
                                         $liquido = $valor*0.2;
                                         $valor20p = $valor - $liquido;
-                                        echo "<td> R$ $valor20p  </td>";
-                                        echo "<td> R$ $liquido </td>";
+                                        echo "<td> R$ ". number_format($valor20p, 2, ",", ".") ." </td>";
+                                        echo "<td> R$ ". number_format($liquido, 2, ",", ".")  ."</td>";
                                         echo "<td> Pagar/Depositar  </td>";
                                         echo "</tr>";
 
