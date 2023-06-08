@@ -226,7 +226,7 @@ include_once '../adm/validate.php';
                                 <table class="table table-bordered table-striped table-hover">
                                     <thead>
                                         <tr style="background-color: #DAA520;">
-                                            <th scope="col">ID / Nº Vendas</th>
+                                            <th scope="col"> Nº Vendas</th>
                                             <th scope="col" class="text-center">Guia Nativo</th>
 
                                             <th scope="col" class="text-center">Bruto</th>
@@ -276,7 +276,7 @@ include_once '../adm/validate.php';
                                         //var_dump($row_payment);
                                         extract($row_payment);
                                         echo "<tr>";
-                                        echo "<th>#0$idPag /<br> $nEventosGuia</th>";
+                                        echo "<th> $nEventosGuia</th>";
 
                                         echo "<td>$nomeGuia - $numeroGuia <br> Numero PIX </td>";
                                         echo "<td> R$ $bruto  </td>";
