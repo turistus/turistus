@@ -206,9 +206,9 @@ include_once '../adm/validate.php';
 
                                 1- Bruto = Soma Pedidos.
                                             <br>
-                                2- Bruto Pedidos PAGO = Soma dos Valores dos Pedidos pago.
+                                2- Bruto P. PAGO = Bruto Pedidos PAGO = Soma dos Valores dos Pedidos pago.
                                             <br>
-                                3- Bruto -20% = É a quantia que devemos pagar ao Guia.
+                                3- Bruto P.P. -20% = É a quantia que devemos pagar ao Guia.
                                             <br>
                                 4- Valor 20% = é o valor que fica pra empresa.
                                             <br>
@@ -230,8 +230,8 @@ include_once '../adm/validate.php';
                                             <th scope="col" class="text-center">Guia Nativo</th>
 
                                             <th scope="col" class="text-center">Bruto</th>
-                                            <th scope="col" class="text-center">Bruto Pedidos PAGO </th>
-                                            <th scope="col" class="text-center">Bruto -20%</th>
+                                            <th scope="col" class="text-center">Bruto P. PAGO </th>
+                                            <th scope="col" class="text-center">Bruto P.P. -20%</th>
                                             <th scope="col" class="text-center">Valor 20%</th>
 
                                             <th scope="col" class="text-center">Solicitou Saque ?</th>
@@ -269,7 +269,7 @@ include_once '../adm/validate.php';
                                         WHERE pay.payments_statu_Id = 5 GROUP BY guias.id
 
 
-                                        ORDER BY idPag DESC LIMIT 13";
+                                        ORDER BY idPag DESC LIMIT 50";
                                     $result_payments = $conn->prepare($query_payments);
                                     $result_payments->execute();
                                     while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
