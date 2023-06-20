@@ -187,6 +187,7 @@ include_once '../adm/validate.php';
 
                                 <!-- ------------------------------------------ PG20 Form ----------------------------------------------------------------- -->
                                 <div class="modal-content" id=formPG20>
+                                <h2 class="display-4 mt-3 mb-3">Pedidos EVENTOS pagos Agendados de Turistas </h2>
 
                                 <h2>Valor Ganho Por Guia</h2>
                                 <p>Como PAGAR os 80% Do GUIA <br>
@@ -198,7 +199,7 @@ include_once '../adm/validate.php';
                                 <b>6 - GUIA SOLICITAR SAQUE é melhor</b>
                                 </p>
 
-                                <h2 class="display-4 mt-3 mb-3">Pedidos EVENTOS pagos Agendados de Turistas </h2>
+
 
                                 <br>
                                 Devemos pagar SOMENTE depois que passar da data do evento e perguntar se foi feito para o turista.
@@ -212,7 +213,7 @@ include_once '../adm/validate.php';
                                             <br>
                                 4- Valor 20% = é o valor que fica pra empresa.
                                             <br>
-                                5-
+                                5- deve se gerar um registro de Repasse ao Guia em uma nova tabela de historico de Repasse/pagamentos.
 
 
                                 <?php
