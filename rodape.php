@@ -34,6 +34,7 @@
           <li style="font-size: 15px;"  class="list-item"><a href="#">Como criar sua conta ?</a></li>
           <li style="font-size: 15px;"  class="list-item"><a href="#">Como abrir um evento ?</a></li>
           <li style="font-size: 15px;"  class="list-item"><a href="#">Como funciona o modo de pagamento ?</a></li>
+          <li style="font-size: 15px;"  class="list-item"><a href="esqueciSenha.php">Esqueci minha senha.</a></li>
 
         </ul>
       </div>

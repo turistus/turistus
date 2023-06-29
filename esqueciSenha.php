@@ -55,7 +55,7 @@ ob_start();
 
     <main class="content" style="  padding-top:20px; padding-left: 20px; padding-right: 20px; background-color:#f1f1f3; opacity: .9;">
 
-    <form method="POST" action="processa-cad.php">
+    <form method="POST" action="enviaCodSms.php">
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
             <label >Celular </label>
                 <input type="text" class="form-control" id="celular" placeholder="" name="celular" value="<?php
@@ -67,7 +67,7 @@ ob_start();
 
         <div class="row" style="padding-left: 20px; margin-top:30px;">
             <div class="col-12">
-                <input class="btn btn-primary" type="submit" value="Cadastrar"><br><br>
+                <input class="btn btn-primary" type="submit" value="Enviar Codigo SMS"><br><br>
             </div>
         </div>
     </form>
