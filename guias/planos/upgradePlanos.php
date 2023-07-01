@@ -116,8 +116,8 @@
                     <button>Selecionar</button>
                 </div>
             </td>
-        </tr>
-        <tr>
+
+
             <td>
                 <div class="card">
                     <h3>Plano 1 Mês</h3>
@@ -126,8 +126,8 @@
                     <button>Selecionar</button>
                 </div>
             </td>
-        </tr>
-        <tr>
+
+
             <td>
                 <div class="card">
                     <h3>Plano 1 Mês</h3>
@@ -136,8 +136,8 @@
                     <button>Selecionar</button>
                 </div>
             </td>
-        </tr>
-        <tr>
+
+
             <td>
                 <div class="card">
                     <h3>Plano 1 Mês</h3>
