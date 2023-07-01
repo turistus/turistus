@@ -92,10 +92,10 @@
                 </tr>
                 <tr>
                 <td><b>Taxa</b></td>
-                    <td>Taxa: 22% das vendas</td>
-                    <td>Taxa: 20% das vendas</td>
-                    <td>Taxa: 15% das vendas</td>
-                    <td>Taxa: 10% das vendas</td>
+                    <td> 22% das vendas</td>
+                    <td> 20% das vendas</td>
+                    <td> 15% das vendas</td>
+                    <td> 10% das vendas</td>
                 </tr>
                 <tr>
                 <td><b>Prazo recebimento</b></td>
@@ -119,12 +119,7 @@
                         </b>
                     </td>
                     <td>
-                        <div class="card">
-                            <h3>1 Mês</h3>
-                            <p class="total">R$ 0,00</p>
-                            <p>R$ 0,00 / mês</p>
-                            <button>Selecionar</button>
-                        </div>
+
                     </td>
 
                     <td>
@@ -163,12 +158,7 @@
                         </b>
                     </td>
                     <td>
-                        <div class="card">
-                            <h3>6 Mês</h3>
-                            <p class="total">R$ 0,00</p>
 
-                            <button>Selecionar</button>
-                        </div>
                     </td>
 
                     <td>
@@ -207,12 +197,7 @@
                         </b>
                     </td>
                     <td>
-                        <div class="card">
-                            <h3>1 Ano</h3>
-                            <p class="total">R$ 0,00</p>
 
-                            <button>Selecionar</button>
-                        </div>
                     </td>
 
                     <td>
