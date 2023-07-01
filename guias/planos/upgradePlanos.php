@@ -83,9 +83,7 @@
         <tr>
             <th colspan="4">Planos</th>
         </tr>
-        <tr>
-            <th colspan="4">Benefícios</th>
-        </tr>
+
         <tr>
             <td>Pedra</td>
             <td>Semente</td>
@@ -108,18 +106,24 @@
             <td>R$ 1.000,00</td>
             <td>R$ 0,00</td>
         </tr>
+
+        <tr>
+            <td>
+                <div class="card">
+                    <h3>Plano 1 Mês</h3>
+                    <p class="total">R$ 29,00</p>
+                    <p>R$ 29,00 / mês</p>
+                    <button>Selecionar</button>
+                </div>
+            </td>
+        </tr>
     </table>
 
                 <div class="card">
 
 
                     <div class="pacotes">
-                        <div class="card">
-                            <h3>Plano 1 Mês</h3>
-                            <p class="total">R$ 29,00</p>
-                            <p>R$ 29,00 / mês</p>
-                            <button>Selecionar</button>
-                        </div>
+
                         <div class="card">
                             <h3>Plano 3 Meses</h3>
                             <p class="total">R$ 59,00</p>
