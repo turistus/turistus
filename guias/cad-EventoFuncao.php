@@ -25,8 +25,8 @@ include_once '../connection.php';
         <div class="row">
 
             <!-- Titulo-->
-        <div class="row" style="padding-left: 50px;  margin-bottom: 50px; background: url(../images/bussola.jpg) repeat-x top center;">
-            <div class="col-10">
+        <div class="row" style="padding-left: 50px;  margin-bottom: 50px; background: url(../images/bussola.jpg) repeat-x ">
+            <div class="col-12">
             <h1 style="padding-top: 10px;">Criar Evento</h1>
             </div>
 
