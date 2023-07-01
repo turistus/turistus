@@ -29,8 +29,9 @@ include_once '../connection.php';
                 <div class="col-12">
                 <h1 style="padding-top: 10px;">Criar Evento</h1>
                 </div>
-                <p>*<a href="">Dicas</a> de como criar seu evento !</p>
+
             </div>
+            <p>*<a href="">Dicas</a> de como criar seu evento !</p>
 
             <?php
             if(isset($_SESSION['msg'])){
