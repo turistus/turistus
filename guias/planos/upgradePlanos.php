@@ -223,5 +223,8 @@
                 </tr>
             </table>
         </div>
+        <?php
+            include_once("../../rodape.php")
+        ?>
     </body>
 </html>
