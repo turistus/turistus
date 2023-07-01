@@ -117,6 +117,36 @@
                 </div>
             </td>
         </tr>
+        <tr>
+            <td>
+                <div class="card">
+                    <h3>Plano 1 Mês</h3>
+                    <p class="total">R$ 29,00</p>
+                    <p>R$ 29,00 / mês</p>
+                    <button>Selecionar</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="card">
+                    <h3>Plano 1 Mês</h3>
+                    <p class="total">R$ 29,00</p>
+                    <p>R$ 29,00 / mês</p>
+                    <button>Selecionar</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="card">
+                    <h3>Plano 1 Mês</h3>
+                    <p class="total">R$ 29,00</p>
+                    <p>R$ 29,00 / mês</p>
+                    <button>Selecionar</button>
+                </div>
+            </td>
+        </tr>
     </table>
 
                 <div class="card">
