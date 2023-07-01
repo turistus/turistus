@@ -11,12 +11,12 @@ $Uid = $_SESSION['user_id'];
                 <!-- Titulo-->
                 <div class="row" style="padding-left: 50px;  margin-bottom: 50px; background: url(../images/bussola.jpg) repeat-x top center;">
                     <div class="col-12">
-                        <h1 style="padding-top: 10px;">Pedidos Completos</h1>
+                        <h1 style="padding-top: 10px;">Histórico de agendamentos</h1>
                     </div>
                 </div>
 
                 <div class="col-12">
-                    <h5> Seus pedidos realizados por turistas e seus comentarios. </h5>
+                    <h5> Seus pedidos realizados por turistas e avaliações. </h5>
                 </div>
              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style=" min-height: 50px;">
                   <?php
