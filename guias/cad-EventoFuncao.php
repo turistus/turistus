@@ -40,7 +40,7 @@ include_once '../connection.php';
 <br>
 
 <!-- Div inicial abaixo do Titulo -->
-<div class="col-10" style=" margin: auto; padding-top: 20px; ">
+<div class="col-12" style=" margin: auto; padding-top: 20px; ">
     <div class="col-md-8 order-md-1">
     <!-- Aqui abaixo tenho um exemplo de como usar a
     função cadastrar Turista processado em outra pagina php -->
