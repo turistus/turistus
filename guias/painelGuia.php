@@ -301,7 +301,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                         <table class="table table-responsive{-sm|-md|-lg|-xl} table-hover" style="width: 100%;" >
                                                             <thead class="thead-light" style='font-size: 10px;'>
-                                                              <tr style='font-size: 8px; height: 5px;'>
+                                                              <tr style='font-size: 12px; height: 5px;'>
                                                                 <th scope="col">Aceita</th>
                                                                 <th scope="col">Turista</th>
                                                                 <th scope="col">Evento</th>
@@ -371,7 +371,7 @@ $emailusuario = $_SESSION['user_email'];
                                                     <div class="col mb-2 text-center" >
                                                       <div class="card ">
                                                         <div class="card-body">
-                                                          <h3>Pagos e aceitos</h3>
+                                                          <h3>Agenda</h3>
 
                                                           <table class="table table-responsive{-sm|-md|-lg|-xl} table-hover" style="width: 100%;" >
                                                             <thead class="thead-light" style='font-size: 10px;'>
