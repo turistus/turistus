@@ -74,7 +74,7 @@ include_once '../connection.php';
                                         <textarea class="form-control" rows="5" cols="15" name="descricao" id="descricao"
                                             value="<?php if(isset($dados_evento['descricao']))
                                             { echo $dados_evento['descricao'];}elseif(isset($row_evento['descricao']))
-                                            { echo $row_evento['descricao']; }?>"required>Detalhe o evento em geral, dia que pode ser agendado, atividades presentes no evento, tempo médio de duração, entre outras informações importantes que o turista tem o direito de saber antes de contratar seu serviços.
+                                            { echo $row_evento['descricao']; }?>"required>Detalhe o evento em geral, dia que pode ser agendado, atividades presentes no evento, tempo médio de duração, dias e horarios que possam ser agendados (Quarta à Domingo das 8:00 às 14:00..) entre outras informações importantes que o turista tem o direito de saber antes de contratar seu serviços.
                                         </textarea>
 
                         </div>
