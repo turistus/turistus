@@ -164,36 +164,36 @@
                     </td>
                     <td>
                         <div class="card">
-                            <h3>Plano 6 Mês</h3>
+                            <h3>6 Mês</h3>
                             <p class="total">R$ 0,00</p>
-                            <p>R$ 0,00 / mês</p>
+
                             <button>Selecionar</button>
                         </div>
                     </td>
 
                     <td>
                         <div class="card">
-                            <h3>Plano 6 Mês</h3>
+                            <h3>6 Mês</h3>
                             <p class="total">R$ 59,00</p>
-                            <p>R$ 59,00 / mês</p>
+
                             <button>Selecionar</button>
                         </div>
                     </td>
 
                     <td>
                         <div class="card">
-                            <h3>Plano 6 Mês</h3>
+                            <h3>6 Mês</h3>
                             <p class="total">R$ 139,00</p>
-                            <p>R$ 29,00 / mês</p>
+
                             <button>Selecionar</button>
                         </div>
                     </td>
 
                     <td>
                         <div class="card">
-                            <h3>Plano 6 Mês</h3>
+                            <h3>6 Mês</h3>
                             <p class="total">R$ 229,00</p>
-                            <p>R$ 29,00 / mês</p>
+
                             <button>Selecionar</button>
                         </div>
                     </td>
@@ -208,36 +208,36 @@
                     </td>
                     <td>
                         <div class="card">
-                            <h3>Plano 1 Ano</h3>
+                            <h3>1 Ano</h3>
                             <p class="total">R$ 0,00</p>
-                            <p>R$ 0,00 / mês</p>
+
                             <button>Selecionar</button>
                         </div>
                     </td>
 
                     <td>
                         <div class="card">
-                            <h3>Plano 1 Ano</h3>
+                            <h3>1 Ano</h3>
                             <p class="total">R$ 149,00</p>
-                            <p>R$ 29,00 / mês</p>
+
                             <button>Selecionar</button>
                         </div>
                     </td>
 
                     <td>
                         <div class="card">
-                            <h3>Plano 1 Ano</h3>
+                            <h3>1 Ano</h3>
                             <p class="total">R$ 249,00</p>
-                            <p>R$ 29,00 / mês</p>
+
                             <button>Selecionar</button>
                         </div>
                     </td>
 
                     <td>
                         <div class="card">
-                            <h3>Plano 1 Ano</h3>
+                            <h3>1 Ano</h3>
                             <p class="total">R$ 329,00</p>
-                            <p>R$ 29,00 / mês</p>
+
                             <button>Selecionar</button>
                         </div>
                     </td>
