@@ -52,7 +52,7 @@ include_once '../connection.php';
 
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
                                             <p>Nome do turismo</p>
-                                            <input type="text" class="form-control" id="nome" placeholder="" name="nome"
+                                            <input type="text" class="form-control" id="nome" placeholder="Nome do evento a ser divulgado" name="nome"
                                             value="<?php
                                                 if (isset($dados['nome'])) {
                                                     echo $dados['nome'];
@@ -61,7 +61,7 @@ include_once '../connection.php';
 
                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                             <label>	Breve descrição </label>
-                                            <input class="form-control" type="text" maxlength="75" name="breveDescricao" id="breveDescricao"
+                                            <input class="form-control" type="text" maxlength="75" name="breveDescricao" placeholder="Resumo da atividade realizada" id="breveDescricao"
                                             value="<?php if(isset($dados_evento['breveDescricao']))
                                             { echo $dados_evento['breveDescricao'];}elseif(isset($row_evento['breveDescricao']))
                                             { echo $row_evento['breveDescricao']; }?>"required> <br>
@@ -73,11 +73,12 @@ include_once '../connection.php';
                                             value="<?php if(isset($dados_evento['descricao']))
                                             { echo $dados_evento['descricao'];}elseif(isset($row_evento['descricao']))
                                             { echo $row_evento['descricao']; }?>"required> <br>
-
+                        <div class="text-muted" style="font-size: 0.8em;">Detalhe o evento em geral, dia que pode ser agendado, atividades presentes no evento, tempo medio de duração,
+                        entre outras informações importantes que o turista tem o direito de saber antes de contratar seu serviços.</div>
                         </div>
-
+                                                <h4>Tempo de permanência do anuncio</h4>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                            <label> Data inicial </label>
+                                            <label> Data inicial (Abertura) </label>
                                             <input class="form-control" type="date" name="datai" id="datai"
                                             value="<?php if(isset($dados_evento['datai']))
                                             { echo $dados_evento['datai'];}elseif(isset($row_evento['datai']))
@@ -85,7 +86,7 @@ include_once '../connection.php';
                         </div>
 
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                            <label> Data final </label>
+                                            <label> Data final (Fechamento) </label>
                                             <input class="form-control" type="date" name="dataf" id="dataf"
                                             value="<?php if(isset($dados_evento['dataf']))
                                             { echo $dados_evento['dataf'];}elseif(isset($row_evento['dataf']))
@@ -94,7 +95,7 @@ include_once '../connection.php';
 
                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                             <label> Ponto de encontro </label>
-                                            <input class="form-control" type="text" name="encontro" id="encontro"
+                                            <input class="form-control" type="text" name="encontro" id="encontro" placeholder=" local de inicio do evento "
                                             value="<?php if(isset($dados_evento['encontro']))
                                             { echo $dados_evento['encontro'];}elseif(isset($row_evento['encontro']))
                                             { echo $row_evento['encontro']; }?>" placeholder="Rua.." required> <br>
@@ -177,7 +178,7 @@ include_once '../connection.php';
                 <div class="col-md-6 mt-3">
                                 <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 ">
 
-                                    <h5 >Ponto Turistico</h5>
+                                    <h5> Vincule um Ponto Turistico ao seu novo evento</h5>
                                         <select class="form-select" name="idPt" style="border: 1px solid blue; border-radius: 10; width: 150px;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
                                             <option>Selecione</option>
 
@@ -216,7 +217,7 @@ include_once '../connection.php';
                         <!-- BOTAO CADASTRAR  -->
 
                                 <div class="row" style="padding-left: 20px; margin-top:20px;">
-                                <input type="submit" class="btn btn-success" style="  width: 150px; margin-right: 10px;" id="Cadastrar" name="Cadastrar" value="Cadastrar">
+                                <input type="submit" class="btn btn-success" style="  width: 150px; margin-right: 10px;" id="Cadastrar" name="Cadastrar" value="Postar">
 
                                     <div class="col-4">
 
