@@ -69,7 +69,8 @@ include_once '../connection.php';
 
                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                             <label> Descrição </label>
-                                            <input class="form-control" type="text" style="height: 100px;" name="descricao" id="descricao"
+                                            <input class="form-control" type="text" style="height: 100px;" name="descricao" id="descricao" placeholder="Detalhe o evento em geral, dia que pode ser agendado, atividades presentes no evento, tempo medio de duração,
+                        entre outras informações importantes que o turista tem o direito de saber antes de contratar seu serviços."
                                             value="<?php if(isset($dados_evento['descricao']))
                                             { echo $dados_evento['descricao'];}elseif(isset($row_evento['descricao']))
                                             { echo $row_evento['descricao']; }?>"required>
