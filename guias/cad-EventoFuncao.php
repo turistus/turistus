@@ -29,10 +29,11 @@ include_once '../connection.php';
             <div class="col-10">
             <h1 style="padding-top: 10px;">Criar Evento</h1>
             </div>
-            <div class="col-2">
+
+        </div>
+        <div class="col-2">
                 <p><a href="">Dicas</a> de como criar seu evento !</p>
             </div>
-        </div>
         <?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg'];
