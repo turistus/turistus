@@ -26,8 +26,11 @@ include_once '../connection.php';
 
             <!-- Titulo-->
         <div class="row" style="padding-left: 50px;  margin-bottom: 50px; background: url(../images/bussola.jpg) repeat-x top center;">
-            <div class="col-12">
+            <div class="col-10">
             <h1 style="padding-top: 10px;">Criar Evento</h1>
+            </div>
+            <div class="col-2">
+                <p><a href="">Dicas</a> de como criar seu evento !</p>
             </div>
         </div>
         <?php
