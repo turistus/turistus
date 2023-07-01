@@ -206,7 +206,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
 
                                                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                                             <label style="font-size: larger; color: black;">Senha</label>
-                                                            <input class="form-control" type="text" name="senha" id="senha"
+                                                            <input class="form-control" type="block" name="senha" id="senha"
                                     value="<?php if(isset($dados['senha']))
                                     { echo $dados['senha'];}elseif(isset($row_guia['senha']))
                                     { echo $row_guia['senha']; }?>"required> <br>
