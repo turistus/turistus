@@ -84,6 +84,9 @@
             <th colspan="4">Planos</th>
         </tr>
         <tr>
+            <th colspan="4">Benefícios</th>
+        </tr>
+        <tr>
             <td></td>
             <td>Semente</td>
             <td>Broto</td>
