@@ -301,7 +301,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                         <table class="table table-responsive{-sm|-md|-lg|-xl} table-hover" style="width: 100%;" >
                                                             <thead class="thead-light" style='font-size: 10px;'>
-                                                              <tr style='font-size: 12px; height: 5px;'>
+                                                              <tr style='font-size: 10px; height: 5px;'>
                                                                 <th scope="col">Aceita</th>
                                                                 <th scope="col">Turista</th>
                                                                 <th scope="col">Evento</th>
