@@ -88,6 +88,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
 
                                 <!-- ALTERA SENHA -->
 
+
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                 <label>Email</label>
                                 <h6><?php if(isset($dados['email']))
@@ -103,7 +104,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                 </h6>
 
                                 <label style="font-size: small; color: black;">Nova Senha</label>
-                                <input class="form-control" type="text" name="senha" id="senha"
+                                <input class="form-control" type="text" name="senha" id="senha" placeholder="Preencha uma nova senha"
                                 value="">
 
                                 <button class="btn"> Alterar </button>
