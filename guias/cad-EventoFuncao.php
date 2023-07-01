@@ -71,7 +71,7 @@ include_once '../connection.php';
 
                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                             <label> Descrição </label>
-                                        <textarea class="form-control" rows="3" cols="15" name="descricao" id="descricao"
+                                        <textarea class="form-control" rows="5" cols="15" name="descricao" id="descricao"
                                             value="<?php if(isset($dados_evento['descricao']))
                                             { echo $dados_evento['descricao'];}elseif(isset($row_evento['descricao']))
                                             { echo $row_evento['descricao']; }?>"required>Detalhe o evento em geral, dia que pode ser agendado, atividades presentes no evento, tempo médio de duração, entre outras informações importantes que o turista tem o direito de saber antes de contratar seu serviços.
@@ -98,14 +98,14 @@ include_once '../connection.php';
 
                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                             <label> Ponto de encontro </label>
-                                            <input class="form-control" type="text" name="encontro" id="encontro" placeholder="Local de inicio do evento "
+                                            <input class="form-control" type="text" name="encontro" id="encontro" placeholder="Local Referência de inicio do evento "
                                             value="<?php if(isset($dados_evento['encontro']))
                                             { echo $dados_evento['encontro'];}elseif(isset($row_evento['encontro']))
                                             { echo $row_evento['encontro']; }?>" placeholder="Rua.." required> <br>
                         </div>
 
                         <div class="col-8 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px; ">
-                            <label> Evento Contempla </label>
+                            <h4> Incluso </h4>
                         </div>
 
                         <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6" style="padding: 10px;">
