@@ -116,7 +116,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 <div class="col-md-6">
     <div class="row-12">
         <div class="col-md-12">
-            <div class="carousel form-inline" style="border: 1px solid black;">
+            <div class="carousel form-inline" >
                 <?php
 
                 // Busque as imagens e vídeos na tabela "fotos"
