@@ -80,7 +80,7 @@
         <div class="conteiner">
             <table>
                 <tr>
-                    <th colspan="5">Planos</th>
+                    <th colspan="5" style="text-align: center;">Upgrade de Planos</th>
                 </tr>
 
                 <tr>
