@@ -58,7 +58,7 @@ $emailusuario = $_SESSION['user_email'];
                                 </div>
 
                               <h4 class="display-6 mt-3 mb-2">Bem vindo, Guia <?php echo $nome?> </h4>
-                              <p> Guia: <b>00<?php echo $Uid?></b> Plano: <b><span style="border-radius: 10px; border: black solid 1px; padding:3px;">BÁSICO</span></b></p>
+                              <p> Guia: <b>00<?php echo $Uid?></b> Plano: <b><span style="border-radius: 10px; border: black solid 1px; padding:3px;">BÁSICO</span></b> + <button class="btn btn-sucess">Upgrade</button></p>
                               <?php if(isset($_SESSION['msg'])){
                                       echo $_SESSION['msg'];
                                       unset($_SESSION['msg']);
@@ -344,6 +344,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 extract($row_payment);
                                                                 echo "<tr style='font-size: 12px; height: 20px;'>";
                                                                 echo "<td style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Sim</td>";
+                                                                echo "<td style='font-size: 10px; '>$idagendado<br><a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'</a>Não</td>";
 
 
                                                                 echo "<th>$first_name <br>" .$celular."</th>" ;
