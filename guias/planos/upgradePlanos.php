@@ -87,7 +87,7 @@
             <th colspan="4">Benefícios</th>
         </tr>
         <tr>
-            <td></td>
+            <td>Pedra</td>
             <td>Semente</td>
             <td>Broto</td>
             <td>Árvore</td>
