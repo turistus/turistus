@@ -114,6 +114,11 @@
         <!-- Linha Mensal -->
                 <tr>
                     <td>
+                        <b>
+                            Mensal
+                        </b>
+                    </td>
+                    <td>
                         <div class="card">
                             <h3>Plano 1 Mês</h3>
                             <p class="total">R$ 0,00</p>
@@ -153,6 +158,11 @@
                 <!-- Linha ¨Semestral -->
                 <tr>
                     <td>
+                        <b>
+                            Semestral
+                        </b>
+                    </td>
+                    <td>
                         <div class="card">
                             <h3>Plano 6 Mês</h3>
                             <p class="total">R$ 0,00</p>
@@ -191,6 +201,11 @@
 
                 <!-- Linha Anual -->
                 <tr>
+                    <td>
+                        <b>
+                            Anual
+                        </b>
+                    </td>
                     <td>
                         <div class="card">
                             <h3>Plano 1 Ano</h3>
