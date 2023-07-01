@@ -27,7 +27,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-        <title>Avaliar Guia</title>
+        <title>Perfil P. Guia</title>
         <link rel="shortcut icon" type="imagex/png" href="../images/logooriginal.png">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

@@ -7,7 +7,7 @@ ob_start();
 
 //$Uid = $_SESSION['user_id'];
 $Aid = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-echo $Aid;
+
 if (empty($Aid)) {
     $_SESSION['msg'] = "<p style='color: #f00;'>Erro: Perfil não encontrado!</p>";
     header("Location: painelGuia.php");
@@ -205,7 +205,7 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                                         </div>
 
                                                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
-                                                            <label style="font-size: larger; color: black;">Senha</label>
+                                                            <!-- label style="font-size: larger; color: black;">Senha</label> -->
                                                             <input class="form-control" type="hidden" name="senha" id="senha"
                                     value="<?php if(isset($dados['senha']))
                                     { echo $dados['senha'];}elseif(isset($row_guia['senha']))
