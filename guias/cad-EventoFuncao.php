@@ -27,7 +27,7 @@ include_once '../connection.php';
             <!-- Titulo-->
         <div class="row" style="padding-left: 50px;  margin-bottom: 50px; background: url(../images/bussola.jpg) repeat-x top center;">
             <div class="col-12">
-            <h1 style="padding-top: 10px;">Postar Novo Evento</h1>
+            <h1 style="padding-top: 10px;">Criar Evento</h1>
             </div>
         </div>
         <?php
@@ -71,12 +71,12 @@ include_once '../connection.php';
 
                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                             <label> Descrição </label>
-                                        <textarea class="form-control" rows="5" cols="15" name="descricao" id="descricao"
+                                            <input class="form-control" type="text" style="height: 100px;" name="descricao" id="descricao"
                                             value="<?php if(isset($dados_evento['descricao']))
                                             { echo $dados_evento['descricao'];}elseif(isset($row_evento['descricao']))
-                                            { echo $row_evento['descricao']; }?>"required>Detalhe o evento em geral, dia que pode ser agendado, atividades presentes no evento, tempo médio de duração, dias e horarios que possam ser agendados (Quarta à Domingo das 8:00 às 14:00..) entre outras informações importantes que o turista tem o direito de saber antes de contratar seu serviços.
-                                        </textarea>
+                                            { echo $row_evento['descricao']; }?>"required>
 
+                        <div class="text-muted" style="font-size: 0.8em;">Detalhe o evento em geral, dia que pode ser agendado, atividades presentes no evento, tempo médio de duração, dias e horarios que possam ser agendados (Quarta à Domingo das 8:00 às 14:00..) entre outras informações importantes que o turista tem o direito de saber antes de contratar seu serviços.</div>
                         </div>
                         <br>
                                                 <h4>Tempo de permanência do anuncio</h4>
@@ -98,10 +98,10 @@ include_once '../connection.php';
 
                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                             <label> Ponto de encontro </label>
-                                            <input class="form-control" type="text" name="encontro" id="encontro" placeholder="Local Referência de inicio do evento "
+                                            <input class="form-control" type="text" name="encontro" id="encontro" placeholder="Local referência de inicio do evento "
                                             value="<?php if(isset($dados_evento['encontro']))
                                             { echo $dados_evento['encontro'];}elseif(isset($row_evento['encontro']))
-                                            { echo $row_evento['encontro']; }?>" placeholder="Rua.." required> <br>
+                                            { echo $row_evento['encontro']; }?>" required> <br>
                         </div>
 
                         <div class="col-8 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px; ">
@@ -129,7 +129,6 @@ include_once '../connection.php';
 
 
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px; ">
-                    <h4> Selecione as imagens </h4>
                         <label for="foto" class="btn" style="border: 1px solid black; ">Fotos do evento</label>
                         <i class="fa-regular fa-images"></i>
                         <div class="text-muted" style="font-size: 0.8em;">envie no máximo 5 fotos.</div>
