@@ -31,7 +31,7 @@ include_once '../connection.php';
             </div>
 
         </div>
-        <div class="col-2">
+        <div class="col-3" style="text-align: right;" >
                 <p><a href="">Dicas</a> de como criar seu evento !</p>
             </div>
         <?php
