@@ -84,34 +84,40 @@
                 </tr>
 
                 <tr>
+                <td><b>Plano</b></td>
                     <td>Pedra</td>
                     <td>Semente</td>
                     <td>Broto</td>
                     <td>Árvore</td>
                 </tr>
                 <tr>
+                <td><b>Taxa</b></td>
+                    <td>Taxa: 22% das vendas</td>
                     <td>Taxa: 20% das vendas</td>
                     <td>Taxa: 15% das vendas</td>
                     <td>Taxa: 10% das vendas</td>
                 </tr>
                 <tr>
-                    <td>Prazo de recebimento: 15 dias</td>
-                    <td>Prazo de recebimento: 10 dias</td>
-                    <td>Prazo de recebimento: 7 dias</td>
+                <td><b>Prazo recebimento</b></td>
+                    <td> 20 dias</td>
+                    <td> 15 dias</td>
+                    <td> 10 dias</td>
+                    <td> 7 dias</td>
                 </tr>
                 <tr>
-                    <td>Mínimo de venda mensal</td>
+                <td><b>Minimo vendas Mensal</b></td>
+                    <td>R$ 0,00</td>
                     <td>R$ 0,00</td>
                     <td>R$ 1.000,00</td>
-                    <td>R$ 0,00</td>
+                    <td>R$ 10.000,00</td>
                 </tr>
         <!-- Linha Mensal -->
                 <tr>
                     <td>
                         <div class="card">
                             <h3>Plano 1 Mês</h3>
-                            <p class="total">R$ 29,00</p>
-                            <p>R$ 29,00 / mês</p>
+                            <p class="total">R$ 0,00</p>
+                            <p>R$ 0,00 / mês</p>
                             <button>Selecionar</button>
                         </div>
                     </td>
@@ -149,8 +155,8 @@
                     <td>
                         <div class="card">
                             <h3>Plano 6 Mês</h3>
-                            <p class="total">R$ 59,00</p>
-                            <p>R$ 29,00 / mês</p>
+                            <p class="total">R$ 0,00</p>
+                            <p>R$ 0,00 / mês</p>
                             <button>Selecionar</button>
                         </div>
                     </td>
@@ -188,8 +194,8 @@
                     <td>
                         <div class="card">
                             <h3>Plano 1 Ano</h3>
-                            <p class="total">R$ 149,00</p>
-                            <p>R$ 29,00 / mês</p>
+                            <p class="total">R$ 0,00</p>
+                            <p>R$ 0,00 / mês</p>
                             <button>Selecionar</button>
                         </div>
                     </td>
