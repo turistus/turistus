@@ -343,8 +343,9 @@ $emailusuario = $_SESSION['user_email'];
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
                                                                 echo "<tr style='font-size: 12px; height: 20px;'>";
-                                                                echo "<td style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Sim</td>";
-                                                                echo "<td style='font-size: 10px; '>$idagendado<br><a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'</a>Não</td>";
+                                                                echo "<td style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Sim<br>
+                                                                <a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'</a>Não</td>";
+                                                                echo "<td style='font-size: 10px; '>$idagendado<br></td>";
 
 
                                                                 echo "<th>$first_name <br>" .$celular."</th>" ;
