@@ -107,13 +107,10 @@
         </tr>
     </table>
 
-            <div class="pacotes">
-
-
                 <div class="card">
 
 
-                    <div class="pacotes col-12">
+                    <div class="pacotes">
                         <div class="card">
                             <h3>Plano 1 Mês</h3>
                             <p class="total">R$ 29,00</p>
@@ -153,6 +150,5 @@
                     </div>
                 </div>
             </div>
-        </div>
     </body>
 </html>
