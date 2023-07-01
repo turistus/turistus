@@ -147,8 +147,7 @@
                     <p>R$ 12,42 / mês</p>
                     <button>Selecionar</button>
                 </div>
-            </div>
-        </div>
+
 
     </div>
     </body>
