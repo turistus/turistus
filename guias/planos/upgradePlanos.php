@@ -77,7 +77,7 @@
 <?php
     include_once("../guias/menu.php")
 ?>
-
+<div class="conteiner">
 
     <table>
         <tr>
@@ -107,54 +107,52 @@
         </tr>
     </table>
 
-    <div class="pacotes">
-
-
-        <div class="card">
-
-
             <div class="pacotes">
 
-            <div class="card">
-            <h3>Plano 1 Mês</h3>
-            <p class="total">R$ 29,00</p>
-            <p>R$ 29,00 / mês</p>
-            <button>Selecionar</button>
-        </div>
-        <div class="card">
-            <h3>Plano 3 Meses</h3>
-            <p class="total">R$ 59,00</p>
-            <p>R$ 19,67 / mês</p>
-            <button>Selecionar</button>
-        </div>
+
                 <div class="card">
-                    <h3>Plano 1 Mês</h3>
-                    <p class="total">R$ 29,00</p>
-                    <p>R$ 29,00 / mês</p>
-                    <button>Selecionar</button>
-                </div>
-                <div class="card">
-                    <h3>Plano 3 Meses</h3>
-                    <p class="total">R$ 59,00</p>
-                    <p>R$ 19,67 / mês</p>
-                    <button>Selecionar</button>
-                </div>
-                <div class="card">
-                    <h3>Plano 6 Meses</h3>
-                    <p class="total">R$ 99,00</p>
-                    <p>R$ 16,50 / mês</p>
-                    <button>Selecionar</button>
-                </div>
-                <div class="card">
-                    <h3>Plano 1 Ano</h3>
-                    <p class="total">R$ 149,00</p>
-                    <p>R$ 12,42 / mês</p>
-                    <button>Selecionar</button>
+
+
+                    <div class="pacotes col-12">
+                        <div class="card">
+                            <h3>Plano 1 Mês</h3>
+                            <p class="total">R$ 29,00</p>
+                            <p>R$ 29,00 / mês</p>
+                            <button>Selecionar</button>
+                        </div>
+                        <div class="card">
+                            <h3>Plano 3 Meses</h3>
+                            <p class="total">R$ 59,00</p>
+                            <p>R$ 19,67 / mês</p>
+                            <button>Selecionar</button>
+                        </div>
+                        <div class="card">
+                            <h3>Plano 1 Mês</h3>
+                            <p class="total">R$ 29,00</p>
+                            <p>R$ 29,00 / mês</p>
+                            <button>Selecionar</button>
+                        </div>
+                        <div class="card">
+                            <h3>Plano 3 Meses</h3>
+                            <p class="total">R$ 59,00</p>
+                            <p>R$ 19,67 / mês</p>
+                            <button>Selecionar</button>
+                        </div>
+                        <div class="card">
+                            <h3>Plano 6 Meses</h3>
+                            <p class="total">R$ 99,00</p>
+                            <p>R$ 16,50 / mês</p>
+                            <button>Selecionar</button>
+                        </div>
+                        <div class="card">
+                            <h3>Plano 1 Ano</h3>
+                            <p class="total">R$ 149,00</p>
+                            <p>R$ 12,42 / mês</p>
+                            <button>Selecionar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
-    </div>
-
     </body>
 </html>
