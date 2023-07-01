@@ -61,7 +61,7 @@ include_once '../connection.php';
 
                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                             <label>	Breve descrição </label>
-                                            <input class="form-control" type="text" maxlength="75" name="breveDescricao" placeholder="Resumo da atividade realizada" id="breveDescricao"
+                                            <input class="form-control" type="textarea" maxlength="75" name="breveDescricao" placeholder="Resumo da atividade realizada" id="breveDescricao"
                                             value="<?php if(isset($dados_evento['breveDescricao']))
                                             { echo $dados_evento['breveDescricao'];}elseif(isset($row_evento['breveDescricao']))
                                             { echo $row_evento['breveDescricao']; }?>"required> <br>
