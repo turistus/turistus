@@ -51,12 +51,12 @@ include_once '../connection.php';
                     <div class="col-xl-12 col-lg-12 col-sm-12 col-md-12 mb-12">
 
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
-                                            <p>Nome do turismo</p>
+                                            <label> Nome do turismo</label>
                                             <input type="text" class="form-control" id="nome" placeholder="Nome do evento a ser divulgado" name="nome"
                                             value="<?php
                                                 if (isset($dados['nome'])) {
                                                     echo $dados['nome'];
-                                                }?>" required>
+                                                }?>" required><br>
                         </div>
 
                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
@@ -76,6 +76,7 @@ include_once '../connection.php';
                         <div class="text-muted" style="font-size: 0.8em;">Detalhe o evento em geral, dia que pode ser agendado, atividades presentes no evento, tempo medio de duração,
                         entre outras informações importantes que o turista tem o direito de saber antes de contratar seu serviços.</div>
                         </div>
+                        <br>
                                                 <h4>Tempo de permanência do anuncio</h4>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label> Data inicial (Abertura) </label>
@@ -95,7 +96,7 @@ include_once '../connection.php';
 
                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                             <label> Ponto de encontro </label>
-                                            <input class="form-control" type="text" name="encontro" id="encontro" placeholder=" local de inicio do evento "
+                                            <input class="form-control" type="text" name="encontro" id="encontro" placeholder="Local de inicio do evento "
                                             value="<?php if(isset($dados_evento['encontro']))
                                             { echo $dados_evento['encontro'];}elseif(isset($row_evento['encontro']))
                                             { echo $row_evento['encontro']; }?>" placeholder="Rua.." required> <br>
@@ -133,7 +134,7 @@ include_once '../connection.php';
 
                     </div>
 
-
+                                                <h4>Determine o valor por nº vagas</h4>
                         <div class="row " >
                             <div id="formulario" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" >
                                 <div class="form-group form-inline" id="bloco" style="border: 1px solid green; padding:15px;">
