@@ -64,7 +64,7 @@ $emailusuario = $_SESSION['user_email'];
                                       unset($_SESSION['msg']);
                               }?>
 
-                                      <!-- INICIO PAINEL com as funçoes Administrativa   -->
+                                      <!-- INICIO PAINEL com as funçoes Administrativa  Previsao de vendas -->
                                           <div class="modal-content" id=formPainel style="padding: 10px;">
                                             <div class="row" >
                                               <!-- VALOR TOTAL  -->
@@ -120,36 +120,180 @@ $emailusuario = $_SESSION['user_email'];
                                                       </div>
                                                     </div>
                                                 </div>
-                                              <!-- MELHORES VENDAS  -->
-                                              <div class="col-md-6" style="margin-bottom: 30px;">
 
-                                                  <div class="card ">
-                                                    <div class="card-body" >
-                                                      <h5>Contratar Plano </h5>
-                                                      <div class="row" >
-                                                        <div class="col-6" >
-                                                          <p> Mensal </p>
-                                                            <ul>
-                                                              <li> Comum - 20% </li>
-                                                              <li> Completo - 15% </li>
-                                                              <li> C. Premium - 10% </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-6" >
-                                                          <p> Anual </p>
-                                                            <ul>
-                                                              <li> Comum - 20% </li>
-                                                              <li> Completo - 15% </li>
-                                                              <li> C. Premium - 10% </li>
-                                                            </ul>
-                                                        </div>
+                                                <!-- Parte 2 Direita -->
+                                                <div class="col-md-6" style="margin-bottom: 30px;">
+
+                                                    <div class="card ">
+                                                      <div class="card-body" >
+                                                        <h5>Previsão de Vendas </h5>
+                                                            <?php
+                                                            $query_payments = "SELECT
+                                                            pay.id AS idagendado,
+                                                                pay.first_name,
+                                                                pay.phone AS celular,
+                                                                pay.guiaId,
+                                                                payments_statu_Id,
+                                                                pay.product_id,
+                                                                pay.dataagendada AS dataagendada,
+                                                            eventos.id AS idE,
+                                                                eventos.nome AS nE,
+                                                                eventos.idPt AS idPt,
+                                                                eventos.valor AS valor,
+                                                                eventos.idGuia,
+
+                                                                SUM(pay.custoPedido) AS totalVendas,
+                                                                COUNT(pay.id) AS nVendas
+
+                                                            FROM payments_picpays AS pay
+                                                                INNER JOIN eventos ON eventos.id = pay.product_id
+                                                                INNER JOIN servicos ON servicos.id = pay.guiaId
+
+
+                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id <= 5 ORDER BY idagendado DESC Limit 10";
+
+
+                                                            $result_payments = $conn->prepare($query_payments);
+                                                            $result_payments->execute();
+
+                                                            while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
+                                                                //var_dump($row_payment);
+                                                                extract($row_payment);
+                                                            }
+                                                            echo "<div class='row' style='margin:5px; padding: 10px; background-color:#E0FFFF; border-radius: 5px;'>";
+                                                            echo "<div class='col-md-5'>";
+                                                            echo "<h6> Total Vendas <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
+                                                            echo "</div>";
+
+                                                            echo "<div class='col-md-4'>";
+                                                            echo "<h6> Nº Pedidos <br> ".$nVendas."</h6>";
+                                                            echo "</div>";
+
+                                                            echo "</div>";
+                                                            ?>
                                                       </div>
                                                     </div>
-                                                  </div>
+                                                </div>
 
-                                              </div>
+                                                <!-- parte 3 -->
+                                                <div class="col-md-6" style="margin-bottom: 30px;">
+
+                                                    <div class="card ">
+                                                      <div class="card-body" >
+                                                        <h5>Previsão de Vendas </h5>
+                                                            <?php
+                                                            $query_payments = "SELECT
+                                                            pay.id AS idagendado,
+                                                                pay.first_name,
+                                                                pay.phone AS celular,
+                                                                pay.guiaId,
+                                                                payments_statu_Id,
+                                                                pay.product_id,
+                                                                pay.dataagendada AS dataagendada,
+                                                            eventos.id AS idE,
+                                                                eventos.nome AS nE,
+                                                                eventos.idPt AS idPt,
+                                                                eventos.valor AS valor,
+                                                                eventos.idGuia,
+
+                                                                SUM(pay.custoPedido) AS totalVendas,
+                                                                COUNT(pay.id) AS nVendas
+
+                                                            FROM payments_picpays AS pay
+                                                                INNER JOIN eventos ON eventos.id = pay.product_id
+                                                                INNER JOIN servicos ON servicos.id = pay.guiaId
+
+
+                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id <= 5 ORDER BY idagendado DESC Limit 10";
+
+
+                                                            $result_payments = $conn->prepare($query_payments);
+                                                            $result_payments->execute();
+
+                                                            while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
+                                                                //var_dump($row_payment);
+                                                                extract($row_payment);
+                                                            }
+                                                            echo "<div class='row' style='margin:5px; padding: 10px; background-color:#FF8C00; border-radius: 5px;'>";
+                                                            echo "<div class='col-md-5'>";
+                                                            echo "<h6> Total Vendas <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
+                                                            echo "</div>";
+
+                                                            echo "<div class='col-md-4'>";
+                                                            echo "<h6> Nº Pedidos <br> ".$nVendas."</h6>";
+                                                            echo "</div>";
+
+                                                            echo "</div>";
+                                                            ?>
+                                                      </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Parte 4 -->
+                                                <div class="col-md-6" style="margin-bottom: 30px;">
+
+                                                    <div class="card ">
+                                                      <div class="card-body" >
+                                                        <h5>Previsão de Vendas </h5>
+                                                            <?php
+                                                            $query_payments = "SELECT
+                                                            pay.id AS idagendado,
+                                                                pay.first_name,
+                                                                pay.phone AS celular,
+                                                                pay.guiaId,
+                                                                payments_statu_Id,
+                                                                pay.product_id,
+                                                                pay.dataagendada AS dataagendada,
+                                                            eventos.id AS idE,
+                                                                eventos.nome AS nE,
+                                                                eventos.idPt AS idPt,
+                                                                eventos.valor AS valor,
+                                                                eventos.idGuia,
+
+                                                                SUM(pay.custoPedido) AS totalVendas,
+                                                                COUNT(pay.id) AS nVendas
+
+                                                            FROM payments_picpays AS pay
+                                                                INNER JOIN eventos ON eventos.id = pay.product_id
+                                                                INNER JOIN servicos ON servicos.id = pay.guiaId
+
+
+                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id <= 5 ORDER BY idagendado DESC Limit 10";
+
+
+                                                            $result_payments = $conn->prepare($query_payments);
+                                                            $result_payments->execute();
+
+                                                            while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
+                                                                //var_dump($row_payment);
+                                                                extract($row_payment);
+                                                            }
+                                                            echo "<div class='row' style='margin:5px; padding: 10px; background-color:#00FF00; border-radius: 5px;'>";
+                                                            echo "<div class='col-md-5'>";
+                                                            echo "<h6> Total Vendas <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
+                                                            echo "</div>";
+
+                                                            echo "<div class='col-md-4'>";
+                                                            echo "<h6> Nº Pedidos <br> ".$nVendas."</h6>";
+                                                            echo "</div>";
+
+                                                            echo "</div>";
+                                                            ?>
+                                                      </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+                                                <hr>
+
+
+
+
                                               <!-- Lista todos Pedidos para ACEITAR ainda. -->
-                                              <div class="col-md-6">
+                                              <div class="col-md-12">
                                                   <div class="col mb-2 text-center" >
                                                     <div class="card ">
                                                       <div class="card-body" >
@@ -223,7 +367,7 @@ $emailusuario = $_SESSION['user_email'];
                                                   </div>
                                               </div>
                                               <!-- Lista Agendados aceitos e PAGOS-->
-                                              <div class="col-md-6">
+                                              <div class="col-md-12">
                                                     <div class="col mb-2 text-center" >
                                                       <div class="card ">
                                                         <div class="card-body">
