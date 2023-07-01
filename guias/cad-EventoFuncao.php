@@ -27,7 +27,7 @@ include_once '../connection.php';
             <!-- Titulo-->
         <div class="row" style="padding-left: 50px;  margin-bottom: 50px; background: url(../images/bussola.jpg) repeat-x top center;">
             <div class="col-12">
-            <h1 style="padding-top: 10px;">Criar Evento</h1>
+            <h1 style="padding-top: 10px;">Postar Novo Evento</h1>
             </div>
         </div>
         <?php
@@ -51,7 +51,7 @@ include_once '../connection.php';
                     <div class="col-xl-12 col-lg-12 col-sm-12 col-md-12 mb-12">
 
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
-                                            <label> Nome do turismo</label>
+                                            <label> Titulo do turismo</label>
                                             <input type="text" class="form-control" id="nome" placeholder="Nome do evento a ser divulgado" name="nome"
                                             value="<?php
                                                 if (isset($dados['nome'])) {
@@ -129,6 +129,7 @@ include_once '../connection.php';
 
 
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6" style="padding: 10px; ">
+                    <h4> Selecione as imagens </h4>
                         <label for="foto" class="btn" style="border: 1px solid black; ">Fotos do evento</label>
                         <i class="fa-regular fa-images"></i>
                         <div class="text-muted" style="font-size: 0.8em;">envie no máximo 5 fotos.</div>
