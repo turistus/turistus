@@ -163,7 +163,7 @@
 
                     <td>
                         <div class="card">
-                            <h3>6 Mês</h3>
+                            <h3>6 Meses</h3>
                             <p class="total">R$ 59,00</p>
 
                             <button>Selecionar</button>
@@ -172,7 +172,7 @@
 
                     <td>
                         <div class="card">
-                            <h3>6 Mês</h3>
+                            <h3>6 Meses</h3>
                             <p class="total">R$ 139,00</p>
 
                             <button>Selecionar</button>
@@ -181,7 +181,7 @@
 
                     <td>
                         <div class="card">
-                            <h3>6 Mês</h3>
+                            <h3>6 Meses</h3>
                             <p class="total">R$ 229,00</p>
 
                             <button>Selecionar</button>
