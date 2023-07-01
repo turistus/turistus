@@ -129,7 +129,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     $extensao = pathinfo($midia, PATHINFO_EXTENSION);
                     if ($extensao == 'mp4') { ?>
                         <div>
-                            <video src="../images/eventos/<?php echo $id . '/' . $midia; ?>" controls style="margin:auto; height: 300px; text-align: center;"></video>
+                            <video src="../images/eventos/<?php echo $id . '/' . $midia; ?>" controls width="640" style="margin:auto; height: 300px; text-align: center;"></video>
                         </div>
                     <?php } else { ?>
                         <div>
