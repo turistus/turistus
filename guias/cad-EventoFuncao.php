@@ -72,7 +72,7 @@ include_once '../connection.php';
                                             <input class="form-control" type="text" style="height: 100px;" name="descricao" id="descricao"
                                             value="<?php if(isset($dados_evento['descricao']))
                                             { echo $dados_evento['descricao'];}elseif(isset($row_evento['descricao']))
-                                            { echo $row_evento['descricao']; }?>"required> <br>
+                                            { echo $row_evento['descricao']; }?>"required>
                         <div class="text-muted" style="font-size: 0.8em;">Detalhe o evento em geral, dia que pode ser agendado, atividades presentes no evento, tempo medio de duração,
                         entre outras informações importantes que o turista tem o direito de saber antes de contratar seu serviços.</div>
                         </div>
@@ -130,7 +130,7 @@ include_once '../connection.php';
                         <label for="foto" class="btn" style="border: 1px solid black; ">Fotos do evento</label>
                         <i class="fa-regular fa-images"></i>
                         <div class="text-muted" style="font-size: 0.8em;">envie no máximo 5 fotos.</div>
-                        <input type="file" name="foto[]" id="foto" multiple="multiple" onchange="previewImagem()" style="display: none;" required><br><br>
+                        <input type="file" name="foto[]" id="foto" multiple="multiple" onchange="previewImagem()" style="display: none;" required><br>
 
                     </div>
 
@@ -176,7 +176,7 @@ include_once '../connection.php';
 
 
 
-                <div class="col-md-6 mt-3">
+                <div class="col-md-12 mt-3">
                                 <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 ">
 
                                     <h5> Vincule um Ponto Turistico ao seu novo evento</h5>
