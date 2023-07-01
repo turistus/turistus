@@ -112,29 +112,35 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
             <!-- LINHA PRINCIPAL -->
             <div class="row" >
 
-                    <!-- Lado Esquerdo limite 5 fotos  -->
-                    <div class="col-md-6 " >
-                        <div class="row-12" >
-                            <div class="col-md-12 " >
-                                <div class="carousel form-inline" style="border:1px solid black; " >
-                                    <?php
+                  <!-- Lado Esquerdo limite 5 fotos -->
+<div class="col-md-6">
+    <div class="row-12">
+        <div class="col-md-12">
+            <div class="carousel form-inline" style="border: 1px solid black;">
+                <?php
 
-                                    // Busque as imagens na tabela "fotos"
-                                    $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $id");
-                                    $imagens = array();
-                                        while ($row = mysqli_fetch_assoc($busca_Fotos)) {
-                                        $imagens[] = $row['foto'];
-                                    }
-                                    foreach ($imagens as $imagem) { ?>
-
-                                            <div ><img src="../images/eventos/<?php echo $id.'/'.$imagem; ?>" style="margin:auto; height: 300px; text-align: center;"> </div>
-
-                                    <?php } ?>
-                                </div>
-                            </div>
+                // Busque as imagens e vídeos na tabela "fotos"
+                $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $id");
+                $midias = array();
+                while ($row = mysqli_fetch_assoc($busca_Fotos)) {
+                    $midias[] = $row['foto'];
+                }
+                foreach ($midias as $midia) {
+                    $extensao = pathinfo($midia, PATHINFO_EXTENSION);
+                    if ($extensao == 'mp4') { ?>
+                        <div>
+                            <video src="../videos/eventos/<?php echo $id . '/' . $midia; ?>" controls style="margin:auto; height: 300px; text-align: center;"></video>
                         </div>
-                    </div>
-
+                    <?php } else { ?>
+                        <div>
+                            <img src="../images/eventos/<?php echo $id . '/' . $midia; ?>" style="margin:auto; height: 300px; text-align: center;">
+                        </div>
+                    <?php } ?>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</div>
                     <!-- Lado Direito -->
                         <div class="col-md-6" style="border: 0,5px solid black;">
 

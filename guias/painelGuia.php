@@ -72,7 +72,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                     <div class="card ">
                                                       <div class="card-body" >
-                                                        <h5>Previsão de Vendas </h5>
+                                                        <h5>Resumo de Vendas Mensal</h5>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
@@ -126,7 +126,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                     <div class="card ">
                                                       <div class="card-body" >
-                                                        <h5>Previsão de Vendas </h5>
+                                                        <h5>Resumo de Vendas Anual </h5>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
@@ -366,6 +366,7 @@ $emailusuario = $_SESSION['user_email'];
                                                     </div>
                                                   </div>
                                               </div>
+
                                               <!-- Lista Agendados aceitos e PAGOS-->
                                               <div class="col-md-12">
                                                     <div class="col mb-2 text-center" >
