@@ -129,7 +129,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
                     $extensao = pathinfo($midia, PATHINFO_EXTENSION);
                     if ($extensao == 'mp4') { ?>
                         <div>
-                            <video id="video-<?php echo $midia; ?>" src="../images/eventos/<?php echo $id . '/' . $midia; ?>" controls style=" height: 300px; text-align: center; margin-left:200px; border-radius: 10px;"></video>
+                            <video id="video-<?php echo $midia; ?>" src="../images/eventos/<?php echo $id . '/' . $midia; ?>" controls style=" height: 300px; text-align: center; margin-left:150px; border-radius: 10px;"></video>
                             <script>
                                 // Reproduzir automaticamente o vídeo e passar para o próximo
                                 document.addEventListener("DOMContentLoaded", function() {
