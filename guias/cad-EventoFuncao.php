@@ -71,21 +71,12 @@ include_once '../connection.php';
 
                         <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12">
                                             <label> Descrição </label>
-                                        <input class="form-control" type="text" style="height: 100px;" name="descricao" id="descricao"
-                                            value="<?php if(isset($dados_evento['descricao']))
-                                            { echo $dados_evento['descricao'];}elseif(isset($row_evento['descricao']))
-                                            { echo $row_evento['descricao']; }?>"required>
-
                                         <textarea class="form-control" rows="3" cols="15" name="descricao" id="descricao"
                                             value="<?php if(isset($dados_evento['descricao']))
                                             { echo $dados_evento['descricao'];}elseif(isset($row_evento['descricao']))
-                                            { echo $row_evento['descricao']; }?>"required>Detalhe o evento em geral, dia que pode ser agendado, atividades presentes no evento, tempo medio de duração,
-                                            entre outras informações importantes que o turista tem o direito de saber antes de contratar seu serviços.
+                                            { echo $row_evento['descricao']; }?>"required>Detalhe o evento em geral, dia que pode ser agendado, atividades presentes no evento, tempo médio de duração, entre outras informações importantes que o turista tem o direito de saber antes de contratar seu serviços.
                                         </textarea>
 
-
-                            <div class="text-muted" style="font-size: 0.8em;">Detalhe o evento em geral, dia que pode ser agendado, atividades presentes no evento, tempo medio de duração,
-                            entre outras informações importantes que o turista tem o direito de saber antes de contratar seu serviços.</div>
                         </div>
                         <br>
                                                 <h4>Tempo de permanência do anuncio</h4>
