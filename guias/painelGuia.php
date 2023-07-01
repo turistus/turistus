@@ -58,7 +58,7 @@ $emailusuario = $_SESSION['user_email'];
                                 </div>
 
                               <h4 class="display-6 mt-3 mb-2">Bem vindo, Guia <?php echo $nome?> </h4>
-                              <p> Guia: <b>00<?php echo $Uid?></b> Plano: <b><span style="border-radius: 10px; border: black solid 1px; padding:3px;">BÁSICO</span></b> <a href="upgradePlanos.php"><button class="btn btn-success" style="height: 25px; margin-bottom: 5px; padding: 3px;">  +Upgrade</button></a></p>
+                              <p> Guia: <b>00<?php echo $Uid?></b> Plano: <b><span style="border-radius: 10px; border: black solid 1px; padding:3px;">BÁSICO</span></b> <a href="planos/upgradePlanos.php"><button class="btn btn-success" style="height: 25px; margin-bottom: 5px; padding: 3px;">  +Upgrade</button></a></p>
                               <?php if(isset($_SESSION['msg'])){
                                       echo $_SESSION['msg'];
                                       unset($_SESSION['msg']);
