@@ -80,7 +80,7 @@
         <div class="conteiner">
             <table>
                 <tr>
-                    <th colspan="4">Planos</th>
+                    <th colspan="5">Planos</th>
                 </tr>
 
                 <tr>
