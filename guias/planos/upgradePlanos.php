@@ -221,9 +221,9 @@
                     </div>
             <br><br>
                             <p><div class="carousel-indicators">
-                                <span class="active"></span>
-                                <span class="active"></span>
-                                <span class="active"></span>
+                                <span ></span>
+                                <span ></span>
+                                <span ></span>
                                 <span class="active"></span>
                             </div>
                             </p>
