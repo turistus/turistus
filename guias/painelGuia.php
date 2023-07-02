@@ -67,7 +67,7 @@ $emailusuario = $_SESSION['user_email'];
                                       <!-- INICIO PAINEL com as funçoes Administrativa  Previsao de vendas -->
                                           <div class="modal-content" id=formPainel style="padding: 10px;">
                                             <div class="row" >
-                                              <!-- VALOR TOTAL  -->
+                                              <!-- VALOR TOTAL parte 1 -->
                                                 <div class="col-md-6" style="margin-bottom: 30px;">
 
                                                     <div class="card ">
@@ -343,8 +343,8 @@ $emailusuario = $_SESSION['user_email'];
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
                                                                 echo "<tr style='font-size: 12px; height: 20px;'>";
-                                                                echo "<td style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Sim<br>
-                                                                <a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'</a>Não</td>";
+                                                                echo "<td style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Aceitar<br>
+                                                                <a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'</a>Remarcar</td>";
 
                                                                 echo "<th>$first_name <br>" .$celular."</th>" ;
 
