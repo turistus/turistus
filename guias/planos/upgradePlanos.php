@@ -127,15 +127,15 @@
         <div class="conteiner scaled">
             <table>
                 <tr>
-                    <th colspan="5" style="text-align: center;"> Planos</th>
+                    <th colspan="5" style="text-align: center;"> Planos </th>
                 </tr>
 
                 <tr>
                 <td><b>Plano</b></td>
                     <td></td>
-                    <td>Comum</td>
-                    <td>Completo</td>
-                    <td>Vip</td>
+                    <td style="text-align: center; font-size: 10px;"> Comum </td>
+                    <td style="text-align: center; font-size: 10px;"> Completo </td>
+                    <td style="text-align: center; font-size: 10px;"> Vip </td>
                 </tr>
                 <tr>
                 <td><b>Taxa</b></td>
