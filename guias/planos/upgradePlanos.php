@@ -76,6 +76,42 @@
             margin: auto;
             padding: 15px;
         }
+
+
+        .carousel {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .carousel-inner {
+            width: 1600px; /* Largura total dos cartões (400px * 4) */
+            height: 300px;
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .carousel-indicators span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .carousel-indicators span.active {
+            background-color: #333;
+        }
     </style>
 </head>
 
@@ -125,11 +161,19 @@
                     <td>100%</td>
                 </tr>
 
+
+
+
+
                 <td><b>Valor</b></td>
                     <td></td>
                     <td>Grátis</td>
                     <td>Grátis</td>
                     <td>
+
+                    <div class="carousel">
+                        <div class="carousel-inner">
+
                         <div class="card">
                             <b>Standart</b>
                             <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
@@ -138,30 +182,43 @@
                             <p style="font-size: 8px;">*Estimativa de gasto mensal durante 30 dias.</p>
                             <button>Comprar</button>
                         </div>
+
+
+
                         <div class="card">
                             <b>Platinum</b>
                             <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
                             <p class="total">R$ <span style="font-size: 20px;">59,00</span> / Trimestral </p>
                             <p style="font-size: 12px;">R$ 20,00 por mês.</p>
-                            <p style="font-size: 8px;">*Estimativa de gasto durante 3 meses. Os 7 primeiros dias grátis</p>
+                            <p style="font-size: 8px;">*Estimativa de gasto durante 3 meses. Os 7 primeiros dias grátis.</p>
                             <button>Comprar</button>
                         </div>
+
+
+
                         <div class="card">
                             <b>Infinity</b>
                             <p style="font-size: 8px;">Garante mais segurança no pagamento.</p>
                             <p class="total">R$ <span style="font-size: 20px;">169,00</span> / Semestre </p>
                             <p style="font-size: 12px;">R$ 28,10 por mês.</p>
-                            <p style="font-size: 8px;">*Estimativa de gasto durante 6 meses. Os 7 primeiros dias grátis</p>
+                            <p style="font-size: 8px;">*Estimativa de gasto durante 6 meses. Os 7 primeiros dias grátis.</p>
                             <button>Comprar</button>
                         </div>
+
+
+
                         <div class="card">
                             <b>Black</b>
                             <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
                             <p class="total">R$ <span style="font-size: 20px;">199,00</span> / Anual </p>
                             <p style="font-size: 12px;">R$ 16,60 por mês.</p>
-                            <p style="font-size: 8px;">*Estimativa de gasto durante 12 meses. Os 7 primeiros dias grátis</p>
+                            <p style="font-size: 8px;">*Estimativa de gasto durante 12 meses. Os 7 primeiros dias grátis.</p>
                             <button>Comprar</button>
                         </div>
+
+                        </div>
+                    </div>
+
                         </td>
                 </tr>
 
@@ -170,5 +227,24 @@
         <?php
             include_once("../../rodape.php")
         ?>
+
+<script>
+        const carouselInner = document.querySelector('.carousel-inner');
+        const indicators = document.querySelectorAll('.carousel-indicators span');
+
+        // Adicionar evento de clique aos indicadores
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                const cardWidth = document.querySelector('.card').offsetWidth;
+                carouselInner.style.transform = `translateX(-${cardWidth * index}px)`;
+
+                // Ativar indicador selecionado
+                indicators.forEach((indicator) => {
+                    indicator.classList.remove('active');
+                });
+                indicator.classList.add('active');
+            });
+        });
+    </script>
     </body>
 </html>
