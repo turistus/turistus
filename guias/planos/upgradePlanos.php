@@ -195,7 +195,7 @@
                         <div class="card">
                             <b>Platinum</b>
                             <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
-                            <p class="total">R$ <span style="font-size: 20px;">59,00</span> / Trimestral </p>
+                            <p class="total">R$ <span style="font-size: 20px; display: inline;">59,00</span> / Trimestral </p>
                             <p style="font-size: 12px;">R$ 20,00 por mês.</p>
                             <p style="font-size: 8px;">*Estimativa de gasto durante 3 meses. Os 7 primeiros dias grátis.</p>
                             <button>Comprar</button>
@@ -217,7 +217,7 @@
                         <div class="card">
                             <b>Black</b>
                             <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
-                            <p class="total">R$ <span style="font-size: 20px; display: inline;">159,00</span> / Anual </p>
+                            <p class="total">R$ <span style="font-size: 20px; ">159,00</span> / Anual </p>
                             <p style="font-size: 12px;">R$ 13,25 por mês.</p>
                             <p style="font-size: 8px;">*Estimativa de gasto durante 12 meses. Os 7 primeiros dias grátis.</p>
                             <button>Comprar</button>
