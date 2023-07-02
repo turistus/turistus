@@ -60,7 +60,7 @@
 
         .card button {
             background-color: #4CAF50;
-            color: black;
+            color: white;
             border: none;
             padding: 10px;
             text-align: center;
@@ -217,14 +217,16 @@
                                 <button>Comprar</button>
                             </div>
 
-                        </div>
-                        <p><div class="carousel-indicators">
-                                <span ></span>
-                                <span ></span>
-                                <span ></span>
-                                <span ></span>
-                            </div>
+                            <p>
+                                <div class="carousel-indicators">
+                                    <span ></span>
+                                    <span ></span>
+                                    <span ></span>
+                                    <span ></span>
+                                </div>
                             </p>
+                        </div>
+
                     </div>
             <br><br>
 
@@ -245,34 +247,34 @@
 
 <script>
     const carouselInner = document.querySelector('.carousel-inner');
-const indicators = document.querySelectorAll('.carousel-indicators span');
-const cards = document.querySelectorAll('.carousel-inner .card');
+    const indicators = document.querySelectorAll('.carousel-indicators span');
+    const cards = document.querySelectorAll('.carousel-inner .card');
 
-// Ocultar todos os cards, exceto o primeiro
-cards.forEach((card, index) => {
-  if (index !== 0) {
-    card.style.display = 'none';
-  }
-});
-
-// Adicionar evento de clique aos indicadores
-indicators.forEach((indicator, index) => {
-  indicator.addEventListener('click', () => {
-    // Ocultar cards não ativos e mostrar card ativo
-    cards.forEach((card, cardIndex) => {
-      if (cardIndex === index) {
-        card.style.display = 'inline-block';
-      } else {
+    // Ocultar todos os cards, exceto o primeiro
+    cards.forEach((card, index) => {
+    if (index !== 0) {
         card.style.display = 'none';
-      }
+    }
     });
 
-    // Ativar indicador selecionado
-    indicators.forEach((indicator) => {
-      indicator.classList.remove('active');
+    // Adicionar evento de clique aos indicadores
+    indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        // Ocultar cards não ativos e mostrar card ativo
+        cards.forEach((card, cardIndex) => {
+        if (cardIndex === index) {
+            card.style.display = 'inline-block';
+        } else {
+            card.style.display = 'none';
+        }
+        });
+
+        // Ativar indicador selecionado
+        indicators.forEach((indicator) => {
+        indicator.classList.remove('active');
+        });
+        indicator.classList.add('active');
     });
-    indicator.classList.add('active');
-  });
 });
 </script>
     </body>
