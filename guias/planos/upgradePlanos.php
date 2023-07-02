@@ -112,6 +112,11 @@
         .carousel-indicators span.active {
             background-color: #333;
         }
+
+        .scaled {
+        transform: scale(0.7); /* Equal to scaleX(0.7) scaleY(0.7) */
+        background-color: pink;
+        }
     </style>
 </head>
 
@@ -170,7 +175,7 @@
                     <td>Grátis</td>
                     <td>Grátis</td>
 
-                    <td><div class="row">
+                    <td><div class="scaled">
 
 
                     <div class="carousel-fluid w-3" >
@@ -179,7 +184,7 @@
                         <div class="card">
                             <b>Standart</b>
                             <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
-                            <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mês </p>
+                            <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mensal </p>
                             <p style="font-size: 12px;">R$ 0,96 por dia.</p>
                             <p style="font-size: 8px;">*Estimativa de gasto mensal durante 30 dias.</p>
                             <button>Comprar</button>
