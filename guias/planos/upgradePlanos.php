@@ -272,7 +272,7 @@
         });
 
         // Atualizar a transformação do carousel
-        carouselInner.style.transform = `translateX(-${cardWidth * index}px)`;
+        //carouselInner.style.transform = `translateX(-${cardWidth * index}px)`;
 
         // Ativar indicador selecionado
         indicators.forEach((indicator) => {
