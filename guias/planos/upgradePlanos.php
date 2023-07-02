@@ -38,8 +38,7 @@
         }
 
         .card {
-            /*display: inline-block;*/
-            display: none; /* Oculta todos os cards */
+            display: inline-block;
             width: 200px;
             border: 1px solid #ddd;
             padding: 20px;
@@ -89,14 +88,14 @@
         .carousel-inner {
             width: 1600px; /* Largura total dos cartões (400px * 4) */
             height: 300px;
-            display: flex;
+            display: none; /* Oculta todos os cards */
+
             transition: transform 0.3s ease;
         }
 
 
         .carousel-indicators {
-            /*display: flex;*/
-            display: none; /* Oculta todos os cards */
+            display: flex;
             justify-content: center;
             margin-top: 10px;
         }
