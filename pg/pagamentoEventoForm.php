@@ -344,7 +344,7 @@ include_once './configPicPay.php';
                                 }
                     ?>">
                         </div>
-                        <div class="form-group col-6" style="display: inline;">
+                        <div class="form-group ">
                             <label for="dataagendada">Escolha uma Data</label>
                             <input type="date" name="dataagendada" id="dataagendada" class="form-control" >
 
