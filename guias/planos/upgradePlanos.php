@@ -95,7 +95,7 @@
             display: none;
         }
         .carousel-inner .card.active {
-            display: flex;
+            display: inline-block;
         }
 
         .carousel-indicators {
@@ -188,7 +188,7 @@
                     <div class="carousel-fluid w-3" >
                         <div class="carousel-inner">
 
-                        <div class="card active">
+                        <div class="card">
                             <b>Standart</b>
                             <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
                             <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mensal </p>
