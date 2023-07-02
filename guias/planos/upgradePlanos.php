@@ -186,7 +186,7 @@
                             <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
                             <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mensal </p>
                             <p style="font-size: 12px;">R$ 0,96 por dia.</p>
-                            <p style="font-size: 8px;">*Estimativa de gasto mensal durante 30 dias.</p>
+                            <p style="font-size: 8px;">*Estimativa de gasto mensal durante 30 dias. Aproveite já e aumente os ganhos.</p>
                             <button>Comprar</button>
                         </div>
 
@@ -195,7 +195,7 @@
                         <div class="card">
                             <b>Platinum</b>
                             <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
-                            <p class="total">R$ <span style="font-size: 18px;">59,00</span> / Trimestral </p>
+                            <p class="total">R$ <span style="font-size: 20px;">59,00</span> / Trimestral </p>
                             <p style="font-size: 12px;">R$ 20,00 por mês.</p>
                             <p style="font-size: 8px;">*Estimativa de gasto durante 3 meses. Os 7 primeiros dias grátis.</p>
                             <button>Comprar</button>
@@ -206,7 +206,7 @@
                         <div class="card">
                             <b>Infinity</b>
                             <p style="font-size: 8px;">Garante mais segurança no pagamento.</p>
-                            <p class="total">R$ <span style="font-size: 18px;">99,00</span> / Semestre </p>
+                            <p class="total">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
                             <p style="font-size: 12px;">R$ 16,50 por mês.</p>
                             <p style="font-size: 8px;">*Estimativa de gasto durante 6 meses. Os 7 primeiros dias grátis.</p>
                             <button>Comprar</button>
