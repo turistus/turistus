@@ -73,10 +73,9 @@
 
         .conteiner{
 
-            margin: auto;
+
             padding: 15px;
         }
-
 
         .carousel {
             position: relative;
@@ -90,12 +89,6 @@
             height: 300px;
             display: flex;
             transition: transform 0.3s ease;
-        }
-        .carousel-inner .card {
-            display: none;
-        }
-        .carousel-inner .card.active {
-            display: inline-block;
         }
 
         .carousel-indicators {
@@ -188,7 +181,7 @@
                     <div class="carousel-fluid w-3" >
                         <div class="carousel-inner">
 
-                        <div class="card active">
+                        <div class="card">
                             <b>Standart</b>
                             <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
                             <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mensal </p>
@@ -199,7 +192,7 @@
 
 
 
-                        <div class="card active">
+                        <div class="card">
                             <b>Platinum</b>
                             <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
                             <p class="total" style="width: 180px;">R$ <span style="font-size: 20px; ">59,00</span> / Trimestral </p>
@@ -210,7 +203,7 @@
 
 
 
-                        <div class="card active">
+                        <div class="card">
                             <b>Infinity</b>
                             <p style="font-size: 8px;">Garante mais segurança no pagamento. Conte com o PicPay.</p>
                             <p class="total" style="width: 180px;">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
@@ -221,7 +214,7 @@
 
 
 
-                        <div class="card active">
+                        <div class="card">
                             <b>Black</b>
                             <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
                             <p class="total">R$ <span style="font-size: 20px; ">159,00</span> / Anual </p>
