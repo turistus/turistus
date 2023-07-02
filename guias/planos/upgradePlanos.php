@@ -28,35 +28,7 @@
             font-size: 18px;
         }
 
-        .destaque {
-            font-weight: bold;
-        }
 
-        .pacotes {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .card {
-            display: inline-block;
-            width: 200px;
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin: 10px;
-            text-align: center;
-        }
-
-        .card h3 {
-            margin: 0;
-        }
-
-        .card p {
-            margin-bottom: 10px;
-        }
-
-        .card .total {
-            font-weight: bold;
-        }
 
         .card button {
             background-color: #4CAF50;
