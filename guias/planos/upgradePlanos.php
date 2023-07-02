@@ -94,7 +94,9 @@
         .carousel-inner .card {
             display: none;
         }
-
+        .carousel-inner .card.active {
+            display: block;
+        }
 
         .carousel-indicators {
             display: flex;
