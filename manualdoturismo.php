@@ -64,9 +64,7 @@ define('ACCESS', true);
       color: #003366;
     }
 
-    .bg-light {
-      background-color: #f8f9fa !important;
-    }
+
 
     .social-icons i {
       font-size: 2rem;
