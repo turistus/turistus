@@ -72,8 +72,6 @@
         }
 
         .conteiner{
-
-
             padding: 15px;
         }
 
@@ -119,7 +117,6 @@
 
         .scaled {
         transform: scaleX(0.8) scaleY(0.8); /* Equal to scaleX(0.7) scaleY(0.7) */
-
         }
     </style>
 </head>
@@ -184,54 +181,47 @@
 
                     <div class="carousel-fluid w-3" >
                         <div class="carousel-inner">
+                            <div class="card">
+                                <b>Standart</b>
+                                <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
+                                <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mensal </p>
+                                <p style="font-size: 12px;">R$ 0,96 por dia.</p>
+                                <p style="font-size: 8px;">*Estimativa de gasto mensal durante 30 dias. Aproveite já e aumente os ganhos.</p>
+                                <button>Comprar</button>
+                            </div>
 
-                        <div class="card">
-                            <b>Standart</b>
-                            <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
-                            <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mensal </p>
-                            <p style="font-size: 12px;">R$ 0,96 por dia.</p>
-                            <p style="font-size: 8px;">*Estimativa de gasto mensal durante 30 dias. Aproveite já e aumente os ganhos.</p>
-                            <button>Comprar</button>
-                        </div>
+                            <div class="card">
+                                <b>Platinum</b>
+                                <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
+                                <p class="total" style="width: 180px;">R$ <span style="font-size: 20px; ">59,00</span> / Trimestral </p>
+                                <p style="font-size: 12px;">R$ 20,00 por mês.</p>
+                                <p style="font-size: 8px;">*Estimativa de gasto durante 3 meses. Os 7 primeiros dias grátis.</p>
+                                <button>Comprar</button>
+                            </div>
 
+                            <div class="card">
+                                <b>Infinity</b>
+                                <p style="font-size: 8px;">Garante mais segurança no pagamento. Conte com o PicPay.</p>
+                                <p class="total" style="width: 180px;">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
+                                <p style="font-size: 12px;">R$ 16,50 por mês.</p>
+                                <p style="font-size: 8px;">*Estimativa de gasto durante 6 meses. Os 7 primeiros dias grátis.</p>
+                                <button>Comprar</button>
+                            </div>
 
-
-                        <div class="card">
-                            <b>Platinum</b>
-                            <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
-                            <p class="total" style="width: 180px;">R$ <span style="font-size: 20px; ">59,00</span> / Trimestral </p>
-                            <p style="font-size: 12px;">R$ 20,00 por mês.</p>
-                            <p style="font-size: 8px;">*Estimativa de gasto durante 3 meses. Os 7 primeiros dias grátis.</p>
-                            <button>Comprar</button>
-                        </div>
-
-
-
-                        <div class="card">
-                            <b>Infinity</b>
-                            <p style="font-size: 8px;">Garante mais segurança no pagamento. Conte com o PicPay.</p>
-                            <p class="total" style="width: 180px;">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
-                            <p style="font-size: 12px;">R$ 16,50 por mês.</p>
-                            <p style="font-size: 8px;">*Estimativa de gasto durante 6 meses. Os 7 primeiros dias grátis.</p>
-                            <button>Comprar</button>
-                        </div>
-
-
-
-                        <div class="card">
-                            <b>Black</b>
-                            <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
-                            <p class="total">R$ <span style="font-size: 20px; ">159,00</span> / Anual </p>
-                            <p style="font-size: 12px;">R$ 13,25 por mês.</p>
-                            <p style="font-size: 8px;">*Estimativa de gasto durante 12 meses. Os 7 primeiros dias grátis.</p>
-                            <button>Comprar</button>
-                        </div>
+                            <div class="card">
+                                <b>Black</b>
+                                <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
+                                <p class="total">R$ <span style="font-size: 20px; ">159,00</span> / Anual </p>
+                                <p style="font-size: 12px;">R$ 13,25 por mês.</p>
+                                <p style="font-size: 8px;">*Estimativa de gasto durante 12 meses. Os 7 primeiros dias grátis.</p>
+                                <button>Comprar</button>
+                            </div>
 
                         </div>
                     </div>
-<br><br>
+            <br><br>
                             <p><div class="carousel-indicators">
-                                <span class="active"></span>
+                                <span></span>
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -272,7 +262,7 @@
         });
 
         // Atualizar a transformação do carousel
-        //carouselInner.style.transform = `translateX(-${cardWidth * index}px)`;
+        carouselInner.style.transform = `translateX(-${cardWidth * index}px)`;
 
         // Ativar indicador selecionado
         indicators.forEach((indicator) => {
