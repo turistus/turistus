@@ -113,6 +113,13 @@
             background-color: #333;
         }
 
+        .carousel .card {
+             display: none; /* Oculta todos os cards */
+        }
+
+        .carousel .card.active {
+            display: block; /* Exibe o card ativo */
+        }
         .scaled {
         transform: scaleX(0.8) scaleY(0.8); /* Equal to scaleX(0.7) scaleY(0.7) */
 
