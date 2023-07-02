@@ -249,22 +249,35 @@
         ?>
 
 <script>
+
         const carouselInner = document.querySelector('.carousel-inner');
-        const indicators = document.querySelectorAll('.carousel-indicators span');
+const indicators = document.querySelectorAll('.carousel-indicators span');
+const cards = document.querySelectorAll('.carousel-inner .card');
 
-        // Adicionar evento de clique aos indicadores
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                const cardWidth = document.querySelector('.card').offsetWidth;
-                carouselInner.style.transform = `translateX(-${cardWidth * index}px)`;
+// Adicionar evento de clique aos indicadores
+indicators.forEach((indicator, index) => {
+  indicator.addEventListener('click', () => {
+    const cardWidth = cards[0].offsetWidth;
 
-                // Ativar indicador selecionado
-                indicators.forEach((indicator) => {
-                    indicator.classList.remove('active');
-                });
-                indicator.classList.add('active');
-            });
-        });
+    // Ocultar cards não ativos e mostrar card ativo
+    cards.forEach((card, cardIndex) => {
+      if (cardIndex === index) {
+        card.classList.add('active');
+      } else {
+        card.classList.remove('active');
+      }
+    });
+
+    // Atualizar a transformação do carousel
+    carouselInner.style.transform = `translateX(-${cardWidth * index}px)`;
+
+    // Ativar indicador selecionado
+    indicators.forEach((indicator) => {
+      indicator.classList.remove('active');
+    });
+    indicator.classList.add('active');
+  });
+});
     </script>
     </body>
 </html>
