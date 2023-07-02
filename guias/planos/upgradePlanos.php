@@ -169,7 +169,9 @@
                     <td></td>
                     <td>Grátis</td>
                     <td>Grátis</td>
-                    <td>
+
+                    <td><div class="row">
+
 
                     <div class="carousel-fluid" >
                         <div class="carousel-inner">
@@ -218,21 +220,23 @@
 
                         </div>
                     </div>
-
-                        </td>
-
-                </tr>
-
-
-            </table>
-            <div class="row">
+<br><br>
                             <div class="carousel-indicators">
                                 <span class="active"></span>
                                 <span></span>
                                 <span></span>
                                 <span></span>
                             </div>
-                    </div>
+                    </div></td>
+
+
+                </tr>
+
+
+            </table>
+
+
+
         </div>
         <?php
             include_once("../../rodape.php")
