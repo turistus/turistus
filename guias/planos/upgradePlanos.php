@@ -219,7 +219,7 @@
                             </div>
 
                             <p>
-                                <div class="carousel-indicators" style="margin-top: 600px;">
+                                <div class="carousel-indicators">
                                     <span ></span>
                                     <span ></span>
                                     <span ></span>
