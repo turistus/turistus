@@ -205,7 +205,7 @@
 
                         <div class="card">
                             <b>Infinity</b>
-                            <p style="font-size: 8px;">Garante mais segurança no pagamento.</p>
+                            <p style="font-size: 8px;">Garante mais segurança no pagamento. Conte com o PicPay.</p>
                             <p class="total" style="width: 180px;">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
                             <p style="font-size: 12px;">R$ 16,50 por mês.</p>
                             <p style="font-size: 8px;">*Estimativa de gasto durante 6 meses. Os 7 primeiros dias grátis.</p>
