@@ -224,7 +224,7 @@
                                 <span ></span>
                                 <span ></span>
                                 <span ></span>
-                                <span class="active"></span>
+                                <span ></span>
                             </div>
                             </p>
                     </div></td>
