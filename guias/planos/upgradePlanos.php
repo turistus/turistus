@@ -143,7 +143,7 @@
                             <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
                             <p class="total">R$ <span style="font-size: 20px;">59,00</span> / Trimestral </p>
                             <p style="font-size: 12px;">R$ 20,00 por mês.</p>
-                            <p style="font-size: 8px;">*Estimativa de gasto durante 3 meses. 33% 59,00 os 7dias grátis</p>
+                            <p style="font-size: 8px;">*Estimativa de gasto durante 3 meses. Os 7 primeiros dias grátis</p>
                             <button>Comprar</button>
                         </div>
                         <div class="card">
@@ -151,7 +151,7 @@
                             <p style="font-size: 8px;">Garante mais segurança no pagamento.</p>
                             <p class="total">R$ <span style="font-size: 20px;">169,00</span> / Semestre </p>
                             <p style="font-size: 12px;">R$ 28,10 por mês.</p>
-                            <p style="font-size: 8px;">*Estimativa de gasto durante 6 meses.</p>
+                            <p style="font-size: 8px;">*Estimativa de gasto durante 6 meses. Os 7 primeiros dias grátis</p>
                             <button>Comprar</button>
                         </div>
                         <div class="card">
@@ -159,7 +159,7 @@
                             <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
                             <p class="total">R$ <span style="font-size: 20px;">199,00</span> / Anual </p>
                             <p style="font-size: 12px;">R$ 16,60 por mês.</p>
-                            <p style="font-size: 8px;">*Estimativa de gasto durante 12 meses.</p>
+                            <p style="font-size: 8px;">*Estimativa de gasto durante 12 meses. Os 7 primeiros dias grátis</p>
                             <button>Comprar</button>
                         </div>
                         </td>
