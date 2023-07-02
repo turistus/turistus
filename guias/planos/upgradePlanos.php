@@ -80,37 +80,46 @@
         <div class="conteiner">
             <table>
                 <tr>
-                    <th colspan="5" style="text-align: center;">Upgrade de Planos</th>
+                    <th colspan="5" style="text-align: center;"> Planos</th>
                 </tr>
 
                 <tr>
                 <td><b>Plano</b></td>
-                    <td>Pedra</td>
+                    <td></td>
                     <td>Semente</td>
                     <td>Broto</td>
                     <td>Árvore</td>
                 </tr>
                 <tr>
                 <td><b>Taxa</b></td>
-                    <td> 22% das vendas</td>
+                    <td> </td>
                     <td> 20% das vendas</td>
                     <td> 15% das vendas</td>
                     <td> 10% das vendas</td>
                 </tr>
                 <tr>
                 <td><b>Prazo recebimento</b></td>
-                    <td> 20 dias</td>
+                    <td> </td>
                     <td> 15 dias</td>
                     <td> 10 dias</td>
                     <td> 7 dias</td>
                 </tr>
                 <tr>
                 <td><b>Minimo vendas Mensal</b></td>
-                    <td>R$ 0,00</td>
+                    <td></td>
                     <td>R$ 0,00</td>
                     <td>R$ 1.000,00</td>
                     <td>R$ 10.000,00</td>
                 </tr>
+                <tr>
+                <td><b>Visibilidade</b></td>
+                    <td></td>
+                    <td>50%</td>
+                    <td>75%</td>
+                    <td>100%</td>
+                </tr>
+
+
         <!-- Linha Mensal -->
                 <tr>
                     <td>
