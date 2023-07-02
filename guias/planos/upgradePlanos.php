@@ -87,7 +87,7 @@
         .carousel-inner {
             width: 1600px; /* Largura total dos cartões (400px * 4) */
             height: 300px;
-            display: flex;
+            display: none;
             transition: transform 0.3s ease;
         }
 
