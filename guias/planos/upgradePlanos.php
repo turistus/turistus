@@ -28,7 +28,35 @@
             font-size: 18px;
         }
 
+        .destaque {
+            font-weight: bold;
+        }
 
+        .pacotes {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .card {
+            display: inline-block;
+            width: 200px;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .card h3 {
+            margin: 0;
+        }
+
+        .card p {
+            margin-bottom: 10px;
+        }
+
+        .card .total {
+            font-weight: bold;
+        }
 
         .card button {
             background-color: #4CAF50;
@@ -231,28 +259,28 @@
 
     // Adicionar evento de clique aos indicadores
     indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            const cardWidth = cards[0].offsetWidth;
+    indicator.addEventListener('click', () => {
+        const cardWidth = cards[0].offsetWidth;
 
-            // Ocultar cards não ativos e mostrar card ativo
-            cards.forEach((card, cardIndex) => {
-                if (cardIndex === index) {
-                    card.classList.add('active');
-                } else {
-                    card.classList.remove('active');
-                }
-            });
-
-            // Atualizar a transformação do carousel
-            carouselInner.style.transform = `translateX(-${cardWidth * index}px)`;
-
-            // Ativar indicador selecionado
-            indicators.forEach((indicator) => {
-                indicator.classList.remove('active');
-            });
-            indicator.classList.add('active');
+        // Ocultar cards não ativos e mostrar card ativo
+        cards.forEach((card, cardIndex) => {
+        if (cardIndex === index) {
+            card.style.display = 'inline-block';
+        } else {
+            card.style.display = 'none';
+        }
         });
+
+        // Atualizar a transformação do carousel
+        carouselInner.style.transform = `translateX(-${cardWidth * index}px)`;
+
+        // Ativar indicador selecionado
+        indicators.forEach((indicator) => {
+        indicator.classList.remove('active');
+        });
+        indicator.classList.add('active');
     });
+});
 </script>
     </body>
 </html>
