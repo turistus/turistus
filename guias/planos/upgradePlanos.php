@@ -87,7 +87,7 @@
         .carousel-inner {
             width: 1600px; /* Largura total dos cartões (400px * 4) */
             height: 300px;
-            display: none;
+            display: flex;
             transition: transform 0.3s ease;
         }
 
@@ -112,6 +112,10 @@
             display: block; /* Exibe o card ativo */
         }
 
+        .carousel .card {
+        flex: 0 0 100%;
+        display: none;
+        }
 
         .scaled {
         transform: scaleX(0.8) scaleY(0.8); /* Equal to scaleX(0.7) scaleY(0.7) */
