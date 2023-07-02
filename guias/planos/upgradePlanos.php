@@ -219,16 +219,15 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                        </td>
+                        <div class="row">
                         <div class="carousel-indicators">
-                            <span class="active">1</span>
-                            <span>2</span>
-                            <span>3</span>
-                            <span>4</span>
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                     </div>
-
-                        </td>
                 </tr>
 
             </table>
