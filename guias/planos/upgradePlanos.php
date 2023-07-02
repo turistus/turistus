@@ -124,7 +124,7 @@
         <?php
             include_once("../../guias/menu.php")
         ?>
-        <div class="conteiner">
+        <div class="conteiner scaled">
             <table>
                 <tr>
                     <th colspan="5" style="text-align: center;"> Planos</th>
@@ -175,7 +175,7 @@
                     <td>Grátis</td>
                     <td>Grátis</td>
 
-                    <td><div class="scaled">
+                    <td><div class="row">
 
 
                     <div class="carousel-fluid w-3" >
