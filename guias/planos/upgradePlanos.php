@@ -131,23 +131,19 @@
                     <td>Grátis</td>
                     <td>
                         <div class="card">
-                            <p class="total">R$ 59,00</p>
-                            <p>R$ 59,00 / Mês </p>
+                            <p class="total">R$ 59,00 / Mês </p>
                             <button>Selecionar</button>
                         </div>
                         <div class="card">
-                            <p class="total">R$ 99,00</p>
-                            <p>R$ 99,00 / 3 Meses </p>
+                            <p class="total">R$ 99,00 / 3 Meses </p>
                             <button>Selecionar</button>
                         </div>
                         <div class="card">
-                            <p class="total">R$ 169,00</p>
-                            <p>R$ 169,00 / Semestre </p>
+                            <p class="total">R$ 169,00 / Semestre </p>
                             <button>Selecionar</button>
                         </div>
                         <div class="card">
-                            <p class="total">R$ 199,00</p>
-                            <p>R$ 199,00 / Anual </p>
+                            <p class="total">R$ 199,00 / Anual </p>
                             <button>Selecionar</button>
                         </div>
                         </td>
