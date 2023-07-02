@@ -348,9 +348,10 @@ include_once './configPicPay.php';
                             <label for="dataagendada">Escolha uma Data</label>
                             <input type="date" name="dataagendada" id="dataagendada" class="form-control" >
 
-
-                            <label for="appt">Horario:</label>
-                                <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+                            <br>
+                            <label for="appt">Horario</label>
+                                <br>
+                                <input type="time" id="appt" name="appt" min="08:00" max="18:00" required>
                         </div>
                         <div class="form-group">
 
