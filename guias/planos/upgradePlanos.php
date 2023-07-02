@@ -199,7 +199,7 @@
 
 
 
-                        <div class="card">
+                        <div class="card active">
                             <b>Platinum</b>
                             <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
                             <p class="total" style="width: 180px;">R$ <span style="font-size: 20px; ">59,00</span> / Trimestral </p>
