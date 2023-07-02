@@ -176,7 +176,7 @@ define('ACCESS', true);
 
 <div class="row">
   <?php
-    include_once("./RoadMapTuristus.pdf")
+ //   include_once("./RoadMapTuristus.pdf")
   ?>
 <a href="./RoadMapTuristus.pdf">RoadMAp</a>
 </div>
