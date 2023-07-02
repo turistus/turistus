@@ -199,8 +199,8 @@
                         <div class="card">
                             <b>Infinity</b>
                             <p style="font-size: 8px;">Garante mais segurança no pagamento.</p>
-                            <p class="total">R$ <span style="font-size: 20px;">169,00</span> / Semestre </p>
-                            <p style="font-size: 12px;">R$ 28,10 por mês.</p>
+                            <p class="total">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
+                            <p style="font-size: 12px;">R$ 16,50 por mês.</p>
                             <p style="font-size: 8px;">*Estimativa de gasto durante 6 meses. Os 7 primeiros dias grátis.</p>
                             <button>Comprar</button>
                         </div>
@@ -210,8 +210,8 @@
                         <div class="card">
                             <b>Black</b>
                             <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
-                            <p class="total">R$ <span style="font-size: 20px;">199,00</span> / Anual </p>
-                            <p style="font-size: 12px;">R$ 16,60 por mês.</p>
+                            <p class="total">R$ <span style="font-size: 20px;">159,00</span> / Anual </p>
+                            <p style="font-size: 12px;">R$ 13,25 por mês.</p>
                             <p style="font-size: 8px;">*Estimativa de gasto durante 12 meses. Os 7 primeiros dias grátis.</p>
                             <button>Comprar</button>
                         </div>
@@ -219,11 +219,13 @@
                         </div>
                     </div>
 
-                    <div class="carousel-indicators">
-                        <span class="active">1</span>
-                        <span>2</span>
-                        <span>3</span>
-                        <span>4</span>
+                    <div class="row">
+                        <div class="carousel-indicators">
+                            <span class="active">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div>
                     </div>
 
                         </td>
