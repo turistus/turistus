@@ -132,7 +132,7 @@
                     <td>
                         <div class="card">
                             <b>Standart</b>
-                            <p class="muted">Garante as melhores condições para suas vendas.</p>
+                            <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
                             <p class="total">R$ 59,00 / Mês </p>
                             <button>Comprar</button>
                         </div>
