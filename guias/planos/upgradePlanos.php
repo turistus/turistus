@@ -206,7 +206,7 @@
                         <div class="card">
                             <b>Infinity</b>
                             <p style="font-size: 8px;">Garante mais segurança no pagamento.</p>
-                            <p class="total">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
+                            <p class="total">R$ <span style="font-size: 20px; display: inline;">99,00</span> / Semestre </p>
                             <p style="font-size: 12px;">R$ 16,50 por mês.</p>
                             <p style="font-size: 8px;">*Estimativa de gasto durante 6 meses. Os 7 primeiros dias grátis.</p>
                             <button>Comprar</button>
@@ -217,7 +217,7 @@
                         <div class="card">
                             <b>Black</b>
                             <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
-                            <p class="total">R$ <span style="font-size: 20px;">159,00</span> / Anual </p>
+                            <p class="total">R$ <span style="font-size: 20px; display: inline;">159,00</span> / Anual </p>
                             <p style="font-size: 12px;">R$ 13,25 por mês.</p>
                             <p style="font-size: 8px;">*Estimativa de gasto durante 12 meses. Os 7 primeiros dias grátis.</p>
                             <button>Comprar</button>
