@@ -218,7 +218,7 @@
                                 <button>Comprar</button>
                             </div>
                             <br>
-                            <p>
+                            <p><br>
                                 <div class="carousel-indicators">
                                     <span ></span>
                                     <span ></span>
