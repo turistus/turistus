@@ -133,22 +133,26 @@
                         <div class="card">
                             <b>Standart</b>
                             <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
-                            <p class="total">R$ 59,00 / Mês </p>
+                            <p class="total">R$ <span style="font-size: 12px;">59,00</span> / Mês </p>
+                            <p style="font-size: 8px;">*Estimativa de gasto mensal durante 30 dias.</p>
                             <button>Comprar</button>
                         </div>
                         <div class="card">
                             <b>Platinum</b>
-                            <p class="total">R$ 99,00 / Trimestral </p>
+                            <p class="total">R$ <span style="font-size: 12px;">99,00</span> / Trimestral </p>
+                            <p style="font-size: 8px;">*Estimativa de gasto durante 3 meses.</p>
                             <button>Comprar</button>
                         </div>
                         <div class="card">
                             <b>Infinity</b>
-                            <p class="total">R$ 169,00 / Semestre </p>
+                            <p class="total">R$ <span style="font-size: 12px;">169,00</span> / Semestre </p>
+                            <p style="font-size: 8px;">*Estimativa de gasto durante 6 meses.</p>
                             <button>Comprar</button>
                         </div>
                         <div class="card">
                             <b>Black</b>
-                            <p class="total">R$ 199,00 / Anual </p>
+                            <p class="total">R$ <span style="font-size: 12px;">199,00</span> / Anual </p>
+                            <p style="font-size: 8px;">*Estimativa de gasto durante 12 meses.</p>
                             <button>Comprar</button>
                         </div>
                         </td>
