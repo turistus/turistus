@@ -108,7 +108,7 @@ include_once './configPicPay.php';
 
 
                 //Salvar os dados da compra no banco de dados
-                $query_pay_picpay = "INSERT INTO payments_picpays (first_name, last_name, cpf, phone, email, expires_at, product_id, payments_statu_Id, created, guiaId, dataagendada, valorId, nVagas, custoPedido) VALUES (:first_name, :last_name, :cpf, :phone, :email, :expires_at, :product_id, 1, :created, :guiaId, :dataagendada, :valorId, :nVagas, :custoPedido)";
+                $query_pay_picpay = "INSERT INTO payments_picpays (first_name, last_name, cpf, phone, email, expires_at, product_id, payments_statu_Id, created, guiaId, dataagendada, hora, valorId, nVagas, custoPedido) VALUES (:first_name, :last_name, :cpf, :phone, :email, :expires_at, :product_id, 1, :created, :guiaId, :dataagendada, :hora, :valorId, :nVagas, :custoPedido)";
 
                 $add_pay_picpay = $conn->prepare($query_pay_picpay);
 
@@ -122,6 +122,7 @@ include_once './configPicPay.php';
                 $add_pay_picpay->bindParam(":created", $data['created']);
                 $add_pay_picpay->bindParam(":guiaId", $data['idGuia']);
                 $add_pay_picpay->bindParam(":dataagendada", $data['dataagendada']);
+                $add_pay_picpay->bindParam(":hora", $data['hora']);
                 $add_pay_picpay->bindParam(":valorId", $data['valorId']);
                 $add_pay_picpay->bindParam(":nVagas", $data['nVagas']);
                 $add_pay_picpay->bindParam(":custoPedido", $data['custoPedido']);
@@ -240,6 +241,7 @@ include_once './configPicPay.php';
 
             <div class="row mb-5">
                 <div class="col-md-8">
+                <p> Pedido </p>
                     <h3><?php echo $nomeEvento; ?></h3>
 
                         <div class="row-12" >
@@ -263,7 +265,7 @@ include_once './configPicPay.php';
                     </div>
 
                 <div class="col-md-4">
-                   <p> Pedido </p>
+
 
                     <?php
 
@@ -344,17 +346,19 @@ include_once './configPicPay.php';
                                 }
                     ?>">
                         </div>
-                        <div class="form-group col-sm-6">
+                        <div class="form-group col-md-6">
                             <label for="dataagendada">Escolha uma Data</label>
                             <input type="date" name="dataagendada" id="dataagendada" class="form-control" >
 
-
-                            <label for="hora">Horario</label>
-                                <br>
-                                <input type="time" id="hora" name="hora" min="08:00" max="18:00" required>
                         </div>
-                        <div class="form-group">
 
+
+                        <div class="form-group col-md-6">
+                            <label for="hora">Horario</label>
+                                    <br>
+                                    <input type="time" id="hora" name="hora" min="08:00" max="18:00" required>
+                        </div>
+                            <div class="form-group">
                             <input type="hidden" name="idGuia" id="idGuia" class="form-control" value="<?php
                                 if (isset($row_product['idGuia'])) {
                                     echo $row_product['idGuia'];
