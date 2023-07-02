@@ -38,7 +38,8 @@
         }
 
         .card {
-            display: inline-block;
+            /*display: inline-block;*/
+            display: none; /* Oculta todos os cards */
             width: 200px;
             border: 1px solid #ddd;
             padding: 20px;
@@ -100,8 +101,7 @@
         }
 
         .carousel-indicators span {
-            /*display: inline-block;*/
-            display: none; /* Oculta todos os cards */
+            display: inline-block;
             width: 10px;
             height: 10px;
             background-color: #bbb;
@@ -114,6 +114,7 @@
             background-color: #333;
             display: block; /* Exibe o card ativo */
         }
+
 
         .scaled {
         transform: scaleX(0.8) scaleY(0.8); /* Equal to scaleX(0.7) scaleY(0.7) */
