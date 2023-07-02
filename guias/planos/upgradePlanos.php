@@ -92,16 +92,16 @@
                 <tr>
                 <td><b>Plano</b></td>
                     <td></td>
-                    <td>Semente</td>
-                    <td>Broto</td>
-                    <td>Árvore</td>
+                    <td>Comum</td>
+                    <td>Completo</td>
+                    <td>Vip</td>
                 </tr>
                 <tr>
                 <td><b>Taxa</b></td>
                     <td> </td>
-                    <td> 20% das vendas</td>
-                    <td> 15% das vendas</td>
-                    <td> 10% das vendas</td>
+                    <td> 20% </td>
+                    <td> 15% </td>
+                    <td> 10% </td>
                 </tr>
                 <tr>
                 <td><b>Prazo recebimento</b></td>
@@ -135,7 +135,7 @@
                             <button>Selecionar</button>
                         </div>
                         <div class="card">
-                            <p class="total">R$ 99,00 / 3 Meses </p>
+                            <p class="total">R$ 99,00 / Trimestral </p>
                             <button>Selecionar</button>
                         </div>
                         <div class="card">
