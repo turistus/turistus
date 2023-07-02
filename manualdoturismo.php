@@ -157,7 +157,7 @@ define('ACCESS', true);
           <div class="card-body">
             <h5 class="card-title">Turismo Sustentável</h5>
             <p class="card-text">Aprenda sobre as melhores práticas de turismo sustentável e como aplicá-las em suas atividades.</p>
-            <a href="#" class="btn btn-primary">Saiba mais</a>
+            <a href="https://youtu.be/LFsCIKkliCI" class="btn btn-primary">Saiba mais</a>
           </div>
         </div>
       </div>
