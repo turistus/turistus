@@ -173,10 +173,10 @@
                     <td><div class="row">
 
 
-                    <div class="carousel-fluid" >
+                    <div class="carousel" >
                         <div class="carousel-inner">
 
-                        <div class="card">
+                        <div class="card-fluid">
                             <b>Standart</b>
                             <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
                             <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mês </p>
@@ -187,7 +187,7 @@
 
 
 
-                        <div class="card">
+                        <div class="card-fluid">
                             <b>Platinum</b>
                             <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
                             <p class="total">R$ <span style="font-size: 20px;">59,00</span> / Trimestral </p>
@@ -198,7 +198,7 @@
 
 
 
-                        <div class="card">
+                        <div class="card-fluid">
                             <b>Infinity</b>
                             <p style="font-size: 8px;">Garante mais segurança no pagamento.</p>
                             <p class="total">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
@@ -209,7 +209,7 @@
 
 
 
-                        <div class="card">
+                        <div class="card-fluid">
                             <b>Black</b>
                             <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
                             <p class="total">R$ <span style="font-size: 20px;">159,00</span> / Anual </p>
@@ -221,12 +221,13 @@
                         </div>
                     </div>
 <br><br>
-                            <div class="carousel-indicators">
+                            <p><div class="carousel-indicators">
                                 <span class="active"></span>
                                 <span></span>
                                 <span></span>
                                 <span></span>
                             </div>
+                            </p>
                     </div></td>
 
 
