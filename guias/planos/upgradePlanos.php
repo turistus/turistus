@@ -257,8 +257,6 @@ cards.forEach((card, index) => {
 // Adicionar evento de clique aos indicadores
 indicators.forEach((indicator, index) => {
   indicator.addEventListener('click', () => {
-    const cardWidth = cards[0].offsetWidth;
-
     // Ocultar cards não ativos e mostrar card ativo
     cards.forEach((card, cardIndex) => {
       if (cardIndex === index) {
@@ -267,9 +265,6 @@ indicators.forEach((indicator, index) => {
         card.style.display = 'none';
       }
     });
-
-    // Atualizar a transformação do carousel
-    carouselInner.style.transform = `translateX(-${cardWidth * index}px)`;
 
     // Ativar indicador selecionado
     indicators.forEach((indicator) => {
