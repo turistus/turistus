@@ -21,6 +21,11 @@ include_once '../connection.php';
     <br>
 <!-- Primeira LINHA Principal CONTEINER -->
 <main class="container">
+            <div class="row">
+                <div class="col-12" style="text-align: right;" >
+                    <p>*<a href=""> Ajudar ?</a></p>
+                </div>
+            </div>
     <div class="shadow-lg p-3 mb-5 bg-white rounded"  >
         <div class="row">
 
@@ -30,11 +35,7 @@ include_once '../connection.php';
                     <h1 style="padding-top: 10px;">Criar Evento</h1>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12" style="text-align: right;" >
-                    <p>*<a href=""> Ajudar ?</a></p>
-                </div>
-            </div>
+
 
             <?php
             if(isset($_SESSION['msg'])){
