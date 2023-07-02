@@ -175,7 +175,10 @@ define('ACCESS', true);
 </section>
 
 <div class="row">
-  <img src="./RoadMapTuristus.pdf">
+  <?php
+    include_once("./RoadMapTuristus.pdf")
+  ?>
+<a href="./RoadMapTuristus.pdf">RoadMAp</a>
 </div>
 
 <?php
