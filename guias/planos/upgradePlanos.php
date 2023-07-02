@@ -139,8 +139,8 @@
                         </div>
                         <div class="card">
                             <b>Platinum</b>
-                            <p class="total">R$ <span style="font-size: 20px;">99,00</span> / Trimestral </p>
-                            <p style="font-size: 8px;">*Estimativa de gasto durante 3 meses.</p>
+                            <p class="total">R$ <span style="font-size: 20px;">59,00</span> / Trimestral </p>
+                            <p style="font-size: 8px;">*Estimativa de gasto durante 3 meses. 33% 59,00 os 7dias grátis</p>
                             <button>Comprar</button>
                         </div>
                         <div class="card">
