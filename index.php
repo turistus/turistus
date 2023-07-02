@@ -83,7 +83,7 @@ ob_start();
 
           <div class="col p-4 d-flex flex-column position-static" >
                   <h3 class="mb-0"> Divulgue Atividades </h3>
-              <div class="mb-1 text-muted">Somente para maiores de 18 anos devidamente avaliados. </div>
+              <h6><div class="mb-1 text-muted">Somente para maiores de 18 anos devidamente avaliados. </div></h6>
 
 
 
