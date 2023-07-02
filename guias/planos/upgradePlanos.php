@@ -217,9 +217,9 @@
                                 <p style="font-size: 8px;">*Estimativa de gasto durante 12 meses. Os 7 primeiros dias grátis.</p>
                                 <button>Comprar</button>
                             </div>
-                            <br>
-                            <p><br>
-                                <div class="carousel-indicators">
+
+                            <p>
+                                <div class="carousel-indicators" style="margin-top: 15px;">
                                     <span ></span>
                                     <span ></span>
                                     <span ></span>
