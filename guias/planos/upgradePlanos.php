@@ -133,9 +133,9 @@
                 <tr>
                 <td><b>Plano</b></td>
                     <td></td>
-                    <td style="text-align: center; font-size: 20px;"> Comum </td>
-                    <td style="text-align: center; font-size: 20px;"> Completo </td>
-                    <td style="text-align: center; font-size: 20px;"> Vip </td>
+                    <td style="text-align: center; font-size: 18px;"><i>Comum</i></td>
+                    <td style="text-align: center; font-size: 18px;"><i>Completo</i></td>
+                    <td style="text-align: center; font-size: 18px;"><i>Vip</i></td>
                 </tr>
                 <tr>
                 <td><b>Taxa</b></td>
