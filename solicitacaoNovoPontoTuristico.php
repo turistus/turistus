@@ -43,7 +43,7 @@ include_once 'connection.php';
         <!-- PRIMEIRA LINHA -->
         <div class="row" >
 
-                        <h2 style="background: url(../images/bussola.jpg); padding:15px; ">Novo ponto turistico</h2>
+                        <h2 style="background: url(../images/bussola.jpg); padding:15px; ">Novo ponto turístico</h2>
         </div>
                         <?php
                         $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -109,7 +109,7 @@ include_once 'connection.php';
                         if (isset($data['descricao'])) {
                             echo $data['descricao'];
                         }
-                        ?>" required> Descreva toda a história do ponto turistico. </textarea>
+                        ?>" required> Descreva toda a história do ponto turístico. </textarea>
 
                 </div>
                 <br>
@@ -266,7 +266,7 @@ include_once 'connection.php';
                     </div><!-- FIM da ROW dos Check BOX-->
                 <hr>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="padding: 10px; ">
-                        <label for="attachment" class="btn" style="border: 1px solid black; ">Foto Ponto Turistico</label>
+                        <label for="attachment" class="btn" style="border: 1px solid black; ">Foto Ponto Turístico</label>
                         <i class="fa-regular fa-images"></i>
                         <input type="file" name="attachment" id="attachment" onchange="previewImagem()" style="display: none;" required><br><br>
 

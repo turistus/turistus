@@ -90,7 +90,7 @@ ob_start();
 
 
 
-              <p class="card-text mb-auto"> Crie aqui anúncios de seus serviços e atividades turisticas e conquiste mais vendas para o seu negocio. </p>
+              <p class="card-text mb-auto"> Crie eventos de serviços ou atividades turisticas e gere mais vendas para o seu negocio. </p>
               <a href="./guias/cadastrarguia.php" class="btn btn-outline-primary"> + Publicar </a>
               </div>
 
