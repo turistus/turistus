@@ -115,7 +115,7 @@
 
         .scaled {
         transform: scale(0.7); /* Equal to scaleX(0.7) scaleY(0.7) */
-        background-color: pink;
+
         }
     </style>
 </head>
