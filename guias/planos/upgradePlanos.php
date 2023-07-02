@@ -114,7 +114,7 @@
         }
 
         .scaled {
-        transform: scale(0.8); /* Equal to scaleX(0.7) scaleY(0.7) */
+        transform: scaleX(0.8) scaleY(0.8); /* Equal to scaleX(0.7) scaleY(0.7) */
 
         }
     </style>
