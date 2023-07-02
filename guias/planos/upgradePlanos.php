@@ -149,9 +149,9 @@
                 <tr>
                 <td><b>Minimo vendas Mensal</b></td>
                     <td></td>
-                    <td>R$ 0,00</td>
                     <td>R$ 1.000,00</td>
-                    <td>R$ 10.000,00</td>
+                    <td>R$ 1.000,00</td>
+                    <td>R$ 0,00</td>
                 </tr>
                 <tr>
                 <td><b>Visibilidade</b></td>
