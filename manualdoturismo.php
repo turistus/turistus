@@ -178,7 +178,7 @@ define('ACCESS', true);
   <?php
  //   include_once("./RoadMapTuristus.pdf")
   ?>
-<a href="./RoadMapTuristus.pdf">RoadMAp</a>
+  <h3 style="text-align: center;"><a href="./RoadMapTuristus.pdf">RoadMAp</a></h3>
 </div>
 
 <?php
