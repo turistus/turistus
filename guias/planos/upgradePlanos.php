@@ -131,20 +131,24 @@
                     <td>Grátis</td>
                     <td>
                         <div class="card">
+                            <b>Standart</b>
                             <p class="total">R$ 59,00 / Mês </p>
-                            <button>Selecionar</button>
+                            <button>Comprar</button>
                         </div>
                         <div class="card">
+                            <b>Platinum</b>
                             <p class="total">R$ 99,00 / Trimestral </p>
-                            <button>Selecionar</button>
+                            <button>Comprar</button>
                         </div>
                         <div class="card">
+                            <b>Infinity</b>
                             <p class="total">R$ 169,00 / Semestre </p>
-                            <button>Selecionar</button>
+                            <button>Comprar</button>
                         </div>
                         <div class="card">
+                            <b>Black</b>
                             <p class="total">R$ 199,00 / Anual </p>
-                            <button>Selecionar</button>
+                            <button>Comprar</button>
                         </div>
                         </td>
                 </tr>
