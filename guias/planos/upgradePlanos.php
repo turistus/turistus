@@ -218,15 +218,16 @@
                             </div>
 
                         </div>
-                    </div>
-            <br><br>
-                            <p><div class="carousel-indicators">
+                        <p><div class="carousel-indicators">
                                 <span ></span>
                                 <span ></span>
                                 <span ></span>
                                 <span ></span>
                             </div>
                             </p>
+                    </div>
+            <br><br>
+
                     </div></td>
 
 
