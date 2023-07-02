@@ -70,6 +70,12 @@
             margin-top: 10px;
             cursor: pointer;
         }
+
+        .conteiner{
+
+            margin: auto;
+            padding: 15px;
+        }
     </style>
 </head>
 
@@ -131,7 +137,12 @@
                         </div>
                         <div class="card">
                             <p class="total">R$ 99,00</p>
-                            <p>R$ 99,00 / Semestre </p>
+                            <p>R$ 99,00 / 3 Meses </p>
+                            <button>Selecionar</button>
+                        </div>
+                        <div class="card">
+                            <p class="total">R$ 169,00</p>
+                            <p>R$ 169,00 / Semestre </p>
                             <button>Selecionar</button>
                         </div>
                         <div class="card">
