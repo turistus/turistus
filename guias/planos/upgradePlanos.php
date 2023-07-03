@@ -144,28 +144,28 @@
                     <td> </td>
                     <td> 20% </td>
                     <td> 15% </td>
-                    <td > 10% </td>
+                    <td style=" background-color: #333;"> 10% </td>
                 </tr>
                 <tr>
                 <td><b>Prazo recebimento</b></td>
                     <td> </td>
                     <td> 15 dias</td>
                     <td> 10 dias</td>
-                    <td > 7 dias</td>
+                    <td style=" background-color: #333;"> 7 dias</td>
                 </tr>
                 <tr>
                 <td><b>Minimo vendas Mensal</b></td>
                     <td></td>
                     <td>R$ 1.000,00</td>
                     <td>R$ 1.000,00</td>
-                    <td >R$ 0,00</td>
+                    <td style=" background-color: #333;">R$ 0,00</td>
                 </tr>
                 <tr>
                 <td><b>Visibilidade</b></td>
                     <td></td>
                     <td>50%</td>
                     <td>75%</td>
-                    <td >100%</td>
+                    <td style=" background-color: #333;">100%</td>
                 </tr>
 
 
@@ -181,7 +181,7 @@
 
 
                     <div class="carousel-fluid w-3" >
-                        <div class="carousel-inner">
+                        <div class="carousel-inner" style=" background-color: #333;">
                             <div class="card">
                                 <b>Standart</b>
                                 <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
