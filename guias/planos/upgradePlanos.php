@@ -135,37 +135,37 @@
                 <tr>
                 <td><b>Plano</b></td>
                     <td></td>
-                    <td style="text-align: center; font-size: 18px;"><i>Comum</i></td>
-                    <td style="text-align: center; font-size: 18px;"><i>Completo</i></td>
-                    <td style="text-align: center; font-size: 18px;"><i>Vip</i></td>
+                    <td style=" font-size: 18px;"><i>Comum</i></td>
+                    <td style=" font-size: 18px;"><i>Completo</i></td>
+                    <td style=" font-size: 18px;"><i>Vip</i></td>
                 </tr>
                 <tr>
                 <td><b>Taxa</b></td>
                     <td> </td>
                     <td> 20% </td>
                     <td> 15% </td>
-                    <td style="text-align: center;"> 10% </td>
+                    <td > 10% </td>
                 </tr>
                 <tr>
                 <td><b>Prazo recebimento</b></td>
                     <td> </td>
                     <td> 15 dias</td>
                     <td> 10 dias</td>
-                    <td style="text-align: center;"> 7 dias</td>
+                    <td > 7 dias</td>
                 </tr>
                 <tr>
                 <td><b>Minimo vendas Mensal</b></td>
                     <td></td>
                     <td>R$ 1.000,00</td>
                     <td>R$ 1.000,00</td>
-                    <td style="text-align: center;">R$ 0,00</td>
+                    <td >R$ 0,00</td>
                 </tr>
                 <tr>
                 <td><b>Visibilidade</b></td>
                     <td></td>
                     <td>50%</td>
                     <td>75%</td>
-                    <td style="text-align: center;">100%</td>
+                    <td >100%</td>
                 </tr>
 
 
