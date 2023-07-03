@@ -219,11 +219,11 @@
                             </div>
 
                             <p>
-                                <div class="carousel-indicators" style="border: 1px solid gray;">
-                                    <span ></span>
-                                    <span ></span>
-                                    <span ></span>
-                                    <span ></span>
+                                <div class="carousel-indicators" >
+                                    <span style="border: 1px solid gray;"></span>
+                                    <span style="border: 1px solid gray;"></span>
+                                    <span style="border: 1px solid gray;"></span>
+                                    <span style="border: 1px solid gray;"></span>
                                 </div>
                             </p>
                         </div>
