@@ -137,35 +137,35 @@
                     <td></td>
                     <td style=" font-size: 18px;"><i>Comum</i></td>
                     <td style=" font-size: 18px;"><i>Completo</i></td>
-                    <td style=" font-size: 18px;"><i>Vip</i></td>
+                    <td style=" font-size: 18px; background-color: #333; color: #f2f2f2;"><i>Vip</i></td>
                 </tr>
                 <tr>
                 <td><b>Taxa</b></td>
                     <td> </td>
                     <td> 20% </td>
                     <td> 15% </td>
-                    <td style=" background-color: #333;"> 10% </td>
+                    <td style=" background-color: #333; color: #f2f2f2;"> 10% </td>
                 </tr>
                 <tr>
                 <td><b>Prazo recebimento</b></td>
                     <td> </td>
                     <td> 15 dias</td>
                     <td> 10 dias</td>
-                    <td style=" background-color: #333;"> 7 dias</td>
+                    <td style=" background-color: #333; color: #f2f2f2;"> 7 dias</td>
                 </tr>
                 <tr>
                 <td><b>Minimo vendas Mensal</b></td>
                     <td></td>
                     <td>R$ 1.000,00</td>
                     <td>R$ 1.000,00</td>
-                    <td style=" background-color: #333;">R$ 0,00</td>
+                    <td style=" background-color: #333; color: #f2f2f2;">R$ 0,00</td>
                 </tr>
                 <tr>
                 <td><b>Visibilidade</b></td>
                     <td></td>
                     <td>50%</td>
                     <td>75%</td>
-                    <td style=" background-color: #333;">100%</td>
+                    <td style=" background-color: #333; color: #f2f2f2;"><b>100%</b></td>
                 </tr>
 
 
@@ -180,8 +180,8 @@
                     <td><div class="row">
 
 
-                    <div class="carousel-fluid w-3" >
-                        <div class="carousel-inner" style=" background-color: #333;">
+                    <div class="carousel-fluid w-3" style=" background-color: #333;">
+                        <div class="carousel-inner" >
                             <div class="card">
                                 <b>Standart</b>
                                 <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
