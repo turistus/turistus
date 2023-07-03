@@ -156,7 +156,7 @@
                 <tr>
                 <td><b>Minimo vendas Mensal</b></td>
                     <td></td>
-                    <td>R$ 1.000,00</td>
+                    <td>R$ 0,00</td>
                     <td>R$ 1.000,00</td>
                     <td style=" background-color: #333; color: #f2f2f2;">R$ 0,00</td>
                 </tr>
@@ -219,7 +219,7 @@
                             </div>
 
                             <p>
-                                <div class="carousel-indicators">
+                                <div class="carousel-indicators" style="border: 1px solid gray;">
                                     <span ></span>
                                     <span ></span>
                                     <span ></span>
@@ -242,9 +242,7 @@
 
 
         </div>
-        <?php
-            include_once("../../rodape.php")
-        ?>
+
 
 <script>
     const carouselInner = document.querySelector('.carousel-inner');
@@ -278,5 +276,7 @@
     });
 });
 </script>
-    </body>
+    </body><?php
+            include_once("../../rodape.php")
+        ?>
 </html>
