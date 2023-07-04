@@ -203,7 +203,7 @@ include_once '../connection.php';
                                                     <?php
                                                         foreach($res as $ln ){
                                                     ?>
-                                                        <option value="<?php echo $ln['id'];?>" name="idPt" id="idPt" >
+                                                        <option value="<?php echo $ln['id'];?>" name="idPt" id="idPt" required>
                                                     <?php
 
                                                         echo $ln['name'];
