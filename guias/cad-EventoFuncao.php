@@ -52,7 +52,7 @@ include_once '../connection.php';
     <div class="col-md-8 order-md-1">
     <!-- Aqui abaixo tenho um exemplo de como usar a
     função cadastrar Turista processado em outra pagina php -->
-            <form method="POST" action="processa-cad-evento.php" enctype="multipart/form-data" onsubmit="return validarFormulario()">
+            <form method="POST" action="processa-cad-evento.php" enctype="multipart/form-data" onchange="return validarFormulario()">
 
                 <div class="row" style="padding: 20px;">
                         <!-- as melhores colunas organizadas da maior para menor -->
@@ -242,6 +242,7 @@ include_once '../connection.php';
             </form>
             <!-- Para buscar a foto na pasta-->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="./js/custom.js"></script>
                     <script>
                         function previewImagem(){
                             var imagem = document.querySelector('input[name=foto]').files[0];
@@ -262,7 +263,8 @@ include_once '../connection.php';
                         function validarFormulario() {
                             var campo = document.getElementById('idPt');
                             if (campo.value === '') {
-                            alert('Por favor, selecione uma opção!');
+                            campo.style.display = 'flex';
+                                alert('Por favor, selecione uma opção!');
                             return false; // impede o envio do formulário
                             }
                             return true; // permite o envio do formulário
@@ -278,5 +280,5 @@ include_once '../connection.php';
 
 	</body>
 </html>
-<script src="./js/custom.js"></script>
+
 
