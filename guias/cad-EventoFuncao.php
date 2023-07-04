@@ -239,7 +239,10 @@ include_once '../connection.php';
 
                                     </div>
                                 </div>
+                                <div id="mensagemErro" style="color: red;"></div>
             </form>
+
+
             <!-- Para buscar a foto na pasta-->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
             <script src="./js/custom.js"></script>
@@ -262,11 +265,12 @@ include_once '../connection.php';
 
                         function validarFormulario() {
                             var campo = document.getElementById('idPt');
+                            var mensagemErro = document.getElementById('mensagemErro');
                             if (campo.value === '') {
-                            campo.style.display = 'flex';
-                                alert('Por favor, selecione uma opção!');
+                            mensagemErro.textContent = 'Por favor, selecione uma opção!';
                             return false; // impede o envio do formulário
                             }
+                            mensagemErro.textContent = ''; // limpa a mensagem de erro
                             return true; // permite o envio do formulário
                         }
 
