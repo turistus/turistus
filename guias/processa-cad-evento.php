@@ -6,7 +6,7 @@ include_once '../connection.php';
 //Receber os dados do formulário
 $dados_CadEvento = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-if($dados_CadEvento['Postar'] === "Postar" & $dados_CadEvento['idPt'] != ""){
+if($dados_CadEvento['Postar'] === "Postar" && $dados_CadEvento['idPt'] != ""){
 
         $novaData = date("Y/m/d");
 
