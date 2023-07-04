@@ -175,8 +175,8 @@
 
                 <td>
                     <div class="row">
-                        <div class="carousel-fluid w-3" style=" background-color: #333;">
-                            <div class="carousel-inner" >
+                        <div class="carousel-fluid w-3" >
+                            <div class="carousel-inner" style=" background-color: #333;">
                                 <div class="card">
                                     <b>Standart</b>
                                     <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
@@ -226,8 +226,6 @@
                         <br>
                     </div>
                 </td>
-
-
             </table>
         </div>
 
