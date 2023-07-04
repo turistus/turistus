@@ -195,7 +195,7 @@
                                     <button>Comprar</button>
                                 </div>
 
-                                <div class="card">
+                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
                                     <b>Infinity</b>
                                     <p style="font-size: 8px;">Garante mais segurança no pagamento. Conte com o PicPay.</p>
                                     <p class="total" style="width: 180px;">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
@@ -204,7 +204,7 @@
                                     <button>Comprar</button>
                                 </div>
 
-                                <div class="card">
+                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
                                     <b>Black</b>
                                     <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
                                     <p class="total">R$ <span style="font-size: 20px; ">159,00</span> / Anual </p>

@@ -8,7 +8,7 @@
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" >
 
       <a href="../index.php?Uid=<?php echo $Uid?>" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
-        <img class="bi me-2" width="40" height="40" src="../images/logooriginal.png">
+        <img class="bi me-2" width="40" height="40" src="./icones/logooriginal.png">
       </a>
       <h2>TuristUs </h2>
 
