@@ -52,7 +52,7 @@ include_once '../connection.php';
     <div class="col-md-8 order-md-1">
     <!-- Aqui abaixo tenho um exemplo de como usar a
     função cadastrar Turista processado em outra pagina php -->
-            <form method="POST" action="processa-cad-evento.php" enctype="multipart/form-data">
+            <form method="POST" action="processa-cad-evento.php" enctype="multipart/form-data" onsubmit="return validarFormulario()">
 
                 <div class="row" style="padding: 20px;">
                         <!-- as melhores colunas organizadas da maior para menor -->
