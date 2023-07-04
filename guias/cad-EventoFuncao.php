@@ -259,6 +259,15 @@ include_once '../connection.php';
                             }
                         }
 
+                        function validarFormulario() {
+                            var campo = document.getElementById('idPt');
+                            if (campo.value === '') {
+                            alert('Por favor, selecione uma opção!');
+                            return false; // impede o envio do formulário
+                            }
+                            return true; // permite o envio do formulário
+                        }
+
                     </script>
 
                 </div>
