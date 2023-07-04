@@ -176,8 +176,8 @@
                 <td>
                     <div class="row">
                         <div class="carousel-fluid w-3" >
-                            <div class="carousel-inner" style=" background-color: #333;">
-                                <div class="card">
+                            <div class="carousel-inner" >
+                                <div class="card" style=" background-color: #333;">
                                     <b>Standart</b>
                                     <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
                                     <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mensal </p>
