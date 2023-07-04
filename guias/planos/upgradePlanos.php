@@ -84,7 +84,7 @@
         }
 
         .carousel-inner {
-            width: 1600px; /* Largura total dos cartões (400px * 4) */
+            width: 1600px;
             height: 300px;
             display: flex;
             transition: transform 0.3s ease;
@@ -154,7 +154,7 @@
                     <td style=" background-color: #333; color: #f2f2f2;"> 7 dias</td>
                 </tr>
                 <tr>
-                <td><b>Minimo vendas Mensal</b></td>
+                <td><b>Minimo vendas </b></td>
                     <td></td>
                     <td>R$ 0,00</td>
                     <td>R$ 1.000,00</td>
@@ -168,81 +168,68 @@
                     <td style=" background-color: #333; color: #f2f2f2;"><b>100%</b></td>
                 </tr>
 
-
-
-
-
                 <td><b>Valor</b></td>
                     <td></td>
                     <td>Grátis</td>
                     <td>Grátis</td>
 
-                    <td><div class="row">
-
-
-                    <div class="carousel-fluid w-3" style=" background-color: #333;">
-                        <div class="carousel-inner" >
-                            <div class="card">
-                                <b>Standart</b>
-                                <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
-                                <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mensal </p>
-                                <p style="font-size: 12px;">R$ 0,96 por dia.</p>
-                                <p style="font-size: 8px;">*Estimativa de gasto mensal durante 30 dias. Aproveite já e aumente os ganhos.</p>
-                                <button>Comprar</button>
-                            </div>
-
-                            <div class="card">
-                                <b>Platinum</b>
-                                <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
-                                <p class="total" style="width: 180px;">R$ <span style="font-size: 20px; ">59,00</span> / Trimestral </p>
-                                <p style="font-size: 12px;">R$ 20,00 por mês.</p>
-                                <p style="font-size: 8px;">*Estimativa de gasto durante 3 meses. Os 7 primeiros dias grátis.</p>
-                                <button>Comprar</button>
-                            </div>
-
-                            <div class="card">
-                                <b>Infinity</b>
-                                <p style="font-size: 8px;">Garante mais segurança no pagamento. Conte com o PicPay.</p>
-                                <p class="total" style="width: 180px;">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
-                                <p style="font-size: 12px;">R$ 16,50 por mês.</p>
-                                <p style="font-size: 8px;">*Estimativa de gasto durante 6 meses. Os 7 primeiros dias grátis.</p>
-                                <button>Comprar</button>
-                            </div>
-
-                            <div class="card">
-                                <b>Black</b>
-                                <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
-                                <p class="total">R$ <span style="font-size: 20px; ">159,00</span> / Anual </p>
-                                <p style="font-size: 12px;">R$ 13,25 por mês.</p>
-                                <p style="font-size: 8px;">*Estimativa de gasto durante 12 meses. Os 7 primeiros dias grátis.</p>
-                                <button>Comprar</button>
-                            </div>
-
-                            <p>
-                                <div class="carousel-indicators" >
-                                    <span style="border: 1px solid gray;"></span>
-                                    <span style="border: 1px solid gray;"></span>
-                                    <span style="border: 1px solid gray;"></span>
-                                    <span style="border: 1px solid gray;"></span>
+                <td>
+                    <div class="row">
+                        <div class="carousel-fluid w-3" style=" background-color: #333;">
+                            <div class="carousel-inner" >
+                                <div class="card">
+                                    <b>Standart</b>
+                                    <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
+                                    <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mensal </p>
+                                    <p style="font-size: 12px;">R$ 0,96 por dia.</p>
+                                    <p style="font-size: 8px;">*Estimativa de gasto mensal durante 30 dias. Aproveite já e aumente os ganhos.</p>
+                                    <button>Comprar</button>
                                 </div>
-                            </p>
+
+                                <div class="card">
+                                    <b>Platinum</b>
+                                    <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
+                                    <p class="total" style="width: 180px;">R$ <span style="font-size: 20px; ">59,00</span> / Trimestral </p>
+                                    <p style="font-size: 12px;">R$ 20,00 por mês.</p>
+                                    <p style="font-size: 8px;">*Estimativa de gasto durante 3 meses. Os 7 primeiros dias grátis.</p>
+                                    <button>Comprar</button>
+                                </div>
+
+                                <div class="card">
+                                    <b>Infinity</b>
+                                    <p style="font-size: 8px;">Garante mais segurança no pagamento. Conte com o PicPay.</p>
+                                    <p class="total" style="width: 180px;">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
+                                    <p style="font-size: 12px;">R$ 16,50 por mês.</p>
+                                    <p style="font-size: 8px;">*Estimativa de gasto durante 6 meses. Os 7 primeiros dias grátis.</p>
+                                    <button>Comprar</button>
+                                </div>
+
+                                <div class="card">
+                                    <b>Black</b>
+                                    <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
+                                    <p class="total">R$ <span style="font-size: 20px; ">159,00</span> / Anual </p>
+                                    <p style="font-size: 12px;">R$ 13,25 por mês.</p>
+                                    <p style="font-size: 8px;">*Estimativa de gasto durante 12 meses. Os 7 primeiros dias grátis.</p>
+                                    <button>Comprar</button>
+                                </div>
+
+                                <p>
+                                    <div class="carousel-indicators" >
+                                        <span style="border: 1px solid gray;"></span>
+                                        <span style="border: 1px solid gray;"></span>
+                                        <span style="border: 1px solid gray;"></span>
+                                        <span style="border: 1px solid gray;"></span>
+                                    </div>
+                                </p>
+                            </div>
                         </div>
-
+                        <br>
                     </div>
-            <br>
-
-                    </div></td>
-
-
-                </tr>
+                </td>
 
 
             </table>
-
-
-
         </div>
-
 
 <script>
     const carouselInner = document.querySelector('.carousel-inner');

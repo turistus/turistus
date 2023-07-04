@@ -122,10 +122,11 @@ if(($guia_selecionado) AND ($guia_selecionado->rowCount() != 0) ){
                                                 </h4>
                                             </div>
             <br>
+            <!--
                                                 <div class="col-12">
                                                     <h5><a href="../usuarios/funcoes/avaliarGuia.php?id=<?php echo $Uid?>" class="btn btn text-dark" style="border: 1px solid black;"> Avaliar </a></h5>
                                                 </div>
-
+            -->
                                         </div><!-- Fim da ROW dos DAOS DO GUIA -->
                                 </div><!-- Fim da DIV dos DAOS DO GUIA -->
                         </div><!-- FIM DA 2 ROW -->
