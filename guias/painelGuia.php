@@ -298,6 +298,7 @@ $emailusuario = $_SESSION['user_email'];
                                                     <div class="card ">
                                                       <div class="card-body" >
                                                         <h3>Análise de pedidos</h3>
+                                                        <p class="text-muted">Lista de pedidos feitos a serem analisados e aceitos ou remarcados conforme sua agenda.</p>
 
                                                         <table class="table table-responsive{-sm|-md|-lg|-xl} table-hover" style="width: 100%;" >
                                                             <thead class="thead-light" style='font-size: 10px;'>
