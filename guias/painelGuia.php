@@ -370,7 +370,7 @@ $emailusuario = $_SESSION['user_email'];
                                                             <thead class="thead-light" style='font-size: 10px;'>
                                                                 <tr style='font-size: 8px; height: 5px;'>
 
-                                                                    <th scope="col">Cod</th>
+                                                                    <th scope="col">Pedido</th>
                                                                     <th scope="col">Turista</th>
                                                                     <th scope="col">Evento</th>
                                                                     <th scope="col">Data </th>
@@ -383,6 +383,7 @@ $emailusuario = $_SESSION['user_email'];
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
                                                                 pay.first_name,
+                                                                pay.last_name,
                                                                 pay.phone AS celular,
                                                                 pay.guiaId,
                                                                 payments_statu_Id,
@@ -406,7 +407,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
                                                                 echo "<td >$idagendado </td>";
-                                                                echo "<th>$first_name <br>" .$celular."</th>" ;
+                                                                echo "<th>$first_name $last_name <br>" .$celular."</th>" ;
                                                                 echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                                 echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
                                                                 echo "<td>". date('H:m',  strtotime($hora)) ."</td>";
