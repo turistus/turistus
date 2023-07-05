@@ -353,7 +353,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
                                                                 echo "<tr style='font-size: 12px; height: 20px;'>";
-                                                                echo "<td style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Aceitar<br>
+                                                                echo "<td style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Confirmar<br>
                                                                 <a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'</a>Remarcar</td>";
                                                                 echo "<td>$first_name $last_name<br>" .$celular."</td>" ;
 
@@ -385,7 +385,7 @@ $emailusuario = $_SESSION['user_email'];
                                                     <div class="col mb-2 text-center" >
                                                       <div class="card ">
                                                         <div class="card-body">
-                                                          <h3>Agenda</h3>
+                                                          <h3>Agenda confirmado</h3>
 
                                                           <table class="table table-responsive{-sm|-md|-lg|-xl} table-hover" style="width: 100%;" >
                                                             <thead class="thead-light" style='font-size: 10px;'>
