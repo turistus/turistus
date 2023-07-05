@@ -297,7 +297,7 @@ $emailusuario = $_SESSION['user_email'];
                                                   <div class="col mb-2 text-center" >
                                                     <div class="card ">
                                                       <div class="card-body" >
-                                                        <h3>Solicitações de Pedidos</h3>
+                                                        <h3>Análise de pedidos</h3>
 
                                                         <table class="table table-responsive{-sm|-md|-lg|-xl} table-hover" style="width: 100%;" >
                                                             <thead class="thead-light" style='font-size: 10px;'>
@@ -306,6 +306,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 <th scope="col">Turista</th>
                                                                 <th scope="col">Evento</th>
                                                                 <th scope="col">Data</th>
+                                                                <th scope="col">Hora</th>
 
                                                               </tr>
                                                             </thead>
@@ -320,6 +321,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 pay.product_id,
                                                                 pay.dataagendada AS dataagendada,
                                                                 pay.custoPedido AS valor,
+                                                                pay.hora AS hora,
                                                             eventos.id AS idE,
                                                                 eventos.nome AS nE,
                                                                 eventos.idPt AS idPt,
@@ -335,32 +337,23 @@ $emailusuario = $_SESSION['user_email'];
 
                                                                 WHERE pay.guiaId = $Uid AND payments_statu_Id <= 4 AND confirmado = 0 ORDER BY dataagendada DESC Limit 20";
 
-
-
                                                             $result_payments = $conn->prepare($query_payments);
                                                             $result_payments->execute();
                                                             while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
                                                                 echo "<tr style='font-size: 12px; height: 20px;'>";
-                                                                echo "<td style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Aceitar<br>
+                                                                echo "<td class='col-12' style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Aceitar<br>
                                                                 <a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'</a>Remarcar</td>";
-
                                                                 echo "<th>$first_name <br>" .$celular."</th>" ;
-
                                                                 echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                                 echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
-                                                                echo "<td class='text-center'>";
+                                                                echo "<td>". date('H:m',  strtotime($hora)) ."</td>";
 
-                                                                echo "</td>";
-                                                                echo "</tr>";
-
-
-                                                            }
+                                                              }
                                                             ?>
                                                             </tbody>
-                                                        </table>
-
+                                                          </table>
                                                       </div>
                                                     </div>
                                                   </div>
@@ -382,7 +375,6 @@ $emailusuario = $_SESSION['user_email'];
                                                                     <th scope="col">Evento</th>
                                                                     <th scope="col">Data </th>
                                                                     <th scope="col">Hora </th>
-
 
                                                                 </tr>
                                                             </thead>
@@ -408,8 +400,6 @@ $emailusuario = $_SESSION['user_email'];
 
                                                                 WHERE pay.guiaId = $Uid AND payments_statu_Id = 5 AND confirmado = 1 ORDER BY dataagendada DESC Limit 20";
 
-
-
                                                             $result_payments = $conn->prepare($query_payments);
                                                             $result_payments->execute();
                                                             while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
@@ -421,14 +411,10 @@ $emailusuario = $_SESSION['user_email'];
                                                                 echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
                                                                 echo "<td>". date('H:m',  strtotime($hora)) ."</td>";
 
-
-
-                                                            }
+                                                              }
                                                             ?>
                                                             </tbody>
-                                                        </table>
-
-
+                                                          </table>
                                                         </div>
                                                       </div>
                                                     </div>
