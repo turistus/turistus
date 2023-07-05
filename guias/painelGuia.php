@@ -343,13 +343,13 @@ $emailusuario = $_SESSION['user_email'];
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
                                                                 echo "<tr style='font-size: 12px; height: 20px;'>";
-                                                                echo "<td class='col-12' style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Aceitar<br>
+                                                                echo "<td style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Aceitar<br>
                                                                 <a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'</a>Remarcar</td>";
                                                                 echo "<th>$first_name $last_name<br>" .$celular."</th>" ;
                                                                 echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                                 echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
                                                                 echo "<td>". date('H:m',  strtotime($hora)) ."</td>";
-
+                                                                echo "</tr>";
                                                               }
                                                             ?>
                                                             </tbody>
