@@ -433,7 +433,8 @@ $emailusuario = $_SESSION['user_email'];
                                                                 echo "<td>$first_name $last_name <br>" .$celular."</td>" ;
                                                                 echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                                 echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
-                                                                echo "<td>". date('H:m',  strtotime($hora)) ."</td>";
+                                                                echo "<td>". date('H:m',  strtotime($hora)) ." $DataHoje </td>";
+
 
                                                               }
                                                             ?>
