@@ -415,7 +415,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 pay.hora AS hora,
                                                             eventos.id AS idE,
                                                                 eventos.nome AS nE,
-                                                                NOW() AS DataHoje
+                                                                NOW(Y/m/d) AS DataHoje
 
                                                             FROM payments_picpays AS pay
 
