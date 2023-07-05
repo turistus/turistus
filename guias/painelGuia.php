@@ -300,13 +300,19 @@ $emailusuario = $_SESSION['user_email'];
                                                         <h3>Análise de pedidos</h3>
                                                         <p class="text-muted">Lista de pedidos feitos a serem analisados e aceitos ou remarcados conforme sua agenda.</p>
 
-                                                                <p style=" background: #008080; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </p> Feito Pedido
-                                                                <p style=" background: #008080; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </p> Gerou Pedido
-                                                                <p style=" background: #000000; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </p> Pedido Expirado
-                                                                <p style=" background: #40E0D0; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </p> Pedido em Análise
-                                                                <p style=" background: #32CD32; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </p> Pedido Pago
+                                                        <div class="row">
+                                                            <p>
+                                                              <b style=" background: #008080; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">O</b>
+                                                            </p>
 
-
+                                                           <ul style="list-style: none; display: inline; text-align: left;">
+                                                                <li style=" background: #008080; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Feito
+                                                                <li style=" background: #008080; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Gerado
+                                                                <li style=" background: #000000; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Expirado
+                                                                <li style=" background: #40E0D0; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido em Análise
+                                                                <li style=" background: #32CD32; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Pago
+                                                              </ul>
+                                                        </div>
                                                         <table class="table table-responsive{-sm|-md|-lg|-xl} table-hover" style="width: 100%;" >
                                                             <thead class="thead-light" style='font-size: 10px;'>
                                                               <tr style='font-size: 10px; height: 5px;'>
