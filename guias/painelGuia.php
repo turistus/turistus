@@ -299,7 +299,7 @@ $emailusuario = $_SESSION['user_email'];
                                                       <div class="card-body" >
                                                         <h3>Análise de pedidos</h3>
                                                         <p class="text-muted">Lista de pedidos feitos a serem analisados e aceitos ou remarcados conforme sua agenda.</p>
-                                                              <ul style="list-style: none;">
+                                                              <ul style="list-style: none; display: inline;">
                                                                 <li> <span style=" background: #008080; height: 20px; width: 20px; border-radius: 30px; border:solid 1px black; "></span> Feito Pedido</li>
                                                                 <li> <p style=" background: #008080; height: 20px; width: 20px; border-radius: 30px; border:solid 1px black; "></p> Feito Pedido</li>
                                                                 <li style=" background: #008080; height: 20px; width: 20px; border-radius: 30px; border:solid 1px black; ">  </li> Gerou Pedido
