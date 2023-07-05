@@ -353,8 +353,9 @@ $emailusuario = $_SESSION['user_email'];
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
                                                                 echo "<tr style='font-size: 12px; height: 20px;'>";
-                                                                echo "<td style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'></a>Confirmar
-                                                                <a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'></a>Remarcar</td>";
+                                                                echo "<td style='font-size: 10px; '>$idagendado<br>
+                                                                d<a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'>Confirmar</a>
+                                                                <a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'>Remarcar</a></td>";
                                                                 echo "<td>$first_name $last_name<br>" .$celular."</td>" ;
 
                                                               if($payments_statu_Id == 1 OR $payments_statu_Id == 2){
