@@ -358,13 +358,13 @@ $emailusuario = $_SESSION['user_email'];
                                                                 echo "<th>$first_name $last_name<br>" .$celular."</th>" ;
 
                                                               if($payments_statu_Id == 1 OR $payments_statu_Id == 2){
-                                                                echo "<td>$nE " ."<br><i style='background: #008080;'>R$ " . number_format($valor, 2, ',', '.') ."</i></td>";
+                                                                echo "<td>$nE " ."<br><i style='background: #008080;padding:2px;'>R$ " . number_format($valor, 2, ',', '.') ."</i></td>";
                                                               }elseif($payments_statu_Id == 3){
-                                                                echo "<td>$nE " ."<br><i style='background: #000000;'>R$ " . number_format($valor, 2, ',', '.') ."</i></td>";
+                                                                echo "<td>$nE " ."<br><i style='background: #000000;padding:2px;'>R$ " . number_format($valor, 2, ',', '.') ."</i></td>";
                                                               }elseif($payments_statu_Id == 4){
-                                                                echo "<td>$nE " ."<br><i style='background: #9ACD32;'>R$ " . number_format($valor, 2, ',', '.') ."</i></td>";
+                                                                echo "<td>$nE " ."<br><i style='background: #9ACD32;padding:2px;'>R$ " . number_format($valor, 2, ',', '.') ."</i></td>";
                                                               }elseif($payments_statu_Id == 5){
-                                                                echo "<td>$nE " ."<br><i style='background: #32CD32;'>R$ " . number_format($valor, 2, ',', '.') ."</i></td>";
+                                                                echo "<td>$nE " ."<br><i style='background: #32CD32;padding:2px;'>R$ " . number_format($valor, 2, ',', '.') ."</i></td>";
                                                               }
 
 
