@@ -414,14 +414,15 @@ $emailusuario = $_SESSION['user_email'];
                                                                 pay.custoPedido AS valor,
                                                                 pay.hora AS hora,
                                                             eventos.id AS idE,
-                                                                eventos.nome AS nE
+                                                                eventos.nome AS nE,
+                                                                NOW() AS DataHoje
 
                                                             FROM payments_picpays AS pay
 
                                                                 INNER JOIN eventos ON eventos.id = pay.product_id
                                                                 INNER JOIN servicos ON servicos.id = pay.guiaId
 
-                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id = 5 AND confirmado = 1 AND NOW() > dataagendada ORDER BY dataagendada DESC Limit 20";
+                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id = 5 AND confirmado = 1 AND dataagendada < DataHoje ORDER BY dataagendada DESC Limit 20";
 
                                                             $result_payments = $conn->prepare($query_payments);
                                                             $result_payments->execute();
