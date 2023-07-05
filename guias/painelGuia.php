@@ -300,7 +300,8 @@ $emailusuario = $_SESSION['user_email'];
                                                         <h3>Análise de pedidos</h3>
                                                         <p class="text-muted">Lista de pedidos feitos a serem analisados e aceitos ou remarcados conforme sua agenda.</p>
                                                               <ul style="list-style: none;">
-                                                                <li style=" background: #008080; height: 20px; width: 20px; border-radius: 30px; border:solid 1px black; ">  </li> Feito Pedido
+                                                                <li> <span style=" background: #008080; height: 20px; width: 20px; border-radius: 30px; border:solid 1px black; "></span> Feito Pedido</li>
+                                                                <li> <p style=" background: #008080; height: 20px; width: 20px; border-radius: 30px; border:solid 1px black; "></p> Feito Pedido</li>
                                                                 <li style=" background: #008080; height: 20px; width: 20px; border-radius: 30px; border:solid 1px black; ">  </li> Gerou Pedido
                                                                 <li style=" background: #000000; height: 20px; width: 20px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Expirado
                                                                 <li style=" background: #40E0D0; height: 20px; width: 20px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido em Análise
