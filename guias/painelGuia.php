@@ -360,11 +360,11 @@ $emailusuario = $_SESSION['user_email'];
                                                               if($payments_statu_Id == 1 OR $payments_statu_Id == 2){
                                                                 echo "<td>$nE " ."<br><i style='background: #008080;'>R$ " . number_format($valor, 2, ',', '.') ."</i></td>";
                                                               }elseif($payments_statu_Id == 3){
-                                                                echo "<td style='background: #000000;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                                echo "<td>$nE " ."<br><i style='background: #000000;'>R$ " . number_format($valor, 2, ',', '.') ."</i></td>";
                                                               }elseif($payments_statu_Id == 4){
-                                                                echo "<td style='background: #9ACD32;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                                echo "<td>$nE " ."<br><i style='background: #9ACD32;'>R$ " . number_format($valor, 2, ',', '.') ."</i></td>";
                                                               }elseif($payments_statu_Id == 5){
-                                                                echo "<td style='background: #32CD32;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                                echo "<td>$nE " ."<br><i style='background: #32CD32;'>R$ " . number_format($valor, 2, ',', '.') ."</i></td>";
                                                               }
 
 
