@@ -420,10 +420,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                                 echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
                                                                 echo "<td>". date('h:m',  strtotime($hora)) ."</td>";
-                                                                echo "<td class='text-center'>";
 
-                                                                echo "</td>";
-                                                                echo "</tr>";
 
 
                                                             }
