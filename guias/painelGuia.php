@@ -305,11 +305,10 @@ $emailusuario = $_SESSION['user_email'];
                                                               <b style=" background: #008080; min-height: 10px; min-width: 10px; border-radius: 30px; border:solid 1px black; "></b>
                                                             </p>
 
-                                                           <ul style="list-style: none; display: inline; text-align: left;">
-                                                                <li style=" background: #008080; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Feito
+                                                           <ul style="list-style: none; text-align: left;">
                                                                 <li style=" background: #008080; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Gerado
                                                                 <li style=" background: #000000; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Expirado
-                                                                <li style=" background: #40E0D0; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido em Análise
+                                                                <li style=" background: #9ACD32; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido em Análise
                                                                 <li style=" background: #32CD32; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Pago
                                                               </ul>
                                                         </div>
@@ -361,14 +360,13 @@ $emailusuario = $_SESSION['user_email'];
                                                                 echo "<td style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Aceitar<br>
                                                                 <a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'</a>Remarcar</td>";
                                                                 echo "<th>$first_name $last_name<br>" .$celular."</th>" ;
-                                                              if($payments_statu_Id == 1){
-                                                                echo "<td style='background: #008080;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
-                                                              }elseif($payments_statu_Id == 2){
+
+                                                              if($payments_statu_Id == 1 OR $payments_statu_Id == 2){
                                                                 echo "<td style='background: #008080;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                               }elseif($payments_statu_Id == 3){
                                                                 echo "<td style='background: #000000;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                               }elseif($payments_statu_Id == 4){
-                                                                echo "<td style='background: #40E0D0;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                                echo "<td style='background: #9ACD32;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                               }elseif($payments_statu_Id == 5){
                                                                 echo "<td style='background: #32CD32;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                               }
