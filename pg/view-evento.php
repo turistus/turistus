@@ -204,7 +204,7 @@ $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
 
                                             <option value="<?php echo $ln['idVal'];?>" alt="<?php echo $ln['idVal'];?>">
                                         <?php $opc = $ln['idVal'];
-                                            echo $ln['idVal'];?><?php echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".")
+                                             echo " - ". $ln['vagas'] . ' Pessoas R$ ' . number_format($ln['total'], 2, ",", ".")
                                         ?>
                                             </option>
                                         <?php
