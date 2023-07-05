@@ -381,6 +381,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                     <th scope="col">Turista</th>
                                                                     <th scope="col">Evento</th>
                                                                     <th scope="col">Data </th>
+                                                                    <th scope="col">Hora </th>
 
 
                                                                 </tr>
@@ -396,6 +397,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 pay.product_id,
                                                                 pay.dataagendada AS dataagendada,
                                                                 pay.custoPedido AS valor,
+                                                                pay.hora AS hora,
                                                             eventos.id AS idE,
                                                                 eventos.nome AS nE
 
@@ -417,6 +419,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 echo "<th>$first_name <br>" .$celular."</th>" ;
                                                                 echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                                 echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
+                                                                echo "<td>". date('H/m',  strtotime($hora)) ."</td>";
                                                                 echo "<td class='text-center'>";
 
                                                                 echo "</td>";
