@@ -429,11 +429,16 @@ $emailusuario = $_SESSION['user_email'];
                                                             while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
-                                                                echo "<td >$idagendado </td>";
-                                                                echo "<td>$first_name $last_name <br>" .$celular."</td>" ;
-                                                                echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
-                                                                echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
-                                                                echo "<td>". date('H:m',  strtotime($hora)) ." $DataHoje </td>";
+                                                                if($dataagendada < $DataHoje){
+                                                                  echo "<td >$idagendado </td>";
+                                                                  echo "<td>$first_name $last_name <br>" .$celular."</td>" ;
+                                                                  echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                                  echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
+                                                                  echo "<td>". date('H:m',  strtotime($hora)) ." $DataHoje </td>";
+                                                                }else{
+                                                                  echo "<p> Pero, no hay evientos disponibles.</p>";
+                                                                }
+
 
 
                                                               }
