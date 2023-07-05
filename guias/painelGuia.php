@@ -302,7 +302,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                         <div class="row">
                                                             <p>
-                                                              <b style=" background: #008080; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">O</b>
+                                                              <b style=" background: #008080; min-height: 10px; min-width: 10px; border-radius: 30px; border:solid 1px black; "></b>
                                                             </p>
 
                                                            <ul style="list-style: none; display: inline; text-align: left;">
