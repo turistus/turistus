@@ -429,7 +429,8 @@ $emailusuario = $_SESSION['user_email'];
                                                             while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
-                                                                if($dataagendada < $DataHoje){
+                                                                $taporra = $dataagendada - $DataHoje;
+                                                                if($taporra >= 0){
                                                                   echo "<td >$idagendado </td>";
                                                                   echo "<td>$first_name $last_name <br>" .$celular."</td>" ;
                                                                   echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
