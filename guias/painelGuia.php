@@ -315,6 +315,7 @@ $emailusuario = $_SESSION['user_email'];
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
                                                                 pay.first_name,
+                                                                pay.last_name,
                                                                 pay.phone AS celular,
                                                                 pay.guiaId,
                                                                 payments_statu_Id,
@@ -368,7 +369,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                           <table class="table table-responsive{-sm|-md|-lg|-xl} table-hover" style="width: 100%;" >
                                                             <thead class="thead-light" style='font-size: 10px;'>
-                                                                <tr style='font-size: 8px; height: 5px;'>
+                                                                <tr style='font-size: 10px; height: 5px;'>
 
                                                                     <th scope="col">Pedido</th>
                                                                     <th scope="col">Turista</th>
