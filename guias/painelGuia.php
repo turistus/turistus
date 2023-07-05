@@ -354,7 +354,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 extract($row_payment);
                                                                 echo "<tr style='font-size: 12px; height: 20px;'>";
                                                                 echo "<td style='font-size: 10px; '>$idagendado<br>
-                                                                d<a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'>Confirmar</a>
+                                                                <a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'>Confirmar</a>
                                                                 <a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'>Remarcar</a></td>";
                                                                 echo "<td>$first_name $last_name<br>" .$celular."</td>" ;
 
@@ -421,7 +421,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 INNER JOIN eventos ON eventos.id = pay.product_id
                                                                 INNER JOIN servicos ON servicos.id = pay.guiaId
 
-                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id = 5 AND confirmado = 1 ORDER BY dataagendada DESC Limit 20";
+                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id = 5 AND confirmado = 1 AND dataagendada < NOW() ORDER BY dataagendada DESC Limit 20";
 
                                                             $result_payments = $conn->prepare($query_payments);
                                                             $result_payments->execute();
