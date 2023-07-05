@@ -301,15 +301,11 @@ $emailusuario = $_SESSION['user_email'];
                                                         <p class="text-muted">Lista de pedidos feitos a serem analisados e aceitos ou remarcados conforme sua agenda.</p>
 
                                                         <div class="row">
-                                                            <p>
-                                                              <b style=" background: #008080; min-height: 10px; min-width: 10px; border-radius: 30px; border:solid 1px black; "></b>
-                                                            </p>
-
-                                                           <ul style="list-style: none; text-align: left;">
-                                                                <li style=" background: #008080; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Gerado
-                                                                <li style=" background: #000000; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Expirado
-                                                                <li style=" background: #9ACD32; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido em Análise
-                                                                <li style=" background: #32CD32; height: 10px; width: 10px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Pago
+                                                              <ul style="list-style: none; text-align: left;">
+                                                                <li style=" background: #008080; height: 18px; width: 18px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Gerado
+                                                                <li style=" background: #000000; height: 18px; width: 18px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Expirado
+                                                                <li style=" background: #9ACD32; height: 18px; width: 18px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido em Análise
+                                                                <li style=" background: #32CD32; height: 18px; width: 18px; border-radius: 30px; border:solid 1px black; ">  </li> Pedido Pago
                                                               </ul>
                                                         </div>
                                                         <table class="table table-responsive{-sm|-md|-lg|-xl} table-hover" style="width: 100%;" >
@@ -362,7 +358,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 echo "<th>$first_name $last_name<br>" .$celular."</th>" ;
 
                                                               if($payments_statu_Id == 1 OR $payments_statu_Id == 2){
-                                                                echo "<td style='background: #008080;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                                echo "<td>$nE " ."<br><i style='background: #008080;'>R$ " . number_format($valor, 2, ',', '.') ."</i></td>";
                                                               }elseif($payments_statu_Id == 3){
                                                                 echo "<td style='background: #000000;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                               }elseif($payments_statu_Id == 4){
