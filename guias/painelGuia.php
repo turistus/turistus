@@ -299,12 +299,12 @@ $emailusuario = $_SESSION['user_email'];
                                                       <div class="card-body" >
                                                         <h3>Análise de pedidos</h3>
                                                         <p class="text-muted">Lista de pedidos feitos a serem analisados e aceitos ou remarcados conforme sua agenda.</p>
-                                                              <ul>
-                                                                <li style=" background: #008080; height: 10px; width: 10px; border-radius: 5px; border:solid 1px black; "> Feito Pedido </li>
-                                                                <li style=" background: #008080; height: 10px; width: 10px; border-radius: 5px; border:solid 1px black; "> Gerou Pedido </li>
-                                                                <li style=" background: #000000; height: 10px; width: 10px; border-radius: 5px; border:solid 1px black; "> Pedido Expirado </li>
-                                                                <li style=" background: #40E0D0; height: 10px; width: 10px; border-radius: 5px; border:solid 1px black; "> Pedido em Análise </li>
-                                                                <li style=" background: #32CD32; height: 10px; width: 10px; border-radius: 5px; border:solid 1px black; "> Pedido Pago </li>
+                                                              <ul style="display: inline;">
+                                                                <li style=" background: #008080; height: 50px; width: 50px; border-radius: 5px; border:solid 1px black; "> Feito Pedido </li>
+                                                                <li style=" background: #008080; height: 50px; width: 50px; border-radius: 5px; border:solid 1px black; "> Gerou Pedido </li>
+                                                                <li style=" background: #000000; height: 50px; width: 50px; border-radius: 5px; border:solid 1px black; "> Pedido Expirado </li>
+                                                                <li style=" background: #40E0D0; height: 50px; width: 50px; border-radius: 5px; border:solid 1px black; "> Pedido em Análise </li>
+                                                                <li style=" background: #32CD32; height: 50px; width: 50px; border-radius: 5px; border:solid 1px black; "> Pedido Pago </li>
                                                               </ul>
 
                                                         <table class="table table-responsive{-sm|-md|-lg|-xl} table-hover" style="width: 100%;" >
