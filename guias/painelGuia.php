@@ -336,7 +336,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 INNER JOIN pontosturisticos ON pontosturisticos.id = eventos.idPt
                                                                 INNER JOIN servicos ON servicos.id = pay.guiaId
 
-                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id <= 4 AND confirmado = 0 ORDER BY dataagendada DESC Limit 20";
+                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id <= 5 AND confirmado = 0 ORDER BY dataagendada DESC Limit 20";
 
                                                             $result_payments = $conn->prepare($query_payments);
                                                             $result_payments->execute();
@@ -347,7 +347,11 @@ $emailusuario = $_SESSION['user_email'];
                                                                 echo "<td style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Aceitar<br>
                                                                 <a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'</a>Remarcar</td>";
                                                                 echo "<th>$first_name $last_name<br>" .$celular."</th>" ;
-                                                                echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                              if($payments_statu_Id == 5){
+                                                                echo "<td style='background: green;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                              }else{
+                                                                echo "<td style='background: gray;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                              }
                                                                 echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
                                                                 echo "<td>". date('H:m',  strtotime($hora)) ."</td>";
                                                                 echo "</tr>";
