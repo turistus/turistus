@@ -347,11 +347,19 @@ $emailusuario = $_SESSION['user_email'];
                                                                 echo "<td style='font-size: 10px; '>$idagendado<br><a href='confirmaEvento.php?id=$idagendado' class='btn btn-success btn-sm'</a>Aceitar<br>
                                                                 <a href='recusaEvento.php?id=$idagendado' class='btn btn-danger btn-sm'</a>Remarcar</td>";
                                                                 echo "<th>$first_name $last_name<br>" .$celular."</th>" ;
-                                                              if($payments_statu_Id == 5){
-                                                                echo "<td style='background: green;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
-                                                              }else{
-                                                                echo "<td style='background: gray;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                              if($payments_statu_Id == 1){
+                                                                echo "<td style='background: #008080;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                              }elseif($payments_statu_Id == 2){
+                                                                echo "<td style='background: #008080;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                              }elseif($payments_statu_Id == 3){
+                                                                echo "<td style='background: #000000;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                              }elseif($payments_statu_Id == 4){
+                                                                echo "<td style='background: #40E0D0;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                              }elseif($payments_statu_Id == 5){
+                                                                echo "<td style='background: #32CD32;'>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                               }
+
+
                                                                 echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
                                                                 echo "<td>". date('H:m',  strtotime($hora)) ."</td>";
                                                                 echo "</tr>";
