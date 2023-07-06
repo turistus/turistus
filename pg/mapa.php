@@ -27,7 +27,7 @@ $usuarioId = isset($_SESSION['user_id']);
     }
 
     .state-path.active {
-    fill: #FF0000; /* Cor do estado sorteado */
+    fill: #00FF00; /* Cor do estado sorteado */
     }
     .scaled {
         transform: scale(2,4);/* Equal to scaleX(0.7) scaleY(0.7) */
