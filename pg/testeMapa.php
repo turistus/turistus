@@ -31,7 +31,7 @@ $usuarioId = isset($_SESSION['user_id']);
     }
     .scaled {
         transform: scale(2,4);/* Equal to scaleX(0.7) scaleY(0.7) */
-        margin-left: 90px;
+
     }
     #svg-map-container{
         width:50%;
@@ -51,7 +51,7 @@ $usuarioId = isset($_SESSION['user_id']);
   <?php
   include_once 'menu.php';
   ?>
-    <div class="row" style="padding: 5px;">
+    <div class="row" style="padding: 5px; margin-left: 90px;">
         <h4>Escolha um destino</h4>
         <div class="col-12">
             <button class="btn btn-info" id="sortear" onclick="sortearEstado()"> Sortear Estado </button>
