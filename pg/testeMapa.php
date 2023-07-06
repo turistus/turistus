@@ -437,6 +437,18 @@ function sortearEstado() {
   }
 
   resetarEstados();
+  var estados = document.querySelectorAll('.state-path');
+var sorteando = false;
+var intervalId;
+var estadosSorteados = [];
+var estadoSorteado = null;
+
+function sortearEstado() {
+  if (sorteando) {
+    return;
+  }
+
+  resetarEstados();
   sorteando = true;
 
   var contador = 0;
@@ -484,6 +496,7 @@ function sortearEstadoFinal() {
   // Verifica se todos os estados foram sorteados
   if (estadosNaoSorteados.length === 0) {
     resetarEstadosSorteados();
+    estadosNaoSorteados = Array.from(estados);
   }
 
   // Sorteia um estado entre os estados não sorteados
