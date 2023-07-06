@@ -30,7 +30,8 @@ $usuarioId = isset($_SESSION['user_id']);
     fill: #FF0000; /* Cor do estado sorteado */
     }
     .scaled {
-        transform: scaleX(0.8) scaleY(0.8); /* Equal to scaleX(0.7) scaleY(0.7) */
+        transform: scale(0.9) scaleY(0.8); /* Equal to scaleX(0.7) scaleY(0.7) */
+        margin-left: auto;
     }
     #svg-map-container{
         width:50%;
