@@ -463,7 +463,7 @@ function sortearEstado() {
 
   // Acende o estado sorteado
   acenderEstado(estadoSorteado);
-}
+};
 
 // Função para desativar todos os estados
 function desativarEstados() {
@@ -472,7 +472,7 @@ function desativarEstados() {
   for (var i = 0; i < paths.length; i++) {
     paths[i].style.fill = '#ffffff'; // Define a cor de preenchimento como branco
   }
-}
+};
 
 // Função para acender um estado
 function acenderEstado(estado) {
@@ -481,7 +481,7 @@ function acenderEstado(estado) {
   if (estadoElement) {
     estadoElement.style.fill = '#ff0000'; // Define a cor de preenchimento como vermelho
   }
-}
+};
 </script>
 
 
