@@ -426,27 +426,42 @@ $usuarioId = isset($_SESSION['user_id']);
 <script type="text/javascript">
 
 var estados = document.querySelectorAll('.state-path');
+var sorteando = false;
+var intervalId;
 
 function sortearEstado() {
+  if (sorteando) {
+    return;
+  }
+
   resetarEstados();
+  sorteando = true;
 
-  // Sorteia um índice aleatório com base no número de estados
-  var indice = Math.floor(Math.random() * estados.length);
+  var contador = 0;
+  var maxContador = 10; // Ajuste esse valor para controlar a velocidade do sorteio (quanto maior, mais lento)
+  var intervalo = 300; // Ajuste esse valor para controlar a velocidade da animação (em milissegundos)
 
-  // Obtém o estado sorteado
-  var estadoSorteado = estados[indice];
+  intervalId = setInterval(function() {
+    var estadoSorteado = estados[contador];
+    estadoSorteado.classList.add('active');
+    contador++;
 
-  // Adiciona a classe "active" ao estado sorteado para alterar sua cor
-  estadoSorteado.classList.add('active');
+    if (contador >= estados.length) {
+      clearInterval(intervalId);
+      sorteando = false;
+    }
+  }, intervalo);
 }
 
 function resetarEstados() {
+  clearInterval(intervalId);
+  sorteando = false;
+
   for (var i = 0; i < estados.length; i++) {
     estados[i].classList.remove('active');
   }
 }
+
 </script>
-
-
 
     </div>
