@@ -36,7 +36,8 @@ $usuarioId = isset($_SESSION['user_id']);
     #svg-map-container{
         width:40%;
         margin-left:auto;
-        margin-right:auto
+        margin-right:auto;
+        margin-bottom: 15px;
     }
   </style>
 
