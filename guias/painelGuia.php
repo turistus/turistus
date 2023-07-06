@@ -414,8 +414,8 @@ $emailusuario = $_SESSION['user_email'];
                                                                 pay.custoPedido AS valor,
                                                                 pay.hora AS hora,
                                                             eventos.id AS idE,
-                                                                eventos.nome AS nE,
-                                                                NOW() AS DataHoje
+                                                                eventos.nome AS nE
+
 
                                                             FROM payments_picpays AS pay
 
@@ -435,7 +435,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                   echo "<td>$first_name $last_name <br>" .$celular."</td>" ;
                                                                   echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                                   echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
-                                                                  echo "<td>". date('H:m',  strtotime($hora)) ." $Comprova $DataHoje </td>";
+                                                                  echo "<td>". date('H:m',  strtotime($hora)) ."</td>";
                                                                 }else{
                                                                   echo "<td> Ainda não tem Pedidos !</td>";
                                                                   echo "<td> </td>";
