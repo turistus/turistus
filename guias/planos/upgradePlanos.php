@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
         <link rel="stylesheet" type="text/css" href="../planos/estilosUpgrade.css"/>
         <title>Planos</title>
 
@@ -67,7 +67,7 @@
                         <div class="carousel-fluid w-3" >
                             <div class="carousel-inner" >
                                 <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
-                                    <b>Standart</b>
+                                    <b>Standard</b>
                                     <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
                                     <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mensal </p>
                                     <p style="font-size: 12px;">R$ 0,96 por dia.</p>
