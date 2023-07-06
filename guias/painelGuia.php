@@ -430,13 +430,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
 
-
-
-
-                                                                //PRIMEIRO CONVERTE AS DATA dps SUBTRAI
-                                                                $Comprova = date_diff($dataagendada, $DataHoje);
-                                                                echo $Comprova;
-                                                                if($Comprova === 0){
+                                                                if($dataagendada < date_create()){
                                                                   echo "<td >$idagendado </td>";
                                                                   echo "<td>$first_name $last_name <br>" .$celular."</td>" ;
                                                                   echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
