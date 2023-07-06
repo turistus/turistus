@@ -421,6 +421,14 @@ $usuarioId = isset($_SESSION['user_id']);
 
 
 <script type="text/javascript">
+
+$('#svg-map a').on('click', function () {
+    if($(this).attr('class') == 'disabled'){
+        alert('# Serviço indisponível para este estado.');
+        return false;
+    }
+});
+
 var estados = document.querySelectorAll('.state-path');
 
 function sortearEstado() {
