@@ -401,7 +401,7 @@ $usuarioId = isset($_SESSION['user_id']);
 
     <div class="row">
         <div class="col-12">
-            <button id="sortear" onclick="sortearEstado()">Sortear Estado</button>
+            <button class="btn btn-primary" id="sortear" onclick="sortearEstado()">Sortear Estado</button>
         </div>
     </div>
 
@@ -421,13 +421,6 @@ $usuarioId = isset($_SESSION['user_id']);
 
 
 <script type="text/javascript">
-
-$('#svg-map a').on('click', function () {
-    if($(this).attr('class') == 'disabled'){
-        alert('# Serviço indisponível para este estado.');
-        return false;
-    }
-});
 
 var estados = document.querySelectorAll('.state-path');
 
