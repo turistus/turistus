@@ -24,15 +24,19 @@ $usuarioId = isset($_SESSION['user_id']);
   <style>
     .state-path {
   fill: #6495ED; /* Cor padrão para os estados */
-}
+    }
 
-.state-path.active {
-  fill: #FF0000; /* Cor do estado sorteado */
-}
-
-.scaled {
+    .state-path.active {
+    fill: #FF0000; /* Cor do estado sorteado */
+    }
+    .scaled {
         transform: scaleX(0.8) scaleY(0.8); /* Equal to scaleX(0.7) scaleY(0.7) */
-        }
+    }
+    #svg-map-container{
+        width:50%;
+        margin-left:auto;
+        margin-right:auto
+    }
   </style>
 
 
