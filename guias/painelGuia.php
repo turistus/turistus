@@ -430,7 +430,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
 
-                                                                if($dataagendada > date_create()){
+                                                                if($dataagendada < date_create()){
                                                                   echo "<td >$idagendado </td>";
                                                                   echo "<td>$first_name $last_name <br>" .$celular."</td>" ;
                                                                   echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
@@ -438,6 +438,10 @@ $emailusuario = $_SESSION['user_email'];
                                                                   echo "<td>". date('H:m',  strtotime($hora)) ." $Comprova $DataHoje </td>";
                                                                 }else{
                                                                   echo "<td> Ainda não tem Pedidos !</td>";
+                                                                  echo "<td> </td>";
+                                                                  echo "<td> </td>";
+                                                                  echo "<td> </td>";
+                                                                  echo "<td> </td>";
                                                                 }
                                                               }
                                                             ?>
