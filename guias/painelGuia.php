@@ -434,14 +434,13 @@ $emailusuario = $_SESSION['user_email'];
 
 
                                                                 //PRIMEIRO CONVERTE AS DATA dps SUBTRAI
-                                                                $taporra = $dataagendada - $DataHoje;
-
-                                                                if($taporra >= 0){
+                                                                $Comprova = date_diff($dataagendada, $DataHoje);
+                                                                if($Comprova >= 0){
                                                                   echo "<td >$idagendado </td>";
                                                                   echo "<td>$first_name $last_name <br>" .$celular."</td>" ;
                                                                   echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                                   echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
-                                                                  echo "<td>". date('H:m',  strtotime($hora)) ." $taporra $DataHoje </td>";
+                                                                  echo "<td>". date('H:m',  strtotime($hora)) ." $Comprova $DataHoje </td>";
                                                                 }else{
                                                                   echo "<p> Ainda não tem Pedidos !</p>";
                                                                 }
