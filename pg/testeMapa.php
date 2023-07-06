@@ -458,7 +458,7 @@ function sortearEstado() {
       clearInterval(intervalId);
       sorteando = false;
 
-      sortearEstadoFinal();
+      sortearEstadoSorteado();
     }
   }, intervalo);
 }
@@ -473,9 +473,8 @@ function resetarEstados() {
   }
 }
 
-function sortearEstadoFinal() {
-  var indiceSorteado = Math.floor(Math.random() * estados.length);
-  estadoSorteado = estados[indiceSorteado];
+function sortearEstadoSorteado() {
+  estadoSorteado = estados[Math.floor(Math.random() * estados.length)];
 
   estadoSorteado.classList.add('winner');
 }
