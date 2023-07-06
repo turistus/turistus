@@ -426,9 +426,9 @@ $usuarioId = isset($_SESSION['user_id']);
 <script type="text/javascript">
 
 var estados = document.querySelectorAll('.state-path');
+var estadoSorteado = null;
 var sorteando = false;
 var intervalId;
-var estadoSorteado = null;
 
 function sortearEstado() {
   if (sorteando) {
@@ -458,7 +458,6 @@ function sortearEstado() {
       clearInterval(intervalId);
       sorteando = false;
 
-      // Sorteio final para determinar o estado vencedor
       sortearEstadoFinal();
     }
   }, intervalo);
@@ -475,26 +474,19 @@ function resetarEstados() {
 }
 
 function sortearEstadoFinal() {
-  var estadosNaoSorteados = Array.from(estados).filter(function(estado) {
+  var estadosDisponiveis = Array.from(estados).filter(function(estado) {
     return !estado.classList.contains('winner');
   });
 
-  // Verifica se todos os estados foram sorteados
-  if (estadosNaoSorteados.length === 0) {
+  if (estadosDisponiveis.length === 0) {
     resetarEstados();
     return;
   }
 
-  var indiceSorteado = Math.floor(Math.random() * estadosNaoSorteados.length);
-  estadoSorteado = estadosNaoSorteados[indiceSorteado];
+  var indiceSorteado = Math.floor(Math.random() * estadosDisponiveis.length);
+  estadoSorteado = estadosDisponiveis[indiceSorteado];
 
   estadoSorteado.classList.add('winner');
-}
-
-function resetarEstadosSorteados() {
-  estados.forEach(function(estado) {
-    estado.classList.remove('winner');
-  });
 }
 
 </script>
