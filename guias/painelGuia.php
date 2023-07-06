@@ -437,15 +437,8 @@ $emailusuario = $_SESSION['user_email'];
                                                                   echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
                                                                   echo "<td>". date('H:m',  strtotime($hora)) ." $Comprova $DataHoje </td>";
                                                                 }else{
-                                                                  echo "<p> Ainda não tem Pedidos !</p>";
-                                                                  echo $Comprova;
+                                                                  echo "<td> Ainda não tem Pedidos !</td>";
                                                                 }
-
-
-
-
-
-
                                                               }
                                                             ?>
                                                             </tbody>
