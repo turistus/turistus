@@ -444,6 +444,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                   echo "<td>". date('H:m',  strtotime($hora)) ." $Comprova $DataHoje </td>";
                                                                 }else{
                                                                   echo "<p> Ainda não tem Pedidos !</p>";
+                                                                  echo $Comprova;
                                                                 }
 
 
