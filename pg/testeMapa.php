@@ -31,7 +31,7 @@ $usuarioId = isset($_SESSION['user_id']);
     }
     .scaled {
         transform: scale(2,4);/* Equal to scaleX(0.7) scaleY(0.7) */
-        margin-left: auto;
+        margin-left: 90px;
     }
     #svg-map-container{
         width:50%;
