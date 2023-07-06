@@ -270,7 +270,7 @@ $emailusuario = $_SESSION['user_email'];
                                                             }
                                                             echo "<div class='row' style='margin:5px; padding: 10px; background-color:#00FF00; border-radius: 5px;'>";
                                                             echo "<div class='col-md-5'>";
-                                                            echo "<h6> Total Vendas / PAGO <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
+                                                            echo "<h6> Total PAGO <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
                                                             echo "</div>";
 
                                                             echo "<div class='col-md-4'>";
@@ -393,50 +393,51 @@ $emailusuario = $_SESSION['user_email'];
                                                                 </tr>
                                                             </thead>
                                                             <tbody style='font-size: 12px; height: 5px;'>
-                                                            <?php
-                                                            $query_payments = "SELECT
-                                                            pay.id AS idagendado,
-                                                                pay.first_name,
-                                                                pay.last_name,
-                                                                pay.phone AS celular,
-                                                                pay.guiaId,
-                                                                payments_statu_Id,
-                                                                pay.product_id,
-                                                                pay.dataagendada AS dataagendada,
-                                                                pay.custoPedido AS valor,
-                                                                pay.hora AS hora,
-                                                            eventos.id AS idE,
-                                                                eventos.nome AS nE
+                                                              <?php
+                                                              $query_payments = "SELECT
+                                                              pay.id AS idagendado,
+                                                                  pay.first_name,
+                                                                  pay.last_name,
+                                                                  pay.phone AS celular,
+                                                                  pay.guiaId,
+                                                                  payments_statu_Id,
+                                                                  pay.product_id,
+                                                                  pay.dataagendada AS dataagendada,
+                                                                  pay.custoPedido AS valor,
+                                                                  pay.hora AS hora,
+                                                              eventos.id AS idE,
+                                                                  eventos.nome AS nE
 
 
-                                                            FROM payments_picpays AS pay
+                                                              FROM payments_picpays AS pay
 
-                                                                INNER JOIN eventos ON eventos.id = pay.product_id
-                                                                INNER JOIN servicos ON servicos.id = pay.guiaId
+                                                                  INNER JOIN eventos ON eventos.id = pay.product_id
+                                                                  INNER JOIN servicos ON servicos.id = pay.guiaId
 
-                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id = 5 AND confirmado = 1 ORDER BY dataagendada DESC Limit 20";
+                                                                  WHERE pay.guiaId = $Uid AND payments_statu_Id = 5 AND confirmado = 1 ORDER BY dataagendada DESC Limit 20";
 
-                                                            $result_payments = $conn->prepare($query_payments);
-                                                            $result_payments->execute();
-                                                            while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
-                                                                //var_dump($row_payment);
-                                                                extract($row_payment);
-
-                                                                if($dataagendada < date_create()){
-                                                                  echo "<td >$idagendado </td>";
-                                                                  echo "<td>$first_name $last_name <br>" .$celular."</td>" ;
-                                                                  echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
-                                                                  echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
-                                                                  echo "<td>". date('H:m',  strtotime($hora)) ."</td>";
-                                                                }else{
-                                                                  echo "<td> Ainda não tem Pedidos !</td>";
-                                                                  echo "<td> </td>";
-                                                                  echo "<td> </td>";
-                                                                  echo "<td> </td>";
-                                                                  echo "<td> </td>";
+                                                              $result_payments = $conn->prepare($query_payments);
+                                                              $result_payments->execute();
+                                                              while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
+                                                                  //var_dump($row_payment);
+                                                                  extract($row_payment);
+                                                                  echo "<tr style='font-size: 12px; height: 20px;'>";
+                                                                  if($dataagendada < date_create()){
+                                                                    echo "<td>$idagendado </td>";
+                                                                    echo "<td>$first_name $last_name <br>" .$celular."</td>" ;
+                                                                    echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
+                                                                    echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
+                                                                    echo "<td>". date('H:m',  strtotime($hora)) ."</td>";
+                                                                  }else{
+                                                                    echo "<td> Ainda não tem Pedidos !</td>";
+                                                                    echo "<td> </td>";
+                                                                    echo "<td> </td>";
+                                                                    echo "<td> </td>";
+                                                                    echo "<td> </td>";
+                                                                  }
+                                                                  echo "</tr>";
                                                                 }
-                                                              }
-                                                            ?>
+                                                              ?>
                                                             </tbody>
                                                           </table>
                                                         </div>
