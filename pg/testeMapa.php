@@ -459,8 +459,7 @@ function sortearEstado() {
       sorteando = false;
 
       // Sorteio final para determinar o estado vencedor
-      estadoSorteado = estados[Math.floor(Math.random() * estados.length)];
-      estadoSorteado.classList.add('winner');
+      sortearEstadoFinal();
     }
   }, intervalo);
 }
@@ -474,6 +473,12 @@ function resetarEstados() {
     estados[i].classList.remove('winner');
   }
 }
+
+function sortearEstadoFinal() {
+  // Sorteio final para determinar o estado vencedor
+  estadoSorteado = estados[Math.floor(Math.random() * estados.length)];
+  estadoSorteado.classList.add('winner');
+ }
 </script>
 
     </div>
