@@ -429,16 +429,25 @@ $emailusuario = $_SESSION['user_email'];
                                                             while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
+
+
+
+
+                                                                //PRIMEIRO CONVERTE AS DATA dps SUBTRAI
                                                                 $taporra = $dataagendada - $DataHoje;
+
                                                                 if($taporra >= 0){
                                                                   echo "<td >$idagendado </td>";
                                                                   echo "<td>$first_name $last_name <br>" .$celular."</td>" ;
                                                                   echo "<td>$nE " ."<br>R$ " . number_format($valor, 2, ',', '.') ."</td>";
                                                                   echo "<td>". date('d/m/Y',  strtotime($dataagendada)) ."</td>";
-                                                                  echo "<td>". date('H:m',  strtotime($hora)) ." $taporra</td>";
+                                                                  echo "<td>". date('H:m',  strtotime($hora)) ." $taporra $DataHoje </td>";
                                                                 }else{
-                                                                  echo "<p> Pero, no hay evientos disponibles.</p>";
+                                                                  echo "<p> Ainda não tem Pedidos !</p>";
                                                                 }
+
+
+
 
 
 
