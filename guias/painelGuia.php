@@ -482,7 +482,7 @@ $emailusuario = $_SESSION['user_email'];
                                 <div class="modal-content" id=formUpgrade style="padding-bottom: 20px;">
 
                                   <?php
-                                      //include_once '../guias/planos/upgradePlanos.php';
+                                      include_once '../guias/planos/upgradePlanos.php';
                                   ?>
 
                                 </div>
