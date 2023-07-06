@@ -54,7 +54,7 @@ $usuarioId = isset($_SESSION['user_id']);
     <div class="row" style="padding: 5px; margin-left: 90px;">
         <h4>Escolha um destino</h4>
         <div class="col-12">
-            <button class="btn btn-info" id="sortear" onclick="sortearEstado()"> Sortear Estado </button>
+            <button class="btn btn-primary" id="sortear" onclick="sortearEstado()"> Sortear Estado </button>
         </div>
     </div>
 
