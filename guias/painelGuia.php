@@ -258,7 +258,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 INNER JOIN servicos ON servicos.id = pay.guiaId
 
 
-                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id <= 5 ORDER BY idagendado DESC Limit 10";
+                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id = 6 ORDER BY idagendado DESC Limit 10";
 
 
                                                             $result_payments = $conn->prepare($query_payments);
@@ -270,7 +270,7 @@ $emailusuario = $_SESSION['user_email'];
                                                             }
                                                             echo "<div class='row' style='margin:5px; padding: 10px; background-color:#00FF00; border-radius: 5px;'>";
                                                             echo "<div class='col-md-5'>";
-                                                            echo "<h6> Total Vendas <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
+                                                            echo "<h6> Total Vendas / PAGO <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
                                                             echo "</div>";
 
                                                             echo "<div class='col-md-4'>";
@@ -283,15 +283,7 @@ $emailusuario = $_SESSION['user_email'];
                                                     </div>
                                                 </div>
 
-
-
-
-
                                                 <hr>
-
-
-
-
                                               <!-- Lista todos Pedidos para ACEITAR ainda. -->
                                               <div class="col-md-12">
                                                   <div class="col mb-2 text-center" >
