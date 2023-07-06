@@ -474,20 +474,13 @@ function resetarEstados() {
 }
 
 function sortearEstadoFinal() {
-  var estadosDisponiveis = Array.from(estados).filter(function(estado) {
-    return !estado.classList.contains('winner');
-  });
-
-  if (estadosDisponiveis.length === 0) {
-    resetarEstados();
-    return;
-  }
-
-  var indiceSorteado = Math.floor(Math.random() * estadosDisponiveis.length);
-  estadoSorteado = estadosDisponiveis[indiceSorteado];
+  var indiceSorteado = Math.floor(Math.random() * estados.length);
+  estadoSorteado = estados[indiceSorteado];
 
   estadoSorteado.classList.add('winner');
 }
+
+sortearEstado();
 
 </script>
 
