@@ -440,7 +440,7 @@ function sortearEstado() {
 
   var contador = 0;
   var maxContador = 10; // Ajuste esse valor para controlar a velocidade do sorteio (quanto maior, mais lento)
-  var intervalo = 300; // Ajuste esse valor para controlar a velocidade da animação (em milissegundos)
+  var intervalo = 100; // Ajuste esse valor para controlar a velocidade da animação (em milissegundos)
 
   intervalId = setInterval(function() {
     var estadoAtual = estados[contador];
@@ -475,10 +475,28 @@ function resetarEstados() {
 }
 
 function sortearEstadoFinal() {
-  // Sorteio final para determinar o estado vencedor
-  estadoSorteado = estados[Math.floor(Math.random() * estados.length)];
+  var estadosNaoSorteados = Array.from(estados).filter(function(estado) {
+    return !estado.classList.contains('winner');
+  });
+
+  // Verifica se todos os estados foram sorteados
+  if (estadosNaoSorteados.length === 0) {
+    resetarEstados();
+    return;
+  }
+
+  var indiceSorteado = Math.floor(Math.random() * estadosNaoSorteados.length);
+  estadoSorteado = estadosNaoSorteados[indiceSorteado];
+
   estadoSorteado.classList.add('winner');
- }
+}
+
+function resetarEstadosSorteados() {
+  estados.forEach(function(estado) {
+    estado.classList.remove('winner');
+  });
+}
+
 </script>
 
     </div>
