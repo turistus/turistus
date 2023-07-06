@@ -72,14 +72,14 @@ $usuarioId = isset($_SESSION['user_id']);
 ?>
 
 <div class="col-12">
-    <h1>Locais Disponiveis no Brasil </h1>
+
 
 </div>
 
 <div id="svg-map-container">
 <!-- DICA class="disabled" ATIVA O ESTADO em AZUL -->
 <svg version="1.1" id="svg-map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="90%" height="90%" viewBox="0 0 450 460" enable-background="new 0 0 450 460" xml:space="preserve">
-<g>
+
     <a xlink:href="../pg/pontos-turisticos-uf.php?uf=to" target="_blank"><!-- Pontos turisticos do estado do TOCANTINS sseperar por Sigla...-->
         <title>Tocantins</title>
         <path id="TO" stroke="#FFFFFF" stroke-width="1.0404" stroke-linecap="round" stroke-linejoin="round" d="M289.558,235.641
@@ -417,7 +417,7 @@ $usuarioId = isset($_SESSION['user_id']);
         c-6.208,0-11.257-5.036-11.257-11.262C422.54,138.647,427.589,133.597,433.797,133.597z"></path>
         <text transform="matrix(1 0 0 1 425.2129 148.9893)" fill="#FFFFFF" data-label="Paraíba">PB</text>
     </a>
-</g>
+
 </svg>
 </div>
 
