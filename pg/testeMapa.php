@@ -424,62 +424,41 @@ $usuarioId = isset($_SESSION['user_id']);
 
 
 <script type="text/javascript">
-
 var estados = document.querySelectorAll('.state-path');
 var estadoSorteado = null;
-var sorteando = false;
-var intervalId;
+var estadosSorteados = [];
 
 function sortearEstado() {
-  if (sorteando) {
-    return;
+  resetarEstados();
+
+  var estadosDisponiveis = Array.from(estados).filter(function(estado) {
+    return !estadosSorteados.includes(estado);
+  });
+
+  if (estadosDisponiveis.length === 0) {
+    resetarEstadosSorteados();
+    estadosDisponiveis = Array.from(estados);
   }
 
-  resetarEstados();
-  sorteando = true;
+  var indiceSorteado = Math.floor(Math.random() * estadosDisponiveis.length);
+  estadoSorteado = estadosDisponiveis[indiceSorteado];
 
-  var contador = 0;
-  var maxContador = 10; // Ajuste esse valor para controlar a velocidade do sorteio (quanto maior, mais lento)
-  var intervalo = 100; // Ajuste esse valor para controlar a velocidade da animação (em milissegundos)
-
-  intervalId = setInterval(function() {
-    var estadoAtual = estados[contador];
-
-    if (contador > 0) {
-      var estadoAnterior = estados[contador - 1];
-      estadoAnterior.classList.remove('active');
-    }
-
-    estadoAtual.classList.add('active');
-
-    contador++;
-
-    if (contador >= estados.length) {
-      clearInterval(intervalId);
-      sorteando = false;
-
-      sortearEstadoSorteado();
-    }
-  }, intervalo);
+  estadoSorteado.classList.add('winner');
+  estadoSorteado.classList.add('active');
+  estadosSorteados.push(estadoSorteado);
 }
 
 function resetarEstados() {
-  clearInterval(intervalId);
-  sorteando = false;
-
-  for (var i = 0; i < estados.length; i++) {
-    estados[i].classList.remove('active');
-    estados[i].classList.remove('winner');
+  if (estadoSorteado !== null) {
+    estadoSorteado.classList.remove('winner');
+    estadoSorteado.classList.remove('active');
+    estadoSorteado = null;
   }
 }
 
-function sortearEstadoSorteado() {
-  estadoSorteado = estados[Math.floor(Math.random() * estados.length)];
-
-  estadoSorteado.classList.add('winner');
+function resetarEstadosSorteados() {
+  estadosSorteados = [];
 }
-
-sortearEstado();
 
 </script>
 
