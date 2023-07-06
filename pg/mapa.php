@@ -467,7 +467,7 @@ function sortearEstado() {
 
 // Função para desativar todos os estados
 function desativarEstados() {
-  var paths = document.querySelectorAll('#svg-map path');
+  var paths = document.querySelectorAll('#svg-map-container path');
 
   for (var i = 0; i < paths.length; i++) {
     paths[i].style.fill = '#ffffff'; // Define a cor de preenchimento como branco
