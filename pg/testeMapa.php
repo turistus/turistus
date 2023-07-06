@@ -50,6 +50,12 @@ $usuarioId = isset($_SESSION['user_id']);
   <?php
   include_once 'menu.php';
   ?>
+    <div class="row" style="padding: 5px;">
+        <h4>Escolha um destino</h4>
+        <div class="col-12">
+            <button class="btn btn-info" id="sortear" onclick="sortearEstado()"> Sortear Estado </button>
+        </div>
+    </div>
 
 <div id="map-box scaled">
 
@@ -399,11 +405,7 @@ $usuarioId = isset($_SESSION['user_id']);
     </svg>
 </div>
 
-    <div class="row">
-        <div class="col-12">
-            <button class="btn btn-info" id="sortear" onclick="sortearEstado()">Sortear Estado</button>
-        </div>
-    </div>
+
 
 
 
