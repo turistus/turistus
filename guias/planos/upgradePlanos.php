@@ -124,7 +124,7 @@
 
     <body>
         <?php
-            include_once("../../guias/menu.php")
+            include_once("menu.php")
         ?>
         <div class="conteiner scaled">
             <table>

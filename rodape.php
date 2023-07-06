@@ -7,7 +7,7 @@
       background-attachment: fixed;
       padding-top: 20px;">
   <div class="container">
-    <div class="row"  style="color:azure;" >
+    <div class="row"  style="color:azure;  transform: scaleX(0.9) scaleY(0.9);" >
 
       <div class="col-md-3 col-sm-6 col-xs-6">
         <h5>Redes Sociais</h5>
