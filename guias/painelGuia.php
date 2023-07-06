@@ -58,7 +58,7 @@ $emailusuario = $_SESSION['user_email'];
                                 </div>
 
                               <h4 class="display-6 mt-3 mb-2">Bem vindo, Guia <?php echo $nome?> </h4>
-                              <p> Guia: <b>00<?php echo $Uid?></b> Plano: <b><span style="border-radius: 10px; border: black solid 1px; padding:3px;">BÁSICO</span></b> <a href="planos/upgradePlanos.php"><button class="btn btn-success" style="height: 25px; margin-bottom: 5px; padding: 3px;">  +Upgrade</button></a></p>
+                              <p> Guia: <b>00<?php echo $Uid?></b> Plano: <b><span style="border-radius: 10px; border: black solid 1px; padding:3px;">BÁSICO</span></b> <a href="planos/upgradePlanos.php"><button id="upgradeForm" class="btn btn-success" style="height: 25px; margin-bottom: 5px; padding: 3px;">  +Upgrade</button></a></p>
                               <?php if(isset($_SESSION['msg'])){
                                       echo $_SESSION['msg'];
                                       unset($_SESSION['msg']);
@@ -479,6 +479,14 @@ $emailusuario = $_SESSION['user_email'];
 
                                 </div>
 
+                                <div class="modal-content" id=formUpgrade style="padding-bottom: 20px;">
+
+                                  <?php
+                                      include_once '../guias/planos/upgradePlanos.php';
+                                  ?>
+
+                                </div>
+
                           </div>
                       </div>
               </div><!-- Final da MODAL DIALOG BUTONES-->
@@ -506,6 +514,7 @@ $emailusuario = $_SESSION['user_email'];
     $("#formTerceiro").hide();
     $("#formQuarto").hide();
     $("#formPerfil").hide();
+    $("#formUpgrade").hide();
 
   $("#CriarEvento").click(function () {
 		$("#formCriarEvento").show(500);
@@ -513,6 +522,7 @@ $emailusuario = $_SESSION['user_email'];
     $("#formTerceiro").hide();
     $("#formQuarto").hide();
     $("#formPerfil").hide();
+    $("#formUpgrade").hide();
 	});
 
   $("#Painel").click(function () {
@@ -521,6 +531,7 @@ $emailusuario = $_SESSION['user_email'];
     $("#formTerceiro").hide();
     $("#formQuarto").hide();
     $("#formPerfil").hide();
+    $("#formUpgrade").hide();
 	});
 
   $("#terceiroForm").click(function () {
@@ -529,6 +540,7 @@ $emailusuario = $_SESSION['user_email'];
     $("#formCriarEvento").hide();
     $("#formQuarto").hide();
     $("#formPerfil").hide();
+    $("#formUpgrade").hide();
 	});
 
   $("#quartoForm").click(function () {
@@ -537,6 +549,7 @@ $emailusuario = $_SESSION['user_email'];
     $("#formCriarEvento").hide();
     $("#formTerceiro").hide();
     $("#formPerfil").hide();
+    $("#formUpgrade").hide();
 	});
 
   $("#perfilForm").click(function () {
@@ -545,8 +558,20 @@ $emailusuario = $_SESSION['user_email'];
     $("#formCriarEvento").hide();
     $("#formTerceiro").hide();
     $("#formQuarto").hide();
+    $("#formUpgrade").hide();
 
 	});
+
+  $("#upgradeForm").click(function () {
+    $("#formUpgrade").show(500);
+    $("#formPainel").hide();
+    $("#formCriarEvento").hide();
+    $("#formTerceiro").hide();
+    $("#formQuarto").hide();
+    $("#formPerfil").hide();
+
+	});
+
 
   });
 </script>

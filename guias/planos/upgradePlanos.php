@@ -123,9 +123,7 @@
 </head>
 
     <body>
-        <?php
-            include_once("menu.php")
-        ?>
+
         <div class="conteiner scaled">
             <table>
                 <tr>
@@ -261,7 +259,5 @@
     });
 });
 </script>
-    </body><?php
-            include_once("../../rodape.php")
-        ?>
+    </body>
 </html>
