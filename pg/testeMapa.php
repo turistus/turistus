@@ -512,6 +512,7 @@ function sortearEstadoFinal() {
 function resetarEstadosSorteados() {
   estadosSorteados = [];
 }
+ }
 </script>
 
     </div>
