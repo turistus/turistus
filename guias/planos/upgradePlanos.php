@@ -13,8 +13,7 @@
         <style>
 
 table {
-    border-collapse: collapse;
-    width: 100%;
+
 }
 
 th,
@@ -40,12 +39,7 @@ th {
 }
 
 .card {
-    display: inline-block;
-    width: 200px;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
+
 }
 
 .card h3 {
@@ -127,7 +121,8 @@ transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
     <body>
 
         <div class="conteiner scaled">
-            <table>
+            <table style="border-collapse: collapse;
+                                    width: 100%;">
                 <tr>
                     <th colspan="5" style="text-align: center;"> Planos </th>
                 </tr>
@@ -177,7 +172,16 @@ transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
                     <div class="row">
                         <div class="carousel-fluid w-3" >
                             <div class="carousel-inner" >
-                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
+                                <div class="card" style="
+                                background-color: #333;
+                                border: solid 1px white;
+                                color:#f2f2f2;
+                                display: inline-block;
+                                width: 200px;
+                                border: 1px solid #ddd;
+                                padding: 20px;
+                                margin: 10px;
+                                text-align: center;">
                                     <b>Standard</b>
                                     <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
                                     <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mensal </p>
