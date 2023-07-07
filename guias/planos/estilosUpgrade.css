@@ -1,3 +1,4 @@
+<styles>
 
 table {
     border-collapse: collapse;
@@ -26,7 +27,7 @@ th {
     text-align: center;
 }
 
-.card f{
+.card {
     display: inline-block;
     width: 200px;
     border: 1px solid #ddd;
@@ -109,3 +110,4 @@ display: none;
 transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
 }
 
+</styles>
