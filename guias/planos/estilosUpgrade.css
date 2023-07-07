@@ -1,4 +1,4 @@
-<styles>
+
 
 table {
     border-collapse: collapse;
@@ -110,4 +110,3 @@ display: none;
 transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
 }
 
-</styles>
