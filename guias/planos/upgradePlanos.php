@@ -8,9 +8,122 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 
-        <link rel="stylesheet" type="text/css" href="../planos/estilosUpgrade.css"/>
         <title>Planos</title>
 
+        <style>
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+    font-size: 18px;
+}
+
+.destaque {
+    font-weight: bold;
+}
+
+.pacotes {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card f{
+    display: inline-block;
+    width: 200px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 0;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.card .total {
+    font-weight: bold;
+}
+
+.card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 150px;
+}
+
+.conteiner{
+    padding: 15px;
+}
+
+.carousel {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    width: 1600px;
+    height: 300px;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-indicators span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators span.active {
+    background-color: #333;
+    display: block; /* Exibe o card ativo */
+}
+
+.carousel .card {
+flex: 0 0 100%;
+display: none;
+}
+
+.scaled {
+transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
+}
+
+        </style>
 </head>
 
     <body>
@@ -66,7 +179,7 @@
                     <div class="row">
                         <div class="carousel-fluid w-3" >
                             <div class="carousel-inner" >
-                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
+                                <div class="card f" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
                                     <b>Standard</b>
                                     <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
                                     <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mensal </p>
@@ -75,7 +188,7 @@
                                     <button>Comprar</button>
                                 </div>
 
-                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
+                                <div class="card f" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
                                     <b>Platinum</b>
                                     <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
                                     <p class="total" style="width: 180px;">R$ <span style="font-size: 20px; ">59,00</span> / Trimestral </p>
@@ -84,7 +197,7 @@
                                     <button>Comprar</button>
                                 </div>
 
-                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
+                                <div class="card f" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
                                     <b>Infinity</b>
                                     <p style="font-size: 8px;">Garante mais segurança no pagamento. Conte com o PicPay.</p>
                                     <p class="total" style="width: 180px;">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
@@ -93,7 +206,7 @@
                                     <button>Comprar</button>
                                 </div>
 
-                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
+                                <div class="card f" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
                                     <b>Black</b>
                                     <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
                                     <p class="total">R$ <span style="font-size: 20px; ">159,00</span> / Anual </p>
@@ -121,7 +234,7 @@
 <script>
     const carouselInner = document.querySelector('.carousel-inner');
     const indicators = document.querySelectorAll('.carousel-indicators span');
-    const cards = document.querySelectorAll('.carousel-inner .card');
+    const cards = document.querySelectorAll('.carousel-inner .card f');
 
     // Ocultar todos os cards, exceto o primeiro
     cards.forEach((card, index) => {
