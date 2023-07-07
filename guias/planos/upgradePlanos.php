@@ -7,11 +7,10 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" >
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
-
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <title>Planos</title>
 
         <style>
-
 
 table {
     border-collapse: collapse;
@@ -40,7 +39,7 @@ th {
     text-align: center;
 }
 
-.card f{
+.card {
     display: inline-block;
     width: 200px;
     border: 1px solid #ddd;
@@ -122,7 +121,6 @@ display: none;
 .scaled {
 transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
 }
-
         </style>
 </head>
 
@@ -179,7 +177,7 @@ transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
                     <div class="row">
                         <div class="carousel-fluid w-3" >
                             <div class="carousel-inner" >
-                                <div class="card f" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
+                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
                                     <b>Standard</b>
                                     <p style="font-size: 8px;">Garante as melhores condições para suas vendas.</p>
                                     <p class="total">R$ <span style="font-size: 20px;">29,00</span> / Mensal </p>
@@ -188,7 +186,7 @@ transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
                                     <button>Comprar</button>
                                 </div>
 
-                                <div class="card f" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
+                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
                                     <b>Platinum</b>
                                     <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
                                     <p class="total" style="width: 180px;">R$ <span style="font-size: 20px; ">59,00</span> / Trimestral </p>
@@ -197,7 +195,7 @@ transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
                                     <button>Comprar</button>
                                 </div>
 
-                                <div class="card f" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
+                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
                                     <b>Infinity</b>
                                     <p style="font-size: 8px;">Garante mais segurança no pagamento. Conte com o PicPay.</p>
                                     <p class="total" style="width: 180px;">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
@@ -206,7 +204,7 @@ transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
                                     <button>Comprar</button>
                                 </div>
 
-                                <div class="card f" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
+                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
                                     <b>Black</b>
                                     <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
                                     <p class="total">R$ <span style="font-size: 20px; ">159,00</span> / Anual </p>
@@ -234,7 +232,7 @@ transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
 <script>
     const carouselInner = document.querySelector('.carousel-inner');
     const indicators = document.querySelectorAll('.carousel-indicators span');
-    const cards = document.querySelectorAll('.carousel-inner .card f');
+    const cards = document.querySelectorAll('.carousel-inner .card');
 
     // Ocultar todos os cards, exceto o primeiro
     cards.forEach((card, index) => {
