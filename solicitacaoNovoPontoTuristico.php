@@ -234,7 +234,7 @@ include_once 'connection.php';
 
                                     <div class="custom-control custom-checkbox mr-sm-2">
                                         <input type="checkbox" class="custom-control-input" id="sanitarios" name="sanitarios" value="1">
-                                        <label class="custom-control-label" for="sanitarios"> Sanitários <i class='fa-solid fa-toilet-paper'></i></label>
+                                        <label class="custom-control-label" for="sanitarios"> Saneamento B. <i class='fa-solid fa-toilet-paper'></i></label>
                                     </div>
                                 </div>
 

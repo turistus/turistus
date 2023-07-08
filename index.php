@@ -281,7 +281,7 @@ ob_start();
    ?>
 
           <div class="row" style="padding: 20px;" >
-                  <h2 style="margin:auto;"> Videos Explicativos </h2>
+                  <!-- <h2 style="margin:auto;"> Videos Explicativos </h2> -->
                 </div>
                 <div class="col-12">
                     <hr>
@@ -289,10 +289,10 @@ ob_start();
               </div>
           <div class="row">
             <div class="col-12 col-xl-12 col-lg-6 col-md-6 col-sm-12 text-center">
-              <iframe width="300" height="170" src="https://www.youtube.com/embed/nj5O7NDpe-s"  title="Tutorial Criar Pontos Turísticos Turist Us" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             <!-- <iframe width="300" height="170" src="https://www.youtube.com/embed/nj5O7NDpe-s"  title="Tutorial Criar Pontos Turísticos Turist Us" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
              </div>
              <div class="col-12 col-xl-12 col-lg-6 col-md-6 col-sm-12 text-center">
-             <iframe width="300" height="170" src="https://www.youtube.com/embed/jrnjUKGcrAc" title="Tutorial Criar Anúncios de Eventos Turísticos Turist Us" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           <!--  <iframe width="300" height="170" src="https://www.youtube.com/embed/jrnjUKGcrAc" title="Tutorial Criar Anúncios de Eventos Turísticos Turist Us" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
              </div>
           </div>
 
