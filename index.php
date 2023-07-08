@@ -223,7 +223,7 @@ ob_start();
                       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-10 rotated"  style="padding: 15px;" >
                         <div class="card flex-md-row sm-12" style="width: 18rem; margin:auto;">
                           <div class="card-body d-flex flex-column ">
-                            <strong class="d-inline-block mb-2 text-success">Evento</strong>
+                            <strong class="d-inline-block mb-0 text-success">Evento</strong>
                             <h4 class="text-center" style="padding: 5px; height: 100px; margin-top: 10px;">
                               <p><b><?php echo $nomeE; ?></b></p>
                             </h4>
