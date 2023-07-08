@@ -180,7 +180,13 @@ transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
                                     <button>Comprar</button>
                                 </div>
 
-                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
+                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;
+                                display: inline-block;
+                                width: 200px;
+                                border: 1px solid #ddd;
+                                padding: 20px;
+                                margin: 10px;
+                                text-align: center;">
                                     <b>Platinum</b>
                                     <p style="font-size: 8px;">Garante as melhores formas para suas vendas.</p>
                                     <p class="total" style="width: 180px;">R$ <span style="font-size: 20px; ">59,00</span> / Trimestral </p>
@@ -189,7 +195,13 @@ transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
                                     <button>Comprar</button>
                                 </div>
 
-                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
+                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;
+                                display: inline-block;
+                                width: 200px;
+                                border: 1px solid #ddd;
+                                padding: 20px;
+                                margin: 10px;
+                                text-align: center;">
                                     <b>Infinity</b>
                                     <p style="font-size: 8px;">Garante mais segurança no pagamento. Conte com o PicPay.</p>
                                     <p class="total" style="width: 180px;">R$ <span style="font-size: 20px;">99,00</span> / Semestre </p>
@@ -198,7 +210,13 @@ transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
                                     <button>Comprar</button>
                                 </div>
 
-                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;">
+                                <div class="card" style=" background-color: #333; border: solid 1px white; color:#f2f2f2;
+                                display: inline-block;
+                                width: 200px;
+                                border: 1px solid #ddd;
+                                padding: 20px;
+                                margin: 10px;
+                                text-align: center;">
                                     <b>Black</b>
                                     <p style="font-size: 8px;">Garante as melhores custo benefício para suas vendas.</p>
                                     <p class="total">R$ <span style="font-size: 20px; ">159,00</span> / Anual </p>
