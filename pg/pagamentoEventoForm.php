@@ -256,14 +256,15 @@ include_once './configPicPay.php';
                                         $imagens[] = $row['foto'];
 
                                     ?>
-                                      <div >
+
                                         <?php
                                         $extensao = pathinfo($row['foto'], PATHINFO_EXTENSION);
                                         if ($extensao == 'mp4') { ?>
 
                                             <?php  } else { ?>
-                                        <img src="../images/eventos/<?php echo $id.'/'.$imagens[0]; ?>"
-                                        style="margin:auto; height: 100px; text-align: center;">
+                                        <div >
+                                            <img src="../images/eventos/<?php echo $id.'/'.$imagens[0]; ?>"
+                                            style="margin:auto; height: 100px; text-align: center;">
                                       </div>
                                     <?php } ?>
                                 </div>
