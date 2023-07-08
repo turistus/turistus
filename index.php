@@ -229,7 +229,7 @@ ob_start();
                             </h4>
 
                             <?php
-                              $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $idE limit 1");
+                              $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $id limit 1");
                               $midias = array();
                               while ($row = mysqli_fetch_assoc($busca_Fotos)) {
                                   $midias[] = $row['foto'];
@@ -238,7 +238,7 @@ ob_start();
                                 $extensao = pathinfo($midia, PATHINFO_EXTENSION);
                                 if ($extensao == 'mp4') { ?>
                                       <div>
-                                        <video id="video-<?php echo $midia; ?>" src="./images/eventos/<?php echo $idE . '/' . $midia; ?>" controls style="height: 100px; width: 180px; text-align: center; margin-left:auto; margin-right: auto; border-radius: 10px;"></video>
+                                        <video id="video-<?php echo $midia; ?>" src="./images/eventos/<?php echo $id . '/' . $midia; ?>" controls style="height: 100px; width: 180px; text-align: center; margin-left:auto; margin-right: auto; border-radius: 10px;"></video>
                                         <script>
                                             // Reproduzir automaticamente o vídeo e passar para o próximo
                                             document.addEventListener("DOMContentLoaded", function() {
