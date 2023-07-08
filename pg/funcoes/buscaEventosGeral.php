@@ -105,7 +105,7 @@
                         $extensao = pathinfo($midia, PATHINFO_EXTENSION);
                         if ($extensao == 'mp4') { ?>
                               <div>
-                                <video id="video-<?php echo $midia; ?>" src="../images/eventos/<?php echo $idE . '/' . $midia; ?>" controls style="height: 100px; width: 180px; text-align: center; margin-left:120px; border-radius: 10px;"></video>
+                                <video id="video-<?php echo $midia; ?>" src="../images/eventos/<?php echo $idE . '/' . $midia; ?>" controls style="height: 100px; width: 180px; text-align: center; margin-left:auto; margin-right: auto; border-radius: 10px;"></video>
                                 <script>
                                     // Reproduzir automaticamente o vídeo e passar para o próximo
                                     document.addEventListener("DOMContentLoaded", function() {
