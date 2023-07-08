@@ -101,7 +101,7 @@
                       while ($row = mysqli_fetch_assoc($busca_Fotos)) {
                           $midias[] = $row['foto'];
                       }
-                    foreach ($midias as $midia) {
+                      foreach ($midias as $midia) {
                         $extensao = pathinfo($midia, PATHINFO_EXTENSION);
                         if ($extensao == 'mp4') { ?>
                               <div>
@@ -109,10 +109,7 @@
                                 <script>
                                     // Reproduzir automaticamente o vídeo e passar para o próximo
                                     document.addEventListener("DOMContentLoaded", function() {
-                                        var video = document.querySelector("#video-<?php echo $midia; ?>");
-                                        video.addEventListener("ended", function() {
-                                            $('.carousel').carousel('next');
-                                        });
+
                                         video.play();
                                     });
                                 </script>
