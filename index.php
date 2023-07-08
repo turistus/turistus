@@ -258,7 +258,7 @@ ob_start();
                                         <img style="height:190px; width: 235px; "
                                         alt="Evento" src="<?php echo "./images/eventos/$id/$midia"; ?>">
                                       </a>
-                                    </div>
+                                    </div><br>
 
 
                                 <?php } ?>
