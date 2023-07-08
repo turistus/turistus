@@ -215,20 +215,17 @@ include_once '../connection.php';
                                                         $palavra = $_GET['search'];
                                                         $query = "SELECT id, name, image, cidade FROM pontosturisticos WHERE pontosturisticos.name LIKE '%$palavra%' OR pontosturisticos.cidade LIKE '%$palavra%' ORDER BY name ASC";
                                                         $result = $conn->prepare($query);
-                                                        $result->execute();
-                                                        $res = $result->fetchAll(PDO::FETCH_ASSOC);
 
                                                     }else{
                                                         // echo "nao buscou por nada ainda";
                                                         $result = $conn->prepare("SELECT *, pontosturisticos.id AS id, pontosturisticos.uf AS Estado FROM pontosturisticos ORDER BY name ASC;");
-                                                        $result->execute();
-                                                        $res = $result->fetchAll(PDO::FETCH_ASSOC);
 
                                                         }
 
+                                                        $result->execute();
+                                                        $res = $result->fetchAll(PDO::FETCH_ASSOC);
 
-                                                    ?>
-                                                    <?php
+
                                                         foreach($res as $ln ){
                                                     ?>
                                                         <option value="<?php echo $ln['id'];?>" name="idPt" id="idPt" >
