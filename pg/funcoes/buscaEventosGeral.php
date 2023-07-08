@@ -96,7 +96,7 @@
                     <div class="card-body" >
                       <h5 class="card-title " style="height: 40px;" ><?php echo $nome; ?></h5>
                       <?php
-                      $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $idE");
+                      $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $idE limit 1");
                       $midias = array();
                       while ($row = mysqli_fetch_assoc($busca_Fotos)) {
                           $midias[] = $row['foto'];
