@@ -224,7 +224,7 @@ ob_start();
                         <div class="card flex-md-row sm-12" style="width: 18rem; margin:auto;">
                           <div class="card-body d-flex flex-column ">
                             <strong class="d-inline-block mb-0 text-success">Evento</strong>
-                            <h4 class="text-center" style="padding: 5px; height: 100px; margin-top: 10px;">
+                            <h4 class="text-center mb-auto" style="padding: 5px; height: 100px; margin-top: 10px;">
                               <p><b><?php echo $nomeE; ?></b></p>
                             </h4>
 
@@ -255,7 +255,7 @@ ob_start();
                                         <img style="height:190px; width: 235px; "
                                         alt="Evento" src="<?php echo "./images/eventos/$id/$midia"; ?>">
                                       </a>
-                                      <br>
+
 
                                 <?php } ?>
                               <?php } ?>
