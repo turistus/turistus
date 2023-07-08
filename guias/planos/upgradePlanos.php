@@ -28,9 +28,6 @@ th {
     text-align: center;
 }
 
-.card {
-
-}
 
 .card h3 {
     margin: 0;

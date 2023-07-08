@@ -87,7 +87,7 @@ include_once '../connection.php';
                         <div class="text-muted" style="font-size: 0.8em;">Detalhe o evento em geral, dia que pode ser agendado, atividades presentes no evento, tempo médio de duração, dias e horarios que possam ser agendados (Quarta à Domingo das 8:00 às 14:00..) entre outras informações importantes que o turista tem o direito de saber antes de contratar seu serviços.</div>
                         </div>
                         <br>
-                                                <h4>Tempo de permanência do anuncio</h4>
+                                                <h4>Tempo de permanência do anúncio</h4>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                             <label> Data inicial (Abertura) </label>
                                             <input class="form-control" type="date" name="datai" id="datai"
@@ -185,20 +185,48 @@ include_once '../connection.php';
 
                 <!-- SEGUNDA PARTE DO FORMULARIO DE CADASTRO DE EVENTO -->
 
+                <div class="box-search" >
+                    <div class="row ">
+                        <div class=" col-xl-8 col-lg-8 col-md-7 col-sm-7 ">
+                            <input style="border: 1px solid black;" type="search" class="form-control " id="pesquisar">
+                        </div>
+                        <div class=" col-xl-3 col-lg-4 col-md-5 col-sm-5">
+                            <button onclick="searchData()"  class="btn btn-primary"> Buscar </button>
+                        </div>
+                        <div class=" col-xl-1 col-lg-0 col-md-0 col-sm-0">
+
+                        </div>
+                    </div>
+                    <label>Pesquise por Nome ou cidade</label>
+                </div>
+
 
 
                 <div class="col-md-12 mt-3">
                                 <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 ">
 
-                                    <h5> Vincule um Ponto Turistico ao seu novo evento</h5>
+                                    <h5> Vincule um Ponto Turistico ao seu evento</h5>
                                         <select class="form-select" name="idPt" style="border: 1px solid blue; border-radius: 10; width: 150px;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
                                             <option>Selecione</option>
 
                                                     <?php
+                                                    if(!empty($_GET['search'])){
+                                                        // echo "contem algo, no pesquisar";
+                                                        $palavra = $_GET['search'];
+                                                        $query = "SELECT id, name, image, cidade FROM pontosturisticos WHERE pontosturisticos.name LIKE '%$palavra%' OR pontosturisticos.cidade LIKE '%$palavra%' ORDER BY name ASC";
+                                                        $result = $conn->prepare($query);
+                                                        $result->execute();
+                                                        $res = $result->fetchAll(PDO::FETCH_ASSOC);
 
+                                                    }else{
+                                                        // echo "nao buscou por nada ainda";
                                                         $result = $conn->prepare("SELECT *, pontosturisticos.id AS id, pontosturisticos.uf AS Estado FROM pontosturisticos ORDER BY name ASC;");
                                                         $result->execute();
                                                         $res = $result->fetchAll(PDO::FETCH_ASSOC);
+
+                                                        }
+
+
                                                     ?>
                                                     <?php
                                                         foreach($res as $ln ){
@@ -274,6 +302,16 @@ include_once '../connection.php';
                             return true; // permite o envio do formulário
                         }
 
+                        var search = document.getElementById('pesquisar');
+                        search.addEventListener("keydown", function(event){
+                            if(event.key === "Enter"){
+                                searchData();
+                            }
+                        });
+
+                        function searchData(){
+                            window.location = 'cad-EventoFuncao.php?search='+search.value;
+                        }
                     </script>
 
                 </div>
