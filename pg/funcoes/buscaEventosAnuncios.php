@@ -50,7 +50,43 @@
 
               <a href="view-evento.php?id=<?php echo $idE;?>" class="btn ">
                 <div class="card-body " style="padding: 10px;  ">
-                  <img style="height: 80px; width: 100px; " src= <?php echo "'../images/pontosturisticos/$idPt/$img";?>'><br>
+
+
+
+                <?php
+                      $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $idE limit 1");
+                      $midias = array();
+                      while ($row = mysqli_fetch_assoc($busca_Fotos)) {
+                          $midias[] = $row['foto'];
+                      }
+                      foreach ($midias as $midia) {
+                        $extensao = pathinfo($midia, PATHINFO_EXTENSION);
+                        if ($extensao == 'mp4') { ?>
+                              <div>
+                                <video id="video-<?php echo $midia; ?>" src="../images/eventos/<?php echo $idE . '/' . $midia; ?>" controls style="height: 100px; width: 180px; text-align: center; margin-left:auto; margin-right: auto; border-radius: 10px;"></video>
+                                <script>
+                                    // Reproduzir automaticamente o vídeo e passar para o próximo
+                                    document.addEventListener("DOMContentLoaded", function() {
+
+                                        video.play();
+                                    });
+                                </script>
+                              </div>
+                          <?php }
+                          else
+                          { ?>
+                            <div>
+                              <img style="height: 80px; width: 100px; " src= <?php echo "'../images/eventos/$idE/$midia";?>'><br>
+                            </div>
+                        <?php } ?>
+                      <?php } ?>
+
+
+
+
+
+
+
                     <h6 class="card-title"><?php echo $nome; ?></h6>
                     <p class="card-title">R$ <?php echo number_format($total, 2, ",", ".") ?></p>
                     <p class="card-title"><?php echo $nomeGuia; ?></p>
