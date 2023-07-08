@@ -78,7 +78,7 @@ include_once '../connection.php';
                                 <img style="max-height: 200px" src='<?php echo "../images/pontosturisticos/$id/$image"; ?>' class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $row_product['name']; ?></h5>
-                                    <p class="card-title"><?php echo $row_product['cidade']; ?></p>
+                                    <p class="card-title"><?php echo $row_product['cidade']."".$row_product['uf']; ?></p>
                                     <a href="view-products.php?id=<?php echo $id; ?>" class="btn btn-primary">Detalhes</a>
                                 </div>
                             </div>
