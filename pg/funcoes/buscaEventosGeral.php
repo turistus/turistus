@@ -114,13 +114,15 @@
                                     });
                                 </script>
                               </div>
-                        <?php } else { ?>
+                          <?php }
+                          else
+                          { ?>
                             <div>
                               <img style="height: 100px; width: 180px; " src= <?php echo "'../images/eventos/$idE/$midia";?>'><br>
                             </div>
                         <?php } ?>
                       <?php } ?>
-
+                      <img style="height: 100px; width: 180px; " src= <?php echo "'../images/eventos/$idE/$midia";?>'><br>
 
                       <div class="col-12" >
                             <div class="star-ratings" style=" margin: auto; " >
