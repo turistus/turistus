@@ -95,8 +95,36 @@
               <div class="col-12 col-sm-6 mb-4 text-center " >
                     <div class="card-body" >
                       <h5 class="card-title " style="height: 40px;" ><?php echo $nome; ?></h5>
+                      <?php
+                      $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $id");
+                      $midias = array();
+                      while ($row = mysqli_fetch_assoc($busca_Fotos)) {
+                          $midias[] = $row['foto'];
+                      }
+                    foreach ($midias as $midia) {
+                        $extensao = pathinfo($midia, PATHINFO_EXTENSION);
+                        if ($extensao == 'mp4') { ?>
+                              <div>
+                                <video id="video-<?php echo $midia; ?>" src="../images/eventos/<?php echo $id . '/' . $midia; ?>" controls style="height: 100px; width: 180px; text-align: center; margin-left:120px; border-radius: 10px;"></video>
+                                <script>
+                                    // Reproduzir automaticamente o vídeo e passar para o próximo
+                                    document.addEventListener("DOMContentLoaded", function() {
+                                        var video = document.querySelector("#video-<?php echo $midia; ?>");
+                                        video.addEventListener("ended", function() {
+                                            $('.carousel').carousel('next');
+                                        });
+                                        video.play();
+                                    });
+                                </script>
+                              </div>
+                        <?php } else { ?>
+                            <div>
+                              <img style="height: 100px; width: 180px; " src= <?php echo "'../images/eventos/$idE/$img";?>'><br>
+                            </div>
+                        <?php } ?>
+                      <?php } ?>
 
-                      <img style="height: 100px; width: 180px; " src= <?php echo "'../images/eventos/$idE/$img";?>'><br>
+
                       <div class="col-12" >
                             <div class="star-ratings" style=" margin: auto; " >
                                 <div class="fill-ratings" style="width: <?php echo $pontos .'%'?>; ">
