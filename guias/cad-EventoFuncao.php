@@ -185,20 +185,7 @@ include_once '../connection.php';
 
                 <!-- SEGUNDA PARTE DO FORMULARIO DE CADASTRO DE EVENTO -->
 
-                <div class="box-search" >
-                    <div class="row ">
-                        <div class=" col-xl-8 col-lg-8 col-md-7 col-sm-7 ">
-                            <input style="border: 1px solid black;" type="search" class="form-control " id="pesquisar">
-                        </div>
-                        <div class=" col-xl-3 col-lg-4 col-md-5 col-sm-5">
-                            <button onclick="searchPontosTuristicos()"  class="btn btn-primary"> Buscar </button>
-                        </div>
-                        <div class=" col-xl-1 col-lg-0 col-md-0 col-sm-0">
 
-                        </div>
-                    </div>
-                    <label>Pesquise por Nome ou cidade</label>
-                </div>
 
 
 
@@ -213,7 +200,7 @@ include_once '../connection.php';
                                                     if(!empty($_GET['search'])){
                                                         // echo "contem algo, no pesquisar";
                                                         $palavra = $_GET['search'];
-                                                        $query = "SELECT id, name, image, cidade FROM pontosturisticos WHERE pontosturisticos.name LIKE '%$palavra%' OR pontosturisticos.cidade LIKE '%$palavra%' ORDER BY name ASC";
+                                                        $query = "SELECT id, name, image, cidade FROM pontosturisticos WHERE pontosturisticos.name LIKE '%$palavra%' OR pontosturisticos.cidade LIKE '%$palavra%' ";
                                                         $result = $conn->prepare($query);
 
                                                     }else{
@@ -228,7 +215,21 @@ include_once '../connection.php';
 
                                                         foreach($res as $ln ){
                                                     ?>
-                                                        <option value="<?php echo $ln['id'];?>" name="idPt" id="idPt" >
+                                                    <div class="box-search" >
+                                                        <div class="row ">
+                                                            <div class=" col-xl-8 col-lg-8 col-md-7 col-sm-7 ">
+                                                                <input style="border: 1px solid black;" type="search" class="form-control " id="pesquisar">
+                                                            </div>
+                                                            <div class=" col-xl-3 col-lg-4 col-md-5 col-sm-5">
+                                                                <option onclick="searchPontosTuristicos()" value="<?php echo $ln['id'];?>" name="idPt" id="idPt" >
+                                                            </div>
+                                                            <div class=" col-xl-1 col-lg-0 col-md-0 col-sm-0">
+
+                                                            </div>
+                                                        </div>
+                                                        <label>Pesquise por Nome ou cidade</label>
+                                                    </div>
+
                                                     <?php
 
                                                         echo $ln['name'];
