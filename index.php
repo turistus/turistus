@@ -255,7 +255,7 @@ ob_start();
                                   { ?>
                                     <div>
                                       <a href="pg/view-evento.php?id=<?php echo $id;?>" class="text-center">
-                                        <img style="height:190px; width: 235px; margin-bottom: 10px; "
+                                        <img style="height:190px; width: 235px; margin-bottom: 8px; "
                                         alt="Evento" src="<?php echo "./images/eventos/$id/$midia"; ?>">
                                       </a>
                                     </div>
