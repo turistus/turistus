@@ -60,7 +60,7 @@ include_once '../connection.php';
 
                 }else{
                     //echo "Nao tem nada no pesquisa, entao tras todos";
-                    $query_products = "SELECT id, name, image FROM pontosturisticos ORDER BY id DESC";
+                    $query_products = "SELECT id, name, image, cidade FROM pontosturisticos ORDER BY id DESC";
                     $result_products = $conn->prepare($query_products);
                     $result_products->execute();
                 }
@@ -78,6 +78,7 @@ include_once '../connection.php';
                                 <img style="max-height: 200px" src='<?php echo "../images/pontosturisticos/$id/$image"; ?>' class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <h5 class="card-title"><?php echo $row_product['name']; ?></h5>
+                                    <p class="card-title"><?php echo $row_product['cidade']; ?></p>
                                     <a href="view-products.php?id=<?php echo $id; ?>" class="btn btn-primary">Detalhes</a>
                                 </div>
                             </div>
