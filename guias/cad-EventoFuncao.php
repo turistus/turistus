@@ -191,7 +191,7 @@ include_once '../connection.php';
                             <input style="border: 1px solid black;" type="search" class="form-control " id="pesquisar">
                         </div>
                         <div class=" col-xl-3 col-lg-4 col-md-5 col-sm-5">
-                            <button onclick="searchData()"  class="btn btn-primary"> Buscar </button>
+                            <button onclick="searchPontosTuristicos()"  class="btn btn-primary"> Buscar </button>
                         </div>
                         <div class=" col-xl-1 col-lg-0 col-md-0 col-sm-0">
 
@@ -305,11 +305,11 @@ include_once '../connection.php';
                         var search = document.getElementById('pesquisar');
                         search.addEventListener("keydown", function(event){
                             if(event.key === "Enter"){
-                                searchData();
+                                searchPontosTuristicos();
                             }
                         });
 
-                        function searchData(){
+                        function searchPontosTuristicos(){
                             window.location = 'cad-EventoFuncao.php?search='+search.value;
                         }
                     </script>
