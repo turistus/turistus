@@ -295,7 +295,9 @@ include_once '../connection.php';
                         });
 
                         function searchPontosTuristicos(){
-                            window.location = 'cad-EventoFuncao.php?search='+search.value;
+                            var x = document.getElementById("idPt");
+                            x.search.value;
+                            //window.location = 'cad-EventoFuncao.php?search='+search.value;
                         }
                     </script>
 
