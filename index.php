@@ -224,7 +224,7 @@ ob_start();
                         <div class="card flex-md-row sm-12" style="width: 18rem; margin:auto;">
                           <div class="card-body d-flex flex-column ">
                             <strong class="d-inline-block mb-2 text-success">Evento</strong>
-                            <h4 class="mb-0 text-center">
+                            <h4 class="mb-1 text-center">
                               <p><b><?php echo $nomeE; ?></b></p>
                             </h4>
 
