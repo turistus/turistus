@@ -193,7 +193,7 @@ include_once '../connection.php';
                                 <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 ">
 
                                     <h5> Vincule um Ponto Turistico ao seu evento</h5>
-                                        <select class="form-select" name="idPt" style="border: 1px solid blue; border-radius: 10; width: 150px;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
+                                        <select onclick="searchPontosTuristicos()" type="search" class="form-select" name="idPt" style="border: 1px solid blue; border-radius: 10; width: 150px;" > <!-- importante esse NAME aqui pelo oque entendi levou o dado par o form idPT -->
                                             <option>Selecione</option>
 
                                                     <?php
@@ -215,21 +215,8 @@ include_once '../connection.php';
 
                                                         foreach($res as $ln ){
                                                     ?>
-                                                    <div class="box-search" >
-                                                        <div class="row ">
-                                                            <div class=" col-xl-8 col-lg-8 col-md-7 col-sm-7 ">
-                                                                <input style="border: 1px solid black;" type="search" class="form-control " id="pesquisar">
-                                                            </div>
-                                                            <div class=" col-xl-3 col-lg-4 col-md-5 col-sm-5">
-                                                                <option onclick="searchPontosTuristicos()" value="<?php echo $ln['id'];?>" name="idPt" id="idPt" >
-                                                            </div>
-                                                            <div class=" col-xl-1 col-lg-0 col-md-0 col-sm-0">
 
-                                                            </div>
-                                                        </div>
-                                                        <label>Pesquise por Nome ou cidade</label>
-                                                    </div>
-
+                                                        <option value="<?php echo $ln['id'];?>" name="idPt" id="idPt" >
                                                     <?php
 
                                                         echo $ln['name'];
@@ -300,7 +287,7 @@ include_once '../connection.php';
                             return true; // permite o envio do formulário
                         }
 
-                        var search = document.getElementById('pesquisar');
+                        var search = document.getElementById('idPt');
                         search.addEventListener("keydown", function(event){
                             if(event.key === "Enter"){
                                 searchPontosTuristicos();
