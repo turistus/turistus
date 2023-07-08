@@ -73,10 +73,7 @@ ob_start();
 
 
   <div class="row" >
-  <!-- Sempre usar conteiner-->
 
-
-      <!-- Primeiro Gad..wae de CADASTRO DE GUIA AVALIADO -->
         <div class="col-md-6" style="padding-left: 20px;">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-400 position-relative"
                   style="margin-bottom: 50px; height: auto; ">
@@ -84,13 +81,7 @@ ob_start();
           <div class="col p-4 d-flex flex-column position-static" >
                   <h3 class="mb-0"> Divulgue Atividades </h3>
               <h6><div class="mb-1 text-muted">Somente para maiores de 18 anos devidamente avaliados. </div></h6>
-
-
-
-
-
-
-              <p class="card-text mb-auto"> Crie eventos de serviços ou atividades turisticas e gere mais vendas para o seu negocio. </p>
+              <p class="card-text mb-auto"> Crie eventos de serviços ou atividades turisticas e gere mais vendas para o seu negócio. </p>
               <a href="./guias/cadastrarguia.php" class="btn btn-outline-primary"> + Publicar </a>
               </div>
 
@@ -99,18 +90,12 @@ ob_start();
                 <img src='<?php echo "./images/lagoaLaranja.jpg"; ?>' class="card-img-top" alt="..." style="margin-bottom: 50px;">
               </div>
             </div>
-
-
-
           </div>
         </div>
 
 
+    <div class="col-md-6">
 
-
-  <div class="col-md-6">
-
-      <!-- Segundoo GAD..wea de Cadastro ou solicitação de PONTO TURISTICO -->
         <div class="col-md-12">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-400 position-relative " style="margin-bottom: 50px; min-height: 100px; padding-top: 20px;">
             <div class="col-10 p-4 d-flex flex-column ">
@@ -125,7 +110,6 @@ ob_start();
               </div>
             </div>
 
-
             <p class="card-text mb-auto " style="margin-left: 20px;">  Aqui você pode divulgar gratuitamente as belezas de sua região para que outras pessoas encontrem. </p>
             <div class="col-12 p-4 d-flex flex-column position-static" style="text-align: center;">
               <a href="solicitacaoNovoPontoTuristico.php"> <button class="btn btn-success" style="color: white; text-decoration: none; ">
@@ -133,10 +117,6 @@ ob_start();
             </div>
           </div>
         </div>
-
-
-        <!-- terceiro GAD..wea de PROPAGANDA PONTO TURISTICO -->
-
 
         <div class="col-md-12">
           <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-400" style="margin-bottom: 50px; min-height: 50px;">
@@ -167,7 +147,6 @@ ob_start();
                     <br>
               </div>
 
-    <!-- ONDE BUSCA OS PONTOS TURISTICOS -->
     <div class="row">
       <div class="col-md-12">
         <?php
@@ -204,10 +183,7 @@ ob_start();
     </div>
     <!-- FINAL ONDE BUSCA OS PONTOS TURISTICOS -->
 
-
-
     <!-- SESSAO DOS EVENTOS MARCADOS COMO ABERTO E LIBERADOS PARA AGENDAR -->
-
               <div class="col-12">
                     <hr>
                     <br>
@@ -217,7 +193,7 @@ ob_start();
                 <div class="row" style="padding: 20px;" >
                   <h2 style="margin:auto; "> Atividades disponiveis </h2>
                 </div>
-<hr>
+            <hr>
                 <?php
                     $queryEventos = "SELECT *, eventos.id AS id,
                                                eventos.nome AS nomeE,
@@ -252,14 +228,41 @@ ob_start();
                               <p><b><?php echo $nomeE; ?></b></p>
                             </h4>
 
-                            <a href="pg/view-evento.php?id=<?php echo $id;?>" class="text-center">
-                              <img style="height:190px; width: 235px; "
-                              alt="Ponto Turistico" src="<?php echo "./images/pontosturisticos/$idPt/$img"; ?>">
-                            </a>
+                            <?php
+                              $busca_Fotos = mysqli_query($conex, "SELECT * FROM foto_Eventos WHERE foto_Eventos.idEv = $idE limit 1");
+                              $midias = array();
+                              while ($row = mysqli_fetch_assoc($busca_Fotos)) {
+                                  $midias[] = $row['foto'];
+                              }
+                              foreach ($midias as $midia) {
+                                $extensao = pathinfo($midia, PATHINFO_EXTENSION);
+                                if ($extensao == 'mp4') { ?>
+                                      <div>
+                                        <video id="video-<?php echo $midia; ?>" src="./images/eventos/<?php echo $idE . '/' . $midia; ?>" controls style="height: 100px; width: 180px; text-align: center; margin-left:auto; margin-right: auto; border-radius: 10px;"></video>
+                                        <script>
+                                            // Reproduzir automaticamente o vídeo e passar para o próximo
+                                            document.addEventListener("DOMContentLoaded", function() {
+
+                                                video.play();
+                                            });
+                                        </script>
+                                      </div>
+                                  <?php }
+                                  else
+                                  { ?>
+
+                                      <a href="pg/view-evento.php?id=<?php echo $id;?>" class="text-center">
+                                        <img style="height:190px; width: 235px; "
+                                        alt="Evento" src="<?php echo "./images/eventos/$idE/$midia"; ?>">
+                                      </a>
+                                      <br>
+
+                                <?php } ?>
+                              <?php } ?>
+
 
 
                             <p class="card-text text-center mb-auto " > Por apenas R$ <?php echo number_format($total, 2, ",", "."); ?></p>
-
 
                             <p class="card-text mb-auto" style="height: 100px; border:1px solid blue; border-radius: 5px; padding-left: 10px;"><?php echo $breveDescricao.'<br>'; ?></p>
                           </div>
