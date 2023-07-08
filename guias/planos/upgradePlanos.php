@@ -12,15 +12,10 @@
 
         <style>
 
-table {
-
-}
 
 th,
 td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+
 }
 
 th {
@@ -128,39 +123,39 @@ transform: scaleX(0.9) scaleY(0.9); /* Equal to scaleX(0.7) scaleY(0.7) */
                 </tr>
 
                 <tr>
-                <td><b>Plano</b></td>
-                    <td></td>
-                    <td style=" font-size: 18px; background-color: #bbb; color:#f2f2f2;"><i>Comum</i></td>
-                    <td style=" font-size: 18px; background-color: gray; color:#f2f2f2;"><i>Completo</i></td>
-                    <td style=" font-size: 18px; background-color: #333; color: #f2f2f2;"><i>Vip</i></td>
+                <td ><b>Plano</b></td>
+                    <td ></td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; font-size: 18px; background-color: #bbb; color:#f2f2f2;"><i>Comum</i></td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; font-size: 18px; background-color: gray; color:#f2f2f2;"><i>Completo</i></td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; font-size: 18px; background-color: #333; color: #f2f2f2;"><i>Vip</i></td>
                 </tr>
                 <tr>
                 <td><b>Taxa</b></td>
                     <td> </td>
-                    <td style=" background-color: #bbb; color:#f2f2f2;"> 20% </td>
-                    <td style=" background-color: gray; color:#f2f2f2;"> 15% </td>
-                    <td style=" background-color: #333; color: #f2f2f2;"> 10% </td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; background-color: #bbb; color:#f2f2f2;"> 20% </td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; background-color: gray; color:#f2f2f2;"> 15% </td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; background-color: #333; color: #f2f2f2;"> 10% </td>
                 </tr>
                 <tr>
                 <td><b>Prazo recebimento</b></td>
                     <td> </td>
-                    <td style=" background-color: #bbb; color:#f2f2f2;"> 15 dias</td>
-                    <td style=" background-color: gray; color:#f2f2f2;"> 10 dias</td>
-                    <td style=" background-color: #333; color: #f2f2f2;"> 7 dias</td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; background-color: #bbb; color:#f2f2f2;"> 15 dias</td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; background-color: gray; color:#f2f2f2;"> 10 dias</td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; background-color: #333; color: #f2f2f2;"> 7 dias</td>
                 </tr>
                 <tr>
                 <td><b>Minimo vendas </b></td>
                     <td></td>
-                    <td style=" background-color: #bbb; color:#f2f2f2;">R$ 0,00</td>
-                    <td style=" background-color: gray; color:#f2f2f2;">R$ 1.000,00</td>
-                    <td style=" background-color: #333; color: #f2f2f2;">R$ 0,00</td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; background-color: #bbb; color:#f2f2f2;">R$ 0,00</td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; background-color: gray; color:#f2f2f2;">R$ 1.000,00</td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; background-color: #333; color: #f2f2f2;">R$ 0,00</td>
                 </tr>
                 <tr>
                 <td><b>Visibilidade</b></td>
                     <td></td>
-                    <td style=" background-color: #bbb; color:#f2f2f2;">50%</td>
-                    <td style=" background-color: gray; color:#f2f2f2;"><b>75%</b></td>
-                    <td style=" background-color: #333; color: #f2f2f2;"><b>100%</b></td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; background-color: #bbb; color:#f2f2f2;">50%</td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; background-color: gray; color:#f2f2f2;"><b>75%</b></td>
+                    <td style="padding: 10px; text-align: left; border-bottom: 1px solid #ddd; background-color: #333; color: #f2f2f2;"><b>100%</b></td>
                 </tr>
 
                 <td><b>Valor</b></td>
