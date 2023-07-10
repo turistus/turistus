@@ -72,7 +72,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                     <div class="card ">
                                                       <div class="card-body" >
-                                                        <h5>Resumo de Vendas Mensal</h5>
+                                                        <h5>Venda Mensal</h5>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
@@ -82,6 +82,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 payments_statu_Id,
                                                                 pay.product_id,
                                                                 pay.dataagendada AS dataagendada,
+                                                                pay.created AS quandoCriou,
                                                             eventos.id AS idE,
                                                                 eventos.nome AS nE,
                                                                 eventos.idPt AS idPt,
@@ -90,6 +91,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                                 SUM(pay.custoPedido) AS totalVendas,
                                                                 COUNT(pay.id) AS nVendas
+
 
                                                             FROM payments_picpays AS pay
                                                                 INNER JOIN eventos ON eventos.id = pay.product_id
@@ -105,17 +107,24 @@ $emailusuario = $_SESSION['user_email'];
                                                             while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
+                                                                $exemplo = date_diff($quandoCriou);
+                                                                if($dataagendada < date_create()){
+                                                                  echo $exemplo ." e ". $quandoCriou;
+                                                            ?>
+
+
+                                                            <div class='row' style='margin:5px; padding: 10px; background-color:#00BFFF; border-radius: 5px;'>
+                                                              <div class='col-md-4'>
+                                                                <h4> Nº  <br> <? ".$nVendas." ?></h4>
+                                                              </div>
+
+                                                              <div class='col-md-5'>
+                                                                <h6> Total R$ <? ".number_format($totalVendas, 2, ',', '.') ." ?></h6>
+                                                              </div>
+                                                            </div>
+
+                                                            <?php
                                                             }
-                                                            echo "<div class='row' style='margin:5px; padding: 10px; background-color:#00BFFF; border-radius: 5px;'>";
-                                                            echo "<div class='col-md-5'>";
-                                                            echo "<h6> Total Vendas <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
-                                                            echo "</div>";
-
-                                                            echo "<div class='col-md-4'>";
-                                                            echo "<h6> Nº Pedidos <br> ".$nVendas."</h6>";
-                                                            echo "</div>";
-
-                                                            echo "</div>";
                                                             ?>
                                                       </div>
                                                     </div>
