@@ -224,6 +224,11 @@ $emailusuario = $_SESSION['user_email'];
                                                             echo "<div class='col-md-4'>";
                                                             echo "<h6> Nº Pedidos <br> ".$nVendas."</h6>";
                                                             echo "</div>";
+                                                            $porCem = $nVendas / 100;
+                                                            echo "<div class='progress' style='height: 20px;'>
+                                                                    <div class='progress-bar' role='progressbar' style='width: $porCem%;'
+                                                                      aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'></div>";
+                                                            echo "</div>";
 
                                                             echo "</div>";
                                                             ?>
