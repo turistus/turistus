@@ -217,18 +217,21 @@ $emailusuario = $_SESSION['user_email'];
                                                                 extract($row_payment);
                                                             }
                                                             echo "<div class='row' style='margin:5px; padding: 10px; background-color:#FF8C00; border-radius: 5px;'>";
-                                                            echo "<div class='col-md-5'>";
-                                                            echo "<h6> Total Vendas <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
-                                                            echo "</div>";
+                                                              echo "<div class='col-md-5'>";
+                                                                echo "<h6> Total Vendas <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
+                                                              echo "</div>";
 
-                                                            echo "<div class='col-md-4'>";
-                                                            echo "<h6> Nº Pedidos <br> ".$nVendas."</h6>";
-                                                            echo "</div>";
-                                                            $porCem = $nVendas / 100;
-                                                            echo "<div class='progress' style='height: 20px;'>
-                                                                    <div class='progress-bar' role='progressbar' style='width: $porCem%;'
-                                                                      aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'></div>";
-                                                            echo "</div>";
+                                                              echo "<div class='col-md-4'>";
+                                                                echo "<h6> Nº Pedidos <br> ".$nVendas."</h6>";
+                                                              echo "</div>";
+
+                                                              $porCem = $nVendas / 100;
+                                                              echo "<div class='col-md-4'>";
+                                                                echo "<div class='progress' style='height: 20px;'>
+                                                                        <div class='progress-bar' role='progressbar' style='width: $porCem%;'
+                                                                          aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'></div>";
+                                                                echo "</div>";
+                                                              echo "</div>";
 
                                                             echo "</div>";
                                                             ?>
