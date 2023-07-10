@@ -217,9 +217,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 extract($row_payment);
                                                             }
                                                             echo "<div class='row' style='margin:5px; padding: 10px; background-color:#FF8C00; border-radius: 5px;'>";
-                                                              echo "<div class='col-md-5'>";
-                                                                echo "<h6> Total Vendas <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
-                                                              echo "</div>";
+
 
                                                               $porCem = $nVendas / 100;
                                                               echo "<div class='col-md-12'><label> Progresso %</label>";
