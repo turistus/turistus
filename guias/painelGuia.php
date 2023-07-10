@@ -107,13 +107,6 @@ $emailusuario = $_SESSION['user_email'];
                                                             while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
-
-                                                                if($dataagendada < date_create()){
-
-                                                                  echo date_create();
-                                                                  echo "<br> " . date_create(+30);
-
-                                                                  }
                                                             ?>
 
 
@@ -588,3 +581,4 @@ $emailusuario = $_SESSION['user_email'];
 
   });
 </script>
+
