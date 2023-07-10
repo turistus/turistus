@@ -182,7 +182,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                     <div class="card ">
                                                       <div class="card-body" >
-                                                        <h5>Previsão de Vendas </h5>
+                                                        <h5>Meta 1000 Vendas </h5>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
@@ -224,13 +224,11 @@ $emailusuario = $_SESSION['user_email'];
                                                               $porCem = $nVendas / 100;
                                                               echo "<div class='col-md-12'>";
                                                                 echo "<div class='progress' style='height: 20px;'>
+                                                                        <label> Progresso %</label>
                                                                         <div class='progress-bar' role='progressbar' style='width: $porCem%;'
-                                                                          aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'></div>";
+                                                                          aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>$porCem</div>";
                                                                 echo "</div> <br> ";
-                                                                echo "<div class='progress' style='height: 20px;'>
-                                                                        <div class='progress-bar' role='progressbar' style='width: $porCem%;'
-                                                                          aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>$porCem</div> ";
-                                                                echo "</div>";
+
                                                               echo "</div>";
 
                                                             echo "</div>";
