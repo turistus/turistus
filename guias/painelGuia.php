@@ -221,15 +221,15 @@ $emailusuario = $_SESSION['user_email'];
                                                                 echo "<h6> Total Vendas <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
                                                               echo "</div>";
 
-                                                              echo "<div class='col-md-4'>";
-                                                                echo "<h6> Nº Pedidos <br> ".$nVendas."</h6>";
-                                                              echo "</div>";
-
                                                               $porCem = $nVendas / 100;
-                                                              echo "<div class='col-md-4'>";
+                                                              echo "<div class='col-md-12'>";
                                                                 echo "<div class='progress' style='height: 20px;'>
                                                                         <div class='progress-bar' role='progressbar' style='width: $porCem%;'
                                                                           aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'></div>";
+                                                                echo "</div>";
+                                                                echo "<div class='progress' style='height: 20px;'>
+                                                                        <div class='progress-bar' role='progressbar' style='width: $porCem%;'
+                                                                          aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>100%</div>";
                                                                 echo "</div>";
                                                               echo "</div>";
 
