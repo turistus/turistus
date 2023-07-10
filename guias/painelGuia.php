@@ -226,10 +226,10 @@ $emailusuario = $_SESSION['user_email'];
                                                                 echo "<div class='progress' style='height: 20px;'>
                                                                         <div class='progress-bar' role='progressbar' style='width: $porCem%;'
                                                                           aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'></div>";
-                                                                echo "</div>";
+                                                                echo "</div> <br> ";
                                                                 echo "<div class='progress' style='height: 20px;'>
                                                                         <div class='progress-bar' role='progressbar' style='width: $porCem%;'
-                                                                          aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>$porCem</div> 100%";
+                                                                          aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>$porCem</div> ";
                                                                 echo "</div>";
                                                               echo "</div>";
 
