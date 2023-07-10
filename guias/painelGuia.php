@@ -109,7 +109,7 @@ $emailusuario = $_SESSION['user_email'];
                                                             }
                                                             echo "<div class='row' style='margin:5px; padding: 10px; background-color:#00BFFF; border-radius: 5px;'>";
                                                               echo "<div class='col-md-4'>";
-                                                              echo "<h4> Nº  <br> ".$nVendas."</h4>";
+                                                              echo "<h4> Nº ".$nVendas."</h4>";
                                                               echo "</div>";
 
                                                               echo "<div class='col-md-5'>";
@@ -126,8 +126,8 @@ $emailusuario = $_SESSION['user_email'];
                                                 <div class="col-md-6" style="margin-bottom: 30px;">
 
                                                     <div class="card ">
-                                                      <div class="card-body" >
-                                                        <h5>Resumo de Vendas Anual </h5>
+                                                    <div class="card-body" >
+                                                        <h5>Previsão Venda Anual</h5>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
@@ -137,6 +137,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 payments_statu_Id,
                                                                 pay.product_id,
                                                                 pay.dataagendada AS dataagendada,
+                                                                pay.created AS quandoCriou,
                                                             eventos.id AS idE,
                                                                 eventos.nome AS nE,
                                                                 eventos.idPt AS idPt,
@@ -146,12 +147,11 @@ $emailusuario = $_SESSION['user_email'];
                                                                 SUM(pay.custoPedido) AS totalVendas,
                                                                 COUNT(pay.id) AS nVendas
 
+
                                                             FROM payments_picpays AS pay
                                                                 INNER JOIN eventos ON eventos.id = pay.product_id
                                                                 INNER JOIN servicos ON servicos.id = pay.guiaId
-
-
-                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id <= 5 ORDER BY idagendado DESC Limit 10";
+                                                                WHERE pay.guiaId = $Uid AND payments_statu_Id <= 5 ORDER BY idagendado DESC ";
 
 
                                                             $result_payments = $conn->prepare($query_payments);
@@ -160,15 +160,16 @@ $emailusuario = $_SESSION['user_email'];
                                                             while ($row_payment = $result_payments->fetch(PDO::FETCH_ASSOC)) {
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
+
                                                             }
                                                             echo "<div class='row' style='margin:5px; padding: 10px; background-color:#E0FFFF; border-radius: 5px;'>";
-                                                            echo "<div class='col-md-5'>";
-                                                            echo "<h6> Total Vendas <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
-                                                            echo "</div>";
+                                                              echo "<div class='col-md-4'>";
+                                                              echo "<h4> Nº ". 12*$nVendas."</h4>";
+                                                              echo "</div>";
 
-                                                            echo "<div class='col-md-4'>";
-                                                            echo "<h6> Nº Pedidos <br> ".$nVendas."</h6>";
-                                                            echo "</div>";
+                                                              echo "<div class='col-md-5'>";
+                                                              echo "<h6> Total Vendas <br>R$ ".number_format(12*$totalVendas, 2, ',', '.') ."</h6>";
+                                                              echo "</div>";
 
                                                             echo "</div>";
                                                             ?>
