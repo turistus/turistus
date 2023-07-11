@@ -224,7 +224,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 echo "<div class='progress' style='height: 20px;'><br>
                                                                         <div class='progress-bar' role='progressbar' style='width: $nVendas/1000%;'
                                                                           aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>$nVendas</div>";
-                                                                echo "</div> <br> ";
+                                                                echo "</div>  ";
                                                                 echo "<p class='text-muted' style='text-size: 5px;'>*Complete a meta para o próximo nivel.</p>";
                                                               echo "</div>";
 
