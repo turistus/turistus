@@ -219,12 +219,12 @@ $emailusuario = $_SESSION['user_email'];
                                                             echo "<div class='row' style='margin:5px; padding: 10px; background-color:#FF8C00; border-radius: 5px;'>";
 
 
-                                                              $porCem = $nVendas / 100;
+
                                                               echo "<div class='col-md-12'><label> Progresso %</label>";
                                                                 echo "<div class='progress' style='height: 20px;'>
 
-                                                                        <div class='progress-bar' role='progressbar' style='width: 13.0%;'
-                                                                          aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>$porCem</div>";
+                                                                        <div class='progress-bar' role='progressbar' style='width: $nVendas%;'
+                                                                          aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>$nVendas</div>";
                                                                 echo "</div> <br> ";
 
                                                               echo "</div>";
