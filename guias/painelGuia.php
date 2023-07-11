@@ -223,7 +223,7 @@ $emailusuario = $_SESSION['user_email'];
                                                               echo "<div class='col-md-12'><label> Progresso %</label>";
                                                                 echo "<div class='progress' style='height: 20px;'>
 
-                                                                        <div class='progress-bar' role='progressbar' style='width: 13%;'
+                                                                        <div class='progress-bar' role='progressbar' style='width: 13.0%;'
                                                                           aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>$porCem</div>";
                                                                 echo "</div> <br> ";
 
