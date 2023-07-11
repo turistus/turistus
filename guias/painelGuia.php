@@ -72,7 +72,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                     <div class="card ">
                                                       <div class="card-body" >
-                                                        <h5>Venda Mensal</h5>
+                                                        <h5>Nº Vendas Mensal</h5>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
@@ -109,7 +109,7 @@ $emailusuario = $_SESSION['user_email'];
                                                             }
                                                             echo "<div class='row' style='margin:5px; padding: 10px; background-color:#00BFFF; border-radius: 5px;'>";
                                                               echo "<div class='col-md-4'>";
-                                                              echo "<h4> Nº ".$nVendas."</h4>";
+                                                              echo "<h4> ".$nVendas." </h4>";
                                                               echo "</div>";
 
                                                               echo "<div class='col-md-5'>";
@@ -127,7 +127,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                     <div class="card ">
                                                     <div class="card-body" >
-                                                        <h5>Previsão Venda Anual</h5>
+                                                        <h5>Previsão Vendas Anual</h5>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
@@ -223,7 +223,7 @@ $emailusuario = $_SESSION['user_email'];
                                                               echo "<div class='col-md-12'><label> Progresso %</label>";
                                                                 echo "<div class='progress' style='height: 20px;'>
 
-                                                                        <div class='progress-bar' role='progressbar' style='width: $porCem%;'
+                                                                        <div class='progress-bar' role='progressbar' style='width: 13%;'
                                                                           aria-valuenow='25' aria-valuemin='0' aria-valuemax='100'>$porCem</div>";
                                                                 echo "</div> <br> ";
 
