@@ -107,7 +107,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 extract($row_payment);
 
                                                             }
-                                                            echo "<div class='row' style='margin:5px; padding: 10px; background-color:#00BFFF; border-radius: 5px;'>";
+                                                            echo "<div class='row' style='margin:5px; padding: 10px; background-color:#B0C4DE; border-radius: 5px;'>";
                                                               echo "<div class='col-md-4'>";
                                                               echo "<h4> ".$nVendas." </h4>";
                                                               echo "</div>";
@@ -216,7 +216,7 @@ $emailusuario = $_SESSION['user_email'];
                                                                 //var_dump($row_payment);
                                                                 extract($row_payment);
                                                             }
-                                                            echo "<div class='row' style='margin:5px; padding: 10px; background-color:#FF8C00; border-radius: 5px;'>";
+                                                            echo "<div class='row' style='margin:5px; padding: 10px; background-color:#B0C4DE; border-radius: 5px;'>";
 
 
 
@@ -240,7 +240,7 @@ $emailusuario = $_SESSION['user_email'];
                                                     <div class="card ">
                                                       <div class="card-body" >
                                                         <h5>Solicitar Saque </h5>
-                                                          <div class='row' style='margin:5px; padding: 10px; background-color:#B0C4DE; border-radius: 5px;'>
+                                                          <div class='row' style='margin:5px; padding: 10px; background-color:#E0FFFF; border-radius: 5px;'>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
