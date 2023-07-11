@@ -241,7 +241,7 @@ $emailusuario = $_SESSION['user_email'];
                                                     <div class="card ">
                                                       <div class="card-body" >
                                                         <h5>Solicitar Saque </h5>
-                                                          <div class='row' style='margin:5px; padding: 10px; background-color:gray; border-radius: 5px;'>
+                                                          <div class='row' style='margin:5px; padding: 10px; background-color:#7FFFD4; border-radius: 5px;'>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
