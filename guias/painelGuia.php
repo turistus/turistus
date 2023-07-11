@@ -291,7 +291,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                             ?>
                                                               <div class='col-md-4'>
-                                                                  <button type='button' class='btn btn text-danger'> Solicitar </button>
+                                                                  <button type='button' class='btn btn-danger'> Solicitar </button>
                                                               </div>
                                                             </div>
                                                       </div>
