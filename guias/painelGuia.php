@@ -240,7 +240,7 @@ $emailusuario = $_SESSION['user_email'];
 
                                                     <div class="card ">
                                                       <div class="card-body" >
-                                                        <h5>Previsão de Vendas </h5>
+                                                        <h5>Solicitar Saque </h5>
                                                             <?php
                                                             $query_payments = "SELECT
                                                             pay.id AS idagendado,
@@ -275,13 +275,19 @@ $emailusuario = $_SESSION['user_email'];
                                                                 extract($row_payment);
                                                             }
                                                             echo "<div class='row' style='margin:5px; padding: 10px; background-color:#00FF00; border-radius: 5px;'>";
-                                                            echo "<div class='col-md-5'>";
-                                                            echo "<h6> Total PAGO <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
-                                                            echo "</div>";
+                                                              echo "<div class='col-md-5'>";
+                                                               echo "<h6> Total PAGO <br>R$ ".number_format($totalVendas, 2, ',', '.') ."</h6>";
+                                                              echo "</div>";
 
-                                                            echo "<div class='col-md-4'>";
-                                                            echo "<h6> Nº Pedidos <br> ".$nVendas."</h6>";
-                                                            echo "</div>";
+                                                              echo "<div class='col-md-4'>";
+                                                                echo "<h6> Nº Pedidos <br> ".$nVendas."</h6>";
+                                                              echo "</div>";
+
+                                                              echo "<div class='col-md-4'>";
+                                                                echo "<button type='button' class='btn btn text-dark'> Solicitar </button>";
+                                                              echo "</div>";
+
+
 
                                                             echo "</div>";
                                                             ?>
